@@ -1,21 +1,21 @@
 # Codex active task (CURRENT)
 
 - Status: `COMPLETED_PENDING_GPT_REVIEW`
-- Task: `tasks/0000_project_bootstrap_and_rule_materialization.md`
-- Gate: `BOOTSTRAP / DOCS-ONLY`
-- Starting HEAD: `020216d9559ee67ef4ccb301b5d651ed7baf81bf`
-- Starting `origin/main`: `020216d9559ee67ef4ccb301b5d651ed7baf81bf`
-- Commit policy: one documentation-only commit, message `docs: bootstrap Delayed Self project governance`
+- Task: `tasks/0001_readonly_environment_and_release_target_inventory.md`
+- Gate: `ENVIRONMENT / READ-ONLY INVENTORY`
+- Starting HEAD: `e9395edfee898e4c3f7db15ad2f6767126cf4c1e`
+- Starting `origin/main`: `e9395edfee898e4c3f7db15ad2f6767126cf4c1e`
+- Commit policy: one documentation-only commit, message `docs: inventory Delayed Self development environment`
 - Push policy: one normal push to `origin/main` after fetch and remote-drift check
 
 ## Scope
 
-Materialize governance and canonical documentation from the tracked rule seed and GDD. Do not create gameplay, Godot project/runtime, asset, build, plugin, export, dependency, save, release, or publishing files.
+Perform a bounded read-only environment and release-target inventory. Write only the authorized environment/report/current Markdown files. Do not install, upgrade, download, launch the editor, initialize/import/export/build a project, change machine configuration, or create external directories.
 
 ## Remaining uncertainties
 
-Exact Godot version, renderer, logic resolution, Web support, art style, evidence root, independent reviewer, final license, and undo support remain `PENDING_TASK_0001_OR_LATER`.
+Exact RTX VRAM and display topology were inconclusive. Godot version, renderer, Windows/Web target commitment, and evidence root recommendations await GPT decision. Project/runtime/export behavior is unverified because no project exists.
 
 ## Completion state
 
-All 22 authorized files were created and pre-commit consistency checks passed. The canonical GDD and rule seed match their `HEAD` blob hashes. No gameplay/Godot project/runtime surface was created. Final acceptance remains with the GPT Project Sources advisor.
+Inspection and pre-commit documentation validation are complete. The seven changed paths match the task authorization, canonical links resolve, and no gameplay/Godot project/runtime or external evidence directory was created. Final acceptance remains with the GPT Project Sources advisor.
