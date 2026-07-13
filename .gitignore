@@ -1,0 +1,28 @@
+# Godot 4 generated state
+.godot/
+
+# Temporary files and logs
+*.tmp
+*.temp
+*.log
+
+# Builds and exports
+*.pck
+*.exe
+*.zip
+build/
+builds/
+dist/
+exports/
+
+# Repository-external evidence
+evidence/
+
+# Secrets and signing material
+.env
+.env.*
+*.keystore
+*.pfx
+*.p12
+*.pem
+*.key
