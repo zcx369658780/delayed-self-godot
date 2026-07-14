@@ -2,12 +2,32 @@
   "catalog_version": 1,
   "entries": [
     {
+      "level_id": "tutorial_reach_exit",
+      "level_path": "res://data/levels/tutorial_reach_exit.json",
+      "sequence": 1,
+      "display_title_key": "level.tutorial_reach_exit.title",
+      "classification": "tutorial",
+      "unlock_prerequisites": [],
+      "hud_mode": "INTRO_MINIMAL",
+      "final_level": false
+    },
+    {
+      "level_id": "tutorial_echo_bridge",
+      "level_path": "res://data/levels/tutorial_echo_bridge.json",
+      "sequence": 2,
+      "display_title_key": "level.tutorial_echo_bridge.title",
+      "classification": "tutorial",
+      "unlock_prerequisites": ["tutorial_reach_exit"],
+      "hud_mode": "GUIDED_ECHO",
+      "final_level": false
+    },
+    {
       "level_id": "vertical_slice_delay_3",
       "level_path": "res://data/levels/vertical_slice_delay_3.json",
-      "sequence": 1,
+      "sequence": 3,
       "display_title_key": "level.vertical_slice_delay_3.title",
       "classification": "standard",
-      "unlock_prerequisites": [],
+      "unlock_prerequisites": ["tutorial_echo_bridge"],
       "hud_mode": "STANDARD_COMPACT",
       "final_level": true
     }

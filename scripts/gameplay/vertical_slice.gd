@@ -6,6 +6,7 @@ signal request_back
 const LevelLoader = preload("res://scripts/simulation/level_loader.gd")
 const Simulation = preload("res://scripts/simulation/simulation.gd")
 const LEVEL_PATH := "res://data/levels/vertical_slice_delay_3.json"
+const HUD_MODES := ["INTRO_MINIMAL", "GUIDED_ECHO", "STANDARD_COMPACT"]
 const CELL := 54.0
 const ORIGIN := Vector2(48, 150)
 
@@ -84,9 +85,9 @@ func is_runtime_ready() -> bool:
 
 
 func configure_route_payload(payload: Dictionary) -> bool:
-	if is_inside_tree() or not payload.get("level_id") is String or not payload.get("level_path") is String:
+	if is_inside_tree() or not payload.get("level_id") is String or not payload.get("level_path") is String or not payload.get("hud_mode") is String:
 		return false
-	if not payload.level_path.begins_with("res://data/levels/"):
+	if not payload.level_path.begins_with("res://data/levels/") or not payload.level_path.ends_with(".json") or not HUD_MODES.has(payload.hud_mode):
 		return false
 	configured_level_id = payload.level_id
 	configured_level_path = payload.level_path
@@ -160,15 +161,51 @@ func _update_hud() -> void:
 		history_label.text = ""
 		completion_label.visible = false
 		return
-	objective_label.text = "GOAL: Move YOU (white) onto EXIT.\nThe ECHO (purple) cannot finish.\nUse the ECHO to hold the PLATE so YOU can cross the DOOR."
-	legend_label.text = "ENTITY KEY\nYOU — white / cyan core\nECHO — purple outline\nPLATE — amber pad\nDOOR — red closed / green open\nEXIT — blue diamond"
-	echo_next_label.visible = not state.completed
-	echo_next_label.text = "Echo next: %s" % simulation.echo_action_for_state(level, state, level.echoes[0].id)
-	var delay: int = level.echoes[0].delay
-	status_label.text = "THREE TURNS LATE\n\nTurn: %d\nEcho delay: %d\nDoor: %s\n\n%s" % [state.turn_index, delay, "OPEN" if state.door_states[0].open else "CLOSED", "COMPLETE — YOU reached EXIT\nPress R to restart" if state.completed else "Your actions replay 3 turns later."]
-	history_label.text = "History (oldest → newest)\n%s\n\nMove: Arrows/WASD   Wait: Space   Restart: R   Quit: Esc" % "  •  ".join(state.history)
+	var hud_mode: String = route_payload.get("hud_mode", "STANDARD_COMPACT")
+	match hud_mode:
+		"INTRO_MINIMAL":
+			_update_intro_hud()
+		"GUIDED_ECHO":
+			_update_guided_echo_hud()
+		_:
+			_update_standard_hud()
 	completion_label.visible = state.completed
 	completion_label.text = "COMPLETE\nYOU reached EXIT\nPress R to restart"
+
+
+func _update_intro_hud() -> void:
+	objective_label.text = "GOAL: Move YOU (white) onto EXIT."
+	legend_label.text = "ENTITY KEY\nYOU — white / cyan core\nEXIT — blue diamond"
+	echo_next_label.visible = false
+	echo_next_label.text = ""
+	status_label.text = "%s\n\nTurn: %d\n\n%s" % [level.title.to_upper(), state.turn_index, "COMPLETE — YOU reached EXIT\nPress R to restart" if state.completed else "Move YOU to EXIT."]
+	history_label.text = "Move: Arrows/WASD   Restart: R   %s: Esc" % ["Back" if hosted_by_app else "Quit"]
+
+
+func _update_guided_echo_hud() -> void:
+	objective_label.text = "GOAL: Move YOU (white) onto EXIT.\nThe ECHO (purple) cannot finish.\nLet ECHO hold PLATE while YOU cross DOOR."
+	legend_label.text = "ENTITY KEY\nYOU — white / cyan core\nECHO — purple outline\nPLATE — amber pad\nDOOR — red closed / green open\nEXIT — blue diamond"
+	var has_echo: bool = not level.echoes.is_empty() and not state.echo_positions.is_empty()
+	var has_door: bool = not level.doors.is_empty() and not state.door_states.is_empty()
+	echo_next_label.visible = has_echo and not state.completed
+	echo_next_label.text = "Echo next: %s" % simulation.echo_action_for_state(level, state, level.echoes[0].id) if has_echo else ""
+	var delay_text := "\nEcho delay: %d" % level.echoes[0].delay if has_echo else ""
+	var door_text := "\nDoor: %s" % ("OPEN" if state.door_states[0].open else "CLOSED") if has_door else ""
+	status_label.text = "%s\n\nTurn: %d%s%s\n\n%s" % [level.title.to_upper(), state.turn_index, delay_text, door_text, "COMPLETE — YOU reached EXIT\nPress R to restart" if state.completed else "Current actions replay 3 turns later."]
+	history_label.text = "History (oldest → newest)\n%s\n\nMove: Arrows/WASD   Wait: Space   Restart: R   %s: Esc" % ["  •  ".join(state.history), "Back" if hosted_by_app else "Quit"]
+
+
+func _update_standard_hud() -> void:
+	objective_label.text = "GOAL: Move YOU (white) onto EXIT.\nThe ECHO (purple) cannot finish.\nUse the ECHO to hold the PLATE so YOU can cross the DOOR."
+	legend_label.text = "ENTITY KEY\nYOU — white / cyan core\nECHO — purple outline\nPLATE — amber pad\nDOOR — red closed / green open\nEXIT — blue diamond"
+	var has_echo: bool = not level.echoes.is_empty() and not state.echo_positions.is_empty()
+	var has_door: bool = not level.doors.is_empty() and not state.door_states.is_empty()
+	echo_next_label.visible = has_echo and not state.completed
+	echo_next_label.text = "Echo next: %s" % simulation.echo_action_for_state(level, state, level.echoes[0].id) if has_echo else ""
+	var delay_text := "\nEcho delay: %d" % level.echoes[0].delay if has_echo else ""
+	var door_text := "\nDoor: %s" % ("OPEN" if state.door_states[0].open else "CLOSED") if has_door else ""
+	status_label.text = "%s\n\nTurn: %d%s%s\n\n%s" % [level.title.to_upper(), state.turn_index, delay_text, door_text, "COMPLETE — YOU reached EXIT\nPress R to restart" if state.completed else "Your actions replay 3 turns later."]
+	history_label.text = "History (oldest → newest)\n%s\n\nMove: Arrows/WASD   Wait: Space   Restart: R   %s: Esc" % ["  •  ".join(state.history), "Back" if hosted_by_app else "Quit"]
 
 
 func _door_open(id: String) -> bool:

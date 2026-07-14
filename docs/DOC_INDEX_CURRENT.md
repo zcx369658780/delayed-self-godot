@@ -5,7 +5,7 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0006`](../tasks/0006_reusable_app_shell_catalog_routing_and_memory_progress.md) — current authorization
+4. [`Task 0007`](../tasks/0007_reusable_gameplay_and_tutorial_0_1.md) — current authorization
 5. [`DEVELOPMENT_PLAN_CURRENT.md`](DEVELOPMENT_PLAN_CURRENT.md) — milestone spine and near-term gates
 6. [`HANDOFF_MASTER_CURRENT.md`](HANDOFF_MASTER_CURRENT.md) — current continuation point
 7. [`project_memory.md`](project_memory.md) — durable decisions
@@ -54,3 +54,7 @@
 - [`Task 0005 planning report`](reports/0005_SYSTEM_SKELETON_AND_TUTORIAL_LEVEL_PLANNING_REPORT.md)
 - [`Task 0005 GPT acceptance`](reports/0005_GPT_FINAL_ACCEPTANCE.md)
 - [`Task 0006 app-shell implementation report`](reports/0006_REUSABLE_APP_SHELL_CATALOG_AND_MEMORY_PROGRESS_REPORT.md)
+- [`Task 0006 GPT acceptance`](reports/0006_GPT_FINAL_ACCEPTANCE.md)
+- [`Tutorial Reach Exit validation`](level_design/validation/TUTORIAL_REACH_EXIT_VALIDATION.md)
+- [`Tutorial Echo Bridge validation`](level_design/validation/TUTORIAL_ECHO_BRIDGE_VALIDATION.md)
+- [`Task 0007 reusable gameplay and tutorials report`](reports/0007_REUSABLE_GAMEPLAY_AND_TUTORIAL_LEVELS_REPORT.md)

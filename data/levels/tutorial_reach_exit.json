@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "level_id": "tutorial_reach_exit",
+  "title": "Reach the Exit",
+  "terrain_rows": [
+    "#####",
+    "#...#",
+    "#...#",
+    "#####"
+  ],
+  "player_spawn": [1, 2],
+  "echoes": [],
+  "plates": [],
+  "doors": [],
+  "exit": {"position": [3, 1]},
+  "metadata": {
+    "teaching_goal": "Identify YOU and move the current player to EXIT, then observe completion and restart.",
+    "intended_mechanics": ["movement", "player_exit", "restart"],
+    "notes": "Task 0007 Tutorial 0. No delayed Echo concepts are introduced.",
+    "allow_zero_echo_tutorial": true
+  },
+  "validation": {"recommended_search_depth": 12}
+}

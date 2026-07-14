@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "level_id": "tutorial_echo_bridge",
+  "title": "Three Turns Later",
+  "terrain_rows": [
+    "#######",
+    "#.....#",
+    "#.....#",
+    "##.####",
+    "#.....#",
+    "#######"
+  ],
+  "player_spawn": [1, 1],
+  "echoes": [
+    {"id": "echo_delay_3", "delay": 3, "spawn": [1, 1]}
+  ],
+  "plates": [
+    {"id": "plate_bridge", "position": [3, 1]}
+  ],
+  "doors": [
+    {"id": "door_bridge", "position": [2, 3], "initial_open": false, "all_plate_ids": ["plate_bridge"]}
+  ],
+  "exit": {"position": [4, 4]},
+  "metadata": {
+    "teaching_goal": "Use the delay-3 Echo to hold the Plate so YOU can cross the Door and reach EXIT.",
+    "intended_mechanics": ["delayed_echo", "pressure_plate", "delayed_door"],
+    "notes": "Task 0007 Tutorial 1. The horizontal gate separates the start room from EXIT without adding mechanics.",
+    "allow_zero_echo_tutorial": false
+  },
+  "validation": {"recommended_search_depth": 32}
+}

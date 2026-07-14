@@ -18,15 +18,23 @@ func _init() -> void:
 
 
 func _run() -> void:
+	_test_tutorial_reach_exit_contract()
+	_test_tutorial_reach_exit_solver()
+	_test_tutorial_echo_bridge_contract()
+	_test_tutorial_echo_bridge_solver_and_necessity()
 	_test_tracked_catalog()
 	_test_catalog_failures()
 	_test_memory_progress()
+	_test_tracked_progress_chain_and_reset()
 	_test_direct_level_parser()
 	_test_loader()
 	_test_vectors()
 	_test_determinism_and_errors()
 	_test_solver()
 	await _test_scene_smoke()
+	await _test_tutorial_zero_gameplay_tracer()
+	await _test_tutorial_one_gameplay_tracer()
+	await _test_gameplay_configuration_failure()
 	await _test_app_shell_tracer()
 	if failures > 0:
 		printerr("TASK_0003_TESTS_FAIL failures=%d assertions=%d" % [failures, assertions])
@@ -34,12 +42,90 @@ func _run() -> void:
 	else:
 		print("TASK_0003_TESTS_PASS assertions=%d vectors=9" % assertions)
 		print("TASK_0006_APP_SHELL_TESTS_PASS")
+		print("TASK_0007_TUTORIAL_LEVELS_TESTS_PASS")
 		quit(0)
+
+
+func _test_tutorial_reach_exit_contract() -> void:
+	var loaded := loader.load_file("res://data/levels/tutorial_reach_exit.json")
+	_expect(loaded.ok, "Tutorial 0 loads through the accepted LevelLoader")
+	if loaded.ok:
+		_expect(loaded.level.level_id == "tutorial_reach_exit" and loaded.level.echoes.is_empty() and loaded.level.plates.is_empty() and loaded.level.doors.is_empty() and loaded.level.metadata.allow_zero_echo_tutorial, "Tutorial 0 is a genuine zero-entity schema-v1 tutorial")
+
+
+func _test_tutorial_reach_exit_solver() -> void:
+	var loaded := loader.load_file("res://data/levels/tutorial_reach_exit.json")
+	if not loaded.ok:
+		return
+	var initial := simulation.construct_initial_state(loaded.level)
+	_expect(initial.history.is_empty() and initial.echo_positions.is_empty() and initial.door_states.is_empty(), "Tutorial 0 initial state contains no delayed-system placeholders")
+	var limits := {"depth_limit": 12, "state_limit": 10000, "time_limit_ms": 10000, "solution_count_cap": 1000000}
+	var result := Solver.new().solve(loaded.level, limits)
+	_expect(result.status == "SOLVED" and result.shortest_turn_count >= 2 and result.shortest_turn_count <= 5, "Tutorial 0 solver proves the planned shortest-path band")
+	if result.status != "SOLVED":
+		return
+	var replay := simulation.replay(loaded.level, result.solution)
+	_expect(replay.ok and replay.state.completed and result.solution.size() == result.shortest_turn_count and ["EXACT", "CAPPED"].has(result.shortest_solution_count_status), "Tutorial 0 solver witness replays to completion with valid count semantics")
+	_expect(simulation.restart(loaded.level).state == initial, "Tutorial 0 restart exactly reconstructs its initial state")
+	print("TUTORIAL_0_SOLVER_RESULT=" + JSON.stringify(result))
+
+
+func _test_tutorial_echo_bridge_contract() -> void:
+	var loaded := loader.load_file("res://data/levels/tutorial_echo_bridge.json")
+	_expect(loaded.ok, "Tutorial 1 loads through the accepted LevelLoader")
+	if loaded.ok:
+		var level: Dictionary = loaded.level
+		_expect(level.level_id == "tutorial_echo_bridge" and level.echoes.size() == 1 and level.echoes[0].delay == 3 and level.echoes[0].spawn == level.player_spawn and level.plates.size() == 1 and level.doors.size() == 1 and level.doors[0].all_plate_ids == [level.plates[0].id], "Tutorial 1 has one shared-spawn delay-3 Echo and one Plate/Door chain")
+
+
+func _test_tutorial_echo_bridge_solver_and_necessity() -> void:
+	var loaded := loader.load_file("res://data/levels/tutorial_echo_bridge.json")
+	if not loaded.ok:
+		return
+	var level: Dictionary = loaded.level
+	var limits := {"depth_limit": 64, "state_limit": 100000, "time_limit_ms": 10000, "solution_count_cap": 1000000}
+	var result := Solver.new().solve(level, limits)
+	_expect(result.status == "SOLVED" and result.shortest_turn_count >= 6 and result.shortest_turn_count <= 10, "Tutorial 1 solver proves the planned shortest-path band")
+	if result.status != "SOLVED":
+		return
+	var replay := simulation.replay(level, result.solution)
+	_expect(replay.ok and replay.state.completed and result.solution.size() == result.shortest_turn_count and ["EXACT", "CAPPED"].has(result.shortest_solution_count_status), "Tutorial 1 solver witness replays to completion with valid count semantics")
+	var cooperation_trace := false
+	var before: Dictionary = simulation.construct_initial_state(level)
+	for transition in replay.transitions:
+		var after: Dictionary = transition.state
+		if before.door_states[0].open and before.echo_positions[0].position == level.plates[0].position and before.player_position != level.plates[0].position and after.player_position == level.doors[0].position:
+			cooperation_trace = true
+		before = after
+	_expect(cooperation_trace, "Tutorial 1 witness enters the Door from an Echo-only start-of-turn Plate state")
+	var no_echo_data: Dictionary = level.duplicate(true)
+	no_echo_data.echoes = []
+	no_echo_data.metadata.allow_zero_echo_tutorial = true
+	var no_echo := loader.validate_dict(no_echo_data)
+	_expect(no_echo.ok, "Tutorial 1 no-Echo controlled variant remains schema valid")
+	if no_echo.ok:
+		var no_echo_result := Solver.new().solve(no_echo.level, limits)
+		_expect(no_echo_result.status == "UNSOLVABLE_WITHIN_COMPLETE_FINITE_STATE", "Tutorial 1 no-Echo variant exhausts the finite state space without a player bypass")
+		result["no_echo_variant_status"] = no_echo_result.status
+		result["no_echo_variant_visited_states"] = no_echo_result.visited_states
+	var echo_on_exit := simulation.construct_initial_state(level)
+	echo_on_exit.echo_positions[0].position = level.exit.position.duplicate()
+	var echo_only_result := simulation.transition(level, echo_on_exit, "WAIT")
+	_expect(echo_only_result.ok and not echo_only_result.state.completed, "Tutorial 1 Echo on EXIT cannot complete for the player")
+	_expect(simulation.restart(level).state == simulation.construct_initial_state(level), "Tutorial 1 restart exactly reconstructs its initial state")
+	print("TUTORIAL_1_SOLVER_RESULT=" + JSON.stringify(result))
 
 
 func _test_tracked_catalog() -> void:
 	var result := CatalogLoader.new().load_file("res://data/catalog/level_catalog_v1.json")
-	_expect(result.ok and result.catalog.entries.size() == 1 and result.catalog.entries[0].level_id == "vertical_slice_delay_3", "tracked catalog validates and normalizes")
+	_expect(result.ok and result.catalog.entries.size() == 3, "tracked three-entry catalog validates and normalizes")
+	if result.ok and result.catalog.entries.size() == 3:
+		var entries: Array = result.catalog.entries
+		_expect(entries.map(func(entry): return entry.level_id) == ["tutorial_reach_exit", "tutorial_echo_bridge", "vertical_slice_delay_3"], "tracked catalog has the required Tutorial 0, Tutorial 1, vertical-slice sequence")
+		_expect(entries[0].classification == "tutorial" and entries[0].hud_mode == "INTRO_MINIMAL" and entries[0].unlock_prerequisites.is_empty() and not entries[0].final_level, "Tutorial 0 catalog facts are exact")
+		_expect(entries[1].classification == "tutorial" and entries[1].hud_mode == "GUIDED_ECHO" and entries[1].unlock_prerequisites == ["tutorial_reach_exit"] and not entries[1].final_level, "Tutorial 1 catalog facts are exact")
+		_expect(entries[2].classification == "standard" and entries[2].hud_mode == "STANDARD_COMPACT" and entries[2].unlock_prerequisites == ["tutorial_echo_bridge"] and entries[2].final_level, "vertical-slice catalog facts remain exact and solely final")
+		_expect(entries.all(func(entry): return not entry.has("best_turn_threshold") and entry.formal_level.level_id == entry.level_id), "catalog omits thresholds and every formal ID matches")
 
 
 func _test_catalog_failures() -> void:
@@ -75,7 +161,7 @@ func _test_catalog_failures() -> void:
 	_expect_catalog_code(catalog_loader.validate_dict(value), "CATALOG_UNKNOWN_HUD_MODE", "unknown HUD mode")
 	value = base.duplicate(true); value.entries[0].unlock_prerequisites = ["other", "other"]
 	_expect_catalog_code(catalog_loader.validate_dict(value), "CATALOG_DUPLICATE_PREREQUISITE", "duplicate catalog prerequisite")
-	value = base.duplicate(true); value.entries[0].unlock_prerequisites = ["vertical_slice_delay_3"]
+	value = base.duplicate(true); value.entries[0].unlock_prerequisites = [value.entries[0].level_id]
 	_expect_catalog_code(catalog_loader.validate_dict(value), "CATALOG_SELF_PREREQUISITE", "self prerequisite")
 	value = base.duplicate(true); value.entries[0].unlock_prerequisites = ["missing"]
 	_expect_catalog_code(catalog_loader.validate_dict(value), "CATALOG_UNKNOWN_PREREQUISITE", "unknown prerequisite")
@@ -89,23 +175,27 @@ func _test_catalog_failures() -> void:
 	_expect_catalog_code(catalog_loader.validate_dict(value, true), "CATALOG_FORMAL_LEVEL_INVALID", "formal level rejected by LevelLoader")
 	value = base.duplicate(true); value.entries[0].level_path = "res://docs/level_design/examples/level_v1_minimal_valid.json"
 	_expect_catalog_code(catalog_loader.validate_dict(value, true), "CATALOG_LEVEL_ID_MISMATCH", "catalog and formal level ID mismatch")
-	value = base.duplicate(true); value.entries[0].final_level = false
+	value = base.duplicate(true)
+	for entry in value.entries:
+		entry.final_level = false
 	_expect_catalog_code(catalog_loader.validate_dict(value), "CATALOG_FINAL_COUNT_INVALID", "zero final catalog entries")
-	value = base.duplicate(true); value.entries.append(value.entries[0].duplicate(true)); value.entries[1].level_id = "other"; value.entries[1].sequence = 2
+	value = base.duplicate(true); value.entries[0].final_level = true
 	_expect_catalog_code(catalog_loader.validate_dict(value), "CATALOG_FINAL_COUNT_INVALID", "multiple final catalog entries")
 
 
 func _cycle_catalog(base: Dictionary) -> Dictionary:
 	var value: Dictionary = base.duplicate(true)
-	value.entries[0].level_id = "cycle_a"
-	value.entries[0].unlock_prerequisites = ["cycle_b"]
-	value.entries[0].final_level = true
-	var second: Dictionary = value.entries[0].duplicate(true)
+	var first: Dictionary = value.entries[0].duplicate(true)
+	first.level_id = "cycle_a"
+	first.sequence = 1
+	first.unlock_prerequisites = ["cycle_b"]
+	first.final_level = true
+	var second: Dictionary = first.duplicate(true)
 	second.level_id = "cycle_b"
 	second.sequence = 2
 	second.unlock_prerequisites = ["cycle_a"]
 	second.final_level = false
-	value.entries.append(second)
+	value.entries = [first, second]
 	return value
 
 
@@ -126,6 +216,18 @@ func _test_memory_progress() -> void:
 	progress.reset_test_profile()
 	_expect(progress.snapshot().completed_level_ids.is_empty() and progress.is_unlocked("root_a") and not progress.is_unlocked("branch"), "progress reset restores deterministic memory-only state")
 	_expect(Array(DirAccess.get_files_at("user://")) == user_files_before, "memory progress performs no filesystem writes")
+
+
+func _test_tracked_progress_chain_and_reset() -> void:
+	var loaded := CatalogLoader.new().load_file("res://data/catalog/level_catalog_v1.json")
+	if not loaded.ok:
+		return
+	var progress = ProgressStore.new(loaded.catalog)
+	_expect(progress.snapshot().unlocked_level_ids == ["tutorial_reach_exit"], "tracked progress initially unlocks only Tutorial 0")
+	_expect(progress.record_completion("tutorial_reach_exit", 3) and progress.snapshot().unlocked_level_ids == ["tutorial_echo_bridge", "tutorial_reach_exit"], "tracked progress unlocks only Tutorial 1 after Tutorial 0")
+	_expect(progress.record_completion("tutorial_echo_bridge", 9) and progress.snapshot().unlocked_level_ids == ["tutorial_echo_bridge", "tutorial_reach_exit", "vertical_slice_delay_3"], "tracked progress unlocks the vertical slice after Tutorial 1")
+	progress.reset_test_profile()
+	_expect(progress.snapshot() == {"completed_level_ids": [], "best_turns": {}, "unlocked_level_ids": ["tutorial_reach_exit"]}, "tracked progress reset restores the exact initial unlock snapshot")
 
 
 func _test_direct_level_parser() -> void:
@@ -305,6 +407,48 @@ func _test_scene_smoke() -> void:
 	await process_frame
 
 
+func _test_tutorial_zero_gameplay_tracer() -> void:
+	var packed = load("res://scenes/vertical_slice/vertical_slice.tscn")
+	var scene = packed.instantiate()
+	var configured: bool = scene.configure_route_payload({"level_id": "tutorial_reach_exit", "level_path": "res://data/levels/tutorial_reach_exit.json", "hud_mode": "INTRO_MINIMAL", "classification": "tutorial", "development_direct": true, "final_level": false})
+	_expect(configured, "reusable gameplay accepts a validated Tutorial 0 payload before tree entry")
+	root.add_child(scene)
+	await process_frame
+	_expect(scene.is_runtime_ready() and scene.state.echo_positions.is_empty() and scene.state.door_states.is_empty(), "Tutorial 0 reusable gameplay becomes ready with zero Echoes and zero Doors")
+	var hud: Dictionary = scene.get_hud_snapshot()
+	var visible_text := "%s %s %s %s %s" % [hud.status, hud.objective, hud.legend, hud.echo_next, hud.history]
+	_expect(hud.objective.contains("YOU") and hud.objective.contains("EXIT") and not visible_text.contains("ECHO") and not visible_text.contains("PLATE") and not visible_text.contains("DOOR") and not visible_text.contains("Echo next") and not visible_text.contains("History") and not visible_text.contains("Wait"), "Tutorial 0 HUD exposes only its relevant movement and EXIT teaching content")
+	scene.queue_free()
+	await process_frame
+
+
+func _test_tutorial_one_gameplay_tracer() -> void:
+	var packed = load("res://scenes/vertical_slice/vertical_slice.tscn")
+	var scene = packed.instantiate()
+	var configured: bool = scene.configure_route_payload({"level_id": "tutorial_echo_bridge", "level_path": "res://data/levels/tutorial_echo_bridge.json", "hud_mode": "GUIDED_ECHO", "classification": "tutorial", "development_direct": true, "final_level": false})
+	_expect(configured, "reusable gameplay accepts a validated Tutorial 1 payload before tree entry")
+	root.add_child(scene)
+	await process_frame
+	var hud: Dictionary = scene.get_hud_snapshot()
+	var visible_text := JSON.stringify(hud)
+	_expect(scene.is_runtime_ready() and scene.state.echo_positions.size() == 1 and scene.state.door_states.size() == 1, "Tutorial 1 reusable gameplay becomes ready with one Echo and one Door")
+	_expect(visible_text.contains("YOU") and visible_text.contains("ECHO") and visible_text.contains("PLATE") and visible_text.contains("DOOR") and visible_text.contains("EXIT") and visible_text.contains("Echo delay: 3") and hud.echo_next == "Echo next: WAIT" and hud.history.contains("History"), "Tutorial 1 GUIDED_ECHO HUD exposes roles, delay, history, and next action")
+	scene.queue_free()
+	await process_frame
+
+
+func _test_gameplay_configuration_failure() -> void:
+	var packed = load("res://scenes/vertical_slice/vertical_slice.tscn")
+	var scene = packed.instantiate()
+	var configured: bool = scene.configure_route_payload({"level_id": "tutorial_echo_bridge", "level_path": "res://data/levels/tutorial_reach_exit.json", "hud_mode": "GUIDED_ECHO", "classification": "tutorial", "development_direct": true, "final_level": false})
+	_expect(configured, "reusable gameplay accepts a structurally valid pre-tree payload for parity checking")
+	root.add_child(scene)
+	await process_frame
+	_expect(not scene.is_runtime_ready() and scene.load_error == "LEVEL_ID_MISMATCH" and scene.level.is_empty() and scene.state.is_empty(), "formal ID mismatch fails without partial Gameplay state")
+	scene.queue_free()
+	await process_frame
+
+
 func _test_app_shell_tracer() -> void:
 	var packed = load("res://scenes/app/app_root.tscn")
 	_expect(packed is PackedScene, "app root scene resource loads")
@@ -318,18 +462,34 @@ func _test_app_shell_tracer() -> void:
 	await process_frame
 	_expect(app.get_current_route() == "LEVEL_SELECT" and app.get_active_screen_count() == 1, "Main Menu intent routes to one Level Select screen")
 	var select_snapshot: Dictionary = app.get_active_screen().get_screen_snapshot()
-	_expect(select_snapshot.entries.size() == 1 and select_snapshot.entries[0].level_id == "vertical_slice_delay_3" and select_snapshot.entries[0].unlocked, "Level Select exposes the sorted unlocked tracked catalog entry")
+	_expect(select_snapshot.entries.size() == 3 and select_snapshot.entries[0].level_id == "tutorial_reach_exit" and select_snapshot.entries[0].unlocked and not select_snapshot.entries[1].unlocked and not select_snapshot.entries[2].unlocked, "Level Select initially unlocks only Tutorial 0 in sorted catalog order")
 	app.select_level("vertical_slice_delay_3")
 	await process_frame
+	_expect(app.get_current_route() == "SAFE_ERROR" and app.get_active_screen().get_screen_snapshot().error_code == "APP_LEVEL_LOCKED", "locked vertical slice reaches Safe Error without Gameplay state")
+	app.navigate("LEVEL_SELECT")
+	await process_frame
+	app.select_level("tutorial_reach_exit")
+	await process_frame
 	var gameplay = app.get_active_screen()
-	_expect(app.get_current_route() == "GAMEPLAY" and gameplay.is_runtime_ready(), "validated catalog selection routes to ready Gameplay")
-	var payload: Dictionary = gameplay.get_route_payload()
-	_expect(payload.level_id == "vertical_slice_delay_3" and payload.level_path == "res://data/levels/vertical_slice_delay_3.json" and payload.hud_mode == "STANDARD_COMPACT", "Gameplay receives the expected normalized route payload")
-	for action in ["move_right", "move_right", "move_up", "move_up", "move_up", "move_right", "move_right", "move_right", "move_right"]:
-		_send_scene_action(gameplay, action)
+	_expect(app.get_current_route() == "GAMEPLAY" and gameplay.is_runtime_ready() and gameplay.get_route_payload().hud_mode == "INTRO_MINIMAL", "Tutorial 0 catalog selection routes through reusable Gameplay")
+	for action in ["UP", "RIGHT", "RIGHT"]:
+		_send_simulation_action(gameplay, action)
 	await process_frame
 	var progress_snapshot: Dictionary = app.get_progress_snapshot()
-	_expect(app.get_current_route() == "LEVEL_SELECT" and progress_snapshot.completed_level_ids == ["vertical_slice_delay_3"] and progress_snapshot.best_turns.vertical_slice_delay_3 == 9, "Gameplay completion updates memory progress and returns to Level Select")
+	_expect(app.get_current_route() == "LEVEL_SELECT" and progress_snapshot.completed_level_ids == ["tutorial_reach_exit"] and progress_snapshot.best_turns.tutorial_reach_exit == 3 and progress_snapshot.unlocked_level_ids == ["tutorial_echo_bridge", "tutorial_reach_exit"], "Tutorial 0 completion unlocks only Tutorial 1 and records three turns")
+	app.select_level("tutorial_echo_bridge")
+	await process_frame
+	gameplay = app.get_active_screen()
+	_expect(app.get_current_route() == "GAMEPLAY" and gameplay.is_runtime_ready() and gameplay.get_route_payload().hud_mode == "GUIDED_ECHO", "Tutorial 1 catalog selection routes through the same reusable Gameplay implementation")
+	for action in ["RIGHT", "RIGHT", "UP", "DOWN", "LEFT", "DOWN", "DOWN", "RIGHT", "RIGHT"]:
+		_send_simulation_action(gameplay, action)
+	await process_frame
+	progress_snapshot = app.get_progress_snapshot()
+	_expect(app.get_current_route() == "LEVEL_SELECT" and progress_snapshot.completed_level_ids == ["tutorial_echo_bridge", "tutorial_reach_exit"] and progress_snapshot.best_turns.tutorial_echo_bridge == 9 and progress_snapshot.unlocked_level_ids == ["tutorial_echo_bridge", "tutorial_reach_exit", "vertical_slice_delay_3"], "Tutorial 1 completion unlocks the vertical slice and records nine turns")
+	app.select_level("vertical_slice_delay_3")
+	await process_frame
+	gameplay = app.get_active_screen()
+	_expect(app.get_current_route() == "GAMEPLAY" and gameplay.is_runtime_ready() and gameplay.get_route_payload().hud_mode == "STANDARD_COMPACT", "unlocked vertical slice routes through the same reusable Gameplay implementation")
 	app.navigate("UNKNOWN_ROUTE")
 	await process_frame
 	_expect(app.get_current_route() == "SAFE_ERROR" and app.get_active_screen().get_screen_snapshot().error_code == "APP_UNKNOWN_ROUTE" and app.get_active_screen_count() == 1, "unknown route reaches one Safe Error screen")
@@ -350,9 +510,10 @@ func _test_app_shell_tracer() -> void:
 	var direct_app = packed.instantiate()
 	root.add_child(direct_app)
 	await process_frame
-	direct_app.boot_with_user_args(["--level-id=vertical_slice_delay_3"])
-	await process_frame
-	_expect(direct_app.get_current_route() == "GAMEPLAY" and direct_app.get_active_screen().get_route_payload().development_direct, "validated development level ID boots directly to Gameplay")
+	for direct_id in ["tutorial_reach_exit", "tutorial_echo_bridge", "vertical_slice_delay_3"]:
+		direct_app.boot_with_user_args(["--level-id=" + direct_id])
+		await process_frame
+		_expect(direct_app.get_current_route() == "GAMEPLAY" and direct_app.get_active_screen().get_route_payload().development_direct and direct_app.get_active_screen().get_route_payload().level_id == direct_id and direct_app.get_active_screen_count() == 1, "validated development level ID boots directly to one reusable Gameplay: " + direct_id)
 	direct_app.boot_with_user_args(["--level-id=unknown_level"])
 	await process_frame
 	_expect(direct_app.get_current_route() == "SAFE_ERROR" and direct_app.get_active_screen().get_screen_snapshot().error_code == "APP_UNKNOWN_LEVEL_ID", "unknown development level ID reaches Safe Error")
@@ -365,6 +526,11 @@ func _send_scene_action(scene: Node, action: String) -> void:
 	event.action = action
 	event.pressed = true
 	scene._unhandled_input(event)
+
+
+func _send_simulation_action(scene: Node, action: String) -> void:
+	var input_actions := {"UP": "move_up", "RIGHT": "move_right", "DOWN": "move_down", "LEFT": "move_left", "WAIT": "wait_turn"}
+	_send_scene_action(scene, input_actions[action])
 
 
 func _expect_code(result: Dictionary, code: String, label: String) -> void:

@@ -27,7 +27,7 @@ Top-level fields are exactly `catalog_version` (integer constant `1`) and `entri
 
 Unknown fields are rejected. Prerequisites cannot be duplicated, self-referential, unknown, cyclic, or unreachable from a root entry. The tracked runtime catalog has exactly one `final_level=true` entry.
 
-The current one-entry development catalog marks `vertical_slice_delay_3` as final only because it is the last implemented catalog entry. This is not a narrative ending, candidate-completion, release, or submission claim. No best-turn threshold is recorded.
+The tracked runtime catalog contains exactly three implemented entries in order: `tutorial_reach_exit`, `tutorial_echo_bridge`, and `vertical_slice_delay_3`. Their prerequisite chain is Tutorial 0 → Tutorial 1 → vertical slice, and their HUD modes are `INTRO_MINIMAL`, `GUIDED_ECHO`, and `STANDARD_COMPACT` respectively. The vertical slice is marked final only because it is the last currently implemented catalog entry. This is not a narrative ending, candidate-completion, release, or submission claim. No best-turn threshold is recorded.
 
 ## Normalized runtime data
 
