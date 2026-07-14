@@ -1,21 +1,21 @@
 # Codex active task (CURRENT)
 
 - Status: `COMPLETED_PENDING_GPT_REVIEW`
-- Task: `tasks/0004V_targeted_victory_and_entity_readability_user_retest.md`
-- Gate: `MANUAL EVIDENCE / TARGETED REPAIR VERIFICATION`
-- Starting HEAD: `36c2a23fb0901749fb7ad144fb6d8b84ec60aaf1`
-- Starting `origin/main`: `36c2a23fb0901749fb7ad144fb6d8b84ec60aaf1`
-- Commit policy: one documentation-only commit, message `docs: record Delayed Self targeted UX retest`
+- Task: `tasks/0005_system_skeleton_and_tutorial_level_planning.md`
+- Gate: `PLANNING / SYSTEM SKELETON AND CONTENT SPINE`
+- Starting HEAD: `07a93015b48db526396829db031a5989de00e414`
+- Starting `origin/main`: `07a93015b48db526396829db031a5989de00e414`
+- Commit policy: one documentation-only planning commit, message `docs: plan Delayed Self system skeleton and tutorials`
 - Push policy: one normal push to `origin/main` after fetch and remote-drift check
 
 ## Scope
 
-Record the authenticated user's same-user targeted retest of the accepted Task 0004R presentation repair without changing runtime or source.
+Produce implementation-ready architecture, tutorial/HUD, eight-level validation, and M2 execution plans without modifying runtime or protected surfaces.
 
 ## Remaining uncertainties
 
-GPT adjudication, six numeric ratings, fresh-player/independent review, final art, accessibility compliance, export, Web, save, license, and release behavior remain unresolved or unverified.
+GPT acceptance of recommendations, catalog/API details, uncreated level solvability and metrics, fresh-player/independent review, persistent save, final art/audio, accessibility, export, Web, license, and release remain unresolved.
 
 ## Completion state
 
-The same user completed the repaired puzzle unassisted at visible Turn 10 and supplied a completion screenshot. P0/P1=0, P2=1, P3=1. A pre-attempt solver-count disclosure protocol deviation is documented for GPT adjudication; no route or movement guidance was supplied.
+Five required planning artifacts and current-document updates are complete pending GPT review. Task 0004V P2 drives progressive disclosure; the branching-route P3 is deferred post-MVP. No planned future task is authorized by this completion state.

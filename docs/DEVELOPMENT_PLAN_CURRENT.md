@@ -1,6 +1,6 @@
 # Development plan (CURRENT)
 
-The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAME_DESIGN_DOCUMENT_CURRENT.md). This document records the execution spine without inventing implementation tasks beyond Task 0003.
+The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAME_DESIGN_DOCUMENT_CURRENT.md). This document records the accepted execution spine and clearly labels future tasks as planning recommendations until separately authorized.
 
 ## Near-term gates
 
@@ -12,11 +12,16 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0004 first-player evidence
 → 0004R focused UX repair
 → 0004V user retest
+→ 0005 system skeleton and tutorial planning
+→ 0006 app shell/catalog/in-memory progress (recommended, not authorized)
+→ 0007 tutorials/reusable gameplay (recommended, not authorized)
+→ 0008 progressive HUD/fresh-player evidence (recommended, not authorized)
+→ 0009 remaining schema-v1 content (recommended, not authorized)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
 
-Tasks 0000–0003 are GPT accepted, and Task 0004R is accepted pending user retest. Task 0004V now records a same-user unassisted completion with no P0/P1 and one P2 information-density observation; GPT adjudication is pending. If accepted, the next gate is Task 0005 system-skeleton/tutorial-level planning. Export remains a separate later gate.
+Tasks 0000–0004V are GPT accepted with recorded observations. Task 0005 planning defines the next architecture/content sequence and is pending GPT review. Task 0006 is the recommended next gate only after acceptance; export remains a separate later gate.
 
 ## Milestone spine
 

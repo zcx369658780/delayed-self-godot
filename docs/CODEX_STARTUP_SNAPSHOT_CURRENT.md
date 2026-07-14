@@ -6,20 +6,20 @@
 - Local root: `D:\Delayed_Self`
 - Working title: `迟到的我 / Delayed Self`
 - Product: offline single-player; primary target Windows
-- Prior accepted gate: Task 0004R (`TASK_0004R_UX_REPAIR_ACCEPTED_PENDING_USER_RETEST`), accepted implementation commit `caeff311fda77b0261a7d78672afb9244ff23549`
-- Current gate: Task 0004V — targeted victory-condition and entity-readability user retest
-- Current task: `tasks/0004V_targeted_victory_and_entity_readability_user_retest.md`
+- Prior accepted gate: Task 0004V (`TASK_0004V_TARGETED_UX_RETEST_ACCEPTED_WITH_OBSERVATIONS`), accepted evidence commit `67b9a9cbfcefd2458b481c33673aeb23520a51f4`
+- Current gate: Task 0005 — system skeleton and tutorial-level planning
+- Current task: `tasks/0005_system_skeleton_and_tutorial_level_planning.md`
 - Environment record: `docs/environment/DEVELOPMENT_ENVIRONMENT_CURRENT.md`
 - Simulation contract: `docs/game_design/GAMEPLAY_SIMULATION_CONTRACT_CURRENT.md`
 - Level schema: `schemas/level_v1.schema.json`
-- Current report: `docs/reports/0004V_TARGETED_USER_RETEST_REPORT.md`
-- Current user evidence: `docs/reviews/0004V_TARGETED_VICTORY_AND_ENTITY_READABILITY_USER_RETEST.md`
-- Next recommended gate after GPT review: Task 0005 — system-skeleton and tutorial-level planning
+- Current report: `docs/reports/0005_SYSTEM_SKELETON_AND_TUTORIAL_LEVEL_PLANNING_REPORT.md`
+- Current architecture plan: `docs/architecture/SYSTEM_SKELETON_PLAN_CURRENT.md`
+- Next recommended gate after GPT review: Task 0006 — reusable app shell, catalog, routing, and in-memory progression
 
 ## Startup
 
-Follow the canonical read order in `AGENTS.md`. Before any write, verify root, branch, `HEAD`, remotes, and clean worktree. Task 0004V records same-user targeted evidence only; simulation, schema, level, source, tests, renderer, viewport, and controls remain frozen.
+Follow the canonical read order in `AGENTS.md`. Before any write, verify root, branch, `HEAD`, remotes, and clean worktree. Task 0005 is planning-only; every planned system, HUD mode, level, metric target, and future task remains unimplemented unless separately accepted and authorized.
 
 ## Pending
 
-The same user completed the repaired slice unassisted at visible Turn 10. P0/P1=0; one P2 information-density observation and one P3 branching-play suggestion remain. GPT adjudication is pending, numeric ratings were not provided, and a later fresh-player/independent review remains required. Export, Web, final art, license, save, and release remain separate gates.
+Task 0005 defines a separate catalog boundary, complete flow skeleton, three progressive HUD modes, an eight-level schema-v1 roadmap, validation ladder, and Tasks 0006–0009 sequence. GPT acceptance is pending. Persistent save, assets/audio, export, Web, release, and fresh-player/independent acceptance remain separate gates.
