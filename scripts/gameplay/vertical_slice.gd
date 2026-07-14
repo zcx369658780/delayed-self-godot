@@ -12,7 +12,11 @@ var load_error := ""
 var simulation := Simulation.new()
 
 @onready var status_label: Label = $Hud/Status
+@onready var objective_label: Label = $Hud/Objective
+@onready var legend_label: Label = $Hud/Legend
+@onready var echo_next_label: Label = $Hud/EchoNext
 @onready var history_label: Label = $Hud/History
+@onready var completion_label: Label = $Hud/Completion
 
 
 func _ready() -> void:
@@ -60,7 +64,11 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func is_runtime_ready() -> bool:
-	return load_error == "" and not level.is_empty() and not state.is_empty() and status_label != null and history_label != null
+	return load_error == "" and not level.is_empty() and not state.is_empty() and status_label != null and objective_label != null and legend_label != null and echo_next_label != null and history_label != null and completion_label != null
+
+
+func get_hud_snapshot() -> Dictionary:
+	return {"status": status_label.text, "objective": objective_label.text, "legend": legend_label.text, "echo_next": echo_next_label.text, "history": history_label.text, "completion": completion_label.text if completion_label.visible else ""}
 
 
 func _draw() -> void:
@@ -80,23 +88,55 @@ func _draw() -> void:
 		draw_rect(rect, Color("34d399", 0.28) if open else Color("ef4444"))
 		draw_rect(rect, Color("6ee7b7") if open else Color("fecaca"), false, 3)
 	var exit_position: Vector2 = _center(level.exit.position)
-	draw_circle(exit_position, 21, Color("60a5fa", 0.25))
-	draw_arc(exit_position, 21, 0, TAU, 32, Color("93c5fd"), 4)
+	_draw_exit_base(exit_position)
 	for echo in state.echo_positions:
-		draw_circle(_center(echo.position), 16, Color("a78bfa", 0.72))
-		draw_arc(_center(echo.position), 20, 0, TAU, 24, Color("ddd6fe"), 2)
+		var echo_center := _center(echo.position)
+		draw_circle(echo_center, 16, Color("a78bfa", 0.72))
+		draw_arc(echo_center, 20, 0, TAU, 24, Color("ddd6fe"), 2)
+		var echo_letter_center := echo_center + Vector2(10, -8) if echo.position == state.player_position else echo_center
+		_draw_actor_letter(echo_letter_center, "E", Color("f5f3ff"))
 	draw_circle(_center(state.player_position), 15, Color("f8fafc"))
 	draw_circle(_center(state.player_position), 7, Color("22d3ee"))
+	_draw_actor_letter(_center(state.player_position), "Y", Color("082f49"))
+	_draw_exit_overlay(exit_position)
+
+
+func _draw_exit_base(center: Vector2) -> void:
+	var diamond := PackedVector2Array([center + Vector2(0, -22), center + Vector2(22, 0), center + Vector2(0, 22), center + Vector2(-22, 0)])
+	draw_colored_polygon(diamond, Color("2563eb", 0.22))
+	for index in diamond.size():
+		draw_line(diamond[index], diamond[(index + 1) % diamond.size()], Color("60a5fa"), 3)
+
+
+func _draw_exit_overlay(center: Vector2) -> void:
+	var outer := PackedVector2Array([center + Vector2(0, -27), center + Vector2(27, 0), center + Vector2(0, 27), center + Vector2(-27, 0)])
+	for index in outer.size():
+		draw_line(outer[index], outer[(index + 1) % outer.size()], Color("bfdbfe"), 3)
+	draw_string(ThemeDB.fallback_font, center + Vector2(-23, -31), "EXIT", HORIZONTAL_ALIGNMENT_CENTER, 46, 14, Color("dbeafe"))
+
+
+func _draw_actor_letter(center: Vector2, letter: String, color: Color) -> void:
+	draw_string(ThemeDB.fallback_font, center + Vector2(-10, 6), letter, HORIZONTAL_ALIGNMENT_CENTER, 20, 15, color)
 
 
 func _update_hud() -> void:
 	if load_error != "":
 		status_label.text = "Level load failed\n" + load_error
+		objective_label.text = ""
+		legend_label.text = ""
+		echo_next_label.text = ""
 		history_label.text = ""
+		completion_label.visible = false
 		return
+	objective_label.text = "GOAL: Move YOU (white) onto EXIT.\nThe ECHO (purple) cannot finish.\nUse the ECHO to hold the PLATE so YOU can cross the DOOR."
+	legend_label.text = "ENTITY KEY\nYOU — white / cyan core\nECHO — purple outline\nPLATE — amber pad\nDOOR — red closed / green open\nEXIT — blue diamond"
+	echo_next_label.visible = not state.completed
+	echo_next_label.text = "Echo next: %s" % simulation.echo_action_for_state(level, state, level.echoes[0].id)
 	var delay: int = level.echoes[0].delay
-	status_label.text = "THREE TURNS LATE\n\nTurn: %d\nEcho delay: %d\nDoor: %s\n\n%s" % [state.turn_index, delay, "OPEN" if state.door_states[0].open else "CLOSED", "COMPLETE — press R to restart" if state.completed else "Let your echo hold the plate."]
-	history_label.text = "History (oldest → newest)\n%s\n\nMove: Arrow keys / WASD\nWait: Space    Restart: R    Quit: Esc" % "  •  ".join(state.history)
+	status_label.text = "THREE TURNS LATE\n\nTurn: %d\nEcho delay: %d\nDoor: %s\n\n%s" % [state.turn_index, delay, "OPEN" if state.door_states[0].open else "CLOSED", "COMPLETE — YOU reached EXIT\nPress R to restart" if state.completed else "Your actions replay 3 turns later."]
+	history_label.text = "History (oldest → newest)\n%s\n\nMove: Arrows/WASD   Wait: Space   Restart: R   Quit: Esc" % "  •  ".join(state.history)
+	completion_label.visible = state.completed
+	completion_label.text = "COMPLETE\nYOU reached EXIT\nPress R to restart"
 
 
 func _door_open(id: String) -> bool:

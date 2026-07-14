@@ -175,8 +175,33 @@ func _test_scene_smoke() -> void:
 	root.add_child(scene)
 	await process_frame
 	_expect(scene.is_runtime_ready(), "main scene instantiates and connects logic/HUD")
+	_expect(scene.has_method("get_hud_snapshot"), "main scene exposes a testable player-facing HUD snapshot")
+	if scene.has_method("get_hud_snapshot"):
+		var hud_snapshot: Dictionary = scene.get_hud_snapshot()
+		var hud_text := JSON.stringify(hud_snapshot)
+		_expect(hud_text.contains("YOU") and hud_text.contains("ECHO") and hud_text.contains("PLATE") and hud_text.contains("DOOR") and hud_text.contains("EXIT"), "normal HUD explicitly identifies every puzzle entity")
+		var objective: String = hud_snapshot.get("objective", "")
+		_expect(objective.contains("GOAL") and objective.contains("Move YOU") and objective.contains("EXIT") and objective.contains("ECHO") and objective.contains("cannot finish") and objective.contains("hold the PLATE") and objective.contains("YOU can cross the DOOR"), "normal HUD explains the player-only goal and intended echo causality")
+		_expect(hud_snapshot.get("echo_next", "") == "Echo next: WAIT", "initial HUD explicitly identifies the next echo action")
+		for ignored in 3:
+			_send_scene_action(scene, "move_right")
+		_expect(scene.get_hud_snapshot().get("echo_next", "") == "Echo next: RIGHT", "next echo action follows the oldest relevant history entry")
+		_send_scene_action(scene, "restart_level")
+		var restarted_hud: Dictionary = scene.get_hud_snapshot()
+		_expect(restarted_hud.get("echo_next", "") == "Echo next: WAIT" and restarted_hud.get("objective", "") == objective, "restart restores the initial next action and normal objective")
+		for action in ["move_right", "move_right", "move_up", "move_up", "move_up", "move_right", "move_right", "move_right", "move_right"]:
+			_send_scene_action(scene, action)
+		var completion_status: String = scene.get_hud_snapshot().get("status", "")
+		_expect(completion_status.contains("COMPLETE") and completion_status.contains("YOU reached EXIT") and completion_status.contains("Press R to restart"), "completion HUD names the player-only success and restart action")
 	scene.queue_free()
 	await process_frame
+
+
+func _send_scene_action(scene: Node, action: String) -> void:
+	var event := InputEventAction.new()
+	event.action = action
+	event.pressed = true
+	scene._unhandled_input(event)
 
 
 func _expect_code(result: Dictionary, code: String, label: String) -> void:

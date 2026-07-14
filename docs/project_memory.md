@@ -18,7 +18,10 @@ Durable project decisions only; live task progress belongs in current docs and r
 - Frozen Task 0001 baseline: standard Godot 4.7 stable, GDScript, Compatibility renderer, Windows desktop x86_64 for the vertical slice, Web deferred, and approved `D:\Delayed_Self_Evidence` path without creation authority.
 - Task 0002 simulation/schema contract was accepted with observation on 2026-07-14 at implementation commit `f390f5a4ced31252f8804fba99da1226c9f64be4`.
 - Task 0003 is the first implementation gate: its runtime, loader, replay, tests, and BFS share `simulation_v1`; its formal slice uses one delay-3 echo, one plate, one combinational door, and one player-only exit.
+- Task 0003 was accepted with observations on 2026-07-14 at implementation commit `14180dc3e110607d4abdee5f8bf314a58f62fb39`.
+- Task 0004 authentic user evidence found three P1 issues: undiscoverable player-only victory, circular EXIT occluded by ECHO, and inverted player/echo causal roles; explicit next-action and terminal-goal copy were P2 findings.
+- Task 0004R preserves gameplay semantics while repairing objective, legend, persistent diamond EXIT, next echo action, and completion feedback; a user retest is required before UX acceptance.
 
 ## Pending decisions
 
-Task 0003 GPT acceptance is pending. Human visual/first-player review, art style, independent reviewer, final license, undo, export, Web, save, and release evidence remain pending separate gates.
+Task 0004R GPT review and Task 0004V real-user retest are pending. Final art, independent review, accessibility compliance, license, undo, export, Web, save, and release evidence remain separate gates.

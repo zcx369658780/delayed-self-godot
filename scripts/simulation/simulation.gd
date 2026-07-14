@@ -42,11 +42,9 @@ func transition(level: Dictionary, state: Dictionary, action) -> Dictionary:
 		if not door_state.open:
 			closed_doors[_door_position(level, door_state.id)] = true
 	next.player_position = _destination(level, state.player_position, action, closed_doors)
-	var max_delay: int = state.history.size()
 	for index in state.echo_positions.size():
 		var echo_state = state.echo_positions[index]
-		var echo_definition = _find_by_id(level.echoes, echo_state.id)
-		var echo_action: String = state.history[max_delay - int(echo_definition.delay)]
+		var echo_action := echo_action_for_state(level, state, echo_state.id)
 		actor_actions.echoes.append({"id": echo_state.id, "action": echo_action})
 		next.echo_positions[index].position = _destination(level, echo_state.position, echo_action, closed_doors)
 	var pressed := pressed_plate_ids(level, next)
@@ -62,6 +60,18 @@ func transition(level: Dictionary, state: Dictionary, action) -> Dictionary:
 		next.history.append(action)
 	next.turn_index += 1
 	return _success(next, actor_actions, pressed)
+
+
+func echo_action_for_state(level: Dictionary, state: Dictionary, echo_id: String) -> String:
+	var echo_definition := _find_by_id(level.get("echoes", []), echo_id)
+	if echo_definition.is_empty():
+		return "WAIT"
+	var history: Array = state.get("history", [])
+	var index := history.size() - int(echo_definition.delay)
+	if index < 0 or index >= history.size():
+		return "WAIT"
+	var action = history[index]
+	return action if action is String and ACTIONS.has(action) else "WAIT"
 
 
 func replay(level: Dictionary, actions: Array, start_state = null) -> Dictionary:
