@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "level_id": "minimal_delay_door",
+  "title": "Minimal Delay Door",
+  "terrain_rows": [
+    "#######",
+    "#.....#",
+    "#.....#",
+    "#.....#",
+    "#######"
+  ],
+  "player_spawn": [1, 1],
+  "echoes": [
+    {
+      "id": "echo_main",
+      "delay": 3,
+      "spawn": [1, 2]
+    }
+  ],
+  "plates": [
+    {
+      "id": "plate_entry",
+      "position": [2, 2]
+    }
+  ],
+  "doors": [
+    {
+      "id": "door_entry",
+      "position": [4, 2],
+      "initial_open": false,
+      "all_plate_ids": ["plate_entry"]
+    }
+  ],
+  "exit": {
+    "position": [5, 1]
+  },
+  "metadata": {
+    "teaching_goal": "Express one delayed echo, one plate, and one next-turn door without adding unsupported mechanics.",
+    "intended_mechanics": ["delayed_echo", "pressure_plate", "delayed_door"],
+    "notes": "Schema-valid authoring example only; no runtime or solver claim.",
+    "allow_zero_echo_tutorial": false
+  },
+  "validation": {
+    "recommended_search_depth": 32
+  }
+}

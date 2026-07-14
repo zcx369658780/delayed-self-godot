@@ -5,7 +5,7 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0001`](../tasks/0001_readonly_environment_and_release_target_inventory.md) — current authorization
+4. [`Task 0002`](../tasks/0002_deterministic_simulation_and_level_schema_contract.md) — current authorization
 5. [`DEVELOPMENT_PLAN_CURRENT.md`](DEVELOPMENT_PLAN_CURRENT.md) — milestone spine and near-term gates
 6. [`HANDOFF_MASTER_CURRENT.md`](HANDOFF_MASTER_CURRENT.md) — current continuation point
 7. [`project_memory.md`](project_memory.md) — durable decisions
@@ -15,6 +15,10 @@
 
 - [`PROJECT_SOURCE_INDEX_CURRENT.md`](PROJECT_SOURCE_INDEX_CURRENT.md) — authority relationships
 - [`Canonical GDD`](game_design/DELAYED_SELF_GAME_DESIGN_DOCUMENT_CURRENT.md)
+- [`Simulation contract`](game_design/GAMEPLAY_SIMULATION_CONTRACT_CURRENT.md)
+- [`Level schema v1 contract`](level_design/LEVEL_SCHEMA_V1_CURRENT.md)
+- [`Level JSON Schema`](../schemas/level_v1.schema.json)
+- [`Reference transition vectors`](level_design/REFERENCE_TRANSITION_VECTORS_V1.md)
 - [`Rule source seed`](project_rules/PROJECT_RULE_SOURCE_SEED_CURRENT.md)
 - [`Detailed project rules`](project_rules/)
 - [`Agent routing`](agents/PROJECT_RULE_CODEX_MULTI_SUBAGENT_MODEL_ROUTING.md)
@@ -28,3 +32,5 @@
 - [`Task 0000 report`](reports/0000_PROJECT_BOOTSTRAP_AND_RULE_MATERIALIZATION_REPORT.md)
 - [`Task 0000 GPT acceptance`](reports/0000_GPT_FINAL_ACCEPTANCE.md)
 - [`Task 0001 report`](reports/0001_READONLY_ENVIRONMENT_AND_RELEASE_TARGET_INVENTORY_REPORT.md)
+- [`Task 0001 GPT acceptance`](reports/0001_GPT_FINAL_ACCEPTANCE.md)
+- [`Task 0002 report`](reports/0002_DETERMINISTIC_SIMULATION_AND_LEVEL_SCHEMA_CONTRACT_REPORT.md)

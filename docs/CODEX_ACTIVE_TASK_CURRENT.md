@@ -1,21 +1,21 @@
 # Codex active task (CURRENT)
 
 - Status: `COMPLETED_PENDING_GPT_REVIEW`
-- Task: `tasks/0001_readonly_environment_and_release_target_inventory.md`
-- Gate: `ENVIRONMENT / READ-ONLY INVENTORY`
-- Starting HEAD: `e9395edfee898e4c3f7db15ad2f6767126cf4c1e`
-- Starting `origin/main`: `e9395edfee898e4c3f7db15ad2f6767126cf4c1e`
-- Commit policy: one documentation-only commit, message `docs: inventory Delayed Self development environment`
+- Task: `tasks/0002_deterministic_simulation_and_level_schema_contract.md`
+- Gate: `DESIGN CONTRACT / DOCS-AND-SCHEMA ONLY`
+- Starting HEAD: `63c899adb2436fb19248d6364fbf91031ec72f9a`
+- Starting `origin/main`: `63c899adb2436fb19248d6364fbf91031ec72f9a`
+- Commit policy: one specification-only commit, message `docs: freeze Delayed Self simulation and level schema`
 - Push policy: one normal push to `origin/main` after fetch and remote-drift check
 
 ## Scope
 
-Perform a bounded read-only environment and release-target inventory. Write only the authorized environment/report/current Markdown files. Do not install, upgrade, download, launch the editor, initialize/import/export/build a project, change machine configuration, or create external directories.
+Define the deterministic runtime/solver transition, strict level schema v1, canonical state key, bounded BFS contract, and normative reference vectors. Write only authorized Markdown/JSON contract paths; do not create or execute a Godot project/runtime.
 
 ## Remaining uncertainties
 
-Exact RTX VRAM and display topology were inconclusive. Godot version, renderer, Windows/Web target commitment, and evidence root recommendations await GPT decision. Project/runtime/export behavior is unverified because no project exists.
+Logic resolution, art direction, exact input set beyond keyboard-first, undo, independent reviewer, final license, runtime behavior, and export behavior remain unresolved or unverified. Contract fixtures are not implementation evidence.
 
 ## Completion state
 
-Inspection and pre-commit documentation validation are complete. The seven changed paths match the task authorization, canonical links resolve, and no gameplay/Godot project/runtime or external evidence directory was created. Final acceptance remains with the GPT Project Sources advisor.
+Contract drafting and pre-commit consistency validation are complete. All 15 changed paths are authorized; three JSON artifacts parse; the valid example and nine vectors pass bounded independent recomputation; canonical links resolve. No gameplay/Godot project/runtime or external evidence directory was created. Final acceptance remains with the GPT Project Sources advisor.

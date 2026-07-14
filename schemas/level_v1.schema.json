@@ -1,0 +1,243 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/zcx369658780/delayed-self-godot/main/schemas/level_v1.schema.json",
+  "title": "Delayed Self Level Schema v1",
+  "description": "Strict implementation-neutral level data contract for deterministic delayed-echo puzzles.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "level_id",
+    "title",
+    "terrain_rows",
+    "player_spawn",
+    "echoes",
+    "plates",
+    "doors",
+    "exit",
+    "metadata",
+    "validation"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "level_id": {
+      "$ref": "#/$defs/stable_id"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 120
+    },
+    "terrain_rows": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 64,
+        "pattern": "^[#.]+$"
+      }
+    },
+    "player_spawn": {
+      "$ref": "#/$defs/coordinate"
+    },
+    "echoes": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "$ref": "#/$defs/echo"
+      }
+    },
+    "plates": {
+      "type": "array",
+      "maxItems": 64,
+      "items": {
+        "$ref": "#/$defs/plate"
+      }
+    },
+    "doors": {
+      "type": "array",
+      "maxItems": 64,
+      "items": {
+        "$ref": "#/$defs/door"
+      }
+    },
+    "exit": {
+      "$ref": "#/$defs/exit"
+    },
+    "metadata": {
+      "$ref": "#/$defs/metadata"
+    },
+    "validation": {
+      "$ref": "#/$defs/validation"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "echoes": {
+            "maxItems": 0
+          }
+        },
+        "required": ["echoes"]
+      },
+      "then": {
+        "properties": {
+          "metadata": {
+            "properties": {
+              "allow_zero_echo_tutorial": {
+                "const": true
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "stable_id": {
+      "type": "string",
+      "pattern": "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$",
+      "minLength": 1,
+      "maxLength": 64
+    },
+    "coordinate": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 2,
+      "prefixItems": [
+        {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 63
+        },
+        {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 63
+        }
+      ],
+      "items": false
+    },
+    "echo": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "delay", "spawn"],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/stable_id"
+        },
+        "delay": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 16
+        },
+        "spawn": {
+          "$ref": "#/$defs/coordinate"
+        }
+      }
+    },
+    "plate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "position"],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/stable_id"
+        },
+        "position": {
+          "$ref": "#/$defs/coordinate"
+        }
+      }
+    },
+    "door": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "position", "initial_open", "all_plate_ids"],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/stable_id"
+        },
+        "position": {
+          "$ref": "#/$defs/coordinate"
+        },
+        "initial_open": {
+          "type": "boolean"
+        },
+        "all_plate_ids": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 64,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/stable_id"
+          }
+        }
+      }
+    },
+    "exit": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["position"],
+      "properties": {
+        "position": {
+          "$ref": "#/$defs/coordinate"
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "teaching_goal",
+        "intended_mechanics",
+        "notes",
+        "allow_zero_echo_tutorial"
+      ],
+      "properties": {
+        "teaching_goal": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "intended_mechanics": {
+          "type": "array",
+          "maxItems": 32,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/stable_id"
+          }
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 2000
+        },
+        "allow_zero_echo_tutorial": {
+          "type": "boolean"
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["recommended_search_depth"],
+      "properties": {
+        "recommended_search_depth": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10000
+        },
+        "expected_min_turns": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 10000,
+          "description": "Optional non-authoritative author expectation; not validation evidence."
+        }
+      }
+    }
+  }
+}

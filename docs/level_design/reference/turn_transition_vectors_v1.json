@@ -1,0 +1,339 @@
+{
+  "vector_contract_version": 1,
+  "simulation_contract": "simulation_v1",
+  "status": "NORMATIVE_SPECIFICATION_NOT_RUNTIME_EXECUTED",
+  "action_order": ["UP", "RIGHT", "DOWN", "LEFT", "WAIT"],
+  "history_order": "oldest_to_newest",
+  "fixtures": [
+    {
+      "id": "delay_3_corridor",
+      "terrain_rows": ["#######", "#.....#", "#######"],
+      "player_spawn": [1, 1],
+      "echoes": [{"id": "echo_delay_3", "delay": 3, "spawn": [1, 1]}],
+      "plates": [],
+      "doors": [],
+      "exit": {"position": [5, 1]}
+    },
+    {
+      "id": "blocked_player_corridor",
+      "terrain_rows": ["#####", "#...#", "#####"],
+      "player_spawn": [1, 1],
+      "echoes": [{"id": "echo_delay_1", "delay": 1, "spawn": [2, 1]}],
+      "plates": [],
+      "doors": [],
+      "exit": {"position": [3, 1]}
+    },
+    {
+      "id": "changed_door_corridor",
+      "terrain_rows": ["#######", "#.....#", "#######"],
+      "player_spawn": [1, 1],
+      "echoes": [{"id": "echo_delay_1", "delay": 1, "spawn": [2, 1]}],
+      "plates": [{"id": "plate_gate", "position": [4, 1]}],
+      "doors": [{"id": "door_gate", "position": [3, 1], "initial_open": false, "all_plate_ids": ["plate_gate"]}],
+      "exit": {"position": [5, 1]}
+    },
+    {
+      "id": "next_turn_door_corridor",
+      "terrain_rows": ["#######", "#.....#", "#######"],
+      "player_spawn": [1, 1],
+      "echoes": [{"id": "echo_delay_1", "delay": 1, "spawn": [3, 1]}],
+      "plates": [{"id": "plate_gate", "position": [2, 1]}],
+      "doors": [{"id": "door_gate", "position": [4, 1], "initial_open": false, "all_plate_ids": ["plate_gate"]}],
+      "exit": {"position": [5, 1]}
+    },
+    {
+      "id": "overlap_corridor",
+      "terrain_rows": ["######", "#....#", "######"],
+      "player_spawn": [1, 1],
+      "echoes": [{"id": "echo_delay_1", "delay": 1, "spawn": [3, 1]}],
+      "plates": [],
+      "doors": [],
+      "exit": {"position": [4, 1]}
+    },
+    {
+      "id": "history_key_room",
+      "terrain_rows": ["#####", "#...#", "#...#", "#...#", "#####"],
+      "player_spawn": [2, 2],
+      "echoes": [{"id": "echo_delay_1", "delay": 1, "spawn": [1, 1]}],
+      "plates": [],
+      "doors": [],
+      "exit": {"position": [3, 3]}
+    },
+    {
+      "id": "restart_plate_room",
+      "terrain_rows": ["######", "#....#", "######"],
+      "player_spawn": [1, 1],
+      "echoes": [{"id": "echo_delay_2", "delay": 2, "spawn": [2, 1]}],
+      "plates": [{"id": "plate_gate", "position": [2, 1]}],
+      "doors": [{"id": "door_gate", "position": [3, 1], "initial_open": true, "all_plate_ids": ["plate_gate"]}],
+      "exit": {"position": [4, 1]}
+    },
+    {
+      "id": "exit_corridor",
+      "terrain_rows": ["######", "#....#", "######"],
+      "player_spawn": [1, 1],
+      "echoes": [{"id": "echo_delay_1", "delay": 1, "spawn": [3, 1]}],
+      "plates": [],
+      "doors": [],
+      "exit": {"position": [4, 1]}
+    }
+  ],
+  "vectors": [
+    {
+      "id": "delay_3_turn_1_replays_on_turn_4",
+      "covers": ["delay_indexing", "history_shift"],
+      "fixture_id": "delay_3_corridor",
+      "operation": "TURN",
+      "input_state": {
+        "turn_index": 4,
+        "player_position": [3, 1],
+        "echo_positions": [{"id": "echo_delay_3", "position": [1, 1]}],
+        "door_states": [],
+        "history": ["RIGHT", "WAIT", "WAIT"],
+        "completed": false
+      },
+      "player_input": "WAIT",
+      "expected": {
+        "actor_actions": {"player": "WAIT", "echoes": [{"id": "echo_delay_3", "action": "RIGHT"}]},
+        "player_position": [3, 1],
+        "echo_positions": [{"id": "echo_delay_3", "position": [2, 1]}],
+        "pressed_plate_ids": [],
+        "door_states": [],
+        "history": ["WAIT", "WAIT", "WAIT"],
+        "turn_index": 5,
+        "completed": false,
+        "canonical_key": "[[3,1],[[\"echo_delay_3\",2,1]],[],[\"WAIT\",\"WAIT\",\"WAIT\"],false]"
+      },
+      "rationale": "Before turn 4 the oldest history entry is u_1=RIGHT, so delay 3 replays it exactly on turn 4."
+    },
+    {
+      "id": "blocked_player_action_is_recorded",
+      "covers": ["blocked_player", "turn_consumption", "history_preserves_action"],
+      "fixture_id": "blocked_player_corridor",
+      "operation": "TURN",
+      "input_state": {
+        "turn_index": 1,
+        "player_position": [1, 1],
+        "echo_positions": [{"id": "echo_delay_1", "position": [2, 1]}],
+        "door_states": [],
+        "history": ["WAIT"],
+        "completed": false
+      },
+      "player_input": "LEFT",
+      "expected": {
+        "actor_actions": {"player": "LEFT", "echoes": [{"id": "echo_delay_1", "action": "WAIT"}]},
+        "player_position": [1, 1],
+        "echo_positions": [{"id": "echo_delay_1", "position": [2, 1]}],
+        "pressed_plate_ids": [],
+        "door_states": [],
+        "history": ["LEFT"],
+        "turn_index": 2,
+        "completed": false,
+        "canonical_key": "[[1,1],[[\"echo_delay_1\",2,1]],[],[\"LEFT\"],false]"
+      },
+      "rationale": "LEFT targets a wall. Position is unchanged, but the legal action consumes the turn and remains LEFT in history."
+    },
+    {
+      "id": "echo_blocked_by_current_closed_door",
+      "covers": ["blocked_echo", "current_door_snapshot", "historical_action_not_rewritten"],
+      "fixture_id": "changed_door_corridor",
+      "operation": "TURN",
+      "input_state": {
+        "turn_index": 8,
+        "player_position": [1, 1],
+        "echo_positions": [{"id": "echo_delay_1", "position": [2, 1]}],
+        "door_states": [{"id": "door_gate", "open": false}],
+        "history": ["RIGHT"],
+        "completed": false
+      },
+      "player_input": "WAIT",
+      "expected": {
+        "actor_actions": {"player": "WAIT", "echoes": [{"id": "echo_delay_1", "action": "RIGHT"}]},
+        "player_position": [1, 1],
+        "echo_positions": [{"id": "echo_delay_1", "position": [2, 1]}],
+        "pressed_plate_ids": [],
+        "door_states": [{"id": "door_gate", "open": false}],
+        "history": ["WAIT"],
+        "turn_index": 9,
+        "completed": false,
+        "canonical_key": "[[1,1],[[\"echo_delay_1\",2,1]],[[\"door_gate\",false]],[\"WAIT\"],false]"
+      },
+      "rationale": "The replayed RIGHT is checked against the current closed-door snapshot, so the echo stays while the action remains executed as RIGHT."
+    },
+    {
+      "id": "plate_opens_door_after_movement_only",
+      "covers": ["simultaneous_movement", "plate_evaluation", "door_next_turn_timing"],
+      "fixture_id": "next_turn_door_corridor",
+      "operation": "TURN",
+      "input_state": {
+        "turn_index": 2,
+        "player_position": [1, 1],
+        "echo_positions": [{"id": "echo_delay_1", "position": [3, 1]}],
+        "door_states": [{"id": "door_gate", "open": false}],
+        "history": ["RIGHT"],
+        "completed": false
+      },
+      "player_input": "RIGHT",
+      "expected": {
+        "actor_actions": {"player": "RIGHT", "echoes": [{"id": "echo_delay_1", "action": "RIGHT"}]},
+        "player_position": [2, 1],
+        "echo_positions": [{"id": "echo_delay_1", "position": [3, 1]}],
+        "pressed_plate_ids": ["plate_gate"],
+        "door_states": [{"id": "door_gate", "open": true}],
+        "history": ["RIGHT"],
+        "turn_index": 3,
+        "completed": false,
+        "canonical_key": "[[2,1],[[\"echo_delay_1\",3,1]],[[\"door_gate\",true]],[\"RIGHT\"],false]"
+      },
+      "rationale": "The echo cannot enter the door because the start snapshot is closed. The player then presses the plate, committing an open door for the next turn."
+    },
+    {
+      "id": "player_and_echo_may_overlap",
+      "covers": ["actor_overlap", "independent_destinations"],
+      "fixture_id": "overlap_corridor",
+      "operation": "TURN",
+      "input_state": {
+        "turn_index": 3,
+        "player_position": [1, 1],
+        "echo_positions": [{"id": "echo_delay_1", "position": [3, 1]}],
+        "door_states": [],
+        "history": ["LEFT"],
+        "completed": false
+      },
+      "player_input": "RIGHT",
+      "expected": {
+        "actor_actions": {"player": "RIGHT", "echoes": [{"id": "echo_delay_1", "action": "LEFT"}]},
+        "player_position": [2, 1],
+        "echo_positions": [{"id": "echo_delay_1", "position": [2, 1]}],
+        "pressed_plate_ids": [],
+        "door_states": [],
+        "history": ["RIGHT"],
+        "turn_index": 4,
+        "completed": false,
+        "canonical_key": "[[2,1],[[\"echo_delay_1\",2,1]],[],[\"RIGHT\"],false]"
+      },
+      "rationale": "Both destinations are computed independently and applied without actor collision resolution."
+    },
+    {
+      "id": "history_changes_canonical_identity",
+      "covers": ["canonical_key", "history_is_future_relevant", "turn_index_excluded"],
+      "fixture_id": "history_key_room",
+      "operation": "TURN",
+      "input_state": {
+        "turn_index": 7,
+        "player_position": [2, 2],
+        "echo_positions": [{"id": "echo_delay_1", "position": [1, 1]}],
+        "door_states": [],
+        "history": ["UP"],
+        "completed": false
+      },
+      "player_input": "WAIT",
+      "precondition_assertions": {
+        "input_canonical_key": "[[2,2],[[\"echo_delay_1\",1,1]],[],[\"UP\"],false]",
+        "comparison_state": {
+          "turn_index": 99,
+          "player_position": [2, 2],
+          "echo_positions": [{"id": "echo_delay_1", "position": [1, 1]}],
+          "door_states": [],
+          "history": ["DOWN"],
+          "completed": false
+        },
+        "comparison_canonical_key": "[[2,2],[[\"echo_delay_1\",1,1]],[],[\"DOWN\"],false]",
+        "keys_equal": false
+      },
+      "expected": {
+        "actor_actions": {"player": "WAIT", "echoes": [{"id": "echo_delay_1", "action": "UP"}]},
+        "player_position": [2, 2],
+        "echo_positions": [{"id": "echo_delay_1", "position": [1, 1]}],
+        "pressed_plate_ids": [],
+        "door_states": [],
+        "history": ["WAIT"],
+        "turn_index": 8,
+        "completed": false,
+        "canonical_key": "[[2,2],[[\"echo_delay_1\",1,1]],[],[\"WAIT\"],false]"
+      },
+      "rationale": "Equal positions with UP versus DOWN history have different future echo actions and different keys; turn 7 versus 99 alone does not affect the key."
+    },
+    {
+      "id": "restart_reconstructs_declared_initial_state",
+      "covers": ["restart", "wait_padding", "initial_door_state", "turn_reset"],
+      "fixture_id": "restart_plate_room",
+      "operation": "RESTART",
+      "input_state": {
+        "turn_index": 9,
+        "player_position": [4, 1],
+        "echo_positions": [{"id": "echo_delay_2", "position": [1, 1]}],
+        "door_states": [{"id": "door_gate", "open": false}],
+        "history": ["UP", "LEFT"],
+        "completed": true
+      },
+      "player_input": null,
+      "expected": {
+        "actor_actions": {"player": null, "echoes": [{"id": "echo_delay_2", "action": null}]},
+        "player_position": [1, 1],
+        "echo_positions": [{"id": "echo_delay_2", "position": [2, 1]}],
+        "pressed_plate_ids": ["plate_gate"],
+        "door_states": [{"id": "door_gate", "open": true}],
+        "history": ["WAIT", "WAIT"],
+        "turn_index": 1,
+        "completed": false,
+        "canonical_key": "[[1,1],[[\"echo_delay_2\",2,1]],[[\"door_gate\",true]],[\"WAIT\",\"WAIT\"],false]"
+      },
+      "rationale": "Restart is not a turn: it discards all mutable state and reconstructs validated spawns, initial door state, WAIT padding, turn 1, and incomplete status."
+    },
+    {
+      "id": "echo_on_exit_does_not_complete",
+      "covers": ["player_only_exit"],
+      "fixture_id": "exit_corridor",
+      "operation": "TURN",
+      "input_state": {
+        "turn_index": 2,
+        "player_position": [1, 1],
+        "echo_positions": [{"id": "echo_delay_1", "position": [3, 1]}],
+        "door_states": [],
+        "history": ["RIGHT"],
+        "completed": false
+      },
+      "player_input": "WAIT",
+      "expected": {
+        "actor_actions": {"player": "WAIT", "echoes": [{"id": "echo_delay_1", "action": "RIGHT"}]},
+        "player_position": [1, 1],
+        "echo_positions": [{"id": "echo_delay_1", "position": [4, 1]}],
+        "pressed_plate_ids": [],
+        "door_states": [],
+        "history": ["WAIT"],
+        "turn_index": 3,
+        "completed": false,
+        "canonical_key": "[[1,1],[[\"echo_delay_1\",4,1]],[],[\"WAIT\"],false]"
+      },
+      "rationale": "The echo reaches the exit, but completion checks only the current player."
+    },
+    {
+      "id": "player_on_exit_completes",
+      "covers": ["player_exit_success", "terminal_completion"],
+      "fixture_id": "exit_corridor",
+      "operation": "TURN",
+      "input_state": {
+        "turn_index": 2,
+        "player_position": [3, 1],
+        "echo_positions": [{"id": "echo_delay_1", "position": [1, 1]}],
+        "door_states": [],
+        "history": ["WAIT"],
+        "completed": false
+      },
+      "player_input": "RIGHT",
+      "expected": {
+        "actor_actions": {"player": "RIGHT", "echoes": [{"id": "echo_delay_1", "action": "WAIT"}]},
+        "player_position": [4, 1],
+        "echo_positions": [{"id": "echo_delay_1", "position": [1, 1]}],
+        "pressed_plate_ids": [],
+        "door_states": [],
+        "history": ["RIGHT"],
+        "turn_index": 3,
+        "completed": true,
+        "canonical_key": "[[4,1],[[\"echo_delay_1\",1,1]],[],[\"RIGHT\"],true]"
+      },
+      "rationale": "The current player enters the exit after movement, so completion becomes true and the resulting state is terminal."
+    }
+  ]
+}

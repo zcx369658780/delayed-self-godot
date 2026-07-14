@@ -6,16 +6,18 @@
 - Local root: `D:\Delayed_Self`
 - Working title: `迟到的我 / Delayed Self`
 - Product: offline single-player; primary target Windows
-- Prior accepted gate: Task 0000 (`TASK_0000_PROJECT_BOOTSTRAP_ACCEPTED`), accepted commit `67089cc0546a83b2842d2e2fc4985cb9e20f00df`
-- Current gate: Task 0001 — read-only environment and release-target inventory (`ENVIRONMENT / READ-ONLY INVENTORY`)
-- Current task: `tasks/0001_readonly_environment_and_release_target_inventory.md`
+- Prior accepted gate: Task 0001 (`TASK_0001_ENVIRONMENT_INVENTORY_ACCEPTED`), accepted implementation commit `227ea8b86de1699d540113f0a3052214cc294beb`
+- Current gate: Task 0002 — deterministic simulation and level-schema contract (`DESIGN CONTRACT / DOCS-AND-SCHEMA ONLY`)
+- Current task: `tasks/0002_deterministic_simulation_and_level_schema_contract.md`
 - Environment record: `docs/environment/DEVELOPMENT_ENVIRONMENT_CURRENT.md`
-- Next recommended gate after GPT review: Task 0002 — deterministic gameplay simulation and level-schema contract
+- Simulation contract: `docs/game_design/GAMEPLAY_SIMULATION_CONTRACT_CURRENT.md`
+- Level schema: `schemas/level_v1.schema.json`
+- Next recommended gate after GPT review: Task 0003 — minimal Godot vertical slice
 
 ## Startup
 
-Follow the canonical read order in `AGENTS.md`. Before any write, verify root, branch, `HEAD`, remotes, and clean worktree. The repository contains governance/design/environment documentation only; no gameplay implementation or Godot project exists.
+Follow the canonical read order in `AGENTS.md`. Before any write, verify root, branch, `HEAD`, remotes, and clean worktree. The repository contains governance/design/environment/schema documentation only; no gameplay implementation or Godot project exists.
 
 ## Pending
 
-Task 0001 observed an installed standard Godot 4.7 stable candidate with matching Windows/Web templates, but exact Godot version, renderer, target commitment, and evidence root remain pending GPT decision. Logic resolution, art style, independent reviewer, final license, and undo support also remain pending later gates.
+Frozen from Task 0001: standard Godot 4.7 stable, GDScript, Compatibility renderer, Windows x86_64 vertical slice, deferred Web gate, and approved-but-not-created `D:\Delayed_Self_Evidence`. Logic resolution, art style, independent reviewer, final license, and undo support remain pending later gates. Task 0002 contract acceptance remains with the GPT advisor.

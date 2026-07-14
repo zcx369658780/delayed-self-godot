@@ -2,8 +2,9 @@
 
 - Observation date: 2026-07-14 (Asia/Shanghai)
 - Inventory task: `tasks/0001_readonly_environment_and_release_target_inventory.md`
+- GPT acceptance: [`0001_GPT_FINAL_ACCEPTANCE.md`](../reports/0001_GPT_FINAL_ACCEPTANCE.md)
 - Evidence status: read-only local observation; no editor launch, project initialization, import, export, build, installation, upgrade, or machine configuration change
-- Decision status: observations are facts; recommendations below are `RECOMMENDATIONS_FOR_GPT_DECISION`, not frozen project decisions
+- Decision status: Task 0001 recommendations were accepted and frozen for Task 0002/vertical-slice planning; runtime/export facts remain unverified
 
 ## Machine and operating system
 
@@ -82,24 +83,23 @@ Recommended evidence root for approval: `D:\Delayed_Self_Evidence`.
 
 | Target | Observed prerequisites | Missing / unverified | Risk | Safest later verification |
 |---|---|---|---|---|
-| Windows desktop (primary) | Windows x64 host; standard Godot 4.7 candidate; matching Windows templates; sufficient disk; hash/archive tools | No frozen engine/renderer, Godot project, preset, runtime, export, clean-machine smoke test, or performance evidence | `LOW` | After Task 0002/0003, create the authorized minimal project and run a separately authorized Windows debug-export smoke test |
-| Web (optional/backup) | Matching Web templates and current Edge/Chrome installations | No frozen Compatibility renderer, project/preset, browser run, threading policy, hosting/package test, input/audio/fullscreen compatibility evidence | `MEDIUM` | Keep outside the vertical-slice commitment; after Task 0003 stability, run a separate Compatibility-renderer Web export/browser smoke gate |
+| Windows desktop (primary) | Frozen standard Godot 4.7/GDScript/Compatibility baseline; Windows x64 host; matching templates; sufficient disk; hash/archive tools | No Godot project, preset, runtime, export, clean-machine smoke test, or performance evidence | `LOW` | After Task 0002/0003, create the authorized minimal project and run a separately authorized Windows debug-export smoke test |
+| Web (deferred) | Frozen Compatibility renderer baseline; matching Web templates and current Edge/Chrome installations | No project/preset, browser run, threading policy, hosting/package test, input/audio/fullscreen compatibility evidence | `MEDIUM` | Keep outside the vertical-slice commitment; after Task 0003 stability, run a separate Compatibility-renderer Web export/browser smoke gate |
 
 Neither target is claimed export-ready.
 
-## Recommendations awaiting GPT decision
+## Frozen decisions from Task 0001 acceptance
 
-All items are `RECOMMENDATIONS_FOR_GPT_DECISION`:
+The GPT Project Sources advisor accepted these planning-baseline decisions:
 
-1. Prefer the installed standard Godot `4.7.stable` Steam candidate because the executable and local templates match and no conflicting installation was found.
-2. Use standard GDScript, not .NET, consistent with the GDD and the installed standard editor; avoid adding a second runtime/toolchain without demonstrated need.
-3. Consider the Godot Compatibility renderer for the small 2D, Windows-first project because Web remains a possible later target; freeze only after GPT review and Task 0002/0003 evidence.
-4. Commit only Windows desktop for the vertical slice. Keep Web as a later compatibility gate.
-5. Approve `D:\Delayed_Self_Evidence` as the repository-external evidence root before creating it.
+1. Installed standard Godot `4.7.stable` engine line; observed Steam build `4.7.stable.steam.5b4e0cb0f`.
+2. Standard GDScript, not .NET/Mono.
+3. Compatibility renderer.
+4. Windows desktop x86_64 is the only vertical-slice committed platform; Web is a later compatibility gate.
+5. `D:\Delayed_Self_Evidence` is the approved repository-external evidence root, but this task does not authorize creating it.
 
 ## Unresolved
 
-- GPT has not frozen Godot version, renderer, Windows/Web commitment, or evidence root.
 - No project exists, so import behavior, renderer correctness, runtime performance, export presets, Windows execution, and Web compatibility are unverified.
 - Exact discrete-GPU VRAM and full display topology were inconclusive.
 - Art style, logic resolution, final license, independent reviewer, and undo support were outside this task and remain pending.
