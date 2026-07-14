@@ -1,21 +1,21 @@
 # Codex active task (CURRENT)
 
 - Status: `COMPLETED_PENDING_GPT_REVIEW`
-- Task: `tasks/0002_deterministic_simulation_and_level_schema_contract.md`
-- Gate: `DESIGN CONTRACT / DOCS-AND-SCHEMA ONLY`
-- Starting HEAD: `63c899adb2436fb19248d6364fbf91031ec72f9a`
-- Starting `origin/main`: `63c899adb2436fb19248d6364fbf91031ec72f9a`
-- Commit policy: one specification-only commit, message `docs: freeze Delayed Self simulation and level schema`
+- Task: `tasks/0003_minimal_godot_vertical_slice_and_contract_conformance.md`
+- Gate: `IMPLEMENTATION / MINIMAL VERTICAL SLICE`
+- Starting HEAD: `cc100b1d0008138e0e550071f02abd23c15fb499`
+- Starting `origin/main`: `cc100b1d0008138e0e550071f02abd23c15fb499`
+- Commit policy: one implementation commit, message `feat: add Delayed Self minimal vertical slice`
 - Push policy: one normal push to `origin/main` after fetch and remote-drift check
 
 ## Scope
 
-Define the deterministic runtime/solver transition, strict level schema v1, canonical state key, bounded BFS contract, and normative reference vectors. Write only authorized Markdown/JSON contract paths; do not create or execute a Godot project/runtime.
+Implement the accepted contract in a minimal keyboard-playable Godot slice with strict loader, shared transition/replay/BFS, one formal delay-3 puzzle, geometric presentation, and repository-only automated conformance tests.
 
 ## Remaining uncertainties
 
-Logic resolution, art direction, exact input set beyond keyboard-first, undo, independent reviewer, final license, runtime behavior, and export behavior remain unresolved or unverified. Contract fixtures are not implementation evidence.
+Human visual readability, first-player comprehension, art direction, undo, independent reviewer, final license, export, Web, and release behavior remain unresolved or unverified.
 
 ## Completion state
 
-Contract drafting and pre-commit consistency validation are complete. All 15 changed paths are authorized; three JSON artifacts parse; the valid example and nine vectors pass bounded independent recomputation; canonical links resolve. No gameplay/Godot project/runtime or external evidence directory was created. Final acceptance remains with the GPT Project Sources advisor.
+Implementation and pre-commit conformance are complete. Godot 4.7 executed all nine normative vectors and 128 assertions; BFS returned `L*=9`, `N*=31 (EXACT)`, and the isolated-echo variant exhausted unsolved. Main-scene headless and bounded windowed launches logged no runtime error. Final acceptance remains with the GPT Project Sources advisor.

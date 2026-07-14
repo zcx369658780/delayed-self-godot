@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "level_id": "vertical_slice_delay_3",
+  "title": "Three Turns Late",
+  "terrain_rows": [
+    "#########",
+    "#.......#",
+    "#...#...#",
+    "#########"
+  ],
+  "player_spawn": [1, 2],
+  "echoes": [
+    {"id": "echo_delay_3", "delay": 3, "spawn": [1, 2]}
+  ],
+  "plates": [
+    {"id": "plate_entry", "position": [3, 2]}
+  ],
+  "doors": [
+    {"id": "door_entry", "position": [4, 1], "initial_open": false, "all_plate_ids": ["plate_entry"]}
+  ],
+  "exit": {"position": [7, 1]},
+  "metadata": {
+    "teaching_goal": "Use the delay-3 echo to hold the plate while the current player crosses the door.",
+    "intended_mechanics": ["delayed_echo", "pressure_plate", "delayed_door"],
+    "notes": "Task 0003 formal vertical slice.",
+    "allow_zero_echo_tutorial": false
+  },
+  "validation": {"recommended_search_depth": 32}
+}

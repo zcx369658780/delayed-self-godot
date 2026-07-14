@@ -5,7 +5,7 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0002`](../tasks/0002_deterministic_simulation_and_level_schema_contract.md) — current authorization
+4. [`Task 0003`](../tasks/0003_minimal_godot_vertical_slice_and_contract_conformance.md) — current authorization
 5. [`DEVELOPMENT_PLAN_CURRENT.md`](DEVELOPMENT_PLAN_CURRENT.md) — milestone spine and near-term gates
 6. [`HANDOFF_MASTER_CURRENT.md`](HANDOFF_MASTER_CURRENT.md) — current continuation point
 7. [`project_memory.md`](project_memory.md) — durable decisions
@@ -34,3 +34,5 @@
 - [`Task 0001 report`](reports/0001_READONLY_ENVIRONMENT_AND_RELEASE_TARGET_INVENTORY_REPORT.md)
 - [`Task 0001 GPT acceptance`](reports/0001_GPT_FINAL_ACCEPTANCE.md)
 - [`Task 0002 report`](reports/0002_DETERMINISTIC_SIMULATION_AND_LEVEL_SCHEMA_CONTRACT_REPORT.md)
+- [`Task 0002 GPT acceptance`](reports/0002_GPT_FINAL_ACCEPTANCE.md)
+- [`Task 0003 report`](reports/0003_MINIMAL_GODOT_VERTICAL_SLICE_AND_CONTRACT_CONFORMANCE_REPORT.md)

@@ -11,9 +11,9 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0003 minimal vertical slice
 ```
 
-Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 may then build one minimal validated room under a separate authorization.
+Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
 
-Tasks 0000 and 0001 are GPT accepted. Task 0002 is the current specification gate; Task 0003 remains unauthorized until the contract receives GPT acceptance.
+Tasks 0000–0002 are GPT accepted. Task 0003 implementation is complete pending GPT review. The recommended next gate after acceptance is Task 0004 for first-player UX, visual readability, and manual review; export remains a separate Task 0004E gate.
 
 ## Milestone spine
 
