@@ -1,5 +1,8 @@
 extends Node2D
 
+signal gameplay_completed(level_id: String, turns: int)
+signal request_back
+
 const LevelLoader = preload("res://scripts/simulation/level_loader.gd")
 const Simulation = preload("res://scripts/simulation/simulation.gd")
 const LEVEL_PATH := "res://data/levels/vertical_slice_delay_3.json"
@@ -10,6 +13,10 @@ var level: Dictionary = {}
 var state: Dictionary = {}
 var load_error := ""
 var simulation := Simulation.new()
+var configured_level_id := "vertical_slice_delay_3"
+var configured_level_path := LEVEL_PATH
+var route_payload: Dictionary = {}
+var hosted_by_app := false
 
 @onready var status_label: Label = $Hud/Status
 @onready var objective_label: Label = $Hud/Objective
@@ -20,9 +27,12 @@ var simulation := Simulation.new()
 
 
 func _ready() -> void:
-	var loaded := LevelLoader.new().load_file(LEVEL_PATH)
+	var loaded := LevelLoader.new().load_file(configured_level_path)
 	if not loaded.ok:
 		load_error = "INVALID_LEVEL: " + _codes(loaded.errors)
+		printerr(load_error)
+	elif loaded.level.level_id != configured_level_id:
+		load_error = "LEVEL_ID_MISMATCH"
 		printerr(load_error)
 	else:
 		level = loaded.level
@@ -33,7 +43,10 @@ func _ready() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("ui_cancel"):
-		get_tree().quit()
+		if hosted_by_app:
+			request_back.emit()
+		else:
+			get_tree().quit()
 		return
 	if load_error != "" or event.is_echo():
 		return
@@ -54,9 +67,12 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.is_action_pressed("wait_turn"):
 		action = "WAIT"
 	if action != "" and not state.completed:
+		var was_completed: bool = state.completed
 		var result := simulation.transition(level, state, action)
 		if result.ok:
 			state = result.state
+			if not was_completed and state.completed and hosted_by_app:
+				gameplay_completed.emit(configured_level_id, state.turn_index - 1)
 		else:
 			printerr(result.status)
 		_update_hud()
@@ -65,6 +81,22 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func is_runtime_ready() -> bool:
 	return load_error == "" and not level.is_empty() and not state.is_empty() and status_label != null and objective_label != null and legend_label != null and echo_next_label != null and history_label != null and completion_label != null
+
+
+func configure_route_payload(payload: Dictionary) -> bool:
+	if is_inside_tree() or not payload.get("level_id") is String or not payload.get("level_path") is String:
+		return false
+	if not payload.level_path.begins_with("res://data/levels/"):
+		return false
+	configured_level_id = payload.level_id
+	configured_level_path = payload.level_path
+	route_payload = payload.duplicate(true)
+	hosted_by_app = true
+	return true
+
+
+func get_route_payload() -> Dictionary:
+	return route_payload.duplicate(true)
 
 
 func get_hud_snapshot() -> Dictionary:

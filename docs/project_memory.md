@@ -24,9 +24,10 @@ Durable project decisions only; live task progress belongs in current docs and r
 - Task 0004R was accepted pending user retest on 2026-07-14 at implementation commit `caeff311fda77b0261a7d78672afb9244ff23549`.
 - Task 0004V records a same-user, not-blind, unassisted completion at visible Turn 10 with no P0/P1; information density and limited Echo next/History usefulness remain a P2 observation, and later fresh-player/independent review is still required.
 - Task 0004V was accepted with observations on 2026-07-14 at evidence commit `67b9a9cbfcefd2458b481c33673aeb23520a51f4`.
-- Task 0005 planning recommends a separate versioned JSON level catalog, in-memory progress before a save-specific gate, three progressive HUD modes, and an eight-level schema-v1 spine. These remain recommendations until GPT acceptance and separately authorized implementation tasks.
+- Task 0005 planning was accepted on 2026-07-14 at planning commit `0de8fa7435dc1024f35161d90cd03419a53730dd`.
+- Task 0006 implements a strict separate catalog v1, Boot/Main Menu/Level Select/accepted Gameplay/Safe Error routing, a catalog-validated development level argument, and deterministic memory-only progress. It is pending GPT review; it does not authorize Task 0007.
 - The player/ECHO route-divergence suggestion is `DEFERRED_POST_MVP`; it must not enter `level_v1` or the pre-candidate task sequence.
 
 ## Pending decisions
 
-Task 0005 GPT review is pending. Task 0006–0009 implementation, formal metrics for uncreated levels, persistent save, final art/audio, fresh-player/independent review, accessibility, license, undo, export, Web, and release evidence remain separate gates.
+Task 0006 GPT review is pending. Task 0007–0009 implementation, formal metrics for uncreated levels, persistent save, final art/audio, fresh-player/independent review, accessibility, license, undo, export, Web, and release evidence remain separate gates.

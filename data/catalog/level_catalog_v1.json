@@ -1,0 +1,15 @@
+{
+  "catalog_version": 1,
+  "entries": [
+    {
+      "level_id": "vertical_slice_delay_3",
+      "level_path": "res://data/levels/vertical_slice_delay_3.json",
+      "sequence": 1,
+      "display_title_key": "level.vertical_slice_delay_3.title",
+      "classification": "standard",
+      "unlock_prerequisites": [],
+      "hud_mode": "STANDARD_COMPACT",
+      "final_level": true
+    }
+  ]
+}

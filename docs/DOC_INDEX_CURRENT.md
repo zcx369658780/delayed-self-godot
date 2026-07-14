@@ -5,7 +5,7 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0005`](../tasks/0005_system_skeleton_and_tutorial_level_planning.md) — current authorization
+4. [`Task 0006`](../tasks/0006_reusable_app_shell_catalog_routing_and_memory_progress.md) — current authorization
 5. [`DEVELOPMENT_PLAN_CURRENT.md`](DEVELOPMENT_PLAN_CURRENT.md) — milestone spine and near-term gates
 6. [`HANDOFF_MASTER_CURRENT.md`](HANDOFF_MASTER_CURRENT.md) — current continuation point
 7. [`project_memory.md`](project_memory.md) — durable decisions
@@ -18,6 +18,9 @@
 - [`Simulation contract`](game_design/GAMEPLAY_SIMULATION_CONTRACT_CURRENT.md)
 - [`Level schema v1 contract`](level_design/LEVEL_SCHEMA_V1_CURRENT.md)
 - [`Level JSON Schema`](../schemas/level_v1.schema.json)
+- [`Level catalog v1 contract`](architecture/LEVEL_CATALOG_V1_CURRENT.md)
+- [`Level catalog JSON Schema`](../schemas/catalog_v1.schema.json)
+- [`Tracked level catalog`](../data/catalog/level_catalog_v1.json)
 - [`Reference transition vectors`](level_design/REFERENCE_TRANSITION_VECTORS_V1.md)
 - [`Rule source seed`](project_rules/PROJECT_RULE_SOURCE_SEED_CURRENT.md)
 - [`Detailed project rules`](project_rules/)
@@ -49,3 +52,5 @@
 - [`Initial level roadmap and validation matrix`](level_design/INITIAL_LEVEL_ROADMAP_AND_VALIDATION_MATRIX_CURRENT.md)
 - [`M2 implementation plan`](version_plans/M2_SYSTEM_SKELETON_IMPLEMENTATION_PLAN.md)
 - [`Task 0005 planning report`](reports/0005_SYSTEM_SKELETON_AND_TUTORIAL_LEVEL_PLANNING_REPORT.md)
+- [`Task 0005 GPT acceptance`](reports/0005_GPT_FINAL_ACCEPTANCE.md)
+- [`Task 0006 app-shell implementation report`](reports/0006_REUSABLE_APP_SHELL_CATALOG_AND_MEMORY_PROGRESS_REPORT.md)

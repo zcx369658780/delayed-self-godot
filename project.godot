@@ -1,12 +1,12 @@
 ; Engine configuration file.
-; Edited deliberately for the Task 0003 minimal vertical slice.
+; Edited deliberately for the Task 0006 reusable application shell.
 
 config_version=5
 
 [application]
 
 config/name="Delayed Self"
-run/main_scene="res://scenes/vertical_slice/vertical_slice.tscn"
+run/main_scene="res://scenes/app/app_root.tscn"
 
 [display/window]
 
