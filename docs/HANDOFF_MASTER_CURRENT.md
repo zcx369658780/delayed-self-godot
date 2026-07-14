@@ -4,6 +4,6 @@
 
 Read `AGENTS.md`, then `docs/CODEX_STARTUP_SNAPSHOT_CURRENT.md`, `docs/CODEX_ACTIVE_TASK_CURRENT.md`, and the task file named there. Verify the live Git facts before acting.
 
-Tasks 0000–0003 are GPT accepted. Task 0004 authentic user evidence found the victory condition undiscoverable, EXIT occluded by ECHO, intended roles inverted, and next echo action/objective copy insufficient. Task 0004R repairs those presentation defects; its report is `docs/reports/0004R_EXIT_OBJECTIVE_AND_ECHO_READABILITY_REPAIR_REPORT.md`.
+Tasks 0000–0003 are GPT accepted, and Task 0004R is accepted pending user retest. Task 0004V records that the same authenticated user completed the repaired slice unassisted at visible Turn 10; its evidence and report are `docs/reviews/0004V_TARGETED_VICTORY_AND_ENTITY_READABILITY_USER_RETEST.md` and `docs/reports/0004V_TARGETED_USER_RETEST_REPORT.md`.
 
-Read the Task 0004 GPT adjudication before the 0004R report. The repair keeps 9/9 vectors, `L*=9`, `N*=31 (EXACT)`, and echo necessity unchanged while adding explicit objective/legend/next-action/completion presentation. Continue only through GPT review and an explicit Task 0004V real-user retest; do not infer UX acceptance, export, save, asset, release, upload, submission, or repository-setting authority.
+Read the 0004R GPT acceptance before the 0004V evidence. The retest has P0/P1=0 and one P2 information-density observation; a pre-attempt solver-count disclosure deviation and missing numeric ratings are explicit. Continue only through GPT adjudication and an authorized next task, provisionally Task 0005; do not infer fresh-player acceptance, export, save, asset, release, upload, submission, or repository-setting authority.

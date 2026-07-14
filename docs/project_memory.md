@@ -21,7 +21,9 @@ Durable project decisions only; live task progress belongs in current docs and r
 - Task 0003 was accepted with observations on 2026-07-14 at implementation commit `14180dc3e110607d4abdee5f8bf314a58f62fb39`.
 - Task 0004 authentic user evidence found three P1 issues: undiscoverable player-only victory, circular EXIT occluded by ECHO, and inverted player/echo causal roles; explicit next-action and terminal-goal copy were P2 findings.
 - Task 0004R preserves gameplay semantics while repairing objective, legend, persistent diamond EXIT, next echo action, and completion feedback; a user retest is required before UX acceptance.
+- Task 0004R was accepted pending user retest on 2026-07-14 at implementation commit `caeff311fda77b0261a7d78672afb9244ff23549`.
+- Task 0004V records a same-user, not-blind, unassisted completion at visible Turn 10 with no P0/P1; information density and limited Echo next/History usefulness remain a P2 observation, and later fresh-player/independent review is still required.
 
 ## Pending decisions
 
-Task 0004R GPT review and Task 0004V real-user retest are pending. Final art, independent review, accessibility compliance, license, undo, export, Web, save, and release evidence remain separate gates.
+Task 0004V GPT adjudication is pending. Numeric ratings were not provided. Final art, fresh-player/independent review, accessibility compliance, license, undo, export, Web, save, and release evidence remain separate gates.

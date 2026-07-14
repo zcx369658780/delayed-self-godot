@@ -5,7 +5,7 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0004R`](../tasks/0004R_fix_exit_objective_and_echo_readability.md) — current authorization
+4. [`Task 0004V`](../tasks/0004V_targeted_victory_and_entity_readability_user_retest.md) — current authorization
 5. [`DEVELOPMENT_PLAN_CURRENT.md`](DEVELOPMENT_PLAN_CURRENT.md) — milestone spine and near-term gates
 6. [`HANDOFF_MASTER_CURRENT.md`](HANDOFF_MASTER_CURRENT.md) — current continuation point
 7. [`project_memory.md`](project_memory.md) — durable decisions
@@ -40,3 +40,6 @@
 - [`Task 0004 GPT evidence adjudication`](reviews/0004_GPT_FIRST_PLAYER_EVIDENCE_ADJUDICATION.md)
 - [`Task 0004 materialized review`](reviews/0004_FIRST_PLAYER_UX_AND_VISUAL_READABILITY_REVIEW.md)
 - [`Task 0004R repair report`](reports/0004R_EXIT_OBJECTIVE_AND_ECHO_READABILITY_REPAIR_REPORT.md)
+- [`Task 0004R GPT acceptance`](reports/0004R_GPT_FINAL_ACCEPTANCE.md)
+- [`Task 0004V targeted user retest`](reviews/0004V_TARGETED_VICTORY_AND_ENTITY_READABILITY_USER_RETEST.md)
+- [`Task 0004V execution report`](reports/0004V_TARGETED_USER_RETEST_REPORT.md)
