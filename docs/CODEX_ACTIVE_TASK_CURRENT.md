@@ -1,20 +1,20 @@
 # Codex active task (CURRENT)
 
-- Status: `OWNER_SEQUENCE_REVIEW_RECORDED_PENDING_GPT_REVIEW`
-- Task: `tasks/0009AV_owner_five_level_sequence_and_hud_readability_review.md`
-- Gate: `HUMAN EVIDENCE / OWNER FIVE-LEVEL SEQUENCE REVIEW`
-- Starting HEAD and `origin/main`: `934745cad0ab5639c8e85e56e10d1f4da55dfeb5`
-- Commit policy: one documentation-only commit, message `docs: record Delayed Self five-level owner sequence review`
+- Status: `PLANNING_RECORDED_PENDING_GPT_REVIEW`
+- Task: `tasks/0010_presentation_difficulty_asset_audio_narrative_and_gate_planning.md`
+- Gate: `PLANNING / PRESENTATION AND PRODUCTION DIRECTION`
+- Starting HEAD and `origin/main`: `1a538e8a4ccf4ac7b65123517735a37c4e093248`
+- Commit policy: one documentation-only commit, message `docs: plan Delayed Self presentation and difficulty recovery`
 - Push policy: one normal push after fetch and remote-drift check
 
 ## Scope
 
-Record the authenticated owner's unassisted five-level normal-flow completion, difficulty/HUD/Help/timeline observations, Level 4/5 rule comprehension, findings, and next-gate recommendation without changing implementation or tests.
+Plan board/HUD/viewport recovery, measurable Levels 6–8 difficulty, non-semantic Door feedback, contextual Timeline/Help, licensed asset/audio production, lightweight narrative, and a separate Gate decision without changing implementation or acquiring assets.
 
 ## Completion state
 
-All five attempts are `COMPLETED_UNASSISTED`; unlock and return-to-Level-Select behavior worked correctly. P0=0, P1=0, P2=4, P3=2. Preflight and post-review regression retain all five markers and accepted metrics. No screenshot or optional numeric rating was supplied.
+Eight planning deliverables select Option A (960×540 board-first) with Option B (1280×720) fallback, preserve the five accepted levels, define schema-v1 Levels 6–8 concept targets, recommend primitive Door feedback as the next implementation task, and leave the Gate ADR `DRAFT_NOT_ACCEPTED`. Source/licensing research is provenance-only and no external file is imported.
 
 ## Remaining uncertainties
 
-GPT adjudication is pending. The owner is not fresh or blind. Difficulty progression, Level 4 feedback, timeline/Help utility, effective board area, possible future Gate research, licensed visual/audio/narrative direction, fresh/independent review, candidate status, remaining content, save, complete flow, accessibility, localization, export, release, and submission remain unresolved or separately gated.
+GPT adjudication and owner choice on final visual tone remain pending. The selected layout, feedback, difficulty concepts, source candidates, audio, narrative, and Gate recommendation are not implemented or human-validated. Fresh/independent review, content acceptance, asset acquisition, settings/save, complete flow, accessibility, localization, export, release, and submission remain separately gated.

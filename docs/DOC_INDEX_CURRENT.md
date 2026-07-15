@@ -5,7 +5,7 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0009AV`](../tasks/0009AV_owner_five_level_sequence_and_hud_readability_review.md) — current owner five-level sequence review authorization
+4. [`Task 0010`](../tasks/0010_presentation_difficulty_asset_audio_narrative_and_gate_planning.md) — current presentation/difficulty/production planning authorization
 5. [`DEVELOPMENT_PLAN_CURRENT.md`](DEVELOPMENT_PLAN_CURRENT.md) — milestone spine and near-term gates
 6. [`HANDOFF_MASTER_CURRENT.md`](HANDOFF_MASTER_CURRENT.md) — current continuation point
 7. [`project_memory.md`](project_memory.md) — durable decisions
@@ -72,3 +72,12 @@
 - [`Task 0009AR GPT final acceptance`](reports/0009AR_GPT_FINAL_ACCEPTANCE.md)
 - [`Task 0009AV owner five-level sequence review`](reviews/0009AV_OWNER_FIVE_LEVEL_SEQUENCE_REVIEW.md)
 - [`Task 0009AV owner sequence review report`](reports/0009AV_OWNER_FIVE_LEVEL_SEQUENCE_REVIEW_REPORT.md)
+- [`Task 0009AV GPT final acceptance`](reports/0009AV_GPT_FINAL_ACCEPTANCE.md)
+- [`Presentation, viewport, and HUD direction`](ux/PRESENTATION_VIEWPORT_AND_HUD_DIRECTION_CURRENT.md)
+- [`Five-level difficulty recovery and Levels 6–8 plan`](level_design/FIVE_LEVEL_DIFFICULTY_RECOVERY_AND_LEVELS_6_8_PLAN.md)
+- [`Door, Plate, and Echo feedback storyboard`](ux/DOOR_PLATE_AND_ECHO_FEEDBACK_STORYBOARD.md)
+- [`Asset, font, and audio license/pipeline plan`](art/ASSET_AUDIO_LICENSE_AND_PIPELINE_PLAN_CURRENT.md)
+- [`Narrative direction`](narrative/DELAYED_SELF_NARRATIVE_DIRECTION_CURRENT.md)
+- [`Latched / one-shot Gate ADR draft`](architecture/LATCHED_ONE_SHOT_GATE_ADR_DRAFT.md)
+- [`M3 presentation and production recovery plan`](version_plans/M3_PRESENTATION_DIFFICULTY_AND_PRODUCTION_RECOVERY_PLAN.md)
+- [`Task 0010 planning report`](reports/0010_PRESENTATION_DIFFICULTY_AND_PRODUCTION_DIRECTION_PLANNING_REPORT.md)
