@@ -6,6 +6,7 @@ const Solver = preload("res://scripts/solver/bfs_solver.gd")
 const CatalogLoader = preload("res://scripts/app/catalog_loader.gd")
 const ProgressStore = preload("res://scripts/app/memory_progress.gd")
 const RouteRequest = preload("res://scripts/app/route_request.gd")
+const TimelineModel = preload("res://scripts/gameplay/timeline_model.gd")
 
 var failures := 0
 var assertions := 0
@@ -31,6 +32,7 @@ func _run() -> void:
 	_test_vectors()
 	_test_determinism_and_errors()
 	_test_solver()
+	_test_timeline_model_contract()
 	await _test_scene_smoke()
 	await _test_tutorial_zero_gameplay_tracer()
 	await _test_tutorial_one_gameplay_tracer()
@@ -43,6 +45,7 @@ func _run() -> void:
 		print("TASK_0003_TESTS_PASS assertions=%d vectors=9" % assertions)
 		print("TASK_0006_APP_SHELL_TESTS_PASS")
 		print("TASK_0007_TUTORIAL_LEVELS_TESTS_PASS")
+		print("TASK_0008_PROGRESSIVE_HUD_TESTS_PASS")
 		quit(0)
 
 
@@ -376,6 +379,36 @@ func _test_solver() -> void:
 	print("SOLVER_RESULT=" + JSON.stringify(result))
 
 
+func _test_timeline_model_contract() -> void:
+	var model_builder = TimelineModel.new()
+	var zero_loaded := loader.load_file("res://data/levels/tutorial_reach_exit.json")
+	var zero_state := simulation.construct_initial_state(zero_loaded.level)
+	var zero_model: Dictionary = model_builder.build(zero_loaded.level, zero_state, simulation)
+	_expect(not zero_model.visible and zero_model.slots.is_empty() and zero_model.echo_pointers.is_empty(), "zero-Echo state produces no timeline")
+	var tutorial_loaded := loader.load_file("res://data/levels/tutorial_echo_bridge.json")
+	var level_before: Dictionary = tutorial_loaded.level.duplicate(true)
+	var state := simulation.construct_initial_state(tutorial_loaded.level)
+	var state_before: Dictionary = state.duplicate(true)
+	var model: Dictionary = model_builder.build(tutorial_loaded.level, state, simulation)
+	_expect(model.visible and model.max_delay == 3 and model.slots.size() == 3 and model.slots.map(func(slot): return slot.action) == ["WAIT", "WAIT", "WAIT"], "Tutorial 1 timeline contains three oldest-to-newest slots")
+	_expect(model.echo_pointers.size() == 1 and model.echo_pointers[0].history_index == 0 and model.echo_pointers[0].slot_number == 1 and model.echo_pointers[0].action == "WAIT", "delay-max Echo points to the oldest slot and next action")
+	_expect(tutorial_loaded.level == level_before and state == state_before, "timeline construction does not mutate level or state")
+	var blocked := simulation.transition(tutorial_loaded.level, state, "LEFT")
+	var blocked_model: Dictionary = model_builder.build(tutorial_loaded.level, blocked.state, simulation)
+	_expect(blocked.ok and blocked.state.player_position == state.player_position and blocked_model.slots[2].action == "LEFT", "blocked cardinal input remains its original action in the timeline")
+	var synthetic_level: Dictionary = tutorial_loaded.level.duplicate(true)
+	synthetic_level.echoes = [
+		{"id": "echo_delay_2", "delay": 2, "spawn": [1, 1]},
+		{"id": "echo_delay_4", "delay": 4, "spawn": [1, 1]},
+	]
+	var synthetic_state: Dictionary = state.duplicate(true)
+	synthetic_state.history = ["UP", "RIGHT", "DOWN", "LEFT"]
+	var synthetic_model: Dictionary = model_builder.build(synthetic_level, synthetic_state, simulation)
+	_expect(synthetic_model.echo_pointers[0].history_index == 2 and synthetic_model.echo_pointers[0].action == "DOWN" and synthetic_model.echo_pointers[1].history_index == 0 and synthetic_model.echo_pointers[1].action == "UP", "synthetic multi-delay pointers use distinct accepted history indices and actions")
+	_expect(model_builder.compact_text(model).contains("oldest") and model_builder.expanded_text(model).contains("pointer") and model_builder.expanded_text(model).contains("Blocked moves"), "compact and expanded timeline explanations agree on order and pointers")
+	_expect(simulation.echo_history_index_for_state(tutorial_loaded.level, state, "echo_delay_3") == 0 and simulation.echo_action_for_state(tutorial_loaded.level, state, "echo_delay_3") == "WAIT", "shared history-index query and action lookup agree")
+
+
 func _test_scene_smoke() -> void:
 	var packed = load("res://scenes/vertical_slice/vertical_slice.tscn")
 	_expect(packed is PackedScene, "main scene resource loads")
@@ -391,14 +424,21 @@ func _test_scene_smoke() -> void:
 		var hud_text := JSON.stringify(hud_snapshot)
 		_expect(hud_text.contains("YOU") and hud_text.contains("ECHO") and hud_text.contains("PLATE") and hud_text.contains("DOOR") and hud_text.contains("EXIT"), "normal HUD explicitly identifies every puzzle entity")
 		var objective: String = hud_snapshot.get("objective", "")
-		_expect(objective.contains("GOAL") and objective.contains("Move YOU") and objective.contains("EXIT") and objective.contains("ECHO") and objective.contains("cannot finish") and objective.contains("hold the PLATE") and objective.contains("YOU can cross the DOOR"), "normal HUD explains the player-only goal and intended echo causality")
-		_expect(hud_snapshot.get("echo_next", "") == "Echo next: WAIT", "initial HUD explicitly identifies the next echo action")
+		_expect(objective.contains("GOAL") and objective.contains("Move YOU") and objective.contains("not ECHO") and objective.contains("EXIT"), "standard HUD entry objective preserves player-only completion")
+		_expect(hud_snapshot.echo_next.is_empty() and not hud_snapshot.history.contains("History") and hud_snapshot.timeline_model.echo_pointers[0].action == "WAIT", "standard HUD uses the compact timeline without duplicate History or Echo-next prose")
 		for ignored in 3:
 			_send_scene_action(scene, "move_right")
-		_expect(scene.get_hud_snapshot().get("echo_next", "") == "Echo next: RIGHT", "next echo action follows the oldest relevant history entry")
+		var progressed: Dictionary = scene.get_hud_snapshot()
+		_expect(progressed.timeline_model.echo_pointers[0].action == "RIGHT" and progressed.objective.contains("H: Help"), "timeline pointer follows accepted history and standard objective collapses")
+		var key_before_help: String = progressed.canonical_key
+		var turn_before_help: int = progressed.turn_index
+		_send_help_key(scene)
+		var expanded: Dictionary = scene.get_hud_snapshot()
+		_expect(expanded.help_expanded and expanded.timeline.contains("pointer") and expanded.canonical_key == key_before_help and expanded.turn_index == turn_before_help, "expanded standard help restores explanation without advancing the world")
+		_send_help_key(scene)
 		_send_scene_action(scene, "restart_level")
 		var restarted_hud: Dictionary = scene.get_hud_snapshot()
-		_expect(restarted_hud.get("echo_next", "") == "Echo next: WAIT" and restarted_hud.get("objective", "") == objective, "restart restores the initial next action and normal objective")
+		_expect(restarted_hud.timeline_model.echo_pointers[0].action == "WAIT" and restarted_hud.disclosure.objective_collapsed, "restart restores logical timeline while retaining session disclosure")
 		for action in ["move_right", "move_right", "move_up", "move_up", "move_up", "move_right", "move_right", "move_right", "move_right"]:
 			_send_scene_action(scene, action)
 		var completion_status: String = scene.get_hud_snapshot().get("status", "")
@@ -416,8 +456,22 @@ func _test_tutorial_zero_gameplay_tracer() -> void:
 	await process_frame
 	_expect(scene.is_runtime_ready() and scene.state.echo_positions.is_empty() and scene.state.door_states.is_empty(), "Tutorial 0 reusable gameplay becomes ready with zero Echoes and zero Doors")
 	var hud: Dictionary = scene.get_hud_snapshot()
-	var visible_text := "%s %s %s %s %s" % [hud.status, hud.objective, hud.legend, hud.echo_next, hud.history]
+	var visible_text := "%s %s %s %s %s %s" % [hud.status, hud.objective, hud.legend, hud.timeline, hud.echo_next, hud.history]
 	_expect(hud.objective.contains("YOU") and hud.objective.contains("EXIT") and not visible_text.contains("ECHO") and not visible_text.contains("PLATE") and not visible_text.contains("DOOR") and not visible_text.contains("Echo next") and not visible_text.contains("History") and not visible_text.contains("Wait"), "Tutorial 0 HUD exposes only its relevant movement and EXIT teaching content")
+	_expect(not hud.timeline_model.visible and hud.history.contains("Arrows/WASD") and hud.history.contains("Restart"), "Tutorial 0 initially shows controls and no timeline")
+	_send_scene_action(scene, "move_up")
+	var progressed: Dictionary = scene.get_hud_snapshot()
+	_expect(progressed.disclosure.controls_collapsed and not progressed.history.contains("Arrows/WASD"), "Tutorial 0 first legal action collapses full controls")
+	var key_before_help: String = progressed.canonical_key
+	_send_help_key(scene)
+	var helped: Dictionary = scene.get_hud_snapshot()
+	_expect(helped.help_expanded and helped.history.contains("Arrows/WASD") and helped.objective.contains("Only YOU") and helped.canonical_key == key_before_help, "Tutorial 0 help restores objective and controls without a world turn")
+	_send_help_key(scene)
+	_send_scene_action(scene, "restart_level")
+	_expect(scene.state == simulation.construct_initial_state(scene.level) and scene.get_hud_snapshot().disclosure.controls_collapsed, "Tutorial 0 restart is exact and retains session disclosure")
+	for action in ["move_up", "move_right", "move_right"]:
+		_send_scene_action(scene, action)
+	_expect(scene.get_hud_snapshot().completion.contains("YOU reached EXIT"), "Tutorial 0 completion remains prominent and player-specific")
 	scene.queue_free()
 	await process_frame
 
@@ -432,7 +486,25 @@ func _test_tutorial_one_gameplay_tracer() -> void:
 	var hud: Dictionary = scene.get_hud_snapshot()
 	var visible_text := JSON.stringify(hud)
 	_expect(scene.is_runtime_ready() and scene.state.echo_positions.size() == 1 and scene.state.door_states.size() == 1, "Tutorial 1 reusable gameplay becomes ready with one Echo and one Door")
-	_expect(visible_text.contains("YOU") and visible_text.contains("ECHO") and visible_text.contains("PLATE") and visible_text.contains("DOOR") and visible_text.contains("EXIT") and visible_text.contains("Echo delay: 3") and hud.echo_next == "Echo next: WAIT" and hud.history.contains("History"), "Tutorial 1 GUIDED_ECHO HUD exposes roles, delay, history, and next action")
+	_expect(visible_text.contains("YOU") and visible_text.contains("ECHO") and visible_text.contains("PLATE") and visible_text.contains("DOOR") and visible_text.contains("EXIT") and visible_text.contains("Echo delay: 3") and hud.echo_next.is_empty() and hud.timeline_model.echo_pointers[0].action == "WAIT", "Tutorial 1 initially exposes roles, delay, causality, and compact next-action timeline")
+	for action in ["move_right", "move_right", "move_up"]:
+		_send_scene_action(scene, action)
+	_expect(not scene.get_hud_snapshot().disclosure.legend_collapsed, "Tutorial 1 legend remains full before the first visible Echo replay")
+	_send_scene_action(scene, "move_down")
+	var replayed: Dictionary = scene.get_hud_snapshot()
+	_expect(replayed.disclosure.legend_collapsed and replayed.legend.begins_with("KEY"), "first visible non-WAIT Echo replay collapses the full legend")
+	_send_scene_action(scene, "move_left")
+	var plate_state: Dictionary = scene.get_hud_snapshot()
+	_expect(plate_state.disclosure.causality_collapsed and plate_state.objective.contains("ECHO holds PLATE") and plate_state.objective.contains("YOU reaches EXIT"), "Echo-held Plate door change collapses causality copy to one line")
+	var key_before_help: String = plate_state.canonical_key
+	var turn_before_help: int = plate_state.turn_index
+	_send_help_key(scene)
+	var helped: Dictionary = scene.get_hud_snapshot()
+	_expect(helped.help_expanded and helped.legend.contains("ENTITY KEY") and helped.timeline.contains("Blocked moves") and helped.canonical_key == key_before_help and helped.turn_index == turn_before_help, "Tutorial 1 expanded help restores legend and timeline explanation without advancing")
+	_send_help_key(scene)
+	_send_scene_action(scene, "restart_level")
+	var restarted: Dictionary = scene.get_hud_snapshot()
+	_expect(scene.state == simulation.construct_initial_state(scene.level) and restarted.disclosure.legend_collapsed and restarted.disclosure.causality_collapsed, "Tutorial 1 restart is exact and keeps earned disclosure flags")
 	scene.queue_free()
 	await process_frame
 
@@ -524,6 +596,13 @@ func _test_app_shell_tracer() -> void:
 func _send_scene_action(scene: Node, action: String) -> void:
 	var event := InputEventAction.new()
 	event.action = action
+	event.pressed = true
+	scene._unhandled_input(event)
+
+
+func _send_help_key(scene: Node) -> void:
+	var event := InputEventKey.new()
+	event.keycode = KEY_H
 	event.pressed = true
 	scene._unhandled_input(event)
 

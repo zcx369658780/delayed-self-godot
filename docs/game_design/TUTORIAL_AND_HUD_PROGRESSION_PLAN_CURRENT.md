@@ -4,6 +4,15 @@
 - Authority: tutorial copy and HUD presentation may explain but never redefine `simulation_v1`
 - Candidate language: Chinese-first; current English development copy may remain until a later implementation/localization gate
 
+## Task 0008 Phase A implemented facts
+
+- `IMPLEMENTED_PENDING_FRESH_PLAYER_REVIEW`: all three catalog HUD modes use one presentation-only disclosure controller in the reusable gameplay script.
+- `IMPLEMENTED_PENDING_FRESH_PLAYER_REVIEW`: a compact oldest-to-newest timeline renders one labelled slot per `max_delay` action and marks every Echo's next replay slot through the shared simulation history-index query.
+- `IMPLEMENTED_PENDING_FRESH_PLAYER_REVIEW`: `H` restores mode-appropriate objective, entity key, controls, and timeline explanation without changing the canonical state key or turn index.
+- `IMPLEMENTED_PENDING_FRESH_PLAYER_REVIEW`: disclosure is event-driven and session-local; restart reconstructs exact simulation state while retaining earned disclosure flags.
+- English development copy remains because Task 0008 does not authorize a localization framework or external font. Chinese-first candidate copy remains a later recommendation.
+- These are implementation facts only. Information-density P2 closure and fresh-player comprehension remain unverified until Phase B.
+
 ## Accepted evidence and design response
 
 - `ACCEPTED_EXISTING_FACT`: explicit YOU/ECHO/PLATE/DOOR/EXIT copy enabled the same user to complete the repaired slice without a movement hint.
@@ -31,12 +40,12 @@ Copy may repeat an already learned fact only when it prevents a known P1; it may
 
 | Field | Plan |
 |---|---|
-| Status | `UNVERIFIED_DESIGN_TARGET` |
+| Status | `INTERNAL_PLAYABLE`; progressive HUD implemented pending fresh-player review |
 | Primary goal | teach YOU, movement, EXIT, restart, and unmistakable completion |
 | Schema-v1 use | zero echoes with `allow_zero_echo_tutorial=true`; walls/floor; one EXIT; no plate/door required |
 | Player demonstration | move YOU to EXIT, observe completion, restart once during review |
 | Initial HUD | `INTRO_MINIMAL`: short Chinese objective, direct YOU/EXIT labels, movement/restart controls |
-| Disclosure change | controls collapse after first legal action; objective collapses after first completion, but restart remains reachable |
+| Disclosure change | controls collapse after first legal action; `H` restores the full objective and controls without a world turn; restart remains reachable |
 | Not introduced | ECHO, delay, History, Echo next, plates, doors, WAIT as a puzzle tool |
 | Risks | player treats EXIT as decoration; control hint fades too early |
 | Solver gate | schema validation, `SOLVED`, replay completion; no invented shortest claim |
@@ -48,7 +57,7 @@ Copy may repeat an already learned fact only when it prevents a known P1; it may
 
 | Field | Plan |
 |---|---|
-| Status | `UNVERIFIED_DESIGN_TARGET` |
+| Status | `INTERNAL_PLAYABLE`; progressive HUD implemented pending fresh-player review |
 | Primary goal | teach ECHO identity, delay, action-to-future replay, plate/door causality |
 | Schema-v1 use | one echo, target delay 3, one plate, one combinational door, one EXIT |
 | Player demonstration | make ECHO hold PLATE while YOU crosses DOOR and reaches EXIT |
@@ -65,7 +74,7 @@ Copy may repeat an already learned fact only when it prevents a known P1; it may
 
 | Field | Plan |
 |---|---|
-| Status | `ACCEPTED_EXISTING_FACT` for the formal level and solver evidence; roadmap role is `PLANNING_RECOMMENDATION_FOR_GPT` |
+| Status | `ACCEPTED_EXISTING_FACT` for the formal level and solver evidence; compact HUD implemented pending fresh-player review |
 | Primary goal | independent application of delay-3 cooperation with reduced prose |
 | Formal level | preserve `vertical_slice_delay_3` unchanged |
 | Player demonstration | complete without route guidance, using ECHO-held PLATE for YOU |

@@ -5,7 +5,7 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0007`](../tasks/0007_reusable_gameplay_and_tutorial_0_1.md) — current authorization
+4. [`Task 0008`](../tasks/0008_progressive_hud_compact_timeline_and_fresh_player_tutorial_review.md) — current two-phase authorization
 5. [`DEVELOPMENT_PLAN_CURRENT.md`](DEVELOPMENT_PLAN_CURRENT.md) — milestone spine and near-term gates
 6. [`HANDOFF_MASTER_CURRENT.md`](HANDOFF_MASTER_CURRENT.md) — current continuation point
 7. [`project_memory.md`](project_memory.md) — durable decisions
@@ -58,3 +58,5 @@
 - [`Tutorial Reach Exit validation`](level_design/validation/TUTORIAL_REACH_EXIT_VALIDATION.md)
 - [`Tutorial Echo Bridge validation`](level_design/validation/TUTORIAL_ECHO_BRIDGE_VALIDATION.md)
 - [`Task 0007 reusable gameplay and tutorials report`](reports/0007_REUSABLE_GAMEPLAY_AND_TUTORIAL_LEVELS_REPORT.md)
+- [`Task 0007 GPT acceptance`](reports/0007_GPT_FINAL_ACCEPTANCE.md)
+- [`Task 0008 progressive HUD implementation report`](reports/0008_PROGRESSIVE_HUD_AND_COMPACT_TIMELINE_IMPLEMENTATION_REPORT.md)

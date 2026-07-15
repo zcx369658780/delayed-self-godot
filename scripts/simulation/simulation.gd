@@ -63,15 +63,23 @@ func transition(level: Dictionary, state: Dictionary, action) -> Dictionary:
 
 
 func echo_action_for_state(level: Dictionary, state: Dictionary, echo_id: String) -> String:
-	var echo_definition := _find_by_id(level.get("echoes", []), echo_id)
-	if echo_definition.is_empty():
-		return "WAIT"
+	var index := echo_history_index_for_state(level, state, echo_id)
 	var history: Array = state.get("history", [])
-	var index := history.size() - int(echo_definition.delay)
 	if index < 0 or index >= history.size():
 		return "WAIT"
 	var action = history[index]
 	return action if action is String and ACTIONS.has(action) else "WAIT"
+
+
+func echo_history_index_for_state(level: Dictionary, state: Dictionary, echo_id: String) -> int:
+	var echo_definition := _find_by_id(level.get("echoes", []), echo_id)
+	if echo_definition.is_empty():
+		return -1
+	var history = state.get("history", [])
+	if not history is Array:
+		return -1
+	var index: int = history.size() - int(echo_definition.delay)
+	return index if index >= 0 and index < history.size() else -1
 
 
 func replay(level: Dictionary, actions: Array, start_state = null) -> Dictionary:

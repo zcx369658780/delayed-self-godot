@@ -5,6 +5,7 @@ signal request_back
 
 const LevelLoader = preload("res://scripts/simulation/level_loader.gd")
 const Simulation = preload("res://scripts/simulation/simulation.gd")
+const TimelineModel = preload("res://scripts/gameplay/timeline_model.gd")
 const LEVEL_PATH := "res://data/levels/vertical_slice_delay_3.json"
 const HUD_MODES := ["INTRO_MINIMAL", "GUIDED_ECHO", "STANDARD_COMPACT"]
 const CELL := 54.0
@@ -14,14 +15,23 @@ var level: Dictionary = {}
 var state: Dictionary = {}
 var load_error := ""
 var simulation := Simulation.new()
+var timeline_model := TimelineModel.new()
 var configured_level_id := "vertical_slice_delay_3"
 var configured_level_path := LEVEL_PATH
 var route_payload: Dictionary = {}
 var hosted_by_app := false
+var help_expanded := false
+var disclosure := {
+	"controls_collapsed": false,
+	"legend_collapsed": false,
+	"causality_collapsed": false,
+	"objective_collapsed": false,
+}
 
 @onready var status_label: Label = $Hud/Status
 @onready var objective_label: Label = $Hud/Objective
 @onready var legend_label: Label = $Hud/Legend
+@onready var timeline_label: Label = $Hud/Timeline
 @onready var echo_next_label: Label = $Hud/EchoNext
 @onready var history_label: Label = $Hud/History
 @onready var completion_label: Label = $Hud/Completion
@@ -49,6 +59,10 @@ func _unhandled_input(event: InputEvent) -> void:
 		else:
 			get_tree().quit()
 		return
+	if _is_help_toggle(event) and load_error == "":
+		help_expanded = not help_expanded
+		_update_hud()
+		return
 	if load_error != "" or event.is_echo():
 		return
 	if event.is_action_pressed("restart_level"):
@@ -68,10 +82,12 @@ func _unhandled_input(event: InputEvent) -> void:
 	elif event.is_action_pressed("wait_turn"):
 		action = "WAIT"
 	if action != "" and not state.completed:
+		var before: Dictionary = state.duplicate(true)
 		var was_completed: bool = state.completed
 		var result := simulation.transition(level, state, action)
 		if result.ok:
 			state = result.state
+			_update_disclosure(before, result)
 			if not was_completed and state.completed and hosted_by_app:
 				gameplay_completed.emit(configured_level_id, state.turn_index - 1)
 		else:
@@ -81,7 +97,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 
 func is_runtime_ready() -> bool:
-	return load_error == "" and not level.is_empty() and not state.is_empty() and status_label != null and objective_label != null and legend_label != null and echo_next_label != null and history_label != null and completion_label != null
+	return load_error == "" and not level.is_empty() and not state.is_empty() and status_label != null and objective_label != null and legend_label != null and timeline_label != null and echo_next_label != null and history_label != null and completion_label != null
 
 
 func configure_route_payload(payload: Dictionary) -> bool:
@@ -101,7 +117,30 @@ func get_route_payload() -> Dictionary:
 
 
 func get_hud_snapshot() -> Dictionary:
-	return {"status": status_label.text, "objective": objective_label.text, "legend": legend_label.text, "echo_next": echo_next_label.text, "history": history_label.text, "completion": completion_label.text if completion_label.visible else ""}
+	return {
+		"status": status_label.text,
+		"objective": objective_label.text,
+		"legend": legend_label.text,
+		"timeline": timeline_label.text,
+		"timeline_model": get_timeline_snapshot(),
+		"echo_next": echo_next_label.text if echo_next_label.visible else "",
+		"history": history_label.text,
+		"completion": completion_label.text if completion_label.visible else "",
+		"help_expanded": help_expanded,
+		"disclosure": disclosure.duplicate(true),
+		"turn_index": state.get("turn_index", 0),
+		"canonical_key": simulation.canonical_key(state) if not state.is_empty() else "",
+	}
+
+
+func get_timeline_snapshot() -> Dictionary:
+	return timeline_model.build(level, state, simulation) if not level.is_empty() and not state.is_empty() else {"visible": false, "max_delay": 0, "slots": [], "echo_pointers": []}
+
+
+func toggle_help() -> void:
+	if load_error == "":
+		help_expanded = not help_expanded
+		_update_hud()
 
 
 func _draw() -> void:
@@ -157,6 +196,7 @@ func _update_hud() -> void:
 		status_label.text = "Level load failed\n" + load_error
 		objective_label.text = ""
 		legend_label.text = ""
+		timeline_label.text = ""
 		echo_next_label.text = ""
 		history_label.text = ""
 		completion_label.visible = false
@@ -176,36 +216,101 @@ func _update_hud() -> void:
 func _update_intro_hud() -> void:
 	objective_label.text = "GOAL: Move YOU (white) onto EXIT."
 	legend_label.text = "ENTITY KEY\nYOU — white / cyan core\nEXIT — blue diamond"
+	timeline_label.visible = false
+	timeline_label.text = ""
 	echo_next_label.visible = false
 	echo_next_label.text = ""
 	status_label.text = "%s\n\nTurn: %d\n\n%s" % [level.title.to_upper(), state.turn_index, "COMPLETE — YOU reached EXIT\nPress R to restart" if state.completed else "Move YOU to EXIT."]
-	history_label.text = "Move: Arrows/WASD   Restart: R   %s: Esc" % ["Back" if hosted_by_app else "Quit"]
+	if help_expanded:
+		objective_label.text += "\nOnly YOU can complete the level."
+		legend_label.text += "\n\nHELP\nMove with Arrows/WASD.\nR restarts without changing a turn."
+	history_label.text = _controls_text(false, not disclosure.controls_collapsed or help_expanded)
 
 
 func _update_guided_echo_hud() -> void:
 	objective_label.text = "GOAL: Move YOU (white) onto EXIT.\nThe ECHO (purple) cannot finish.\nLet ECHO hold PLATE while YOU cross DOOR."
-	legend_label.text = "ENTITY KEY\nYOU — white / cyan core\nECHO — purple outline\nPLATE — amber pad\nDOOR — red closed / green open\nEXIT — blue diamond"
+	legend_label.text = _full_entity_key()
 	var has_echo: bool = not level.echoes.is_empty() and not state.echo_positions.is_empty()
 	var has_door: bool = not level.doors.is_empty() and not state.door_states.is_empty()
-	echo_next_label.visible = has_echo and not state.completed
-	echo_next_label.text = "Echo next: %s" % simulation.echo_action_for_state(level, state, level.echoes[0].id) if has_echo else ""
+	echo_next_label.visible = false
+	echo_next_label.text = ""
 	var delay_text := "\nEcho delay: %d" % level.echoes[0].delay if has_echo else ""
 	var door_text := "\nDoor: %s" % ("OPEN" if state.door_states[0].open else "CLOSED") if has_door else ""
-	status_label.text = "%s\n\nTurn: %d%s%s\n\n%s" % [level.title.to_upper(), state.turn_index, delay_text, door_text, "COMPLETE — YOU reached EXIT\nPress R to restart" if state.completed else "Current actions replay 3 turns later."]
-	history_label.text = "History (oldest → newest)\n%s\n\nMove: Arrows/WASD   Wait: Space   Restart: R   %s: Esc" % ["  •  ".join(state.history), "Back" if hosted_by_app else "Quit"]
+	status_label.text = "%s\n\nTurn: %d%s%s%s" % [level.title.to_upper(), state.turn_index, delay_text, door_text, "\n\nCOMPLETE — YOU reached EXIT\nPress R to restart" if state.completed else ""]
+	if disclosure.legend_collapsed and not help_expanded:
+		legend_label.text = _compact_entity_key()
+	if disclosure.causality_collapsed and not help_expanded:
+		objective_label.text = "GOAL: ECHO holds PLATE; YOU reaches EXIT.  H: Help"
+	var model := get_timeline_snapshot()
+	timeline_label.visible = model.visible and not state.completed
+	timeline_label.text = timeline_model.expanded_text(model) if help_expanded else timeline_model.compact_text(model)
+	if help_expanded:
+		legend_label.text = _full_entity_key() + "\n\nH closes help."
+	history_label.text = _controls_text(true, not disclosure.controls_collapsed or help_expanded)
 
 
 func _update_standard_hud() -> void:
-	objective_label.text = "GOAL: Move YOU (white) onto EXIT.\nThe ECHO (purple) cannot finish.\nUse the ECHO to hold the PLATE so YOU can cross the DOOR."
-	legend_label.text = "ENTITY KEY\nYOU — white / cyan core\nECHO — purple outline\nPLATE — amber pad\nDOOR — red closed / green open\nEXIT — blue diamond"
+	objective_label.text = "GOAL: Move YOU — not ECHO — onto EXIT."
+	legend_label.text = _compact_entity_key()
 	var has_echo: bool = not level.echoes.is_empty() and not state.echo_positions.is_empty()
 	var has_door: bool = not level.doors.is_empty() and not state.door_states.is_empty()
-	echo_next_label.visible = has_echo and not state.completed
-	echo_next_label.text = "Echo next: %s" % simulation.echo_action_for_state(level, state, level.echoes[0].id) if has_echo else ""
+	echo_next_label.visible = false
+	echo_next_label.text = ""
 	var delay_text := "\nEcho delay: %d" % level.echoes[0].delay if has_echo else ""
 	var door_text := "\nDoor: %s" % ("OPEN" if state.door_states[0].open else "CLOSED") if has_door else ""
-	status_label.text = "%s\n\nTurn: %d%s%s\n\n%s" % [level.title.to_upper(), state.turn_index, delay_text, door_text, "COMPLETE — YOU reached EXIT\nPress R to restart" if state.completed else "Your actions replay 3 turns later."]
-	history_label.text = "History (oldest → newest)\n%s\n\nMove: Arrows/WASD   Wait: Space   Restart: R   %s: Esc" % ["  •  ".join(state.history), "Back" if hosted_by_app else "Quit"]
+	status_label.text = "%s\n\nTurn: %d%s%s%s" % [level.title.to_upper(), state.turn_index, delay_text, door_text, "\n\nCOMPLETE — YOU reached EXIT\nPress R to restart" if state.completed else ""]
+	if disclosure.objective_collapsed and not help_expanded:
+		objective_label.text = "GOAL: YOU → EXIT.  H: Help"
+	var model := get_timeline_snapshot()
+	timeline_label.visible = model.visible and not state.completed
+	timeline_label.text = timeline_model.expanded_text(model) if help_expanded else timeline_model.compact_text(model)
+	if help_expanded:
+		objective_label.text = "GOAL: Move YOU — not ECHO — onto EXIT.\nUse ECHO on PLATE so YOU can cross DOOR."
+		legend_label.text = _full_entity_key() + "\n\nH closes help."
+	history_label.text = _controls_text(true, not disclosure.controls_collapsed or help_expanded)
+
+
+func _update_disclosure(before: Dictionary, result: Dictionary) -> void:
+	disclosure.controls_collapsed = true
+	if _hud_mode() == "STANDARD_COMPACT":
+		disclosure.objective_collapsed = true
+	for index in result.actor_actions.echoes.size():
+		var echo_action: Dictionary = result.actor_actions.echoes[index]
+		if echo_action.action != "WAIT" and before.echo_positions[index].position != result.state.echo_positions[index].position:
+			disclosure.legend_collapsed = true
+	var door_changed := false
+	for index in result.state.door_states.size():
+		if before.door_states[index].open != result.state.door_states[index].open:
+			door_changed = true
+	var echo_on_plate := false
+	for echo in result.state.echo_positions:
+		for plate in level.get("plates", []):
+			echo_on_plate = echo_on_plate or echo.position == plate.position
+	if door_changed and echo_on_plate:
+		disclosure.causality_collapsed = true
+
+
+func _hud_mode() -> String:
+	return route_payload.get("hud_mode", "STANDARD_COMPACT")
+
+
+func _full_entity_key() -> String:
+	return "ENTITY KEY\nYOU — white / cyan core\nECHO — purple outline\nPLATE — amber pad\nDOOR — red closed / green open\nEXIT — blue diamond"
+
+
+func _compact_entity_key() -> String:
+	return "KEY\nY YOU  •  E ECHO\n● PLATE  ▮ DOOR  ◆ EXIT"
+
+
+func _controls_text(include_wait: bool, expanded: bool) -> String:
+	var destination := "Back" if hosted_by_app else "Quit"
+	if expanded:
+		return "Move: Arrows/WASD%s   Restart: R   Help: H   %s: Esc" % ["   Wait: Space" if include_wait else "", destination]
+	return "Move • R Restart%s • H Help • Esc %s" % [" • Space Wait" if include_wait else "", destination]
+
+
+func _is_help_toggle(event: InputEvent) -> bool:
+	return event is InputEventKey and event.pressed and not event.echo and (event.keycode == KEY_H or event.physical_keycode == KEY_H)
 
 
 func _door_open(id: String) -> bool:
