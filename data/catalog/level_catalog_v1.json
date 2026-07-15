@@ -29,6 +29,26 @@
       "classification": "standard",
       "unlock_prerequisites": ["tutorial_echo_bridge"],
       "hud_mode": "STANDARD_COMPACT",
+      "final_level": false
+    },
+    {
+      "level_id": "door_one_turn_late",
+      "level_path": "res://data/levels/door_one_turn_late.json",
+      "sequence": 4,
+      "display_title_key": "level.door_one_turn_late.title",
+      "classification": "standard",
+      "unlock_prerequisites": ["vertical_slice_delay_3"],
+      "hud_mode": "STANDARD_COMPACT",
+      "final_level": false
+    },
+    {
+      "level_id": "two_keys_one_door",
+      "level_path": "res://data/levels/two_keys_one_door.json",
+      "sequence": 5,
+      "display_title_key": "level.two_keys_one_door.title",
+      "classification": "standard",
+      "unlock_prerequisites": ["door_one_turn_late"],
+      "hud_mode": "STANDARD_COMPACT",
       "final_level": true
     }
   ]

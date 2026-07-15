@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "level_id": "two_keys_one_door",
+  "title": "Two Keys, One Door",
+  "terrain_rows": [
+    "#########",
+    "#####...#",
+    "#######.#",
+    "#####...#",
+    "#####.###",
+    "#.....###",
+    "#########"
+  ],
+  "player_spawn": [1, 5],
+  "echoes": [
+    {"id": "echo_delay_3", "delay": 3, "spawn": [1, 5]}
+  ],
+  "plates": [
+    {"id": "plate_echo", "position": [5, 5]},
+    {"id": "plate_you", "position": [6, 3]}
+  ],
+  "doors": [
+    {"id": "door_and", "position": [7, 3], "initial_open": false, "all_plate_ids": ["plate_echo", "plate_you"]}
+  ],
+  "exit": {"position": [5, 1]},
+  "metadata": {
+    "teaching_goal": "Place ECHO and YOU on separate Plates together, then let YOU cross the AND Door.",
+    "intended_mechanics": ["delayed_echo", "two_plate_and", "next_turn_door"],
+    "notes": "Task 0009AR Level 5. A compact winding corridor forces the two-actor simultaneous Plate state before the only Door route and fits the frozen viewport.",
+    "allow_zero_echo_tutorial": false
+  },
+  "validation": {"recommended_search_depth": 32}
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "level_id": "door_one_turn_late",
+  "title": "One Turn Late",
+  "terrain_rows": [
+    "#######",
+    "#####.#",
+    "#####.#",
+    "###...#",
+    "###.###",
+    "#...###",
+    "#######"
+  ],
+  "player_spawn": [1, 5],
+  "echoes": [
+    {"id": "echo_delay_2", "delay": 2, "spawn": [1, 5]}
+  ],
+  "plates": [
+    {"id": "plate_timing", "position": [3, 4]}
+  ],
+  "doors": [
+    {"id": "door_timing", "position": [4, 3], "initial_open": false, "all_plate_ids": ["plate_timing"]}
+  ],
+  "exit": {"position": [5, 1]},
+  "metadata": {
+    "teaching_goal": "Observe that an Echo opening the Door permits YOU to enter on the following turn.",
+    "intended_mechanics": ["delayed_echo", "pressure_plate", "next_turn_door"],
+    "notes": "Task 0009AR Level 4. The compact folded corridor has no route around the Door and fits the frozen viewport.",
+    "allow_zero_echo_tutorial": false
+  },
+  "validation": {"recommended_search_depth": 24}
+}

@@ -1,17 +1,20 @@
 # Initial level roadmap and validation matrix (CURRENT)
 
-- Candidate spine: exactly 8 levels including tutorials
+- Tracked implemented spine: exactly 5 levels including tutorials
+- Remaining sequence: two uncreated schema-v1 concepts; final candidate count remains a later GPT scope decision
 - Scope: `level_v1` mechanics only; all uncreated levels are concepts, not solvability claims
 - Goal predicate for every level: current player reaches EXIT
 
 ## Status boundary
 
-- `ACCEPTED_EXISTING_FACT`: only `vertical_slice_delay_3` currently exists as a formal accepted level.
-- `UNVERIFIED_DESIGN_TARGET`: all other working IDs, layouts, difficulty, WAIT requirements, and `L*` bands.
+- `ACCEPTED_EXISTING_FACT`: Tutorials 0–1 and `vertical_slice_delay_3` retain their accepted formal/runtime evidence.
+- `INTERNAL_PLAYABLE`: `door_one_turn_late` and `two_keys_one_door` are formal, solver/replay validated, and runtime-smoked by Task 0009AR, pending GPT and human review.
+- `DEFERRED_VALIDATION_RESEARCH`: `wait_for_the_echo` is not implemented; strict literal-WAIT relevance remains unresolved without any claim that WAIT is impossible or redundant.
+- `UNVERIFIED_DESIGN_TARGET`: remaining uncreated working IDs, layouts, difficulty, and target bands.
 - `PLANNING_RECOMMENDATION_FOR_GPT`: sequence, teaching role, validation variants, HUD modes, and scope-cut order.
 - `DEFERRED_POST_MVP`: route-trigger goals, alternate actor goals, latches, switches, hazards, anchors, teleporters, collectibles, and branching endings.
 
-## Eight-level candidate spine
+## Current candidate sequence
 
 ### Design matrix
 
@@ -20,13 +23,16 @@
 | 1 | `tutorial_reach_exit` / 到达出口 | YOU, movement, EXIT, restart, completion | none; tutorial-zero exception | 0 / 0 | direct route with one harmless wall choice | no | no | tutorial | 2–5 unverified | many | `INTRO_MINIMAL` | preserve |
 | 2 | `tutorial_echo_bridge` / 三回合后的我 | ECHO identity, delay-3 replay, plate opens door for YOU | one, d=3 | 1 / 1 | record a short path so ECHO holds PLATE while YOU uses the next opening | not targeted | required | tutorial | 6–10 unverified | many-to-moderate | `GUIDED_ECHO` | preserve |
 | 3 | `vertical_slice_delay_3` / Three Turns Late | first less-guided cooperation puzzle | one, d=3 | 1 / 1 | apply role causality independently across split corridor | not required by accepted shortest witness | required | easy | accepted `L*=9` | accepted `N*=31 (EXACT)`; not a target | `STANDARD_COMPACT` with temporary goal card | preserve unchanged |
-| 4 | `door_one_turn_late` / 门晚一回合 | door state committed now affects entry next turn; blocked history remains recorded | one, d=2 | 1 / 1 | align ECHO plate arrival one turn before YOU attempts the door; use a wall/door corridor to expose stale assumptions | no target | required | easy | 7–12 unverified | moderate | `STANDARD_COMPACT` plus contextual timing card | preserve |
-| 5 | `wait_for_the_echo` / 等一等过去 | WAIT as deliberate scheduling | one, d=3 | 1 / 1 | geometry makes movement-only timing miss the useful plate window; WAIT aligns replay | required target | required | easy-medium | 9–15 unverified | moderate | `STANDARD_COMPACT` | preserve |
-| 6 | `two_keys_one_door` / 两把时间钥匙 | combinational AND door with simultaneous plate occupancy | one, d=3 | 2 / 1 AND | ECHO holds one plate while YOU uses the other to open a shared door, then crosses on the committed next turn | evidence required; not assumed | required | medium | 11–18 unverified | moderate-to-few | `STANDARD_COMPACT` | preserve if stable; first six-level cut line |
-| 7 | `staggered_doors` / 错开的门 | two doors with different plate sets; plan a dependency chain | one, d=3 | 2 / 2 with distinct reference sets | one recorded route creates two useful plate windows; current player chooses when to traverse each door | optional target | required | medium | 14–22 unverified | few-to-moderate | `STANDARD_COMPACT` expanded timeline available | cut second |
-| 8 | `two_echo_convergence` / 两条时间线 | combine two delays without new mechanics | two, d=2 and d=4 | 2 / 1 AND | synchronize two ECHOs on separate plates so YOU crosses; overlapping actors remains legal | required target if solver supports | both echoes required target | medium-hard finale | 16–28 unverified | few | `STANDARD_COMPACT` multi-delay timeline | cut first |
+| 4 | `door_one_turn_late` / 门晚一回合 | door state committed now affects entry next turn; blocked history remains recorded | one, d=2 | 1 / 1 | compact folded corridor forces closed-snapshot blocking, then open-snapshot entry | not required | required | easy | actual `L*=9` | actual `N*=7 (EXACT)` | `STANDARD_COMPACT` | preserve |
+| 5 | `two_keys_one_door` / 两把时间钥匙 | combinational AND door with simultaneous plate occupancy | one, d=3 | 2 / 1 AND | ECHO and YOU occupy distinct Plates together, then YOU enters on the committed next turn | not required | required | medium | actual `L*=12` | actual `N*=1 (EXACT)` | `STANDARD_COMPACT` | preserve |
+| 6 | `staggered_doors` / 错开的门 | two doors with different plate sets; plan a dependency chain | one, d=3 | 2 / 2 with distinct reference sets | one recorded route creates two useful plate windows; current player chooses when to traverse each door | optional target | required target | medium | 14–22 unverified | few-to-moderate target | `STANDARD_COMPACT` expanded timeline available | cut second |
+| 7 | `two_echo_convergence` / 两条时间线 | combine two delays without new mechanics | two, d=2 and d=4 | 2 / 1 AND | synchronize two ECHOs on separate plates so YOU crosses; overlapping actors remains legal | required target if solver supports | both echoes required target | medium-hard finale | 16–28 unverified | few target | `STANDARD_COMPACT` multi-delay timeline | cut first |
 
-Target bands guide authoring limits only. They are not `expected_min_turns` values and must not enter formal data until a solver validates the created level.
+Actual Task 0009AR metrics are machine evidence, not best-turn thresholds. Remaining target bands guide authoring limits only and must not enter formal data until solver validation.
+
+### Deferred validation research — `wait_for_the_echo`
+
+`wait_for_the_echo` is outside the tracked implemented sequence. Task 0009A's bounded authoring pass did not find a layout whose full-action optimum strictly requires literal `WAIT` relative to a no-WAIT search that still permits blocked cardinal turns. This does not establish that WAIT is impossible or redundant. Any future implementation requires a separate explicit task and the original strict comparison standard.
 
 ### Validation and human-gate matrix
 
@@ -35,11 +41,10 @@ Target bands guide authoring limits only. They are not `expected_min_turns` valu
 | 1 | schema valid with zero-echo flag; `SOLVED`; replay; `N*` status; resource summary | no-echo is intended; verify direct EXIT cannot be completed at spawn and restart is exact | fresh player identifies YOU/EXIT and completes without oral help | can the wall be ignored without losing the movement lesson? acceptable if yes |
 | 2 | schema valid; solve/replay; `L*`; `N*` exact/capped; echo participation trace | relocate/isolate ECHO or search a player-only controlled variant; intended level must then be unsolved or fail the door-crossing teaching event | fresh player predicts first replay and states ECHO holds PLATE for YOU | can YOU bypass door/plate or can ECHO alone appear to finish? both forbidden |
 | 3 | preserve accepted solve/replay, `L*=9`, `N*=31 (EXACT)`, visited/frontier summary | preserve accepted isolated-ECHO complete unsolved result | fresh reviewer not exposed to route completes with compact HUD | does reduced copy recreate the prior role/EXIT P1? |
-| 4 | solve/replay plus transition trace proving entry uses start-of-turn door state | compare a controlled layout/trace where same-turn door update cannot grant entry; isolate ECHO | reviewer explains “opens now, enter next turn” before or after first failure | is there a corridor path that never exercises next-turn timing? |
-| 5 | solve/replay; search with WAIT removed from action expansion; record `W_req` evidence | no-WAIT search must not produce an equal-or-better teaching-goal completion; isolate ECHO | reviewer intentionally uses WAIT and can explain why | can blocked movement substitute invisibly for WAIT and bypass teaching? |
-| 6 | solve/replay; AND-state trace; exact/capped `N*`; limits | remove/relocate each plate separately and test echo isolation; each intended dependency must matter | reviewer distinguishes both plates and next-turn traversal | can one actor sequence open the door without the intended simultaneous occupancy? |
-| 7 | solve/replay; traces for both doors and referenced sets; resource limits | neutralize each door/plate dependency separately; isolate ECHO | four-level sequence review records confusion and restarts | can either door be bypassed or solved without its taught dependency? |
-| 8 | solve/replay; multi-delay action traces; `N*` status; frontier/time/state limits; WAIT evidence | remove each ECHO in turn, equalize delays, and relocate each plate; both echoes/delay difference must remain relevant | independent reviewer reads both timeline markers and completes or yields actionable P1 evidence | can one ECHO or actor overlap trivialize the intended convergence? |
+| 4 | accepted Task 0009AR solve/replay, `L*=9`, `N*=7 (EXACT)`, 291 visited/frontier 116, exact two-transition timing trace | no-Echo complete unsolved with 5 states | later five-level sequence reviewer explains “opens now, enter next turn” | machine audit found no corridor bypass |
+| 5 | accepted Task 0009AR solve/replay, `L*=12`, `N*=1 (EXACT)`, 1,260 visited/frontier 225, simultaneous AND/open-entry trace | no-Echo 8-state complete unsolved; each Plate relocation 1,000-state complete unsolved; one-Plate controls solve | later reviewer distinguishes both Plates and next-turn traversal | distinct Plate positions and no-Echo search prevent one-actor/overlap bypass |
+| 6 | solve/replay; traces for both doors and referenced sets; resource limits | neutralize each door/plate dependency separately; isolate ECHO | later sequence review records confusion and restarts | can either door be bypassed or solved without its taught dependency? |
+| 7 | solve/replay; multi-delay action traces; `N*` status; frontier/time/state limits; WAIT evidence if retained | remove each ECHO in turn, equalize delays, and relocate each plate | independent reviewer reads both timeline markers and completes or yields actionable P1 evidence | can one ECHO or actor overlap trivialize convergence? |
 
 ## Variety within schema v1
 
@@ -111,14 +116,14 @@ Any simulation or formal-level change returns affected levels to at least SCHEMA
 ## Fresh-player checkpoints
 
 1. after levels 1–2 and progressive HUD implementation;
-2. after levels 1–4 form a continuous sequence;
+2. after levels 1–5 form the current continuous sequence;
 3. before 2026-08-10 candidate acceptance across the complete selected spine.
 
 At least one reviewer in these gates must not have seen the solver route or prior design discussion.
 
 ## Scope cuts
 
-- Preserve levels 1–5, the accepted core loop, and complete application flow before preserving variety.
-- If content schedule slips, cut level 8 first and level 7 second, producing a six-level candidate only through explicit GPT scope acceptance.
+- Preserve implemented levels 1–5 and the accepted core loop before preserving uncreated variety.
+- If content schedule slips, cut current concept level 7 first and level 6 second; any final count change requires explicit GPT scope acceptance.
 - Never substitute an unvalidated level merely to retain the count of eight.
 - English, multi-delay presentation polish, challenge variants, and post-MVP route divergence are cut before tutorials or validation evidence.

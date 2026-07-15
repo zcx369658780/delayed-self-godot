@@ -15,13 +15,14 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0005 system skeleton and tutorial planning
 → 0006 app shell/catalog/in-memory progress (GPT accepted)
 → 0007 tutorials/reusable gameplay (GPT accepted)
-→ 0008 progressive HUD/owner retest (owner retest recorded, pending GPT review)
-→ 0009 remaining schema-v1 content (recommended, not authorized)
+→ 0008 progressive HUD/owner retest (GPT accepted with observations)
+→ 0009A door timing/WAIT batch (stopped cleanly; WAIT research deferred)
+→ 0009AR door timing/AND-door replacement batch (implemented, pending GPT review)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
 
-Tasks 0000–0007 and Task 0008 Phase A are GPT accepted with recorded observations. The revised Task 0008 owner retest records both tutorials completed unassisted through normal flow with no P0/P1 and two carried P2 findings; GPT adjudication is pending. Task 0009 is recommended but not authorized. A qualifying fresh/independent review remains mandatory after the first four-level continuous sequence and no later than candidate acceptance.
+Tasks 0000–0008 are GPT accepted with recorded observations. Task 0009A stopped cleanly when strict literal-WAIT relevance was not established; WAIT remains deferred research, not rejected. Task 0009AR implements two validated replacement levels and a five-entry catalog and is pending GPT review. A qualifying fresh/independent review remains mandatory after the current five-level continuous sequence and no later than candidate acceptance.
 
 ## Milestone spine
 

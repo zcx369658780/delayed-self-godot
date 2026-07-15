@@ -1,21 +1,20 @@
 # Codex active task (CURRENT)
 
-- Status: `OWNER_RETEST_RECORDED_PENDING_GPT_REVIEW`
-- Task: `tasks/0008_progressive_hud_compact_timeline_and_fresh_player_tutorial_review.md`
-- Gate: `HUMAN EVIDENCE / OWNER TARGETED TUTORIAL VERIFICATION`
-- Starting HEAD: `1da86aeabf2ec091ebda097f165c317051fbeeba`
-- Starting `origin/main`: `1da86aeabf2ec091ebda097f165c317051fbeeba`
-- Commit policy: one documentation-only commit, message `docs: record Delayed Self owner tutorial retest`
-- Push policy: one normal push to `origin/main` after fetch and remote-drift check
+- Status: `IMPLEMENTED_PENDING_GPT_REVIEW`
+- Task: `tasks/0009AR_door_timing_and_and_door_replacement_batch.md`
+- Gate: `IMPLEMENTATION / SCHEMA-V1 CONTENT BATCH A REPLACEMENT`
+- Starting HEAD and `origin/main`: `4d685efe70ebd5f9706bafdb97b2a10957543573`
+- Commit policy: one focused commit, message `feat: add Delayed Self door timing and AND-door levels`
+- Push policy: one normal push after fetch and remote-drift check
 
 ## Scope
 
-Record the authenticated owner's unassisted normal-flow Tutorial 0–1 retest against the accepted Phase A implementation without changing any implementation or test surface.
-
-## Remaining uncertainties
-
-GPT adjudication, Task 0009 authorization, later qualifying fresh/independent review, both carried P2 findings, remaining schema-v1 levels, persistent save, complete flow, art/audio, accessibility, export, Web, license, and release remain unresolved.
+Add `door_one_turn_late` and `two_keys_one_door`, extend the validated catalog/unlock chain to five entries, and record solver/replay/mechanic-necessity/runtime evidence without changing any frozen authority.
 
 ## Completion state
 
-The owner completed Tutorials 0–1 unassisted through normal flow and reached the third level. Preflight retains all four markers and accepted metrics. Findings are P0=0, P1=0, P2=2, P3=0. This is `NOT_FRESH_NOT_BLIND_OWNER_RETEST`; do not claim information-density closure or begin Task 0009 before GPT authorization.
+Both levels are strict-schema valid, solved, replayed, internally playable, and covered by focused plus aggregate tests. The catalog and normal/direct AppRoot routes validate for five levels. All accepted markers, first-three-level hashes, and metrics remain unchanged. External 960×540 captures and launch logs are indexed outside the repository.
+
+## Remaining uncertainties
+
+GPT acceptance and human review are pending. Literal-WAIT feasibility remains `DEFERRED_VALIDATION_RESEARCH`. Fresh/independent review, the two carried P2 observations, candidate status, remaining content, persistent save, complete flow, localization, accessibility, export, Web, license, release, and submission remain unresolved and separately gated.

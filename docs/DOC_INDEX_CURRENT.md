@@ -5,7 +5,7 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0008`](../tasks/0008_progressive_hud_compact_timeline_and_fresh_player_tutorial_review.md) — current two-phase authorization
+4. [`Task 0009AR`](../tasks/0009AR_door_timing_and_and_door_replacement_batch.md) — current replacement content-batch authorization
 5. [`DEVELOPMENT_PLAN_CURRENT.md`](DEVELOPMENT_PLAN_CURRENT.md) — milestone spine and near-term gates
 6. [`HANDOFF_MASTER_CURRENT.md`](HANDOFF_MASTER_CURRENT.md) — current continuation point
 7. [`project_memory.md`](project_memory.md) — durable decisions
@@ -64,3 +64,8 @@
 - [`Task 0008 owner-retest gate amendment`](reports/0008B_GPT_OWNER_RETEST_GATE_AMENDMENT.md)
 - [`Task 0008 owner-targeted Tutorial 0–1 retest`](reviews/0008_OWNER_TARGETED_TUTORIAL_0_1_RETEST.md)
 - [`Task 0008 owner-targeted retest report`](reports/0008_OWNER_TARGETED_TUTORIAL_RETEST_REPORT.md)
+- [`Task 0008 GPT final acceptance`](reports/0008_GPT_FINAL_ACCEPTANCE.md)
+- [`Task 0009A WAIT blocker adjudication`](reports/0009A_WAIT_RELEVANCE_BLOCKER_ADJUDICATION.md)
+- [`Door One Turn Late validation`](level_design/validation/DOOR_ONE_TURN_LATE_VALIDATION.md)
+- [`Two Keys One Door validation`](level_design/validation/TWO_KEYS_ONE_DOOR_VALIDATION.md)
+- [`Task 0009AR door timing and AND-door report`](reports/0009AR_DOOR_TIMING_AND_AND_DOOR_CONTENT_REPORT.md)
