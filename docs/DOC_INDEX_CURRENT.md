@@ -60,3 +60,7 @@
 - [`Task 0007 reusable gameplay and tutorials report`](reports/0007_REUSABLE_GAMEPLAY_AND_TUTORIAL_LEVELS_REPORT.md)
 - [`Task 0007 GPT acceptance`](reports/0007_GPT_FINAL_ACCEPTANCE.md)
 - [`Task 0008 progressive HUD implementation report`](reports/0008_PROGRESSIVE_HUD_AND_COMPACT_TIMELINE_IMPLEMENTATION_REPORT.md)
+- [`Task 0008 Phase A GPT acceptance`](reports/0008A_GPT_PHASE_A_ACCEPTANCE.md)
+- [`Task 0008 owner-retest gate amendment`](reports/0008B_GPT_OWNER_RETEST_GATE_AMENDMENT.md)
+- [`Task 0008 owner-targeted Tutorial 0–1 retest`](reviews/0008_OWNER_TARGETED_TUTORIAL_0_1_RETEST.md)
+- [`Task 0008 owner-targeted retest report`](reports/0008_OWNER_TARGETED_TUTORIAL_RETEST_REPORT.md)

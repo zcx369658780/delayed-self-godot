@@ -15,13 +15,13 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0005 system skeleton and tutorial planning
 → 0006 app shell/catalog/in-memory progress (GPT accepted)
 → 0007 tutorials/reusable gameplay (GPT accepted)
-→ 0008 progressive HUD/fresh-player evidence (Phase A implemented; Phase B pending)
+→ 0008 progressive HUD/owner retest (owner retest recorded, pending GPT review)
 → 0009 remaining schema-v1 content (recommended, not authorized)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
 
-Tasks 0000–0007 are GPT accepted with recorded observations. Task 0008 Phase A implements progressive disclosure, a compact timeline, and zero-turn help; a qualifying fresh-player Phase B review remains pending. Task 0009 is not authorized; export remains a separate later gate.
+Tasks 0000–0007 and Task 0008 Phase A are GPT accepted with recorded observations. The revised Task 0008 owner retest records both tutorials completed unassisted through normal flow with no P0/P1 and two carried P2 findings; GPT adjudication is pending. Task 0009 is recommended but not authorized. A qualifying fresh/independent review remains mandatory after the first four-level continuous sequence and no later than candidate acceptance.
 
 ## Milestone spine
 

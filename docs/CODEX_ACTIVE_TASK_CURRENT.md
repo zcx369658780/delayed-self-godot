@@ -1,21 +1,21 @@
 # Codex active task (CURRENT)
 
-- Status: `PHASE_A_IMPLEMENTED_READY_FOR_FRESH_PLAYER_REVIEW`
+- Status: `OWNER_RETEST_RECORDED_PENDING_GPT_REVIEW`
 - Task: `tasks/0008_progressive_hud_compact_timeline_and_fresh_player_tutorial_review.md`
-- Gate: `IMPLEMENTATION + HUMAN EVIDENCE / TUTORIAL UX`
-- Starting HEAD: `7d0f1e1c96fd2eb3e7d825095e3d37f2c930ea0c`
-- Starting `origin/main`: `7d0f1e1c96fd2eb3e7d825095e3d37f2c930ea0c`
-- Phase A commit policy: one focused implementation/documentation commit, message `feat: add Delayed Self progressive tutorial HUD`
+- Gate: `HUMAN EVIDENCE / OWNER TARGETED TUTORIAL VERIFICATION`
+- Starting HEAD: `1da86aeabf2ec091ebda097f165c317051fbeeba`
+- Starting `origin/main`: `1da86aeabf2ec091ebda097f165c317051fbeeba`
+- Commit policy: one documentation-only commit, message `docs: record Delayed Self owner tutorial retest`
 - Push policy: one normal push to `origin/main` after fetch and remote-drift check
 
 ## Scope
 
-Implement event-driven HUD disclosure, one compact contract-derived Echo timeline, and zero-turn help for all three accepted catalog modes without changing levels, catalog, routing, progress, transitions, or solver semantics.
+Record the authenticated owner's unassisted normal-flow Tutorial 0–1 retest against the accepted Phase A implementation without changing any implementation or test surface.
 
 ## Remaining uncertainties
 
-A qualifying fresh-player Phase B review, information-density P2 closure, remaining schema-v1 levels, persistent save, complete flow, final art/audio, accessibility, export, Web, license, and release remain unresolved.
+GPT adjudication, Task 0009 authorization, later qualifying fresh/independent review, both carried P2 findings, remaining schema-v1 levels, persistent save, complete flow, art/audio, accessibility, export, Web, license, and release remain unresolved.
 
 ## Completion state
 
-Task 0008 Phase A code, tests, viewport evidence, and report are complete. All accepted level metrics remain unchanged and no fresh-player claim is made. The authenticated project owner is ineligible for Phase B; wait for a qualifying reviewer and do not begin Task 0009.
+The owner completed Tutorials 0–1 unassisted through normal flow and reached the third level. Preflight retains all four markers and accepted metrics. Findings are P0=0, P1=0, P2=2, P3=0. This is `NOT_FRESH_NOT_BLIND_OWNER_RETEST`; do not claim information-density closure or begin Task 0009 before GPT authorization.
