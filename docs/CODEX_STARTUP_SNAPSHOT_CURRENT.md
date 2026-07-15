@@ -6,21 +6,21 @@
 - Local root: `D:\Delayed_Self`
 - Working title: `迟到的我 / Delayed Self`
 - Product: offline single-player; primary target Windows
-- Prior accepted gate: Task 0008 (`TASK_0008_PROGRESSIVE_HUD_AND_OWNER_TUTORIAL_RETEST_ACCEPTED_WITH_OBSERVATIONS`)
-- Current gate: Task 0009AR — Door timing and AND-door replacement content batch
-- Current task: `tasks/0009AR_door_timing_and_and_door_replacement_batch.md`
+- Prior accepted gate: Task 0009AR (`TASK_0009AR_DOOR_TIMING_AND_AND_DOOR_LEVELS_ACCEPTED`), implementation commit `9516c44688d5416c154167e8be002a60de7ce327`
+- Current gate: Task 0009AV — authenticated-owner five-level sequence and HUD readability review
+- Current task: `tasks/0009AV_owner_five_level_sequence_and_hud_readability_review.md`
 - Environment record: `docs/environment/DEVELOPMENT_ENVIRONMENT_CURRENT.md`
 - Simulation contract: `docs/game_design/GAMEPLAY_SIMULATION_CONTRACT_CURRENT.md`
 - Level schema: `schemas/level_v1.schema.json`
-- Current report: `docs/reports/0009AR_DOOR_TIMING_AND_AND_DOOR_CONTENT_REPORT.md`
+- Current report: `docs/reports/0009AV_OWNER_FIVE_LEVEL_SEQUENCE_REVIEW_REPORT.md`
 - Current architecture plan: `docs/architecture/SYSTEM_SKELETON_PLAN_CURRENT.md`
 - Catalog contract: `docs/architecture/LEVEL_CATALOG_V1_CURRENT.md`
-- Next recommended gate after GPT review: decide between five-level owner sequence review and the next small schema-v1 content batch
+- Next recommended gate after GPT review: bounded Task 0009B planning/content gate carrying all owner findings
 
 ## Startup
 
-Follow the canonical read order in `AGENTS.md`. Before any write, verify root, branch, `HEAD`, remotes, and clean worktree. Task 0009AR adds two validated schema-v1 levels and extends the tracked catalog to five entries without changing simulation, solver, Gameplay, HUD, viewport, AppRoot, or progress implementation.
+Follow the canonical read order in `AGENTS.md`. Before any write, verify root, branch, `HEAD`, remotes, and clean worktree. Task 0009AV is documentation-only and records an authenticated-owner, not-fresh/not-blind review of the exact accepted five-level implementation.
 
 ## Pending
 
-Task 0009AR implementation is pending GPT review. `door_one_turn_late` is solver/replay validated at `L*=9`, `N*=7 (EXACT)`; `two_keys_one_door` is validated at `L*=12`, `N*=1 (EXACT)` with AND/Plate/Echo necessity evidence. WAIT research remains deferred. `H` Help utility and right-side HUD crowding remain open P2 findings; fresh/independent review, candidate status, persistent save, complete flow, export, Web, and release remain separate gates.
+The owner completed all five levels unassisted through normal progression with P0=0, P1=0, P2=4, and P3=2. Difficulty is too flat/easy; Level 4 timing is visually difficult to observe; timeline/Help remain low-value in the current simple puzzles; and effective board area feels too small, while Level 5 AND causality is clear. GPT review is pending. New Gate semantics, licensed visual/audio/narrative work, fresh/independent review, candidate status, persistent save, complete flow, export, Web, and release remain separate gates.

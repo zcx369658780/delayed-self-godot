@@ -5,7 +5,7 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0009AR`](../tasks/0009AR_door_timing_and_and_door_replacement_batch.md) — current replacement content-batch authorization
+4. [`Task 0009AV`](../tasks/0009AV_owner_five_level_sequence_and_hud_readability_review.md) — current owner five-level sequence review authorization
 5. [`DEVELOPMENT_PLAN_CURRENT.md`](DEVELOPMENT_PLAN_CURRENT.md) — milestone spine and near-term gates
 6. [`HANDOFF_MASTER_CURRENT.md`](HANDOFF_MASTER_CURRENT.md) — current continuation point
 7. [`project_memory.md`](project_memory.md) — durable decisions
@@ -69,3 +69,6 @@
 - [`Door One Turn Late validation`](level_design/validation/DOOR_ONE_TURN_LATE_VALIDATION.md)
 - [`Two Keys One Door validation`](level_design/validation/TWO_KEYS_ONE_DOOR_VALIDATION.md)
 - [`Task 0009AR door timing and AND-door report`](reports/0009AR_DOOR_TIMING_AND_AND_DOOR_CONTENT_REPORT.md)
+- [`Task 0009AR GPT final acceptance`](reports/0009AR_GPT_FINAL_ACCEPTANCE.md)
+- [`Task 0009AV owner five-level sequence review`](reviews/0009AV_OWNER_FIVE_LEVEL_SEQUENCE_REVIEW.md)
+- [`Task 0009AV owner sequence review report`](reports/0009AV_OWNER_FIVE_LEVEL_SEQUENCE_REVIEW_REPORT.md)
