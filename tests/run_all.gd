@@ -37,6 +37,7 @@ func _run() -> void:
 	await _test_scene_smoke()
 	await _test_tutorial_zero_gameplay_tracer()
 	await _test_tutorial_one_gameplay_tracer()
+	await _test_task_0011_presentation_recovery()
 	await _test_gameplay_configuration_failure()
 	await _test_app_shell_tracer()
 	if failures > 0:
@@ -48,6 +49,7 @@ func _run() -> void:
 		print("TASK_0007_TUTORIAL_LEVELS_TESTS_PASS")
 		print("TASK_0008_PROGRESSIVE_HUD_TESTS_PASS")
 		print("TASK_0009AR_LEVELS_4_5_TESTS_PASS")
+		print("TASK_0011_PRESENTATION_RECOVERY_TESTS_PASS")
 		quit(0)
 
 
@@ -129,6 +131,8 @@ func _test_task_0009ar_levels() -> void:
 		"res://data/levels/tutorial_reach_exit.json": "38e466bb5922f1987a99d79c7527a4a8eab8e6cfdbe76fd8159f80b0a40cf2c4",
 		"res://data/levels/tutorial_echo_bridge.json": "681d99057c4e6034a490644d75960ff23d8f43bd1b91850f48179b79fc04a3cf",
 		"res://data/levels/vertical_slice_delay_3.json": "8751da5051fbebaaa5ae7c895d9be9f086e8d8f2e87876a80c379dc06262f1d8",
+		"res://data/levels/door_one_turn_late.json": "1775cf89ae4a94f65a76dac2b791a31395443de88205d0ed1b6233331dbda577",
+		"res://data/levels/two_keys_one_door.json": "f4c6791dfc84d17fb450721e654091a2baeb522e55d660a5d73878cd977651cd",
 	}
 	for path in expected_hashes:
 		_expect(FileAccess.get_sha256(path) == expected_hashes[path], "accepted formal level hash remains exact: " + path)
@@ -600,6 +604,92 @@ func _test_tutorial_one_gameplay_tracer() -> void:
 	var restarted: Dictionary = scene.get_hud_snapshot()
 	_expect(scene.state == simulation.construct_initial_state(scene.level) and restarted.disclosure.legend_collapsed and restarted.disclosure.causality_collapsed, "Tutorial 1 restart is exact and keeps earned disclosure flags")
 	scene.queue_free()
+	await process_frame
+
+
+func _test_task_0011_presentation_recovery() -> void:
+	var packed = load("res://scenes/vertical_slice/vertical_slice.tscn")
+	var guided = packed.instantiate()
+	guided.configure_route_payload({"level_id": "tutorial_echo_bridge", "level_path": "res://data/levels/tutorial_echo_bridge.json", "hud_mode": "GUIDED_ECHO", "classification": "tutorial", "development_direct": true, "final_level": false})
+	root.add_child(guided)
+	await process_frame
+	var guided_snapshot: Dictionary = guided.get_presentation_snapshot()
+	_expect(guided_snapshot.cell_pitch == 60 and guided_snapshot.board_zone == Rect2(24, 84, 540, 420) and guided_snapshot.board_zone.encloses(guided_snapshot.board_rect), "Task 0011 guided board uses accepted 60 px geometry")
+	_expect(guided_snapshot.timeline_visible and guided_snapshot.surfaces.timeline.visible, "Task 0011 guided Timeline remains visible")
+	_expect(guided_snapshot.surfaces.objective.font_size >= 18 and guided_snapshot.surfaces.status.font_size >= 22 and guided_snapshot.surfaces.legend.font_size >= 16 and guided_snapshot.surfaces.help_body.font_size >= 18, "Task 0011 minimum font sizes are measurable")
+	var guided_before: Dictionary = guided.state.duplicate(true)
+	var guided_key: String = guided.get_hud_snapshot().canonical_key
+	_send_help_key(guided)
+	_send_scene_action(guided, "move_right")
+	_send_scene_action(guided, "wait_turn")
+	_send_scene_action(guided, "restart_level")
+	_expect(guided.state == guided_before and guided.get_hud_snapshot().canonical_key == guided_key, "Task 0011 modal Help blocks movement WAIT and restart without state mutation")
+	_send_scene_action(guided, "ui_cancel")
+	_expect(not guided.get_hud_snapshot().help_expanded, "Task 0011 Esc closes Help before route exit")
+	_send_scene_action(guided, "move_right")
+	_expect(guided.state.turn_index == guided_before.turn_index + 1, "Task 0011 input returns after Help close")
+	guided.queue_free()
+	await process_frame
+
+	var standard = packed.instantiate()
+	standard.configure_route_payload({"level_id": "vertical_slice_delay_3", "level_path": "res://data/levels/vertical_slice_delay_3.json", "hud_mode": "STANDARD_COMPACT", "classification": "standard", "development_direct": true, "final_level": false})
+	root.add_child(standard)
+	await process_frame
+	var standard_snapshot: Dictionary = standard.get_presentation_snapshot()
+	_expect(not standard_snapshot.timeline_visible and not standard_snapshot.surfaces.timeline.visible, "Task 0011 simple standard Timeline is contextually hidden")
+	_expect(standard.timeline_visible_for({"echoes": [{"id": "a", "delay": 3}, {"id": "b", "delay": 3}]}, "STANDARD_COMPACT", false), "Task 0011 multiple Echoes trigger Timeline")
+	_expect(standard.timeline_visible_for({"echoes": [{"id": "a", "delay": 2}, {"id": "b", "delay": 3}]}, "STANDARD_COMPACT", false), "Task 0011 distinct delays trigger Timeline")
+	_expect(standard.timeline_visible_for({"echoes": [{"id": "a", "delay": 4}]}, "STANDARD_COMPACT", false), "Task 0011 delay four triggers Timeline")
+	standard.queue_free()
+	await process_frame
+
+	var timing = packed.instantiate()
+	timing.configure_route_payload({"level_id": "door_one_turn_late", "level_path": "res://data/levels/door_one_turn_late.json", "hud_mode": "STANDARD_COMPACT", "classification": "standard", "development_direct": true, "final_level": false})
+	root.add_child(timing)
+	await process_frame
+	for action in ["move_right", "move_right", "move_up", "move_up", "move_up"]:
+		_send_scene_action(timing, action)
+	var timing_snapshot: Dictionary = timing.get_presentation_snapshot()
+	_expect(timing_snapshot.blocked_door.visible and timing_snapshot.blocked_door.visual_state == "X_STOP_NOTCH", "Task 0011 Level 4 critical trace shows blocked-Door feedback")
+	_expect(timing_snapshot.echo_trails.size() == 1 and timing_snapshot.echo_trails[0].echo_id == "echo_delay_2", "Task 0011 Level 4 critical trace shows accepted Echo replay")
+	_expect(timing_snapshot.plates[0].visual_state == "FILLED_PRESSED" and timing_snapshot.doors[0].visual_state == "HOLLOW_OPEN" and timing_snapshot.doors[0].dependency_pips[0].active, "Task 0011 Level 4 critical trace shows Plate dependency and open aperture")
+	_expect(timing_snapshot.teaching_badge.visible and timing_snapshot.teaching_badge.text == "OPEN · NEXT INPUT", "Task 0011 Level 4 first open commit shows bounded badge")
+	_send_scene_action(timing, "move_right")
+	var entry_snapshot: Dictionary = timing.get_presentation_snapshot()
+	_expect(timing.state.player_position == [4, 3] and not entry_snapshot.teaching_badge.visible and entry_snapshot.doors[0].occupied_by.has("YOU") and entry_snapshot.doors[0].actor_identity_visible, "Task 0011 next input enters from open snapshot and preserves actor identity through closure")
+	timing.queue_free()
+	await process_frame
+
+	var and_level = packed.instantiate()
+	and_level.configure_route_payload({"level_id": "two_keys_one_door", "level_path": "res://data/levels/two_keys_one_door.json", "hud_mode": "STANDARD_COMPACT", "classification": "standard", "development_direct": true, "final_level": true})
+	root.add_child(and_level)
+	await process_frame
+	for action in ["move_right", "move_right", "move_right", "move_right", "move_up", "move_up", "move_right"]:
+		_send_scene_action(and_level, action)
+	var and_snapshot: Dictionary = and_level.get_presentation_snapshot()
+	_expect(and_snapshot.doors[0].dependency_pips.map(func(pip): return pip.plate_id) == ["plate_echo", "plate_you"] and and_snapshot.doors[0].dependency_pips.all(func(pip): return pip.active), "Task 0011 Level 5 shows two stable active AND pips")
+	_send_scene_action(and_level, "restart_level")
+	for action in ["move_right", "move_right", "move_right", "move_right", "move_up", "move_up", "move_right", "move_right", "move_up", "move_up", "move_left", "move_left"]:
+		_send_scene_action(and_level, action)
+	var replay := simulation.replay(and_level.level, ["RIGHT", "RIGHT", "RIGHT", "RIGHT", "UP", "UP", "RIGHT", "RIGHT", "UP", "UP", "LEFT", "LEFT"])
+	_expect(replay.ok and and_level.state == replay.state and and_level.state.completed, "Task 0011 Approach A rapid input preserves exact action order count and result")
+	and_level.queue_free()
+	await process_frame
+
+	var reduced = packed.instantiate()
+	reduced.configure_route_payload({"level_id": "door_one_turn_late", "level_path": "res://data/levels/door_one_turn_late.json", "hud_mode": "STANDARD_COMPACT", "classification": "standard", "development_direct": true, "final_level": false})
+	root.add_child(reduced)
+	await process_frame
+	reduced.set_reduced_motion_for_test(true)
+	for action in ["move_right", "move_right", "move_up", "move_up", "move_up"]:
+		_send_scene_action(reduced, action)
+	var reduced_snapshot: Dictionary = reduced.get_presentation_snapshot()
+	_expect(reduced_snapshot.reduced_motion and reduced_snapshot.echo_trails[0].visual_state == "STATIC_SEGMENTS" and reduced_snapshot.doors[0].visual_state == "HOLLOW_OPEN" and reduced_snapshot.teaching_badge.visible, "Task 0011 reduced motion preserves static semantic feedback")
+	var level_before: Dictionary = reduced.level.duplicate(true)
+	var state_before: Dictionary = reduced.state.duplicate(true)
+	reduced.get_presentation_snapshot()
+	_expect(reduced.level == level_before and reduced.state == state_before, "Task 0011 presentation snapshots do not mutate level or state")
+	reduced.queue_free()
 	await process_frame
 
 

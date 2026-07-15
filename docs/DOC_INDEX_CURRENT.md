@@ -5,7 +5,7 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0010`](../tasks/0010_presentation_difficulty_asset_audio_narrative_and_gate_planning.md) — current presentation/difficulty/production planning authorization
+4. [`Task 0011`](../tasks/0011_primitive_board_hud_and_door_feedback_recovery.md) — current primitive presentation-recovery authorization
 5. [`DEVELOPMENT_PLAN_CURRENT.md`](DEVELOPMENT_PLAN_CURRENT.md) — milestone spine and near-term gates
 6. [`HANDOFF_MASTER_CURRENT.md`](HANDOFF_MASTER_CURRENT.md) — current continuation point
 7. [`project_memory.md`](project_memory.md) — durable decisions
@@ -81,3 +81,5 @@
 - [`Latched / one-shot Gate ADR draft`](architecture/LATCHED_ONE_SHOT_GATE_ADR_DRAFT.md)
 - [`M3 presentation and production recovery plan`](version_plans/M3_PRESENTATION_DIFFICULTY_AND_PRODUCTION_RECOVERY_PLAN.md)
 - [`Task 0010 planning report`](reports/0010_PRESENTATION_DIFFICULTY_AND_PRODUCTION_DIRECTION_PLANNING_REPORT.md)
+- [`Task 0010 GPT final acceptance`](reports/0010_GPT_FINAL_ACCEPTANCE.md)
+- [`Task 0011 primitive presentation recovery report`](reports/0011_PRIMITIVE_PRESENTATION_AND_DOOR_FEEDBACK_RECOVERY_REPORT.md)

@@ -19,12 +19,13 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0009A door timing/WAIT batch (stopped cleanly; WAIT research deferred)
 → 0009AR door timing/AND-door replacement batch (GPT accepted)
 → 0009AV owner five-level sequence review (GPT accepted with findings)
-→ 0010 presentation/difficulty/production recovery planning (recorded, pending GPT review)
+→ 0010 presentation/difficulty/production recovery planning (GPT accepted)
+→ 0011 primitive board/HUD and Door-feedback recovery (implemented, pending GPT review)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
 
-Tasks 0000–0008, Task 0009AR, and Task 0009AV are GPT accepted with recorded observations/findings. Task 0009A stopped cleanly when strict literal-WAIT relevance was not established; WAIT remains deferred research, not rejected. Task 0010 plans presentation recovery, difficulty targets, provenance-first art/audio, lightweight narrative, and optional Gate research; it implements none of them and awaits GPT review. The recommended next task is a bounded primitive board/HUD and Door-feedback recovery. A qualifying fresh/independent review remains mandatory before candidate acceptance.
+Tasks 0000–0008, Task 0009AR, Task 0009AV, and Task 0010 are GPT accepted with recorded observations/findings. Task 0009A stopped cleanly when strict literal-WAIT relevance was not established; WAIT remains deferred research, not rejected. Task 0011 implements the bounded primitive board/HUD and Door-feedback baseline and awaits GPT review. The recommended next gate after acceptance is the owner-targeted Level 4 plus normal five-level presentation review. A qualifying fresh/independent review remains mandatory before candidate acceptance.
 
 ## Milestone spine
 
