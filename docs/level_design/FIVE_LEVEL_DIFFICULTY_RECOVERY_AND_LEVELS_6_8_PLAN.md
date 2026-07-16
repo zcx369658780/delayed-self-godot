@@ -1,6 +1,6 @@
 # Five-level difficulty recovery and Levels 6–8 plan
 
-- Status: `PLANNING_RECOMMENDATION_FOR_GPT`; every uncreated level is `CONCEPT / UNVERIFIED_DESIGN_TARGET`.
+- Status: Level 6 is `INTERNAL_PLAYABLE_PENDING_GPT_REVIEW`; uncreated Levels 7–8 remain `CONCEPT / UNVERIFIED_DESIGN_TARGET`.
 - Frozen authority: [`simulation_v1`](../game_design/GAMEPLAY_SIMULATION_CONTRACT_CURRENT.md), `level_v1`, and the five accepted formal levels.
 - Human evidence: authenticated owner sequence review, `NOT_FRESH_NOT_BLIND_OWNER_SEQUENCE_REVIEW`.
 - Rule: a solver witness proves machine reachability, not difficulty, clarity, necessity, or fun.
@@ -63,26 +63,26 @@ All accepted hashes, witnesses, metrics, and status-ladder positions remain unch
 
 Times are review targets, not promises or inferred owner data. If fresh players materially exceed them because state is unclear, repair observability before simplifying logic.
 
-## Level 6 concept — `staggered_doors`
+## Level 6 implementation — `staggered_doors`
 
-- Status: `CONCEPT / PROPOSAL_ONLY`.
+- Status: `INTERNAL_PLAYABLE_PENDING_GPT_REVIEW`; not fresh-player reviewed or candidate accepted.
 - Role: first meaningful rise; one delay-3 Echo creates two separate opening windows for two Doors.
-- Proposed structure: one ECHO `d=3`; two Plates; two combinational Doors with distinct one-Plate reference sets; one player-only EXIT; folded route with no bypass.
+- Implemented structure: one shared-spawn ECHO `d=3`; two necessary Plates; two unavoidable Doors with distinct one-Plate reference sets; one player-only EXIT; 9×7 folded route with no terrain bypass.
 - Mental model: record a route whose replay presses Plate A and later Plate B while YOU chooses the correct traversal windows. Door state remains combinational and next-turn.
 - Geometry difference: two connected chambers with a return lane, not another single straight corridor.
 
-Target bands:
+Target and exact results:
 
 | Metric | Target |
 |---|---:|
-| `L*` | 15–21 |
-| `N*` | 1–12, `EXACT` preferred; `CAPPED` must be explicit |
-| Visited states | 2,000–40,000 under fixed documented limits |
-| Max frontier | 300–8,000 |
-| Meaningful branches | at least 3 identified by trace review |
+| `L*` | target 15–21; actual 15 |
+| `N*` | target 1–12 exact; actual 4 `EXACT` |
+| Visited states | target 2,000–40,000; actual 6,772 |
+| Max frontier | actual 1,179 |
+| Meaningful branches | 3 measured; recoverable penalties +2, +7, +2 |
 | Human | 3–7 minutes, 0–3 restarts in later fresh review |
 
-Mandatory proof package:
+Completed machine proof package:
 
 1. strict load, solve, replay, exact restart, canonical metric record;
 2. no-Echo complete-state search is unsolved;
@@ -91,7 +91,9 @@ Mandatory proof package:
 5. trace two distinct closed-start/open-result/open-next-turn entries;
 6. show that a one-Door or shared-Plate simplification materially changes the reasoning.
 
-Timeline/Help test: expose a contextual Timeline because there are two Doors, but require human evidence that it supports prediction. If reviewers ignore it yet explain both windows, keep Timeline collapsed for this level. Stop authoring if `L*<14`, one repeated pattern solves both Doors without a decision, `N*` explodes above the recorded cap, or either dependency is unnecessary.
+Strict load, solve, replay, exact restart, all-shortest Door event enumeration, no-ECHO complete-unsolved, both Plate-isolation complete-unsolved, Door removal, dependency replacement, EXIT, articulation/bypass, three meaningful decisions, reusable Gameplay, progression, and primitive capture checks passed. Solver limits were depth 64, states 500,000, 30 seconds, count cap 1,000,000. Formal SHA-256 is `3f14c19b50775e36dd5b52664798381cf1292b0a30b377641c03435f45696bc8`.
+
+Timeline/Help remains contextual and Help remains modal/zero-turn. Later fresh review must establish whether it supports prediction; no human difficulty or fun claim is made from machine evidence.
 
 ## Level 7 concept — `two_echo_convergence`
 

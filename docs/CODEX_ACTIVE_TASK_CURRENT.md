@@ -1,20 +1,20 @@
 # Codex active task (CURRENT)
 
-- Status: `OWNER_RETEST_RECORDED_PENDING_GPT_REVIEW`
-- Task: `tasks/0011RVE_bounded_cleanup_standalone_client_retest_and_owner_review_completion.md`
-- Gate: `DIAGNOSTIC + HUMAN EVIDENCE / WINDOW SURFACE DISCRIMINATION`
-- Starting HEAD and `origin/main`: `ec46bf9ec4f5b545cd97a752d2a9ed0e0fc22725`
-- Commit policy: one documentation-only commit, message `docs: complete Delayed Self standalone window owner retest`
+- Status: `IMPLEMENTED_AND_FORMALLY_VALIDATED_PENDING_GPT_REVIEW`
+- Task: `tasks/0012_difficult_level_6_staggered_doors.md`
+- Gate: `IMPLEMENTATION + FORMAL VALIDATION / DIFFICULT CONTENT`
+- Starting HEAD and `origin/main`: `cf73aedb26022b2a8e4db82a42f5d2e7e4eb1bc0`
+- Commit policy: one implementation/documentation commit, message `feat: add Delayed Self staggered doors level`
 - Push policy: one normal push after fetch and remote-drift check
 
 ## Scope
 
-Record bounded cleanup of Godot-generated changes and discriminate the embedded preview from a separately launched standalone native game window without changing implementation.
+Implement and formally validate Level 6 `staggered_doors` inside unchanged schema-v1 simulation/runtime authorities.
 
 ## Completion state
 
-The initial `project.godot` rewrite and 24 untracked `.gd.uid` files were preserved externally and cleaned only through authorized exact paths. The standalone native client fills/scales correctly, uses natural symmetric bars for non-16:9 shapes, and preserves route/state/input. The earlier small centered presentation was embedded-preview-only. Selected branch: `EMBEDDED_PREVIEW_ONLY_NOT_PRODUCT_WINDOW_BLOCKER`; findings P0=0/P1=0/P2=0/P3=0. Post-close worktree remained clean with no second generated-file wave.
+The final 9×7 candidate passes strict load, exact BFS, replay, restart, mechanic-necessity, bypass, progression, reusable Gameplay, presentation, and capture checks. Metrics are `L*=15`, `N*=4 EXACT`, visited 6,772, frontier 1,179. All four shortest solutions cross both distinct Door windows. Aggregate result is 349 assertions/9 vectors with all eight markers and native exit 0.
 
 ## Remaining uncertainties
 
-GPT final adjudication remains pending. The owner agrees to proceed toward difficult Level 6, but this review does not authorize it. Licensed assets/fonts, Level 6, fresh/independent review, final art/accessibility, audio, narrative, Gate, settings/save, complete flow, localization, export, release, and submission remain separately gated.
+GPT adjudication and qualifying fresh/independent Level 6 review remain pending. This task does not claim human difficulty, fun, balance, candidate acceptance, or release readiness. Level 7, assets/fonts, Gate, settings/save, complete flow, export, release, and submission remain separately gated.

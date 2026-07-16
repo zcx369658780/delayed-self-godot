@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "level_id": "staggered_doors",
+  "title": "Staggered Doors",
+  "terrain_rows": [
+    "#########",
+    "####....#",
+    "#######.#",
+    "#######.#",
+    "#.......#",
+    "#...#####",
+    "#########"
+  ],
+  "player_spawn": [1, 5],
+  "echoes": [
+    {"id": "echo_delay_3", "delay": 3, "spawn": [1, 5]}
+  ],
+  "plates": [
+    {"id": "plate_early", "position": [2, 4]},
+    {"id": "plate_late", "position": [3, 5]}
+  ],
+  "doors": [
+    {"id": "door_early", "position": [4, 4], "initial_open": false, "all_plate_ids": ["plate_early"]},
+    {"id": "door_late", "position": [6, 4], "initial_open": false, "all_plate_ids": ["plate_late"]}
+  ],
+  "exit": {"position": [4, 1]},
+  "metadata": {
+    "teaching_goal": "Plan one delay-3 route that creates two distinct ECHO-held Door windows for YOU.",
+    "intended_mechanics": ["delayed_echo", "staggered_doors", "next_turn_door"],
+    "notes": "Task 0012 Level 6. Two terrain-cut Doors separate a compact setup loop, transfer cell, and folded exit route.",
+    "allow_zero_echo_tutorial": false
+  },
+  "validation": {"recommended_search_depth": 64}
+}

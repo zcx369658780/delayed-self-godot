@@ -49,6 +49,16 @@
       "classification": "standard",
       "unlock_prerequisites": ["door_one_turn_late"],
       "hud_mode": "STANDARD_COMPACT",
+      "final_level": false
+    },
+    {
+      "level_id": "staggered_doors",
+      "level_path": "res://data/levels/staggered_doors.json",
+      "sequence": 6,
+      "display_title_key": "level.staggered_doors.title",
+      "classification": "standard",
+      "unlock_prerequisites": ["two_keys_one_door"],
+      "hud_mode": "STANDARD_COMPACT",
       "final_level": true
     }
   ]

@@ -23,12 +23,13 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0011 primitive board/HUD and Door-feedback recovery (GPT accepted)
 → 0011V owner presentation review (GPT accepted; focused repair required)
 → 0011R physical-window fill repair (GPT accepted pending owner retest)
-→ 0011RV standalone owner window-fill retest (recorded, pending GPT final adjudication)
+→ 0011RV standalone owner window-fill retest (GPT accepted)
+→ 0012 difficult Level 6 `staggered_doors` (implemented and formally validated, pending GPT review)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
 
-Tasks 0000–0008, Task 0009AR, Task 0009AV, Task 0010, Task 0011, Task 0011V, and Task 0011R are GPT accepted with recorded observations/findings. Task 0009A stopped cleanly when strict literal-WAIT relevance was not established; WAIT remains deferred research, not rejected. Task 0011RV confirms in a standalone native client that 16:9 fills, non-16:9 bars are symmetric, all tested routes scale consistently, and resize preserves state/input. The earlier small centered presentation was embedded-preview-only; findings are P0=0/P1=0/P2=0/P3=0. Pending GPT final adjudication, the next recommended content task is the separately gated difficult Level 6 `staggered_doors`. A qualifying fresh/independent review remains mandatory before candidate acceptance.
+Tasks 0000–0008, Task 0009AR, Task 0009AV, Task 0010, Task 0011, Task 0011V, Task 0011R, and Task 0011RV are GPT accepted with recorded observations/findings. Task 0009A stopped cleanly when strict literal-WAIT relevance was not established; WAIT remains deferred research. Task 0012 adds the first core challenge without runtime/schema change: `L*=15`, `N*=4 EXACT`, visited 6,772, frontier 1,179, two distinct necessary Door windows, and complete no-ECHO/Plate controls. It is internally playable and pending GPT review. A qualifying fresh/independent Level 6 review remains mandatory before candidate acceptance; Level 7 is separately gated.
 
 ## Milestone spine
 
