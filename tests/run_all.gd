@@ -7,6 +7,7 @@ const CatalogLoader = preload("res://scripts/app/catalog_loader.gd")
 const ProgressStore = preload("res://scripts/app/memory_progress.gd")
 const RouteRequest = preload("res://scripts/app/route_request.gd")
 const TimelineModel = preload("res://scripts/gameplay/timeline_model.gd")
+const WindowPresentation = preload("res://scripts/app/window_presentation.gd")
 
 var failures := 0
 var assertions := 0
@@ -40,6 +41,7 @@ func _run() -> void:
 	await _test_task_0011_presentation_recovery()
 	await _test_gameplay_configuration_failure()
 	await _test_app_shell_tracer()
+	await _test_task_0011r_window_fill()
 	if failures > 0:
 		printerr("TASK_0003_TESTS_FAIL failures=%d assertions=%d" % [failures, assertions])
 		quit(1)
@@ -50,6 +52,7 @@ func _run() -> void:
 		print("TASK_0008_PROGRESSIVE_HUD_TESTS_PASS")
 		print("TASK_0009AR_LEVELS_4_5_TESTS_PASS")
 		print("TASK_0011_PRESENTATION_RECOVERY_TESTS_PASS")
+		print("TASK_0011R_WINDOW_FILL_TESTS_PASS")
 		quit(0)
 
 
@@ -797,6 +800,49 @@ func _test_app_shell_tracer() -> void:
 	await process_frame
 	_expect(direct_app.get_current_route() == "SAFE_ERROR" and direct_app.get_active_screen().get_screen_snapshot().error_code == "APP_UNKNOWN_LEVEL_ID", "unknown development level ID reaches Safe Error")
 	direct_app.queue_free()
+	await process_frame
+
+
+func _test_task_0011r_window_fill() -> void:
+	_expect(ProjectSettings.get_setting("display/window/size/viewport_width") == 960 and ProjectSettings.get_setting("display/window/size/viewport_height") == 540, "Task 0011R keeps the exact 960x540 logical reference")
+	_expect(ProjectSettings.get_setting("display/window/stretch/mode") == "canvas_items" and ProjectSettings.get_setting("display/window/stretch/aspect") == "keep", "Task 0011R uses built-in uniform keep-aspect canvas scaling")
+	var exact: Dictionary = WindowPresentation.content_transform(Vector2i(1280, 720))
+	var wide: Dictionary = WindowPresentation.content_transform(Vector2i(1440, 720))
+	var tall: Dictionary = WindowPresentation.content_transform(Vector2i(1280, 800))
+	_expect(exact.content_rect == Rect2(0, 0, 1280, 720) and is_equal_approx(exact.scale, 4.0 / 3.0), "Task 0011R exact 16:9 client fills with zero offset")
+	_expect(wide.content_rect == Rect2(80, 0, 1280, 720) and wide.bars.left == wide.bars.right and wide.bars.top == 0.0 and wide.bars.bottom == 0.0, "Task 0011R wide client uses symmetric pillarboxing")
+	_expect(tall.content_rect == Rect2(0, 40, 1280, 720) and tall.bars.top == tall.bars.bottom and tall.bars.left == 0.0 and tall.bars.right == 0.0, "Task 0011R tall client uses symmetric letterboxing")
+	_expect(WindowPresentation.content_transform(Vector2i(1280, 800)) == tall, "Task 0011R resize transform is deterministic and idempotent")
+
+	var packed = load("res://scenes/app/app_root.tscn")
+	var app = packed.instantiate()
+	root.add_child(app)
+	await process_frame
+	_expect(RenderingServer.get_default_clear_color() == WindowPresentation.BAR_COLOR, "Task 0011R exposed bars use the intentional dark project background")
+	var menu_policy: Dictionary = app.get_window_presentation_snapshot(Vector2i(1440, 720))
+	_expect(menu_policy.logical_size == Vector2(960, 540) and menu_policy.content_rect == wide.content_rect and app.get_active_screen().get_parent() == app.route_host, "Task 0011R Main Menu uses the shared full-client host policy")
+	app.navigate("LEVEL_SELECT")
+	await process_frame
+	_expect(app.get_window_presentation_snapshot(Vector2i(1440, 720)).content_rect == menu_policy.content_rect and app.get_active_screen().get_parent() == app.route_host, "Task 0011R Level Select retains the shared host policy")
+	app.boot_with_user_args(["--level-id=two_keys_one_door"])
+	await process_frame
+	var gameplay = app.get_active_screen()
+	_send_scene_action(gameplay, "move_right")
+	_send_help_key(gameplay)
+	var before_state: Dictionary = gameplay.state.duplicate(true)
+	var before_key: String = gameplay.get_hud_snapshot().canonical_key
+	DisplayServer.window_set_size(Vector2i(1280, 800))
+	await process_frame
+	await process_frame
+	_expect(gameplay.state == before_state and gameplay.get_hud_snapshot().canonical_key == before_key, "Task 0011R resize does not transition or mutate canonical gameplay")
+	_expect(gameplay.get_hud_snapshot().help_expanded and gameplay.get_parent() == app.route_host, "Task 0011R Help remains open inside the shared Gameplay host after resize")
+	var presentation: Dictionary = gameplay.get_presentation_snapshot()
+	_expect(presentation.viewport == Rect2(0, 0, 960, 540) and presentation.surfaces.help.rect == Rect2(96, 54, 768, 432), "Task 0011R accepted logical board HUD and Help geometry remains unchanged")
+	app.navigate("UNKNOWN_ROUTE")
+	await process_frame
+	_expect(app.get_window_presentation_snapshot(Vector2i(1280, 800)).content_rect == tall.content_rect and app.get_active_screen().get_parent() == app.route_host, "Task 0011R Safe Error retains the shared centered host policy")
+	DisplayServer.window_set_size(Vector2i(960, 540))
+	app.queue_free()
 	await process_frame
 
 

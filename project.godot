@@ -10,10 +10,10 @@ run/main_scene="res://scenes/app/app_root.tscn"
 
 [display/window]
 
-window/size/viewport_width=960
-window/size/viewport_height=540
-window/stretch/mode="canvas_items"
-window/stretch/aspect="keep"
+size/viewport_width=960
+size/viewport_height=540
+stretch/mode="canvas_items"
+stretch/aspect="keep"
 
 [input]
 

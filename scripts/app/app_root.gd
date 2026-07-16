@@ -4,6 +4,7 @@ extends Node
 const CatalogLoader = preload("res://scripts/app/catalog_loader.gd")
 const MemoryProgress = preload("res://scripts/app/memory_progress.gd")
 const RouteRequest = preload("res://scripts/app/route_request.gd")
+const WindowPresentation = preload("res://scripts/app/window_presentation.gd")
 const MainMenuScene = preload("res://scenes/ui/main_menu.tscn")
 const LevelSelectScene = preload("res://scenes/ui/level_select.tscn")
 const SafeErrorScene = preload("res://scenes/ui/safe_error.tscn")
@@ -27,6 +28,7 @@ var _active_screen: Node
 
 
 func _ready() -> void:
+	RenderingServer.set_default_clear_color(WindowPresentation.BAR_COLOR)
 	boot_with_user_args(OS.get_cmdline_user_args())
 
 
@@ -171,3 +173,13 @@ func get_catalog_snapshot() -> Dictionary:
 
 func get_progress_snapshot() -> Dictionary:
 	return _progress.snapshot() if _progress != null else {}
+
+
+func get_window_presentation_snapshot(client_size := Vector2i.ZERO) -> Dictionary:
+	var measured_size: Vector2i = DisplayServer.window_get_size() if client_size == Vector2i.ZERO else client_size
+	var snapshot: Dictionary = WindowPresentation.content_transform(measured_size)
+	snapshot["logical_size"] = WindowPresentation.LOGICAL_SIZE
+	snapshot["bar_color"] = WindowPresentation.BAR_COLOR
+	snapshot["route"] = _current_route
+	snapshot["route_host"] = route_host.name
+	return snapshot

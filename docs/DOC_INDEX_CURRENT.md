@@ -5,7 +5,7 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0011V`](../tasks/0011V_owner_presentation_level4_and_five_level_retest.md) — current authenticated-owner presentation-review authorization
+4. [`Task 0011R`](../tasks/0011R_physical_window_fill_scaling_and_centering_repair.md) — current physical-window fill repair authorization
 5. [`DEVELOPMENT_PLAN_CURRENT.md`](DEVELOPMENT_PLAN_CURRENT.md) — milestone spine and near-term gates
 6. [`HANDOFF_MASTER_CURRENT.md`](HANDOFF_MASTER_CURRENT.md) — current continuation point
 7. [`project_memory.md`](project_memory.md) — durable decisions
@@ -86,3 +86,5 @@
 - [`Task 0011 GPT final acceptance`](reports/0011_GPT_FINAL_ACCEPTANCE.md)
 - [`Task 0011V owner presentation and Level 4 retest`](reviews/0011V_OWNER_PRESENTATION_AND_LEVEL4_RETEST.md)
 - [`Task 0011V owner presentation review report`](reports/0011V_OWNER_PRESENTATION_REVIEW_REPORT.md)
+- [`Task 0011V GPT final acceptance`](reports/0011V_GPT_FINAL_ACCEPTANCE.md)
+- [`Task 0011R physical-window fill repair report`](reports/0011R_PHYSICAL_WINDOW_FILL_REPAIR_REPORT.md)
