@@ -2,6 +2,12 @@
 
 Durable project decisions only; live task progress belongs in current docs and reports.
 
+## Task dispatch
+
+- GitHub task files are the complete execution-authorization carrier. Every task file must contain its applicable scope, constraints, acceptance criteria, Git discipline, stop conditions, and terminal verdict.
+- The prompt sent to local Codex therefore defaults to the minimal instruction `请读取并严格执行： tasks/<task-file>.md`. Add prompt text only when a live Git/worktree deviation, unresolved blocker, human prerequisite, or safety fact is not yet represented in the task file.
+- When a Codex launch prompt is shown to the owner, place it in one plain Markdown code block. A short launch prompt never permits an incomplete task file; the named GitHub task remains the authoritative detailed specification.
+
 ## Frozen facts
 
 - Repository: `zcx369658780/delayed-self-godot`; visibility: public; default branch: `main`.
@@ -42,9 +48,9 @@ Durable project decisions only; live task progress belongs in current docs and r
 - Task 0011 was GPT accepted at implementation commit `c26d8be1c97dbe057f633b55ea7689f35272c577` pending owner review. Task 0011V is `NOT_FRESH_NOT_BLIND_OWNER_PRESENTATION_REVIEW`: all five levels completed unassisted through normal flow, unlock/return and input worked, and rules/mechanisms were much clearer. P0=0/P1=0/P2=1/P3=1. The fixed 960×540 logical canvas still leaves materially visible unused right/bottom physical-window space; the owner chose priority `B`, so focused Task 0011R is recommended before licensed visual/font work. Dashed paths should not be the primary future complex-level relationship language; stable shapes/icons/colors plus contextual highlighting are a future direction, with color supplementary.
 - Task 0011V was GPT accepted at evidence commit `39d0882e90771c1c54ebdb6477f560e81168fa9e` with focused repair required. Task 0011R diagnoses invalid double-prefixed `display/window/window/...` keys and corrects them to the Godot 4.7 960×540 `canvas_items`/`keep` policy. Exact 16:9 fills; mismatched clients use centered symmetric black bars. AppRoot owns only the intentional clear color and read-only evidence snapshot; Godot owns the transform. Regression is 314 assertions/9 vectors with unchanged hashes, metrics, routes, unlocks, and simulation. Later acceptance and owner-retest status are recorded below.
 - Task 0011R was GPT accepted at implementation commit `a07c4be075aaa5c57e9d48869392f29dadaaa1d5`; Task 0011RV was finally accepted after the standalone native-client retest selected `EMBEDDED_PREVIEW_ONLY_NOT_PRODUCT_WINDOW_BLOCKER` with P0=0/P1=0/P2=0/P3=0.
-- Task 0012 implements schema-v1 Level 6 `staggered_doors` with one delay-3 ECHO, two necessary Plates, and two unavoidable single-Plate Doors whose useful windows occur at different times. Exact evidence is `L*=15`, `N*=4 EXACT`, visited 6,772, frontier 1,179; no-ECHO and both Plate-isolation controls exhaust complete unsolved state spaces. It is internally playable pending GPT and fresh/independent review; no Level 7 or candidate claim follows automatically.
+- Task 0012 implements schema-v1 Level 6 `staggered_doors` with one delay-3 ECHO, two necessary Plates, and two unavoidable single-Plate Doors whose useful windows occur at different times. Exact evidence is `L*=15`, `N*=4 EXACT`, visited 6,772, frontier 1,179; no-ECHO and both Plate-isolation controls exhaust complete unsolved state spaces. GPT accepted it at `INTERNAL_PLAYABLE` at implementation commit `1e43e9baa82a578fdb14f556e4895d42863513d9`; its formal SHA-256 is `3f14c19b50775e36dd5b52664798381cf1292b0a30b377641c03435f45696bc8`. The catalog now has six formal entries, with Level 6 solely final and unlocked after Level 5. No fresh-player, candidate, balance, fun, Level 7, export, or release claim follows automatically.
 - The player/ECHO route-divergence suggestion is `DEFERRED_POST_MVP`; it must not enter `level_v1` or the pre-candidate task sequence.
 
 ## Pending decisions
 
-Task 0012 is pending GPT review and qualifying fresh/independent Level 6 evidence. Detailed owner answers for Level 4 timing, Level 5 AND, Help, Timeline, and per-level overlap remain not provided. Level 7, any new Gate semantics, WAIT feasibility, asset acquisition, persistent save, final licensed art/audio/narrative, candidate acceptance, accessibility, localization, export, Web, and release evidence remain separate gates.
+No execution task is currently authorized. A fresh/independent Level 6 sequence review is the next recommended gate, but it requires a new GitHub task. Detailed owner answers for Level 4 timing, Level 5 AND, Help, Timeline, and per-level overlap remain not provided. Level 7, any new Gate semantics, WAIT feasibility, asset acquisition, persistent save, final licensed art/audio/narrative, candidate acceptance, accessibility, localization, export, Web, and release evidence remain separate gates.

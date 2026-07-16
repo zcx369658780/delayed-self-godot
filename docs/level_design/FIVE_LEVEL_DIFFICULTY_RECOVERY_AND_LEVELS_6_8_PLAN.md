@@ -1,7 +1,7 @@
 # Five-level difficulty recovery and Levels 6–8 plan
 
-- Status: Level 6 is `INTERNAL_PLAYABLE_PENDING_GPT_REVIEW`; uncreated Levels 7–8 remain `CONCEPT / UNVERIFIED_DESIGN_TARGET`.
-- Frozen authority: [`simulation_v1`](../game_design/GAMEPLAY_SIMULATION_CONTRACT_CURRENT.md), `level_v1`, and the five accepted formal levels.
+- Status: Level 6 is `GPT_ACCEPTED_INTERNAL_PLAYABLE`; uncreated Levels 7–8 remain `CONCEPT / UNVERIFIED_DESIGN_TARGET`.
+- Frozen authority: [`simulation_v1`](../game_design/GAMEPLAY_SIMULATION_CONTRACT_CURRENT.md), `level_v1`, and the six accepted formal levels.
 - Human evidence: authenticated owner sequence review, `NOT_FRESH_NOT_BLIND_OWNER_SEQUENCE_REVIEW`.
 - Rule: a solver witness proves machine reachability, not difficulty, clarity, necessity, or fun.
 
@@ -65,7 +65,7 @@ Times are review targets, not promises or inferred owner data. If fresh players 
 
 ## Level 6 implementation — `staggered_doors`
 
-- Status: `INTERNAL_PLAYABLE_PENDING_GPT_REVIEW`; not fresh-player reviewed or candidate accepted.
+- Status: `GPT_ACCEPTED_INTERNAL_PLAYABLE`; not fresh-player reviewed or candidate accepted.
 - Role: first meaningful rise; one delay-3 Echo creates two separate opening windows for two Doors.
 - Implemented structure: one shared-spawn ECHO `d=3`; two necessary Plates; two unavoidable Doors with distinct one-Plate reference sets; one player-only EXIT; 9×7 folded route with no terrain bypass.
 - Mental model: record a route whose replay presses Plate A and later Plate B while YOU chooses the correct traversal windows. Door state remains combinational and next-turn.
