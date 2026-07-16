@@ -1,20 +1,20 @@
 # Codex active task (CURRENT)
 
-- Status: `IMPLEMENTED_PENDING_GPT_REVIEW`
-- Task: `tasks/0011R_physical_window_fill_scaling_and_centering_repair.md`
-- Gate: `IMPLEMENTATION / FOCUSED PRESENTATION REPAIR`
-- Starting HEAD and `origin/main`: `9bac777f27c0d42be9b801ff8ce97c611900ab52`
-- Commit policy: one implementation/documentation commit, message `fix: scale and center Delayed Self window content`
+- Status: `OWNER_RETEST_RECORDED_PENDING_GPT_REVIEW`
+- Task: `tasks/0011RVE_bounded_cleanup_standalone_client_retest_and_owner_review_completion.md`
+- Gate: `DIAGNOSTIC + HUMAN EVIDENCE / WINDOW SURFACE DISCRIMINATION`
+- Starting HEAD and `origin/main`: `ec46bf9ec4f5b545cd97a752d2a9ed0e0fc22725`
+- Commit policy: one documentation-only commit, message `docs: complete Delayed Self standalone window owner retest`
 - Push policy: one normal push after fetch and remote-drift check
 
 ## Scope
 
-Repair the physical-window/logical-canvas mismatch while retaining the exact 960×540 logical presentation, all accepted gameplay authorities, and the existing board/HUD composition.
+Record bounded cleanup of Godot-generated changes and discriminate the embedded preview from a separately launched standalone native game window without changing implementation.
 
 ## Completion state
 
-The root cause was four invalid double-prefixed display/window keys. Correct Godot 4.7 keys now enable built-in uniform `canvas_items` keep-aspect scaling; exact 16:9 clients fill, wide/tall clients center with symmetric black bars, and all routes use the same AppRoot host policy. Resize preserves state, history, canonical key, Help, route, and input order. Final regression is `314 assertions/9 vectors` with all seven markers and unchanged formal hashes, metrics, controls, routes, unlock results, and simulation semantics.
+The initial `project.godot` rewrite and 24 untracked `.gd.uid` files were preserved externally and cleaned only through authorized exact paths. The standalone native client fills/scales correctly, uses natural symmetric bars for non-16:9 shapes, and preserves route/state/input. The earlier small centered presentation was embedded-preview-only. Selected branch: `EMBEDDED_PREVIEW_ONLY_NOT_PRODUCT_WINDOW_BLOCKER`; findings P0=0/P1=0/P2=0/P3=0. Post-close worktree remained clean with no second generated-file wave.
 
 ## Remaining uncertainties
 
-GPT adjudication and the required short authenticated-owner window-fill retest remain pending. This is implementation evidence, not closure of the owner P2 or owner approval. Licensed assets/fonts, Level 6, fresh/independent review, final art/accessibility, audio, narrative, Gate, settings/save, complete flow, localization, export, release, and submission remain separately gated.
+GPT final adjudication remains pending. The owner agrees to proceed toward difficult Level 6, but this review does not authorize it. Licensed assets/fonts, Level 6, fresh/independent review, final art/accessibility, audio, narrative, Gate, settings/save, complete flow, localization, export, release, and submission remain separately gated.

@@ -5,7 +5,7 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0011R`](../tasks/0011R_physical_window_fill_scaling_and_centering_repair.md) — current physical-window fill repair authorization
+4. [`Task 0011RVE`](../tasks/0011RVE_bounded_cleanup_standalone_client_retest_and_owner_review_completion.md) — current bounded cleanup and standalone owner-retest completion authorization
 5. [`DEVELOPMENT_PLAN_CURRENT.md`](DEVELOPMENT_PLAN_CURRENT.md) — milestone spine and near-term gates
 6. [`HANDOFF_MASTER_CURRENT.md`](HANDOFF_MASTER_CURRENT.md) — current continuation point
 7. [`project_memory.md`](project_memory.md) — durable decisions
@@ -88,3 +88,8 @@
 - [`Task 0011V owner presentation review report`](reports/0011V_OWNER_PRESENTATION_REVIEW_REPORT.md)
 - [`Task 0011V GPT final acceptance`](reports/0011V_GPT_FINAL_ACCEPTANCE.md)
 - [`Task 0011R physical-window fill repair report`](reports/0011R_PHYSICAL_WINDOW_FILL_REPAIR_REPORT.md)
+- [`Task 0011R GPT final acceptance`](reports/0011R_GPT_FINAL_ACCEPTANCE.md)
+- [`Task 0011RV baseline-blocker adjudication`](reports/0011RV_GPT_BASELINE_BLOCKER_ADJUDICATION.md)
+- [`Task 0011RV material-P2 and dirty-worktree adjudication`](reports/0011RV_GPT_P2_AND_DIRTY_WORKTREE_ADJUDICATION.md)
+- [`Task 0011RV owner standalone window-fill retest`](reviews/0011RV_OWNER_WINDOW_FILL_RETEST.md)
+- [`Task 0011RV owner standalone window-fill retest report`](reports/0011RV_OWNER_WINDOW_FILL_RETEST_REPORT.md)

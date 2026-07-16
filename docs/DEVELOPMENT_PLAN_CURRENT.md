@@ -22,12 +22,13 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0010 presentation/difficulty/production recovery planning (GPT accepted)
 → 0011 primitive board/HUD and Door-feedback recovery (GPT accepted)
 → 0011V owner presentation review (GPT accepted; focused repair required)
-→ 0011R physical-window fill repair (implemented, pending GPT review)
+→ 0011R physical-window fill repair (GPT accepted pending owner retest)
+→ 0011RV standalone owner window-fill retest (recorded, pending GPT final adjudication)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
 
-Tasks 0000–0008, Task 0009AR, Task 0009AV, Task 0010, Task 0011, and Task 0011V are GPT accepted with recorded observations/findings. Task 0009A stopped cleanly when strict literal-WAIT relevance was not established; WAIT remains deferred research, not rejected. Task 0011R corrects the physical-window scaling/centering defect while retaining 960×540 logical layout and all gameplay authorities; it is implemented pending GPT review. The recommended next gate after acceptance is a short authenticated-owner window-fill retest. If that closes the P2 without P0/P1, the next content task is the separately gated difficult Level 6 `staggered_doors`. A qualifying fresh/independent review remains mandatory before candidate acceptance.
+Tasks 0000–0008, Task 0009AR, Task 0009AV, Task 0010, Task 0011, Task 0011V, and Task 0011R are GPT accepted with recorded observations/findings. Task 0009A stopped cleanly when strict literal-WAIT relevance was not established; WAIT remains deferred research, not rejected. Task 0011RV confirms in a standalone native client that 16:9 fills, non-16:9 bars are symmetric, all tested routes scale consistently, and resize preserves state/input. The earlier small centered presentation was embedded-preview-only; findings are P0=0/P1=0/P2=0/P3=0. Pending GPT final adjudication, the next recommended content task is the separately gated difficult Level 6 `staggered_doors`. A qualifying fresh/independent review remains mandatory before candidate acceptance.
 
 ## Milestone spine
 
