@@ -2,7 +2,8 @@
 
 - Status: Level 6 is `GPT_ACCEPTED_INTERNAL_PLAYABLE`; uncreated Levels 7–8 remain `CONCEPT / UNVERIFIED_DESIGN_TARGET`.
 - Frozen authority: [`simulation_v1`](../game_design/GAMEPLAY_SIMULATION_CONTRACT_CURRENT.md), `level_v1`, and the six accepted formal levels.
-- Human evidence: authenticated owner sequence review, `NOT_FRESH_NOT_BLIND_OWNER_SEQUENCE_REVIEW`.
+- Human evidence: Task 0013B `AUTHENTICATED_OWNER_NOT_FRESH_NOT_INDEPENDENT_LEVEL_6_REVIEW`; P0=0/P1=0/P2=3/P3=1.
+- Review constraint: the owner is the only available playtester. Do not seek or require a third party unless the owner explicitly reverses this decision. Fresh/independent evidence is unavailable and not claimed; the gap is a disclosed residual limitation, not an ordinary internal-development blocker.
 - Rule: a solver witness proves machine reachability, not difficulty, clarity, necessity, or fun.
 
 ## Recovery objective
@@ -44,7 +45,7 @@ No single metric is sufficient. `L*=20` can be a long corridor; `N*=1` can be a 
 | Level | Accepted machine evidence | Intended lesson | Owner observation | Recovery disposition |
 |---|---|---|---|---|
 | 1 `tutorial_reach_exit` | `L*=3`, `N*=3 EXACT`, visited 6, frontier 2 | YOU, movement, EXIT, restart | completed unassisted; sequence overall too easy | keep unchanged as a deliberately short tutorial |
-| 2 `tutorial_echo_bridge` | `L*=9`, `N*=12 EXACT`, visited 1,975, frontier 509; no-Echo complete unsolved, 10 states | delayed ECHO holds Plate for YOU | completed unassisted; Timeline/Help not needed | keep unchanged as guided tutorial; later fresh review decides copy reduction |
+| 2 `tutorial_echo_bridge` | `L*=9`, `N*=12 EXACT`, visited 1,975, frontier 509; no-Echo complete unsolved, 10 states | delayed ECHO holds Plate for YOU | completed unassisted; Timeline/Help not needed | keep unchanged as guided tutorial; any later owner review remains not fresh/independent |
 | 3 `vertical_slice_delay_3` | `L*=9`, `N*=31 EXACT`, visited 1,318, frontier 393; Echo-isolated complete unsolved, 1,006 states | independent delay-3 cooperation | completed unassisted; no meaningful rise | retain as short onboarding application; `PROPOSAL_ONLY`: reposition earlier in pacing rather than alter formal data |
 | 4 `door_one_turn_late` | `L*=9`, `N*=7 EXACT`, visited 291, frontier 116; no-Echo complete unsolved, 5 states | open result applies to next submitted turn | completed unassisted; timing visually hard to observe | preserve formal level; repair presentation first; do not rebalance geometry until post-feedback review |
 | 5 `two_keys_one_door` | `L*=12`, `N*=1 EXACT`, visited 1,260, frontier 225; no-Echo and Plate-relocation variants complete unsolved | two distinct Plates open one AND Door | completed unassisted; AND causality clear; still too easy | keep as a short checkpoint; `PROPOSAL_ONLY`: let Level 6, not a rewrite, deliver the first substantial rise |
@@ -57,15 +58,15 @@ All accepted hashes, witnesses, metrics, and status-ladder positions remain unch
 |---|---|---|
 | Levels 1–2 | tutorials | 0.5–3 minutes each; learn vocabulary without route guidance |
 | Levels 3–5 | onboarding checks | 1–4 minutes each; one clear reasoning step; forgiving recovery |
-| Level 6 | first core challenge | 3–7 minutes; plan two causally distinct Door windows |
+| Level 6 | first core challenge | owner observed approximately 1 minute and two restarts; plan two causally distinct Door windows |
 | Level 7 | temporal planning challenge | 5–10 minutes; use multi-delay Timeline to predict alignment |
 | Level 8 | compact finale candidate | 7–15 minutes; combine accepted rules and explain the whole chain |
 
-Times are review targets, not promises or inferred owner data. If fresh players materially exceed them because state is unclear, repair observability before simplifying logic.
+Times are review targets, not promises or inferred owner data. Under the owner-only constraint, compare future supplied owner timings cautiously and repair observability before simplifying logic when delay is caused by unclear state.
 
 ## Level 6 implementation — `staggered_doors`
 
-- Status: `GPT_ACCEPTED_INTERNAL_PLAYABLE`; not fresh-player reviewed or candidate accepted.
+- Status: `GPT_ACCEPTED_INTERNAL_PLAYABLE`; authenticated-owner review recorded, not fresh-player reviewed or candidate accepted.
 - Role: first meaningful rise; one delay-3 Echo creates two separate opening windows for two Doors.
 - Implemented structure: one shared-spawn ECHO `d=3`; two necessary Plates; two unavoidable Doors with distinct one-Plate reference sets; one player-only EXIT; 9×7 folded route with no terrain bypass.
 - Mental model: record a route whose replay presses Plate A and later Plate B while YOU chooses the correct traversal windows. Door state remains combinational and next-turn.
@@ -80,7 +81,7 @@ Target and exact results:
 | Visited states | target 2,000–40,000; actual 6,772 |
 | Max frontier | actual 1,179 |
 | Meaningful branches | 3 measured; recoverable penalties +2, +7, +2 |
-| Human | 3–7 minutes, 0–3 restarts in later fresh review |
+| Human | Task 0013B owner result: approximately 1 minute, 2 restarts; not fresh/independent |
 
 Completed machine proof package:
 
@@ -93,7 +94,7 @@ Completed machine proof package:
 
 Strict load, solve, replay, exact restart, all-shortest Door event enumeration, no-ECHO complete-unsolved, both Plate-isolation complete-unsolved, Door removal, dependency replacement, EXIT, articulation/bypass, three meaningful decisions, reusable Gameplay, progression, and primitive capture checks passed. Solver limits were depth 64, states 500,000, 30 seconds, count cap 1,000,000. Formal SHA-256 is `3f14c19b50775e36dd5b52664798381cf1292b0a30b377641c03435f45696bc8`.
 
-Timeline/Help remains contextual and Help remains modal/zero-turn. Later fresh review must establish whether it supports prediction; no human difficulty or fun claim is made from machine evidence.
+Task 0013B owner evidence records unassisted completion at visible Turn 16 in approximately 1 minute with two restarts. The owner understood delay-3 replay and both separate Door events, judged the level harder than Level 5, recommended preserving it, and supported a more complex Level 7. The owner also reported that same-colored switches/Doors made order harder to remember, Timeline was unintuitive and unhelpful, and text Help was hard to understand. These are P2 planning inputs, not implementation authority. The review is not fresh or independent and does not establish population difficulty or fun.
 
 ## Level 7 concept — `two_echo_convergence`
 
@@ -123,7 +124,7 @@ Mandatory proof package:
 5. no route or single-actor bypass; ECHO on EXIT remains non-terminal;
 6. bounded no-Timeline human comparison only if ethically practical; no route hints.
 
-Timeline/Help test: Timeline is visible from entry, points to both next replay slots, and can be expanded through Help. A reviewer must correctly predict both next ECHO actions at least once. If the level can be solved reliably without reading either delay, it fails its teaching role even when solvable. Stop if search exceeds 500,000 states/20 seconds without a justified limit increase, visual overlap makes actors ambiguous, or working-memory demand comes mainly from unreadable UI.
+Timeline/Help test: Task 0013B found current Timeline unintuitive and less useful than direct reasoning. Level 7 planning must explicitly decide whether to redesign, deemphasize, or remove Timeline from the teaching goal before implementation; it must not assume players will use reverse-counting. Any later authenticated-owner review can record prediction evidence but remains not fresh or independent. Stop if search exceeds 500,000 states/20 seconds without a justified limit increase, visual overlap makes actors ambiguous, or working-memory demand comes mainly from unreadable UI.
 
 ## Level 8 concept — `signal_convergence`
 
@@ -157,12 +158,12 @@ Timeline/Help test: the default HUD emphasizes only the replay slot relevant to 
 
 ## Rebalance policy for Levels 3–5
 
-Any rebalance remains `PROPOSAL_ONLY` until Levels 6–8 and a fresh sequence review exist.
+Any rebalance remains `PROPOSAL_ONLY` until separately authorized planning and owner evidence justify it; fresh/independent review is unavailable under the durable owner constraint.
 
 1. Prefer sequencing and new follow-up challenges over editing accepted formal files.
 2. Repair Level 4 feedback before changing its geometry; otherwise difficulty and observability are confounded.
 3. Preserve Level 5's clear AND demonstration as a success checkpoint.
-4. Consider a Level 3–5 formal edit only if two fresh reviewers independently report repetition after presentation recovery.
+4. Do not use an unattainable third-party-review count as a trigger. Any Level 3–5 formal edit requires a separately authorized owner-evidence and design-adjudication task.
 5. Any edit returns that level to schema, solver, replay, necessity, runtime, and human gates and requires explicit task authority.
 
 ## Content-production acceptance gate
@@ -190,7 +191,8 @@ Quantitative gate:
 
 Human gate:
 
-- at least one qualifying fresh reviewer before `FRESH_PLAYER_REVIEWED` and an independent complete-flow review before `CANDIDATE_ACCEPTED`;
+- `FRESH_PLAYER_REVIEWED` remains unavailable under the owner-only constraint and must not be claimed; do not seek or require a third party unless the owner reverses the decision;
+- use explicitly classified authenticated-owner evidence for internal planning while disclosing the missing independent evidence at later candidate or release adjudication;
 - no movement sequence, next move, witness, or operational hint during the attempt;
 - record exposure status, assistance, direct comprehension answers, P0–P3, and only supplied timing/restart/rating data;
 - any P0/P1 returns the level to repair; repeated P2 difficulty/observability findings return it to concept or presentation iteration.
