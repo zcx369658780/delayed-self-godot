@@ -27,12 +27,13 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0012 difficult Level 6 `staggered_doors` (GPT accepted at INTERNAL_PLAYABLE)
 → 0012S project-source synchronization and session handoff checkpoint
 → 0013/0013A corrected baseline and owner-only review-path adjudication
-→ 0013B authenticated-owner Level 6 review (recorded; pending GPT adjudication)
+→ 0013B authenticated-owner Level 6 review (GPT accepted internal evidence)
+→ 0014 Level 7 two-ECHO convergence planning (ready for GPT review)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
 
-Tasks 0000–0008, Task 0009AR, Task 0009AV, Task 0010, Task 0011, Task 0011V, Task 0011R, Task 0011RV, and Task 0012 are GPT accepted with recorded boundaries. Task 0009A stopped cleanly when strict literal-WAIT relevance was not established; WAIT remains deferred research. Task 0012 adds the first core challenge without runtime/schema change: `L*=15`, `N*=4 EXACT`, visited 6,772, frontier 1,179, two distinct necessary Door windows, and complete no-ECHO/Plate controls. Task 0013B owner evidence records a meaningful Level 5-to-6 rise with P0=0/P1=0 and recommends preserving Level 6. It remains not fresh and not independent. The owner is the only available playtester, so third-party review must not be sought or required unless the owner reverses that decision; missing independent evidence is a disclosed residual limitation, not an ordinary internal-development blocker. GPT adjudication and a separately bounded Level 7 planning task are recommended; Level 7 implementation remains separately gated.
+Tasks 0000–0008, Task 0009AR, Task 0009AV, Task 0010, Task 0011, Task 0011V, Task 0011R, Task 0011RV, Task 0012, and Task 0013B are GPT accepted with recorded boundaries. Task 0009A stopped cleanly when strict literal-WAIT relevance was not established; WAIT remains deferred research. Task 0014 compares three schema-v1 Level 7 candidates and selects `two_echo_convergence`: delay-2/delay-4 ECHOs align on two Plates to open one A+B Door. Timeline is not a teaching goal; Help remains optional; A/B and E2/E4 roles require redundant non-color cues. The plan is pending GPT adjudication and does not authorize implementation. The owner-only playtest constraint remains durable; Level 8 and all production/release surfaces remain separately gated.
 
 ## Milestone spine
 
@@ -43,7 +44,7 @@ Tasks 0000–0008, Task 0009AR, Task 0009AV, Task 0010, Task 0011, Task 0011V, T
 | M2 System skeleton | 2026-07-20–07-24 | Data-driven levels, core flow, four validated levels |
 | M3 Content production | 2026-07-25–07-31 | Eight candidate levels and first coherent presentation |
 | M4 Complete flow | 2026-08-01–08-05 | Menu-to-ending flow, settings, save, license page, export |
-| M5 Candidate | 2026-08-06–08-10 | P0/P1 closure and independent review candidate |
+| M5 Candidate | 2026-08-06–08-10 | P0/P1 closure and candidate-evidence adjudication with the owner-only limitation disclosed |
 | M6 Polish and final submission | 2026-08-11–09-06 | Final audit, stable package, separately authorized submission |
 | M7 Video | by 2026-09-10 | Gameplay/theme presentation |
 

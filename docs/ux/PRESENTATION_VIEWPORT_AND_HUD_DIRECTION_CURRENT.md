@@ -153,6 +153,26 @@ The contextual threshold is presentation-only and reads validated level/catalog 
 
 Keyboard discoverability remains through a small persistent `H Help` affordance, the initial controls card, and Pause. Future multi-delay levels automatically qualify for Timeline visibility because they have multiple ECHOs/distinct delays. Accessibility requires readable action text in Help, non-color slot emphasis, stable oldest→newest ordering, focus return after close, and full keyboard operation.
 
+## Task 0014 Level 7 disposition
+
+For the selected prospective Level 7 `two_echo_convergence`, the primary verdict is:
+
+```text
+TIMELINE_REMOVED_FROM_LEVEL_7_TEACHING_GOAL
+```
+
+The current contextual compact Timeline may remain visible as an inherited, contract-derived optional status surface, but Level 7 cannot require reverse-counting or Timeline use for completion or owner-review success. No Timeline indexing, compact/expanded layout, or disclosure change is authorized by Task 0014. Redesign requires a separate task and evidence that board-first reasoning fails after actor/dependency legibility is correct.
+
+Help verdict:
+
+```text
+HELP_CONTEXTUAL_OPTIONAL
+```
+
+Help may provide a zero-turn visual/text legend for controls, E2/E4 delay identities, A/B shapes, `A+B`, and next-turn Door behavior. It cannot disclose a route, movement sequence, branch, or exact synchronization count and cannot compensate for unreadable board state.
+
+Level 7 dependency presentation must combine A/B labels with distinct shapes, E2/E4 badges with distinct outlines, and supplementary color. Overlapping ECHOs preserve both badges/outlines. The cues must remain legible at 960×540, in grayscale, in static screenshots, and during motion. The later owner review is `AUTHENTICATED_OWNER_NOT_FRESH_NOT_INDEPENDENT_LEVEL_7_REVIEW`; do not seek or require a third party under `FRESH_INDEPENDENT_REVIEW_UNAVAILABLE_BY_OWNER_CONSTRAINT`.
+
 ## Likely later implementation paths
 
 - `scenes/vertical_slice/vertical_slice.tscn`
@@ -182,7 +202,7 @@ Visual/human:
 3. closed/open Door is distinguishable in grayscale and without audio;
 4. the Level 4 open-result capture visibly says or symbolizes “usable on next input” without giving a movement route;
 5. the owner repeats the five-level sequence and reports whether effective board size improved;
-6. a later fresh/independent review evaluates discoverability and information density before candidate acceptance.
+6. later authenticated-owner evidence evaluates discoverability and information density under the owner-only constraint; missing fresh/independent evidence remains disclosed and is never claimed.
 
 ## Stop and rollback conditions
 

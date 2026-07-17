@@ -1,7 +1,7 @@
 # Initial level roadmap and validation matrix (CURRENT)
 
 - Tracked implemented spine: exactly 6 formal levels including tutorials
-- Remaining sequence: Levels 7–8 remain uncreated schema-v1 concepts; final candidate count remains a later GPT scope decision
+- Remaining sequence: Level 7 has one selected planning target pending GPT review; Level 8 remains an uncreated schema-v1 concept; final candidate count remains a later GPT scope decision
 - Scope: `level_v1` mechanics only; all uncreated levels remain concepts, not solvability claims
 - Goal predicate for every level: current player reaches EXIT
 
@@ -14,6 +14,7 @@
 - `DEFERRED_VALIDATION_RESEARCH`: `wait_for_the_echo` is not implemented; strict literal-WAIT relevance remains unresolved without any claim that WAIT is impossible or redundant.
 - `UNVERIFIED_DESIGN_TARGET`: remaining uncreated working IDs, layouts, difficulty, and target bands.
 - `PLANNING_RECOMMENDATION_FOR_GPT`: sequence, teaching role, validation variants, HUD modes, and scope-cut order.
+- `PLANNING_SELECTED_PENDING_GPT_REVIEW`: Task 0014 selects one prospective Level 7 structure without creating or validating formal content.
 - `DEFERRED_POST_MVP`: route-trigger goals, alternate actor goals, latches, switches, hazards, anchors, teleporters, collectibles, and branching endings.
 
 ## Current candidate sequence
@@ -28,7 +29,7 @@
 | 4 | `door_one_turn_late` / 门晚一回合 | door state committed now affects entry next turn; blocked history remains recorded | one, d=2 | 1 / 1 | compact folded corridor forces closed-snapshot blocking, then open-snapshot entry | not required | required | easy | actual `L*=9` | actual `N*=7 (EXACT)` | `STANDARD_COMPACT` | preserve |
 | 5 | `two_keys_one_door` / 两把时间钥匙 | combinational AND door with simultaneous plate occupancy | one, d=3 | 2 / 1 AND | ECHO and YOU occupy distinct Plates together, then YOU enters on the committed next turn | not required | required | medium | actual `L*=12` | actual `N*=1 (EXACT)` | `STANDARD_COMPACT` | preserve |
 | 6 | `staggered_doors` / 错开的门 | two doors with different plate sets; plan a dependency chain | one, d=3 | 2 / 2 with distinct one-Plate reference sets | one recorded route creates two distinct ECHO-held windows; YOU crosses each on the next input | not required; accepted witness has none | required and machine-proven | first core challenge; GPT accepted `INTERNAL_PLAYABLE`; owner review recorded | actual `L*=15` | actual `N*=4 (EXACT)` | `STANDARD_COMPACT` | preserve; owner recommends harder Level 7 |
-| 7 | `two_echo_convergence` / 两条时间线 | combine two delays without new mechanics | two, d=2 and d=4 | 2 / 1 AND | synchronize two ECHOs on separate plates so YOU crosses; overlapping actors remains legal | required target if solver supports | both echoes required target | medium-hard finale | 16–28 unverified | few target | `STANDARD_COMPACT` multi-delay timeline | cut first |
+| 7 | `two_echo_convergence` / 双影汇流 | combine two delays through one readable simultaneous convergence | two, d=2 and d=4 | 2 / 1 A+B AND | align both ECHOs on distinct Plates, observe committed open result, then cross from the open snapshot | not a teaching goal | both ECHOs individually necessary target | temporal planning challenge; selected plan pending GPT review | 17–25 unverified | 1–8 `EXACT` target | `STANDARD_COMPACT`; Timeline not a teaching goal; A/B and E2/E4 redundant cues | preserve if proof passes |
 
 Actual Task 0009AR and Task 0012 metrics are machine evidence, not best-turn thresholds. Remaining target bands guide authoring limits only and must not enter formal data until solver validation. Task 0012 recorded 6,772 visited states, frontier 1,179, both Door-window traces, complete no-ECHO/Plate-isolation controls, and SHA-256 `3f14c19b50775e36dd5b52664798381cf1292b0a30b377641c03435f45696bc8`.
 
@@ -46,7 +47,7 @@ Actual Task 0009AR and Task 0012 metrics are machine evidence, not best-turn thr
 | 4 | accepted Task 0009AR solve/replay, `L*=9`, `N*=7 (EXACT)`, 291 visited/frontier 116, exact two-transition timing trace | no-Echo complete unsolved with 5 states | later five-level sequence reviewer explains “opens now, enter next turn” | machine audit found no corridor bypass |
 | 5 | accepted Task 0009AR solve/replay, `L*=12`, `N*=1 (EXACT)`, 1,260 visited/frontier 225, simultaneous AND/open-entry trace | no-Echo 8-state complete unsolved; each Plate relocation 1,000-state complete unsolved; one-Plate controls solve | later reviewer distinguishes both Plates and next-turn traversal | distinct Plate positions and no-Echo search prevent one-actor/overlap bypass |
 | 6 | accepted solve/replay; `L*=15`, `N*=4 EXACT`, 6,772 visited/frontier 1,179; both open-snapshot traces | no-ECHO and both Plate-isolation controls complete unsolved; Door/dependency controls change exact structure | Task 0013B owner completed unassisted, distinguished both events, reported two restarts and same-color order friction; not fresh/independent | machine audit proves neither Door is bypassable; owner review found no bypass |
-| 7 | solve/replay; multi-delay action traces; `N*` status; frontier/time/state limits; WAIT evidence if retained | remove each ECHO in turn, equalize the delays, and relocate each plate | authenticated-owner review may record comprehension without a fresh/independent claim; Timeline usefulness must not be assumed | can one ECHO or actor overlap trivialize convergence? |
+| 7 | strict load/catalog; solve/replay/restart/hash; `N*=1–8 EXACT`; multi-delay/open-snapshot traces; four decision audits; prior regression | remove each ECHO; no-ECHO; isolate each Plate; A-only/B-only dependencies; equalize to 2/2 and 4/4; relocate Plates; remove Door | `AUTHENTICATED_OWNER_NOT_FRESH_NOT_INDEPENDENT_LEVEL_7_REVIEW`; test E2/E4 and A/B comprehension without requiring Timeline | can YOU, one ECHO, overlap, a side route, or a wide window trivialize convergence? |
 
 ## Variety within schema v1
 

@@ -5,7 +5,7 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0013B`](../tasks/0013B_owner_targeted_level_6_review_and_review_constraint_sync.md) — completed authenticated-owner Level 6 review and durable review-constraint synchronization
+4. [`Task 0014`](../tasks/0014_level_7_two_echo_convergence_planning.md) — completed Level 7 two-ECHO convergence planning gate
 5. [`DEVELOPMENT_PLAN_CURRENT.md`](DEVELOPMENT_PLAN_CURRENT.md) — milestone spine and near-term gates
 6. [`HANDOFF_MASTER_CURRENT.md`](HANDOFF_MASTER_CURRENT.md) — current continuation point
 7. [`project_memory.md`](project_memory.md) — durable decisions
@@ -99,3 +99,6 @@
 - [`Task 0012S project-source synchronization report`](reports/0012S_PROJECT_SOURCE_SYNC_REPORT.md)
 - [`Task 0013B owner-targeted Level 6 review`](reviews/0013B_OWNER_TARGETED_LEVEL_6_REVIEW.md)
 - [`Task 0013B owner-targeted Level 6 review report`](reports/0013B_OWNER_TARGETED_LEVEL_6_REVIEW_REPORT.md)
+- [`Task 0013B GPT final acceptance`](reports/0013B_GPT_FINAL_ACCEPTANCE.md)
+- [`Level 7 two-ECHO convergence plan`](level_design/LEVEL_7_TWO_ECHO_CONVERGENCE_PLAN_CURRENT.md)
+- [`Task 0014 Level 7 planning report`](reports/0014_LEVEL_7_TWO_ECHO_CONVERGENCE_PLANNING_REPORT.md)

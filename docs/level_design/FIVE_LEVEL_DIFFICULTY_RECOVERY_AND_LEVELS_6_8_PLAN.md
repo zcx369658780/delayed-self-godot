@@ -96,35 +96,31 @@ Strict load, solve, replay, exact restart, all-shortest Door event enumeration, 
 
 Task 0013B owner evidence records unassisted completion at visible Turn 16 in approximately 1 minute with two restarts. The owner understood delay-3 replay and both separate Door events, judged the level harder than Level 5, recommended preserving it, and supported a more complex Level 7. The owner also reported that same-colored switches/Doors made order harder to remember, Timeline was unintuitive and unhelpful, and text Help was hard to understand. These are P2 planning inputs, not implementation authority. The review is not fresh or independent and does not establish population difficulty or fun.
 
-## Level 7 concept — `two_echo_convergence`
+## Level 7 selected implementation target — `two_echo_convergence`
 
-- Status: `CONCEPT / PROPOSAL_ONLY`.
-- Role: make the compact Timeline operationally relevant.
-- Proposed structure: two ECHOs with delays 2 and 4; two distinct Plates; one combinational AND Door; one player-only EXIT.
-- Mental model: one input history feeds two replays at different offsets; align both ECHOs on separate Plates, then traverse from an already-open snapshot.
-- Geometry difference: two approach loops with distinct path lengths converging on one visible AND gate.
+- Status: `PLANNING_SELECTED_PENDING_GPT_REVIEW`; no formal level or validation exists.
+- Display title: `Two Echo Convergence / 双影汇流`.
+- Role: introduce two distinct replay offsets through one readable simultaneous convergence, while preserving Level 8's mixed two-stage synthesis.
+- Frozen structure: shared-spawn ECHOs `d=2` and `d=4`; exactly two Plates A/B; exactly one A+B combinational Door; one player-only EXIT; exactly 9×7 figure-eight/recovery topology.
+- Mental model: one history feeds two replays at different offsets; place the two ECHOs on A and B together, observe the committed open result, then cross from the next open snapshot.
+- Meaningful burden: at least four non-padding decisions and at least three audited recoverable alternatives; WAIT is not a teaching goal.
 
-Target bands:
+Frozen prospective bands:
 
 | Metric | Target |
 |---|---:|
 | `L*` | 17–25 |
-| `N*` | 1–8, exact if resource limits permit |
+| `N*` | 1–8 `EXACT` |
 | Visited states | 8,000–150,000 |
 | Max frontier | 1,000–25,000 |
 | Synchronization | at least one required window of 1–2 turns |
-| Human | 5–10 minutes, prediction demonstrated before completion |
+| Owner review | `OWNER_REVIEW_TARGET_NOT_FRESH_NOT_INDEPENDENT`: 3–8 minutes and 1–5 restarts, target only |
 
-Mandatory proof package:
+Mandatory proof includes strict load/catalog, solve/replay/restart/hash, individual ECHO isolation, no-ECHO/player-only controls, both Plate isolation and dependency simplifications, equal-delay 2/2 and 4/4 controls, Plate relocation, Door removal/articulation, overlap, ECHO-on-EXIT, open-snapshot crossing, actor-role traces, meaningful-decision penalties, prior hashes/metrics, progression, presentation, and aggregate regression. Limit outcomes remain unverified; complete-unsolved requires finite-state exhaustion.
 
-1. both Echoes individually necessary through remove/isolate controls;
-2. each Plate dependency necessary; actor overlap cannot press both positions;
-3. equalizing the delays or relocating a Plate changes or destroys the intended synchronization proof;
-4. one solver witness replay plus a trace mapping each relevant history slot to each Echo;
-5. no route or single-actor bypass; ECHO on EXIT remains non-terminal;
-6. bounded no-Timeline human comparison only if ethically practical; no route hints.
+Product decisions are `TIMELINE_REMOVED_FROM_LEVEL_7_TEACHING_GOAL` and `HELP_CONTEXTUAL_OPTIONAL`. Level 7 must be solvable through board-state reasoning without reverse-counting. Dependency legibility requires A/B labels plus different shapes and E2/E4 badges plus different outlines; color is supplementary. Overlap must preserve both ECHO identities, grayscale readability, screenshots, motion, and 960×540 legibility.
 
-Timeline/Help test: Task 0013B found current Timeline unintuitive and less useful than direct reasoning. Level 7 planning must explicitly decide whether to redesign, deemphasize, or remove Timeline from the teaching goal before implementation; it must not assume players will use reverse-counting. Any later authenticated-owner review can record prediction evidence but remains not fresh or independent. Stop if search exceeds 500,000 states/20 seconds without a justified limit increase, visual overlap makes actors ambiguous, or working-memory demand comes mainly from unreadable UI.
+Full target freeze and rejected alternatives: [`LEVEL_7_TWO_ECHO_CONVERGENCE_PLAN_CURRENT.md`](LEVEL_7_TWO_ECHO_CONVERGENCE_PLAN_CURRENT.md).
 
 ## Level 8 concept — `signal_convergence`
 
