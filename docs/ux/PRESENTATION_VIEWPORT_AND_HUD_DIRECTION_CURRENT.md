@@ -21,6 +21,10 @@ Level 7 adds only reusable primitive cues in `scripts/gameplay/vertical_slice.gd
 
 The owner found A/B labels/shapes clear, understood E2/E4 different delays, and could distinguish overlapping actors despite crowding. The owner did not use Timeline and said reverse-counting it was harder than the puzzle. Help was opened but did not enable completion. The owner then inferred that physical ECHO spacing was invariant and that the machine-solvable level was impossible. This is a non-promotion P2 presentation/difficulty finding, not authorization to change Timeline, Help, delay, geometry, Door semantics, color, art, or animation. A separately bounded diagnostic/repair task should compare minimal ways to expose route/obstacle-induced relative-position changes before Level 8.
 
+## Task 0015D repair direction
+
+Task 0015D deterministically shows that signed and Manhattan E2/E4 spacing changes across the accepted route and that the exact owner screenshot state remains solvable. The selected later repair is a reusable transition-derived cue: identify E2/E4 moved/blocked outcomes and pulse `ECHO SPACING CHANGED` only when committed before/after positions justify it. It must remain non-route, non-solver, non-Timeline-dependent, 960×540 legible, grayscale-readable, and preserve existing badge/outline and A/B shape cues. Formal Level 7, scenes, Help, Timeline, viewport, and project settings remain unchanged under the primary plan.
+
 ## Current-state measurement
 
 ### Viewport and window behavior

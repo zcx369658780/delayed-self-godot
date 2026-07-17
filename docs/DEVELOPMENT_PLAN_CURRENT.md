@@ -30,12 +30,13 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0013B authenticated-owner Level 6 review (GPT accepted internal evidence)
 → 0014 Level 7 two-ECHO convergence planning (GPT accepted)
 → 0015 Level 7 `two_echo_convergence` implementation (GPT accepted at INTERNAL_PLAYABLE)
-→ 0015V authenticated-owner Level 7 comparison review (recorded; non-promotion, pending GPT review)
+→ 0015V authenticated-owner Level 7 comparison review (GPT adjudicated as blocking P2)
+→ 0015D false-unsolvable diagnosis and bounded repair planning (ready for GPT review)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
 
-Tasks 0000–0008, Task 0009AR, Task 0009AV, Task 0010, Task 0011, Task 0011V, Task 0011R, Task 0011RV, Task 0012, Task 0013B, Task 0014, and Task 0015 are GPT accepted with recorded boundaries. Task 0009A stopped cleanly; WAIT remains deferred research. Task 0015V records Level 6 `COMPLETED_UNASSISTED` and Level 7 `GAVE_UP`: the owner understood E2/E4 and A+B but misread relative spacing as invariant and could not recover, including after Help and later high-level assistance. P0=0/P1=0/P2=4/P3=4. Recommend GPT adjudication and a bounded Level 7 presentation/difficulty diagnostic or repair before Level 8.
+Tasks 0000–0008, Task 0009AR, Task 0009AV, Task 0010, Task 0011, Task 0011V, Task 0011R, Task 0011RV, Task 0012, Task 0013B, Task 0014, and Task 0015 are GPT accepted with recorded boundaries. Task 0009A stopped cleanly; WAIT remains deferred research. Task 0015V records Level 7 `GAVE_UP` and a blocking false-invariant P2. Task 0015D proves the accepted and owner-screenshot states remain solvable, locates the missing causal feedback, and selects a presentation-only state-derived ECHO divergence cue while preserving formal Level 7. Recommend GPT plan review and one bounded repair plus owner-only retest before Level 8.
 
 ## Milestone spine
 

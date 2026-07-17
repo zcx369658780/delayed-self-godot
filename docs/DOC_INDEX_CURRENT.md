@@ -5,7 +5,7 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0015V`](../tasks/0015V_owner_targeted_level_7_review.md) — completed authenticated-owner Level 7 comparison review pending GPT review
+4. [`Task 0015D`](../tasks/0015D_level_7_false_unsolvable_diagnostic_and_repair_planning.md) — completed false-unsolvable diagnosis and bounded repair planning pending GPT review
 5. [`DEVELOPMENT_PLAN_CURRENT.md`](DEVELOPMENT_PLAN_CURRENT.md) — milestone spine and near-term gates
 6. [`HANDOFF_MASTER_CURRENT.md`](HANDOFF_MASTER_CURRENT.md) — current continuation point
 7. [`project_memory.md`](project_memory.md) — durable decisions
@@ -29,6 +29,8 @@
 
 ## Compliance and reports
 
+- [`Level 7 false-unsolvable repair plan`](level_design/LEVEL_7_FALSE_UNSOLVABLE_REPAIR_PLAN_CURRENT.md)
+- [`Task 0015D diagnostic report`](reports/0015D_LEVEL_7_FALSE_UNSOLVABLE_DIAGNOSTIC_REPORT.md)
 - [`Task 0015 validation`](level_design/validation/TWO_ECHO_CONVERGENCE_VALIDATION.md)
 - [`Task 0015 implementation report`](reports/0015_LEVEL_7_TWO_ECHO_CONVERGENCE_IMPLEMENTATION_REPORT.md)
 - [`Task 0015 GPT final acceptance`](reports/0015_GPT_FINAL_ACCEPTANCE.md)

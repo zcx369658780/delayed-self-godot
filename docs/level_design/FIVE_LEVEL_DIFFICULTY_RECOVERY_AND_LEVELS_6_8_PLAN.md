@@ -1,6 +1,6 @@
 # Five-level difficulty recovery and Levels 6–8 plan
 
-- Status: Levels 6–7 are GPT accepted at `INTERNAL_PLAYABLE`; Task 0015V owner Level 7 evidence is non-promotion; Level 8 remains `CONCEPT / UNVERIFIED_DESIGN_TARGET`.
+- Status: Levels 6–7 are GPT accepted at `INTERNAL_PLAYABLE`; Task 0015D false-unsolvable repair planning awaits GPT review; Level 8 remains `CONCEPT / UNVERIFIED_DESIGN_TARGET`.
 - Frozen authority: [`simulation_v1`](../game_design/GAMEPLAY_SIMULATION_CONTRACT_CURRENT.md), `level_v1`, and seven accepted formal levels.
 - Human evidence: Task 0013B Level 6 P0=0/P1=0/P2=3/P3=1; Task 0015V Level 7 `GAVE_UP`, P0=0/P1=0/P2=4/P3=4.
 - Review constraint: the owner is the only available playtester. Do not seek or require a third party unless the owner explicitly reverses this decision. Fresh/independent evidence is unavailable and not claimed; the gap is a disclosed residual limitation, not an ordinary internal-development blocker.
@@ -59,7 +59,7 @@ All accepted hashes, witnesses, metrics, and status-ladder positions remain unch
 | Levels 1–2 | tutorials | 0.5–3 minutes each; learn vocabulary without route guidance |
 | Levels 3–5 | onboarding checks | 1–4 minutes each; one clear reasoning step; forgiving recovery |
 | Level 6 | first core challenge | owner observed approximately 1 minute and two restarts; plan two causally distinct Door windows |
-| Level 7 | temporal planning challenge | 5–10 minutes; use multi-delay Timeline to predict alignment |
+| Level 7 | temporal planning challenge | 5–10 minutes; infer changing multi-delay spacing from board-state transitions without requiring Timeline |
 | Level 8 | compact finale candidate | 7–15 minutes; combine accepted rules and explain the whole chain |
 
 Times are review targets, not promises or inferred owner data. Under the owner-only constraint, compare future supplied owner timings cautiously and repair observability before simplifying logic when delay is caused by unclear state.
@@ -98,7 +98,7 @@ Task 0013B owner evidence records unassisted completion at visible Turn 16 in ap
 
 ## Level 7 selected implementation target — `two_echo_convergence`
 
-- Status: `PLANNING_SELECTED_PENDING_GPT_REVIEW`; no formal level or validation exists.
+- Status: `GPT_ACCEPTED_INTERNAL_PLAYABLE`; Task 0015D presentation-only repair plan pending GPT review.
 - Display title: `Two Echo Convergence / 双影汇流`.
 - Role: introduce two distinct replay offsets through one readable simultaneous convergence, while preserving Level 8's mixed two-stage synthesis.
 - Frozen structure: shared-spawn ECHOs `d=2` and `d=4`; exactly two Plates A/B; exactly one A+B combinational Door; one player-only EXIT; exactly 9×7 figure-eight/recovery topology.
@@ -121,6 +121,8 @@ Mandatory proof includes strict load/catalog, solve/replay/restart/hash, individ
 Product decisions are `TIMELINE_REMOVED_FROM_LEVEL_7_TEACHING_GOAL` and `HELP_CONTEXTUAL_OPTIONAL`. Level 7 must be solvable through board-state reasoning without reverse-counting. Dependency legibility requires A/B labels plus different shapes and E2/E4 badges plus different outlines; color is supplementary. Overlap must preserve both ECHO identities, grayscale readability, screenshots, motion, and 960×540 legibility.
 
 Full target freeze and rejected alternatives: [`LEVEL_7_TWO_ECHO_CONVERGENCE_PLAN_CURRENT.md`](LEVEL_7_TWO_ECHO_CONVERGENCE_PLAN_CURRENT.md).
+
+Task 0015D proves the formal level and owner screenshot state remain solvable but identifies an observable false-invariant gap. The selected primary repair is [`TRANSITION_DERIVED_ECHO_DIVERGENCE_FEEDBACK`](LEVEL_7_FALSE_UNSOLVABLE_REPAIR_PLAN_CURRENT.md): preserve the formal hash and exact metrics, then expose moved/blocked outcomes and spacing change from committed presentation transitions. Geometry-only early divergence is the single fallback after a failed primary owner retest and would require complete formal revalidation. Level 8 remains blocked until repair and owner-only retest.
 
 ## Level 8 concept — `signal_convergence`
 
