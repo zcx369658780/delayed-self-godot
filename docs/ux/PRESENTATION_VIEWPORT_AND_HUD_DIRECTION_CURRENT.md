@@ -25,6 +25,10 @@ The owner found A/B labels/shapes clear, understood E2/E4 different delays, and 
 
 Task 0015D deterministically shows that signed and Manhattan E2/E4 spacing changes across the accepted route and that the exact owner screenshot state remains solvable. The selected later repair is a reusable transition-derived cue: identify E2/E4 moved/blocked outcomes and pulse `ECHO SPACING CHANGED` only when committed before/after positions justify it. It must remain non-route, non-solver, non-Timeline-dependent, 960×540 legible, grayscale-readable, and preserve existing badge/outline and A/B shape cues. Formal Level 7, scenes, Help, Timeline, viewport, and project settings remain unchanged under the primary plan.
 
+## Task 0015R implementation fact
+
+Task 0015R implements the accepted cue in reusable Gameplay. It consumes returned before/after ECHO positions and actual replay actions, classifies `MOVED/BLOCKED/WAITED`, orders actors by delay/ID, and shows `ECHO SPACING CHANGED` only when signed or Manhattan spacing changes. The compact badge occupies `Rect2(24, 66, 540, 18)`, between the goal strip and board; endpoint rings/symbols are drawn beneath actors. Stable spacing, zero/single ECHO, A+B convergence, restart, load, and completion remain cue-free. Ten native 960×540 captures, reduced-motion, grayscale, and overlap audits pass without changing scenes, Help, Timeline, viewport, formal data, or project settings. Owner comprehension remains pending a separate retest.
+
 ## Current-state measurement
 
 ### Viewport and window behavior

@@ -1,6 +1,6 @@
 # Five-level difficulty recovery and Levels 6–8 plan
 
-- Status: Levels 6–7 are GPT accepted at `INTERNAL_PLAYABLE`; Task 0015D false-unsolvable repair planning awaits GPT review; Level 8 remains `CONCEPT / UNVERIFIED_DESIGN_TARGET`.
+- Status: Levels 6–7 are GPT accepted at `INTERNAL_PLAYABLE`; Task 0015R presentation repair awaits GPT review and owner-only retest; Level 8 remains `CONCEPT / UNVERIFIED_DESIGN_TARGET`.
 - Frozen authority: [`simulation_v1`](../game_design/GAMEPLAY_SIMULATION_CONTRACT_CURRENT.md), `level_v1`, and seven accepted formal levels.
 - Human evidence: Task 0013B Level 6 P0=0/P1=0/P2=3/P3=1; Task 0015V Level 7 `GAVE_UP`, P0=0/P1=0/P2=4/P3=4.
 - Review constraint: the owner is the only available playtester. Do not seek or require a third party unless the owner explicitly reverses this decision. Fresh/independent evidence is unavailable and not claimed; the gap is a disclosed residual limitation, not an ordinary internal-development blocker.
@@ -122,7 +122,7 @@ Product decisions are `TIMELINE_REMOVED_FROM_LEVEL_7_TEACHING_GOAL` and `HELP_CO
 
 Full target freeze and rejected alternatives: [`LEVEL_7_TWO_ECHO_CONVERGENCE_PLAN_CURRENT.md`](LEVEL_7_TWO_ECHO_CONVERGENCE_PLAN_CURRENT.md).
 
-Task 0015D proves the formal level and owner screenshot state remain solvable but identifies an observable false-invariant gap. The selected primary repair is [`TRANSITION_DERIVED_ECHO_DIVERGENCE_FEEDBACK`](LEVEL_7_FALSE_UNSOLVABLE_REPAIR_PLAN_CURRENT.md): preserve the formal hash and exact metrics, then expose moved/blocked outcomes and spacing change from committed presentation transitions. Geometry-only early divergence is the single fallback after a failed primary owner retest and would require complete formal revalidation. Level 8 remains blocked until repair and owner-only retest.
+Task 0015D proves the formal level and owner screenshot state remain solvable but identifies an observable false-invariant gap. Task 0015R implements [`TRANSITION_DERIVED_ECHO_DIVERGENCE_FEEDBACK`](LEVEL_7_FALSE_UNSOLVABLE_REPAIR_PLAN_CURRENT.md): formal hash and exact metrics are preserved while committed presentation transitions expose moved/blocked/waited outcomes and spacing change. Machine/capture validation passes; owner closure is not claimed. Geometry-only early divergence remains the single fallback after a failed primary owner retest and would require complete formal revalidation. Level 8 remains blocked until GPT acceptance and owner-only retest.
 
 ## Level 8 concept — `signal_convergence`
 

@@ -1,7 +1,7 @@
 # Initial level roadmap and validation matrix (CURRENT)
 
 - Tracked implemented spine: exactly 7 formal levels including tutorials
-- Remaining sequence: Level 7 is GPT accepted at `INTERNAL_PLAYABLE`; Task 0015D selects a presentation-only false-unsolvable repair plan pending GPT review; Level 8 remains an uncreated schema-v1 concept
+- Remaining sequence: Level 7 is GPT accepted at `INTERNAL_PLAYABLE`; Task 0015R implements the accepted presentation-only repair pending GPT review and owner-only retest; Level 8 remains an uncreated schema-v1 concept
 - Scope: `level_v1` mechanics only; all uncreated levels remain concepts, not solvability claims
 - Goal predicate for every level: current player reaches EXIT
 
@@ -17,6 +17,7 @@
 - `INTERNAL_PLAYABLE_PENDING_GPT_REVIEW`: Task 0015 creates and exactly validates Level 7 without human/candidate claims.
 - `AUTHENTICATED_OWNER_NOT_FRESH_NOT_INDEPENDENT_LEVEL_7_REVIEW`: Task 0015V records owner understanding of the intended roles but a give-up/false-unsolvable outcome; it does not advance the acceptance ladder.
 - `PLANNING_READY_FOR_GPT_REVIEW`: Task 0015D proves the failed states are recoverable and selects state-derived ECHO divergence feedback without changing formal Level 7.
+- `IMPLEMENTED_PENDING_GPT_REVIEW`: Task 0015R adds reusable transition-derived spacing feedback with unchanged formal data and machine metrics.
 - `DEFERRED_POST_MVP`: route-trigger goals, alternate actor goals, latches, switches, hazards, anchors, teleporters, collectibles, and branching endings.
 
 ## Current candidate sequence
@@ -31,7 +32,7 @@
 | 4 | `door_one_turn_late` / 门晚一回合 | door state committed now affects entry next turn; blocked history remains recorded | one, d=2 | 1 / 1 | compact folded corridor forces closed-snapshot blocking, then open-snapshot entry | not required | required | easy | actual `L*=9` | actual `N*=7 (EXACT)` | `STANDARD_COMPACT` | preserve |
 | 5 | `two_keys_one_door` / 两把时间钥匙 | combinational AND door with simultaneous plate occupancy | one, d=3 | 2 / 1 AND | ECHO and YOU occupy distinct Plates together, then YOU enters on the committed next turn | not required | required | medium | actual `L*=12` | actual `N*=1 (EXACT)` | `STANDARD_COMPACT` | preserve |
 | 6 | `staggered_doors` / 错开的门 | two doors with different plate sets; plan a dependency chain | one, d=3 | 2 / 2 with distinct one-Plate reference sets | one recorded route creates two distinct ECHO-held windows; YOU crosses each on the next input | not required; accepted witness has none | required and machine-proven | first core challenge; GPT accepted `INTERNAL_PLAYABLE`; owner review recorded | actual `L*=15` | actual `N*=4 (EXACT)` | `STANDARD_COMPACT` | preserve; owner recommends harder Level 7 |
-| 7 | `two_echo_convergence` / 双影汇流 | combine two delays through one readable simultaneous convergence | two, d=2 and d=4 | 2 / 1 A+B AND | E2 on A and E4 on B create a one-turn committed opening | not required; selected witness has none | both ECHOs individually necessary and machine-proven | GPT accepted `INTERNAL_PLAYABLE`; Task 0015D repair plan pending GPT review | actual `L*=19` | actual `N*=6 EXACT` | add only transition-derived spacing feedback if authorized; formal data stays fixed | repair/retest before Level 8 |
+| 7 | `two_echo_convergence` / 双影汇流 | combine two delays through one readable simultaneous convergence | two, d=2 and d=4 | 2 / 1 A+B AND | E2 on A and E4 on B create a one-turn committed opening | not required; selected witness has none | both ECHOs individually necessary and machine-proven | GPT accepted `INTERNAL_PLAYABLE`; Task 0015R repair pending GPT review | actual `L*=19` | actual `N*=6 EXACT` | transition-derived spacing/outcome cue implemented; formal data fixed | owner-only retest before Level 8 |
 
 Actual Task 0009AR, Task 0012, and Task 0015 metrics are machine evidence, not best-turn thresholds. Task 0015 records 61,975 visited states, frontier 21,449, all-shortest convergence, complete necessity/equal-delay controls, and SHA-256 `772410d3b8bb807e35472ee2a7d07b703de66e1e0e92ffb4d1ff8433a345d5fd`.
 

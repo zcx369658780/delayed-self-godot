@@ -8,6 +8,7 @@ const ProgressStore = preload("res://scripts/app/memory_progress.gd")
 const RouteRequest = preload("res://scripts/app/route_request.gd")
 const TimelineModel = preload("res://scripts/gameplay/timeline_model.gd")
 const WindowPresentation = preload("res://scripts/app/window_presentation.gd")
+const Task0015REchoDivergenceFeedback = preload("res://tests/gameplay/task_0015r_echo_divergence_feedback.gd")
 
 var failures := 0
 var assertions := 0
@@ -44,6 +45,9 @@ func _run() -> void:
 	await _test_gameplay_configuration_failure()
 	await _test_app_shell_tracer()
 	await _test_task_0011r_window_fill()
+	var task_0015r_result: Dictionary = await Task0015REchoDivergenceFeedback.new().run(self)
+	assertions += int(task_0015r_result.assertions)
+	failures += int(task_0015r_result.failures)
 	if failures > 0:
 		printerr("TASK_0003_TESTS_FAIL failures=%d assertions=%d" % [failures, assertions])
 		quit(1)
@@ -57,6 +61,7 @@ func _run() -> void:
 		print("TASK_0011R_WINDOW_FILL_TESTS_PASS")
 		print("TASK_0012_LEVEL_6_STAGGERED_DOORS_TESTS_PASS")
 		print("TASK_0015_LEVEL_7_TWO_ECHO_CONVERGENCE_TESTS_PASS")
+		print("TASK_0015R_ECHO_DIVERGENCE_FEEDBACK_TESTS_PASS")
 		quit(0)
 
 

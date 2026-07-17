@@ -14,6 +14,8 @@ const BOARD_ZONE := Rect2(24, 84, 540, 420)
 const RIGHT_RAIL := Rect2(600, 84, 336, 420)
 const GOAL_STRIP := Rect2(24, 18, 912, 46)
 const HELP_RECT := Rect2(96, 54, 768, 432)
+const ECHO_DIVERGENCE_BADGE_RECT := Rect2(24, 66, 540, 18)
+const CARDINAL_ACTIONS := ["UP", "RIGHT", "DOWN", "LEFT"]
 
 var level: Dictionary = {}
 var state: Dictionary = {}
@@ -31,6 +33,15 @@ var visual_feedback := {
 	"echo_trails": [],
 	"blocked_door": {"visible": false},
 	"teaching_badge": {"visible": false},
+	"echo_divergence": {
+		"visible": false,
+		"headline": "",
+		"detail": "",
+		"actors": [],
+		"pair": {},
+		"badge_rect": ECHO_DIVERGENCE_BADGE_RECT,
+		"visual_state": "STATIC_OUTCOME_CUE",
+	},
 }
 var disclosure := {
 	"controls_collapsed": false,
@@ -184,6 +195,7 @@ func get_presentation_snapshot() -> Dictionary:
 		"echo_trails": visual_feedback.echo_trails.duplicate(true),
 		"blocked_door": visual_feedback.blocked_door.duplicate(true),
 		"teaching_badge": visual_feedback.teaching_badge.duplicate(true),
+		"echo_divergence": visual_feedback.echo_divergence.duplicate(true),
 	}
 
 
@@ -457,6 +469,37 @@ func _draw_echo_feedback() -> void:
 			draw_dashed_line(from, to, Color("c4b5fd", 0.82), 3, 7)
 		draw_circle(to, 7, Color("7c3aed", 0.88))
 		draw_string(ThemeDB.fallback_font, to + Vector2(-6, -22), "↻", HORIZONTAL_ALIGNMENT_CENTER, 14, 16, Color("ede9fe"))
+	_draw_echo_divergence_feedback()
+
+
+func _draw_echo_divergence_feedback() -> void:
+	var feedback: Dictionary = visual_feedback.echo_divergence
+	if not feedback.get("visible", false):
+		return
+	var badge: Rect2 = feedback.badge_rect
+	draw_rect(badge, Color("111827", 0.96))
+	draw_rect(badge, Color("f8fafc"), false, 1.5)
+	var copy := "%s · %s" % [feedback.headline, feedback.detail]
+	draw_string(ThemeDB.fallback_font, badge.position + Vector2(6, 14), copy, HORIZONTAL_ALIGNMENT_LEFT, badge.size.x - 12, 14, Color("f8fafc"))
+	for actor in feedback.actors:
+		var center := _center(actor.after_position)
+		var radius: float = 26.0 if actor.outline_style == "SOLID" else 31.0
+		if actor.outline_style == "SOLID":
+			draw_arc(center, radius, 0, TAU, 32, Color("f8fafc", 0.9), 2)
+		else:
+			_draw_dashed_arc(center, radius, Color("f8fafc", 0.9), 2)
+		var marker := center + Vector2(radius - 4, -radius + 4)
+		match actor.outcome:
+			"MOVED":
+				draw_line(marker + Vector2(-5, 0), marker + Vector2(5, 0), Color("f8fafc"), 2)
+				draw_line(marker + Vector2(1, -4), marker + Vector2(5, 0), Color("f8fafc"), 2)
+				draw_line(marker + Vector2(1, 4), marker + Vector2(5, 0), Color("f8fafc"), 2)
+			"BLOCKED":
+				draw_line(marker + Vector2(-4, -4), marker + Vector2(4, 4), Color("f8fafc"), 2)
+				draw_line(marker + Vector2(-4, 4), marker + Vector2(4, -4), Color("f8fafc"), 2)
+			"WAITED":
+				draw_line(marker + Vector2(-3, -4), marker + Vector2(-3, 4), Color("f8fafc"), 2)
+				draw_line(marker + Vector2(3, -4), marker + Vector2(3, 4), Color("f8fafc"), 2)
 
 
 func _draw_blocked_door_feedback() -> void:
@@ -633,6 +676,7 @@ func _update_visual_feedback(before: Dictionary, result: Dictionary, action: Str
 				"to": after_position.duplicate(),
 				"visual_state": "STATIC_SEGMENTS" if reduced_motion else "SEGMENTED_REPLAY_TRAIL",
 			})
+	_update_echo_divergence_feedback(before, result)
 	if ["UP", "RIGHT", "DOWN", "LEFT"].has(action) and before.player_position == after.player_position:
 		var attempted: Array = [before.player_position[0] + int(_action_delta(action).x), before.player_position[1] + int(_action_delta(action).y)]
 		for door in level.get("doors", []):
@@ -670,11 +714,90 @@ func _update_visual_feedback(before: Dictionary, result: Dictionary, action: Str
 			feedback_timer.start()
 
 
+func _update_echo_divergence_feedback(before: Dictionary, result: Dictionary) -> void:
+	var after: Dictionary = result.state
+	if level.get("echoes", []).size() < 2 or after.get("completed", false):
+		return
+	var actors: Array = []
+	for actor_action in result.actor_actions.get("echoes", []):
+		var echo_id: String = actor_action.id
+		var before_position: Array = _echo_position_in_state(before, echo_id)
+		var after_position: Array = _echo_position_in_state(after, echo_id)
+		if before_position.is_empty() or after_position.is_empty():
+			continue
+		var definition: Dictionary = _echo_definition_by_id(echo_id)
+		var delay := int(definition.get("delay", 0))
+		var replay_action: String = actor_action.action
+		var outcome := "WAITED" if replay_action == "WAIT" else ("BLOCKED" if CARDINAL_ACTIONS.has(replay_action) and before_position == after_position else "MOVED")
+		var radius: float = 26.0 if delay == 2 else 31.0
+		actors.append({
+			"id": echo_id,
+			"delay": delay,
+			"badge": "E%d" % delay,
+			"action": replay_action,
+			"before_position": before_position.duplicate(),
+			"after_position": after_position.duplicate(),
+			"outcome": outcome,
+			"outline_style": "SOLID" if delay == 2 else "DOUBLE_DASHED",
+			"marker_rect": Rect2(_center(after_position) - Vector2(radius, radius), Vector2(radius * 2.0, radius * 2.0)),
+		})
+	actors.sort_custom(func(a: Dictionary, b: Dictionary):
+		return a.id < b.id if a.delay == b.delay else a.delay < b.delay
+	)
+	if actors.size() < 2:
+		return
+	var first: Dictionary = actors[0]
+	var second: Dictionary = actors[1]
+	var before_signed := [
+		int(first.before_position[0]) - int(second.before_position[0]),
+		int(first.before_position[1]) - int(second.before_position[1]),
+	]
+	var after_signed := [
+		int(first.after_position[0]) - int(second.after_position[0]),
+		int(first.after_position[1]) - int(second.after_position[1]),
+	]
+	var before_manhattan := absi(int(before_signed[0])) + absi(int(before_signed[1]))
+	var after_manhattan := absi(int(after_signed[0])) + absi(int(after_signed[1]))
+	var changed := before_signed != after_signed or before_manhattan != after_manhattan
+	visual_feedback.echo_divergence = {
+		"visible": changed,
+		"headline": "ECHO SPACING CHANGED" if changed else "",
+		"detail": "%s %s · %s %s" % [first.badge, first.outcome, second.badge, second.outcome],
+		"actors": actors,
+		"pair": {
+			"ordered_ids": [first.id, second.id],
+			"before_signed": before_signed,
+			"after_signed": after_signed,
+			"before_manhattan": before_manhattan,
+			"after_manhattan": after_manhattan,
+			"changed": changed,
+		},
+		"badge_rect": ECHO_DIVERGENCE_BADGE_RECT,
+		"visual_state": "STATIC_OUTCOME_CUE" if reduced_motion else "SEGMENTED_OUTCOME_CUE",
+	}
+
+
+func _echo_position_in_state(snapshot_state: Dictionary, echo_id: String) -> Array:
+	for echo_state in snapshot_state.get("echo_positions", []):
+		if echo_state.get("id", "") == echo_id:
+			return echo_state.position
+	return []
+
+
 func _reset_visual_feedback() -> void:
 	visual_feedback = {
 		"echo_trails": [],
 		"blocked_door": {"visible": false},
 		"teaching_badge": {"visible": false},
+		"echo_divergence": {
+			"visible": false,
+			"headline": "",
+			"detail": "",
+			"actors": [],
+			"pair": {},
+			"badge_rect": ECHO_DIVERGENCE_BADGE_RECT,
+			"visual_state": "STATIC_OUTCOME_CUE",
+		},
 	}
 	if feedback_timer != null:
 		feedback_timer.stop()

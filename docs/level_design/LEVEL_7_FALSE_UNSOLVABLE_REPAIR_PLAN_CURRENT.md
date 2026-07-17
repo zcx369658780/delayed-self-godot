@@ -1,6 +1,6 @@
 # Level 7 false-unsolvable repair plan (CURRENT)
 
-- Status: `PLANNING_READY_FOR_GPT_REVIEW`
+- Status: `PRIMARY_BUNDLE_IMPLEMENTED_PENDING_GPT_REVIEW_AND_OWNER_RETEST`
 - Task: `tasks/0015D_level_7_false_unsolvable_diagnostic_and_repair_planning.md`
 - Problem classification: `BLOCKING_P2_FALSE_UNSOLVABLE_MENTAL_MODEL_AND_RECOVERY_FAILURE`
 - Accepted implementation: `27a678da47d1ba34ed012f8840b8c80c775e8be1`
@@ -202,4 +202,6 @@ This plan is not product implementation, GPT acceptance, candidate acceptance, b
 
 ## 12. Next gate
 
-GPT review may authorize one bounded implementation of the selected primary bundle. Level 8 remains blocked until that implementation passes machine validation and the owner-only retest closes or materially reduces the blocking P2.
+Task 0015R implemented the selected primary bundle without formal changes. The implementation passed 391 assertions / 9 vectors with ten markers, ten native 960×540 captures, grayscale/reduced-motion checks, unchanged seven hashes, and unchanged Level 7 metrics. This machine/capture result does not close the owner P2.
+
+GPT review may authorize one owner-only Level 7 retest. Level 8 remains blocked until that retest closes or materially reduces the blocking P2.
