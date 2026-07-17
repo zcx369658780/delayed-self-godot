@@ -10,7 +10,8 @@ Durable project decisions only; live task progress belongs in current docs and r
 
 ## Frozen facts
 
-- Task 0014 Level 7 plan is GPT accepted. Task 0015 implements `two_echo_convergence` at `INTERNAL_PLAYABLE / PENDING GPT REVIEW`: E2/E4, A/B, one A+B Door, `L*=19`, `N*=6 EXACT`, visited 61,975, frontier 21,449, formal SHA-256 `772410d3b8bb807e35472ee2a7d07b703de66e1e0e92ffb4d1ff8433a345d5fd`. Seven-entry progression, controls, reusable cues, eight captures, and 367-assertion/nine-marker aggregate pass. This is not human or candidate acceptance.
+- Task 0014 Level 7 plan and Task 0015 implementation are GPT accepted. `two_echo_convergence` remains `INTERNAL_PLAYABLE`: E2/E4, A/B, one A+B Door, `L*=19`, `N*=6 EXACT`, visited 61,975, frontier 21,449, formal SHA-256 `772410d3b8bb807e35472ee2a7d07b703de66e1e0e92ffb4d1ff8433a345d5fd`. Seven-entry progression, controls, reusable cues, eight captures, and 367-assertion/nine-marker aggregate pass.
+- Task 0015V is `AUTHENTICATED_OWNER_NOT_FRESH_NOT_INDEPENDENT_LEVEL_7_REVIEW`: Level 6 `COMPLETED_UNASSISTED`; Level 7 `GAVE_UP` after approximately 1 minute, three restarts, Help use, no Timeline, and a later unsuccessful high-level assisted continuation. The owner understood E2/E4, E2-on-A/E4-on-B, and A+B, but treated ECHO spacing as invariant and concluded the level was impossible. P0=0/P1=0/P2=4/P3=4. This is a non-promotion result; recommend a separately authorized Level 7 presentation/difficulty diagnostic or repair and owner-only repeat before Level 8.
 
 - Repository: `zcx369658780/delayed-self-godot`; visibility: public; default branch: `main`.
 - Canonical local root: `D:\Delayed_Self`.
@@ -60,4 +61,4 @@ Durable project decisions only; live task progress belongs in current docs and r
 
 ## Pending decisions
 
-Task 0014 planning is complete and pending GPT adjudication; no implementation task is currently authorized. If accepted, one bounded implementation task may create exactly the selected Level 7 target and its focused proof/presentation package. Level 8, Timeline/Help redesign, any new Gate semantics, WAIT feasibility, broader presentation repair, asset acquisition, persistent save, final licensed art/audio/narrative, candidate acceptance, accessibility, localization, export, Web, and release evidence remain separate gates.
+Task 0015 is GPT accepted at `INTERNAL_PLAYABLE`; Task 0015V owner evidence is recorded and pending GPT adjudication. No repair is authorized. The recommended next gate is a separately bounded Level 7 presentation/difficulty diagnostic or repair followed by owner-only repeat evidence. Level 8, Timeline/Help redesign, any new Gate semantics, WAIT feasibility, new mechanics, broader presentation repair, asset acquisition, persistent save, final licensed art/audio/narrative, candidate acceptance, accessibility, localization, export, Web, and release evidence remain separate gates.

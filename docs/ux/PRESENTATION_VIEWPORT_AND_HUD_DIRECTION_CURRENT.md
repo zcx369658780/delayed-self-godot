@@ -17,6 +17,10 @@ No layout, viewport, scene, or copy change is implemented by this document.
 
 Level 7 adds only reusable primitive cues in `scripts/gameplay/vertical_slice.gd`: data-derived A/triangle, B/circle, `A+B` independent pips, E2 solid outline, E4 double-dashed outline, and overlap-preserving badges. Eight native 960×540 captures, including grayscale, passed. This does not change the viewport, board/right-rail layout, Timeline model, Help architecture, font/assets, or the broader presentation recommendation.
 
+## Task 0015V owner evidence
+
+The owner found A/B labels/shapes clear, understood E2/E4 different delays, and could distinguish overlapping actors despite crowding. The owner did not use Timeline and said reverse-counting it was harder than the puzzle. Help was opened but did not enable completion. The owner then inferred that physical ECHO spacing was invariant and that the machine-solvable level was impossible. This is a non-promotion P2 presentation/difficulty finding, not authorization to change Timeline, Help, delay, geometry, Door semantics, color, art, or animation. A separately bounded diagnostic/repair task should compare minimal ways to expose route/obstacle-induced relative-position changes before Level 8.
+
 ## Current-state measurement
 
 ### Viewport and window behavior

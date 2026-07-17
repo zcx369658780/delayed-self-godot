@@ -5,7 +5,7 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0015`](../tasks/0015_level_7_two_echo_convergence_implementation.md) — completed Level 7 implementation pending GPT review
+4. [`Task 0015V`](../tasks/0015V_owner_targeted_level_7_review.md) — completed authenticated-owner Level 7 comparison review pending GPT review
 5. [`DEVELOPMENT_PLAN_CURRENT.md`](DEVELOPMENT_PLAN_CURRENT.md) — milestone spine and near-term gates
 6. [`HANDOFF_MASTER_CURRENT.md`](HANDOFF_MASTER_CURRENT.md) — current continuation point
 7. [`project_memory.md`](project_memory.md) — durable decisions
@@ -31,6 +31,9 @@
 
 - [`Task 0015 validation`](level_design/validation/TWO_ECHO_CONVERGENCE_VALIDATION.md)
 - [`Task 0015 implementation report`](reports/0015_LEVEL_7_TWO_ECHO_CONVERGENCE_IMPLEMENTATION_REPORT.md)
+- [`Task 0015 GPT final acceptance`](reports/0015_GPT_FINAL_ACCEPTANCE.md)
+- [`Task 0015V owner Level 7 review`](reviews/0015V_OWNER_TARGETED_LEVEL_7_REVIEW.md)
+- [`Task 0015V owner Level 7 review report`](reports/0015V_OWNER_TARGETED_LEVEL_7_REVIEW_REPORT.md)
 
 - [`Development environment`](environment/DEVELOPMENT_ENVIRONMENT_CURRENT.md) — observed local facts and pending recommendations
 - [`Third-party asset ledger`](licenses/THIRD_PARTY_ASSET_LEDGER_CURRENT.md)

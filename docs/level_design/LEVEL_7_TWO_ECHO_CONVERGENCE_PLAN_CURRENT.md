@@ -1,6 +1,6 @@
 # Level 7 two-ECHO convergence plan (CURRENT)
 
-- Status: `IMPLEMENTED_INTERNAL_PLAYABLE_PENDING_GPT_REVIEW`
+- Status: `GPT_ACCEPTED_INTERNAL_PLAYABLE / OWNER_REVIEW_NON_PROMOTION_PENDING_GPT_ADJUDICATION`
 - Task: [`0014`](../../tasks/0014_level_7_two_echo_convergence_planning.md)
 - Proposed formal ID: `two_echo_convergence`
 - Proposed display title: `Two Echo Convergence / 双影汇流`
@@ -8,7 +8,9 @@
 - Baseline: six accepted formal levels; Level 6 implementation `1e43e9baa82a578fdb14f556e4895d42863513d9`
 - Human evidence boundary: `FRESH_INDEPENDENT_REVIEW_UNAVAILABLE_BY_OWNER_CONSTRAINT`
 
-Task 0015 implements and machine-validates this target. Exact result: `L*=19`, `N*=6 EXACT`, visited 61,975, frontier 21,449, one-turn required convergence, and SHA-256 `772410d3b8bb807e35472ee2a7d07b703de66e1e0e92ffb4d1ff8433a345d5fd`. See the current validation and Task 0015 report. Status is no higher than `INTERNAL_PLAYABLE / PENDING GPT REVIEW`.
+Task 0015 implements and machine-validates this target; GPT accepted it at `INTERNAL_PLAYABLE`. Exact result: `L*=19`, `N*=6 EXACT`, visited 61,975, frontier 21,449, one-turn required convergence, and SHA-256 `772410d3b8bb807e35472ee2a7d07b703de66e1e0e92ffb4d1ff8433a345d5fd`.
+
+Task 0015V owner review is non-promotion. The owner understood E2/E4, E2-on-A/E4-on-B, and A+B, but gave up after Help and later high-level assistance because relative ECHO spacing was interpreted as invariant. Findings are P0=0/P1=0/P2=4/P3=4. Recommend separately authorized Level 7 presentation/difficulty diagnosis or repair and owner-only repeat before Level 8.
 
 ## 1. Accepted baseline and sequence role
 

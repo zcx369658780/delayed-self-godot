@@ -1,17 +1,17 @@
 # Codex active task (CURRENT)
 
-- Status: `TASK_0015_LEVEL_7_IMPLEMENTED_PENDING_GPT_REVIEW`
-- Last completed task: `tasks/0015_level_7_two_echo_convergence_implementation.md`
-- Latest accepted gate: `TASK_0014_LEVEL_7_IMPLEMENTATION_PLAN_ACCEPTED`
+- Status: `TASK_0015V_OWNER_LEVEL_7_REVIEW_RECORDED_PENDING_GPT_REVIEW`
+- Last completed task: `tasks/0015V_owner_targeted_level_7_review.md`
+- Latest accepted gate: `TASK_0015_TWO_ECHO_CONVERGENCE_ACCEPTED_INTERNAL_PLAYABLE`
 - Accepted Level 6 implementation: `1e43e9baa82a578fdb14f556e4895d42863513d9`
-- Current implementation: Task 0015 implementation changeset pending GPT review
+- Accepted Level 7 implementation: `27a678da47d1ba34ed012f8840b8c80c775e8be1`
 
 ## Completion state
 
-Level 7 `two_echo_convergence / Two Echo Convergence / 双影汇流` is schema-valid and internally playable: shared-spawn E2/E4, two Plates, one A+B Door, and one player-only EXIT. Exact evidence is `L*=19`, `N*=6 EXACT`, visited 61,975, frontier 21,449, one-turn required two-ECHO window, six meaningful decisions, and six recoverable alternatives. Formal SHA-256 is `772410d3b8bb807e35472ee2a7d07b703de66e1e0e92ffb4d1ff8433a345d5fd`.
+Task 0015V records `AUTHENTICATED_OWNER_NOT_FRESH_NOT_INDEPENDENT_LEVEL_7_REVIEW`. Level 6 was `COMPLETED_UNASSISTED`. Level 7 ended `GAVE_UP` after approximately 1 minute, three restarts, approximately 30-plus turns, Help use, and no Timeline use. A later high-level assisted explanation did not lead to completion.
 
-Focused controls, native captures, progression/runtime smoke, and the full aggregate passed. Aggregate: 367 assertions / 9 vectors and all nine markers exactly once; stderr contains only expected `LEVEL_ID_MISMATCH`.
+The owner correctly understood E2/E4 different delays, E2-on-A/E4-on-B roles, and A+B, and found A/B cues clear and overlap distinguishable. The owner nevertheless treated ECHO spacing as invariant and concluded the level was impossible. Fresh aggregate remained healthy at 367 assertions / 9 vectors with nine markers; Level 7 remains machine-solvable and GPT accepted at `INTERNAL_PLAYABLE`.
 
 ## Remaining boundary
 
-This is `INTERNAL_PLAYABLE / PENDING GPT REVIEW`, not final acceptance or human review. The owner is the only available playtester; fresh/independent evidence remains unavailable and is not claimed. Do not begin owner Level 7 review, Level 8, Timeline/Help redesign, assets/audio/narrative, Gate, persistence, export, release, or submission without a new task.
+Finding counts are P0=0/P1=0/P2=4/P3=4. Owner-promotion criteria were not met. GPT should adjudicate a bounded Level 7 presentation/difficulty diagnostic or repair before any Level 8 gate. The owner is the only available playtester; fresh/independent evidence remains unavailable and is not claimed. No repair, Level 8, Timeline/Help redesign, new mechanic, production, export, release, or submission work is authorized.

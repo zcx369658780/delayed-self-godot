@@ -29,12 +29,13 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0013/0013A corrected baseline and owner-only review-path adjudication
 → 0013B authenticated-owner Level 6 review (GPT accepted internal evidence)
 → 0014 Level 7 two-ECHO convergence planning (GPT accepted)
-→ 0015 Level 7 `two_echo_convergence` implementation (INTERNAL_PLAYABLE; pending GPT review)
+→ 0015 Level 7 `two_echo_convergence` implementation (GPT accepted at INTERNAL_PLAYABLE)
+→ 0015V authenticated-owner Level 7 comparison review (recorded; non-promotion, pending GPT review)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
 
-Tasks 0000–0008, Task 0009AR, Task 0009AV, Task 0010, Task 0011, Task 0011V, Task 0011R, Task 0011RV, Task 0012, Task 0013B, and Task 0014 are GPT accepted with recorded boundaries. Task 0009A stopped cleanly; WAIT remains deferred research. Task 0015 implements `two_echo_convergence` with exact `L*=19`, `N*=6 EXACT`, visited 61,975, frontier 21,449, and one required two-ECHO A+B window. It is `INTERNAL_PLAYABLE / PENDING GPT REVIEW`. Timeline is not a teaching goal; Help remains optional; owner-only review and all Level 8/production/release surfaces remain separately gated.
+Tasks 0000–0008, Task 0009AR, Task 0009AV, Task 0010, Task 0011, Task 0011V, Task 0011R, Task 0011RV, Task 0012, Task 0013B, Task 0014, and Task 0015 are GPT accepted with recorded boundaries. Task 0009A stopped cleanly; WAIT remains deferred research. Task 0015V records Level 6 `COMPLETED_UNASSISTED` and Level 7 `GAVE_UP`: the owner understood E2/E4 and A+B but misread relative spacing as invariant and could not recover, including after Help and later high-level assistance. P0=0/P1=0/P2=4/P3=4. Recommend GPT adjudication and a bounded Level 7 presentation/difficulty diagnostic or repair before Level 8.
 
 ## Milestone spine
 
