@@ -5,7 +5,7 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0016`](../tasks/0016_level_8_finale_and_difficulty_bridge_planning.md) — current finale sequence and difficulty-bridge planning gate
+4. [`Task 0016R`](../tasks/0016R_bridge_mechanical_necessity_plan_revision.md) — current bridge mechanical-necessity correction gate
 5. [`DEVELOPMENT_PLAN_CURRENT.md`](DEVELOPMENT_PLAN_CURRENT.md) — milestone spine and near-term gates
 6. [`HANDOFF_MASTER_CURRENT.md`](HANDOFF_MASTER_CURRENT.md) — current continuation point
 7. [`project_memory.md`](project_memory.md) — durable decisions
@@ -30,6 +30,8 @@
 ## Compliance and reports
 
 - [`Level 8 finale and difficulty-bridge plan`](level_design/LEVEL_8_FINALE_AND_DIFFICULTY_BRIDGE_PLAN_CURRENT.md)
+- [`Task 0016R bridge necessity revision report`](reports/0016R_BRIDGE_MECHANICAL_NECESSITY_PLAN_REVISION_REPORT.md)
+- [`Task 0016 GPT plan adjudication`](reports/0016_GPT_FINALE_SEQUENCE_PLAN_ADJUDICATION.md)
 - [`Task 0016 planning report`](reports/0016_LEVEL_8_FINALE_AND_DIFFICULTY_BRIDGE_PLANNING_REPORT.md)
 - [`Task 0015RV owner divergence-feedback retest`](reviews/0015RV_OWNER_LEVEL_7_DIVERGENCE_FEEDBACK_RETEST.md)
 - [`Task 0015RV owner divergence-feedback retest report`](reports/0015RV_OWNER_LEVEL_7_DIVERGENCE_FEEDBACK_RETEST_REPORT.md)

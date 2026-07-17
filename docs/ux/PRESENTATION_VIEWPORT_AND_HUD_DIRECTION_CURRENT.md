@@ -215,6 +215,16 @@ The proposed `echo_spacing_bridge` must teach its spacing-change cause from boar
 
 The policy is planning only. Task 0016 does not modify Gameplay, Help, Timeline, path rendering, viewport, formal data, or project settings.
 
+## Task 0016R mechanical correction
+
+GPT rejected the one-Plate/one-Door bridge's dual-ECHO necessity claim. Task 0016R revises the proposed bridge to two Plates and one A+B Door while retaining:
+
+```text
+LABEL_SHAPE_PIP_PRIMARY_NO_NEW_LINES
+```
+
+The extra Plate does not authorize extra always-on lines. A/B labels, distinct shapes, and independent Door pips remain primary; E2/E4 badges/outlines identify actors; color remains supplementary. The early `BLOCKED/MOVED` transition and committed board state must teach the spacing change. Timeline remains optional and Help remains contextual/non-route. This revision changes planning only, not presentation code or captures.
+
 ## Likely later implementation paths
 
 - `scenes/vertical_slice/vertical_slice.tscn`

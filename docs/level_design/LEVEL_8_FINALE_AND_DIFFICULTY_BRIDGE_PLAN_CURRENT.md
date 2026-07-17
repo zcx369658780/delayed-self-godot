@@ -1,95 +1,160 @@
 # Level 8 finale and difficulty-bridge plan (CURRENT)
 
-- Status: `PLANNING_READY_FOR_GPT_REVIEW`
-- Task: `0016`
-- Decision: `INSERT_BRIDGE_BEFORE_CURRENT_LEVEL_7`
+- Status: `MECHANICAL_NECESSITY_REVISION_READY_FOR_GPT_REVIEW`
+- Task: `0016R`
+- Parent adjudication: `TASK_0016_PLAN_REQUEST_CHANGES_SCHEMA_V1_NECESSITY_CONTRADICTION`
+- Sequence decision: `INSERT_BRIDGE_BEFORE_CURRENT_LEVEL_7`
+- Selected bridge grammar: `SIMPLIFIED_TWO_PLATE_AND_TUTORIAL`
 - Exact next formal target: `echo_spacing_bridge / Diverging Echoes / 错位回声`
 - Future finale: `signal_convergence`, preserved as a later sequence-9 concept
 - Scope: planning and documentation only
 
-## 1. Accepted baseline and evidence boundary
+## 1. Accepted baseline and correction boundary
 
-### Level 6
+### Accepted content
 
-`staggered_doors` is GPT accepted at `INTERNAL_PLAYABLE`. It uses one delay-3 ECHO, two necessary Plates, and two unavoidable single-Plate Doors whose useful windows occur at different times. Machine evidence is `L*=15`, `N*=4 EXACT`, 6,772 visited states, and maximum frontier 1,179. The owner completed it unassisted at visible Turn 16 in approximately one minute with two restarts.
+Level 6 `staggered_doors` remains GPT accepted at `INTERNAL_PLAYABLE`: one delay-3 ECHO, two Plates, two distinct single-dependency Doors, `L*=15`, `N*=4 EXACT`, 6,772 visited states, and maximum frontier 1,179.
 
-### Current Level 7
-
-`two_echo_convergence` is GPT accepted at `INTERNAL_PLAYABLE`. It uses shared-spawn E2/E4, two Plates, and one A+B Door on a 9×7 board. Machine evidence is `L*=19`, `N*=6 EXACT`, 61,975 visited states, maximum frontier 21,449, and SHA-256:
+Current Level 7 `two_echo_convergence` remains GPT accepted at `INTERNAL_PLAYABLE`: shared-spawn E2/E4, two Plates, one A+B Door, 9×7, `L*=19`, `N*=6 EXACT`, 61,975 visited states, maximum frontier 21,449, and SHA-256:
 
 ```text
 772410d3b8bb807e35472ee2a7d07b703de66e1e0e92ffb4d1ff8433a345d5fd
 ```
 
-The formal file, ID, content, hash, and metrics remain frozen. Task 0015RV is assisted authenticated-owner evidence because the exact witness had already been exposed. It closes the fixed-spacing false-unsolvable blocker only for owner evidence; it is not fresh, independent, or route-discovery evidence.
+All seven formal level files, their hashes, metrics, validations, and current catalog remain immutable. Task 0015R transition-derived spacing feedback remains accepted. Task 0015RV remains assisted authenticated-owner evidence, not fresh, independent, or route-discovery evidence.
 
-Residual P2 inputs are:
+### Contradiction withdrawn
 
-1. the Level 6-to-7 difficulty discontinuity and missing intermediate teaching;
-2. Help did not teach the spacing-manipulation causal model;
-3. Timeline remained abstract and unused;
-4. ECHO prediction and dependency dotted paths can overlap and create clutter.
+Task 0016 incorrectly froze:
 
-The owner is the only available playtester. No third party may be sought or required.
+```text
+one Plate + one Door + both ECHOs individually necessary
+```
 
-### Frozen contracts
+Under `simulation_v1`, actors resolve independently, never block one another, may overlap, and any actor can press the sole Plate. The only Door needs only one Plate holder for its useful crossing. If E2 holds the Plate in a successful sequence, removing E4 preserves that holding event and the crossing; the symmetric argument applies to E4. A second ECHO can be observationally useful but is not mechanically necessary.
 
-The plan stays within accepted `simulation_v1`, `level_v1`, catalog v1, and reusable Gameplay. It uses only rectangular floor/walls, accepted fixed-delay ECHOs reading one YOU history, accepted blocked-action history, Plates, combinational `all_plate_ids` Doors, legal overlap, player-only EXIT, and committed open-result/next-input Door behavior.
+The one-Plate/one-Door target and its earlier necessity claim are withdrawn. This revision does not challenge the GPT adjudication.
 
-This plan does not authorize a formal level, catalog edit, coordinates, witness, solver run, source change, presentation implementation, or measured playability claim.
+### Frozen authority
 
-## 2. Candidate comparison
+The revised plan stays inside accepted `simulation_v1`, `level_v1`, catalog v1, and reusable Gameplay. It uses only rectangular walls/floor, shared YOU history, fixed-delay ECHOs, blocked-action recording, combinational `all_plate_ids` Doors, legal overlap, player-only EXIT, and open-result/next-input Door entry.
 
-### Method
+No formal level, catalog edit, coordinates, witness, measured solver result, runtime change, presentation change, or implementation is authorized here.
 
-Each candidate is scored from 1 to 5. Weighted totals are planning judgments, not measured evidence.
+## 2. Mechanical-feasibility lemmas
 
-| Criterion | Weight |
-|---|---:|
-| Curriculum continuity | 20% |
-| Mechanical differentiation | 15% |
-| Finale preservation | 15% |
-| Observability | 15% |
-| Proof feasibility | 15% |
-| Production/presentation risk | 10% |
-| Catalog/progression risk | 10% |
+Each candidate is evaluated against these obligations:
 
-### Candidates
+1. identify a transition or Door window that requires E2;
+2. identify a different causal occupancy role that requires E4;
+3. prevent YOU from substituting for either role;
+4. prevent legal overlap from collapsing the roles;
+5. show why removing E2 while preserving all other actors destroys completion;
+6. show why removing E4 while preserving all other actors destroys completion;
+7. use no presentation state, hidden rule, or new mechanic.
 
-| Criterion | A — direct `signal_convergence` finale | B — linear bridge before current Level 7 | C — optional branching practice |
+### Candidate A — simplified two-Plate AND tutorial
+
+Grammar:
+
+```text
+two shared-spawn ECHOs d=2/d=4
+two distinct Plates A/B
+one Door depending on A+B
+one player-only EXIT
+```
+
+Credible necessity lemma:
+
+- An early, visible blocker fork causes E2 to settle into the phase/route that reaches Plate A while E4 settles into the different phase/route that reaches Plate B.
+- The required committed result has E2 on A, E4 on B, and YOU already in the Door-approach lane. The following input enters the Door from the open snapshot.
+- Each Plate is at least two traversable moves from the Door cell, and the topology has no alternate Plate-to-Door shortcut. If YOU substitutes on either Plate, leaving it creates only one open start snapshot; YOU cannot reach and enter the Door within that one move, so the Door closes before entry.
+- One remaining ECHO cannot occupy two distinct Plate cells. Legal overlap presses at most one of them.
+- Removing E2 leaves E4 plus YOU. They can occupy A+B, or position YOU for the Door, but cannot do all three at the required result/crossing sequence. Completion is destroyed.
+- Removing E4 yields the symmetric two-actor insufficiency and destroys completion.
+- Delay/terrain phase assigns the intended shortest-solution roles E2→A and E4→B; complete single-ECHO searches, all-shortest traces, and YOU-substitution controls must later prove the authored geometry.
+
+This is a contract-level feasibility argument, not proof that an uncreated layout satisfies it.
+
+Differentiation:
+
+- from Level 6: one simultaneous A+B result after one early blocker experiment, not two sequential single-dependency Door stages;
+- from current Level 7: maximum 8×7, early obvious divergence, one primary experiment, 2–3 decisions, direct recovery, and no long phase-management loop;
+- from the finale: one Door and one dependency stage only; no mixed single/AND chain or multi-zone synthesis.
+
+Risk: it repeats current Level 7's entity grammar. That repetition is deliberate curriculum scaffolding only if later evidence proves substantially lower search burden, earlier causal visibility, fewer decisions, and simpler recovery.
+
+### Candidate B — dual single-dependency windows
+
+Grammar:
+
+```text
+two shared-spawn ECHOs d=2/d=4
+two distinct Plates A/B
+two Doors with dependencies A and B respectively
+one player-only EXIT
+```
+
+Credible necessity lemma:
+
+- E2 must create the first open-result/next-input window through Door A.
+- E4 must create a later, spatially separated window through Door B after YOU has crossed the first articulation.
+- YOU cannot hold the relevant Plate and reach its Door within the single useful snapshot; the other ECHO is phase/route-separated from that Plate.
+- Overlap cannot substitute because A and B are different cells and the windows occur in different progression components.
+- Removing E2 blocks the first stage; removing E4 permits the first stage but blocks the second.
+
+This grammar is mechanically plausible, subject to complete single-ECHO and route-bypass controls. It is not selected because two staged single-dependency Doors closely repeat Level 6, adds recovery and relationship-display burden, and consumes part of the future finale's multi-stage identity.
+
+### Candidate C — one-Plate multi-window structure
+
+Disposition:
+
+```text
+REJECTED_CONTRACT_INFEASIBLE
+```
+
+A single Plate opens every Door that references it at the same committed result. Schema v1 has no actor-specific Plate rule, consumed window, latch, one-shot state, or persistent stage memory. A proposed “E2 early press, E4 late press” schedule would depend entirely on unproven layout/timing and would not statically distinguish which ECHO owns the Plate obligation. The remaining ECHO or YOU may reuse the same Plate, and all referencing Doors open together.
+
+Without coordinates, an exact witness, and complete finite-state controls—which this planning task forbids—the grammar supplies no rigorous reason both single-ECHO variants must be unsolved. Repeated route length or optional later crossings are not necessity. Candidate C is therefore rejected before scoring.
+
+### Mandatory rejected baseline — observational second ECHO
+
+```text
+REJECTED_SINGLE_ECHO_SOLUTION_SURVIVES
+```
+
+If one ECHO opens the only necessary Door and the second exists only to display spacing, removing the observational ECHO preserves the holder, Plate state, Door result, and YOU completion sequence. This fails dual-ECHO necessity and does not force the intended lesson.
+
+## 3. Weighted decision
+
+Viable candidates are scored from 1 to 5. Scores are planning judgments, not measured evidence.
+
+| Criterion | Weight | A — simplified A+B tutorial | B — dual single windows |
 |---|---:|---:|---:|
-| Curriculum continuity | 2.0 | 5.0 | 4.0 |
-| Mechanical differentiation | 4.0 | 4.5 | 4.0 |
-| Finale preservation | 3.0 | 5.0 | 4.0 |
-| Observability | 3.0 | 4.5 | 4.0 |
-| Proof feasibility | 3.5 | 4.5 | 4.0 |
-| Production/presentation risk | 3.5 | 4.5 | 3.5 |
-| Catalog/progression risk | 4.0 | 3.5 | 2.0 |
-| **Weighted total** | **3.25 / 5** | **4.55 / 5** | **3.73 / 5** |
+| Mechanical feasibility / dual-ECHO necessity | 25% | 5.0 | 4.0 |
+| Curriculum continuity | 20% | 5.0 | 4.0 |
+| Differentiation from current Level 7 | 15% | 3.5 | 4.0 |
+| Future finale preservation | 15% | 4.5 | 3.5 |
+| Observability and recovery | 10% | 4.5 | 3.5 |
+| Proof/control feasibility | 10% | 5.0 | 3.5 |
+| Catalog/presentation risk | 5% | 4.5 | 3.0 |
+| **Weighted total** | **100%** | **4.63 / 5** | **3.78 / 5** |
 
-#### Candidate A — direct finale
+Candidate C and the observational baseline receive no weighted score because they are contract-infeasible.
 
-Proceed directly to `signal_convergence`: two ECHOs, three Plates, and two visible Door stages. This preserves catalog simplicity and creates a differentiated synthesis room, but it escalates immediately after the owner found current Level 7's spacing model difficult to discover. Board feedback reduces false-invariant risk but does not itself supply the missing curriculum step. Direct escalation would therefore worsen the unresolved ramp unless the finale were simplified enough to consume its finale role.
+Unique selection:
 
-#### Candidate B — linear bridge before current Level 7
+```text
+SIMPLIFIED_TWO_PLATE_AND_TUTORIAL
+```
 
-Insert one mandatory schema-v1 room that isolates a single spacing-change cause before requiring two-ECHO A+B convergence. The room teaches one bounded causal step with one Plate and one Door, remains materially simpler than current Level 7, and preserves `signal_convergence` as a larger later synthesis. It requires a bounded sequence/prerequisite migration but no accepted formal-level edit.
-
-#### Candidate C — optional branching practice
-
-Add a practice level after Level 6 while retaining current Level 7 as a selectable challenge path. This offers player choice, but catalog v1 currently represents a strict ordered progression. Optional branching would create unclear unlock/final semantics and UX/test burden, and players who most need the lesson could skip it. Making the practice mandatory collapses this candidate into Candidate B.
-
-### Decision and uncertainty
-
-Selected:
+The sequence direction remains:
 
 ```text
 INSERT_BRIDGE_BEFORE_CURRENT_LEVEL_7
 ```
 
-Candidate B has the strongest planning fit because it teaches the missing causal unit before synthesis while preserving accepted Level 7 and the future finale. The scores do not prove that a valid bridge layout exists or that the owner will experience the intended difficulty curve. A later implementation task must stop if exact machine evidence or owner evidence contradicts the plan.
-
-## 3. Sequence and catalog migration
+## 4. Sequence and catalog migration
 
 ### Current catalog
 
@@ -106,201 +171,206 @@ Candidate B has the strongest planning fit because it teaches the missing causal
 1–6 remain unchanged.
 
 7. `echo_spacing_bridge` — prerequisite `staggered_doors`
-8. `two_echo_convergence` — prerequisite changes from `staggered_doors` to `echo_spacing_bridge`; remains the sole `final_level=true`
+8. byte-identical `two_echo_convergence` — prerequisite changes to `echo_spacing_bridge`; remains sole `final_level=true`
 
-Only catalog sequence/prerequisite/final relationships may change in the later bridge implementation task. The accepted `two_echo_convergence` formal JSON remains byte-identical.
+Only a later authorized implementation may add the bridge and change catalog sequence/prerequisite metadata. It may not alter the accepted `two_echo_convergence` formal JSON.
 
 ### Proposed future finale state
 
-1–8 remain as above.
+9. `signal_convergence` — prerequisite `two_echo_convergence`; becomes sole `final_level=true`
 
-9. `signal_convergence` — prerequisite `two_echo_convergence`; becomes the sole `final_level=true`
-
-At that later gate only, `two_echo_convergence` changes to `final_level=false`. No finale entry or formal file exists under this plan.
+At that separate future gate, `two_echo_convergence` changes to `final_level=false`. No finale file or catalog entry exists under this plan.
 
 ### Rollback
 
-If the bridge cannot meet its proof/teaching requirements, remove only its later catalog entry and formal file, restore `two_echo_convergence` to sequence 7 with prerequisite `staggered_doors`, and restore it as the sole final. The accepted Level 7 formal file requires no rollback because it must never change.
+If the bridge cannot satisfy its exact proof gates, remove only its later formal file/catalog entry and restore `two_echo_convergence` to sequence 7, prerequisite `staggered_doors`, and sole-final status. No accepted formal level requires rollback.
 
-## 4. Exact next formal implementation target
+## 5. Revised exact next formal target
 
 ```text
 level_id: echo_spacing_bridge
 title: Diverging Echoes / 错位回声
-role: mandatory sequence-7 curriculum bridge
+role: mandatory sequence-7 dual-ECHO spacing curriculum bridge
+grammar: SIMPLIFIED_TWO_PLATE_AND_TUTORIAL
 ```
 
-### Frozen structural target
+### Frozen entity and dependency structure
 
-- one YOU;
-- exactly two ECHOs, delays 2 and 4, sharing one spawn and the same YOU history;
-- exactly one Plate;
-- exactly one initially closed combinational Door;
-- the Door dependency set is exactly the single Plate ID;
+- exactly one YOU;
+- exactly two shared-spawn ECHOs with delays 2 and 4;
+- exactly two distinct Plates, provisionally A and B;
+- exactly one initially closed Door;
+- the Door dependency set is exactly `[A, B]`;
 - exactly one player-only EXIT;
-- board envelope at most 9×7, preferably 8×7;
-- compact asymmetric fork-and-rejoin topology;
-- one visible blocker pocket and one unavoidable Door articulation;
-- no simultaneous A+B convergence and no second dependency stage.
+- board envelope at most 8×7;
+- topology: compact asymmetric early-divergence fork, two separated terminal Plate pockets, a YOU staging/approach lane, and one unavoidable Door articulation;
+- each Plate has traversable distance at least two from the Door cell, with no one-turn Plate-to-Door shortcut;
+- one dependency stage and no second Door.
 
-Coordinates, walls, route, exact witness, and JSON are deliberately not frozen.
+Coordinates, exact walls, route, witness, and JSON remain deliberately unfrozen.
 
-### Intended mental model
+### Exact causal obligations
 
-Cause one ECHO to be `BLOCKED` while the other `MOVED`, observe their relative spacing change, then exploit the resulting phase so an ECHO later holds the single Plate while YOU crosses the Door from the next open snapshot.
+E2 obligation:
 
-Both ECHOs must be individually necessary. If this cannot be proven within schema v1 and the quantitative bands below, stop rather than weakening the target into a one-ECHO or decorative-two-ECHO room.
+> After the early blocker-derived spacing change, delay-2 E2 must occupy Plate A in the required A+B result while YOU is staged at the Door; removing E2 leaves too few independent bodies to hold both separated Plates and still have YOU enter the Door.
 
-### Meaningful-decision hypotheses
+E4 obligation:
 
-1. when to enter the blocker lane so different replay slots meet different terrain;
-2. which delayed phase should later occupy the Plate;
-3. when to commit to the Door crossing from an open start snapshot.
+> The same divergence must place delay-4 E4 on the distinct Plate B in that required result; removing E4 creates the symmetric two-body insufficiency and eliminates every valid A+B crossing.
 
-At least two decisions must not reduce to repeated wall collision, a long corridor, or literal waiting. The implementation may discover different defensible decision points, but it must audit at least three.
+YOU cannot substitute because leaving a Plate provides only one open start snapshot and the Door is more than one traversable move away. Overlap cannot substitute because two distinct Plate cells must be occupied simultaneously.
 
-### Recovery expectations
+### Spacing-change teaching event
 
-- at least three recoverable non-optimal alternatives with bounded penalties or clear return routes;
-- wrong timing should normally expose the cause in board state and transition outcomes rather than silently create a long dead run;
-- restart remains exact, but restart must not be the only intelligible recovery;
-- no exact walkthrough, Timeline reverse-counting, or prior Level 7 route knowledge may be required.
+- every shortest solution must contain an early post-activation transition where one ECHO is `BLOCKED` and the other `MOVED`;
+- the event must occur before the final A+B setup and visibly change signed or Manhattan spacing;
+- board geometry and committed transition feedback must make cause and result observable;
+- the event may not be a repeated collision macro, a literal WAIT lesson, or an optional spectacle unrelated to completion.
 
-### Anti-padding, shortcuts, and observability
+### Meaningful decisions and recovery hypotheses
+
+1. choose when to enter the blocker fork so E2/E4 settle differently;
+2. preserve or correct the two resulting phases toward their separated Plate pockets;
+3. commit YOU to the Door approach before the A+B result.
+
+Require 2–3 audited meaningful decisions, at least two of which are not repeated collision, forced corridor continuation, or literal WAIT. Require at least two recoverable alternatives with bounded penalties or a short visible return to setup. Restart must not be the only comprehensible recovery.
+
+### Anti-padding and shortcut conditions
 
 - no literal WAIT requirement or WAIT teaching target;
-- no repeated-collision padding or long-corridor difficulty;
-- no bypass around the Door articulation;
-- no player-only, no-ECHO, or single-ECHO solution;
-- no solution that ignores the post-activation spacing-change event;
-- no line web needed to identify relationships;
-- transition feedback may confirm `MOVED/BLOCKED/WAITED`, but geometry and actor state must carry the causal lesson;
-- if the only workable room reproduces current Level 7's full A+B grammar, stop because the bridge has failed its differentiated role.
+- no long corridor, repeated collision, or route length as primary difficulty;
+- no player-only, no-ECHO, E2-only, or E4-only solution;
+- no YOU-on-one-Plate substitution crossing;
+- no overlap satisfying A+B;
+- no side route around the Door articulation;
+- no shortest solution without the blocker-derived spacing event;
+- no full current-Level-7 phase/recovery grammar;
+- no second Door, third Plate, or mixed dependency stage.
 
-## 5. Prospective quantitative bands
+## 6. Revised prospective quantitative bands
 
-These are implementation targets, not observed metrics:
+These are targets, not observed metrics:
 
-| Measure | Prospective bridge target |
+| Measure | Revised bridge target |
 |---|---:|
-| `L*` | 13–17 |
-| `N*` | 2–24, status must be `EXACT` |
-| Visited states | 2,000–30,000 |
-| Maximum frontier | 300–6,000 |
-| Meaningful decisions | 3–4 |
-| Recoverable alternatives | at least 3 |
+| `L*` | 13–16 |
+| `N*` | 2–32, status must be `EXACT` |
+| Visited states | 3,000–25,000 |
+| Maximum frontier | 500–5,000 |
+| Meaningful decisions | 2–3 |
+| Recoverable alternatives | at least 2 |
 | Dependency stages | exactly 1 |
-| Required spacing event | every shortest solution contains a post-activation spacing change; prefer `BLOCKED/MOVED` |
-| Door timing | at least one open-result/next-input crossing |
-| Owner-only target | 2–6 minutes, 1–4 restarts; target only, not fresh or independent |
+| Spacing event | every shortest solution contains early `BLOCKED/MOVED` divergence |
+| A+B window | required simultaneous E2/E4 result; useful window 1–2 turns |
+| Door timing | open-result/next-input entry required |
+| Owner-only target | 2–5 minutes, 1–3 restarts; target only, not fresh or independent |
 
-The bridge must remain below current Level 7's reasoning burden. Resource-limit exhaustion is neither exact counting nor proof that a controlled variant is complete-unsolved.
+The bridge must remain materially below current Level 7's `L*=19`, 61,975 visited states, frontier 21,449, six audited decisions, and longer phase-management loop. `N*` alone is not a difficulty ordering. A resource limit is never exact or complete-unsolved.
 
-## 6. Future finale role
+## 7. Mandatory future proof and control package
 
-`signal_convergence` is preserved as a future sequence-9 concept:
+A later implementation task must provide:
+
+1. strict schema load, catalog validation, sequence/prerequisite/final assertions, direct launch, normal unlock, and completion progression;
+2. formal SHA-256, solve, witness replay, exact restart, `L*`, `N* EXACT`, visited states, maximum frontier, and all configured limits;
+3. complete finite-state no-ECHO, E2-only, and E4-only controls, all unsolved without resource limits;
+4. a YOU-substitution control/audit proving YOU cannot hold A or B and reach the Door during the one open snapshot;
+5. all-shortest traces proving E2→A, E4→B, simultaneous A+B, and open-result/next-input crossing;
+6. all-shortest traces proving the required early `BLOCKED/MOVED` spacing change;
+7. isolate/relocate A and B separately; remove Door; replace A+B with A-only and B-only; record exact outcomes;
+8. delay equalization at 2/2 and 4/4 plus a relevant blocker/Plate relocation control;
+9. Door articulation and terrain route-bypass audits;
+10. legal overlap and ECHO-on-EXIT controls; only YOU completes;
+11. 2–3 meaningful-decision penalties and at least two recoverable alternatives;
+12. exact preservation of all prior seven formal hashes/metrics, including byte-identical `two_echo_convergence`;
+13. reusable Gameplay/AppRoot/direct-level/capture/960×540/grayscale/reduced-motion checks and aggregate regression;
+14. comparison against current Level 7 showing lower measured search burden, fewer decisions, and simpler recovery;
+15. no limit result labeled `EXACT` or complete-unsolved.
+
+Stop if either single-ECHO control solves, YOU can substitute, all-shortest role mapping is not distinct, the spacing event is optional, or the measured burden approaches/exceeds current Level 7 without a clear curriculum advantage.
+
+## 8. Future finale preservation
+
+`signal_convergence` remains a future sequence-9 concept:
 
 - two ECHOs, provisionally delays 2 and 4;
 - three Plates;
 - two visible Door stages;
-- one Door with a single-Plate dependency;
-- one Door with a two-Plate AND dependency;
-- one player-only EXIT;
-- compact multi-stage synthesis using only accepted mechanics.
+- one single-Plate dependency;
+- one two-Plate AND dependency;
+- multi-zone dependency depth and recovery;
+- one player-only EXIT.
 
-The bridge reserves this two-stage/three-Plate synthesis for the finale. It must not introduce a second Door, three Plates, or the finale's mixed single/AND dependency grammar. Finale metrics and layout remain unmeasured and will require a separate planning/implementation gate after the bridge and shifted current Level 7 are accepted.
+The bridge uses A+B but only one Door, one dependency result, one early causal experiment, and a compact topology. The finale uniquely retains mixed single/AND dependencies, two sequential Door stages, three Plates, and multi-zone synthesis. The bridge may not acquire those features during authoring.
 
-## 7. Mandatory future machine-proof package
+## 9. Presentation, Help, Timeline, and review policy
 
-A later bridge implementation task must provide:
-
-1. strict schema load and catalog validation, exact sequence/prerequisite/final assertions, direct launch, normal unlock, and completion progression;
-2. solve, witness replay, restart identity, formal SHA-256, `L*`, `N* EXACT`, visited states, maximum frontier, and declared finite search limits;
-3. all-shortest or decisively bounded event traces proving every shortest solution contains the required post-activation spacing change and an open-result/next-input Door crossing;
-4. no-ECHO, E2-only, and E4-only controlled variants, each exhausted over its complete finite state space and unsolved;
-5. individual E2 and E4 necessity audits tied to the intended causal chain, not merely entity presence;
-6. Plate removal/relocation/isolation and Door dependency simplification controls;
-7. Door removal and route-articulation/bypass audits proving the Door lies on every YOU-to-EXIT route;
-8. delay equalization controls at 2/2 and 4/4 plus a relevant spawn/terrain relocation control;
-9. legal-overlap and ECHO-on-EXIT controls confirming only YOU satisfies the goal;
-10. meaningful-decision penalties and at least three recoverable alternatives, excluding repeated collision, corridor padding, and literal WAIT;
-11. exact preservation of the prior seven formal JSON hashes and recorded metrics, including byte-identical `two_echo_convergence`;
-12. reusable Gameplay, AppRoot routing, direct-level launch, capture, 960×540 legibility, grayscale/reduced-motion where applicable, and aggregate regression;
-13. no resource-limited result labeled `EXACT` or complete-unsolved.
-
-If either ECHO necessity, the mandatory spacing event, or Door articulation cannot be proven, return `BLOCKED_NO_SCHEMA_V1_SEQUENCE_SOLUTION` rather than broadening mechanics or weakening the curriculum role.
-
-## 8. Presentation, Help, Timeline, and path policy
-
-Selected dependency-path policy:
+Selected relationship policy:
 
 ```text
 LABEL_SHAPE_PIP_PRIMARY_NO_NEW_LINES
 ```
 
-Product rules:
-
 - board state and transition feedback are primary;
-- Timeline is optional status and never a required teaching dependency;
-- Help is contextual, optional, zero-turn, and non-route;
-- exact operation sequences, walkthroughs, branch choices, and synchronization counts are rejected for Help;
-- supplementary color is allowed but is never the sole cue;
-- labels, distinct shapes, and pips remain the primary Plate/Door relationship language;
-- E2/E4 identity remains badge/outline based;
-- no new always-on dotted relationship lines are added;
-- existing prediction/dependency lines must not be allowed to scale into a cluttered web;
-- any future line removal, contextualization, or cue change is a separately implemented and tested presentation change.
+- Timeline is optional and never required;
+- Help is contextual, zero-turn, and non-route;
+- exact moves, walkthroughs, branch choices, or synchronization counts are rejected;
+- A/B labels, distinct shapes, and Door pips are primary;
+- color is supplementary, never sole;
+- E2/E4 badges/outlines remain primary actor identities;
+- no new always-on dotted relationship lines;
+- any later path/cue change requires separate implementation and testing.
 
-The bridge must remain understandable from the board and transition result even if Timeline is ignored and Help is never opened.
-
-## 9. Owner-only review plan
-
-The future classification is:
+Future review classification:
 
 ```text
 AUTHENTICATED_OWNER_NOT_FRESH_NOT_INDEPENDENT_BRIDGE_SEQUENCE_REVIEW
 ```
 
-Do not seek or require a third party. Prior project exposure must be disclosed. The review should ask:
+No third party may be sought or required. Ask:
 
-1. Before any route is discussed, what caused the two ECHOs' relative spacing to change?
-2. Which ECHO was blocked, which moved, and what board feature caused the difference?
-3. Could the owner apply the idea after a restart or in the shifted current Level 7 without recalling an exact movement sequence?
-4. When a timing choice failed, was the cause visible and was a recovery path understandable?
-5. Did the bridge add reasoning, or was difficulty mainly visual clutter, Help wording, Timeline interpretation, or route length?
-6. Did Help or Timeline become necessary? If used, did either reveal a route rather than explain context?
-7. After bridge then current Level 7, did the Level 6-to-7 discontinuity materially decrease?
-8. Did current Level 7 feel like a synthesis of the learned idea rather than repetitive replay?
-9. For the later finale, did the two-stage chain feel like satisfying synthesis rather than more of the same?
+1. What caused E2 and E4 spacing to change?
+2. Which actor was blocked and which moved?
+3. Why were both ECHOs needed for the A+B result?
+4. Why could YOU not replace one ECHO on a Plate and still cross?
+5. Could the concept be repeated after restart without recalling exact moves?
+6. Were mistakes recoverable and was the cause visible?
+7. Was difficulty caused by reasoning rather than clutter, Help, Timeline, or route length?
+8. Did bridge then current Level 7 produce a smoother increase?
+9. Did current Level 7 remain a larger synthesis rather than feel duplicated?
 
-Completion time, restarts, turns, Help/Timeline use, and assistance must be recorded only from supplied evidence, never inferred.
+Record time, restarts, turns, Help/Timeline use, and assistance only when directly supplied.
 
 ## 10. Risks, stop conditions, rollback, and non-claims
 
 ### Principal risks
 
-- an 8×7 or 9×7 layout may fail to require both ECHOs without reproducing A+B convergence;
-- exact controls may reveal a one-ECHO or Door bypass;
-- low search size may indicate triviality, while a high frontier may exceed the bridge role;
-- the board may communicate the mechanic only after assistance;
-- catalog migration may regress unlock/final behavior;
-- existing dotted cues may still create presentation friction even without new lines.
+- the simplified A+B grammar may still feel too similar to current Level 7;
+- compact geometry may permit YOU substitution or a reversed/unintended actor role;
+- exact search may exceed bridge bands;
+- the early divergence may be optional or visually lost;
+- two Plate relationships may create clutter despite the no-new-lines policy;
+- owner-only evidence cannot establish population difficulty.
 
 ### Stop conditions
 
-Stop if the target requires a new mechanic, schema/runtime/solver change, persistent Door, push box, Gate, exact Help route, required Timeline, literal WAIT, non-exact necessity result, accepted Level 7 file edit, or a vague/multiple sequence decision.
+Stop if the target requires a new mechanic, schema/runtime/solver change, actor-specific Plate rule, collision, persistent Door, Gate, push box, required Timeline, route-revealing Help, literal WAIT, accepted-level edit, non-exact necessity result, or multiple target ambiguity.
+
+Return to planning if no compact layout proves both single-ECHO controls complete-unsolved while remaining materially below current Level 7. Do not fall back to the withdrawn one-Plate contract or the observational second ECHO.
 
 ### Non-claims
 
-This plan does not claim that:
+This revision does not claim that:
 
-- `echo_spacing_bridge` exists, loads, solves, is unique, is fun, or meets any metric;
-- its candidate scores are empirical;
+- `echo_spacing_bridge` exists, loads, solves, meets any metric, or is fun;
+- the necessity lemma is machine proof of an uncreated layout;
+- candidate scores are empirical;
 - owner evidence is fresh or independent;
-- the current Level 7 formal file or catalog has changed;
+- current Level 7 or catalog changed;
 - `signal_convergence` is implemented or accepted;
-- Level 8/bridge implementation, production art/audio, Help redesign, Timeline redesign, push boxes, export, release, or submission is authorized.
+- bridge/finale implementation, Help/Timeline redesign, production, export, release, or submission is authorized.
 
 ## 11. Next gate
 
-After GPT accepts this plan, the next gate is one bounded implementation task for `echo_spacing_bridge`, including the catalog migration and complete proof package above. It is not authorization to implement `signal_convergence`.
+After GPT accepts this mechanical-necessity revision, the next gate is one bounded implementation and complete validation task for the revised `echo_spacing_bridge` plus explicit catalog migration. The future finale remains closed.

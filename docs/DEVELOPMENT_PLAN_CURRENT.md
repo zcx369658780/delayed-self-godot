@@ -34,12 +34,13 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0015D false-unsolvable diagnosis and bounded repair planning (GPT accepted)
 → 0015R transition-derived ECHO divergence feedback repair (GPT accepted)
 → 0015RV owner divergence-feedback retest (closed for GPT review)
-→ 0016 Level 8 finale sequence and difficulty-bridge planning (ready for GPT review)
+→ 0016 Level 8 finale sequence and difficulty-bridge planning (GPT requested mechanical correction)
+→ 0016R bridge mechanical-necessity plan revision (ready for GPT review)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
 
-Tasks 0000–0008, Task 0009AR, Task 0009AV, Task 0010, Task 0011, Task 0011V, Task 0011R, Task 0011RV, Task 0012, Task 0013B, Task 0014, Task 0015, Task 0015D, and Task 0015R are GPT accepted with recorded boundaries. Task 0009A stopped cleanly; WAIT remains deferred research. Task 0015RV records an assisted owner completion after prior witness exposure and closes the false-invariant blocker for owner evidence. Task 0016 recommends a mandatory schema-v1 `echo_spacing_bridge` before byte-identical `two_echo_convergence`, preserving `signal_convergence` as a later sequence-9 finale. GPT must accept the plan before any bridge implementation or catalog migration.
+Tasks 0000–0008, Task 0009AR, Task 0009AV, Task 0010, Task 0011, Task 0011V, Task 0011R, Task 0011RV, Task 0012, Task 0013B, Task 0014, Task 0015, Task 0015D, and Task 0015R are GPT accepted with recorded boundaries. Task 0009A stopped cleanly; WAIT remains deferred research. Task 0015RV closes the false-invariant blocker for assisted owner evidence. GPT rejected Task 0016's one-Plate/one-Door dual-necessity contract. Task 0016R revises the mandatory bridge to two ECHOs, two Plates, and one A+B Door while preserving byte-identical `two_echo_convergence` and the later `signal_convergence` finale. GPT must accept the revision before implementation or catalog migration.
 
 ## Milestone spine
 
