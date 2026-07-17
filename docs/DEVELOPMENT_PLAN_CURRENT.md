@@ -32,12 +32,13 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0015 Level 7 `two_echo_convergence` implementation (GPT accepted at INTERNAL_PLAYABLE)
 → 0015V authenticated-owner Level 7 comparison review (GPT adjudicated as blocking P2)
 → 0015D false-unsolvable diagnosis and bounded repair planning (GPT accepted)
-→ 0015R transition-derived ECHO divergence feedback repair (ready for GPT review)
+→ 0015R transition-derived ECHO divergence feedback repair (GPT accepted)
+→ 0015RV owner divergence-feedback retest (closed for GPT review)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
 
-Tasks 0000–0008, Task 0009AR, Task 0009AV, Task 0010, Task 0011, Task 0011V, Task 0011R, Task 0011RV, Task 0012, Task 0013B, Task 0014, Task 0015, and Task 0015D are GPT accepted with recorded boundaries. Task 0009A stopped cleanly; WAIT remains deferred research. Task 0015V records Level 7 `GAVE_UP` and a blocking false-invariant P2. Task 0015R implements the accepted presentation-only divergence cue and passes focused capture plus 391-assertion aggregate regression without formal change. Recommend GPT implementation review and an owner-only retest before Level 8.
+Tasks 0000–0008, Task 0009AR, Task 0009AV, Task 0010, Task 0011, Task 0011V, Task 0011R, Task 0011RV, Task 0012, Task 0013B, Task 0014, Task 0015, Task 0015D, and Task 0015R are GPT accepted with recorded boundaries. Task 0009A stopped cleanly; WAIT remains deferred research. Task 0015RV records an assisted owner completion after prior witness exposure and closes the false-invariant blocker for owner evidence. Residual difficulty-ramp, Help, Timeline, and visual-clutter findings remain. Recommend GPT adjudication before any Level 8 planning.
 
 ## Milestone spine
 

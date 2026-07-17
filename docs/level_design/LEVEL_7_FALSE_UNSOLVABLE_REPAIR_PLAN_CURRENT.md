@@ -1,6 +1,6 @@
 # Level 7 false-unsolvable repair plan (CURRENT)
 
-- Status: `PRIMARY_BUNDLE_IMPLEMENTED_PENDING_GPT_REVIEW_AND_OWNER_RETEST`
+- Status: `PRIMARY_BUNDLE_ACCEPTED_OWNER_BLOCKER_CLOSED_PENDING_GPT_ADJUDICATION`
 - Task: `tasks/0015D_level_7_false_unsolvable_diagnostic_and_repair_planning.md`
 - Problem classification: `BLOCKING_P2_FALSE_UNSOLVABLE_MENTAL_MODEL_AND_RECOVERY_FAILURE`
 - Accepted implementation: `27a678da47d1ba34ed012f8840b8c80c775e8be1`
@@ -202,6 +202,12 @@ This plan is not product implementation, GPT acceptance, candidate acceptance, b
 
 ## 12. Next gate
 
-Task 0015R implemented the selected primary bundle without formal changes. The implementation passed 391 assertions / 9 vectors with ten markers, ten native 960×540 captures, grayscale/reduced-motion checks, unchanged seven hashes, and unchanged Level 7 metrics. This machine/capture result does not close the owner P2.
+Task 0015R implemented the selected primary bundle without formal changes and was GPT accepted at the machine/presentation level. Task 0015RV then recorded an assisted owner completion with prior exact-witness exposure. The owner rejects fixed spacing, explains how Door/terrain blocking changes relative ECHO travel, supplies a credible future experiment, and no longer considers Level 7 impossible.
 
-GPT review may authorize one owner-only Level 7 retest. Level 8 remains blocked until that retest closes or materially reduces the blocking P2.
+Exact disposition:
+
+```text
+BLOCKING_P2_CLOSED_FOR_OWNER_EVIDENCE
+```
+
+This does not establish blind route discovery or erase residual difficulty-ramp, Help, Timeline, and visual-clutter findings. GPT may adjudicate whether bounded Level 8 planning is now appropriate. The geometry fallback is not activated.

@@ -98,7 +98,7 @@ Task 0013B owner evidence records unassisted completion at visible Turn 16 in ap
 
 ## Level 7 selected implementation target — `two_echo_convergence`
 
-- Status: `GPT_ACCEPTED_INTERNAL_PLAYABLE`; Task 0015D presentation-only repair plan pending GPT review.
+- Status: `GPT_ACCEPTED_INTERNAL_PLAYABLE`; Task 0015R machine/presentation repair accepted; Task 0015RV owner blocker closed pending GPT adjudication.
 - Display title: `Two Echo Convergence / 双影汇流`.
 - Role: introduce two distinct replay offsets through one readable simultaneous convergence, while preserving Level 8's mixed two-stage synthesis.
 - Frozen structure: shared-spawn ECHOs `d=2` and `d=4`; exactly two Plates A/B; exactly one A+B combinational Door; one player-only EXIT; exactly 9×7 figure-eight/recovery topology.
@@ -122,7 +122,7 @@ Product decisions are `TIMELINE_REMOVED_FROM_LEVEL_7_TEACHING_GOAL` and `HELP_CO
 
 Full target freeze and rejected alternatives: [`LEVEL_7_TWO_ECHO_CONVERGENCE_PLAN_CURRENT.md`](LEVEL_7_TWO_ECHO_CONVERGENCE_PLAN_CURRENT.md).
 
-Task 0015D proves the formal level and owner screenshot state remain solvable but identifies an observable false-invariant gap. Task 0015R implements [`TRANSITION_DERIVED_ECHO_DIVERGENCE_FEEDBACK`](LEVEL_7_FALSE_UNSOLVABLE_REPAIR_PLAN_CURRENT.md): formal hash and exact metrics are preserved while committed presentation transitions expose moved/blocked/waited outcomes and spacing change. Machine/capture validation passes; owner closure is not claimed. Geometry-only early divergence remains the single fallback after a failed primary owner retest and would require complete formal revalidation. Level 8 remains blocked until GPT acceptance and owner-only retest.
+Task 0015D proves the formal level and owner screenshot state remain solvable but identifies an observable false-invariant gap. Task 0015R implements and machine-validates [`TRANSITION_DERIVED_ECHO_DIVERGENCE_FEEDBACK`](LEVEL_7_FALSE_UNSOLVABLE_REPAIR_PLAN_CURRENT.md). Task 0015RV records an assisted owner completion after prior witness exposure: the owner rejects fixed spacing, explains Door/terrain blocking, and no longer calls the level impossible. `BLOCKING_P2_CLOSED_FOR_OWNER_EVIDENCE`, while difficulty-ramp, Help, Timeline, and dotted-path clutter remain P2 planning inputs. Geometry fallback is not recommended from this evidence. Level 8 planning still requires GPT authorization.
 
 ## Level 8 concept — `signal_convergence`
 

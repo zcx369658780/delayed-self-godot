@@ -1,7 +1,7 @@
 # Initial level roadmap and validation matrix (CURRENT)
 
 - Tracked implemented spine: exactly 7 formal levels including tutorials
-- Remaining sequence: Level 7 is GPT accepted at `INTERNAL_PLAYABLE`; Task 0015R implements the accepted presentation-only repair pending GPT review and owner-only retest; Level 8 remains an uncreated schema-v1 concept
+- Remaining sequence: Level 7 is GPT accepted at `INTERNAL_PLAYABLE`; Task 0015R is GPT accepted and Task 0015RV closes the false-invariant blocker for assisted owner evidence; Level 8 remains an uncreated schema-v1 concept pending GPT planning authority
 - Scope: `level_v1` mechanics only; all uncreated levels remain concepts, not solvability claims
 - Goal predicate for every level: current player reaches EXIT
 
@@ -17,7 +17,8 @@
 - `INTERNAL_PLAYABLE_PENDING_GPT_REVIEW`: Task 0015 creates and exactly validates Level 7 without human/candidate claims.
 - `AUTHENTICATED_OWNER_NOT_FRESH_NOT_INDEPENDENT_LEVEL_7_REVIEW`: Task 0015V records owner understanding of the intended roles but a give-up/false-unsolvable outcome; it does not advance the acceptance ladder.
 - `PLANNING_READY_FOR_GPT_REVIEW`: Task 0015D proves the failed states are recoverable and selects state-derived ECHO divergence feedback without changing formal Level 7.
-- `IMPLEMENTED_PENDING_GPT_REVIEW`: Task 0015R adds reusable transition-derived spacing feedback with unchanged formal data and machine metrics.
+- `GPT_ACCEPTED_MACHINE_PRESENTATION`: Task 0015R adds reusable transition-derived spacing feedback with unchanged formal data and machine metrics.
+- `AUTHENTICATED_OWNER_NOT_FRESH_NOT_INDEPENDENT_LEVEL_7_DIVERGENCE_FEEDBACK_RETEST`: Task 0015RV records an assisted completion after prior exact-witness exposure and closes the fixed-spacing blocker for owner evidence without route-discovery claims.
 - `DEFERRED_POST_MVP`: route-trigger goals, alternate actor goals, latches, switches, hazards, anchors, teleporters, collectibles, and branching endings.
 
 ## Current candidate sequence
@@ -32,7 +33,7 @@
 | 4 | `door_one_turn_late` / 门晚一回合 | door state committed now affects entry next turn; blocked history remains recorded | one, d=2 | 1 / 1 | compact folded corridor forces closed-snapshot blocking, then open-snapshot entry | not required | required | easy | actual `L*=9` | actual `N*=7 (EXACT)` | `STANDARD_COMPACT` | preserve |
 | 5 | `two_keys_one_door` / 两把时间钥匙 | combinational AND door with simultaneous plate occupancy | one, d=3 | 2 / 1 AND | ECHO and YOU occupy distinct Plates together, then YOU enters on the committed next turn | not required | required | medium | actual `L*=12` | actual `N*=1 (EXACT)` | `STANDARD_COMPACT` | preserve |
 | 6 | `staggered_doors` / 错开的门 | two doors with different plate sets; plan a dependency chain | one, d=3 | 2 / 2 with distinct one-Plate reference sets | one recorded route creates two distinct ECHO-held windows; YOU crosses each on the next input | not required; accepted witness has none | required and machine-proven | first core challenge; GPT accepted `INTERNAL_PLAYABLE`; owner review recorded | actual `L*=15` | actual `N*=4 (EXACT)` | `STANDARD_COMPACT` | preserve; owner recommends harder Level 7 |
-| 7 | `two_echo_convergence` / 双影汇流 | combine two delays through one readable simultaneous convergence | two, d=2 and d=4 | 2 / 1 A+B AND | E2 on A and E4 on B create a one-turn committed opening | not required; selected witness has none | both ECHOs individually necessary and machine-proven | GPT accepted `INTERNAL_PLAYABLE`; Task 0015R repair pending GPT review | actual `L*=19` | actual `N*=6 EXACT` | transition-derived spacing/outcome cue implemented; formal data fixed | owner-only retest before Level 8 |
+| 7 | `two_echo_convergence` / 双影汇流 | combine two delays through one readable simultaneous convergence | two, d=2 and d=4 | 2 / 1 A+B AND | E2 on A and E4 on B create a one-turn committed opening | not required; selected witness has none | both ECHOs individually necessary and machine-proven | GPT accepted `INTERNAL_PLAYABLE`; Task 0015R accepted; Task 0015RV owner blocker closed | actual `L*=19` | actual `N*=6 EXACT` | transition-derived spacing/outcome cue preserved; residual difficulty/Help/Timeline/clutter risks | GPT adjudication before Level 8 planning |
 
 Actual Task 0009AR, Task 0012, and Task 0015 metrics are machine evidence, not best-turn thresholds. Task 0015 records 61,975 visited states, frontier 21,449, all-shortest convergence, complete necessity/equal-delay controls, and SHA-256 `772410d3b8bb807e35472ee2a7d07b703de66e1e0e92ffb4d1ff8433a345d5fd`.
 
@@ -50,7 +51,7 @@ Actual Task 0009AR, Task 0012, and Task 0015 metrics are machine evidence, not b
 | 4 | accepted Task 0009AR solve/replay, `L*=9`, `N*=7 (EXACT)`, 291 visited/frontier 116, exact two-transition timing trace | no-Echo complete unsolved with 5 states | later five-level sequence reviewer explains “opens now, enter next turn” | machine audit found no corridor bypass |
 | 5 | accepted Task 0009AR solve/replay, `L*=12`, `N*=1 (EXACT)`, 1,260 visited/frontier 225, simultaneous AND/open-entry trace | no-Echo 8-state complete unsolved; each Plate relocation 1,000-state complete unsolved; one-Plate controls solve | later reviewer distinguishes both Plates and next-turn traversal | distinct Plate positions and no-Echo search prevent one-actor/overlap bypass |
 | 6 | accepted solve/replay; `L*=15`, `N*=4 EXACT`, 6,772 visited/frontier 1,179; both open-snapshot traces | no-ECHO and both Plate-isolation controls complete unsolved; Door/dependency controls change exact structure | Task 0013B owner completed unassisted, distinguished both events, reported two restarts and same-color order friction; not fresh/independent | machine audit proves neither Door is bypassable; owner review found no bypass |
-| 7 | strict load/catalog; solve/replay/restart/hash; `N*=1–8 EXACT`; multi-delay/open-snapshot traces; four decision audits; prior regression | remove each ECHO; no-ECHO; isolate each Plate; A-only/B-only dependencies; equalize to 2/2 and 4/4; relocate Plates; remove Door | `AUTHENTICATED_OWNER_NOT_FRESH_NOT_INDEPENDENT_LEVEL_7_REVIEW`; test E2/E4 and A/B comprehension without requiring Timeline | can YOU, one ECHO, overlap, a side route, or a wide window trivialize convergence? |
+| 7 | strict load/catalog; solve/replay/restart/hash; `N*=1–8 EXACT`; multi-delay/open-snapshot traces; four decision audits; prior regression | remove each ECHO; no-ECHO; isolate each Plate; A-only/B-only dependencies; equalize to 2/2 and 4/4; relocate Plates; remove Door | Task 0015RV assisted owner retest rejects fixed spacing and impossibility; prior witness exposure prevents route-discovery claim | can YOU, one ECHO, overlap, a side route, or a wide window trivialize convergence? |
 
 ## Variety within schema v1
 

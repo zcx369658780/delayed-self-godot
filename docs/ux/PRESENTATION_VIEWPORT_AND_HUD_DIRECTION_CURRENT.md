@@ -187,6 +187,20 @@ HELP_CONTEXTUAL_OPTIONAL
 
 Help may provide a zero-turn visual/text legend for controls, E2/E4 delay identities, A/B shapes, `A+B`, and next-turn Door behavior. It cannot disclose a route, movement sequence, branch, or exact synchronization count and cannot compensate for unreadable board state.
 
+## Task 0015RV owner-feedback disposition
+
+The Task 0015RV assisted owner retest closes the fixed-spacing false-unsolvable blocker for owner evidence. The owner found the transition feedback accurate and clear enough, reported no stable-spacing false cue, and explained how Door/terrain blocking can make one ECHO stop while another moves.
+
+Carry forward as planning inputs:
+
+- the owner still found the Level 6-to-7 difficulty increase abrupt;
+- Help was used but did not help;
+- Timeline remained unused and too abstract;
+- ECHO next-action dotted paths and Door/Plate dependency paths can overlap and look cluttered;
+- later icon/letter/art relationship language is preferred, while retaining non-color cues.
+
+The owner requested direct operation walkthroughs, but this evidence does not authorize route-revealing Help. Any Help, Timeline, path-language, intermediate-level, or production-art change requires a separate task and comparison evidence.
+
 Level 7 dependency presentation must combine A/B labels with distinct shapes, E2/E4 badges with distinct outlines, and supplementary color. Overlapping ECHOs preserve both badges/outlines. The cues must remain legible at 960×540, in grayscale, in static screenshots, and during motion. The later owner review is `AUTHENTICATED_OWNER_NOT_FRESH_NOT_INDEPENDENT_LEVEL_7_REVIEW`; do not seek or require a third party under `FRESH_INDEPENDENT_REVIEW_UNAVAILABLE_BY_OWNER_CONSTRAINT`.
 
 ## Likely later implementation paths
