@@ -1,7 +1,7 @@
 # Five-level difficulty recovery and Levels 6–8 plan
 
-- Status: Level 6 is `GPT_ACCEPTED_INTERNAL_PLAYABLE`; uncreated Levels 7–8 remain `CONCEPT / UNVERIFIED_DESIGN_TARGET`.
-- Frozen authority: [`simulation_v1`](../game_design/GAMEPLAY_SIMULATION_CONTRACT_CURRENT.md), `level_v1`, and the six accepted formal levels.
+- Status: Level 6 is `GPT_ACCEPTED_INTERNAL_PLAYABLE`; Level 7 is `INTERNAL_PLAYABLE / PENDING GPT REVIEW`; Level 8 remains `CONCEPT / UNVERIFIED_DESIGN_TARGET`.
+- Frozen authority: [`simulation_v1`](../game_design/GAMEPLAY_SIMULATION_CONTRACT_CURRENT.md), `level_v1`, six accepted levels, and Task 0015 Level 7 pending GPT review.
 - Human evidence: Task 0013B `AUTHENTICATED_OWNER_NOT_FRESH_NOT_INDEPENDENT_LEVEL_6_REVIEW`; P0=0/P1=0/P2=3/P3=1.
 - Review constraint: the owner is the only available playtester. Do not seek or require a third party unless the owner explicitly reverses this decision. Fresh/independent evidence is unavailable and not claimed; the gap is a disclosed residual limitation, not an ordinary internal-development blocker.
 - Rule: a solver witness proves machine reachability, not difficulty, clarity, necessity, or fun.

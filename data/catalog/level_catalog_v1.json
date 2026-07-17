@@ -59,6 +59,16 @@
       "classification": "standard",
       "unlock_prerequisites": ["two_keys_one_door"],
       "hud_mode": "STANDARD_COMPACT",
+      "final_level": false
+    },
+    {
+      "level_id": "two_echo_convergence",
+      "level_path": "res://data/levels/two_echo_convergence.json",
+      "sequence": 7,
+      "display_title_key": "level.two_echo_convergence.title",
+      "classification": "standard",
+      "unlock_prerequisites": ["staggered_doors"],
+      "hud_mode": "STANDARD_COMPACT",
       "final_level": true
     }
   ]

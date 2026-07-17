@@ -26,6 +26,7 @@ func _run() -> void:
 	_test_tutorial_echo_bridge_solver_and_necessity()
 	_test_task_0009ar_levels()
 	_test_task_0012_level()
+	_test_task_0015_level()
 	_test_tracked_catalog()
 	_test_catalog_failures()
 	_test_memory_progress()
@@ -55,6 +56,7 @@ func _run() -> void:
 		print("TASK_0011_PRESENTATION_RECOVERY_TESTS_PASS")
 		print("TASK_0011R_WINDOW_FILL_TESTS_PASS")
 		print("TASK_0012_LEVEL_6_STAGGERED_DOORS_TESTS_PASS")
+		print("TASK_0015_LEVEL_7_TWO_ECHO_CONVERGENCE_TESTS_PASS")
 		quit(0)
 
 
@@ -288,18 +290,42 @@ func _test_task_0012_level() -> void:
 	print("TASK_0012_LEVEL_6_RESULT=" + JSON.stringify(solved))
 
 
+func _test_task_0015_level() -> void:
+	var path := "res://data/levels/two_echo_convergence.json"
+	var loaded := loader.load_file(path)
+	_expect(loaded.ok, "Task 0015 Level 7 loads through unchanged LevelLoader")
+	if not loaded.ok:
+		return
+	var level: Dictionary = loaded.level
+	_expect(level.level_id == "two_echo_convergence" and level.title == "Two Echo Convergence" and level.terrain_rows.size() == 7 and level.terrain_rows[0].length() == 9, "Task 0015 exact formal identity and footprint")
+	_expect(level.echoes.map(func(echo): return [echo.id, echo.delay]) == [["echo_late", 4], ["echo_near", 2]] and level.echoes.all(func(echo): return echo.spawn == level.player_spawn), "Task 0015 exact shared-spawn E4/E2 roles")
+	_expect(level.plates.map(func(plate): return plate.id) == ["plate_a", "plate_b"] and level.doors.size() == 1 and level.doors[0].all_plate_ids == ["plate_a", "plate_b"] and not level.doors[0].initial_open, "Task 0015 exact A+B Door structure")
+	var limits := {"depth_limit": 64, "state_limit": 500000, "time_limit_ms": 30000, "solution_count_cap": 1000000}
+	var solved := Solver.new().solve(level, limits)
+	_expect(solved.status == "SOLVED" and solved.shortest_turn_count == 19 and solved.shortest_solution_count == 6 and solved.shortest_solution_count_status == "EXACT", "Task 0015 exact L star and N star satisfy hard bands")
+	_expect(solved.visited_states == 61975 and solved.maximum_frontier == 21449 and solved.limits == limits, "Task 0015 exact visited/frontier burden and limits")
+	_expect(not solved.solution.has("WAIT"), "Task 0015 selected shortest witness contains no literal WAIT")
+	var replay := simulation.replay(level, solved.solution)
+	_expect(replay.ok and replay.state.completed and replay.state.player_position == level.exit.position and replay.transitions.size() == 19, "Task 0015 witness replays to player-only EXIT completion")
+	_expect(replay.transitions[16].pressed_plate_ids == ["plate_a", "plate_b"] and replay.transitions[16].state.echo_positions.map(func(echo): return echo.position).has([6, 3]) and replay.transitions[16].state.echo_positions.map(func(echo): return echo.position).has([7, 5]), "Task 0015 required two-ECHO convergence result is exact")
+	_expect(replay.transitions[16].state.door_states[0].open and replay.transitions[17].state.player_position == level.doors[0].position and not replay.transitions[17].state.door_states[0].open, "Task 0015 following input crosses the open start-turn Door snapshot")
+	_expect(simulation.restart(level).state == simulation.construct_initial_state(level), "Task 0015 restart exactly reconstructs Level 7")
+	print("TASK_0015_LEVEL_7_RESULT=" + JSON.stringify(solved))
+
+
 func _test_tracked_catalog() -> void:
 	var result := CatalogLoader.new().load_file("res://data/catalog/level_catalog_v1.json")
-	_expect(result.ok and result.catalog.entries.size() == 6, "tracked six-entry catalog validates and normalizes")
-	if result.ok and result.catalog.entries.size() == 6:
+	_expect(result.ok and result.catalog.entries.size() == 7, "tracked seven-entry catalog validates and normalizes")
+	if result.ok and result.catalog.entries.size() == 7:
 		var entries: Array = result.catalog.entries
-		_expect(entries.map(func(entry): return entry.level_id) == ["tutorial_reach_exit", "tutorial_echo_bridge", "vertical_slice_delay_3", "door_one_turn_late", "two_keys_one_door", "staggered_doors"], "tracked catalog has the required six-level sequence")
+		_expect(entries.map(func(entry): return entry.level_id) == ["tutorial_reach_exit", "tutorial_echo_bridge", "vertical_slice_delay_3", "door_one_turn_late", "two_keys_one_door", "staggered_doors", "two_echo_convergence"], "tracked catalog has the required seven-level sequence")
 		_expect(entries[0].classification == "tutorial" and entries[0].hud_mode == "INTRO_MINIMAL" and entries[0].unlock_prerequisites.is_empty() and not entries[0].final_level, "Tutorial 0 catalog facts are exact")
 		_expect(entries[1].classification == "tutorial" and entries[1].hud_mode == "GUIDED_ECHO" and entries[1].unlock_prerequisites == ["tutorial_reach_exit"] and not entries[1].final_level, "Tutorial 1 catalog facts are exact")
 		_expect(entries[2].classification == "standard" and entries[2].hud_mode == "STANDARD_COMPACT" and entries[2].unlock_prerequisites == ["tutorial_echo_bridge"] and not entries[2].final_level, "vertical-slice catalog facts remain exact and are no longer final")
 		_expect(entries[3].classification == "standard" and entries[3].hud_mode == "STANDARD_COMPACT" and entries[3].unlock_prerequisites == ["vertical_slice_delay_3"] and not entries[3].final_level and entries[3].display_title_key == "level.door_one_turn_late.title", "Level 4 catalog facts are exact")
 		_expect(entries[4].classification == "standard" and entries[4].hud_mode == "STANDARD_COMPACT" and entries[4].unlock_prerequisites == ["door_one_turn_late"] and not entries[4].final_level and entries[4].display_title_key == "level.two_keys_one_door.title", "Level 5 catalog facts are exact and no longer final")
-		_expect(entries[5].classification == "standard" and entries[5].hud_mode == "STANDARD_COMPACT" and entries[5].unlock_prerequisites == ["two_keys_one_door"] and entries[5].final_level and entries[5].display_title_key == "level.staggered_doors.title", "Level 6 catalog facts are exact and solely final")
+		_expect(entries[5].classification == "standard" and entries[5].hud_mode == "STANDARD_COMPACT" and entries[5].unlock_prerequisites == ["two_keys_one_door"] and not entries[5].final_level and entries[5].display_title_key == "level.staggered_doors.title", "Level 6 catalog facts are exact and no longer final")
+		_expect(entries[6].classification == "standard" and entries[6].hud_mode == "STANDARD_COMPACT" and entries[6].unlock_prerequisites == ["staggered_doors"] and entries[6].final_level and entries[6].display_title_key == "level.two_echo_convergence.title", "Level 7 catalog facts are exact and solely final")
 		_expect(entries.all(func(entry): return not entry.has("best_turn_threshold") and entry.formal_level.level_id == entry.level_id), "catalog omits thresholds and every formal ID matches")
 
 
@@ -406,6 +432,8 @@ func _test_tracked_progress_chain_and_reset() -> void:
 	_expect(progress.record_completion("door_one_turn_late", 8) and progress.snapshot().unlocked_level_ids == ["door_one_turn_late", "tutorial_echo_bridge", "tutorial_reach_exit", "two_keys_one_door", "vertical_slice_delay_3"], "tracked progress unlocks only Level 5 after Level 4")
 	_expect(not progress.is_unlocked("staggered_doors"), "Level 6 remains locked before Level 5 completion")
 	_expect(progress.record_completion("two_keys_one_door", 12) and progress.snapshot().unlocked_level_ids == ["door_one_turn_late", "staggered_doors", "tutorial_echo_bridge", "tutorial_reach_exit", "two_keys_one_door", "vertical_slice_delay_3"], "tracked progress unlocks only Level 6 after Level 5")
+	_expect(not progress.is_unlocked("two_echo_convergence"), "Level 7 remains locked before Level 6 completion")
+	_expect(progress.record_completion("staggered_doors", 15) and progress.snapshot().unlocked_level_ids.has("two_echo_convergence"), "tracked progress unlocks only Level 7 after Level 6")
 	progress.reset_test_profile()
 	_expect(progress.snapshot() == {"completed_level_ids": [], "best_turns": {}, "unlocked_level_ids": ["tutorial_reach_exit"]}, "tracked progress reset restores the exact initial unlock snapshot")
 
@@ -414,7 +442,7 @@ func _test_direct_level_parser() -> void:
 	_expect(RouteRequest.parse_user_args([]).status == "NO_DIRECT_LEVEL", "direct-level parser accepts empty user arguments")
 	var valid := RouteRequest.parse_user_args(["--level-id=vertical_slice_delay_3"])
 	_expect(valid.ok and valid.level_id == "vertical_slice_delay_3", "direct-level parser extracts a catalog ID")
-	for new_id in ["door_one_turn_late", "two_keys_one_door", "staggered_doors"]:
+	for new_id in ["door_one_turn_late", "two_keys_one_door", "staggered_doors", "two_echo_convergence"]:
 		var new_valid := RouteRequest.parse_user_args(["--level-id=" + new_id])
 		_expect(new_valid.ok and new_valid.level_id == new_id, "direct-level parser accepts new catalog ID: " + new_id)
 	_expect(not RouteRequest.parse_user_args(["--level-id=res://data/levels/x.json"]).ok, "direct-level parser rejects filesystem paths")
@@ -802,7 +830,7 @@ func _test_app_shell_tracer() -> void:
 	await process_frame
 	_expect(app.get_current_route() == "LEVEL_SELECT" and app.get_active_screen_count() == 1, "Main Menu intent routes to one Level Select screen")
 	var select_snapshot: Dictionary = app.get_active_screen().get_screen_snapshot()
-	_expect(select_snapshot.entries.size() == 6 and select_snapshot.entries[0].level_id == "tutorial_reach_exit" and select_snapshot.entries[0].unlocked and select_snapshot.entries.slice(1).all(func(entry): return not entry.unlocked), "Level Select initially unlocks only Tutorial 0 in six-entry sorted catalog order")
+	_expect(select_snapshot.entries.size() == 7 and select_snapshot.entries[0].level_id == "tutorial_reach_exit" and select_snapshot.entries[0].unlocked and select_snapshot.entries.slice(1).all(func(entry): return not entry.unlocked), "Level Select initially unlocks only Tutorial 0 in seven-entry sorted catalog order")
 	app.select_level("vertical_slice_delay_3")
 	await process_frame
 	_expect(app.get_current_route() == "SAFE_ERROR" and app.get_active_screen().get_screen_snapshot().error_code == "APP_LEVEL_LOCKED", "locked vertical slice reaches Safe Error without Gameplay state")
@@ -856,12 +884,21 @@ func _test_app_shell_tracer() -> void:
 	app.select_level("staggered_doors")
 	await process_frame
 	gameplay = app.get_active_screen()
-	_expect(app.get_current_route() == "GAMEPLAY" and gameplay.is_runtime_ready() and gameplay.get_route_payload().level_id == "staggered_doors" and gameplay.get_route_payload().final_level and gameplay.get_route_payload().hud_mode == "STANDARD_COMPACT", "Level 6 routes through the reusable Gameplay implementation as sole catalog final")
+	_expect(app.get_current_route() == "GAMEPLAY" and gameplay.is_runtime_ready() and gameplay.get_route_payload().level_id == "staggered_doors" and not gameplay.get_route_payload().final_level and gameplay.get_route_payload().hud_mode == "STANDARD_COMPACT", "Level 6 routes through reusable Gameplay and is no longer final")
 	for action in ["UP", "RIGHT", "RIGHT", "DOWN", "UP", "RIGHT", "RIGHT", "RIGHT", "RIGHT", "UP", "UP", "UP", "LEFT", "LEFT", "LEFT"]:
 		_send_simulation_action(gameplay, action)
 	await process_frame
 	progress_snapshot = app.get_progress_snapshot()
-	_expect(app.get_current_route() == "LEVEL_SELECT" and progress_snapshot.completed_level_ids == ["door_one_turn_late", "staggered_doors", "tutorial_echo_bridge", "tutorial_reach_exit", "two_keys_one_door", "vertical_slice_delay_3"] and progress_snapshot.best_turns.staggered_doors == 15, "normal AppRoot flow completes and records all six levels without adding a final-flow surface")
+	_expect(app.get_current_route() == "LEVEL_SELECT" and progress_snapshot.completed_level_ids == ["door_one_turn_late", "staggered_doors", "tutorial_echo_bridge", "tutorial_reach_exit", "two_keys_one_door", "vertical_slice_delay_3"] and progress_snapshot.best_turns.staggered_doors == 15 and progress_snapshot.unlocked_level_ids.has("two_echo_convergence"), "normal AppRoot flow completes Level 6 and unlocks exactly Level 7")
+	app.select_level("two_echo_convergence")
+	await process_frame
+	gameplay = app.get_active_screen()
+	_expect(app.get_current_route() == "GAMEPLAY" and gameplay.is_runtime_ready() and gameplay.get_route_payload().level_id == "two_echo_convergence" and gameplay.get_route_payload().final_level and gameplay.get_route_payload().hud_mode == "STANDARD_COMPACT", "Level 7 routes through reusable Gameplay as sole catalog final")
+	for action in ["RIGHT", "RIGHT", "RIGHT", "RIGHT", "RIGHT", "RIGHT", "UP", "UP", "UP", "LEFT", "RIGHT", "DOWN", "DOWN", "UP", "DOWN", "UP", "UP", "UP", "UP"]:
+		_send_simulation_action(gameplay, action)
+	await process_frame
+	progress_snapshot = app.get_progress_snapshot()
+	_expect(app.get_current_route() == "LEVEL_SELECT" and progress_snapshot.completed_level_ids.has("two_echo_convergence") and progress_snapshot.best_turns.two_echo_convergence == 19, "normal AppRoot flow completes and records all seven levels without adding a final-flow surface")
 	app.navigate("UNKNOWN_ROUTE")
 	await process_frame
 	_expect(app.get_current_route() == "SAFE_ERROR" and app.get_active_screen().get_screen_snapshot().error_code == "APP_UNKNOWN_ROUTE" and app.get_active_screen_count() == 1, "unknown route reaches one Safe Error screen")
@@ -882,7 +919,7 @@ func _test_app_shell_tracer() -> void:
 	var direct_app = packed.instantiate()
 	root.add_child(direct_app)
 	await process_frame
-	for direct_id in ["tutorial_reach_exit", "tutorial_echo_bridge", "vertical_slice_delay_3", "door_one_turn_late", "two_keys_one_door", "staggered_doors"]:
+	for direct_id in ["tutorial_reach_exit", "tutorial_echo_bridge", "vertical_slice_delay_3", "door_one_turn_late", "two_keys_one_door", "staggered_doors", "two_echo_convergence"]:
 		direct_app.boot_with_user_args(["--level-id=" + direct_id])
 		await process_frame
 		_expect(direct_app.get_current_route() == "GAMEPLAY" and direct_app.get_active_screen().get_route_payload().development_direct and direct_app.get_active_screen().get_route_payload().level_id == direct_id and direct_app.get_active_screen_count() == 1, "validated development level ID boots directly to one reusable Gameplay: " + direct_id)

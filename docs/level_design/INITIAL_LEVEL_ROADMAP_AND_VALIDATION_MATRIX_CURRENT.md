@@ -1,7 +1,7 @@
 # Initial level roadmap and validation matrix (CURRENT)
 
-- Tracked implemented spine: exactly 6 formal levels including tutorials
-- Remaining sequence: Level 7 has one selected planning target pending GPT review; Level 8 remains an uncreated schema-v1 concept; final candidate count remains a later GPT scope decision
+- Tracked implemented spine: exactly 7 formal levels including tutorials
+- Remaining sequence: Level 7 is internally playable pending GPT review; Level 8 remains an uncreated schema-v1 concept; final candidate count remains a later GPT scope decision
 - Scope: `level_v1` mechanics only; all uncreated levels remain concepts, not solvability claims
 - Goal predicate for every level: current player reaches EXIT
 
@@ -14,7 +14,7 @@
 - `DEFERRED_VALIDATION_RESEARCH`: `wait_for_the_echo` is not implemented; strict literal-WAIT relevance remains unresolved without any claim that WAIT is impossible or redundant.
 - `UNVERIFIED_DESIGN_TARGET`: remaining uncreated working IDs, layouts, difficulty, and target bands.
 - `PLANNING_RECOMMENDATION_FOR_GPT`: sequence, teaching role, validation variants, HUD modes, and scope-cut order.
-- `PLANNING_SELECTED_PENDING_GPT_REVIEW`: Task 0014 selects one prospective Level 7 structure without creating or validating formal content.
+- `INTERNAL_PLAYABLE_PENDING_GPT_REVIEW`: Task 0015 creates and exactly validates Level 7 without human/candidate claims.
 - `DEFERRED_POST_MVP`: route-trigger goals, alternate actor goals, latches, switches, hazards, anchors, teleporters, collectibles, and branching endings.
 
 ## Current candidate sequence
@@ -29,9 +29,9 @@
 | 4 | `door_one_turn_late` / 门晚一回合 | door state committed now affects entry next turn; blocked history remains recorded | one, d=2 | 1 / 1 | compact folded corridor forces closed-snapshot blocking, then open-snapshot entry | not required | required | easy | actual `L*=9` | actual `N*=7 (EXACT)` | `STANDARD_COMPACT` | preserve |
 | 5 | `two_keys_one_door` / 两把时间钥匙 | combinational AND door with simultaneous plate occupancy | one, d=3 | 2 / 1 AND | ECHO and YOU occupy distinct Plates together, then YOU enters on the committed next turn | not required | required | medium | actual `L*=12` | actual `N*=1 (EXACT)` | `STANDARD_COMPACT` | preserve |
 | 6 | `staggered_doors` / 错开的门 | two doors with different plate sets; plan a dependency chain | one, d=3 | 2 / 2 with distinct one-Plate reference sets | one recorded route creates two distinct ECHO-held windows; YOU crosses each on the next input | not required; accepted witness has none | required and machine-proven | first core challenge; GPT accepted `INTERNAL_PLAYABLE`; owner review recorded | actual `L*=15` | actual `N*=4 (EXACT)` | `STANDARD_COMPACT` | preserve; owner recommends harder Level 7 |
-| 7 | `two_echo_convergence` / 双影汇流 | combine two delays through one readable simultaneous convergence | two, d=2 and d=4 | 2 / 1 A+B AND | align both ECHOs on distinct Plates, observe committed open result, then cross from the open snapshot | not a teaching goal | both ECHOs individually necessary target | temporal planning challenge; selected plan pending GPT review | 17–25 unverified | 1–8 `EXACT` target | `STANDARD_COMPACT`; Timeline not a teaching goal; A/B and E2/E4 redundant cues | preserve if proof passes |
+| 7 | `two_echo_convergence` / 双影汇流 | combine two delays through one readable simultaneous convergence | two, d=2 and d=4 | 2 / 1 A+B AND | E2 on A and E4 on B create a one-turn committed opening | not required; selected witness has none | both ECHOs individually necessary and machine-proven | `INTERNAL_PLAYABLE / PENDING GPT REVIEW` | actual `L*=19` | actual `N*=6 EXACT` | `STANDARD_COMPACT`; Timeline not a teaching goal; A/B and E2/E4 redundant cues | preserve pending GPT review |
 
-Actual Task 0009AR and Task 0012 metrics are machine evidence, not best-turn thresholds. Remaining target bands guide authoring limits only and must not enter formal data until solver validation. Task 0012 recorded 6,772 visited states, frontier 1,179, both Door-window traces, complete no-ECHO/Plate-isolation controls, and SHA-256 `3f14c19b50775e36dd5b52664798381cf1292b0a30b377641c03435f45696bc8`.
+Actual Task 0009AR, Task 0012, and Task 0015 metrics are machine evidence, not best-turn thresholds. Task 0015 records 61,975 visited states, frontier 21,449, all-shortest convergence, complete necessity/equal-delay controls, and SHA-256 `772410d3b8bb807e35472ee2a7d07b703de66e1e0e92ffb4d1ff8433a345d5fd`.
 
 ### Deferred validation research — `wait_for_the_echo`
 

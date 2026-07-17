@@ -5,7 +5,7 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0014`](../tasks/0014_level_7_two_echo_convergence_planning.md) — completed Level 7 two-ECHO convergence planning gate
+4. [`Task 0015`](../tasks/0015_level_7_two_echo_convergence_implementation.md) — completed Level 7 implementation pending GPT review
 5. [`DEVELOPMENT_PLAN_CURRENT.md`](DEVELOPMENT_PLAN_CURRENT.md) — milestone spine and near-term gates
 6. [`HANDOFF_MASTER_CURRENT.md`](HANDOFF_MASTER_CURRENT.md) — current continuation point
 7. [`project_memory.md`](project_memory.md) — durable decisions
@@ -28,6 +28,9 @@
 - [`Task workflow`](workflows/PROJECT_BOOTSTRAP_AND_TASK_WORKFLOW.md)
 
 ## Compliance and reports
+
+- [`Task 0015 validation`](level_design/validation/TWO_ECHO_CONVERGENCE_VALIDATION.md)
+- [`Task 0015 implementation report`](reports/0015_LEVEL_7_TWO_ECHO_CONVERGENCE_IMPLEMENTATION_REPORT.md)
 
 - [`Development environment`](environment/DEVELOPMENT_ENVIRONMENT_CURRENT.md) — observed local facts and pending recommendations
 - [`Third-party asset ledger`](licenses/THIRD_PARTY_ASSET_LEDGER_CURRENT.md)

@@ -1,6 +1,6 @@
 # Level 7 two-ECHO convergence plan (CURRENT)
 
-- Status: `LEVEL_7_IMPLEMENTATION_PLAN_READY_FOR_GPT_REVIEW`
+- Status: `IMPLEMENTED_INTERNAL_PLAYABLE_PENDING_GPT_REVIEW`
 - Task: [`0014`](../../tasks/0014_level_7_two_echo_convergence_planning.md)
 - Proposed formal ID: `two_echo_convergence`
 - Proposed display title: `Two Echo Convergence / 双影汇流`
@@ -8,7 +8,7 @@
 - Baseline: six accepted formal levels; Level 6 implementation `1e43e9baa82a578fdb14f556e4895d42863513d9`
 - Human evidence boundary: `FRESH_INDEPENDENT_REVIEW_UNAVAILABLE_BY_OWNER_CONSTRAINT`
 
-This is an implementation target, not a formal level. No terrain JSON, solution, metric, catalog entry, or playability claim exists until a later task creates and machine-validates the content.
+Task 0015 implements and machine-validates this target. Exact result: `L*=19`, `N*=6 EXACT`, visited 61,975, frontier 21,449, one-turn required convergence, and SHA-256 `772410d3b8bb807e35472ee2a7d07b703de66e1e0e92ffb4d1ff8433a345d5fd`. See the current validation and Task 0015 report. Status is no higher than `INTERNAL_PLAYABLE / PENDING GPT REVIEW`.
 
 ## 1. Accepted baseline and sequence role
 

@@ -6,21 +6,17 @@
 - Local root: `D:\Delayed_Self`
 - Working title: `迟到的我 / Delayed Self`
 - Product: offline single-player; primary target Windows
-- Latest accepted gate: Task 0013B (`TASK_0013B_OWNER_LEVEL_6_REVIEW_ACCEPTED_INTERNAL_EVIDENCE`), review commit `e5285d1e49aac8bd0b1a4778cd602bbe89e8bc43`
-- Current gate: Task 0014 Level 7 two-ECHO convergence plan ready for GPT review
-- Last completed task: `tasks/0014_level_7_two_echo_convergence_planning.md`
-- Environment record: `docs/environment/DEVELOPMENT_ENVIRONMENT_CURRENT.md`
-- Simulation contract: `docs/game_design/GAMEPLAY_SIMULATION_CONTRACT_CURRENT.md`
-- Level schema: `schemas/level_v1.schema.json`
-- Current report: `docs/reports/0014_LEVEL_7_TWO_ECHO_CONVERGENCE_PLANNING_REPORT.md`
-- Current architecture plan: `docs/architecture/SYSTEM_SKELETON_PLAN_CURRENT.md`
-- Catalog contract: `docs/architecture/LEVEL_CATALOG_V1_CURRENT.md`
-- Next recommended gate: GPT adjudication, then a separately bounded Level 7 implementation task
+- Latest accepted gate: Task 0014 (`TASK_0014_LEVEL_7_IMPLEMENTATION_PLAN_ACCEPTED`)
+- Current gate: Task 0015 Level 7 implementation complete pending GPT review
+- Last completed task: `tasks/0015_level_7_two_echo_convergence_implementation.md`
+- Current report: `docs/reports/0015_LEVEL_7_TWO_ECHO_CONVERGENCE_IMPLEMENTATION_REPORT.md`
+- Validation: `docs/level_design/validation/TWO_ECHO_CONVERGENCE_VALIDATION.md`
+- Next recommended gate: GPT diff/evidence adjudication
 
 ## Startup
 
-Follow the canonical read order in `AGENTS.md`. Before any work, verify root, branch, `HEAD`, remotes, and worktree, then require a newly issued GitHub task file. GitHub task files carry the complete execution authorization; the normal local Codex launch prompt only names the task file. Task 0014 is a planning-only output pending GPT adjudication; no Level 7 implementation is currently authorized.
+Follow `AGENTS.md`, then this snapshot, the active-task document, Task 0015, the validation, report, handoff, and live Git truth. Task 0015 creates Level 7 at `INTERNAL_PLAYABLE / PENDING GPT REVIEW`; Codex may report `PASS_FOR_GPT_REVIEW` but never final acceptance.
 
-## Pending
+## Exact current facts
 
-Task 0013B is GPT accepted as authenticated-owner internal evidence. Task 0014 selects one proposed Level 7 target: `two_echo_convergence`, with delay-2/delay-4 ECHOs, two Plates, one A+B Door, a 9×7 convergence topology, prospective `L*=17–25`, and `N*=1–8 EXACT`. Timeline is removed from the Level 7 teaching goal; Help is contextual optional; dependency and actor roles require redundant A/B, shape, E2/E4, outline, and supplementary-color cues. These are plans, not implementation or validation facts. The owner remains the only available playtester; fresh/independent evidence is unavailable and not claimed. Level 7 implementation, Level 8, assets/audio/narrative, Gate, persistence, complete flow, export, Web, and release remain separately unauthorized.
+The tracked catalog has seven levels. Level 7 is the sole final entry and unlocks after Level 6. `two_echo_convergence` is 9×7 with E2/E4, A/B, one A+B Door, and EXIT; `L*=19`, `N*=6 EXACT`, visited 61,975, frontier 21,449, SHA-256 `772410d3b8bb807e35472ee2a7d07b703de66e1e0e92ffb4d1ff8433a345d5fd`. Aggregate is 367 assertions / 9 vectors with nine markers. Timeline is not a Level 7 teaching goal; Help is optional; WAIT remains deferred research. Owner-only review constraints and all Level 8/production/release gates remain closed.

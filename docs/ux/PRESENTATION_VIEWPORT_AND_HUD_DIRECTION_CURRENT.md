@@ -13,6 +13,10 @@ Use **Option B: 1280×720** as the fallback only if a later 960×540 implementat
 
 No layout, viewport, scene, or copy change is implemented by this document.
 
+## Task 0015 bounded implementation fact
+
+Level 7 adds only reusable primitive cues in `scripts/gameplay/vertical_slice.gd`: data-derived A/triangle, B/circle, `A+B` independent pips, E2 solid outline, E4 double-dashed outline, and overlap-preserving badges. Eight native 960×540 captures, including grayscale, passed. This does not change the viewport, board/right-rail layout, Timeline model, Help architecture, font/assets, or the broader presentation recommendation.
+
 ## Current-state measurement
 
 ### Viewport and window behavior

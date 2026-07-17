@@ -180,6 +180,7 @@ func get_presentation_snapshot() -> Dictionary:
 		"surfaces": _surface_snapshots(),
 		"plates": _plate_snapshots(),
 		"doors": _door_snapshots(),
+		"echoes": _echo_snapshots(),
 		"echo_trails": visual_feedback.echo_trails.duplicate(true),
 		"blocked_door": visual_feedback.blocked_door.duplicate(true),
 		"teaching_badge": visual_feedback.teaching_badge.duplicate(true),
@@ -220,13 +221,16 @@ func _plate_snapshots() -> Array:
 	var pressed: Array = simulation.pressed_plate_ids(level, state)
 	var snapshots: Array = []
 	for plate in level.get("plates", []):
-		snapshots.append({
+		var snapshot := {
 			"id": plate.id,
 			"position": plate.position.duplicate(),
 			"center": _center(plate.position),
 			"pressed": pressed.has(plate.id),
 			"visual_state": "FILLED_PRESSED" if pressed.has(plate.id) else "HOLLOW_UNPRESSED",
-		})
+		}
+		if _uses_convergence_cues():
+			snapshot.merge(_dependency_identity(plate.id))
+		snapshots.append(snapshot)
 	snapshots.sort_custom(func(a: Dictionary, b: Dictionary): return a.id < b.id)
 	return snapshots
 
@@ -241,7 +245,10 @@ func _door_snapshots() -> Array:
 		dependency_ids.sort()
 		var pips: Array = []
 		for plate_id in dependency_ids:
-			pips.append({"plate_id": plate_id, "active": pressed.has(plate_id)})
+			var pip := {"plate_id": plate_id, "active": pressed.has(plate_id)}
+			if _uses_convergence_cues():
+				pip.merge(_dependency_identity(plate_id))
+			pips.append(pip)
 		var open := _door_open(door.id)
 		var occupied_by := PackedStringArray()
 		if state.player_position == door.position:
@@ -249,7 +256,7 @@ func _door_snapshots() -> Array:
 		for echo in state.echo_positions:
 			if echo.position == door.position:
 				occupied_by.append(echo.id)
-		snapshots.append({
+		var snapshot := {
 			"id": door.id,
 			"position": door.position.duplicate(),
 			"center": _center(door.position),
@@ -259,9 +266,46 @@ func _door_snapshots() -> Array:
 			"dependency_pips": pips,
 			"occupied_by": Array(occupied_by),
 			"actor_identity_visible": true,
-		})
+		}
+		if _uses_convergence_cues():
+			snapshot["dependency_expression"] = " + ".join(dependency_ids.map(func(plate_id): return _dependency_identity(plate_id).label))
+		snapshots.append(snapshot)
 	snapshots.sort_custom(func(a: Dictionary, b: Dictionary): return a.id < b.id)
 	return snapshots
+
+
+func _echo_snapshots() -> Array:
+	if level.is_empty() or state.is_empty():
+		return []
+	var snapshots: Array = []
+	for echo_state in state.echo_positions:
+		var definition := _echo_definition_by_id(echo_state.id)
+		var overlap_count: int = state.echo_positions.filter(func(other): return other.position == echo_state.position).size()
+		snapshots.append({
+			"id": echo_state.id,
+			"position": echo_state.position.duplicate(),
+			"center": _center(echo_state.position),
+			"delay": int(definition.get("delay", 0)),
+			"badge": "E%d" % int(definition.get("delay", 0)),
+			"outline_style": "SOLID" if int(definition.get("delay", 0)) == 2 else "DOUBLE_DASHED",
+			"overlap_count": overlap_count,
+			"overlap_readable": overlap_count <= 1 or _uses_convergence_cues(),
+		})
+	return snapshots
+
+
+func _uses_convergence_cues() -> bool:
+	if level.get("echoes", []).size() < 2:
+		return false
+	return level.get("doors", []).any(func(door): return door.get("all_plate_ids", []).size() >= 2)
+
+
+func _dependency_identity(plate_id: String) -> Dictionary:
+	var ids: Array = level.get("plates", []).map(func(plate): return plate.id)
+	ids.sort()
+	var index := ids.find(plate_id)
+	var labels := ["A", "B"]
+	return {"label": labels[index] if index >= 0 and index < labels.size() else "?", "shape": "TRIANGLE" if index == 0 else "CIRCLE"}
 
 
 func timeline_visible_for(level_facts: Dictionary, hud_mode: String, completed: bool) -> bool:
@@ -311,13 +355,18 @@ func _draw() -> void:
 	for plate in level.plates:
 		var active: bool = pressed_plate_ids.has(plate.id)
 		var plate_center := _center(plate.position)
-		draw_circle(plate_center, 18, Color("3f3215"))
-		if active:
-			draw_circle(plate_center, 12, Color("fbbf24"))
-			draw_arc(plate_center, 22, 0, TAU, 32, Color("fde68a"), 3)
+		if _uses_convergence_cues() and _dependency_identity(plate.id).shape == "TRIANGLE":
+			_draw_triangle_token(plate_center, active)
 		else:
-			draw_circle(plate_center, 11, Color("111827"))
-			draw_arc(plate_center, 15, 0, TAU, 32, Color("d6a928"), 3)
+			draw_circle(plate_center, 18, Color("3f3215"))
+			if active:
+				draw_circle(plate_center, 12, Color("fbbf24"))
+				draw_arc(plate_center, 22, 0, TAU, 32, Color("fde68a"), 3)
+			else:
+				draw_circle(plate_center, 11, Color("111827"))
+				draw_arc(plate_center, 15, 0, TAU, 32, Color("d6a928"), 3)
+		if _uses_convergence_cues():
+			draw_string(ThemeDB.fallback_font, plate_center + Vector2(-5, 5), _dependency_identity(plate.id).label, HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color("fff7d6"))
 	for door in level.doors:
 		var open: bool = _door_open(door.id)
 		var door_center := _center(door.position)
@@ -339,9 +388,18 @@ func _draw() -> void:
 	for echo in state.echo_positions:
 		var echo_center := _center(echo.position)
 		draw_circle(echo_center, 16, Color("a78bfa", 0.72))
-		draw_arc(echo_center, 20, 0, TAU, 24, Color("ddd6fe"), 2)
-		var echo_letter_center := echo_center + Vector2(10, -8) if echo.position == state.player_position else echo_center
-		_draw_actor_letter(echo_letter_center, "E", Color("f5f3ff"))
+		var definition := _echo_definition_by_id(echo.id)
+		if _uses_convergence_cues() and int(definition.delay) == 4:
+			_draw_dashed_arc(echo_center, 20, Color("ddd6fe"), 2)
+			_draw_dashed_arc(echo_center, 24, Color("c4b5fd"), 2)
+		else:
+			draw_arc(echo_center, 20, 0, TAU, 24, Color("ddd6fe"), 2)
+		if _uses_convergence_cues():
+			var badge_offset := Vector2(5, -20) if int(definition.delay) == 4 else Vector2(-25, -20)
+			draw_string(ThemeDB.fallback_font, echo_center + badge_offset, "E%d" % int(definition.delay), HORIZONTAL_ALIGNMENT_LEFT, -1, 13, Color("f5f3ff"))
+		else:
+			var echo_letter_center := echo_center + Vector2(10, -8) if echo.position == state.player_position else echo_center
+			_draw_actor_letter(echo_letter_center, "E", Color("f5f3ff"))
 	draw_circle(_center(state.player_position), 15, Color("f8fafc"))
 	draw_circle(_center(state.player_position), 7, Color("22d3ee"))
 	_draw_actor_letter(_center(state.player_position), "Y", Color("082f49"))
@@ -356,12 +414,37 @@ func _draw_dependency_pips(door: Dictionary, door_center: Vector2, pressed: Arra
 	var start_x := door_center.x - float(dependency_ids.size() - 1) * 8.0
 	for index in dependency_ids.size():
 		var center := Vector2(start_x + index * 16.0, door_center.y + 34)
-		if pressed.has(dependency_ids[index]):
+		var identity := _dependency_identity(dependency_ids[index]) if _uses_convergence_cues() else {}
+		if _uses_convergence_cues() and identity.shape == "TRIANGLE":
+			_draw_triangle_pip(center, pressed.has(dependency_ids[index]))
+		elif pressed.has(dependency_ids[index]):
 			draw_circle(center, 6, Color("fbbf24"))
 			draw_arc(center, 8, 0, TAU, 20, Color("fef3c7"), 2)
 		else:
 			draw_circle(center, 5, Color("111827"))
 			draw_arc(center, 7, 0, TAU, 20, Color("fbbf24"), 2)
+		if _uses_convergence_cues():
+			draw_string(ThemeDB.fallback_font, center + Vector2(-4, 4), identity.label, HORIZONTAL_ALIGNMENT_LEFT, -1, 10, Color("fff7d6"))
+	if _uses_convergence_cues():
+		draw_string(ThemeDB.fallback_font, door_center + Vector2(27, 5), "A+B", HORIZONTAL_ALIGNMENT_LEFT, -1, 13, Color("fff7d6"))
+
+
+func _draw_triangle_token(center: Vector2, active: bool) -> void:
+	var points := PackedVector2Array([center + Vector2(0, -18), center + Vector2(18, 14), center + Vector2(-18, 14)])
+	draw_colored_polygon(points, Color("fbbf24") if active else Color("111827"))
+	draw_polyline(PackedVector2Array([points[0], points[1], points[2], points[0]]), Color("fde68a") if active else Color("d6a928"), 3)
+
+
+func _draw_triangle_pip(center: Vector2, active: bool) -> void:
+	var points := PackedVector2Array([center + Vector2(0, -7), center + Vector2(7, 6), center + Vector2(-7, 6)])
+	draw_colored_polygon(points, Color("fbbf24") if active else Color("111827"))
+	draw_polyline(PackedVector2Array([points[0], points[1], points[2], points[0]]), Color("fef3c7") if active else Color("fbbf24"), 2)
+
+
+func _draw_dashed_arc(center: Vector2, radius: float, color: Color, width: float) -> void:
+	for index in 12:
+		var start := float(index) * TAU / 12.0
+		draw_arc(center, radius, start, start + TAU / 24.0, 4, color, width)
 
 
 func _draw_echo_feedback() -> void:
@@ -682,6 +765,13 @@ func _plate_by_id(id: String) -> Dictionary:
 	for plate in level.get("plates", []):
 		if plate.id == id:
 			return plate
+	return {}
+
+
+func _echo_definition_by_id(id: String) -> Dictionary:
+	for echo in level.get("echoes", []):
+		if echo.id == id:
+			return echo
 	return {}
 
 

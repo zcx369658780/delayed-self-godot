@@ -10,6 +10,8 @@ Durable project decisions only; live task progress belongs in current docs and r
 
 ## Frozen facts
 
+- Task 0014 Level 7 plan is GPT accepted. Task 0015 implements `two_echo_convergence` at `INTERNAL_PLAYABLE / PENDING GPT REVIEW`: E2/E4, A/B, one A+B Door, `L*=19`, `N*=6 EXACT`, visited 61,975, frontier 21,449, formal SHA-256 `772410d3b8bb807e35472ee2a7d07b703de66e1e0e92ffb4d1ff8433a345d5fd`. Seven-entry progression, controls, reusable cues, eight captures, and 367-assertion/nine-marker aggregate pass. This is not human or candidate acceptance.
+
 - Repository: `zcx369658780/delayed-self-godot`; visibility: public; default branch: `main`.
 - Canonical local root: `D:\Delayed_Self`.
 - Working title: `迟到的我 / Delayed Self`.

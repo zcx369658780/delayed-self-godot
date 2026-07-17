@@ -28,12 +28,13 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0012S project-source synchronization and session handoff checkpoint
 → 0013/0013A corrected baseline and owner-only review-path adjudication
 → 0013B authenticated-owner Level 6 review (GPT accepted internal evidence)
-→ 0014 Level 7 two-ECHO convergence planning (ready for GPT review)
+→ 0014 Level 7 two-ECHO convergence planning (GPT accepted)
+→ 0015 Level 7 `two_echo_convergence` implementation (INTERNAL_PLAYABLE; pending GPT review)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
 
-Tasks 0000–0008, Task 0009AR, Task 0009AV, Task 0010, Task 0011, Task 0011V, Task 0011R, Task 0011RV, Task 0012, and Task 0013B are GPT accepted with recorded boundaries. Task 0009A stopped cleanly when strict literal-WAIT relevance was not established; WAIT remains deferred research. Task 0014 compares three schema-v1 Level 7 candidates and selects `two_echo_convergence`: delay-2/delay-4 ECHOs align on two Plates to open one A+B Door. Timeline is not a teaching goal; Help remains optional; A/B and E2/E4 roles require redundant non-color cues. The plan is pending GPT adjudication and does not authorize implementation. The owner-only playtest constraint remains durable; Level 8 and all production/release surfaces remain separately gated.
+Tasks 0000–0008, Task 0009AR, Task 0009AV, Task 0010, Task 0011, Task 0011V, Task 0011R, Task 0011RV, Task 0012, Task 0013B, and Task 0014 are GPT accepted with recorded boundaries. Task 0009A stopped cleanly; WAIT remains deferred research. Task 0015 implements `two_echo_convergence` with exact `L*=19`, `N*=6 EXACT`, visited 61,975, frontier 21,449, and one required two-ECHO A+B window. It is `INTERNAL_PLAYABLE / PENDING GPT REVIEW`. Timeline is not a teaching goal; Help remains optional; owner-only review and all Level 8/production/release surfaces remain separately gated.
 
 ## Milestone spine
 
