@@ -203,6 +203,18 @@ The owner requested direct operation walkthroughs, but this evidence does not au
 
 Level 7 dependency presentation must combine A/B labels with distinct shapes, E2/E4 badges with distinct outlines, and supplementary color. Overlapping ECHOs preserve both badges/outlines. The cues must remain legible at 960×540, in grayscale, in static screenshots, and during motion. The later owner review is `AUTHENTICATED_OWNER_NOT_FRESH_NOT_INDEPENDENT_LEVEL_7_REVIEW`; do not seek or require a third party under `FRESH_INDEPENDENT_REVIEW_UNAVAILABLE_BY_OWNER_CONSTRAINT`.
 
+## Task 0016 bridge/finale planning disposition
+
+Task 0016 selects `INSERT_BRIDGE_BEFORE_CURRENT_LEVEL_7` and freezes the presentation policy:
+
+```text
+LABEL_SHAPE_PIP_PRIMARY_NO_NEW_LINES
+```
+
+The proposed `echo_spacing_bridge` must teach its spacing-change cause from board state and transition feedback. Timeline remains optional and cannot be a completion dependency. Help remains contextual and non-route; exact moves, branch choices, synchronization counts, and walkthroughs are rejected. Labels, shapes, and pips are primary; color is supplementary; E2/E4 identity remains badge/outline based. No new always-on dotted relationship line may be introduced, and any later change to existing lines requires a separate implementation and capture/test gate.
+
+The policy is planning only. Task 0016 does not modify Gameplay, Help, Timeline, path rendering, viewport, formal data, or project settings.
+
 ## Likely later implementation paths
 
 - `scenes/vertical_slice/vertical_slice.tscn`
