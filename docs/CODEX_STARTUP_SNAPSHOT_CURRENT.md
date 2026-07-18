@@ -1,22 +1,15 @@
 # Codex startup snapshot (CURRENT)
 
 - Status: `CURRENT`
-- Repository: `zcx369658780/delayed-self-godot` (public)
-- Default branch: `main`
-- Local root: `D:\Delayed_Self`
-- Working title: `迟到的我 / Delayed Self`
-- Product: offline single-player; primary target Windows
-- Latest accepted gate: Task 0017 blocker adjudication (`TASK_0017_BLOCKER_ACCEPTED_LEVEL_SELECT_SCROLLABILITY_PREREQUISITE_REQUIRED`)
-- Current gate: Task 0017P Level Select scrollability repair ready for GPT review
-- Last completed task: `tasks/0017P_level_select_scrollability_repair.md`
-- Current report: `docs/reports/0017P_LEVEL_SELECT_SCROLLABILITY_REPAIR_REPORT.md`
-- Current plan: `docs/level_design/LEVEL_8_FINALE_AND_DIFFICULTY_BRIDGE_PLAN_CURRENT.md`
-- Next recommended gate: GPT revision adjudication; bounded bridge implementation only if accepted
+- Repository: `zcx369658780/delayed-self-godot`
+- Branch/root: `main` / `D:\Delayed_Self`
+- Current gate: Task 0017C bridge implementation ready for GPT review
+- Latest accepted gate: `TASK_0017P_LEVEL_SELECT_SCROLLABILITY_REPAIR_ACCEPTED`
+- Last completed task: `tasks/0017C_echo_spacing_bridge_implementation_continuation.md`
+- Current report: `docs/reports/0017_ECHO_SPACING_BRIDGE_IMPLEMENTATION_REPORT.md`
+- Current validation: `docs/level_design/validation/ECHO_SPACING_BRIDGE_VALIDATION.md`
+- Next gate: GPT implementation adjudication
 
-## Startup
+Read `AGENTS.md`, this snapshot, active task, Task 0017C, its report/validation, handoff, and live Git truth.
 
-Follow `AGENTS.md`, then this snapshot, the active-task document, Task 0017P, its repair report, the Task 0017 blocker adjudication, handoff, and live Git truth. Task 0017P repairs App Shell presentation only and does not authorize bridge/catalog/finale implementation.
-
-## Exact current facts
-
-Level 7 remains GPT accepted at `INTERNAL_PLAYABLE` with exact machine facts unchanged: `L*=19`, `N*=6 EXACT`, visited 61,975, frontier 21,449, SHA-256 `772410d3b8bb807e35472ee2a7d07b703de66e1e0e92ffb4d1ff8433a345d5fd`. Task 0017P adds a bounded scroll region with fixed Title/Back and dynamic focus navigation. Product catalog data remains seven entries. Task 0017 remains blocked until this prerequisite receives GPT acceptance and a fresh continuation task is issued.
+`echo_spacing_bridge` is implemented as sequence 7 with `L*=16`, `N*=12 EXACT`, visited 19,059, frontier 3,734, and SHA-256 `805cdc05ea9b3805189ba7be4938cb7ede4e7056b9ae9a7e911df96a801d58ee`. The catalog has eight entries; byte-identical `two_echo_convergence` is sequence 8 and sole final. Aggregate validation passes 550 assertions / 9 vectors with 12 markers. Status is `INTERNAL_PLAYABLE / PASS_FOR_GPT_REVIEW`, not acceptance.

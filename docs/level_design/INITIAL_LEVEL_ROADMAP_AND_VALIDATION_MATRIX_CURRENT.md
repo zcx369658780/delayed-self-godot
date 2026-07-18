@@ -1,8 +1,12 @@
 # Initial level roadmap and validation matrix (CURRENT)
 
-- Tracked implemented spine: exactly 7 formal levels including tutorials
-- Planned sequence: Task 0016R revises the uncreated mandatory `echo_spacing_bridge` to a simplified two-Plate A+B tutorial before byte-identical `two_echo_convergence`, with `signal_convergence` preserved as a later finale concept
-- Scope: `level_v1` mechanics only; all uncreated levels remain concepts, not solvability claims
+## Task 0017C implementation fact
+
+The mandatory bridge now exists as sequence 7: `echo_spacing_bridge / Diverging Echoes / 错位回声`, `L*=16`, `N*=12 EXACT`, visited 19,059, frontier 3,734. It proves required spacing divergence and E2→A/E4→B A+B crossing. Existing `two_echo_convergence` remains byte-identical and shifts to sequence 8 as sole final. GPT review is pending.
+
+- Tracked implemented spine: exactly 8 formal levels including tutorials
+- Implemented sequence: Task 0017C adds the mandatory `echo_spacing_bridge` as a simplified two-Plate A+B tutorial before byte-identical `two_echo_convergence`, with `signal_convergence` preserved as a later finale concept
+- Scope: `level_v1` mechanics only; remaining uncreated levels remain concepts, not solvability claims
 - Goal predicate for every level: current player reaches EXIT
 
 ## Status boundary
@@ -35,7 +39,7 @@
 | 4 | `door_one_turn_late` / 门晚一回合 | door state committed now affects entry next turn; blocked history remains recorded | one, d=2 | 1 / 1 | compact folded corridor forces closed-snapshot blocking, then open-snapshot entry | not required | required | easy | actual `L*=9` | actual `N*=7 (EXACT)` | `STANDARD_COMPACT` | preserve |
 | 5 | `two_keys_one_door` / 两把时间钥匙 | combinational AND door with simultaneous plate occupancy | one, d=3 | 2 / 1 AND | ECHO and YOU occupy distinct Plates together, then YOU enters on the committed next turn | not required | required | medium | actual `L*=12` | actual `N*=1 (EXACT)` | `STANDARD_COMPACT` | preserve |
 | 6 | `staggered_doors` / 错开的门 | two doors with different plate sets; plan a dependency chain | one, d=3 | 2 / 2 with distinct one-Plate reference sets | one recorded route creates two distinct ECHO-held windows; YOU crosses each on the next input | not required; accepted witness has none | required and machine-proven | first core challenge; GPT accepted `INTERNAL_PLAYABLE`; owner review recorded | actual `L*=15` | actual `N*=4 (EXACT)` | `STANDARD_COMPACT` | preserve; owner recommends harder Level 7 |
-| 7 proposed | `echo_spacing_bridge` / 错位回声 | isolate terrain/blocking-induced spacing change before convergence | two shared-spawn, d=2 and d=4 | 2 / 1 A+B AND | early `BLOCKED/MOVED` divergence phases E2→A and E4→B; YOU crosses from the next open snapshot | not required or targeted | both required to hold separated A+B while YOU approaches | Task 0016R revised target; uncreated | prospective 13–16 | prospective 2–32 `EXACT` | labels/shapes/pips primary; no new lines | mandatory bridge if GPT accepts |
+| 7 implemented | `echo_spacing_bridge` / 错位回声 | isolate terrain/blocking-induced spacing change before convergence | two shared-spawn, d=2 and d=4 | 2 / 1 A+B AND | early `BLOCKED/MOVED` divergence phases E2→A and E4→B; YOU crosses from the next open snapshot | not required | both required to hold separated A+B while YOU approaches | Task 0017C ready for GPT review | 16 exact | 12 `EXACT` | labels/shapes/pips primary; no new lines | retain pending GPT adjudication |
 | 8 proposed shift | `two_echo_convergence` / 双影汇流 | combine two delays through one readable simultaneous convergence | two, d=2 and d=4 | 2 / 1 A+B AND | E2 on A and E4 on B create a one-turn committed opening | not required; selected witness has none | both ECHOs individually necessary and machine-proven | accepted formal file remains byte-identical; catalog-only shift proposed | actual `L*=19` | actual `N*=6 EXACT` | transition-derived spacing/outcome cue preserved; residual difficulty/Help/Timeline/clutter risks | preserve |
 | 9 future | `signal_convergence` | synthesize two delays across single and A+B Door stages | two, provisionally d=2 and d=4 | 3 / 2 mixed single + AND | establish an early window, then align both delayed actors for final convergence | not a teaching goal | future proof required | concept only; separate gate | unverified | unverified | labels/shapes/pips primary | finale role preserved |
 

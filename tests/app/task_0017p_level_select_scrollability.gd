@@ -19,13 +19,13 @@ func run(tree: SceneTree) -> Dictionary:
 
 func _test_product_catalog(tree: SceneTree) -> void:
 	var loaded := CatalogLoader.new().load_file("res://data/catalog/level_catalog_v1.json")
-	_expect(loaded.ok and loaded.catalog.entries.size() == 7, "Task 0017P keeps the exact seven-entry product catalog")
+	_expect(loaded.ok and loaded.catalog.entries.size() == 8, "Task 0017P supports the exact eight-entry product catalog")
 	if not loaded.ok:
 		return
 	var initial_progress = ProgressStore.new(loaded.catalog)
 	var initial = await _spawn_level_select(tree, loaded.catalog.entries, initial_progress)
 	var initial_snapshot: Dictionary = initial.get_screen_snapshot()
-	_expect(initial_snapshot.entries.size() == 7 and initial_snapshot.highest_unlocked_id == "tutorial_reach_exit", "product initial progress identifies only the first unlocked entry")
+	_expect(initial_snapshot.entries.size() == 8 and initial_snapshot.highest_unlocked_id == "tutorial_reach_exit", "product initial progress identifies only the first unlocked entry")
 	_expect(initial_snapshot.scroll.value == 0 and initial_snapshot.entries[0].intersects_scroll, "product initial progress remains at the top and does not jump to locked tail")
 	_expect(_fixed_regions_valid(initial_snapshot), "product title, scroll region, and Back are bounded and non-overlapping")
 	_expect(initial_snapshot.scroll.horizontal_value == 0 and initial_snapshot.scroll.horizontal_maximum == 0, "product list has no horizontal scrolling or overflow")
@@ -38,7 +38,7 @@ func _test_product_catalog(tree: SceneTree) -> void:
 	var completed = await _spawn_level_select(tree, loaded.catalog.entries, completed_progress)
 	var completed_snapshot: Dictionary = completed.get_screen_snapshot()
 	_expect(completed_snapshot.highest_unlocked_id == "two_echo_convergence" and completed_snapshot.entries[-1].intersects_scroll, "product highest-sequence unlocked entry is auto-visible")
-	await _assert_every_entry_focus_reachable(tree, completed, 7, "product")
+	await _assert_every_entry_focus_reachable(tree, completed, 8, "product")
 	completed.queue_free()
 	await tree.process_frame
 
@@ -144,7 +144,7 @@ func _test_app_root_and_window(tree: SceneTree) -> void:
 	await tree.process_frame
 	await tree.process_frame
 	var snapshot: Dictionary = app.get_active_screen().get_screen_snapshot()
-	_expect(app.get_current_route() == "LEVEL_SELECT" and snapshot.entries.size() == 7, "AppRoot still routes to the product Level Select")
+	_expect(app.get_current_route() == "LEVEL_SELECT" and snapshot.entries.size() == 8, "AppRoot still routes to the product Level Select")
 	_expect(_fixed_regions_valid(snapshot) and snapshot.scroll.horizontal_maximum == 0, "AppRoot Level Select exposes the bounded scroll contract")
 	var presentation: Dictionary = app.get_window_presentation_snapshot(Vector2i(1280, 800))
 	_expect(presentation.content_rect == Rect2(0, 40, 1280, 720), "accepted resized window transform remains unchanged")
@@ -191,7 +191,7 @@ func _assert_every_entry_focus_reachable(tree: SceneTree, screen: Node, count: i
 
 
 func _product_id(index: int) -> String:
-	return ["tutorial_reach_exit", "tutorial_echo_bridge", "vertical_slice_delay_3", "door_one_turn_late", "two_keys_one_door", "staggered_doors", "two_echo_convergence"][index]
+	return ["tutorial_reach_exit", "tutorial_echo_bridge", "vertical_slice_delay_3", "door_one_turn_late", "two_keys_one_door", "staggered_doors", "echo_spacing_bridge", "two_echo_convergence"][index]
 
 
 func _entry_button(screen: Node, id: String) -> Button:

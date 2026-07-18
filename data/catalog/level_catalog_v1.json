@@ -62,12 +62,22 @@
       "final_level": false
     },
     {
-      "level_id": "two_echo_convergence",
-      "level_path": "res://data/levels/two_echo_convergence.json",
+      "level_id": "echo_spacing_bridge",
+      "level_path": "res://data/levels/echo_spacing_bridge.json",
       "sequence": 7,
-      "display_title_key": "level.two_echo_convergence.title",
+      "display_title_key": "level.echo_spacing_bridge.title",
       "classification": "standard",
       "unlock_prerequisites": ["staggered_doors"],
+      "hud_mode": "STANDARD_COMPACT",
+      "final_level": false
+    },
+    {
+      "level_id": "two_echo_convergence",
+      "level_path": "res://data/levels/two_echo_convergence.json",
+      "sequence": 8,
+      "display_title_key": "level.two_echo_convergence.title",
+      "classification": "standard",
+      "unlock_prerequisites": ["echo_spacing_bridge"],
       "hud_mode": "STANDARD_COMPACT",
       "final_level": true
     }

@@ -1,5 +1,9 @@
 # Five-level difficulty recovery and Levels 6–8 plan
 
+## Task 0017C implemented bridge
+
+The curriculum bridge is implemented at `INTERNAL_PLAYABLE / PASS_FOR_GPT_REVIEW`: `echo_spacing_bridge`, sequence 7, `L*=16`, `N*=12 EXACT`, visited 19,059, frontier 3,734. It provides the bounded spacing-change lesson before byte-identical `two_echo_convergence`, now sequence 8. Owner difficulty evidence and any future finale remain separate gates.
+
 - Status: Levels 6–7 are GPT accepted at `INTERNAL_PLAYABLE`; Task 0015R/0015RV close the false-invariant blocker within their evidence boundary. GPT rejected Task 0016's one-Plate dual-necessity contract; Task 0016R revises the bridge to a simplified two-Plate A+B tutorial.
 - Frozen authority: [`simulation_v1`](../game_design/GAMEPLAY_SIMULATION_CONTRACT_CURRENT.md), `level_v1`, and seven accepted formal levels.
 - Human evidence: Task 0013B Level 6 P0=0/P1=0/P2=3/P3=1; Task 0015V Level 7 `GAVE_UP`, P0=0/P1=0/P2=4/P3=4.
@@ -97,9 +101,9 @@ Strict load, solve, replay, exact restart, all-shortest Door event enumeration, 
 
 Task 0013B owner evidence records unassisted completion at visible Turn 16 in approximately 1 minute with two restarts. The owner understood delay-3 replay and both separate Door events, judged the level harder than Level 5, recommended preserving it, and supported a more complex Level 7. The owner also reported that same-colored switches/Doors made order harder to remember, Timeline was unintuitive and unhelpful, and text Help was hard to understand. These are P2 planning inputs, not implementation authority. The review is not fresh or independent and does not establish population difficulty or fun.
 
-## Proposed sequence 7 bridge — `echo_spacing_bridge`
+## Implemented sequence 7 bridge — `echo_spacing_bridge`
 
-- Status: `MECHANICAL_NECESSITY_REVISION_READY_FOR_GPT_REVIEW`; uncreated and unverified.
+- Status: `INTERNAL_PLAYABLE / PASS_FOR_GPT_REVIEW`.
 - Display title: `Diverging Echoes / 错位回声`.
 - Role: isolate route/terrain/blocking-induced ECHO spacing change before simultaneous A+B convergence.
 - Withdrawn contract: one Plate plus one Door cannot make both ECHOs individually necessary under actor independence/legal overlap.
@@ -107,7 +111,7 @@ Task 0013B owner evidence records unassisted completion at visible Turn 16 in ap
 - Mental model: make one ECHO `BLOCKED` while the other `MOVED`, then use the changed phase to place E2 on A and E4 on B while YOU is already at the Door approach.
 - Necessity lemma: each Plate is at least two traversable moves from the Door. YOU cannot leave a substituted Plate and enter during the one open snapshot; one remaining ECHO cannot occupy two cells; overlap presses at most one Plate. Removing either ECHO therefore destroys the A+B crossing.
 - Proof burden: every shortest solution contains the early spacing change and E2→A/E4→B result; no-ECHO and both single-ECHO controls complete-unsolved; YOU substitution, overlap, equal-delay, dependency, articulation, and route controls pass.
-- Prospective bands: `L*=13–16`, `N*=2–32 EXACT`, 3,000–25,000 visited states, frontier 500–5,000, 2–3 meaningful decisions, and at least two recoverable alternatives.
+- Measured result: `L*=16`, `N*=12 EXACT`, 19,059 visited states, frontier 3,734, three meaningful decisions, and three exact recoverable alternatives.
 - Product policy: board/transition feedback primary, Timeline optional, Help contextual/non-route, and `LABEL_SHAPE_PIP_PRIMARY_NO_NEW_LINES`.
 
 The repeated A+B entity grammar is acceptable only as deliberate scaffolding with earlier divergence, lower measured search burden, fewer decisions, and simpler recovery than current Level 7. The bridge must not require literal WAIT, use corridor/collision padding, or consume the future finale's mixed single/AND two-stage role. Full target and proof package: [`LEVEL_8_FINALE_AND_DIFFICULTY_BRIDGE_PLAN_CURRENT.md`](LEVEL_8_FINALE_AND_DIFFICULTY_BRIDGE_PLAN_CURRENT.md).

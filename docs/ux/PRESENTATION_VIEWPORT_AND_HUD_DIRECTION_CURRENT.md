@@ -1,5 +1,9 @@
 # Presentation, viewport, and HUD direction (CURRENT)
 
+## Task 0017C bridge presentation evidence
+
+The implemented bridge reuses accepted A/B labels, shapes, pips, E2/E4 badges/outlines, and transition-derived spacing cue without presentation-source changes. Twelve fresh native 960×540 captures cover stable/no-cue, required `E2 BLOCKED · E4 MOVED`, recovery, A+B, open-snapshot crossing, eight-entry tail focus, reduced motion, and grayscale. Timeline remains optional and Help remains zero-turn/non-route. Task 0017P scrolling exposes sequences 7 and 8 without horizontal overflow.
+
 ## Task 0017P Level Select scalability
 
 The accepted 960×540 logical viewport now uses a fixed Level Select title and Back action around a bounded vertical entry `ScrollContainer`. Entry count is not hardcoded. Mouse wheel/scrollbar and a generated keyboard/controller focus chain reach every enabled entry; disabled entries remain skipped and unselectable. The highest unlocked entry is revealed after layout without taking focus or changing progress. Horizontal scrolling is disabled. Seven-, eight-, and twelve-entry native evidence confirms the tail remains reachable while Title and Back stay fixed.

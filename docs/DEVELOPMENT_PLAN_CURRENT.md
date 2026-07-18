@@ -37,12 +37,13 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0016 Level 8 finale sequence and difficulty-bridge planning (GPT requested mechanical correction)
 → 0016R bridge mechanical-necessity plan revision (ready for GPT review)
 → 0017 bridge implementation stopped on Level Select presentation blocker (GPT accepted stop)
-→ 0017P Level Select scrollability prerequisite repair (ready for GPT review)
+→ 0017P Level Select scrollability prerequisite repair (GPT accepted)
+→ 0017C bridge implementation continuation (ready for GPT review)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
 
-Tasks 0000–0008, Task 0009AR, Task 0009AV, Task 0010, Task 0011, Task 0011V, Task 0011R, Task 0011RV, Task 0012, Task 0013B, Task 0014, Task 0015, Task 0015D, and Task 0015R are GPT accepted with recorded boundaries. Task 0009A stopped cleanly; WAIT remains deferred research. Task 0015RV closes the false-invariant blocker for assisted owner evidence. Task 0016R's revised bridge plan is accepted. Task 0017 correctly stopped because the fixed Level Select could not reach an eighth entry. Task 0017P repairs that App Shell prerequisite and awaits GPT review; bridge implementation remains closed until a fresh continuation task.
+Tasks 0000–0008, Task 0009AR, Task 0009AV, Task 0010, Task 0011, Task 0011V, Task 0011R, Task 0011RV, Task 0012, Task 0013B, Task 0014, Task 0015, Task 0015D, Task 0015R, Task 0016R, and Task 0017P are GPT accepted with recorded boundaries. Task 0009A stopped cleanly; WAIT remains deferred research. Task 0017C implements the exact bridge with complete machine and capture evidence and awaits GPT review.
 
 ## Milestone spine
 

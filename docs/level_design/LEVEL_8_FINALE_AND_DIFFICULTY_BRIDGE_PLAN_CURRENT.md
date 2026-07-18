@@ -1,11 +1,15 @@
 # Level 8 finale and difficulty-bridge plan (CURRENT)
 
-- Status: `MECHANICAL_NECESSITY_REVISION_READY_FOR_GPT_REVIEW`
+## Task 0017C implementation result
+
+The accepted bridge target is formally implemented as exact reconstruction `echo_spacing_bridge / Diverging Echoes / 错位回声`: 8×7, shared-spawn E2/E4 delays 2/4, two Plates, one A+B Door, one player-only EXIT, `L*=16`, `N*=12 EXACT`, visited 19,059, frontier 3,734. All shortest paths satisfy the frozen divergence and crossing obligations; complete no-ECHO and single-ECHO controls are unsolved. The eight-entry catalog places it at sequence 7 and shifts byte-identical `two_echo_convergence` to sequence 8. `signal_convergence` remains unimplemented and unauthorized.
+
+- Status: `BRIDGE_IMPLEMENTED_READY_FOR_GPT_REVIEW`
 - Task: `0016R`
 - Parent adjudication: `TASK_0016_PLAN_REQUEST_CHANGES_SCHEMA_V1_NECESSITY_CONTRADICTION`
 - Sequence decision: `INSERT_BRIDGE_BEFORE_CURRENT_LEVEL_7`
 - Selected bridge grammar: `SIMPLIFIED_TWO_PLATE_AND_TUTORIAL`
-- Exact next formal target: `echo_spacing_bridge / Diverging Echoes / 错位回声`
+- Implemented formal target: `echo_spacing_bridge / Diverging Echoes / 错位回声`
 - Future finale: `signal_convergence`, preserved as a later sequence-9 concept
 - Scope: planning and documentation only
 
@@ -74,7 +78,7 @@ Credible necessity lemma:
 - Removing E4 yields the symmetric two-actor insufficiency and destroys completion.
 - Delay/terrain phase assigns the intended shortest-solution roles E2→A and E4→B; complete single-ECHO searches, all-shortest traces, and YOU-substitution controls must later prove the authored geometry.
 
-This is a contract-level feasibility argument, not proof that an uncreated layout satisfies it.
+This was the contract-level feasibility argument; Task 0017C now supplies the separate machine proof for the implemented layout.
 
 Differentiation:
 
@@ -359,18 +363,10 @@ Stop if the target requires a new mechanic, schema/runtime/solver change, actor-
 
 Return to planning if no compact layout proves both single-ECHO controls complete-unsolved while remaining materially below current Level 7. Do not fall back to the withdrawn one-Plate contract or the observational second ECHO.
 
-### Non-claims
+### Current non-claims
 
-This revision does not claim that:
-
-- `echo_spacing_bridge` exists, loads, solves, meets any metric, or is fun;
-- the necessity lemma is machine proof of an uncreated layout;
-- candidate scores are empirical;
-- owner evidence is fresh or independent;
-- current Level 7 or catalog changed;
-- `signal_convergence` is implemented or accepted;
-- bridge/finale implementation, Help/Timeline redesign, production, export, release, or submission is authorized.
+Task 0017C proves the bridge exists, loads, solves, and meets the frozen machine bands. It does not claim fun/balance acceptance, GPT acceptance, owner acceptance, fresh or independent evidence, `signal_convergence` implementation, candidate readiness, export, release, or submission readiness.
 
 ## 11. Next gate
 
-After GPT accepts this mechanical-necessity revision, the next gate is one bounded implementation and complete validation task for the revised `echo_spacing_bridge` plus explicit catalog migration. The future finale remains closed.
+Task 0017C implementation and catalog migration are ready for GPT adjudication. The future finale remains closed.

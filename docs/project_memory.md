@@ -1,5 +1,9 @@
 # Project memory
 
+## Task 0017C bridge implementation continuation
+
+Task 0017C exactly reconstructed external `candidate_07.json` as formal `echo_spacing_bridge`: `L*=16`, `N*=12 EXACT`, visited 19,059, frontier 3,734, SHA-256 `805cdc05ea9b3805189ba7be4938cb7ede4e7056b9ae9a7e911df96a801d58ee`. All shortest paths include required `BLOCKED/MOVED` spacing change, E2→A/E4→B, A+B result, and next-input Door crossing. No-ECHO/E2-only/E4-only are complete unsolved. Catalog is eight entries; bridge is sequence 7 and byte-identical `two_echo_convergence` is sequence 8 and sole final. Focused 61 and aggregate 550 assertions / 9 vectors pass. Status is `INTERNAL_PLAYABLE / PASS_FOR_GPT_REVIEW`, not acceptance.
+
 Durable project decisions only; live task progress belongs in current docs and reports.
 
 ## Task 0017P Level Select scalability decision
