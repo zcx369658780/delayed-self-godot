@@ -1,5 +1,9 @@
 # Level 8 finale and difficulty-bridge plan (CURRENT)
 
+## Task 0017V owner evidence
+
+The bridge is machine-valid but not owner-accepted as a smooth curriculum step. The owner eventually completed unassisted at Turn 37 and correctly executed the intended spacing change, yet first gave up after more than 20 restarts and still could not explain YOU-substitution exclusion. Recommendation B freezes finale planning and requests a separate bounded bridge difficulty/Help repair-planning gate.
+
 ## Task 0017C implementation result
 
 The accepted bridge target is formally implemented as exact reconstruction `echo_spacing_bridge / Diverging Echoes / 错位回声`: 8×7, shared-spawn E2/E4 delays 2/4, two Plates, one A+B Door, one player-only EXIT, `L*=16`, `N*=12 EXACT`, visited 19,059, frontier 3,734. All shortest paths satisfy the frozen divergence and crossing obligations; complete no-ECHO and single-ECHO controls are unsolved. The eight-entry catalog places it at sequence 7 and shifts byte-identical `two_echo_convergence` to sequence 8. `signal_convergence` remains unimplemented and unauthorized.

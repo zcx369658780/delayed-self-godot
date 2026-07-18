@@ -1,5 +1,9 @@
 # Presentation, viewport, and HUD direction (CURRENT)
 
+## Task 0017V owner presentation evidence
+
+The owner found MOVED/BLOCKED/WAITED, A/B, E2/E4, and A+B readable and reported no false cue or movement contradiction. Help and Timeline were used during the failed bridge phase but did not help. Dotted lines felt unnecessary. The owner requested a simpler teaching room and useful mechanism explanation before finale planning; no presentation or Help change is authorized by this review.
+
 ## Task 0017C bridge presentation evidence
 
 The implemented bridge reuses accepted A/B labels, shapes, pips, E2/E4 badges/outlines, and transition-derived spacing cue without presentation-source changes. Twelve fresh native 960×540 captures cover stable/no-cue, required `E2 BLOCKED · E4 MOVED`, recovery, A+B, open-snapshot crossing, eight-entry tail focus, reduced motion, and grayscale. Timeline remains optional and Help remains zero-turn/non-route. Task 0017P scrolling exposes sequences 7 and 8 without horizontal overflow.

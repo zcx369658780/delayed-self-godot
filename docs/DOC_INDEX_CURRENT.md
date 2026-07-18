@@ -5,7 +5,7 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0017C`](../tasks/0017C_echo_spacing_bridge_implementation_continuation.md) — current bridge implementation review gate
+4. [`Task 0017V`](../tasks/0017V_owner_bridge_sequence_review.md) — current owner bridge sequence review gate
 5. [`DEVELOPMENT_PLAN_CURRENT.md`](DEVELOPMENT_PLAN_CURRENT.md) — milestone spine and near-term gates
 6. [`HANDOFF_MASTER_CURRENT.md`](HANDOFF_MASTER_CURRENT.md) — current continuation point
 7. [`project_memory.md`](project_memory.md) — durable decisions
@@ -29,6 +29,8 @@
 
 ## Compliance and reports
 
+- [`Task 0017V owner bridge sequence review`](reviews/0017V_OWNER_BRIDGE_SEQUENCE_REVIEW.md)
+- [`Task 0017V owner bridge sequence review report`](reports/0017V_OWNER_BRIDGE_SEQUENCE_REVIEW_REPORT.md)
 - [`Task 0017C bridge implementation report`](reports/0017_ECHO_SPACING_BRIDGE_IMPLEMENTATION_REPORT.md)
 - [`Echo Spacing Bridge validation`](level_design/validation/ECHO_SPACING_BRIDGE_VALIDATION.md)
 - [`Task 0017P Level Select scrollability repair report`](reports/0017P_LEVEL_SELECT_SCROLLABILITY_REPAIR_REPORT.md)

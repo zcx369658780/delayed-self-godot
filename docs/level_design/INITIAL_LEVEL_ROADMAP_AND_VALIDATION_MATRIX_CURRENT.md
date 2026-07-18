@@ -1,5 +1,9 @@
 # Initial level roadmap and validation matrix (CURRENT)
 
+## Task 0017V owner disposition
+
+Owner evidence does not validate the bridge as a successful difficulty step. The owner eventually completed at Turn 37 and learned the intended spacing manipulation, but only after an initial give-up and more than 30 total reported restarts. Preserve the mechanical role; request bounded simplification/Help planning before finale planning.
+
 ## Task 0017C implementation fact
 
 The mandatory bridge now exists as sequence 7: `echo_spacing_bridge / Diverging Echoes / 错位回声`, `L*=16`, `N*=12 EXACT`, visited 19,059, frontier 3,734. It proves required spacing divergence and E2→A/E4→B A+B crossing. Existing `two_echo_convergence` remains byte-identical and shifts to sequence 8 as sole final. GPT review is pending.

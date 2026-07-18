@@ -1,5 +1,9 @@
 # Five-level difficulty recovery and Levels 6–8 plan
 
+## Task 0017V owner sequence result
+
+The implemented bridge did not smooth the owner difficulty curve in its current form. Level 6 took about 4 seconds; the bridge caused an initial give-up after more than 20 restarts and later completion at Turn 37 after 10 more restarts. The owner eventually learned the intended E4-blocked/E2-moved phase manipulation, but Help/Timeline were ineffective. Recommendation B preserves the mechanic and requests bounded difficulty/Help repair planning before finale planning.
+
 ## Task 0017C implemented bridge
 
 The curriculum bridge is implemented at `INTERNAL_PLAYABLE / PASS_FOR_GPT_REVIEW`: `echo_spacing_bridge`, sequence 7, `L*=16`, `N*=12 EXACT`, visited 19,059, frontier 3,734. It provides the bounded spacing-change lesson before byte-identical `two_echo_convergence`, now sequence 8. Owner difficulty evidence and any future finale remain separate gates.

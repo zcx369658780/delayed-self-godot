@@ -1,17 +1,15 @@
 # Handoff master (CURRENT)
 
-Task 0017C is complete and ready for GPT review. Read current startup/active-task documents, Task 0017C, its implementation report and validation, and live Git truth.
+Task 0017V is complete and recommends B: bounded bridge presentation/difficulty repair before finale planning.
 
-```text
-echo_spacing_bridge / Diverging Echoes / 错位回声
-8x7; shared-spawn E2/E4 delays 2/4
-A [5,3]; B [6,5]; A+B Door [6,2]; EXIT [6,1]
-L*=16; N*=12 EXACT; visited=19059; frontier=3734
-SHA-256=805cdc05ea9b3805189ba7be4938cb7ede4e7056b9ae9a7e911df96a801d58ee
-```
+Key owner evidence:
 
-All shortest paths contain required spacing divergence, E2→A/E4→B, and following-input crossing. No-ECHO/E2-only/E4-only are complete unsolved. Catalog is eight entries; bridge is sequence 7 and byte-identical `two_echo_convergence` is sequence 8 and sole final.
+- Level 6: completed unassisted, Turn 16, about 4 seconds, no restart, no Help; lesson understood as Door order.
+- Bridge initial phase: gave up unassisted after more than 20 restarts; Help and Timeline did not help.
+- Bridge revisit: completed without operator route assistance at Turn 37 after about 5 additional minutes and 10 additional restarts.
+- Correct transfer: Door/terrain changes spacing; E4 blocked while E2 moved; later E2→A/E4→B and next-input crossing.
+- Remaining gap: owner could not explain why YOU cannot substitute for one ECHO.
+- Sequence judgment: not smooth; bridge should be simpler; difficulty and Help should be addressed first.
+- Findings: P0=0, P1=0, P2=4, P3=1.
 
-Focused validation passes 61 assertions. Aggregate passes 550 assertions / 9 vectors with all 12 markers and only expected `LEVEL_ID_MISMATCH`. Twelve native captures are under `D:\Delayed_Self_Evidence\0017_echo_spacing_bridge\continuation_0017C\`.
-
-Do not conduct owner review or begin finale, Help/Timeline redesign, new mechanics, production, export, release, or submission until a fresh task follows GPT adjudication.
+Read Task 0017V, its review/report, current startup/active-task documents, and live Git truth. Do not implement any repair or begin finale planning without a fresh GPT-issued task.
