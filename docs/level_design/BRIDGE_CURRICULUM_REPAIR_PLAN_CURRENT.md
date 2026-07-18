@@ -1,5 +1,9 @@
 # Bridge curriculum repair plan (CURRENT)
 
+## Task 0017RA gate disposition
+
+Policy A is selected: retain strict complete-unsolved equal-delay 2/2 and 4/4 controls. The `[5,4]`-closed near candidate is rejected not only by policy but by direct curriculum evidence: all completed augmented classes use YOU substitution, and a completed class bypasses the intended YOU-free crossing chain. A future geometry task requires a larger but still bounded topology search and must satisfy both the strict proxy and all direct curriculum gates. No implementation is authorized.
+
 ## Status and evidence boundary
 
 Status: `PLANNING_ONLY / BRIDGE_CURRICULUM_NOT_ACCEPTED_PENDING_BOUNDED_REPAIR`.

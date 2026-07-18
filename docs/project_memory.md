@@ -1,5 +1,9 @@
 # Project memory
 
+## Task 0017RA equal-delay gate adjudication
+
+Task 0017RA selects policy A and retains complete-unsolved 2/2 and 4/4 equal-delay controls. Equal-delay shared-spawn ECHOs remain overlapped by induction because they receive the same history action and resolve from the same cell against the same Door snapshot; they cannot occupy distinct A/B cells. Correctly normalized near-candidate controls are 2/2 complete-unsolved at 175/45 and 4/4 complete-unsolved at 4,375/1,125. The `[5,4]`-closed actual candidate still fails: complete 441,222-state augmented search finds a completion without the intended crossing chain and YOU substitution in every completed class. The accepted bridge remains unchanged; finale remains blocked.
+
 ## Task 0017D bridge curriculum repair planning
 
 Task 0017D selects `MINIMAL_BRIDGE_GEOMETRY_PLUS_CONTEXTUAL_CAUSAL_HELP` for GPT review; `SIMPLIFIED_GEOMETRY_WITHOUT_HELP_CHANGE` is the sole fallback. The accepted bridge remains unchanged until a later task. External witness-prefix diagnostics found recoveries at 8/6/4/2 actions from prefixes 8/10/12/14, so restart-only recovery is not a machine fact; human discoverability remains unproven. Help must explain only a reusable blocker experiment and ECHO/YOU role constraint, without route disclosure; Timeline remains optional. Finale planning remains blocked.
