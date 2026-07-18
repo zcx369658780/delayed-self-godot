@@ -1,6 +1,6 @@
 # Handoff master (CURRENT)
 
-Task 0017V is complete and recommends B: bounded bridge presentation/difficulty repair before finale planning.
+Task 0017D is complete and selects a bounded repair-planning primary: minimal bridge geometry plus contextual causal Help. Fallback: simplified geometry without Help change.
 
 Key owner evidence:
 
@@ -12,4 +12,4 @@ Key owner evidence:
 - Sequence judgment: not smooth; bridge should be simpler; difficulty and Help should be addressed first.
 - Findings: P0=0, P1=0, P2=4, P3=1.
 
-Read Task 0017V, its review/report, current startup/active-task documents, and live Git truth. Do not implement any repair or begin finale planning without a fresh GPT-issued task.
+Read Task 0017D, `BRIDGE_CURRICULUM_REPAIR_PLAN_CURRENT.md`, its diagnostic report, Task 0017V review/adjudication, current startup/active-task documents, and live Git truth. Do not implement any repair or begin finale planning without a fresh GPT-issued task.

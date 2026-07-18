@@ -40,11 +40,12 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0017P Level Select scrollability prerequisite repair (GPT accepted)
 → 0017C bridge implementation continuation (ready for GPT review)
 → 0017V authenticated-owner bridge sequence review (recommendation B ready for GPT review)
+→ 0017D bridge curriculum difficulty and Help repair planning (primary D ready for GPT review)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
 
-Tasks through Task 0017C have recorded acceptance boundaries. Task 0017V records owner completion and correct eventual mechanism transfer but finds the Level 6→bridge jump unsmoothed, Help/Timeline ineffective, and YOU-substitution reasoning incomplete. Recommendation B requests a separately authorized bounded repair-planning gate before finale planning.
+Tasks through Task 0017C have recorded acceptance boundaries. Task 0017V records owner completion and correct eventual mechanism transfer but finds the Level 6→bridge jump unsmoothed, Help/Timeline ineffective, and YOU-substitution reasoning incomplete. Task 0017D selects a planning-only primary of minimal geometry plus contextual causal Help, with geometry-only fallback; GPT adjudication remains required before repair or finale work.
 
 ## Milestone spine
 

@@ -1,5 +1,9 @@
 # Project memory
 
+## Task 0017D bridge curriculum repair planning
+
+Task 0017D selects `MINIMAL_BRIDGE_GEOMETRY_PLUS_CONTEXTUAL_CAUSAL_HELP` for GPT review; `SIMPLIFIED_GEOMETRY_WITHOUT_HELP_CHANGE` is the sole fallback. The accepted bridge remains unchanged until a later task. External witness-prefix diagnostics found recoveries at 8/6/4/2 actions from prefixes 8/10/12/14, so restart-only recovery is not a machine fact; human discoverability remains unproven. Help must explain only a reusable blocker experiment and ECHO/YOU role constraint, without route disclosure; Timeline remains optional. Finale planning remains blocked.
+
 ## Task 0017V owner bridge sequence review
 
 The authenticated owner completed the bridge without operator route assistance only after an initial give-up: more than 20 initial restarts, then about 5 additional minutes and 10 additional restarts, final Turn 37. The owner correctly explained Door/terrain spacing change, E4 blocked/E2 moved, E2→A/E4→B, and next-input entry, but could not explain why YOU cannot substitute. Help and Timeline did not help; dotted lines felt unnecessary. The sequence was judged not smooth. Recommendation B preserves formal intent but prioritizes bounded difficulty/Help repair planning before finale planning. P0=0/P1=0/P2=4/P3=1.
