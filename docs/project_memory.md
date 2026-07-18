@@ -1,5 +1,9 @@
 # Project memory
 
+## Task 0017RB bounded bridge topology search
+
+Task 0017RB exhausted a deterministic bounded search without selecting a replacement. Counts were 32 raw / 32 normal-screened / 6 normal-band / 4 strict-control survivors / 4 complete augmented proofs / 0 Stage-D survivors. All four proven candidates had `L*=14`, `N*=7 EXACT`, passed no-ECHO/E2-only/E4-only/equal 2/2/equal 4/4 complete-unsolved controls, and required a real spacing event. All four still admitted an intended-chain bypass, YOU substitution, and reversed E2/E4 role completion classes. The accepted bridge remains byte-identical; Help, Timeline, catalog, tests, and finale remain unchanged and blocked pending a fresh GPT direction.
+
 ## Task 0017RA equal-delay gate adjudication
 
 Task 0017RA selects policy A and retains complete-unsolved 2/2 and 4/4 equal-delay controls. Equal-delay shared-spawn ECHOs remain overlapped by induction because they receive the same history action and resolve from the same cell against the same Door snapshot; they cannot occupy distinct A/B cells. Correctly normalized near-candidate controls are 2/2 complete-unsolved at 175/45 and 4/4 complete-unsolved at 4,375/1,125. The `[5,4]`-closed actual candidate still fails: complete 441,222-state augmented search finds a completion without the intended crossing chain and YOU substitution in every completed class. The accepted bridge remains unchanged; finale remains blocked.
@@ -91,4 +95,4 @@ Durable project decisions only; live task progress belongs in current docs and r
 
 ## Pending decisions
 
-Task 0015 is GPT accepted at `INTERNAL_PLAYABLE`; Task 0015R is GPT accepted at machine/presentation level; Task 0015RV closes the specific false-invariant blocker for owner evidence. Task 0016R bridge mechanical-necessity revision awaits GPT acceptance after Task 0016 requested changes. Bridge implementation, catalog migration, finale implementation, geometry fallback, Timeline/Help redesign, any new Gate semantics, WAIT feasibility, new mechanics, broader presentation repair, asset acquisition, persistent save, final licensed art/audio/narrative, candidate acceptance, accessibility, localization, export, Web, and release evidence remain separate gates.
+Task 0015 is GPT accepted at `INTERNAL_PLAYABLE`; Task 0015R is GPT accepted at machine/presentation level; Task 0015RV closes the specific false-invariant blocker for owner evidence. Task 0017RB found no bounded strict-gate replacement candidate. Any new topology budget or design direction, bridge implementation, catalog migration, finale implementation, geometry fallback, Timeline/Help redesign, new Gate semantics, WAIT feasibility, new mechanics, broader presentation repair, asset acquisition, persistent save, final licensed art/audio/narrative, candidate acceptance, accessibility, localization, export, Web, and release evidence remain separate gates.

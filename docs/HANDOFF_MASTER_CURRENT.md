@@ -1,6 +1,6 @@
 # Handoff master (CURRENT)
 
-Task 0017RA is complete and selects policy A: preserve the strict equal-delay complete-unsolved gate.
+Task 0017RB is complete with `BLOCKED_NO_BOUNDED_STRICT_GATE_CANDIDATE`. It preserves Task 0017RA policy A and selects no replacement topology.
 
 Key owner evidence:
 
@@ -12,6 +12,6 @@ Key owner evidence:
 - Sequence judgment: not smooth; bridge should be simpler; difficulty and Help should be addressed first.
 - Findings: P0=0, P1=0, P2=4, P3=1.
 
-The `[5,4]`-closed near candidate reproduces `L*=14 / N*=7 EXACT / 9,683 / 2,362`, but complete augmented search finds YOU substitution in every completed class and a completion without the intended crossing chain. Correctly normalized equal-delay 2/2 and 4/4 controls are complete-unsolved.
+Task 0017RB generated 32 raw candidates and screened all 32 with the tracked solver. Six met `L*=14 / N*=7 EXACT / 9,683–10,308 visited / 2,362 frontier`; four passed no-ECHO, E2-only, E4-only, equal 2/2, and equal 4/4 complete-unsolved controls. Complete augmented searches of 644,077–914,956 states rejected all four: every candidate has an intended-chain bypass, YOU-substitution completion class, and reversed-role completion class.
 
-Read Task 0017RA, `BRIDGE_EQUAL_DELAY_GATE_ADJUDICATION_CURRENT.md`, its diagnostic report, the preserved Task 0017R blocker report, current startup/active-task documents, and live Git truth. Do not implement any repair or begin finale planning without a fresh GPT-issued task.
+Read Task 0017RB, `BRIDGE_REPAIR_TOPOLOGY_CANDIDATE_CURRENT.md`, its report/evidence index, Task 0017RA adjudication, current startup/active-task documents, and live Git truth. The accepted bridge remains unchanged. Do not run a broader search, weaken any hard gate, implement Help or geometry, or begin finale planning without a fresh GPT-issued task.

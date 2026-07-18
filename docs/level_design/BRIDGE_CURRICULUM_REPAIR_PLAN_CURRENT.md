@@ -1,12 +1,16 @@
 # Bridge curriculum repair plan (CURRENT)
 
+## Task 0017RB topology-search disposition
+
+The authorized larger bounded search ended with `BLOCKED_NO_BOUNDED_STRICT_GATE_CANDIDATE`. It generated/screened 32 candidates, advanced six normal-band survivors, proved four strict-control survivors through complete augmented search, and selected none. Every Stage-D candidate required a true spacing event but admitted an intended-chain bypass, YOU substitution, and reversed-role completion class. The accepted bridge remains unchanged. This plan cannot resume without a fresh GPT direction; no search-budget expansion or hard-gate revision is inferred.
+
 ## Task 0017RA gate disposition
 
 Policy A is selected: retain strict complete-unsolved equal-delay 2/2 and 4/4 controls. The `[5,4]`-closed near candidate is rejected not only by policy but by direct curriculum evidence: all completed augmented classes use YOU substitution, and a completed class bypasses the intended YOU-free crossing chain. A future geometry task requires a larger but still bounded topology search and must satisfy both the strict proxy and all direct curriculum gates. No implementation is authorized.
 
 ## Status and evidence boundary
 
-Status: `PLANNING_ONLY / BRIDGE_CURRICULUM_NOT_ACCEPTED_PENDING_BOUNDED_REPAIR`.
+Status: `PLANNING_ONLY / BLOCKED_NO_BOUNDED_STRICT_GATE_CANDIDATE`.
 
 The accepted formal bridge remains byte-identical and machine-valid: SHA-256 `805cdc05ea9b3805189ba7be4938cb7ede4e7056b9ae9a7e911df96a801d58ee`, `L*=16`, `N*=12 EXACT`, 19,059 visited states, and frontier 3,734. This plan does not change it. The owner-only evidence is `AUTHENTICATED_OWNER_NOT_FRESH_NOT_INDEPENDENT_BRIDGE_SEQUENCE_REVIEW`; it is not population, fresh, blind, balance, or fun evidence.
 

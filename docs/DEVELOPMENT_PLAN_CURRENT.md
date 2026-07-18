@@ -43,11 +43,12 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0017D bridge curriculum difficulty and Help repair planning (primary D ready for GPT review)
 → 0017R bridge curriculum geometry/Help repair (stopped on equal-delay/direct-chain candidate failure)
 → 0017RA equal-delay control gate adjudication (policy A ready for GPT review)
+→ 0017RB bounded topology search and candidate selection (blocked: no Stage-D survivor)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
 
-Tasks through Task 0017C have recorded acceptance boundaries. Task 0017V records owner completion and correct eventual mechanism transfer but finds the Level 6→bridge jump unsmoothed, Help/Timeline ineffective, and YOU-substitution reasoning incomplete. Task 0017D selected minimal geometry plus contextual causal Help. Task 0017R stopped without product changes. Task 0017RA retains the strict equal-delay controls because the near candidate also fails the direct YOU-free curriculum chain. GPT adjudication remains required before a larger bounded topology search or any repair.
+Tasks through Task 0017C have recorded acceptance boundaries. Task 0017V records owner completion and correct eventual mechanism transfer but finds the Level 6→bridge jump unsmoothed, Help/Timeline ineffective, and YOU-substitution reasoning incomplete. Task 0017D selected minimal geometry plus contextual causal Help. Task 0017R stopped without product changes, and Task 0017RA retained the strict equal-delay controls. Task 0017RB then exhausted its bounded 32/32/6/4 search: four candidates passed strict controls but zero passed complete direct curriculum proof. GPT adjudication is required before any new search or repair direction.
 
 ## Milestone spine
 
