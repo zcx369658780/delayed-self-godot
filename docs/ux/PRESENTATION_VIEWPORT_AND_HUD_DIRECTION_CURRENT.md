@@ -1,8 +1,12 @@
 # Presentation, viewport, and HUD direction (CURRENT)
 
+## Task 0017RCV owner Help evidence
+
+The Help card in the 960×540 logical viewport was fully visible and did not obstruct or overwhelm play. The owner acquired the blocker/spacing and two-ECHO/free-YOU model, found no MOVED/BLOCKED or identity contradiction, did not use Timeline, and judged the new Door-blocking line more useful than the old Help. However, English created possible misunderstanding, the copy was judged unclear/too vague/information-poor, and MOVED/BLOCKED remained non-intuitive until observed on the board. Timeline was called completely unnecessary and too abstract. The owner requested a correct solution route; that conflicts with the accepted non-route boundary and is recorded for GPT policy adjudication, not implementation authorization. Dotted lines were not re-evaluated.
+
 ## Task 0017RC contextual Help implementation
 
-The accepted bridge formal data remains byte-identical. Reusable Gameplay adds one manual, zero-turn causal Help section only for the data-derived `echo_spacing_change` + at least two ECHOs + exactly two distinct Plates + both-Plate Door predicate. The bridge section uses 16 px, matching the existing Help-close hint and remaining above the current 14 px persistent-HUD minimum; non-target Help stays 18 px. Its measured body height is 283 px inside the unchanged 320 px area. Nine 960×540 captures, including grayscale, reduced motion, non-target controls, a real `BLOCKED/MOVED` state, and Level Select sequence 8, pass without Timeline, viewport, scene, formal, or route disclosure changes. Owner comprehension remains unverified pending a separate retest.
+The accepted bridge formal data remains byte-identical. Reusable Gameplay adds one manual, zero-turn causal Help section only for the data-derived `echo_spacing_change` + at least two ECHOs + exactly two distinct Plates + both-Plate Door predicate. The bridge section uses 16 px, matching the existing Help-close hint and remaining above the current 14 px persistent-HUD minimum; non-target Help stays 18 px. Its measured body height is 283 px inside the unchanged 320 px area. Nine 960×540 captures, including grayscale, reduced motion, non-target controls, a real `BLOCKED/MOVED` state, and Level Select sequence 8, pass without Timeline, viewport, scene, formal, or route disclosure changes. GPT accepted the implementation at machine/presentation level; the owner outcome is recorded above.
 
 ## Task 0017V owner presentation evidence
 

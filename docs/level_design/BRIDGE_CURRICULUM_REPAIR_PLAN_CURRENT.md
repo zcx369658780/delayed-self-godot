@@ -1,8 +1,12 @@
 # Bridge curriculum repair plan (CURRENT)
 
+## Task 0017RCV owner disposition
+
+The owner-only retest selects `BRIDGE_CONTEXTUAL_HELP_OWNER_MODEL_MATERIALLY_REDUCED`. The owner acquired the Door-blocking experiment, two-ECHO/free-YOU role model, only-YOU completion, route-independent transfer claim, and Timeline independence, and credited the new Help with a more credible experiment. Closure is withheld because the English copy may be misunderstood, was judged unclear/too vague/information-poor, and prompted an exact-route request. Remembered-route completion cannot close difficulty. GPT must adjudicate whether to preserve the no-route policy, require Chinese/localized causal copy, revise Help, or stop; no geometry, Help, Timeline, or finale change is authorized here.
+
 ## Task 0017RC implementation disposition
 
-GPT selected `BYTE_IDENTICAL_BRIDGE_PLUS_CONTEXTUAL_CAUSAL_HELP` after the exhausted Task 0017RB topology family. Task 0017RC implements that bounded repair without geometry or formal-data change. Manual Help now exposes a concise data-triggered blocker/spacing experiment and the two-ECHO/free-YOU role constraint; Timeline remains unchanged. Focused 28/28, aggregate 578 assertions / 9 vectors / 13 markers, and nine native 960×540 captures pass. Status is `BRIDGE_CONTEXTUAL_HELP_REPAIR_READY_FOR_GPT_REVIEW`; owner curriculum closure and finale planning remain blocked pending GPT review and a separately authorized owner-only repair retest.
+GPT selected `BYTE_IDENTICAL_BRIDGE_PLUS_CONTEXTUAL_CAUSAL_HELP` after the exhausted Task 0017RB topology family and accepted Task 0017RC at machine/presentation level. The bounded repair changes no geometry or formal data. Manual Help exposes a concise data-triggered blocker/spacing experiment and the two-ECHO/free-YOU role constraint; Timeline remains unchanged. Focused 28/28, aggregate 578 assertions / 9 vectors / 13 markers, and nine native 960×540 captures pass. The Task 0017RCV owner outcome is recorded above; curriculum closure and finale planning remain blocked pending GPT policy adjudication.
 
 ## Task 0017RB topology-search disposition
 

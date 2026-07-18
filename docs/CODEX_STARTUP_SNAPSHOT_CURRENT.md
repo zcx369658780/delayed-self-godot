@@ -2,12 +2,12 @@
 
 - Status: `CURRENT`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Current gate: Task 0017RC contextual Help repair awaiting GPT review
-- Last completed task: `tasks/0017RC_bridge_contextual_help_only_repair.md`
-- Current report: `docs/reports/0017RC_BRIDGE_CONTEXTUAL_HELP_REPAIR_REPORT.md`
-- Terminal verdict: `BRIDGE_CONTEXTUAL_HELP_REPAIR_READY_FOR_GPT_REVIEW`
-- Next recommended gate: GPT implementation review, then one separately authorized owner-only bridge repair retest
+- Current gate: Task 0017RCV owner contextual Help retest awaiting GPT adjudication
+- Last completed task: `tasks/0017RCV_owner_bridge_contextual_help_retest.md`
+- Current report: `docs/reports/0017RCV_OWNER_BRIDGE_CONTEXTUAL_HELP_RETEST_REPORT.md`
+- Terminal verdict: `OWNER_BRIDGE_CONTEXTUAL_HELP_RETEST_RECORDED_FOR_GPT_REVIEW`
+- Help-model disposition: `BRIDGE_CONTEXTUAL_HELP_OWNER_MODEL_MATERIALLY_REDUCED`
 
-The accepted bridge remains byte-identical at SHA-256 `805cdc05ea9b3805189ba7be4938cb7ede4e7056b9ae9a7e911df96a801d58ee`. Reusable Gameplay adds one manual, zero-turn contextual section only for data declaring `echo_spacing_change`, at least two ECHOs, exactly two distinct Plates, and a Door depending on both.
+The owner correctly explains Door blocking, the spacing experiment, simultaneous A/B ECHO roles, free-YOU crossing, and only-YOU completion without Timeline. The owner says the new Help supports a more credible experiment than the old Help, but is English, unclear, too vague, and insufficient; the final preference is an exact solution route.
 
-Focused 28/28, aggregate 578 assertions / 9 vectors / 13 markers, and nine native 960×540 captures pass. Timeline, formal data, catalog, Simulation, solver, scenes, project settings, and progression remain unchanged. Curriculum closure, owner acceptance, finale planning, production, export, release, and submission remain blocked.
+Completion was about one minute at Turn 27 with no restart only because the owner remembered the solution. P0=0/P1=0/P2=3/P3=1. Await GPT policy adjudication; full difficulty closure and finale planning remain blocked.

@@ -44,12 +44,13 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0017R bridge curriculum geometry/Help repair (stopped on equal-delay/direct-chain candidate failure)
 → 0017RA equal-delay control gate adjudication (policy A ready for GPT review)
 → 0017RB bounded topology search and candidate selection (blocked: no Stage-D survivor)
-→ 0017RC byte-identical bridge contextual Help repair (ready for GPT review)
+→ 0017RC byte-identical bridge contextual Help repair (GPT accepted at machine/presentation level)
+→ 0017RCV authenticated-owner contextual Help retest (model materially reduced; ready for GPT review)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
 
-Tasks through Task 0017C have recorded acceptance boundaries. Task 0017V records owner completion and correct eventual mechanism transfer but finds the Level 6→bridge jump unsmoothed, Help/Timeline ineffective, and YOU-substitution reasoning incomplete. Task 0017D selected minimal geometry plus contextual causal Help. Task 0017R stopped without product changes, Task 0017RA retained the strict equal-delay controls, and Task 0017RB exhausted its bounded topology family without a valid replacement. GPT then selected a byte-identical bridge plus contextual causal Help. Task 0017RC implements and machine/capture-validates that minimum repair; GPT review and a separately authorized owner-only retest remain required before curriculum closure or finale planning.
+Tasks through Task 0017C have recorded acceptance boundaries. Task 0017V records owner completion and correct eventual mechanism transfer but finds the Level 6→bridge jump unsmoothed, Help/Timeline ineffective, and YOU-substitution reasoning incomplete. Task 0017D selected minimal geometry plus contextual causal Help. Task 0017R stopped without product changes, Task 0017RA retained the strict equal-delay controls, and Task 0017RB exhausted its bounded topology family without a valid replacement. GPT then selected a byte-identical bridge plus contextual causal Help, and Task 0017RC machine/capture-validated it. Task 0017RCV finds the owner model materially reduced but not closed: the blocker/free-YOU model transfers without Timeline, while English clarity, vague Help, remembered-route difficulty evidence, and the owner's exact-route request remain for GPT policy adjudication.
 
 ## Milestone spine
 

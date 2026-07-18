@@ -1,17 +1,17 @@
 # Handoff master (CURRENT)
 
-Task 0017RC is complete at `BRIDGE_CONTEXTUAL_HELP_REPAIR_READY_FOR_GPT_REVIEW`. The accepted bridge remains byte-identical; the only product change is reusable Gameplay Help selected by a stable data-derived predicate.
+Task 0017RCV is complete at `OWNER_BRIDGE_CONTEXTUAL_HELP_RETEST_RECORDED_FOR_GPT_REVIEW`.
 
-Final contextual section:
+Evidence classification and result:
 
 ```text
-SPACING · Closed DOOR/wall BLOCKS one ECHO while another MOVES, changing spacing.
-EXPERIMENT · Compare MOVED/BLOCKED; try another route or loop.
-A+B · Two ECHOS hold separate Plates; YOU stays free to cross. Only YOU completes.
+AUTHENTICATED_OWNER_NOT_FRESH_NOT_INDEPENDENT_BRIDGE_CONTEXTUAL_HELP_RETEST
+PRIOR_BRIDGE_COMPLETION_AND_ROUTE_EXPOSURE_PRESENT
+BRIDGE_CONTEXTUAL_HELP_OWNER_MODEL_MATERIALLY_REDUCED
 ```
 
-Trigger requires `echo_spacing_change`, at least two ECHOs, exactly two distinct Plates, and a Door depending on both. It is false for `two_echo_convergence`, zero/single-ECHO rooms, missing metadata, wrong Plate count, duplicate Plate cells, and non-A+B Doors. It does not inspect level ID, turn, positions, history, progress, witness, or solver state.
+The owner explains that a closed Door can block an ECHO and change spacing, identifies investigation of Door blocking as the experiment, explains two ECHOS on A+B while YOU remains free because neither Plate can reach the Door next turn, and confirms only YOU completes. Timeline was not used and was judged completely unnecessary. The new Help was credited with a more credible experiment and did not disclose a route.
 
-Validation is focused 28/28, aggregate 578 assertions / 9 vectors / 13 markers, and nine passing 960×540 Compatibility captures. The bridge body is 283/320 px at a contextual-only 16 px; non-target Help stays 18 px. All formal/catalog hashes and metrics remain exact, stderr is only `LEVEL_ID_MISMATCH`, and no generated cleanup was required.
+Full closure is withheld. The owner said the English Help may be misunderstood, called it unclear/too vague/information-poor, and requested an exact solution. Completion at Turn 27 in about one minute with no restart is contextual only because the owner remembered the solution. P0=0/P1=0/P2=3/P3=1.
 
-Read Task 0017RC, its implementation report/evidence index, current startup/active-task documents, and live Git truth. Next authority is GPT review and then one separately authorized owner-only repair retest. Do not claim curriculum closure or begin finale, production, export, release, or submission work.
+Read Task 0017RCV, its review/report and evidence index, Task 0017RC acceptance, current startup/active-task documents, and live Git truth. Await GPT adjudication of clarity/localization, Timeline, no-route policy, and difficulty evidence. Do not implement the requested walkthrough or begin finale, production, export, release, or submission work.
