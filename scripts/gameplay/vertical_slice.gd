@@ -16,6 +16,7 @@ const GOAL_STRIP := Rect2(24, 18, 912, 46)
 const HELP_RECT := Rect2(96, 54, 768, 432)
 const ECHO_DIVERGENCE_BADGE_RECT := Rect2(24, 66, 540, 18)
 const CARDINAL_ACTIONS := ["UP", "RIGHT", "DOWN", "LEFT"]
+const BRIDGE_CONTEXTUAL_HELP := "SPACING · Closed DOOR/wall BLOCKS one ECHO while another MOVES, changing spacing.\nEXPERIMENT · Compare MOVED/BLOCKED; try another route or loop.\nA+B · Two ECHOS hold separate Plates; YOU stays free to cross. Only YOU completes."
 
 var level: Dictionary = {}
 var state: Dictionary = {}
@@ -166,6 +167,7 @@ func get_hud_snapshot() -> Dictionary:
 		"history": history_label.text,
 		"completion": completion_label.text if completion_label.visible else "",
 		"help_expanded": help_expanded,
+		"help_body": help_body.text if help_expanded else "",
 		"disclosure": disclosure.duplicate(true),
 		"turn_index": state.get("turn_index", 0),
 		"canonical_key": simulation.canonical_key(state) if not state.is_empty() else "",
@@ -337,6 +339,30 @@ func timeline_visible_for(level_facts: Dictionary, hud_mode: String, completed: 
 		delays[delay] = true
 		max_delay = maxi(max_delay, delay)
 	return echoes.size() > 1 or delays.size() > 1 or max_delay >= 4
+
+
+func bridge_contextual_help_applicable(level_facts: Dictionary) -> bool:
+	var metadata = level_facts.get("metadata", {})
+	if not metadata is Dictionary or not metadata.get("intended_mechanics", []) is Array or not metadata.intended_mechanics.has("echo_spacing_change"):
+		return false
+	var echoes = level_facts.get("echoes", [])
+	var plates = level_facts.get("plates", [])
+	var doors = level_facts.get("doors", [])
+	if not echoes is Array or echoes.size() < 2 or not plates is Array or plates.size() != 2 or not doors is Array:
+		return false
+	var plate_ids: Array = plates.map(func(plate): return plate.get("id", "") if plate is Dictionary else "")
+	if plate_ids.any(func(plate_id): return not plate_id is String or plate_id.is_empty()) or plate_ids[0] == plate_ids[1]:
+		return false
+	var first_position = plates[0].get("position") if plates[0] is Dictionary else null
+	var second_position = plates[1].get("position") if plates[1] is Dictionary else null
+	if first_position == second_position:
+		return false
+	return doors.any(func(door):
+		if not door is Dictionary:
+			return false
+		var dependencies = door.get("all_plate_ids", [])
+		return dependencies is Array and plate_ids.all(func(plate_id): return dependencies.has(plate_id))
+	)
 
 
 func toggle_help() -> void:
@@ -619,6 +645,8 @@ func _update_standard_hud() -> void:
 
 func _update_help_modal() -> void:
 	help_card.visible = help_expanded
+	var contextual_help := bridge_contextual_help_applicable(level)
+	help_body.add_theme_font_size_override("font_size", 16 if contextual_help else 18)
 	var normal_visible := not help_expanded
 	status_label.visible = normal_visible
 	objective_label.visible = normal_visible
@@ -637,6 +665,8 @@ func _update_help_modal() -> void:
 		var model := get_timeline_snapshot()
 		if model.visible:
 			sections.append(_help_timeline_text(model))
+		if contextual_help:
+			sections.append(BRIDGE_CONTEXTUAL_HELP)
 		help_body.text = "\n".join(sections)
 
 

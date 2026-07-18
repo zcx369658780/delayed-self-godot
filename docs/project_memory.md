@@ -1,5 +1,9 @@
 # Project memory
 
+## Task 0017RC byte-identical bridge contextual Help
+
+Task 0017RC implements GPT's `BYTE_IDENTICAL_BRIDGE_PLUS_CONTEXTUAL_CAUSAL_HELP` direction. Reusable Gameplay shows one manual, zero-turn section only when level data contains `echo_spacing_change`, at least two ECHOs, exactly two distinct Plates, and a Door depending on both. It explains Door/wall blocking, visible `MOVED/BLOCKED` comparison, separate-Plate ECHO roles, free-YOU crossing, and player-only completion without a route or exact E2/A–E4/B mapping. The bridge remains SHA-256 `805cdc05ea9b3805189ba7be4938cb7ede4e7056b9ae9a7e911df96a801d58ee`; focused 28, aggregate 578/9 with 13 markers, and nine native captures pass. This is machine/capture evidence only; GPT review and an owner-only repair retest remain required.
+
 ## Task 0017RB bounded bridge topology search
 
 Task 0017RB exhausted a deterministic bounded search without selecting a replacement. Counts were 32 raw / 32 normal-screened / 6 normal-band / 4 strict-control survivors / 4 complete augmented proofs / 0 Stage-D survivors. All four proven candidates had `L*=14`, `N*=7 EXACT`, passed no-ECHO/E2-only/E4-only/equal 2/2/equal 4/4 complete-unsolved controls, and required a real spacing event. All four still admitted an intended-chain bypass, YOU substitution, and reversed E2/E4 role completion classes. The accepted bridge remains byte-identical; Help, Timeline, catalog, tests, and finale remain unchanged and blocked pending a fresh GPT direction.

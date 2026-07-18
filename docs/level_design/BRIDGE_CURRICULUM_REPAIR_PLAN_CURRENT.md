@@ -1,5 +1,9 @@
 # Bridge curriculum repair plan (CURRENT)
 
+## Task 0017RC implementation disposition
+
+GPT selected `BYTE_IDENTICAL_BRIDGE_PLUS_CONTEXTUAL_CAUSAL_HELP` after the exhausted Task 0017RB topology family. Task 0017RC implements that bounded repair without geometry or formal-data change. Manual Help now exposes a concise data-triggered blocker/spacing experiment and the two-ECHO/free-YOU role constraint; Timeline remains unchanged. Focused 28/28, aggregate 578 assertions / 9 vectors / 13 markers, and nine native 960×540 captures pass. Status is `BRIDGE_CONTEXTUAL_HELP_REPAIR_READY_FOR_GPT_REVIEW`; owner curriculum closure and finale planning remain blocked pending GPT review and a separately authorized owner-only repair retest.
+
 ## Task 0017RB topology-search disposition
 
 The authorized larger bounded search ended with `BLOCKED_NO_BOUNDED_STRICT_GATE_CANDIDATE`. It generated/screened 32 candidates, advanced six normal-band survivors, proved four strict-control survivors through complete augmented search, and selected none. Every Stage-D candidate required a true spacing event but admitted an intended-chain bypass, YOU substitution, and reversed-role completion class. The accepted bridge remains unchanged. This plan cannot resume without a fresh GPT direction; no search-budget expansion or hard-gate revision is inferred.

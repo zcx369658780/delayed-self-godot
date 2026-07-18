@@ -2,12 +2,12 @@
 
 - Status: `CURRENT`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Current gate: Task 0017RB bounded topology search blocked with no strict-gate candidate
-- Latest accepted gate: `TASK_0017_ECHO_SPACING_BRIDGE_ACCEPTED_INTERNAL_PLAYABLE`
-- Last completed task: `tasks/0017RB_bridge_topology_search_and_candidate_selection.md`
-- Current decision/report: `docs/level_design/BRIDGE_REPAIR_TOPOLOGY_CANDIDATE_CURRENT.md` / `docs/reports/0017RB_BRIDGE_TOPOLOGY_SEARCH_REPORT.md`
-- Next recommended gate: GPT adjudication of the exhausted bounded search and a fresh bridge-repair direction
+- Current gate: Task 0017RC contextual Help repair awaiting GPT review
+- Last completed task: `tasks/0017RC_bridge_contextual_help_only_repair.md`
+- Current report: `docs/reports/0017RC_BRIDGE_CONTEXTUAL_HELP_REPAIR_REPORT.md`
+- Terminal verdict: `BRIDGE_CONTEXTUAL_HELP_REPAIR_READY_FOR_GPT_REVIEW`
+- Next recommended gate: GPT implementation review, then one separately authorized owner-only bridge repair retest
 
-The owner completed Level 6 at Turn 16 in about 4 seconds. The bridge caused an initial give-up after more than 20 restarts, then an unassisted completion at Turn 37 after about 5 additional minutes and 10 additional restarts. Mechanism transfer was eventually correct, but the difficulty jump, ineffective Help/Timeline, and incomplete YOU-substitution explanation support bounded repair before finale planning.
+The accepted bridge remains byte-identical at SHA-256 `805cdc05ea9b3805189ba7be4938cb7ede4e7056b9ae9a7e911df96a801d58ee`. Reusable Gameplay adds one manual, zero-turn contextual section only for data declaring `echo_spacing_change`, at least two ECHOs, exactly two distinct Plates, and a Door depending on both.
 
-The strict equal-delay-unsolved gate is retained. Task 0017RB screened 32 candidates, proved four through complete strict controls, and rejected all four after complete augmented searches found intended-chain bypass, YOU substitution, and reversed-role completion classes. No replacement candidate is selected; the accepted bridge remains unchanged and finale planning remains blocked.
+Focused 28/28, aggregate 578 assertions / 9 vectors / 13 markers, and nine native 960×540 captures pass. Timeline, formal data, catalog, Simulation, solver, scenes, project settings, and progression remain unchanged. Curriculum closure, owner acceptance, finale planning, production, export, release, and submission remain blocked.

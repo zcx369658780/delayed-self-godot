@@ -11,6 +11,7 @@ const WindowPresentation = preload("res://scripts/app/window_presentation.gd")
 const Task0015REchoDivergenceFeedback = preload("res://tests/gameplay/task_0015r_echo_divergence_feedback.gd")
 const Task0017PLevelSelectScrollability = preload("res://tests/app/task_0017p_level_select_scrollability.gd")
 const Task0017EchoSpacingBridge = preload("res://tests/levels/task_0017_echo_spacing_bridge_validation.gd")
+const Task0017RCBridgeContextualHelpRepair = preload("res://tests/gameplay/task_0017rc_bridge_contextual_help_repair.gd")
 
 var failures := 0
 var assertions := 0
@@ -56,6 +57,9 @@ func _run() -> void:
 	var task_0017_result: Dictionary = await Task0017EchoSpacingBridge.new().run(self)
 	assertions += int(task_0017_result.assertions)
 	failures += int(task_0017_result.failures)
+	var task_0017rc_result: Dictionary = await Task0017RCBridgeContextualHelpRepair.new().run(self)
+	assertions += int(task_0017rc_result.assertions)
+	failures += int(task_0017rc_result.failures)
 	if failures > 0:
 		printerr("TASK_0003_TESTS_FAIL failures=%d assertions=%d" % [failures, assertions])
 		quit(1)
@@ -72,6 +76,7 @@ func _run() -> void:
 		print("TASK_0015R_ECHO_DIVERGENCE_FEEDBACK_TESTS_PASS")
 		print("TASK_0017P_LEVEL_SELECT_SCROLLABILITY_TESTS_PASS")
 		print("TASK_0017_ECHO_SPACING_BRIDGE_TESTS_PASS")
+		print("TASK_0017RC_BRIDGE_CONTEXTUAL_HELP_REPAIR_TESTS_PASS")
 		quit(0)
 
 

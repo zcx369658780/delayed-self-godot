@@ -1,5 +1,9 @@
 # Presentation, viewport, and HUD direction (CURRENT)
 
+## Task 0017RC contextual Help implementation
+
+The accepted bridge formal data remains byte-identical. Reusable Gameplay adds one manual, zero-turn causal Help section only for the data-derived `echo_spacing_change` + at least two ECHOs + exactly two distinct Plates + both-Plate Door predicate. The bridge section uses 16 px, matching the existing Help-close hint and remaining above the current 14 px persistent-HUD minimum; non-target Help stays 18 px. Its measured body height is 283 px inside the unchanged 320 px area. Nine 960×540 captures, including grayscale, reduced motion, non-target controls, a real `BLOCKED/MOVED` state, and Level Select sequence 8, pass without Timeline, viewport, scene, formal, or route disclosure changes. Owner comprehension remains unverified pending a separate retest.
+
 ## Task 0017V owner presentation evidence
 
 The owner found MOVED/BLOCKED/WAITED, A/B, E2/E4, and A+B readable and reported no false cue or movement contradiction. Help and Timeline were used during the failed bridge phase but did not help. Dotted lines felt unnecessary. The owner requested a simpler teaching room and useful mechanism explanation before finale planning; no presentation or Help change is authorized by this review.
