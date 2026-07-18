@@ -2,7 +2,11 @@
 
 ## Current entry point
 
-Read `AGENTS.md`, current startup/active-task documents, Task 0016R, the Task 0016 GPT adjudication, the revision report, and the current finale/difficulty-bridge plan. Verify live Git truth before acting. Task 0016R is ready for GPT adjudication; no bridge implementation, catalog migration, finale implementation, Help/Timeline redesign, or content rebalance is authorized.
+Read `AGENTS.md`, current startup/active-task documents, Task 0017P, its repair report, the Task 0017 blocker adjudication, and live Git truth. Task 0017P is ready for GPT review. Do not resume Task 0017, migrate the catalog, implement the finale, or redesign Help/Timeline without a fresh task.
+
+Task 0017P changes only the code-generated Level Select and tests/docs. The control tree is fixed Title → bounded vertical `EntryScroll` → generated entries → fixed Back. Horizontal scrolling is disabled; focus follows a generated enabled-entry/Back chain; the highest unlocked entry is revealed after layout without taking focus or changing progress.
+
+Focused validation passes 90 assertions. Aggregate passes 481 assertions / 9 vectors with all eleven markers; stderr contains only expected `LEVEL_ID_MISMATCH`. Native 7/8/12-entry, bottom, focus, grayscale, and resized-window captures pass under `D:\Delayed_Self_Evidence\0017P_level_select_scrollability\`.
 
 Level 7 `two_echo_convergence` has shared-spawn E2/E4, Plate A `[6,3]`, Plate B `[7,5]`, one unavoidable A+B Door `[7,2]`, and EXIT `[7,1]`. Exact result: `L*=19`, `N*=6 EXACT`, visited 61,975, frontier 21,449, one-turn required convergence, formal SHA-256 `772410d3b8bb807e35472ee2a7d07b703de66e1e0e92ffb4d1ff8433a345d5fd`. Both ECHOs and Plates are individually necessary; equal-delay/no-ECHO/single-ECHO/relocation controls are complete unsolved. All six shortest solutions use the E2-on-A/E4-on-B open-snapshot crossing.
 

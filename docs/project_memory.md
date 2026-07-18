@@ -2,6 +2,14 @@
 
 Durable project decisions only; live task progress belongs in current docs and reports.
 
+## Task 0017P Level Select scalability decision
+
+- Task 0017 correctly stopped because the fixed Level Select column made tail entries unreachable at 960×540.
+- Task 0017P repairs the prerequisite with a fixed Title, bounded vertical ScrollContainer, generated button list, and fixed Back.
+- Focus navigation is generated from enabled entries and Back; disabled entries remain skipped and unselectable.
+- After layout, only the highest unlocked entry is revealed; no focus, selection, unlock, or progress mutation occurs.
+- Product catalog and all seven formal levels remain unchanged. Task 0017 remains blocked pending GPT acceptance and a fresh continuation task.
+
 ## Task dispatch
 
 - GitHub task files are the complete execution-authorization carrier. Every task file must contain its applicable scope, constraints, acceptance criteria, Git discipline, stop conditions, and terminal verdict.

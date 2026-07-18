@@ -9,6 +9,7 @@ const RouteRequest = preload("res://scripts/app/route_request.gd")
 const TimelineModel = preload("res://scripts/gameplay/timeline_model.gd")
 const WindowPresentation = preload("res://scripts/app/window_presentation.gd")
 const Task0015REchoDivergenceFeedback = preload("res://tests/gameplay/task_0015r_echo_divergence_feedback.gd")
+const Task0017PLevelSelectScrollability = preload("res://tests/app/task_0017p_level_select_scrollability.gd")
 
 var failures := 0
 var assertions := 0
@@ -48,6 +49,9 @@ func _run() -> void:
 	var task_0015r_result: Dictionary = await Task0015REchoDivergenceFeedback.new().run(self)
 	assertions += int(task_0015r_result.assertions)
 	failures += int(task_0015r_result.failures)
+	var task_0017p_result: Dictionary = await Task0017PLevelSelectScrollability.new().run(self)
+	assertions += int(task_0017p_result.assertions)
+	failures += int(task_0017p_result.failures)
 	if failures > 0:
 		printerr("TASK_0003_TESTS_FAIL failures=%d assertions=%d" % [failures, assertions])
 		quit(1)
@@ -62,6 +66,7 @@ func _run() -> void:
 		print("TASK_0012_LEVEL_6_STAGGERED_DOORS_TESTS_PASS")
 		print("TASK_0015_LEVEL_7_TWO_ECHO_CONVERGENCE_TESTS_PASS")
 		print("TASK_0015R_ECHO_DIVERGENCE_FEEDBACK_TESTS_PASS")
+		print("TASK_0017P_LEVEL_SELECT_SCROLLABILITY_TESTS_PASS")
 		quit(0)
 
 

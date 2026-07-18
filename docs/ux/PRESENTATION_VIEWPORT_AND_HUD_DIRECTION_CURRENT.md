@@ -1,5 +1,9 @@
 # Presentation, viewport, and HUD direction (CURRENT)
 
+## Task 0017P Level Select scalability
+
+The accepted 960×540 logical viewport now uses a fixed Level Select title and Back action around a bounded vertical entry `ScrollContainer`. Entry count is not hardcoded. Mouse wheel/scrollbar and a generated keyboard/controller focus chain reach every enabled entry; disabled entries remain skipped and unselectable. The highest unlocked entry is revealed after layout without taking focus or changing progress. Horizontal scrolling is disabled. Seven-, eight-, and twelve-entry native evidence confirms the tail remains reachable while Title and Back stay fixed.
+
 - Status: `PLANNING_RECOMMENDATION_FOR_GPT`
 - Task: [`0010`](../../tasks/0010_presentation_difficulty_asset_audio_narrative_and_gate_planning.md)
 - Runtime authority: presentation reads committed `simulation_v1` state and never changes puzzle outcomes.

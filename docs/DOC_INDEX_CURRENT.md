@@ -5,7 +5,7 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0016R`](../tasks/0016R_bridge_mechanical_necessity_plan_revision.md) — current bridge mechanical-necessity correction gate
+4. [`Task 0017P`](../tasks/0017P_level_select_scrollability_repair.md) — current Level Select scrollability prerequisite gate
 5. [`DEVELOPMENT_PLAN_CURRENT.md`](DEVELOPMENT_PLAN_CURRENT.md) — milestone spine and near-term gates
 6. [`HANDOFF_MASTER_CURRENT.md`](HANDOFF_MASTER_CURRENT.md) — current continuation point
 7. [`project_memory.md`](project_memory.md) — durable decisions
@@ -29,6 +29,8 @@
 
 ## Compliance and reports
 
+- [`Task 0017P Level Select scrollability repair report`](reports/0017P_LEVEL_SELECT_SCROLLABILITY_REPAIR_REPORT.md)
+- [`Task 0017 Level Select blocker adjudication`](reports/0017_GPT_LEVEL_SELECT_PRESENTATION_BLOCKER_ADJUDICATION.md)
 - [`Level 8 finale and difficulty-bridge plan`](level_design/LEVEL_8_FINALE_AND_DIFFICULTY_BRIDGE_PLAN_CURRENT.md)
 - [`Task 0016R bridge necessity revision report`](reports/0016R_BRIDGE_MECHANICAL_NECESSITY_PLAN_REVISION_REPORT.md)
 - [`Task 0016 GPT plan adjudication`](reports/0016_GPT_FINALE_SEQUENCE_PLAN_ADJUDICATION.md)
