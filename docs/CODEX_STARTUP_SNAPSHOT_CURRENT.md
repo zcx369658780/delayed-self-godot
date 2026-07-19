@@ -16,7 +16,7 @@ The eight-entry catalog and all eight formal levels remain frozen. Sequence 9 is
 
 Task 0023R remains the accepted exact canonical test-path policy. Task 0023T remains the accepted explicitly typed, zero-I/O Profile v1 codec. Task 0023V remains the accepted external `RefCounted` construction and immutable one-time test configuration gate.
 
-Task 0023W may add filesystem behavior only after successful `configure_test`, only inside the fixed task-owned canonical fixture, with deterministic recovery preservation, verified transactional replacement, failure rollback, cleanup and a test-only reset. It must rerun Tasks 0023R, 0023T and 0023V before and after.
+Task 0023W is implemented and ready for GPT review. Its configured-instance-only fixed-fixture store passed deterministic recovery preservation, verified transactional replacement/failure rollback, cleanup and test-only reset; Tasks 0023R, 0023T and 0023V were rerun before and after with empty stderr.
 
 The production Profile content must remain unopened. Production operation, AppRoot, MemoryProgress, existing AppRoot tests, aggregate persistence regression, menus/settings/localization, build/export, RC, release, upload and festival submission remain closed.
 

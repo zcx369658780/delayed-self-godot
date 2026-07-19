@@ -5,7 +5,9 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0023T`](../tasks/0023T_pure_profile_codec_compile_gate.md) — pure typed Profile codec compile gate
+4. [`Task 0023W`](../tasks/0023W_profile_filesystem_store_after_instance_gate.md) — configured test-only Profile filesystem-store gate
+5. [`Task 0023W report`](reports/0023W_PROFILE_FILESYSTEM_STORE_AFTER_INSTANCE_GATE_REPORT.md) — fixture-only recovery, rollback, and cleanup evidence
+6. [`Task 0023T`](../tasks/0023T_pure_profile_codec_compile_gate.md) — pure typed Profile codec compile gate
 5. [`Task 0023T report`](reports/0023T_PURE_PROFILE_CODEC_COMPILE_GATE_REPORT.md) — zero-I/O codec, compile and synthetic evidence
 6. [`Task 0023V`](../tasks/0023V_profile_store_instance_configuration_compile_gate.md) — zero-I/O instance configuration gate
 7. [`Task 0023V report`](reports/0023V_PROFILE_STORE_INSTANCE_CONFIGURATION_COMPILE_GATE_REPORT.md) — typed external construction evidence
@@ -40,6 +42,7 @@
 
 ## Compliance and reports
 
+- [`Task 0023W configured filesystem-store report`](reports/0023W_PROFILE_FILESYSTEM_STORE_AFTER_INSTANCE_GATE_REPORT.md)
 - [`Task 0023V store-instance configuration compile-gate report`](reports/0023V_PROFILE_STORE_INSTANCE_CONFIGURATION_COMPILE_GATE_REPORT.md)
 - [`Task 0023T pure Profile codec compile-gate report`](reports/0023T_PURE_PROFILE_CODEC_COMPILE_GATE_REPORT.md)
 - [`Task 0023R Profile test-isolation gate report`](reports/0023R_PROFILE_TEST_ISOLATION_GATE_REPORT.md)

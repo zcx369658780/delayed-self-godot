@@ -1,9 +1,9 @@
 # Handoff master (CURRENT)
 
-Task 0023V is complete at:
+Task 0023W is complete at:
 
 ```text
-PROFILE_STORE_INSTANCE_CONFIGURATION_GATE_READY_FOR_GPT_REVIEW
+PROFILE_FILESYSTEM_STORE_AFTER_INSTANCE_GATE_READY_FOR_GPT_REVIEW
 ```
 
 Product scope is frozen at eight formal levels. Sequence 8
@@ -46,12 +46,19 @@ compile smoke and 34 synthetic assertions. Task 0023V resolves the self-type
 blocker with external RefCounted construction and one-time defensive test
 configuration; smoke passes first attempt and behavior passes 28 assertions.
 Production Profile metadata is unchanged; the pre-existing test root was
-neither inspected nor touched.
+neither inspected nor touched. Task 0023W appends a configured-instance-only
+filesystem store within exactly
+`task_0023w_profile_filesystem_store`: it covers missing/load/sanitization,
+fatal-source recovery copies, collision handling, bounded temp/transaction
+replacement, deterministic rollback seams and target-only reset. Its compile
+smoke passed on attempt 1; final focused behavior has 68 assertions. Final
+0023R/0023T/0023V/0023W runs all exited 0 with empty stderr, fixture cleanup
+is proven, and no Godot process remains. See
+`docs/reports/0023W_PROFILE_FILESYSTEM_STORE_AFTER_INSTANCE_GATE_REPORT.md`.
 
-Read Task 0023V and its report, Task 0023T/0023R reports, the Task 0023U
+Read Task 0023W and its report, Task 0023V/0023T/0023R reports, the Task 0023U
 self-type blocker adjudication, current startup/active documents, and live Git
-truth. Await GPT review and a later revised filesystem-store task; do not
-resume Task 0023, 0023S or 0023U automatically.
+truth. Await GPT review; do not resume Task 0023, 0023S or 0023U automatically.
 
 Hard boundary: no sequence-9 revival, unbounded product repair, save/settings
 implementation, asset/audio acquisition, owner walkthrough, build/export, RC

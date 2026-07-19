@@ -245,6 +245,20 @@ authorized.
 
 ## Pending decisions
 
+## Task 0023W configured fixture-only Profile filesystem store
+
+Task 0023W is implemented and awaiting GPT review. It preserves the accepted
+0023R path policy, 0023T pure codec and 0023V external `RefCounted`
+construction, then adds filesystem operations only after successful
+`configure_test` and only inside the fixed task-owned fixture. Missing, valid,
+sanitized and fatal source states, bounded recovery copies, deterministic
+write/readback/replace verification, rollback seams and exact-target reset
+passed the standalone 68-assertion suite. Production Profile content remained
+unopened and its accepted metadata remained `true / 473 /
+2026-07-19T08:15:02.2089459Z`; the pre-existing test root was not enumerated.
+This remains test-only and does not authorize production integration,
+AppRoot/MemoryProgress, aggregate, settings/menu/localization or release work.
+
 Task 0020 freezes the eight-level finale closure plan for GPT review. The next
 recommended gate is sequence-8 completion acknowledgment/return presentation.
 Catalog migration, sequence 9, route walkthrough Help, new mechanics, and new

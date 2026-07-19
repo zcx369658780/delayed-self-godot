@@ -83,6 +83,19 @@ var _configured: bool = false
 var _catalog_facts: Dictionary = {}
 var _test_profile_path: String = ""
 
+const ProfileCodec = preload("res://scripts/app/profile_codec.gd")
+const MAX_PROFILE_SOURCE_BYTES: int = 65536
+const OWNED_NAME_LIMIT: int = 8
+
+var _committed_profile: Dictionary = {}
+var _committed_json: String = ""
+var _committed_target_verified: bool = false
+var _pending_recovery: bool = false
+var _pending_recovery_source: String = ""
+var _recovery_sibling_name: String = ""
+var _write_disabled: bool = false
+var _failure_seam: String = "NONE"
+
 
 func configure_test(catalog_facts: Dictionary, canonical_test_profile_path: String) -> Dictionary:
 	if _configured:
@@ -171,3 +184,307 @@ func _configuration_rejected(status: String) -> Dictionary:
 		"status": status,
 		"configuration": get_configuration_snapshot(),
 	}
+
+
+func load_profile() -> Dictionary:
+	if not is_configured():
+		return _store_rejected("STORE_NOT_CONFIGURED")
+	if _write_disabled:
+		return _store_rejected("RECOVERY_FAILED")
+	if not FileAccess.file_exists(_test_profile_path):
+		_set_clean_default()
+		_committed_target_verified = false
+		return _store_result("MISSING_CLEAN")
+	var source: Dictionary = _read_target_bytes()
+	if not bool(source.get("ok", false)):
+		return _recover_or_disable()
+	var raw_bytes: PackedByteArray = source.get("bytes", PackedByteArray())
+	var parsed: Dictionary = _parse_json_bytes(raw_bytes)
+	if not bool(parsed.get("ok", false)):
+		return _recover_or_disable()
+	var normalized: Dictionary = ProfileCodec.normalize_profile(parsed.get("value", null), _catalog_facts)
+	if not bool(normalized.get("ok", false)):
+		return _recover_or_disable()
+	var serialized: Dictionary = ProfileCodec.serialize_profile(normalized.get("profile", {}))
+	if not bool(serialized.get("ok", false)):
+		return _recover_or_disable()
+	_committed_profile = (serialized.get("profile", {}) as Dictionary).duplicate(true)
+	_committed_json = str(serialized.get("json", ""))
+	_committed_target_verified = true
+	_pending_recovery = bool(normalized.get("sanitized", false))
+	_pending_recovery_source = _test_profile_path if _pending_recovery else ""
+	return _store_result("SANITIZED" if _pending_recovery else "LOADED")
+
+
+func persist_profile(candidate_profile: Dictionary) -> Dictionary:
+	if not is_configured():
+		return _store_rejected("STORE_NOT_CONFIGURED")
+	if _write_disabled:
+		return _store_rejected("RECOVERY_FAILED")
+	var normalized: Dictionary = ProfileCodec.normalize_profile(candidate_profile, _catalog_facts)
+	if not bool(normalized.get("ok", false)):
+		return _store_rejected("CANDIDATE_REJECTED")
+	var serialized: Dictionary = ProfileCodec.serialize_profile(normalized.get("profile", {}))
+	if not bool(serialized.get("ok", false)):
+		return _store_rejected("CANDIDATE_REJECTED")
+	var intended_profile: Dictionary = serialized.get("profile", {})
+	var intended_json: String = str(serialized.get("json", ""))
+	if _committed_target_verified and not _pending_recovery and intended_json == _committed_json and not _committed_json.is_empty():
+		return _store_result("NO_CHANGE")
+	if _pending_recovery and not _preserve_recovery_copy():
+		_write_disabled = true
+		return _store_rejected("RECOVERY_FAILED")
+	var transaction: Dictionary = _transactional_replace(intended_json)
+	if not bool(transaction.get("ok", false)):
+		var rejected: Dictionary = _store_rejected("WRITE_FAILED")
+		rejected["stage"] = str(transaction.get("stage", "UNKNOWN"))
+		return rejected
+	_committed_profile = intended_profile.duplicate(true)
+	_committed_json = intended_json
+	_committed_target_verified = true
+	_pending_recovery = false
+	_pending_recovery_source = ""
+	return _store_result("PERSISTED")
+
+
+func reset_test_profile() -> Dictionary:
+	if not is_configured():
+		return _store_rejected("STORE_NOT_CONFIGURED")
+	if _write_disabled:
+		return _store_rejected("RECOVERY_FAILED")
+	if FileAccess.file_exists(_test_profile_path):
+		if DirAccess.remove_absolute(ProjectSettings.globalize_path(_test_profile_path)) != OK:
+			return _store_rejected("WRITE_FAILED")
+	_set_clean_default()
+	_committed_target_verified = false
+	_pending_recovery = false
+	_pending_recovery_source = ""
+	return _store_result("RESET")
+
+
+func get_committed_profile() -> Dictionary:
+	if not is_configured():
+		return _store_rejected("STORE_NOT_CONFIGURED")
+	if _committed_profile.is_empty():
+		_set_clean_default()
+	return _store_result("COMMITTED")
+
+
+func set_test_failure_seam(stage: String) -> Dictionary:
+	if not is_configured():
+		return _store_rejected("STORE_NOT_CONFIGURED")
+	if not ["NONE", "RECOVERY_COPY", "TEMP_WRITE", "TEMP_READBACK", "REPLACE", "POST_REPLACE_VERIFY"].has(stage):
+		return _store_rejected("FAILURE_SEAM_REJECTED")
+	_failure_seam = stage
+	return _store_result("FAILURE_SEAM_SET")
+
+
+func _set_clean_default() -> void:
+	var default_result: Dictionary = ProfileCodec.default_profile()
+	var serialized: Dictionary = ProfileCodec.serialize_profile(default_result.get("profile", {}))
+	_committed_profile = (serialized.get("profile", {}) as Dictionary).duplicate(true)
+	_committed_json = str(serialized.get("json", ""))
+
+
+func _store_result(status: String) -> Dictionary:
+	var result: Dictionary = {
+		"ok": true,
+		"status": status,
+		"profile": _committed_profile.duplicate(true),
+		"configured": _configured,
+	}
+	if not _recovery_sibling_name.is_empty():
+		result["recovery_sibling_name"] = _recovery_sibling_name
+	return result
+
+
+func _store_rejected(status: String) -> Dictionary:
+	return {
+		"ok": false,
+		"status": status,
+		"configured": _configured,
+	}
+
+
+func _read_target_bytes() -> Dictionary:
+	var file := FileAccess.open(_test_profile_path, FileAccess.READ)
+	if file == null:
+		return {"ok": false}
+	var length: int = file.get_length()
+	if length > MAX_PROFILE_SOURCE_BYTES:
+		file.close()
+		return {"ok": false}
+	var bytes: PackedByteArray = file.get_buffer(length)
+	file.close()
+	if bytes.size() != length:
+		return {"ok": false}
+	return {"ok": true, "bytes": bytes}
+
+
+func _parse_json_bytes(bytes: PackedByteArray) -> Dictionary:
+	var json := JSON.new()
+	if json.parse(bytes.get_string_from_utf8()) != OK:
+		return {"ok": false}
+	return {"ok": true, "value": _coerce_json_integral_numbers(json.data)}
+
+
+func _coerce_json_integral_numbers(value: Variant) -> Variant:
+	# Godot's JSON parser represents all JSON numbers as floats. This decoder-only
+	# conversion restores exact integral values before the frozen codec decides
+	# whether their profile locations are valid.
+	if value is float and value == floor(value):
+		return int(value)
+	if value is Array:
+		var copied_array: Array = []
+		for item: Variant in value:
+			copied_array.append(_coerce_json_integral_numbers(item))
+		return copied_array
+	if value is Dictionary:
+		var copied_dictionary: Dictionary = {}
+		for key: Variant in value.keys():
+			copied_dictionary[key] = _coerce_json_integral_numbers(value.get(key))
+		return copied_dictionary
+	return value
+
+
+func _recover_or_disable() -> Dictionary:
+	if _preserve_recovery_copy():
+		_set_clean_default()
+		_committed_target_verified = false
+		_pending_recovery = false
+		_pending_recovery_source = ""
+		return _store_result("RECOVERED_CLEAN")
+	_write_disabled = true
+	return _store_rejected("RECOVERY_FAILED")
+
+
+func _preserve_recovery_copy() -> bool:
+	if _failure_seam == "RECOVERY_COPY":
+		return false
+	var source_path: String = _pending_recovery_source if not _pending_recovery_source.is_empty() else _test_profile_path
+	var source_os_path: String = ProjectSettings.globalize_path(source_path)
+	for index in range(OWNED_NAME_LIMIT):
+		var recovery_path: String = _owned_sibling_path("recovery", index)
+		if FileAccess.file_exists(recovery_path):
+			continue
+		if DirAccess.copy_absolute(source_os_path, ProjectSettings.globalize_path(recovery_path)) == OK:
+			_recovery_sibling_name = recovery_path.get_file()
+			return true
+	return false
+
+
+func _transactional_replace(intended_json: String) -> Dictionary:
+	var directory_path: String = _test_profile_path.get_base_dir()
+	if DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(directory_path)) != OK:
+		return {"ok": false, "stage": "DIRECTORY"}
+	var temp_path: String = _first_available_owned_path("temp")
+	if temp_path.is_empty():
+		return {"ok": false, "stage": "TEMP_NAME"}
+	if not _write_temp(temp_path, intended_json):
+		_remove_owned(temp_path)
+		return {"ok": false, "stage": "TEMP_WRITE"}
+	if not _verify_temp(temp_path, intended_json):
+		_remove_owned(temp_path)
+		return {"ok": false, "stage": "TEMP_READBACK"}
+	var had_old_target: bool = FileAccess.file_exists(_test_profile_path)
+	var backup_path: String = ""
+	if had_old_target:
+		backup_path = _first_available_owned_path("transaction")
+		if backup_path.is_empty() or DirAccess.copy_absolute(ProjectSettings.globalize_path(_test_profile_path), ProjectSettings.globalize_path(backup_path)) != OK:
+			_remove_owned(temp_path)
+			return {"ok": false, "stage": "BACKUP"}
+	var renamed: bool = DirAccess.rename_absolute(ProjectSettings.globalize_path(temp_path), ProjectSettings.globalize_path(_test_profile_path)) == OK
+	if not renamed:
+		_cleanup_transaction(temp_path, backup_path)
+		return {"ok": false, "stage": "RENAME"}
+	if _failure_seam == "REPLACE" or not _verify_target(intended_json) or _failure_seam == "POST_REPLACE_VERIFY":
+		var restored: bool = _restore_old_target(had_old_target, backup_path)
+		_cleanup_transaction(temp_path, backup_path)
+		return {"ok": false, "stage": "ROLLBACK", "restored": restored}
+	_cleanup_transaction(temp_path, backup_path)
+	return {"ok": true}
+
+
+func _write_temp(temp_path: String, intended_json: String) -> bool:
+	if _failure_seam == "TEMP_WRITE":
+		return false
+	var file := FileAccess.open(temp_path, FileAccess.WRITE)
+	if file == null:
+		return false
+	file.store_string(intended_json)
+	file.flush()
+	file.close()
+	return true
+
+
+func _verify_temp(temp_path: String, intended_json: String) -> bool:
+	if _failure_seam == "TEMP_READBACK":
+		return false
+	var file := FileAccess.open(temp_path, FileAccess.READ)
+	if file == null or file.get_length() > MAX_PROFILE_SOURCE_BYTES:
+		if file != null:
+			file.close()
+		return false
+	var bytes: PackedByteArray = file.get_buffer(file.get_length())
+	file.close()
+	var parsed: Dictionary = _parse_json_bytes(bytes)
+	if not bool(parsed.get("ok", false)):
+		return false
+	var normalized: Dictionary = ProfileCodec.normalize_profile(parsed.get("value", null), _catalog_facts)
+	if not bool(normalized.get("ok", false)):
+		return false
+	var serialized: Dictionary = ProfileCodec.serialize_profile(normalized.get("profile", {}))
+	return bool(serialized.get("ok", false)) and str(serialized.get("json", "")) == intended_json
+
+
+func _verify_target(intended_json: String) -> bool:
+	var source: Dictionary = _read_target_bytes()
+	if not bool(source.get("ok", false)):
+		return false
+	var parsed: Dictionary = _parse_json_bytes(source.get("bytes", PackedByteArray()))
+	if not bool(parsed.get("ok", false)):
+		return false
+	var normalized: Dictionary = ProfileCodec.normalize_profile(parsed.get("value", null), _catalog_facts)
+	if not bool(normalized.get("ok", false)):
+		return false
+	var serialized: Dictionary = ProfileCodec.serialize_profile(normalized.get("profile", {}))
+	return bool(serialized.get("ok", false)) and str(serialized.get("json", "")) == intended_json
+
+
+func _restore_old_target(had_old_target: bool, backup_path: String) -> bool:
+	if not had_old_target:
+		return DirAccess.remove_absolute(ProjectSettings.globalize_path(_test_profile_path)) == OK
+	var backup := FileAccess.open(backup_path, FileAccess.READ)
+	if backup == null:
+		return false
+	var bytes: PackedByteArray = backup.get_buffer(backup.get_length())
+	backup.close()
+	var target := FileAccess.open(_test_profile_path, FileAccess.WRITE)
+	if target == null:
+		return false
+	target.store_buffer(bytes)
+	target.flush()
+	target.close()
+	return true
+
+
+func _first_available_owned_path(kind: String) -> String:
+	for index in range(OWNED_NAME_LIMIT):
+		var candidate: String = _owned_sibling_path(kind, index)
+		if not FileAccess.file_exists(candidate):
+			return candidate
+	return ""
+
+
+func _owned_sibling_path(kind: String, index: int) -> String:
+	return _test_profile_path.get_base_dir() + "/.delayed_self_0023w_" + kind + "_" + str(index) + ".json"
+
+
+func _cleanup_transaction(temp_path: String, backup_path: String) -> void:
+	_remove_owned(temp_path)
+	_remove_owned(backup_path)
+
+
+func _remove_owned(path: String) -> void:
+	if not path.is_empty() and FileAccess.file_exists(path):
+		DirAccess.remove_absolute(ProjectSettings.globalize_path(path))
