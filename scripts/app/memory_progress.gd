@@ -48,3 +48,30 @@ func record_completion(level_id: String, turns: int) -> bool:
 func reset_test_profile() -> void:
 	_completed.clear()
 	_best_turns.clear()
+
+
+func replace_profile_progress(completed_level_ids: Array, best_turns: Dictionary) -> bool:
+	var next_completed: Dictionary = {}
+	for value: Variant in completed_level_ids:
+		if not value is String:
+			return false
+		var level_id: String = value
+		if level_id.is_empty() or not _prerequisites.has(level_id) or next_completed.has(level_id):
+			return false
+		next_completed[level_id] = true
+	for level_id_value: Variant in next_completed.keys():
+		var completed_id: String = str(level_id_value)
+		for prerequisite_value: Variant in _prerequisites[completed_id]:
+			if not next_completed.has(prerequisite_value):
+				return false
+	var next_best_turns: Dictionary = {}
+	for key: Variant in best_turns.keys():
+		if not key is String or not next_completed.has(key):
+			return false
+		var turns: Variant = best_turns[key]
+		if not turns is int or int(turns) < 1:
+			return false
+		next_best_turns[key] = int(turns)
+	_completed = next_completed
+	_best_turns = next_best_turns
+	return true

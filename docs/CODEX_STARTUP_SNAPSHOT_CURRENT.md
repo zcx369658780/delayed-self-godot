@@ -16,7 +16,7 @@ The eight-entry catalog and all eight formal levels remain frozen. Sequence 9 is
 
 Task 0023R remains the accepted canonical test-path policy. Task 0023T remains the frozen pure Profile v1 codec. Task 0023V remains the accepted external `RefCounted` construction and immutable one-time configuration gate. Task 0023W remains the accepted configured-instance-only fixed-fixture filesystem store with recovery preservation, transactional replacement/rollback, reset, cleanup and 68 assertions.
 
-Task 0023X may add only a pure zero-I/O Profile↔MemoryProgress adapter and a minimal atomic hydration surface in `memory_progress.gd`. It must prepare completion candidates without mutation and commit runtime/profile state only through a separate explicit pure call. Tasks 0023R/0023T/0023V/0023W must pass before and after.
+Task 0023X is implemented and ready for GPT review: its pure adapter prepares candidates without mutation and commits only through an explicit pure call. Tasks 0023R/0023T/0023V/0023W passed before and after.
 
 Production Profile content must remain unopened. `profile_codec.gd`, `local_profile.gd`, AppRoot, production operation, single-AppRoot fixture authority, focused product integration, aggregate persistence regression, menus/settings/localization, build/export, RC, release, upload and festival submission remain closed.
 

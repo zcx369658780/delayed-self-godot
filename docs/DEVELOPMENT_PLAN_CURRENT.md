@@ -60,6 +60,7 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0023T pure Profile codec compile gate (ready for GPT review)
 → 0023V Profile-store instance configuration compile gate (ready for GPT review)
 → 0023W configured test-only Profile filesystem store (ready for GPT review)
+→ 0023X pure Profile-to-MemoryProgress adapter (ready for GPT review)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.

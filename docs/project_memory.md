@@ -247,6 +247,14 @@ authorized.
 
 ## Task 0023W configured fixture-only Profile filesystem store
 
+## Task 0023X pure Profile-to-MemoryProgress adapter
+
+Task 0023X is implemented and awaiting GPT review. The new zero-I/O adapter
+derives codec facts from a validated catalog, hydrates runtime progress,
+prepares non-mutating completion candidates, and commits only through an
+explicit pure call. The 31-assertion focused test and 0023R–0023W regressions
+pass; production Profile content remains unopened.
+
 Task 0023W is implemented and awaiting GPT review. It preserves the accepted
 0023R path policy, 0023T pure codec and 0023V external `RefCounted`
 construction, then adds filesystem operations only after successful
