@@ -26,6 +26,18 @@ grayscale/reduced-motion/resize readability, frozen hashes, and cleanup.
 Result: `EIGHT_LEVEL_FINALE_PRESENTATION_ACCEPTED_FOR_OWNER_REVIEW`; owner
 acceptance itself remains a separately authorized gate.
 
+## Task 0021W owner finale walkthrough
+
+The sole authenticated owner completed the normal eight-level flow once using
+remembered routes, with no Help or Timeline. Classification is
+`AUTHENTICATED_OWNER_NOT_FRESH_NOT_INDEPENDENT_EIGHT_LEVEL_FINALE_WALKTHROUGH`
+with prior mechanic/route/development exposure. The owner understood the final
+message and return controls but did not experience sequence 8 as an intentional
+finale because narrative weight and tone are insufficient; Help is not intuitive
+and the Level 7 difficulty jump remains. Disposition is
+`EIGHT_LEVEL_FINALE_OWNER_REVIEW_REPAIR_REQUIRED`, P0=0/P1=0/P2=0/P3=3. R replay
+was not owner-observed; no owner duplicate-route/record claim exists.
+
 ## Task 0018 Signal Convergence finale planning (historical)
 
 Task 0018 selected `A — SINGLE_DOOR_FIRST_AND_DOOR_FINAL` for prospective

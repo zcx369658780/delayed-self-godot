@@ -2,15 +2,15 @@
 
 - Status: `CURRENT`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Current gate: Task 0021V native machine/capture acceptance complete
-- Last completed task: `tasks/0021V_finale_presentation_machine_and_capture_acceptance.md`
-- Terminal verdict: `EIGHT_LEVEL_FINALE_PRESENTATION_ACCEPTED_FOR_OWNER_REVIEW`
+- Current gate: Task 0021W owner walkthrough recorded for GPT review
+- Last completed task: `tasks/0021W_owner_eight_level_finale_walkthrough.md`
+- Terminal verdict: `OWNER_EIGHT_LEVEL_FINALE_WALKTHROUGH_RECORDED_FOR_GPT_REVIEW`
 - Formal scope: exactly eight levels
 - Formal finale: sequence 8 `two_echo_convergence`
 - Selected ending direction: `B — FINAL_COMPLETION_OVERLAY_PLUS_BOUNDED_RETURN_STATE`
 - Fallback: `A — FINAL_COMPLETION_COPY_ONLY`
 - Current plan: `docs/production/EIGHT_LEVEL_FINALE_CLOSURE_AND_PRODUCTION_PLAN_CURRENT.md`
-- Current report: `docs/reports/0021V_EIGHT_LEVEL_FINALE_PRESENTATION_ACCEPTANCE_REPORT.md`
+- Current report: `docs/reports/0021W_OWNER_EIGHT_LEVEL_FINALE_WALKTHROUGH_REPORT.md`
 
 The eight-entry catalog and all eight formal levels remain byte-identical.
 Sequence 9 is deferred outside product scope and all candidate continuation is

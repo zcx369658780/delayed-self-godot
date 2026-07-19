@@ -235,6 +235,13 @@ without license evidence.
 - Non-claims: no fresh discovery, population difficulty, independent review,
   production, export, or release acceptance.
 
+Task 0021W recorded this gate under the required authenticated-owner, non-fresh,
+non-independent classification. The owner understood the ending but did not find
+the eight-level arc or current message sufficiently intentional/final; P0=0,
+P1=0, P2=0, P3=3. Its disposition is
+`EIGHT_LEVEL_FINALE_OWNER_REVIEW_REPAIR_REQUIRED`; no repair is authorized by
+that review.
+
 ### Gate 4 — Complete-flow and production closure
 
 - Objective: close critical non-export gaps in bounded slices: persistent

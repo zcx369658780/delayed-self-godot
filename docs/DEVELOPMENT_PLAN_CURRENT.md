@@ -74,8 +74,10 @@ Task 0021 implements Gate 1 through the existing AppRoot/Gameplay seam:
 catalog-marked final completion records once and waits in a deterministic
 acknowledgment state; non-final auto-return remains unchanged. Focused 42 and
 aggregate 621/9 pass. Task 0021V completed Gate 2 native Compatibility route
-and capture acceptance with the frozen baseline intact. The next possible gate
-is owner-only finale/eight-level walkthrough and requires separate authorization.
+and capture acceptance with the frozen baseline intact. Task 0021W then
+completed the owner-only walkthrough: P0=0/P1=0/P2=0/P3=3, with later narrative,
+Help, and difficulty-transition repair requested. Await GPT adjudication or a
+separately authorized bounded repair task.
 
 ## Milestone spine
 
