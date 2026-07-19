@@ -5,7 +5,9 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0023R`](../tasks/0023R_profile_test_isolation_gate_repair.md) — standalone zero-I/O test-path isolation gate
+4. [`Task 0023T`](../tasks/0023T_pure_profile_codec_compile_gate.md) — pure typed Profile codec compile gate
+5. [`Task 0023T report`](reports/0023T_PURE_PROFILE_CODEC_COMPILE_GATE_REPORT.md) — zero-I/O codec, compile and synthetic evidence
+6. [`Task 0023R`](../tasks/0023R_profile_test_isolation_gate_repair.md) — standalone zero-I/O test-path isolation gate
 5. [`Task 0023R report`](reports/0023R_PROFILE_TEST_ISOLATION_GATE_REPORT.md) — grammar, source audit, metadata, and standalone evidence
 6. [`Task 0023 blocker adjudication`](reports/0023_GPT_PROFILE_TEST_ISOLATION_BLOCKER_ADJUDICATION.md) — required isolation prerequisite
 7. [`Complete-flow production-closure plan`](production/COMPLETE_FLOW_PRODUCTION_CLOSURE_PLAN_CURRENT.md) — selected persistence-first closure sequence
@@ -36,6 +38,7 @@
 
 ## Compliance and reports
 
+- [`Task 0023T pure Profile codec compile-gate report`](reports/0023T_PURE_PROFILE_CODEC_COMPILE_GATE_REPORT.md)
 - [`Task 0023R Profile test-isolation gate report`](reports/0023R_PROFILE_TEST_ISOLATION_GATE_REPORT.md)
 - [`Task 0023 blocker adjudication`](reports/0023_GPT_PROFILE_TEST_ISOLATION_BLOCKER_ADJUDICATION.md)
 - [`Task 0022 complete-flow planning report`](reports/0022_COMPLETE_FLOW_PRODUCTION_CLOSURE_PLANNING_REPORT.md)

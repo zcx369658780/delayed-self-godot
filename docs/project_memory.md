@@ -1,5 +1,17 @@
 # Project memory
 
+## Task 0023T pure Profile codec compile gate
+
+Task 0023T separates the failed retry's compile/interface concern from any
+Profile I/O. It adds an explicitly typed, zero-I/O v1 codec for defaulting,
+normalization, stable JSON serialization and candidate-progress construction.
+The compile smoke passes on its first attempt and the standalone synthetic
+suite passes 34 assertions with empty stderr. Task 0023R remains exact at 123
+assertions, 4 positive and 39 negative paths before and after. The production
+Profile's existence/length/modified-time metadata and the test-root existence
+are unchanged. No fixture, filesystem storage/recovery/reset, AppRoot
+integration or aggregate run is authorized by this gate.
+
 ## Task 0023R standalone Profile isolation gate
 
 Task 0023 was blocked and fully rolled back after the test-path gate could not
