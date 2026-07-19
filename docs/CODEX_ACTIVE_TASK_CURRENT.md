@@ -1,30 +1,25 @@
 # Codex active task (CURRENT)
 
-- Status: `PROFILE_STORE_INSTANCE_CONFIGURATION_GATE_READY_FOR_GPT_REVIEW`
-- Last completed task: `tasks/0023V_profile_store_instance_configuration_compile_gate.md`
-- Gate: `PROTECTED PLAYER DATA / ZERO-I/O STORE INSTANCE CONFIGURATION + TYPE-CHECK`
+- Status: `PROFILE_FILESYSTEM_STORE_AFTER_INSTANCE_GATE_READY_FOR_CODEX`
+- Active task: `tasks/0023W_profile_filesystem_store_after_instance_gate.md`
+- Last GPT-accepted gate: `TASK_0023V_PROFILE_STORE_INSTANCE_CONFIGURATION_GATE_ACCEPTED`
+- Required checkpoint: `3d796d74884ef123cb9ea32f4a5101d7f1ee7340`
+- Gate: `PROTECTED PLAYER DATA / CONFIGURED TEST-ONLY FILESYSTEM STORE`
 - Formal scope: exactly eight levels
 - Formal finale: sequence 8 `two_echo_convergence`
-- Ending direction: `B — FINAL_COMPLETION_OVERLAY_PLUS_BOUNDED_RETURN_STATE`
-- Fallback: `A — FINAL_COMPLETION_COPY_ONLY`
-- Current plan/report: `docs/production/COMPLETE_FLOW_PRODUCTION_CLOSURE_PLAN_CURRENT.md` / `docs/reports/0023V_PROFILE_STORE_INSTANCE_CONFIGURATION_COMPILE_GATE_REPORT.md`
+- Current plan: `docs/production/COMPLETE_FLOW_PRODUCTION_CLOSURE_PLAN_CURRENT.md`
 
-Sequence 9 is `DEFERRED_CONCEPT_NOT_PRODUCT_SCOPE`; B007 remains historical
-external diagnostic evidence. Candidate A/B/C continuation, reduced-grammar
-search, and proof expansion are closed.
+Task 0023V is accepted. External callers preload `scripts/app/local_profile.gd`, construct a `RefCounted`, and call `configure_test` once. Tasks 0023R, 0023T and 0023V remain frozen prerequisites.
 
-Task 0021 implements the accepted direction with no new scene or contract.
-Normal non-final completion preserves automatic return. The catalog-marked
-final records once, remains in Gameplay at
-`FINAL_ACKNOWLEDGEMENT_VISIBLE`, accepts Enter/Space/Esc for one routed return,
-and accepts R for exact replay without a second progress record.
+Task 0023W is the only active implementation scope. It may append bounded filesystem behavior only to a successfully configured instance and operate only in the fixed task-owned canonical fixture. All I/O methods must reject before configuration with zero I/O.
 
-Task 0023 was blocked and rolled back after its isolation failure. Task 0023R
-proves the canonical path grammar through a zero-I/O standalone preflight:
-123 assertions, 4 positive and 39 negative paths, empty stderr, unchanged
-production metadata, and no test-root access. Task 0023T separately proves an
-explicitly typed zero-I/O v1 codec with a first-attempt compile smoke and 34
-synthetic assertions. Task 0023V proves external RefCounted construction and
-one-time defensive test configuration with 28 synthetic assertions. Await GPT
-review and a later revised filesystem-store task; do not resume 0023, 0023S or
-0023U automatically.
+Production Profile content remains unopened and protected. Only its accepted non-content metadata may be compared. `create_production`, AppRoot, MemoryProgress, existing AppRoot tests, aggregate, menus, settings, localization, scenes, export, release, upload and festival submission remain closed.
+
+Do not resume historical blocked tasks 0023, 0023S or 0023U. Sequence 9 remains `DEFERRED_CONCEPT_NOT_PRODUCT_SCOPE`; B007 and candidate A/B/C continuation remain historical and closed.
+
+Expected terminal verdict:
+
+```text
+PROFILE_FILESYSTEM_STORE_AFTER_INSTANCE_GATE_READY_FOR_GPT_REVIEW
+BLOCKED_PROFILE_FILESYSTEM_STORE_AFTER_INSTANCE_GATE
+```
