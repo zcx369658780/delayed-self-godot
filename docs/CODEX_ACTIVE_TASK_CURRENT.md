@@ -1,25 +1,25 @@
 # Codex active task (CURRENT)
 
-- Status: `PROFILE_FILESYSTEM_STORE_AFTER_INSTANCE_GATE_READY_FOR_GPT_REVIEW`
-- Active task: `tasks/0023W_profile_filesystem_store_after_instance_gate.md`
-- Last GPT-accepted gate: `TASK_0023V_PROFILE_STORE_INSTANCE_CONFIGURATION_GATE_ACCEPTED`
-- Required checkpoint: `3d796d74884ef123cb9ea32f4a5101d7f1ee7340`
-- Gate: `PROTECTED PLAYER DATA / CONFIGURED TEST-ONLY FILESYSTEM STORE`
+- Status: `PROFILE_MEMORY_PROGRESS_ADAPTER_GATE_READY_FOR_CODEX`
+- Active task: `tasks/0023X_profile_memory_progress_adapter_gate.md`
+- Last GPT-accepted gate: `TASK_0023W_PROFILE_FILESYSTEM_STORE_AFTER_INSTANCE_GATE_ACCEPTED`
+- Required checkpoint: `25f7f7cf26849a722b576d13cee26f225061bc94`
+- Gate: `PROTECTED PLAYER DATA / PURE PROFILE↔RUNTIME PROGRESS ADAPTER`
 - Formal scope: exactly eight levels
 - Formal finale: sequence 8 `two_echo_convergence`
 - Current plan: `docs/production/COMPLETE_FLOW_PRODUCTION_CLOSURE_PLAN_CURRENT.md`
 
-Task 0023V is accepted. External callers preload `scripts/app/local_profile.gd`, construct a `RefCounted`, and call `configure_test` once. Tasks 0023R, 0023T and 0023V remain frozen prerequisites.
+Tasks 0023R, 0023T, 0023V and 0023W are GPT-accepted and remain frozen prerequisites. Task 0023W proves configured-instance-only, fixed-fixture Profile filesystem behavior with 68 assertions and unchanged production Profile metadata.
 
-Task 0023W implementation is complete and awaiting GPT review. It appends bounded filesystem behavior only to a successfully configured instance and operates only in the fixed task-owned canonical fixture. All I/O methods reject before configuration with zero I/O; fixed-fixture recovery, transactional replacement/rollback and reset passed the standalone 68-assertion suite.
+Task 0023X is the only active implementation scope. It may add a zero-I/O adapter between the frozen Profile v1 codec and `DelayedSelfMemoryProgress`, plus one minimal pure MemoryProgress hydration surface. Completion candidates must not mutate runtime state; runtime commit occurs only through an explicit pure call after a later caller confirms persistence.
 
-Production Profile content remains unopened and protected. Only its accepted non-content metadata may be compared. `create_production`, AppRoot, MemoryProgress, existing AppRoot tests, aggregate, menus, settings, localization, scenes, export, release, upload and festival submission remain closed.
+`profile_codec.gd`, `local_profile.gd`, AppRoot, production Profile operation, the Task 0023W fixture/store contract, existing tests, aggregate, menus, settings, localization, scenes, export, release, upload and festival submission remain closed.
 
 Do not resume historical blocked tasks 0023, 0023S or 0023U. Sequence 9 remains `DEFERRED_CONCEPT_NOT_PRODUCT_SCOPE`; B007 and candidate A/B/C continuation remain historical and closed.
 
 Expected terminal verdict:
 
 ```text
-PROFILE_FILESYSTEM_STORE_AFTER_INSTANCE_GATE_READY_FOR_GPT_REVIEW
-BLOCKED_PROFILE_FILESYSTEM_STORE_AFTER_INSTANCE_GATE
+PROFILE_MEMORY_PROGRESS_ADAPTER_GATE_READY_FOR_GPT_REVIEW
+BLOCKED_PROFILE_MEMORY_PROGRESS_ADAPTER_GATE
 ```
