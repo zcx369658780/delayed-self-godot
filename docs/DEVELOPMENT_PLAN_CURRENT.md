@@ -47,13 +47,25 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0017RC byte-identical bridge contextual Help repair (GPT accepted at machine/presentation level)
 → 0017RCV authenticated-owner contextual Help retest (GPT accepted with residual limitations)
 → 0018 `signal_convergence` sequence-9 finale planning (ready for GPT review)
+→ 0019 candidate-A implementation search (blocked: no bounded candidate-A)
+→ 0019A band reconciliation and fallback-B pilot (blocked at B007 proof limit)
+→ 0019B fixed B007 final complete-proof continuation (scope reassessment required)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
 
 Tasks through Task 0017C have recorded acceptance boundaries. Task 0017V records owner completion and correct eventual mechanism transfer but finds the Level 6→bridge jump unsmoothed, Help/Timeline ineffective, and YOU-substitution reasoning incomplete. Task 0017D selected minimal geometry plus contextual causal Help. Task 0017R stopped without product changes, Task 0017RA retained the strict equal-delay controls, and Task 0017RB exhausted its bounded topology family without a valid replacement. GPT then selected a byte-identical bridge plus contextual causal Help, Task 0017RC machine/capture-validated it, and GPT accepted Task 0017RCV's owner model with disclosed residual clarity/difficulty/policy limitations.
 
-Task 0018 selects structure A for prospective sequence 9 `signal_convergence`: a single-Plate Door first creates route access or phase, then an A+B Door forms the final articulation while YOU remains free. Structure B is the sole fallback. The grammar, quantitative targets, proof family, non-route Help/optional Timeline policy, owner-only review boundary, and stop conditions are planning-ready for GPT review; no implementation or catalog migration follows automatically.
+Task 0018 selected structure A for prospective sequence 9
+`signal_convergence`. Task 0019 found no candidate-A survivor under the
+accepted PLAN_BAND. Task 0019A retained external fallback-B candidate B007
+after its exact metrics and strict controls passed, but its augmented proof hit
+the 180-second limit. Task 0019B made the final authorized attempt and reached
+the unchanged 2,000,000-state ceiling without exhaustion after 668,807 ms.
+Disposition is now C1 scope reassessment: GPT must choose between reducing the
+sequence-9 grammar and retaining sequence 8 as the final level. No additional
+proof expansion, fallback activation, implementation, or catalog migration
+follows automatically.
 
 ## Milestone spine
 

@@ -1,13 +1,29 @@
 # Signal Convergence finale plan (CURRENT)
 
 - Task: `tasks/0018_signal_convergence_finale_planning.md`
-- Gate: `FINALE DESIGN PLANNING / DOCUMENTATION ONLY`
-- Status: `SIGNAL_CONVERGENCE_FINALE_PLAN_READY_FOR_GPT_REVIEW`
+- Diagnostic continuation: `tasks/0019B_b007_fixed_candidate_complete_proof_continuation.md`
+- Gate: `FINALE SCOPE REASSESSMENT`
+- Status: `FINALE_SCOPE_REASSESSMENT_REQUIRED_FOR_GPT_REVIEW`
 - Prospective ID/title: `signal_convergence / Signal Convergence / 信号汇流`
 - Prospective sequence: 9
 - Primary structure: `A — SINGLE_DOOR_FIRST_AND_DOOR_FINAL`
 - Sole fallback: `B — AND_DOOR_FIRST_SINGLE_DOOR_FINAL`
-- Evidence status: planning judgments and future targets only; no formal level, measured solve, runtime, capture, or owner-finale evidence exists
+- Evidence status: no formal level or owner-finale evidence exists; candidate A has no PLAN_BAND survivor and external fallback B007 hit the final augmented state limit without exhaustion
+
+## Task 0019B scope-reassessment disposition
+
+The accepted primary candidate-A search produced no PLAN_BAND survivor. The
+sole proof-pending fallback-B candidate `B007` reproduced SHA-256
+`2e4cd14ba50bbbd5d3eb223bc82a35f17cc8b5a7e95d1b79c9fef5a37fa21325`,
+`L*=23`, `N*=3 EXACT`, visited 77,848, frontier 23,861, deterministic
+replay/restart, five complete-unsolved controls, and both Door articulations.
+
+Its final authorized augmented proof reached `STATE_LIMIT` after 668,807 ms
+with 2,000,004 visited states and frontier 201,872. Because the space did not
+exhaust, B007 is not a complete fallback survivor and no direct gate is
+accepted. The current disposition is `C1 — SCOPE_REASSESSMENT`: GPT must choose
+between reducing the sequence-9 grammar and retaining sequence 8 as the final
+level. The plan does not preselect either choice.
 
 ## 1. Decision and authority boundary
 

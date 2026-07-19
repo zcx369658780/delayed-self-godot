@@ -1,12 +1,21 @@
 # Codex active task (CURRENT)
 
-- Status: `SIGNAL_CONVERGENCE_FINALE_PLAN_READY_FOR_GPT_REVIEW`
-- Last completed task: `tasks/0018_signal_convergence_finale_planning.md`
-- Gate: `FINALE DESIGN PLANNING / DOCUMENTATION ONLY`
-- Selected primary: `A — SINGLE_DOOR_FIRST_AND_DOOR_FINAL`
-- Sole fallback: `B — AND_DOOR_FIRST_SINGLE_DOOR_FINAL`
-- Current plan/report: `docs/level_design/SIGNAL_CONVERGENCE_FINALE_PLAN_CURRENT.md` / `docs/reports/0018_SIGNAL_CONVERGENCE_FINALE_PLANNING_REPORT.md`
+- Status: `FINALE_SCOPE_REASSESSMENT_REQUIRED_FOR_GPT_REVIEW`
+- Last completed task: `tasks/0019B_b007_fixed_candidate_complete_proof_continuation.md`
+- Gate: `FIXED EXTERNAL CANDIDATE / FINAL COMPLETE AUGMENTED PROOF`
+- Disposition: `C1 — SCOPE_REASSESSMENT`
+- Candidate: external fallback-B `B007`, not selected and not formal
+- Current adjudication/report: `docs/level_design/SIGNAL_CONVERGENCE_CANDIDATE_ADJUDICATION_CURRENT.md` / `docs/reports/0019B_B007_COMPLETE_PROOF_REPORT.md`
 
-The plan freezes prospective sequence 9 `signal_convergence / Signal Convergence / 信号汇流` as a two-stage schema-v1 synthesis: first create and use one single-Plate Door window, then use the enabled route/phase to align E2/E4 on A+B while YOU remains free for the final following-snapshot Door entry and player-only EXIT.
+Task 0019B reproduced B007 at SHA-256
+`2e4cd14ba50bbbd5d3eb223bc82a35f17cc8b5a7e95d1b79c9fef5a37fa21325`,
+`L*=23`, `N*=3 EXACT`, visited 77,848, frontier 23,861, and all five
+complete-unsolved Stage-C controls. The sole final augmented proof reached the
+frozen 2,000,000-state ceiling without exhaustion: `STATE_LIMIT`, 668,807 ms,
+2,000,004 visited, frontier 201,872.
 
-Await GPT review. Do not create a formal level, edit the catalog, run implementation search, change Help/Timeline/localization, alter any existing level/hash/metric, or begin production, save/build/export, release, or submission work without a new bounded task.
+Await GPT review and a fresh planning decision between reducing the sequence-9
+grammar and retaining sequence 8 as the final level. Do not expand proof
+resources, resume candidate search, activate B007, introduce candidate C,
+implement a finale, edit the catalog, or begin owner review, localization,
+production, save/build/export, release, or submission work.

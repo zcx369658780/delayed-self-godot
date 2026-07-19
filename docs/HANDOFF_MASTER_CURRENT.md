@@ -1,25 +1,28 @@
 # Handoff master (CURRENT)
 
-Task 0018 is complete at:
+Task 0019B is complete at:
 
 ```text
-SIGNAL_CONVERGENCE_FINALE_PLAN_READY_FOR_GPT_REVIEW
+FINALE_SCOPE_REASSESSMENT_REQUIRED_FOR_GPT_REVIEW
 ```
 
-Selected primary:
+The exact retained external `B007` candidate has SHA-256
+`2e4cd14ba50bbbd5d3eb223bc82a35f17cc8b5a7e95d1b79c9fef5a37fa21325`
+and reproduced `23 / 3 EXACT / 77,848 / 23,861`, deterministic replay/restart,
+all five complete-unsolved controls, and both Door articulations.
 
-```text
-A — SINGLE_DOOR_FIRST_AND_DOOR_FINAL
-```
+The one final Task 0019B augmented proof used the unchanged 2,000,000-state
+ceiling and the authorized 900-second wall-time ceiling. It stopped at
+`STATE_LIMIT` after 668,807 ms with 2,000,004 visited states and frontier
+201,872. The augmented space was not exhausted, so direct-gate classes remain
+unverified and B007 is not selected.
 
-Sole fallback:
+Read the Task 0019B report, current candidate adjudication, GPT 0019A
+proof-limit adjudication, startup/active-task documents, and live Git truth.
+Next authority must be a fresh GPT planning choice between reducing the
+sequence-9 grammar and retaining sequence 8 as the final level.
 
-```text
-B — AND_DOOR_FIRST_SINGLE_DOOR_FINAL
-```
-
-The prospective sequence-9 finale uses one YOU, shared-spawn E2/E4 provisionally at delays 2/4, exactly three Plates, two initially closed Doors with one single and one A+B dependency, exactly two visible causal stages, one player-only EXIT, and a board no larger than 10×8. Future targets are `L*=21–30`, `N*=1–12` with `EXACT` preferred and `CAPPED` not acceptable, visited 20,000–300,000, frontier 2,000–50,000, 4–6 meaningful decisions, and at least four recoverable alternatives.
-
-Read Task 0018, [`SIGNAL_CONVERGENCE_FINALE_PLAN_CURRENT.md`](level_design/SIGNAL_CONVERGENCE_FINALE_PLAN_CURRENT.md), its report, the Task 0017RCV GPT adjudication, current startup/active-task documents, and live Git truth. Await GPT review.
-
-Hard boundary: no formal level, catalog migration, solver/Godot authoring run, source/test/schema/scene/settings change, Help/Timeline/localization implementation, production art/audio, save/build/export, release, or submission. Owner review remains `OWNER_ONLY_REVIEW / FRESH_INDEPENDENT_REVIEW_UNAVAILABLE_BY_OWNER_CONSTRAINT`.
+Hard boundary: do not expand resources again, resume candidate A/B search,
+activate B007, use candidate C, implement a formal finale, migrate the catalog,
+change Help/Timeline/localization, conduct owner review, or begin production,
+save/build/export, release, or submission work.

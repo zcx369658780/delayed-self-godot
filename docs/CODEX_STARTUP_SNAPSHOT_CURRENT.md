@@ -2,13 +2,22 @@
 
 - Status: `CURRENT`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Current gate: Task 0018 finale planning complete and awaiting GPT review
-- Last completed task: `tasks/0018_signal_convergence_finale_planning.md`
-- Current plan/report: `docs/level_design/SIGNAL_CONVERGENCE_FINALE_PLAN_CURRENT.md` / `docs/reports/0018_SIGNAL_CONVERGENCE_FINALE_PLANNING_REPORT.md`
-- Terminal verdict: `SIGNAL_CONVERGENCE_FINALE_PLAN_READY_FOR_GPT_REVIEW`
-- Selected structure: `A — SINGLE_DOOR_FIRST_AND_DOOR_FINAL`
-- Sole fallback: `B — AND_DOOR_FIRST_SINGLE_DOOR_FINAL`
+- Current gate: Task 0019B complete and awaiting GPT scope-reassessment review
+- Last completed task: `tasks/0019B_b007_fixed_candidate_complete_proof_continuation.md`
+- Terminal verdict: `FINALE_SCOPE_REASSESSMENT_REQUIRED_FOR_GPT_REVIEW`
+- Disposition: `C1 — SCOPE_REASSESSMENT`
+- Current adjudication: `docs/level_design/SIGNAL_CONVERGENCE_CANDIDATE_ADJUDICATION_CURRENT.md`
+- Current report: `docs/reports/0019B_B007_COMPLETE_PROOF_REPORT.md`
 
-Task 0017RCV is GPT adjudicated as `TASK_0017RCV_OWNER_BRIDGE_MODEL_ACCEPTED_WITH_RESIDUAL_LIMITATIONS`. The accepted no-route Help policy remains, Timeline is optional, the bridge remains byte-identical, and no further bridge repair is required before finale planning.
+Candidate A has no PLAN_BAND survivor. Fixed external fallback-B candidate
+`B007` reproduced its frozen identity, normal metrics, witness/restart, five
+complete-unsolved controls, and topology checks. Its final augmented proof
+reached the unchanged 2,000,000-state ceiling after 668,807 ms with 2,000,004
+visited states and frontier 201,872; the space was not exhausted.
 
-Task 0018 plans prospective sequence 9 `signal_convergence` with one YOU, shared-spawn E2/E4 delays 2/4, exactly three Plates, two initially closed Doors with one single and one A+B dependency, exactly two visible stages, and one player-only EXIT. No formal level, catalog migration, implementation, solver/Godot run, production, export, release, or submission is authorized.
+Existing sequence 8 `two_echo_convergence` remains the sole formal final level.
+B007 is not selected, fallback B is not activated, and no formal sequence 9
+exists. Await GPT choice between a reduced sequence-9 grammar and retaining
+sequence 8 as final. No further proof expansion, candidate work, finale
+implementation, catalog migration, owner review, production, export, release,
+or submission is authorized.

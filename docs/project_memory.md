@@ -38,6 +38,26 @@ Task 0017C exactly reconstructed external `candidate_07.json` as formal `echo_sp
 
 Durable project decisions only; live task progress belongs in current docs and reports.
 
+## Task 0019B final B007 proof and finale scope reassessment
+
+Candidate A has no survivor under either the accepted Task 0018 PLAN_BAND or
+the Task 0019 narrowed band. External fallback-B candidate B007 is frozen at
+SHA-256
+`2e4cd14ba50bbbd5d3eb223bc82a35f17cc8b5a7e95d1b79c9fef5a37fa21325`
+with `L*=23`, `N*=3 EXACT`, visited 77,848, frontier 23,861. Its deterministic
+witness/restart, five complete-unsolved controls, pairwise-distinct entities,
+and both Door articulations reproduced exactly.
+
+The final Task 0019B augmented proof retained the 2,000,000-state ceiling and
+extended only wall time to 900 seconds. It reached `STATE_LIMIT` after 668,807
+ms with 2,000,004 visited states and frontier 201,872; the augmented space was
+not exhausted. Direct B-chain gates remain unverified, B007 is not selected,
+and fallback B is not activated. The durable disposition is
+`C1 — SCOPE_REASSESSMENT`: a later GPT planning gate must choose between
+reducing the sequence-9 grammar and retaining sequence 8 as the final level.
+No further proof expansion, candidate C, or product implementation is
+authorized.
+
 ## Task 0017P Level Select scalability decision
 
 - Task 0017 correctly stopped because the fixed Level Select column made tail entries unreachable at 960×540.
