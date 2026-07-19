@@ -1,9 +1,9 @@
 # Handoff master (CURRENT)
 
-Task 0022 is complete at:
+Task 0023R is complete at:
 
 ```text
-COMPLETE_FLOW_PRODUCTION_CLOSURE_PLAN_READY_FOR_GPT_REVIEW
+PROFILE_TEST_ISOLATION_GATE_READY_FOR_GPT_REVIEW
 ```
 
 Product scope is frozen at eight formal levels. Sequence 8
@@ -38,9 +38,15 @@ persistent local profile core plus isolated tests as the proposed next
 implementation slice; see
 `docs/production/COMPLETE_FLOW_PRODUCTION_CLOSURE_PLAN_CURRENT.md`.
 
-Read Task 0022, its plan/report, Task 0021W adjudication, current startup/active
-documents, and live Git truth. Await GPT review or a new bounded implementation
-task; do not begin one automatically.
+Task 0023 was blocked and fully rolled back. Task 0023R adds only a zero-I/O
+canonical test-path policy. Its standalone preflight passes 123 assertions
+across 4 positive and 39 negative paths with empty stderr. Production Profile
+metadata is unchanged; the pre-existing test root was neither inspected nor
+touched.
+
+Read Task 0023R and its report, the Task 0023 blocker adjudication, current
+startup/active documents, and live Git truth. Await GPT acceptance and a revised
+implementation task; do not resume Task 0023 automatically.
 
 Hard boundary: no sequence-9 revival, unbounded product repair, save/settings
 implementation, asset/audio acquisition, owner walkthrough, build/export, RC

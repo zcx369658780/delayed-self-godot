@@ -1,5 +1,18 @@
 # Project memory
 
+## Task 0023R standalone Profile isolation gate
+
+Task 0023 was blocked and fully rolled back after the test-path gate could not
+protect the real Profile. Task 0023R adds one zero-I/O policy skeleton:
+`build_test_profile_path` and `validate_test_profile_path` accept only
+`user://delayed_self_test_profiles/<fixture-id>/delayed_self_profile.json`,
+where fixture IDs match `[A-Za-z0-9][A-Za-z0-9_-]{0,63}`. The standalone gate
+passes 123 assertions, 4 positive and 39 negative path cases, with empty
+stderr. Production existence/length/modified-time metadata is unchanged. The
+pre-existing test-root directory was not inspected or touched. This is a
+prerequisite only; persistence, AppRoot, focused, and aggregate work remain
+unauthorized pending GPT acceptance and a revised task.
+
 ## Task 0022 complete-flow production closure planning
 
 Task 0022 is documentation-only and selects persistent local profile core plus

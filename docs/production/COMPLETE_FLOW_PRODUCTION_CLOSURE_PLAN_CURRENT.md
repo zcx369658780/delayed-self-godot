@@ -4,6 +4,7 @@
 - Status: `COMPLETE_FLOW_PRODUCTION_CLOSURE_PLAN_READY_FOR_GPT_REVIEW`
 - Product changes in this task: none
 - Selected first implementation slice: **persistent local profile core and isolated tests**
+- Isolation prerequisite: Task 0023R zero-I/O canonical test-path gate is ready for GPT review; Profile implementation remains blocked pending acceptance and a revised task.
 
 ## 1. Authority and current architecture
 
