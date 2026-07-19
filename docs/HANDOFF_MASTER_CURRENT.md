@@ -1,9 +1,9 @@
 # Handoff master (CURRENT)
 
-Task 0021W is complete at:
+Task 0022 is complete at:
 
 ```text
-OWNER_EIGHT_LEVEL_FINALE_WALKTHROUGH_RECORDED_FOR_GPT_REVIEW
+COMPLETE_FLOW_PRODUCTION_CLOSURE_PLAN_READY_FOR_GPT_REVIEW
 ```
 
 Product scope is frozen at eight formal levels. Sequence 8
@@ -33,13 +33,16 @@ Enter/Space/Esc emit one existing back request. R restores the exact initial
 state and permits replay while AppRoot's same-session guard prevents a second
 record. Focused 42 and aggregate 621 assertions / 9 vectors pass; all fourteen
 markers appear once. Native Compatibility acceptance is complete. The owner
-walkthrough records `EIGHT_LEVEL_FINALE_OWNER_REVIEW_REPAIR_REQUIRED` with
-P0=0/P1=0/P2=0/P3=3; see its Task 0021W report.
+walkthrough was adjudicated with P0=0/P1=0/P2=0/P3=3. Task 0022 selects
+persistent local profile core plus isolated tests as the proposed next
+implementation slice; see
+`docs/production/COMPLETE_FLOW_PRODUCTION_CLOSURE_PLAN_CURRENT.md`.
 
-Read Task 0021W and its review/report, Task 0021V/0021/0020 materials, current
-startup/active documents, and live Git truth. Await GPT adjudication or a new
-bounded repair task; do not begin one automatically.
+Read Task 0022, its plan/report, Task 0021W adjudication, current startup/active
+documents, and live Git truth. Await GPT review or a new bounded implementation
+task; do not begin one automatically.
 
-Hard boundary: no sequence-9 revival, unbounded product repair, save/settings,
-asset/audio acquisition, owner walkthrough, build/export, RC work, festival
-packaging, upload, release, or submission without a new bounded task.
+Hard boundary: no sequence-9 revival, unbounded product repair, save/settings
+implementation, asset/audio acquisition, owner walkthrough, build/export, RC
+work, festival packaging, upload, release, or submission without a new bounded
+task.

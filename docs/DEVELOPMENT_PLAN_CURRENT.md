@@ -52,6 +52,9 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0019B fixed B007 final complete-proof continuation (scope reassessment required)
 → 0020 eight-level finale closure and production-readiness planning (ready for GPT review)
 → 0021 final completion acknowledgment and bounded return (ready for GPT review)
+→ 0021V native machine/capture acceptance (ready for GPT review)
+→ 0021W owner walkthrough (adjudicated with P3 backlog)
+→ 0022 complete-flow / protected-data / production-closure planning (ready for GPT review)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
@@ -76,8 +79,11 @@ acknowledgment state; non-final auto-return remains unchanged. Focused 42 and
 aggregate 621/9 pass. Task 0021V completed Gate 2 native Compatibility route
 and capture acceptance with the frozen baseline intact. Task 0021W then
 completed the owner-only walkthrough: P0=0/P1=0/P2=0/P3=3, with later narrative,
-Help, and difficulty-transition repair requested. Await GPT adjudication or a
-separately authorized bounded repair task.
+Help, and difficulty-transition repair requested. Task 0022 then selects
+persistence-first production closure: profile core, menu/confirmation flow,
+settings, localization/font/copy, Credits/polish decisions, machine acceptance,
+owner walkthrough, and Windows export validation. These remain separate
+implementation gates; only planning is complete here.
 
 ## Milestone spine
 

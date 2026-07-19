@@ -1,5 +1,19 @@
 # Project memory
 
+## Task 0022 complete-flow production closure planning
+
+Task 0022 is documentation-only and selects persistent local profile core plus
+isolated tests as the next implementation recommendation. One versioned JSON
+profile under `user://` should preserve completed IDs, best turns, and the
+minimum later settings with validated load, backup-first recovery, atomic
+replacement, confirmed reset, and test-only storage isolation. There is no
+legacy on-disk format. Follow-on slices are menu/confirmation flow, settings,
+localization/licensed-font/copy, Credits/polish closure, machine acceptance,
+owner-only walkthrough, and separately authorized Windows export validation.
+Audio is `OMIT_FOR_RC`; visual reskin and image Help are deferred. No product
+implementation, asset/font/audio acquisition, export, RC, release, or
+submission follows from this plan.
+
 ## Task 0021 final acknowledgment and bounded return
 
 Task 0021 implements the accepted direction B without a new scene, level fact,
