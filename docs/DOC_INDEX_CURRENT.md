@@ -7,8 +7,10 @@
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
 4. [`Task 0023T`](../tasks/0023T_pure_profile_codec_compile_gate.md) — pure typed Profile codec compile gate
 5. [`Task 0023T report`](reports/0023T_PURE_PROFILE_CODEC_COMPILE_GATE_REPORT.md) — zero-I/O codec, compile and synthetic evidence
-6. [`Task 0023R`](../tasks/0023R_profile_test_isolation_gate_repair.md) — standalone zero-I/O test-path isolation gate
-5. [`Task 0023R report`](reports/0023R_PROFILE_TEST_ISOLATION_GATE_REPORT.md) — grammar, source audit, metadata, and standalone evidence
+6. [`Task 0023V`](../tasks/0023V_profile_store_instance_configuration_compile_gate.md) — zero-I/O instance configuration gate
+7. [`Task 0023V report`](reports/0023V_PROFILE_STORE_INSTANCE_CONFIGURATION_COMPILE_GATE_REPORT.md) — typed external construction evidence
+8. [`Task 0023R`](../tasks/0023R_profile_test_isolation_gate_repair.md) — standalone zero-I/O test-path isolation gate
+9. [`Task 0023R report`](reports/0023R_PROFILE_TEST_ISOLATION_GATE_REPORT.md) — grammar, source audit, metadata, and standalone evidence
 6. [`Task 0023 blocker adjudication`](reports/0023_GPT_PROFILE_TEST_ISOLATION_BLOCKER_ADJUDICATION.md) — required isolation prerequisite
 7. [`Complete-flow production-closure plan`](production/COMPLETE_FLOW_PRODUCTION_CLOSURE_PLAN_CURRENT.md) — selected persistence-first closure sequence
 8. [`Task 0020 GPT acceptance`](reports/0020_GPT_EIGHT_LEVEL_FINALE_CLOSURE_PLAN_ACCEPTANCE.md) — accepted ending contract and implementation boundary
@@ -38,6 +40,7 @@
 
 ## Compliance and reports
 
+- [`Task 0023V store-instance configuration compile-gate report`](reports/0023V_PROFILE_STORE_INSTANCE_CONFIGURATION_COMPILE_GATE_REPORT.md)
 - [`Task 0023T pure Profile codec compile-gate report`](reports/0023T_PURE_PROFILE_CODEC_COMPILE_GATE_REPORT.md)
 - [`Task 0023R Profile test-isolation gate report`](reports/0023R_PROFILE_TEST_ISOLATION_GATE_REPORT.md)
 - [`Task 0023 blocker adjudication`](reports/0023_GPT_PROFILE_TEST_ISOLATION_BLOCKER_ADJUDICATION.md)

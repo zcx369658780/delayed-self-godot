@@ -58,6 +58,7 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0023 persistent Profile core (blocked and fully rolled back on isolation failure)
 → 0023R standalone Profile test-path isolation gate (ready for GPT review)
 → 0023T pure Profile codec compile gate (ready for GPT review)
+→ 0023V Profile-store instance configuration compile gate (ready for GPT review)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
@@ -95,8 +96,10 @@ grammar and a standalone 123-assertion preflight proves 4 positive and 39
 negative paths. Task 0023T then separates the type/interface concern into a
 zero-I/O pure codec gate: a first-attempt compile smoke and 34 synthetic
 assertions prove defaulting, normalization, stable serialization and candidate
-progress only. No Profile filesystem implementation may resume until GPT
-reviews this gate and issues a later scoped task.
+progress only. Task 0023V separately resolves the self-type construction
+blocker through a zero-I/O external-instance configuration gate. No Profile
+filesystem implementation may resume until GPT reviews this gate and issues a
+later revised task.
 
 ## Milestone spine
 

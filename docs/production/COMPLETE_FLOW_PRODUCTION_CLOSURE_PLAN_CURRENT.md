@@ -4,7 +4,7 @@
 - Status: `COMPLETE_FLOW_PRODUCTION_CLOSURE_PLAN_READY_FOR_GPT_REVIEW`
 - Product changes in this task: none
 - Selected first implementation slice: **persistent local profile core and isolated tests**
-- Isolation prerequisite: Task 0023R zero-I/O canonical test-path gate remains exact. Task 0023T now proves a separate typed, zero-I/O v1 codec/model surface; Profile filesystem implementation remains closed pending GPT review and a later scoped task.
+- Isolation prerequisite: Task 0023R zero-I/O canonical test-path gate remains exact. Task 0023T proves the typed v1 codec and Task 0023V proves external one-time test-store configuration; Profile filesystem implementation remains closed pending GPT review and a later revised task.
 
 ## 1. Authority and current architecture
 

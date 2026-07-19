@@ -1,13 +1,13 @@
 # Codex active task (CURRENT)
 
-- Status: `PURE_PROFILE_CODEC_COMPILE_GATE_READY_FOR_GPT_REVIEW`
-- Last completed task: `tasks/0023T_pure_profile_codec_compile_gate.md`
-- Gate: `PROTECTED PLAYER DATA / ZERO-I/O PROFILE CODEC + TYPE-CHECK`
+- Status: `PROFILE_STORE_INSTANCE_CONFIGURATION_GATE_READY_FOR_GPT_REVIEW`
+- Last completed task: `tasks/0023V_profile_store_instance_configuration_compile_gate.md`
+- Gate: `PROTECTED PLAYER DATA / ZERO-I/O STORE INSTANCE CONFIGURATION + TYPE-CHECK`
 - Formal scope: exactly eight levels
 - Formal finale: sequence 8 `two_echo_convergence`
 - Ending direction: `B — FINAL_COMPLETION_OVERLAY_PLUS_BOUNDED_RETURN_STATE`
 - Fallback: `A — FINAL_COMPLETION_COPY_ONLY`
-- Current plan/report: `docs/production/COMPLETE_FLOW_PRODUCTION_CLOSURE_PLAN_CURRENT.md` / `docs/reports/0023T_PURE_PROFILE_CODEC_COMPILE_GATE_REPORT.md`
+- Current plan/report: `docs/production/COMPLETE_FLOW_PRODUCTION_CLOSURE_PLAN_CURRENT.md` / `docs/reports/0023V_PROFILE_STORE_INSTANCE_CONFIGURATION_COMPILE_GATE_REPORT.md`
 
 Sequence 9 is `DEFERRED_CONCEPT_NOT_PRODUCT_SCOPE`; B007 remains historical
 external diagnostic evidence. Candidate A/B/C continuation, reduced-grammar
@@ -24,5 +24,7 @@ proves the canonical path grammar through a zero-I/O standalone preflight:
 123 assertions, 4 positive and 39 negative paths, empty stderr, unchanged
 production metadata, and no test-root access. Task 0023T separately proves an
 explicitly typed zero-I/O v1 codec with a first-attempt compile smoke and 34
-synthetic assertions. Await GPT review and a later scoped I/O-only task; do not
-resume Task 0023 or Task 0023S automatically.
+synthetic assertions. Task 0023V proves external RefCounted construction and
+one-time defensive test configuration with 28 synthetic assertions. Await GPT
+review and a later revised filesystem-store task; do not resume 0023, 0023S or
+0023U automatically.

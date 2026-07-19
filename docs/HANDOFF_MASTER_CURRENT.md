@@ -1,9 +1,9 @@
 # Handoff master (CURRENT)
 
-Task 0023T is complete at:
+Task 0023V is complete at:
 
 ```text
-PURE_PROFILE_CODEC_COMPILE_GATE_READY_FOR_GPT_REVIEW
+PROFILE_STORE_INSTANCE_CONFIGURATION_GATE_READY_FOR_GPT_REVIEW
 ```
 
 Product scope is frozen at eight formal levels. Sequence 8
@@ -42,13 +42,16 @@ Task 0023 was blocked and fully rolled back. Task 0023R adds only a zero-I/O
 canonical test-path policy. Its standalone preflight passes 123 assertions
 across 4 positive and 39 negative paths with empty stderr. Task 0023T adds a
 separate zero-I/O, explicitly typed Profile v1 codec with a first-attempt
-compile smoke and 34 synthetic assertions. Production Profile metadata is
-unchanged; the pre-existing test root was neither inspected nor touched.
+compile smoke and 34 synthetic assertions. Task 0023V resolves the self-type
+blocker with external RefCounted construction and one-time defensive test
+configuration; smoke passes first attempt and behavior passes 28 assertions.
+Production Profile metadata is unchanged; the pre-existing test root was
+neither inspected nor touched.
 
-Read Task 0023T and its report, Task 0023R and its report, the Task 0023S
-compile-blocker adjudication, current startup/active documents, and live Git
-truth. Await GPT review and a later scoped I/O-only task; do not resume Task
-0023 or Task 0023S automatically.
+Read Task 0023V and its report, Task 0023T/0023R reports, the Task 0023U
+self-type blocker adjudication, current startup/active documents, and live Git
+truth. Await GPT review and a later revised filesystem-store task; do not
+resume Task 0023, 0023S or 0023U automatically.
 
 Hard boundary: no sequence-9 revival, unbounded product repair, save/settings
 implementation, asset/audio acquisition, owner walkthrough, build/export, RC

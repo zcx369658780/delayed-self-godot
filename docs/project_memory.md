@@ -1,5 +1,14 @@
 # Project memory
 
+## Task 0023V store-instance configuration compile gate
+
+Task 0023V resolves the Task 0023U self-type compile blocker without I/O.
+External callers preload `local_profile.gd`, instantiate `RefCounted`, and use
+one-time `configure_test` to retain only a validated canonical test path and a
+defensive minimal catalog snapshot. Compile smoke passes first attempt and the
+pure configuration suite passes 28 assertions. No fixture, Profile I/O,
+AppRoot, MemoryProgress, codec modification or aggregate run occurs.
+
 ## Task 0023T pure Profile codec compile gate
 
 Task 0023T separates the failed retry's compile/interface concern from any

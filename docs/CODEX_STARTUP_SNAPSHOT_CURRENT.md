@@ -2,15 +2,15 @@
 
 - Status: `CURRENT`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Current gate: Task 0023T pure Profile codec compile gate
-- Last completed task: `tasks/0023T_pure_profile_codec_compile_gate.md`
-- Terminal verdict: `PURE_PROFILE_CODEC_COMPILE_GATE_READY_FOR_GPT_REVIEW`
+- Current gate: Task 0023V Profile-store instance configuration compile gate
+- Last completed task: `tasks/0023V_profile_store_instance_configuration_compile_gate.md`
+- Terminal verdict: `PROFILE_STORE_INSTANCE_CONFIGURATION_GATE_READY_FOR_GPT_REVIEW`
 - Formal scope: exactly eight levels
 - Formal finale: sequence 8 `two_echo_convergence`
 - Selected ending direction: `B — FINAL_COMPLETION_OVERLAY_PLUS_BOUNDED_RETURN_STATE`
 - Fallback: `A — FINAL_COMPLETION_COPY_ONLY`
 - Current plan: `docs/production/COMPLETE_FLOW_PRODUCTION_CLOSURE_PLAN_CURRENT.md`
-- Current report: `docs/reports/0023T_PURE_PROFILE_CODEC_COMPILE_GATE_REPORT.md`
+- Current report: `docs/reports/0023V_PROFILE_STORE_INSTANCE_CONFIGURATION_COMPILE_GATE_REPORT.md`
 
 The eight-entry catalog and all eight formal levels remain byte-identical.
 Sequence 9 is deferred outside product scope and all candidate continuation is
@@ -28,5 +28,6 @@ pure Profile v1 codec: defaults, normalization, stable JSON serialization, and
 candidate-progress construction only. Compile smoke passes on its first attempt
 and the 34-assertion synthetic suite passes with empty stderr. Neither task
 opens a Profile or test fixture; production non-content metadata is unchanged.
-Filesystem storage, recovery, replacement, reset, AppRoot integration and
-aggregate regression remain closed pending a later task.
+Task 0023V proves an externally constructed RefCounted instance plus one-time
+defensive test configuration without I/O. Filesystem storage, recovery,
+replacement, reset, AppRoot integration and aggregate regression remain closed.
