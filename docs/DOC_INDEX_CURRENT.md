@@ -5,16 +5,15 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0017RCV`](../tasks/0017RCV_owner_bridge_contextual_help_retest.md) — current owner contextual Help retest
-5. [`Task 0017RC`](../tasks/0017RC_bridge_contextual_help_only_repair.md) — contextual Help repair gate
-6. [`Task 0017V`](../tasks/0017V_owner_bridge_sequence_review.md) — owner bridge sequence review gate
-7. [`Task 0017D`](../tasks/0017D_bridge_curriculum_difficulty_and_help_repair_planning.md) — bridge repair planning gate
-8. [`Task 0017RA`](../tasks/0017RA_equal_delay_control_gate_adjudication.md) — equal-delay gate adjudication
-9. [`Task 0017RB`](../tasks/0017RB_bridge_topology_search_and_candidate_selection.md) — bounded topology-search blocker
-10. [`DEVELOPMENT_PLAN_CURRENT.md`](DEVELOPMENT_PLAN_CURRENT.md) — milestone spine and near-term gates
-11. [`HANDOFF_MASTER_CURRENT.md`](HANDOFF_MASTER_CURRENT.md) — current continuation point
-12. [`project_memory.md`](project_memory.md) — durable decisions
-13. [`version_plans/README.md`](version_plans/README.md) — version-plan policy
+4. [`Task 0018`](../tasks/0018_signal_convergence_finale_planning.md) — current sequence-9 finale planning gate
+5. [`Signal Convergence finale plan`](level_design/SIGNAL_CONVERGENCE_FINALE_PLAN_CURRENT.md) — selected structure, proof package, presentation and owner boundaries
+6. [`Task 0017RCV adjudication`](reports/0017RCV_GPT_OWNER_CONTEXTUAL_HELP_RETEST_ADJUDICATION.md) — bridge model accepted with residual limitations
+7. [`Task 0017RCV`](../tasks/0017RCV_owner_bridge_contextual_help_retest.md) — owner contextual Help retest
+8. [`Task 0017RC`](../tasks/0017RC_bridge_contextual_help_only_repair.md) — contextual Help repair gate
+9. [`DEVELOPMENT_PLAN_CURRENT.md`](DEVELOPMENT_PLAN_CURRENT.md) — milestone spine and near-term gates
+10. [`HANDOFF_MASTER_CURRENT.md`](HANDOFF_MASTER_CURRENT.md) — current continuation point
+11. [`project_memory.md`](project_memory.md) — durable decisions
+12. [`version_plans/README.md`](version_plans/README.md) — version-plan policy
 
 ## Sources and rules
 
@@ -34,6 +33,8 @@
 
 ## Compliance and reports
 
+- [`Task 0018 Signal Convergence finale planning report`](reports/0018_SIGNAL_CONVERGENCE_FINALE_PLANNING_REPORT.md)
+- [`Task 0017RCV GPT owner Help retest adjudication`](reports/0017RCV_GPT_OWNER_CONTEXTUAL_HELP_RETEST_ADJUDICATION.md)
 - [`Task 0017RCV owner contextual Help retest`](reviews/0017RCV_OWNER_BRIDGE_CONTEXTUAL_HELP_RETEST.md)
 - [`Task 0017RCV owner contextual Help retest report`](reports/0017RCV_OWNER_BRIDGE_CONTEXTUAL_HELP_RETEST_REPORT.md)
 - [`Task 0017RC GPT final acceptance`](reports/0017RC_GPT_FINAL_ACCEPTANCE.md)

@@ -1,5 +1,13 @@
 # Level 8 finale and difficulty-bridge plan (CURRENT)
 
+## Task 0018 finale planning disposition
+
+The later finale now has one planning-ready primary structure: `A — SINGLE_DOOR_FIRST_AND_DOOR_FINAL`. A single-Plate Door first creates necessary route access or phase; a later A+B Door is the final articulation while YOU remains free. `B — AND_DOOR_FIRST_SINGLE_DOOR_FINAL` is the sole fallback. Frozen prospective grammar is one YOU, shared-spawn E2/E4 delays 2/4, exactly three Plates, two initially closed Doors with one single and one A+B dependency, exactly two stages, one player-only EXIT, and maximum 10×8. Full targets, proof family, presentation policy, owner-only boundary, and stop conditions are in [`SIGNAL_CONVERGENCE_FINALE_PLAN_CURRENT.md`](SIGNAL_CONVERGENCE_FINALE_PLAN_CURRENT.md). This is planning only; the eight formal levels and catalog remain unchanged.
+
+## Task 0017RCV GPT disposition
+
+GPT accepts the contextual Help model for owner evidence with residual limitations. The no-route policy remains, Timeline stays optional, and no additional bridge repair is required before finale planning. The bridge remains byte-identical; first-discovery difficulty is still unknown because the owner remembered the route.
+
 ## Task 0017V owner evidence
 
 The bridge is machine-valid but not owner-accepted as a smooth curriculum step. The owner eventually completed unassisted at Turn 37 and correctly executed the intended spacing change, yet first gave up after more than 20 restarts and still could not explain YOU-substitution exclusion. Recommendation B freezes finale planning and requests a separate bounded bridge difficulty/Help repair-planning gate.
@@ -373,4 +381,4 @@ Task 0017C proves the bridge exists, loads, solves, and meets the frozen machine
 
 ## 11. Next gate
 
-Task 0017C implementation and catalog migration are ready for GPT adjudication. The future finale remains closed.
+Task 0018 finale planning is ready for GPT review. Finale implementation and catalog migration remain closed pending a separately authorized task.

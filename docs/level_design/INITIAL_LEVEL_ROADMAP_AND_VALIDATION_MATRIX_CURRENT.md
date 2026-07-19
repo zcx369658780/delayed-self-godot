@@ -1,5 +1,13 @@
 # Initial level roadmap and validation matrix (CURRENT)
 
+## Task 0018 finale planning
+
+Prospective sequence 9 `signal_convergence / Signal Convergence / 信号汇流` is planning-ready for GPT review. Primary A uses a single-Plate Door to establish necessary access/phase before a final A+B Door; B is the sole fallback. Frozen grammar is one YOU, shared-spawn E2/E4, exactly three Plates, two initially closed Doors, exactly two dependency stages, one player-only EXIT, and board maximum 10×8. All eight implemented formal levels and the catalog remain unchanged; no solve or runtime claim exists.
+
+## Task 0017RCV GPT adjudication
+
+The owner bridge model is accepted with residual limitations. No further bridge repair is required before finale planning; the no-route Help policy remains and Timeline stays optional.
+
 ## Task 0017V owner disposition
 
 Owner evidence does not validate the bridge as a successful difficulty step. The owner eventually completed at Turn 37 and learned the intended spacing manipulation, but only after an initial give-up and more than 30 total reported restarts. Preserve the mechanical role; request bounded simplification/Help planning before finale planning.
@@ -45,7 +53,7 @@ The mandatory bridge now exists as sequence 7: `echo_spacing_bridge / Diverging 
 | 6 | `staggered_doors` / 错开的门 | two doors with different plate sets; plan a dependency chain | one, d=3 | 2 / 2 with distinct one-Plate reference sets | one recorded route creates two distinct ECHO-held windows; YOU crosses each on the next input | not required; accepted witness has none | required and machine-proven | first core challenge; GPT accepted `INTERNAL_PLAYABLE`; owner review recorded | actual `L*=15` | actual `N*=4 (EXACT)` | `STANDARD_COMPACT` | preserve; owner recommends harder Level 7 |
 | 7 implemented | `echo_spacing_bridge` / 错位回声 | isolate terrain/blocking-induced spacing change before convergence | two shared-spawn, d=2 and d=4 | 2 / 1 A+B AND | early `BLOCKED/MOVED` divergence phases E2→A and E4→B; YOU crosses from the next open snapshot | not required | both required to hold separated A+B while YOU approaches | Task 0017C ready for GPT review | 16 exact | 12 `EXACT` | labels/shapes/pips primary; no new lines | retain pending GPT adjudication |
 | 8 proposed shift | `two_echo_convergence` / 双影汇流 | combine two delays through one readable simultaneous convergence | two, d=2 and d=4 | 2 / 1 A+B AND | E2 on A and E4 on B create a one-turn committed opening | not required; selected witness has none | both ECHOs individually necessary and machine-proven | accepted formal file remains byte-identical; catalog-only shift proposed | actual `L*=19` | actual `N*=6 EXACT` | transition-derived spacing/outcome cue preserved; residual difficulty/Help/Timeline/clutter risks | preserve |
-| 9 future | `signal_convergence` | synthesize two delays across single and A+B Door stages | two, provisionally d=2 and d=4 | 3 / 2 mixed single + AND | establish an early window, then align both delayed actors for final convergence | not a teaching goal | future proof required | concept only; separate gate | unverified | unverified | labels/shapes/pips primary | finale role preserved |
+| 9 future | `signal_convergence` | synthesize two delays across single and A+B Door stages | two, provisionally d=2 and d=4 | 3 / 2 mixed single + AND | primary A: establish a single-Door window, then align both delayed actors for final convergence | not a teaching goal | future proof required | planning ready for GPT review; separate implementation gate | 21–30 target | 1–12, `EXACT` preferred | labels/shapes/pips primary | finale role preserved |
 
 Actual Task 0009AR, Task 0012, and Task 0015 metrics are machine evidence, not best-turn thresholds. Task 0015 records 61,975 visited states, frontier 21,449, all-shortest convergence, complete necessity/equal-delay controls, and SHA-256 `772410d3b8bb807e35472ee2a7d07b703de66e1e0e92ffb4d1ff8433a345d5fd`.
 

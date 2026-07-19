@@ -1,5 +1,13 @@
 # Presentation, viewport, and HUD direction (CURRENT)
 
+## Task 0018 finale presentation plan
+
+Prospective `signal_convergence` must keep board state, Plate labels/distinct shapes/dependency pips, E2/E4 badges/outlines, Door state, and transition feedback primary across exactly two visible stages. No new always-on relationship lines are allowed. Timeline remains optional and non-required. Help remains manual, zero-turn, contextual, and non-route; bridge-specific copy may appear only under its accepted data predicate, while any finale-specific section needs a separate stable predicate and implementation task. Both stage results, both next-input Door entries, overlap, recovery, completion beat, grayscale, reduced motion, and Level Select sequence 9 require later 960×540 capture evidence. Localization remains a later coherent product-wide gate.
+
+## Task 0017RCV GPT disposition
+
+GPT accepts the owner bridge model with residual limitations. English clarity and the owner's walkthrough preference do not change the no-route policy; Timeline remains optional and unused. No further bridge presentation repair is required before finale planning.
+
 ## Task 0017RCV owner Help evidence
 
 The Help card in the 960×540 logical viewport was fully visible and did not obstruct or overwhelm play. The owner acquired the blocker/spacing and two-ECHO/free-YOU model, found no MOVED/BLOCKED or identity contradiction, did not use Timeline, and judged the new Door-blocking line more useful than the old Help. However, English created possible misunderstanding, the copy was judged unclear/too vague/information-poor, and MOVED/BLOCKED remained non-intuitive until observed on the board. Timeline was called completely unnecessary and too abstract. The owner requested a correct solution route; that conflicts with the accepted non-route boundary and is recorded for GPT policy adjudication, not implementation authorization. Dotted lines were not re-evaluated.

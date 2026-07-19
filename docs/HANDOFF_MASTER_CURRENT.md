@@ -1,17 +1,25 @@
 # Handoff master (CURRENT)
 
-Task 0017RCV is complete at `OWNER_BRIDGE_CONTEXTUAL_HELP_RETEST_RECORDED_FOR_GPT_REVIEW`.
-
-Evidence classification and result:
+Task 0018 is complete at:
 
 ```text
-AUTHENTICATED_OWNER_NOT_FRESH_NOT_INDEPENDENT_BRIDGE_CONTEXTUAL_HELP_RETEST
-PRIOR_BRIDGE_COMPLETION_AND_ROUTE_EXPOSURE_PRESENT
-BRIDGE_CONTEXTUAL_HELP_OWNER_MODEL_MATERIALLY_REDUCED
+SIGNAL_CONVERGENCE_FINALE_PLAN_READY_FOR_GPT_REVIEW
 ```
 
-The owner explains that a closed Door can block an ECHO and change spacing, identifies investigation of Door blocking as the experiment, explains two ECHOS on A+B while YOU remains free because neither Plate can reach the Door next turn, and confirms only YOU completes. Timeline was not used and was judged completely unnecessary. The new Help was credited with a more credible experiment and did not disclose a route.
+Selected primary:
 
-Full closure is withheld. The owner said the English Help may be misunderstood, called it unclear/too vague/information-poor, and requested an exact solution. Completion at Turn 27 in about one minute with no restart is contextual only because the owner remembered the solution. P0=0/P1=0/P2=3/P3=1.
+```text
+A — SINGLE_DOOR_FIRST_AND_DOOR_FINAL
+```
 
-Read Task 0017RCV, its review/report and evidence index, Task 0017RC acceptance, current startup/active-task documents, and live Git truth. Await GPT adjudication of clarity/localization, Timeline, no-route policy, and difficulty evidence. Do not implement the requested walkthrough or begin finale, production, export, release, or submission work.
+Sole fallback:
+
+```text
+B — AND_DOOR_FIRST_SINGLE_DOOR_FINAL
+```
+
+The prospective sequence-9 finale uses one YOU, shared-spawn E2/E4 provisionally at delays 2/4, exactly three Plates, two initially closed Doors with one single and one A+B dependency, exactly two visible causal stages, one player-only EXIT, and a board no larger than 10×8. Future targets are `L*=21–30`, `N*=1–12` with `EXACT` preferred and `CAPPED` not acceptable, visited 20,000–300,000, frontier 2,000–50,000, 4–6 meaningful decisions, and at least four recoverable alternatives.
+
+Read Task 0018, [`SIGNAL_CONVERGENCE_FINALE_PLAN_CURRENT.md`](level_design/SIGNAL_CONVERGENCE_FINALE_PLAN_CURRENT.md), its report, the Task 0017RCV GPT adjudication, current startup/active-task documents, and live Git truth. Await GPT review.
+
+Hard boundary: no formal level, catalog migration, solver/Godot authoring run, source/test/schema/scene/settings change, Help/Timeline/localization implementation, production art/audio, save/build/export, release, or submission. Owner review remains `OWNER_ONLY_REVIEW / FRESH_INDEPENDENT_REVIEW_UNAVAILABLE_BY_OWNER_CONSTRAINT`.

@@ -1,5 +1,13 @@
 # Five-level difficulty recovery and Levels 6–8 plan
 
+## Task 0018 finale plan
+
+Prospective sequence 9 `signal_convergence` selects structure A: a single-Plate Door first creates necessary access/phase, then E2/E4 form the final A+B result while YOU remains free. Structure B is the sole fallback. The plan freezes exactly two dependency stages, three Plates, two initially closed Doors, one player-only EXIT, board maximum 10×8, `L*=21–30`, `N*=1–12` with `EXACT` preferred, visited 20,000–300,000, frontier 2,000–50,000, 4–6 meaningful decisions, and at least four recoverable alternatives. No formal content or measured evidence exists.
+
+## Task 0017RCV GPT adjudication
+
+The owner bridge model is accepted with residual limitations. The bridge needs no further repair before finale planning; no-route Help remains policy, Timeline remains optional, first-discovery difficulty is unknown, and localization remains a later coherent product-wide gate.
+
 ## Task 0017V owner sequence result
 
 The implemented bridge did not smooth the owner difficulty curve in its current form. Level 6 took about 4 seconds; the bridge caused an initial give-up after more than 20 restarts and later completion at Turn 37 after 10 more restarts. The owner eventually learned the intended E4-blocked/E2-moved phase manipulation, but Help/Timeline were ineffective. Recommendation B preserves the mechanic and requests bounded difficulty/Help repair planning before finale planning.
@@ -150,7 +158,8 @@ Task 0015D proves the formal level and owner screenshot state remain solvable bu
 
 ## Future sequence 9 finale concept — `signal_convergence`
 
-- Status: `CONCEPT / PROPOSAL_ONLY`; preserved finale candidate, not a final-catalog claim.
+- Status: `PLANNING_READY_FOR_GPT_REVIEW`; primary A selected, not a formal or final-catalog claim.
+- Selected structure: single-Plate Door first, A+B Door final; B is the sole fallback.
 - Role: combine accepted mechanics without Gate, switch, latch, hazard, anchor, or new goal semantics.
 - Proposed structure: two ECHOS `d=2` and `d=4`; three Plates; two combinational Doors, one single dependency and one two-Plate AND dependency; one player-only EXIT.
 - Mental model: establish an early Door window, use the resulting route to align the two delayed actors, then cross an AND Door on the next input.

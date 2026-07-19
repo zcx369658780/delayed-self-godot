@@ -2,12 +2,13 @@
 
 - Status: `CURRENT`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Current gate: Task 0017RCV owner contextual Help retest awaiting GPT adjudication
-- Last completed task: `tasks/0017RCV_owner_bridge_contextual_help_retest.md`
-- Current report: `docs/reports/0017RCV_OWNER_BRIDGE_CONTEXTUAL_HELP_RETEST_REPORT.md`
-- Terminal verdict: `OWNER_BRIDGE_CONTEXTUAL_HELP_RETEST_RECORDED_FOR_GPT_REVIEW`
-- Help-model disposition: `BRIDGE_CONTEXTUAL_HELP_OWNER_MODEL_MATERIALLY_REDUCED`
+- Current gate: Task 0018 finale planning complete and awaiting GPT review
+- Last completed task: `tasks/0018_signal_convergence_finale_planning.md`
+- Current plan/report: `docs/level_design/SIGNAL_CONVERGENCE_FINALE_PLAN_CURRENT.md` / `docs/reports/0018_SIGNAL_CONVERGENCE_FINALE_PLANNING_REPORT.md`
+- Terminal verdict: `SIGNAL_CONVERGENCE_FINALE_PLAN_READY_FOR_GPT_REVIEW`
+- Selected structure: `A — SINGLE_DOOR_FIRST_AND_DOOR_FINAL`
+- Sole fallback: `B — AND_DOOR_FIRST_SINGLE_DOOR_FINAL`
 
-The owner correctly explains Door blocking, the spacing experiment, simultaneous A/B ECHO roles, free-YOU crossing, and only-YOU completion without Timeline. The owner says the new Help supports a more credible experiment than the old Help, but is English, unclear, too vague, and insufficient; the final preference is an exact solution route.
+Task 0017RCV is GPT adjudicated as `TASK_0017RCV_OWNER_BRIDGE_MODEL_ACCEPTED_WITH_RESIDUAL_LIMITATIONS`. The accepted no-route Help policy remains, Timeline is optional, the bridge remains byte-identical, and no further bridge repair is required before finale planning.
 
-Completion was about one minute at Turn 27 with no restart only because the owner remembered the solution. P0=0/P1=0/P2=3/P3=1. Await GPT policy adjudication; full difficulty closure and finale planning remain blocked.
+Task 0018 plans prospective sequence 9 `signal_convergence` with one YOU, shared-spawn E2/E4 delays 2/4, exactly three Plates, two initially closed Doors with one single and one A+B dependency, exactly two visible stages, and one player-only EXIT. No formal level, catalog migration, implementation, solver/Godot run, production, export, release, or submission is authorized.
