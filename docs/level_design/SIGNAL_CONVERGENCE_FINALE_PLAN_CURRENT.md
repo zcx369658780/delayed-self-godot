@@ -2,8 +2,8 @@
 
 - Task: `tasks/0018_signal_convergence_finale_planning.md`
 - Diagnostic continuation: `tasks/0019B_b007_fixed_candidate_complete_proof_continuation.md`
-- Gate: `FINALE SCOPE REASSESSMENT`
-- Status: `FINALE_SCOPE_REASSESSMENT_REQUIRED_FOR_GPT_REVIEW`
+- Gate: `HISTORICAL DEFERRED CONCEPT`
+- Status: `DEFERRED_CONCEPT_NOT_PRODUCT_SCOPE`
 - Prospective ID/title: `signal_convergence / Signal Convergence / 信号汇流`
 - Prospective sequence: 9
 - Primary structure: `A — SINGLE_DOOR_FIRST_AND_DOOR_FINAL`
@@ -23,7 +23,9 @@ with 2,000,004 visited states and frontier 201,872. Because the space did not
 exhaust, B007 is not a complete fallback survivor and no direct gate is
 accepted. The current disposition is `C1 — SCOPE_REASSESSMENT`: GPT must choose
 between reducing the sequence-9 grammar and retaining sequence 8 as the final
-level. The plan does not preselect either choice.
+level. GPT selected the latter. Task 0020 freezes the product at eight levels;
+this file is retained only as historical planning evidence and grants no
+roadmap, candidate, proof, or implementation authority.
 
 ## 1. Decision and authority boundary
 
@@ -53,7 +55,10 @@ Frozen eight-level baseline:
 | 7 | `echo_spacing_bridge` | `805cdc05ea9b3805189ba7be4938cb7ede4e7056b9ae9a7e911df96a801d58ee` | `L*=16`, `N*=12 EXACT`, visited 19,059, frontier 3,734 |
 | 8 | `two_echo_convergence` | `772410d3b8bb807e35472ee2a7d07b703de66e1e0e92ffb4d1ff8433a345d5fd` | `L*=19`, `N*=6 EXACT`, visited 61,975, frontier 21,449 |
 
-This document is implementation-ready planning, not implementation authorization. Coordinates, terrain rows, a witness, solver results, catalog migration, copy, and presentation changes require a later bounded task.
+The remainder of this document preserves the superseded Task 0018 planning
+record. It is not current implementation-ready planning and grants no authority
+for coordinates, terrain, witnesses, solver work, catalog migration, copy, or
+presentation changes.
 
 ## 2. Curriculum role
 
@@ -64,9 +69,11 @@ The intended late-game chain is:
 | 6 | `staggered_doors` | create and use two temporally separated single-Plate Door windows with one delay-3 ECHO |
 | 7 | `echo_spacing_bridge` | observe that Door/terrain blocking can change E2/E4 spacing, then use one A+B convergence |
 | 8 | `two_echo_convergence` | deliberately align E2/E4 on two distinct Plates and enter one A+B Door from the following open snapshot |
-| 9 | prospective `signal_convergence` | establish a single-Plate phase-changing window, then preserve YOU while E2/E4 form the final A+B result |
+| 9 historical | prospective `signal_convergence` | superseded concept only; no current product or roadmap role |
 
-The finale is not a longer sequence-8 room. Its new synthesis is dependency order: stage 1 changes route access or phase, and that changed state is causally necessary for stage 2. It differs from Level 6 because its two Doors are not two independent single-Plate repetitions. It differs from the bridge because spacing change is assumed curriculum, not the sole lesson. It differs from sequence 8 because A+B is the second result of a two-stage causal chain, not the room's only dependency.
+Historically, the proposed room was intended as a dependency-order synthesis.
+That rationale is preserved below for provenance only. It does not describe the
+current finale, which is sequence 8 `two_echo_convergence`.
 
 ## 3. Frozen prospective grammar
 
@@ -183,7 +190,10 @@ No narrower sub-band is frozen in planning because no candidate has been execute
 ### 7.1 Load, catalog, progression, and migration
 
 1. Strict schema load and cross-field validation.
-2. Nine-entry catalog validation with sequences 1–8 unchanged, `signal_convergence` at 9, prerequisite exactly sequence 8, and exactly one final flag transferred from sequence 8 to sequence 9.
+2. Historical target: nine-entry catalog validation with sequences 1–8
+   unchanged, `signal_convergence` at 9, prerequisite exactly sequence 8, and
+   exactly one final flag transferred from sequence 8 to sequence 9. This
+   target is superseded and must not be executed.
 3. Generic direct launch, normal sequential unlock, completion return/progression, reset, and Level Select tail reachability.
 4. Existing progress compatibility for the sole-final migration without changing the persistence contract.
 
@@ -248,7 +258,10 @@ Where a control is expected to be unsolved, require complete finite-state exhaus
 - isolate the bridge-specific Help predicate so it does not appear in the finale unless the finale independently satisfies it;
 - verify Timeline remains optional and completion does not rely on reverse-counting;
 - validate reduced-motion, grayscale, overlap identities, Door states, transition feedback, Help modal behavior, and 960×540 bounds;
-- capture initial state, both stage results, both following-snapshot entries, recovery, final convergence, completion/ending beat, grayscale, reduced-motion, and Level Select sequence 9;
+- historical capture target: initial state, both stage results, both
+  following-snapshot entries, recovery, final convergence, completion/ending
+  beat, grayscale, reduced motion, and Level Select sequence 9; this target is
+  superseded and must not be executed;
 - add one stable Task 0018 implementation marker to focused and aggregate regression output.
 
 ## 8. Presentation, Help, and localization policy
@@ -342,10 +355,12 @@ Choose candidate A, `SINGLE_DOOR_FIRST_AND_DOOR_FINAL`, with candidate B as the 
 - Rejected tradeoff: candidate B is easier to salvage but repeats sequence 8 at entry; candidate C is more novel but less observable and harder to prove.
 - Revisit trigger: only a bounded implementation search showing candidate A cannot satisfy the frozen proof obligations without a stop-condition violation.
 
-## 13. Terminal planning verdict
+## 13. Historical Task 0018 terminal verdict (superseded)
 
 ```text
 SIGNAL_CONVERGENCE_FINALE_PLAN_READY_FOR_GPT_REVIEW
 ```
 
-This verdict authorizes no finale implementation, formal data, catalog migration, production art/audio, localization implementation, owner acceptance, candidate promotion, save/build/export work, release, or submission.
+Task 0020 supersedes this historical verdict with the eight-level scope freeze.
+The quoted verdict authorizes no current implementation, formal data, catalog
+migration, candidate work, production, export, release, or submission.

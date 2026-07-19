@@ -1,28 +1,37 @@
 # Handoff master (CURRENT)
 
-Task 0019B is complete at:
+Task 0020 is complete at:
 
 ```text
-FINALE_SCOPE_REASSESSMENT_REQUIRED_FOR_GPT_REVIEW
+EIGHT_LEVEL_FINALE_CLOSURE_PLAN_READY_FOR_GPT_REVIEW
 ```
 
-The exact retained external `B007` candidate has SHA-256
-`2e4cd14ba50bbbd5d3eb223bc82a35f17cc8b5a7e95d1b79c9fef5a37fa21325`
-and reproduced `23 / 3 EXACT / 77,848 / 23,861`, deterministic replay/restart,
-all five complete-unsolved controls, and both Door articulations.
+Product scope is frozen at eight formal levels. Sequence 8
+`two_echo_convergence` remains the sole final level. Sequence 9 and B007 are
+historical/deferred concepts only; no candidate or proof continuation remains.
 
-The one final Task 0019B augmented proof used the unchanged 2,000,000-state
-ceiling and the authorized 900-second wall-time ceiling. It stopped at
-`STATE_LIMIT` after 668,807 ms with 2,000,004 visited states and frontier
-201,872. The augmented space was not exhausted, so direct-gate classes remain
-unverified and B007 is not selected.
+Selected ending direction:
 
-Read the Task 0019B report, current candidate adjudication, GPT 0019A
-proof-limit adjudication, startup/active-task documents, and live Git truth.
-Next authority must be a fresh GPT planning choice between reducing the
-sequence-9 grammar and retaining sequence 8 as the final level.
+```text
+B — FINAL_COMPLETION_OVERLAY_PLUS_BOUNDED_RETURN_STATE
+```
 
-Hard boundary: do not expand resources again, resume candidate A/B search,
-activate B007, use candidate C, implement a formal finale, migrate the catalog,
-change Help/Timeline/localization, conduct owner review, or begin production,
-save/build/export, release, or submission work.
+Fallback:
+
+```text
+A — FINAL_COMPLETION_COPY_ONLY
+```
+
+The existing validated-catalog route payload already supplies `final_level`.
+The later implementation should preserve non-final auto-return, record final
+completion exactly once, hold the final Gameplay screen in one deterministic
+acknowledgment state, and provide a clear return/replay action. It must not
+change levels, catalog, Simulation, solver, schema, or persistence.
+
+Read Task 0020, its plan/report, the Task 0019B GPT scope adjudication, current
+startup/active documents, and live Git truth. The next gate is finale
+presentation implementation only after GPT authorization.
+
+Hard boundary: no sequence-9 revival, product implementation, save/settings,
+asset/audio acquisition, owner walkthrough, build/export, RC work, festival
+packaging, upload, release, or submission without a new bounded task.

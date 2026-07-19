@@ -1,8 +1,24 @@
 # Initial level roadmap and validation matrix (CURRENT)
 
+## Task 0020 eight-level scope freeze
+
+The product roadmap is now exactly eight formal levels. Sequence 8
+`two_echo_convergence` remains the sole final level. Prospective sequence 9
+`signal_convergence`, B007, and candidate A/B/C continuation are
+`DEFERRED_CONCEPT_NOT_PRODUCT_SCOPE` and no longer roadmap targets.
+
+The next content-facing work is not another puzzle room. After GPT accepts Task
+0020, the recommended gate is a bounded sequence-8 finale presentation using
+the existing catalog-derived `final_level` route fact, followed by separate
+machine/capture, owner-only, complete-flow/production, Windows build, RC, and
+festival-package gates.
+
 ## Task 0018 finale planning
 
-Prospective sequence 9 `signal_convergence / Signal Convergence / 信号汇流` is planning-ready for GPT review. Primary A uses a single-Plate Door to establish necessary access/phase before a final A+B Door; B is the sole fallback. Frozen grammar is one YOU, shared-spawn E2/E4, exactly three Plates, two initially closed Doors, exactly two dependency stages, one player-only EXIT, and board maximum 10×8. All eight implemented formal levels and the catalog remain unchanged; no solve or runtime claim exists.
+Historical only: Task 0018 planned prospective sequence 9 before Tasks
+0019–0019B exhausted the authorized candidate/proof path. GPT then retained
+sequence 8 as the final level. The Task 0018 grammar is not implementation or
+roadmap authority.
 
 ## Task 0017RCV GPT adjudication
 
@@ -17,8 +33,8 @@ Owner evidence does not validate the bridge as a successful difficulty step. The
 The mandatory bridge now exists as sequence 7: `echo_spacing_bridge / Diverging Echoes / 错位回声`, `L*=16`, `N*=12 EXACT`, visited 19,059, frontier 3,734. It proves required spacing divergence and E2→A/E4→B A+B crossing. Existing `two_echo_convergence` remains byte-identical and shifts to sequence 8 as sole final. GPT review is pending.
 
 - Tracked implemented spine: exactly 8 formal levels including tutorials
-- Implemented sequence: Task 0017C adds the mandatory `echo_spacing_bridge` as a simplified two-Plate A+B tutorial before byte-identical `two_echo_convergence`, with `signal_convergence` preserved as a later finale concept
-- Scope: `level_v1` mechanics only; remaining uncreated levels remain concepts, not solvability claims
+- Implemented sequence: the mandatory `echo_spacing_bridge` is sequence 7 before byte-identical `two_echo_convergence`, sequence 8 and sole final
+- Scope: `level_v1` mechanics only; sequence 9 and all additional room concepts are deferred outside product scope
 - Goal predicate for every level: current player reaches EXIT
 
 ## Status boundary
@@ -28,7 +44,8 @@ The mandatory bridge now exists as sequence 7: `echo_spacing_bridge / Diverging 
 - `AUTHENTICATED_OWNER_NOT_FRESH_NOT_INDEPENDENT_LEVEL_6_REVIEW`: Task 0013B records owner comprehension, difficulty, and product judgment for Level 6 with P0=0/P1=0; it does not advance the fresh-player ladder state.
 - `FRESH_INDEPENDENT_REVIEW_UNAVAILABLE_BY_OWNER_CONSTRAINT`: the owner is the only available playtester; third-party review must not be sought or required unless the owner reverses this decision. The gap is a disclosed residual limitation, not an ordinary internal-development blocker.
 - `DEFERRED_VALIDATION_RESEARCH`: `wait_for_the_echo` is not implemented; strict literal-WAIT relevance remains unresolved without any claim that WAIT is impossible or redundant.
-- `UNVERIFIED_DESIGN_TARGET`: remaining uncreated working IDs, layouts, difficulty, and target bands.
+- `DEFERRED_CONCEPT_NOT_PRODUCT_SCOPE`: all uncreated room concepts, layouts,
+  and target bands, including former sequence 9.
 - `PLANNING_RECOMMENDATION_FOR_GPT`: sequence, teaching role, validation variants, HUD modes, and scope-cut order.
 - `INTERNAL_PLAYABLE_PENDING_GPT_REVIEW`: Task 0015 creates and exactly validates Level 7 without human/candidate claims.
 - `AUTHENTICATED_OWNER_NOT_FRESH_NOT_INDEPENDENT_LEVEL_7_REVIEW`: Task 0015V records owner understanding of the intended roles but a give-up/false-unsolvable outcome; it does not advance the acceptance ladder.
@@ -53,7 +70,7 @@ The mandatory bridge now exists as sequence 7: `echo_spacing_bridge / Diverging 
 | 6 | `staggered_doors` / 错开的门 | two doors with different plate sets; plan a dependency chain | one, d=3 | 2 / 2 with distinct one-Plate reference sets | one recorded route creates two distinct ECHO-held windows; YOU crosses each on the next input | not required; accepted witness has none | required and machine-proven | first core challenge; GPT accepted `INTERNAL_PLAYABLE`; owner review recorded | actual `L*=15` | actual `N*=4 (EXACT)` | `STANDARD_COMPACT` | preserve; owner recommends harder Level 7 |
 | 7 implemented | `echo_spacing_bridge` / 错位回声 | isolate terrain/blocking-induced spacing change before convergence | two shared-spawn, d=2 and d=4 | 2 / 1 A+B AND | early `BLOCKED/MOVED` divergence phases E2→A and E4→B; YOU crosses from the next open snapshot | not required | both required to hold separated A+B while YOU approaches | Task 0017C ready for GPT review | 16 exact | 12 `EXACT` | labels/shapes/pips primary; no new lines | retain pending GPT adjudication |
 | 8 proposed shift | `two_echo_convergence` / 双影汇流 | combine two delays through one readable simultaneous convergence | two, d=2 and d=4 | 2 / 1 A+B AND | E2 on A and E4 on B create a one-turn committed opening | not required; selected witness has none | both ECHOs individually necessary and machine-proven | accepted formal file remains byte-identical; catalog-only shift proposed | actual `L*=19` | actual `N*=6 EXACT` | transition-derived spacing/outcome cue preserved; residual difficulty/Help/Timeline/clutter risks | preserve |
-| 9 future | `signal_convergence` | synthesize two delays across single and A+B Door stages | two, provisionally d=2 and d=4 | 3 / 2 mixed single + AND | primary A: establish a single-Door window, then align both delayed actors for final convergence | not a teaching goal | future proof required | planning ready for GPT review; separate implementation gate | 21–30 target | 1–12, `EXACT` preferred | labels/shapes/pips primary | finale role preserved |
+| 9 deferred | `signal_convergence` | historical sequence-9 concept only | — | — | candidate/proof work closed | — | — | `DEFERRED_CONCEPT_NOT_PRODUCT_SCOPE` | — | — | — | not in product roadmap |
 
 Actual Task 0009AR, Task 0012, and Task 0015 metrics are machine evidence, not best-turn thresholds. Task 0015 records 61,975 visited states, frontier 21,449, all-shortest convergence, complete necessity/equal-delay controls, and SHA-256 `772410d3b8bb807e35472ee2a7d07b703de66e1e0e92ffb4d1ff8433a345d5fd`.
 
@@ -148,7 +165,10 @@ The earlier fresh-player checkpoints remain unsatisfied. The project owner is th
 
 ## Scope cuts
 
-- Preserve implemented and accepted Levels 1–6 and the accepted core loop before preserving uncreated variety.
-- If content schedule slips, cut uncreated concepts first; any change to the accepted six-level spine requires explicit GPT task authority.
+- Preserve all eight implemented formal levels and the accepted core loop.
+- If schedule slips, preserve the accepted eight-level spine and cut deferred
+  concepts before complete-flow or Windows-readiness work.
 - Never substitute an unvalidated level merely to retain the count of eight.
 - English, multi-delay presentation polish, challenge variants, and post-MVP route divergence are cut before tutorials or validation evidence.
+- Sequence 9, reduced-grammar search, and additional puzzle rooms are closed;
+  schedule recovery must prioritize complete flow and Windows readiness.

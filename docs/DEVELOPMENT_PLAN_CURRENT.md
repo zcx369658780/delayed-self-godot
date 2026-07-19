@@ -50,6 +50,7 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0019 candidate-A implementation search (blocked: no bounded candidate-A)
 → 0019A band reconciliation and fallback-B pilot (blocked at B007 proof limit)
 → 0019B fixed B007 final complete-proof continuation (scope reassessment required)
+→ 0020 eight-level finale closure and production-readiness planning (ready for GPT review)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
@@ -62,10 +63,13 @@ accepted PLAN_BAND. Task 0019A retained external fallback-B candidate B007
 after its exact metrics and strict controls passed, but its augmented proof hit
 the 180-second limit. Task 0019B made the final authorized attempt and reached
 the unchanged 2,000,000-state ceiling without exhaustion after 668,807 ms.
-Disposition is now C1 scope reassessment: GPT must choose between reducing the
-sequence-9 grammar and retaining sequence 8 as the final level. No additional
-proof expansion, fallback activation, implementation, or catalog migration
-follows automatically.
+GPT accepted C1 by retaining sequence 8 as the formal finale and deferring
+sequence 9 outside product scope. Task 0020 freezes eight levels, selects a
+bounded final-completion overlay plus acknowledgment/return state, inventories
+release gaps, and proposes the later gate spine: finale implementation,
+machine/capture acceptance, owner-only walkthrough, complete-flow/production
+closure, Windows build validation, RC acceptance, and festival packaging.
+Nothing after Task 0020 is automatically authorized.
 
 ## Milestone spine
 
@@ -81,3 +85,9 @@ follows automatically.
 | M7 Video | by 2026-09-10 | Gameplay/theme presentation |
 
 If the vertical slice, solver/runtime parity, or complete flow misses the GDD gates, reduce optional levels, languages, controller support, shaders, and extra mechanics before reducing the core delayed-echo loop or complete product flow.
+
+The eight-level count is now frozen. Sequence 9, reduced-grammar search, and
+additional puzzle rooms are not schedule-recovery options. Protect complete
+flow, persistent save/settings, licensing, Windows build evidence, and the
+owner-only review boundary before optional controller, Web, visual variants,
+or audio breadth.

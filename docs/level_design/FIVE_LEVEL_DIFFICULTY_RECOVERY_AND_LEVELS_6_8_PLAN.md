@@ -1,8 +1,20 @@
 # Five-level difficulty recovery and Levels 6–8 plan
 
+## Task 0020 eight-level closure
+
+The difficulty/content spine is closed at eight formal levels. Sequence 8
+`two_echo_convergence` is the sole finale. Sequence 9, B007, and candidate
+A/B/C continuation are historical evidence, not future implementation.
+
+The selected later ending direction is a catalog-derived final completion
+overlay plus deterministic acknowledgment/return state. This changes no puzzle
+rule, level, catalog fact, metric, Help policy, or Timeline policy. Difficulty
+work now yields to finale presentation and production closure.
+
 ## Task 0018 finale plan
 
-Prospective sequence 9 `signal_convergence` selects structure A: a single-Plate Door first creates necessary access/phase, then E2/E4 form the final A+B result while YOU remains free. Structure B is the sole fallback. The plan freezes exactly two dependency stages, three Plates, two initially closed Doors, one player-only EXIT, board maximum 10×8, `L*=21–30`, `N*=1–12` with `EXACT` preferred, visited 20,000–300,000, frontier 2,000–50,000, 4–6 meaningful decisions, and at least four recoverable alternatives. No formal content or measured evidence exists.
+Historical only. Task 0018's prospective sequence-9 structure and bands were
+superseded by the Task 0019B GPT decision to retain sequence 8 as final.
 
 ## Task 0017RCV GPT adjudication
 
@@ -14,17 +26,20 @@ The implemented bridge did not smooth the owner difficulty curve in its current 
 
 ## Task 0017C implemented bridge
 
-The curriculum bridge is implemented at `INTERNAL_PLAYABLE / PASS_FOR_GPT_REVIEW`: `echo_spacing_bridge`, sequence 7, `L*=16`, `N*=12 EXACT`, visited 19,059, frontier 3,734. It provides the bounded spacing-change lesson before byte-identical `two_echo_convergence`, now sequence 8. Owner difficulty evidence and any future finale remain separate gates.
+The curriculum bridge is implemented at `INTERNAL_PLAYABLE / PASS_FOR_GPT_REVIEW`: `echo_spacing_bridge`, sequence 7, `L*=16`, `N*=12 EXACT`, visited 19,059, frontier 3,734. It provides the bounded spacing-change lesson before byte-identical `two_echo_convergence`, now sequence 8 and the sole finale. Owner difficulty evidence remains a separate evidence boundary.
 
 - Status: Levels 6–7 are GPT accepted at `INTERNAL_PLAYABLE`; Task 0015R/0015RV close the false-invariant blocker within their evidence boundary. GPT rejected Task 0016's one-Plate dual-necessity contract; Task 0016R revises the bridge to a simplified two-Plate A+B tutorial.
-- Frozen authority: [`simulation_v1`](../game_design/GAMEPLAY_SIMULATION_CONTRACT_CURRENT.md), `level_v1`, and seven accepted formal levels.
+- Frozen authority: [`simulation_v1`](../game_design/GAMEPLAY_SIMULATION_CONTRACT_CURRENT.md), `level_v1`, and eight accepted formal levels.
 - Human evidence: Task 0013B Level 6 P0=0/P1=0/P2=3/P3=1; Task 0015V Level 7 `GAVE_UP`, P0=0/P1=0/P2=4/P3=4.
 - Review constraint: the owner is the only available playtester. Do not seek or require a third party unless the owner explicitly reverses this decision. Fresh/independent evidence is unavailable and not claimed; the gap is a disclosed residual limitation, not an ordinary internal-development blocker.
 - Rule: a solver witness proves machine reachability, not difficulty, clarity, necessity, or fun.
 
 ## Recovery objective
 
-Keep Levels 1–6 unchanged, insert one bounded spacing bridge before current Level 7, then preserve a later finale synthesis. Do not inflate difficulty through hidden rules, larger empty maps, unreadable state, exact walkthroughs, or an unaccepted Gate.
+Keep all eight formal levels unchanged. The spacing bridge remains sequence 7
+and `two_echo_convergence` remains the sequence-8 finale. Do not add a later
+room or inflate difficulty through hidden rules, larger empty maps, unreadable
+state, exact walkthroughs, or an unaccepted Gate.
 
 ## Difficulty framework
 
@@ -75,9 +90,8 @@ All accepted hashes, witnesses, metrics, and status-ladder positions remain unch
 | Levels 1–2 | tutorials | 0.5–3 minutes each; learn vocabulary without route guidance |
 | Levels 3–5 | onboarding checks | 1–4 minutes each; one clear reasoning step; forgiving recovery |
 | Level 6 | first core challenge | owner observed approximately 1 minute and two restarts; plan two causally distinct Door windows |
-| Proposed sequence 7 bridge | causal curriculum step | 2–6 minutes; cause and explain one ECHO-spacing change without required Timeline/Help |
-| Proposed sequence 8 current Level 7 | temporal planning challenge | apply the learned spacing model to accepted two-ECHO convergence |
-| Future sequence 9 finale | compact synthesis candidate | combine accepted rules across two visible dependency stages and explain the chain |
+| Sequence 7 bridge | causal curriculum step | cause and explain one ECHO-spacing change without required Timeline/Help; owner first-discovery burden remains unknown |
+| Sequence 8 finale | temporal planning challenge and final puzzle | apply the learned spacing model to accepted two-ECHO convergence, followed later by bounded ending presentation |
 
 Times are review targets, not promises or inferred owner data. Under the owner-only constraint, compare future supplied owner timings cautiously and repair observability before simplifying logic when delay is caused by unclear state.
 
@@ -126,13 +140,14 @@ Task 0013B owner evidence records unassisted completion at visible Turn 16 in ap
 - Measured result: `L*=16`, `N*=12 EXACT`, 19,059 visited states, frontier 3,734, three meaningful decisions, and three exact recoverable alternatives.
 - Product policy: board/transition feedback primary, Timeline optional, Help contextual/non-route, and `LABEL_SHAPE_PIP_PRIMARY_NO_NEW_LINES`.
 
-The repeated A+B entity grammar is acceptable only as deliberate scaffolding with earlier divergence, lower measured search burden, fewer decisions, and simpler recovery than current Level 7. The bridge must not require literal WAIT, use corridor/collision padding, or consume the future finale's mixed single/AND two-stage role. Full target and proof package: [`LEVEL_8_FINALE_AND_DIFFICULTY_BRIDGE_PLAN_CURRENT.md`](LEVEL_8_FINALE_AND_DIFFICULTY_BRIDGE_PLAN_CURRENT.md).
+The repeated A+B entity grammar is acceptable only as deliberate scaffolding with earlier divergence, lower measured search burden, fewer decisions, and simpler recovery than sequence 8. The bridge must not require literal WAIT or use corridor/collision padding. The former sequence-9 preservation constraint is historical and no longer an authoring target. Full target and proof package: [`LEVEL_8_FINALE_AND_DIFFICULTY_BRIDGE_PLAN_CURRENT.md`](LEVEL_8_FINALE_AND_DIFFICULTY_BRIDGE_PLAN_CURRENT.md).
 
-## Current Level 7, proposed sequence 8 — `two_echo_convergence`
+## Former Level 7, current sequence 8 — `two_echo_convergence`
 
 - Status: `GPT_ACCEPTED_INTERNAL_PLAYABLE`; Task 0015R machine/presentation repair accepted; Task 0015RV owner blocker closure accepted.
 - Display title: `Two Echo Convergence / 双影汇流`.
-- Role: apply the bridge's spacing model through one readable simultaneous convergence, while preserving the future finale's mixed two-stage synthesis.
+- Role: apply the bridge's spacing model through one readable simultaneous
+  convergence and serve as the frozen formal finale.
 - Frozen structure: shared-spawn ECHOs `d=2` and `d=4`; exactly two Plates A/B; exactly one A+B combinational Door; one player-only EXIT; exactly 9×7 figure-eight/recovery topology.
 - Mental model: one history feeds two replays at different offsets; place the two ECHOs on A and B together, observe the committed open result, then cross from the next open snapshot.
 - Meaningful burden: at least four non-padding decisions and at least three audited recoverable alternatives; WAIT is not a teaching goal.
@@ -156,36 +171,16 @@ Full target freeze and rejected alternatives: [`LEVEL_7_TWO_ECHO_CONVERGENCE_PLA
 
 Task 0015D proves the formal level and owner screenshot state remain solvable but identifies an observable false-invariant gap. Task 0015R implements and machine-validates [`TRANSITION_DERIVED_ECHO_DIVERGENCE_FEEDBACK`](LEVEL_7_FALSE_UNSOLVABLE_REPAIR_PLAN_CURRENT.md). Task 0015RV records an assisted owner completion after prior witness exposure: the owner rejects fixed spacing, explains Door/terrain blocking, and no longer calls the level impossible. Task 0016 proposes shifting this room to sequence 8 through catalog metadata only. Its formal file, ID, hash, metrics, and content remain byte-identical.
 
-## Future sequence 9 finale concept — `signal_convergence`
+## Sequence-9 concept closure
 
-- Status: `PLANNING_READY_FOR_GPT_REVIEW`; primary A selected, not a formal or final-catalog claim.
-- Selected structure: single-Plate Door first, A+B Door final; B is the sole fallback.
-- Role: combine accepted mechanics without Gate, switch, latch, hazard, anchor, or new goal semantics.
-- Proposed structure: two ECHOS `d=2` and `d=4`; three Plates; two combinational Doors, one single dependency and one two-Plate AND dependency; one player-only EXIT.
-- Mental model: establish an early Door window, use the resulting route to align the two delayed actors, then cross an AND Door on the next input.
-- Geometry difference: a compact three-zone loop that reuses sightlines so every dependency remains visible; no oversized maze.
+`signal_convergence` and its former targets/proof package are
+`DEFERRED_CONCEPT_NOT_PRODUCT_SCOPE`. The candidate-A search, fallback-B pilot,
+B007 final proof, and candidate C path are closed. No reduced grammar or extra
+room may be substituted.
 
-Target bands:
-
-| Metric | Target |
-|---|---:|
-| `L*` | 21–30 |
-| `N*` | 1–6; exact preferred |
-| Visited states | 20,000–300,000 |
-| Max frontier | 2,000–50,000 |
-| Dependency depth | two visible stages |
-| Human | 7–15 minutes; 1–5 restarts; intended chain explained after completion |
-
-Mandatory proof package:
-
-1. Level 6 and 7 proof families combined, with every actor, Plate, and Door individually audited;
-2. stage traces prove each Door uses the start-of-turn snapshot;
-3. a controlled variant breaks the first stage and another breaks the AND stage;
-4. a shortcut audit checks that early actions cannot accidentally solve both stages;
-5. Human review distinguishes satisfying synthesis from repetitive replay;
-6. narrative text and presentation do not reveal a route.
-
-Timeline/Help test: board state and transition feedback remain primary; Timeline is optional and Help stays contextual/non-route. If reviewers must constantly open Help because the main state is not observable, repair presentation. Stop if the concept needs an unaccepted Gate, exceeds the fixed schema, only adds path length, repeats the bridge/current Level 7 grammar without synthesis, or cannot remain readable in the selected board zone.
+Sequence 8 now owns the finale role. Its puzzle data remains byte-identical;
+the next possible change is only a separately authorized completion
+acknowledgment/return presentation triggered by the catalog final flag.
 
 ## Rebalance policy for Levels 3–5
 

@@ -1,8 +1,12 @@
 # Project memory
 
-## Task 0018 Signal Convergence finale planning
+## Task 0018 Signal Convergence finale planning (historical)
 
-Task 0018 selects `A — SINGLE_DOOR_FIRST_AND_DOOR_FINAL` for prospective sequence 9 `signal_convergence / Signal Convergence / 信号汇流`; `B — AND_DOOR_FIRST_SINGLE_DOOR_FINAL` is the sole fallback and C is rejected. Frozen prospective grammar is one YOU, shared-spawn E2/E4 delays 2/4, exactly three Plates, exactly two initially closed Doors with one single and one A+B dependency, exactly two visible dependency stages, one player-only EXIT beyond the final articulation, and board no larger than 10×8. Targets are `L*=21–30`, `N*=1–12` with `EXACT` preferred and `CAPPED` not acceptance, visited 20,000–300,000, frontier 2,000–50,000, 4–6 meaningful decisions, and at least four recoverable alternatives. Board state/labels/shapes/pips/actor identity/Door state/transition feedback remain primary; no new always-on lines, Timeline dependency, or route Help. Future evidence is owner-only with prior exposure disclosed. Status is planning ready for GPT review; no formal level, implementation, catalog migration, measured result, production, export, release, or submission authority follows.
+Task 0018 selected `A — SINGLE_DOOR_FIRST_AND_DOOR_FINAL` for prospective
+sequence 9. This is retained as historical planning only. Tasks 0019–0019B
+closed the candidate/proof path, and GPT/Task 0020 retained sequence 8 as the
+formal finale. No Task 0018 grammar, band, or fallback remains current roadmap
+or implementation authority.
 
 ## Task 0017RCV GPT adjudication
 
@@ -37,6 +41,27 @@ The authenticated owner completed the bridge without operator route assistance o
 Task 0017C exactly reconstructed external `candidate_07.json` as formal `echo_spacing_bridge`: `L*=16`, `N*=12 EXACT`, visited 19,059, frontier 3,734, SHA-256 `805cdc05ea9b3805189ba7be4938cb7ede4e7056b9ae9a7e911df96a801d58ee`. All shortest paths include required `BLOCKED/MOVED` spacing change, E2→A/E4→B, A+B result, and next-input Door crossing. No-ECHO/E2-only/E4-only are complete unsolved. Catalog is eight entries; bridge is sequence 7 and byte-identical `two_echo_convergence` is sequence 8 and sole final. Focused 61 and aggregate 550 assertions / 9 vectors pass. Status is `INTERNAL_PLAYABLE / PASS_FOR_GPT_REVIEW`, not acceptance.
 
 Durable project decisions only; live task progress belongs in current docs and reports.
+
+## Task 0020 eight-level finale and production closure
+
+GPT retains the existing eight-level product and sequence 8
+`two_echo_convergence` as the sole formal finale. Sequence 9 is
+`DEFERRED_CONCEPT_NOT_PRODUCT_SCOPE`; B007 is historical external diagnostic
+evidence only; candidate A/B/C work and further proof expansion are closed.
+
+Task 0020 selects `B — FINAL_COMPLETION_OVERLAY_PLUS_BOUNDED_RETURN_STATE`,
+with completion-copy-only A as fallback. The existing catalog-derived
+`final_level` route payload is sufficient; no schema/catalog/level fact is
+needed. A later implementation must record completion once, preserve non-final
+auto-return, hold final Gameplay in a deterministic acknowledgment state, and
+offer clear return/replay behavior through existing architecture.
+
+Critical production gaps are persistent save/settings/reset/Continue,
+complete-flow menu/pause/credits, Chinese-capable localization/font,
+icon/splash, license/attribution closure, Windows export/versioned build
+evidence, RC audit, and festival media/package work. Controller and Web are
+deferred. Future human evidence remains owner-only, exposed, not fresh, and not
+independent.
 
 ## Task 0019B final B007 proof and finale scope reassessment
 
@@ -81,7 +106,10 @@ authorized.
 - Task 0015R is GPT accepted at machine/presentation level. Task 0015RV is GPT accepted as `AUTHENTICATED_OWNER_NOT_FRESH_NOT_INDEPENDENT_LEVEL_7_DIVERGENCE_FEEDBACK_RETEST` with `PRIOR_EXACT_WITNESS_EXPOSURE_PRESENT`. The owner used the prior exact sequence and completed at Turn 20 in approximately 3 minutes with 4 restarts, so the attempt is `COMPLETED_ASSISTED`, not route-discovery evidence. The owner now rejects fixed ECHO spacing, explains Door/terrain blocking as the cause of different travel distances, proposes looking for similar spacing manipulation when stuck, and no longer considers Level 7 impossible. `BLOCKING_P2_CLOSED_FOR_OWNER_EVIDENCE`; P0=0/P1=0/P2=4/P3=1. Difficulty ramp, Help, Timeline, and dotted-path clutter remain planning inputs.
 - GPT adjudication rejected Task 0016's one-Plate/one-Door dual-ECHO necessity contract: any one actor holding the only Plate can preserve the only required Door window, so the second ECHO may be observable but not mechanically necessary.
 - Task 0016R retains `INSERT_BRIDGE_BEFORE_CURRENT_LEVEL_7` and selects `SIMPLIFIED_TWO_PLATE_AND_TUTORIAL`. Revised `echo_spacing_bridge / Diverging Echoes / 错位回声` uses shared-spawn E2/E4, two distinct Plates, one A+B Door, one player-only EXIT, maximum 8×7, and a required early `BLOCKED/MOVED` spacing change. Plate-to-Door distance prevents YOU substitution; distinct Plate cells prevent overlap substitution. This is planning pending GPT acceptance, not proof or implementation authority.
-- Proposed later order remains existing Levels 1–6, revised bridge at 7, byte-identical `two_echo_convergence` at 8, and future `signal_convergence` at 9. Current Level 7 remains sole final during bridge implementation; the finale uniquely retains three Plates, mixed single/AND dependencies, and two Door stages. Presentation policy remains `LABEL_SHAPE_PIP_PRIMARY_NO_NEW_LINES`; Timeline is optional and Help remains contextual/non-route.
+- Final product order is Levels 1–6, `echo_spacing_bridge` at 7, and
+  byte-identical `two_echo_convergence` at 8 as sole final. No sequence 9 is on
+  the product roadmap. Presentation remains label/shape/pip first; Timeline is
+  optional and Help remains contextual/non-route.
 
 - Repository: `zcx369658780/delayed-self-godot`; visibility: public; default branch: `main`.
 - Canonical local root: `D:\Delayed_Self`.
@@ -131,4 +159,9 @@ authorized.
 
 ## Pending decisions
 
-Task 0015 is GPT accepted at `INTERNAL_PLAYABLE`; Task 0015R is GPT accepted at machine/presentation level; Task 0015RV closes the specific false-invariant blocker for owner evidence. Task 0017RC is GPT accepted at machine/presentation level, and Task 0017RCV is accepted for owner evidence with residual limitations. Task 0018 finale planning is ready for GPT review. Finale implementation, catalog migration, Timeline/Help/localization redesign, route walkthrough, new Gate semantics, WAIT feasibility, new mechanics, broader presentation repair, asset acquisition, persistent save, final licensed art/audio/narrative, candidate acceptance, accessibility, export, Web, and release evidence remain separate gates.
+Task 0020 freezes the eight-level finale closure plan for GPT review. The next
+recommended gate is sequence-8 completion acknowledgment/return presentation.
+Catalog migration, sequence 9, route walkthrough Help, new mechanics, and new
+puzzle rooms remain closed. Localization, persistent save/settings,
+production assets/audio, accessibility, Windows export, RC, festival package,
+Web, release, and submission remain separate gates.

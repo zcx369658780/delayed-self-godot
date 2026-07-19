@@ -2,22 +2,22 @@
 
 - Status: `CURRENT`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Current gate: Task 0019B complete and awaiting GPT scope-reassessment review
-- Last completed task: `tasks/0019B_b007_fixed_candidate_complete_proof_continuation.md`
-- Terminal verdict: `FINALE_SCOPE_REASSESSMENT_REQUIRED_FOR_GPT_REVIEW`
-- Disposition: `C1 — SCOPE_REASSESSMENT`
-- Current adjudication: `docs/level_design/SIGNAL_CONVERGENCE_CANDIDATE_ADJUDICATION_CURRENT.md`
-- Current report: `docs/reports/0019B_B007_COMPLETE_PROOF_REPORT.md`
+- Current gate: Task 0020 complete and awaiting GPT review
+- Last completed task: `tasks/0020_eight_level_finale_closure_and_production_readiness_planning.md`
+- Terminal verdict: `EIGHT_LEVEL_FINALE_CLOSURE_PLAN_READY_FOR_GPT_REVIEW`
+- Formal scope: exactly eight levels
+- Formal finale: sequence 8 `two_echo_convergence`
+- Selected ending direction: `B — FINAL_COMPLETION_OVERLAY_PLUS_BOUNDED_RETURN_STATE`
+- Fallback: `A — FINAL_COMPLETION_COPY_ONLY`
+- Current plan: `docs/production/EIGHT_LEVEL_FINALE_CLOSURE_AND_PRODUCTION_PLAN_CURRENT.md`
+- Current report: `docs/reports/0020_EIGHT_LEVEL_FINALE_CLOSURE_PLANNING_REPORT.md`
 
-Candidate A has no PLAN_BAND survivor. Fixed external fallback-B candidate
-`B007` reproduced its frozen identity, normal metrics, witness/restart, five
-complete-unsolved controls, and topology checks. Its final augmented proof
-reached the unchanged 2,000,000-state ceiling after 668,807 ms with 2,000,004
-visited states and frontier 201,872; the space was not exhausted.
+The eight-entry catalog and all eight formal levels remain byte-identical.
+Sequence 9 is deferred outside product scope and all candidate continuation is
+closed. Task 0020 identifies the existing catalog-derived `final_level` route
+fact as sufficient for a later bounded ending overlay/acknowledgment/return
+implementation.
 
-Existing sequence 8 `two_echo_convergence` remains the sole formal final level.
-B007 is not selected, fallback B is not activated, and no formal sequence 9
-exists. Await GPT choice between a reduced sequence-9 grammar and retaining
-sequence 8 as final. No further proof expansion, candidate work, finale
-implementation, catalog migration, owner review, production, export, release,
-or submission is authorized.
+No product/test file, Godot run, build, export, asset, persistence, release, or
+submission surface changed. Await a separately authorized Gate 1 finale
+presentation implementation.

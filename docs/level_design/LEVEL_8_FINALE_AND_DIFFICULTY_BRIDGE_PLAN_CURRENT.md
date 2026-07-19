@@ -1,8 +1,23 @@
 # Level 8 finale and difficulty-bridge plan (CURRENT)
 
+## Task 0020 final scope disposition
+
+The current product is frozen at eight formal levels. `two_echo_convergence`
+is sequence 8 and the sole formal finale. Sequence 9 `signal_convergence`,
+B007, and candidate A/B/C continuation are
+`DEFERRED_CONCEPT_NOT_PRODUCT_SCOPE`.
+
+The bridge and Level 8 puzzle remain byte-identical. Later finale work is
+presentation-only: selected direction B uses the catalog-derived `final_level`
+route fact to hold the completed final Gameplay in a deterministic
+acknowledgment/return state. Direction A, final-specific completion copy only,
+is fallback. No formal data, catalog, puzzle proof, or new room is reopened.
+
 ## Task 0018 finale planning disposition
 
-The later finale now has one planning-ready primary structure: `A — SINGLE_DOOR_FIRST_AND_DOOR_FINAL`. A single-Plate Door first creates necessary route access or phase; a later A+B Door is the final articulation while YOU remains free. `B — AND_DOOR_FIRST_SINGLE_DOOR_FINAL` is the sole fallback. Frozen prospective grammar is one YOU, shared-spawn E2/E4 delays 2/4, exactly three Plates, two initially closed Doors with one single and one A+B dependency, exactly two stages, one player-only EXIT, and maximum 10×8. Full targets, proof family, presentation policy, owner-only boundary, and stop conditions are in [`SIGNAL_CONVERGENCE_FINALE_PLAN_CURRENT.md`](SIGNAL_CONVERGENCE_FINALE_PLAN_CURRENT.md). This is planning only; the eight formal levels and catalog remain unchanged.
+Historical only. Task 0018's sequence-9 structures were superseded after the
+authorized candidate/proof chain did not produce a complete survivor. GPT
+retained sequence 8 as final.
 
 ## Task 0017RCV GPT disposition
 
@@ -22,7 +37,7 @@ The accepted bridge target is formally implemented as exact reconstruction `echo
 - Sequence decision: `INSERT_BRIDGE_BEFORE_CURRENT_LEVEL_7`
 - Selected bridge grammar: `SIMPLIFIED_TWO_PLATE_AND_TUTORIAL`
 - Implemented formal target: `echo_spacing_bridge / Diverging Echoes / 错位回声`
-- Future finale: `signal_convergence`, preserved as a later sequence-9 concept
+- Future finale: none; sequence 8 is the frozen formal finale
 - Scope: planning and documentation only
 
 ## 1. Accepted baseline and correction boundary
@@ -119,7 +134,7 @@ Credible necessity lemma:
 - Overlap cannot substitute because A and B are different cells and the windows occur in different progression components.
 - Removing E2 blocks the first stage; removing E4 permits the first stage but blocks the second.
 
-This grammar is mechanically plausible, subject to complete single-ECHO and route-bypass controls. It is not selected because two staged single-dependency Doors closely repeat Level 6, adds recovery and relationship-display burden, and consumes part of the future finale's multi-stage identity.
+This grammar was mechanically plausible, subject to complete single-ECHO and route-bypass controls. It was not selected because two staged single-dependency Doors closely repeated Level 6, added recovery and relationship-display burden, and consumed part of the then-planned sequence-9 concept's multi-stage identity.
 
 ### Candidate C — one-Plate multi-window structure
 
@@ -182,20 +197,20 @@ INSERT_BRIDGE_BEFORE_CURRENT_LEVEL_7
 6. `staggered_doors`
 7. `two_echo_convergence` — sole `final_level=true`
 
-### Proposed bridge implementation state
+### Implemented bridge state
 
 1–6 remain unchanged.
 
 7. `echo_spacing_bridge` — prerequisite `staggered_doors`
 8. byte-identical `two_echo_convergence` — prerequisite changes to `echo_spacing_bridge`; remains sole `final_level=true`
 
-Only a later authorized implementation may add the bridge and change catalog sequence/prerequisite metadata. It may not alter the accepted `two_echo_convergence` formal JSON.
+This is the current accepted catalog structure. The bridge and shifted
+`two_echo_convergence` formal JSON are frozen.
 
-### Proposed future finale state
+### Deferred historical sequence-9 state
 
-9. `signal_convergence` — prerequisite `two_echo_convergence`; becomes sole `final_level=true`
-
-At that separate future gate, `two_echo_convergence` changes to `final_level=false`. No finale file or catalog entry exists under this plan.
+No sequence 9 entry exists or is planned. `two_echo_convergence` remains
+sequence 8 and sole `final_level=true`.
 
 ### Rollback
 
@@ -306,9 +321,10 @@ A later implementation task must provide:
 
 Stop if either single-ECHO control solves, YOU can substitute, all-shortest role mapping is not distinct, the spacing event is optional, or the measured burden approaches/exceeds current Level 7 without a clear curriculum advantage.
 
-## 8. Future finale preservation
+## 8. Historical finale concept closure
 
-`signal_convergence` remains a future sequence-9 concept:
+The former `signal_convergence` concept is retained only as historical
+diagnostic context:
 
 - two ECHOs, provisionally delays 2 and 4;
 - three Plates;
@@ -318,7 +334,8 @@ Stop if either single-ECHO control solves, YOU can substitute, all-shortest role
 - multi-zone dependency depth and recovery;
 - one player-only EXIT.
 
-The bridge uses A+B but only one Door, one dependency result, one early causal experiment, and a compact topology. The finale uniquely retains mixed single/AND dependencies, two sequential Door stages, three Plates, and multi-zone synthesis. The bridge may not acquire those features during authoring.
+None of these features is a current authoring target. Sequence 8 is the formal
+finale and later work is presentation/production closure only.
 
 ## 9. Presentation, Help, Timeline, and review policy
 
@@ -377,8 +394,13 @@ Return to planning if no compact layout proves both single-ECHO controls complet
 
 ### Current non-claims
 
-Task 0017C proves the bridge exists, loads, solves, and meets the frozen machine bands. It does not claim fun/balance acceptance, GPT acceptance, owner acceptance, fresh or independent evidence, `signal_convergence` implementation, candidate readiness, export, release, or submission readiness.
+Task 0017C proves the bridge exists, loads, solves, and meets the frozen machine
+bands. Task 0020 closes further content work. Neither result claims
+fun/balance acceptance, fresh or independent evidence, production readiness,
+export, release, or submission readiness.
 
 ## 11. Next gate
 
-Task 0018 finale planning is ready for GPT review. Finale implementation and catalog migration remain closed pending a separately authorized task.
+Task 0020 is ready for GPT review. The recommended next gate is bounded
+sequence-8 finale presentation implementation. Catalog migration and new
+formal content remain closed.

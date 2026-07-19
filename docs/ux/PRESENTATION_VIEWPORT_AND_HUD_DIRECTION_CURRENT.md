@@ -1,8 +1,25 @@
 # Presentation, viewport, and HUD direction (CURRENT)
 
+## Task 0020 eight-level finale closure
+
+The product is frozen at eight levels with `two_echo_convergence` as the sole
+final level. Sequence 9 is deferred outside product scope. The selected later
+ending direction is the existing completion overlay plus one deterministic
+final acknowledgment/return state, triggered only by the validated
+catalog-derived `final_level` route fact. Completion-copy-only is fallback.
+
+The implementation must reuse the current Gameplay/AppRoot presentation seam,
+remain readable at 960x540, grayscale, reduced motion, and mute, preserve
+non-final auto-return, and avoid a new cutscene/scene architecture, audio-only
+meaning, localization dependency, or hard-coded level ID. No presentation
+implementation is authorized by Task 0020.
+
 ## Task 0018 finale presentation plan
 
-Prospective `signal_convergence` must keep board state, Plate labels/distinct shapes/dependency pips, E2/E4 badges/outlines, Door state, and transition feedback primary across exactly two visible stages. No new always-on relationship lines are allowed. Timeline remains optional and non-required. Help remains manual, zero-turn, contextual, and non-route; bridge-specific copy may appear only under its accepted data predicate, while any finale-specific section needs a separate stable predicate and implementation task. Both stage results, both next-input Door entries, overlap, recovery, completion beat, grayscale, reduced motion, and Level Select sequence 9 require later 960×540 capture evidence. Localization remains a later coherent product-wide gate.
+Historical only: prospective sequence-9 presentation planning was superseded
+by the eight-level scope freeze. Its no-new-lines, optional-Timeline, and
+non-route Help principles remain compatible constraints, but no sequence-9
+capture or implementation work remains.
 
 ## Task 0017RCV GPT disposition
 

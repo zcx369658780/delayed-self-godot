@@ -5,11 +5,11 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0019B`](../tasks/0019B_b007_fixed_candidate_complete_proof_continuation.md) — fixed B007 final complete-proof gate
-5. [`Task 0019B report`](reports/0019B_B007_COMPLETE_PROOF_REPORT.md) — final state-limit result and C1 disposition
-6. [`Signal Convergence candidate adjudication`](level_design/SIGNAL_CONVERGENCE_CANDIDATE_ADJUDICATION_CURRENT.md) — current scope-reassessment authority
-7. [`Task 0019A report`](reports/0019A_FINALE_BAND_RECONCILIATION_REPORT.md) — both-band reconciliation and fallback pilot
-8. [`Signal Convergence finale plan`](level_design/SIGNAL_CONVERGENCE_FINALE_PLAN_CURRENT.md) — original plan plus current reassessment disposition
+4. [`Task 0020`](../tasks/0020_eight_level_finale_closure_and_production_readiness_planning.md) — eight-level scope and production-readiness planning gate
+5. [`Eight-level finale closure plan`](production/EIGHT_LEVEL_FINALE_CLOSURE_AND_PRODUCTION_PLAN_CURRENT.md) — selected ending contract, readiness matrix, and later gates
+6. [`Task 0020 report`](reports/0020_EIGHT_LEVEL_FINALE_CLOSURE_PLANNING_REPORT.md) — planning result and inspection boundary
+7. [`Task 0019B scope adjudication`](reports/0019B_GPT_FINALE_SCOPE_REASSESSMENT_ADJUDICATION.md) — retain sequence 8 as final
+8. [`Signal Convergence finale plan`](level_design/SIGNAL_CONVERGENCE_FINALE_PLAN_CURRENT.md) — deferred historical sequence-9 concept
 9. [`DEVELOPMENT_PLAN_CURRENT.md`](DEVELOPMENT_PLAN_CURRENT.md) — milestone spine and near-term gates
 10. [`HANDOFF_MASTER_CURRENT.md`](HANDOFF_MASTER_CURRENT.md) — current continuation point
 11. [`project_memory.md`](project_memory.md) — durable decisions
@@ -33,6 +33,8 @@
 
 ## Compliance and reports
 
+- [`Task 0020 eight-level finale-closure planning report`](reports/0020_EIGHT_LEVEL_FINALE_CLOSURE_PLANNING_REPORT.md)
+- [`Task 0019B GPT scope-reassessment adjudication`](reports/0019B_GPT_FINALE_SCOPE_REASSESSMENT_ADJUDICATION.md)
 - [`Task 0019B B007 complete-proof report`](reports/0019B_B007_COMPLETE_PROOF_REPORT.md)
 - [`Task 0019A finale band reconciliation report`](reports/0019A_FINALE_BAND_RECONCILIATION_REPORT.md)
 - [`Task 0019A GPT B007 proof-limit adjudication`](reports/0019A_GPT_B007_PROOF_LIMIT_ADJUDICATION.md)
