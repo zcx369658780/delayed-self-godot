@@ -5,8 +5,8 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0021`](../tasks/0021_final_completion_overlay_and_bounded_return_implementation.md) — final acknowledgment and bounded-return implementation gate
-5. [`Task 0021 report`](reports/0021_EIGHT_LEVEL_FINALE_PRESENTATION_IMPLEMENTATION_REPORT.md) — implementation, headless regression, hashes, and evidence boundary
+4. [`Task 0021V`](../tasks/0021V_finale_presentation_machine_and_capture_acceptance.md) — native finale-presentation acceptance gate
+5. [`Task 0021V report`](reports/0021V_EIGHT_LEVEL_FINALE_PRESENTATION_ACCEPTANCE_REPORT.md) — native regression, route, capture, hashes, and evidence boundary
 6. [`Task 0020 GPT acceptance`](reports/0020_GPT_EIGHT_LEVEL_FINALE_CLOSURE_PLAN_ACCEPTANCE.md) — accepted ending contract and implementation boundary
 7. [`Eight-level finale closure plan`](production/EIGHT_LEVEL_FINALE_CLOSURE_AND_PRODUCTION_PLAN_CURRENT.md) — selected ending contract, readiness matrix, and later gates
 8. [`Task 0019B scope adjudication`](reports/0019B_GPT_FINALE_SCOPE_REASSESSMENT_ADJUDICATION.md) — retain sequence 8 as final
@@ -35,6 +35,7 @@
 ## Compliance and reports
 
 - [`Task 0021 finale-presentation implementation report`](reports/0021_EIGHT_LEVEL_FINALE_PRESENTATION_IMPLEMENTATION_REPORT.md)
+- [`Task 0021V finale-presentation acceptance report`](reports/0021V_EIGHT_LEVEL_FINALE_PRESENTATION_ACCEPTANCE_REPORT.md)
 - [`Task 0020 GPT finale-closure plan acceptance`](reports/0020_GPT_EIGHT_LEVEL_FINALE_CLOSURE_PLAN_ACCEPTANCE.md)
 - [`Task 0020 eight-level finale-closure planning report`](reports/0020_EIGHT_LEVEL_FINALE_CLOSURE_PLANNING_REPORT.md)
 - [`Task 0019B GPT scope-reassessment adjudication`](reports/0019B_GPT_FINALE_SCOPE_REASSESSMENT_ADJUDICATION.md)

@@ -73,8 +73,9 @@ closure, Windows build validation, RC acceptance, and festival packaging.
 Task 0021 implements Gate 1 through the existing AppRoot/Gameplay seam:
 catalog-marked final completion records once and waits in a deterministic
 acknowledgment state; non-final auto-return remains unchanged. Focused 42 and
-aggregate 621/9 pass. Gate 2 native capture acceptance remains separately
-authorized; nothing after Task 0021 is automatic.
+aggregate 621/9 pass. Task 0021V completed Gate 2 native Compatibility route
+and capture acceptance with the frozen baseline intact. The next possible gate
+is owner-only finale/eight-level walkthrough and requires separate authorization.
 
 ## Milestone spine
 

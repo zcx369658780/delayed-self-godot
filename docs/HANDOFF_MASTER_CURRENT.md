@@ -1,9 +1,9 @@
 # Handoff master (CURRENT)
 
-Task 0021 is complete at:
+Task 0021V is complete at:
 
 ```text
-EIGHT_LEVEL_FINALE_PRESENTATION_READY_FOR_GPT_REVIEW
+EIGHT_LEVEL_FINALE_PRESENTATION_ACCEPTED_FOR_OWNER_REVIEW
 ```
 
 Product scope is frozen at eight formal levels. Sequence 8
@@ -32,11 +32,13 @@ R: Replay
 Enter/Space/Esc emit one existing back request. R restores the exact initial
 state and permits replay while AppRoot's same-session guard prevents a second
 record. Focused 42 and aggregate 621 assertions / 9 vectors pass; all fourteen
-markers appear once. No generated cleanup was required.
+markers appear once. Native Compatibility acceptance is in
+`docs/reports/0021V_EIGHT_LEVEL_FINALE_PRESENTATION_ACCEPTANCE_REPORT.md`.
+No generated cleanup was required.
 
-Read Task 0021, its report, Task 0020 acceptance/plan, current startup/active
-documents, and live Git truth. The next recommended gate is Task 0020 Gate 2:
-native machine/capture acceptance, not further implementation.
+Read Task 0021V and its report, Task 0021/0020 materials, current startup/active
+documents, and live Git truth. The next possible gate is a separately authorized
+owner-only finale/eight-level walkthrough; do not start it automatically.
 
 Hard boundary: no sequence-9 revival, unbounded product repair, save/settings,
 asset/audio acquisition, owner walkthrough, build/export, RC work, festival

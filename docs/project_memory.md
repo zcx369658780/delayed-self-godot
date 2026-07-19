@@ -16,6 +16,16 @@ record again in the same Gameplay session. Focused 42 and aggregate 621
 assertions / 9 vectors with fourteen markers pass. Native capture, final copy,
 localization, owner review, production, export, and release remain later gates.
 
+## Task 0021V native finale-presentation acceptance
+
+Task 0021V independently reran focused 42/empty-stderr and aggregate 621/9
+with fourteen unique markers and intentional aggregate `LEVEL_ID_MISMATCH`
+only. Native Compatibility evidence confirmed non-final automatic return,
+final retained Gameplay acknowledgment, input guards, replay, direct route,
+grayscale/reduced-motion/resize readability, frozen hashes, and cleanup.
+Result: `EIGHT_LEVEL_FINALE_PRESENTATION_ACCEPTED_FOR_OWNER_REVIEW`; owner
+acceptance itself remains a separately authorized gate.
+
 ## Task 0018 Signal Convergence finale planning (historical)
 
 Task 0018 selected `A — SINGLE_DOOR_FIRST_AND_DOOR_FINAL` for prospective

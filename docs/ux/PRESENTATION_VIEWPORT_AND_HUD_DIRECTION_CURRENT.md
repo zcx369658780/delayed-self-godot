@@ -11,7 +11,10 @@ scene edit. Catalog-marked final completion derives
 Timeline and Help are hidden and movement/WAIT cannot enter Simulation while
 the acknowledgment is visible. Enter/Space/Esc use the existing guarded
 `request_back` seam. Reduced-motion headless geometry/state assertions pass;
-native grayscale/960x540/resized capture acceptance remains Task 0020 Gate 2.
+Task 0021V native grayscale/960x540/resized capture acceptance is complete;
+the acknowledgment remained readable with no Help/Timeline leakage. Its
+non-proportional 1280x800 window retained the logical 960x540 transform with
+symmetric 40 px top/bottom bars; see the Task 0021V acceptance report.
 
 ## Task 0020 eight-level finale closure
 
