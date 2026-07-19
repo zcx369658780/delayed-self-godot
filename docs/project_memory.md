@@ -1,5 +1,21 @@
 # Project memory
 
+## Task 0021 final acknowledgment and bounded return
+
+Task 0021 implements the accepted direction B without a new scene, level fact,
+or persistence field. AppRoot binds completion to the active Gameplay instance
+and permits one progress-recording attempt per instance. Non-final success
+retains automatic Level Select return. Catalog-marked final success records
+once and remains in Gameplay at `FINAL_ACKNOWLEDGEMENT_VISIBLE`.
+
+The existing completion label carries the provisional late/heard copy plus
+Enter/Space Level Select and R Replay controls. Help, Timeline, movement, and
+gameplay WAIT are inactive during the acknowledgment. Enter/Space/Esc emit one
+existing return request; R reconstructs exact initial state and replay cannot
+record again in the same Gameplay session. Focused 42 and aggregate 621
+assertions / 9 vectors with fourteen markers pass. Native capture, final copy,
+localization, owner review, production, export, and release remain later gates.
+
 ## Task 0018 Signal Convergence finale planning (historical)
 
 Task 0018 selected `A — SINGLE_DOOR_FIRST_AND_DOOR_FINAL` for prospective

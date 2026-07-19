@@ -5,15 +5,16 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0020`](../tasks/0020_eight_level_finale_closure_and_production_readiness_planning.md) — eight-level scope and production-readiness planning gate
-5. [`Eight-level finale closure plan`](production/EIGHT_LEVEL_FINALE_CLOSURE_AND_PRODUCTION_PLAN_CURRENT.md) — selected ending contract, readiness matrix, and later gates
-6. [`Task 0020 report`](reports/0020_EIGHT_LEVEL_FINALE_CLOSURE_PLANNING_REPORT.md) — planning result and inspection boundary
-7. [`Task 0019B scope adjudication`](reports/0019B_GPT_FINALE_SCOPE_REASSESSMENT_ADJUDICATION.md) — retain sequence 8 as final
-8. [`Signal Convergence finale plan`](level_design/SIGNAL_CONVERGENCE_FINALE_PLAN_CURRENT.md) — deferred historical sequence-9 concept
-9. [`DEVELOPMENT_PLAN_CURRENT.md`](DEVELOPMENT_PLAN_CURRENT.md) — milestone spine and near-term gates
-10. [`HANDOFF_MASTER_CURRENT.md`](HANDOFF_MASTER_CURRENT.md) — current continuation point
-11. [`project_memory.md`](project_memory.md) — durable decisions
-12. [`version_plans/README.md`](version_plans/README.md) — version-plan policy
+4. [`Task 0021`](../tasks/0021_final_completion_overlay_and_bounded_return_implementation.md) — final acknowledgment and bounded-return implementation gate
+5. [`Task 0021 report`](reports/0021_EIGHT_LEVEL_FINALE_PRESENTATION_IMPLEMENTATION_REPORT.md) — implementation, headless regression, hashes, and evidence boundary
+6. [`Task 0020 GPT acceptance`](reports/0020_GPT_EIGHT_LEVEL_FINALE_CLOSURE_PLAN_ACCEPTANCE.md) — accepted ending contract and implementation boundary
+7. [`Eight-level finale closure plan`](production/EIGHT_LEVEL_FINALE_CLOSURE_AND_PRODUCTION_PLAN_CURRENT.md) — selected ending contract, readiness matrix, and later gates
+8. [`Task 0019B scope adjudication`](reports/0019B_GPT_FINALE_SCOPE_REASSESSMENT_ADJUDICATION.md) — retain sequence 8 as final
+9. [`Signal Convergence finale plan`](level_design/SIGNAL_CONVERGENCE_FINALE_PLAN_CURRENT.md) — deferred historical sequence-9 concept
+10. [`DEVELOPMENT_PLAN_CURRENT.md`](DEVELOPMENT_PLAN_CURRENT.md) — milestone spine and near-term gates
+11. [`HANDOFF_MASTER_CURRENT.md`](HANDOFF_MASTER_CURRENT.md) — current continuation point
+12. [`project_memory.md`](project_memory.md) — durable decisions
+13. [`version_plans/README.md`](version_plans/README.md) — version-plan policy
 
 ## Sources and rules
 
@@ -33,6 +34,8 @@
 
 ## Compliance and reports
 
+- [`Task 0021 finale-presentation implementation report`](reports/0021_EIGHT_LEVEL_FINALE_PRESENTATION_IMPLEMENTATION_REPORT.md)
+- [`Task 0020 GPT finale-closure plan acceptance`](reports/0020_GPT_EIGHT_LEVEL_FINALE_CLOSURE_PLAN_ACCEPTANCE.md)
 - [`Task 0020 eight-level finale-closure planning report`](reports/0020_EIGHT_LEVEL_FINALE_CLOSURE_PLANNING_REPORT.md)
 - [`Task 0019B GPT scope-reassessment adjudication`](reports/0019B_GPT_FINALE_SCOPE_REASSESSMENT_ADJUDICATION.md)
 - [`Task 0019B B007 complete-proof report`](reports/0019B_B007_COMPLETE_PROOF_REPORT.md)

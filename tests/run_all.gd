@@ -12,6 +12,7 @@ const Task0015REchoDivergenceFeedback = preload("res://tests/gameplay/task_0015r
 const Task0017PLevelSelectScrollability = preload("res://tests/app/task_0017p_level_select_scrollability.gd")
 const Task0017EchoSpacingBridge = preload("res://tests/levels/task_0017_echo_spacing_bridge_validation.gd")
 const Task0017RCBridgeContextualHelpRepair = preload("res://tests/gameplay/task_0017rc_bridge_contextual_help_repair.gd")
+const Task0021EightLevelFinalePresentation = preload("res://tests/app/task_0021_eight_level_finale_presentation.gd")
 
 var failures := 0
 var assertions := 0
@@ -24,6 +25,16 @@ func _init() -> void:
 
 
 func _run() -> void:
+	if OS.get_cmdline_user_args().has("--task-0021-focused"):
+		var focused_result: Dictionary = await Task0021EightLevelFinalePresentation.new().run(self)
+		if int(focused_result.failures) > 0:
+			printerr("TASK_0021_FOCUSED_TESTS_FAIL failures=%d assertions=%d" % [focused_result.failures, focused_result.assertions])
+			quit(1)
+		else:
+			print("TASK_0021_FOCUSED_TESTS_PASS assertions=%d" % focused_result.assertions)
+			print("TASK_0021_EIGHT_LEVEL_FINALE_PRESENTATION_TESTS_PASS")
+			quit(0)
+		return
 	_test_tutorial_reach_exit_contract()
 	_test_tutorial_reach_exit_solver()
 	_test_tutorial_echo_bridge_contract()
@@ -60,6 +71,9 @@ func _run() -> void:
 	var task_0017rc_result: Dictionary = await Task0017RCBridgeContextualHelpRepair.new().run(self)
 	assertions += int(task_0017rc_result.assertions)
 	failures += int(task_0017rc_result.failures)
+	var task_0021_result: Dictionary = await Task0021EightLevelFinalePresentation.new().run(self)
+	assertions += int(task_0021_result.assertions)
+	failures += int(task_0021_result.failures)
 	if failures > 0:
 		printerr("TASK_0003_TESTS_FAIL failures=%d assertions=%d" % [failures, assertions])
 		quit(1)
@@ -77,6 +91,7 @@ func _run() -> void:
 		print("TASK_0017P_LEVEL_SELECT_SCROLLABILITY_TESTS_PASS")
 		print("TASK_0017_ECHO_SPACING_BRIDGE_TESTS_PASS")
 		print("TASK_0017RC_BRIDGE_CONTEXTUAL_HELP_REPAIR_TESTS_PASS")
+		print("TASK_0021_EIGHT_LEVEL_FINALE_PRESENTATION_TESTS_PASS")
 		quit(0)
 
 
@@ -929,7 +944,10 @@ func _test_app_shell_tracer() -> void:
 		_send_simulation_action(gameplay, action)
 	await process_frame
 	progress_snapshot = app.get_progress_snapshot()
-	_expect(app.get_current_route() == "LEVEL_SELECT" and progress_snapshot.completed_level_ids.has("two_echo_convergence") and progress_snapshot.best_turns.two_echo_convergence == 19, "normal AppRoot flow completes and records all eight levels without adding a final-flow surface")
+	_expect(app.get_current_route() == "GAMEPLAY" and gameplay.get_final_acknowledgement_state() == "FINAL_ACKNOWLEDGEMENT_VISIBLE" and progress_snapshot.completed_level_ids.has("two_echo_convergence") and progress_snapshot.best_turns.two_echo_convergence == 19, "normal AppRoot flow completes and records all eight levels while holding the bounded final acknowledgment")
+	_send_scene_action(gameplay, "ui_accept")
+	await process_frame
+	_expect(app.get_current_route() == "LEVEL_SELECT" and app.get_active_screen_count() == 1, "final acknowledgment returns once through the existing Level Select route")
 	app.navigate("UNKNOWN_ROUTE")
 	await process_frame
 	_expect(app.get_current_route() == "SAFE_ERROR" and app.get_active_screen().get_screen_snapshot().error_code == "APP_UNKNOWN_ROUTE" and app.get_active_screen_count() == 1, "unknown route reaches one Safe Error screen")

@@ -1,5 +1,18 @@
 # Presentation, viewport, and HUD direction (CURRENT)
 
+## Task 0021 final acknowledgment implementation
+
+The accepted direction is implemented on the existing completion label with no
+scene edit. Catalog-marked final completion derives
+`FINAL_ACKNOWLEDGEMENT_VISIBLE` from hosted Gameplay, ordinary completion, and
+`route_payload.final_level`. It uses a bounded `Rect2(84, 170, 480, 200)`,
+22 px static text, and explicit Enter/Space return plus R replay copy.
+
+Timeline and Help are hidden and movement/WAIT cannot enter Simulation while
+the acknowledgment is visible. Enter/Space/Esc use the existing guarded
+`request_back` seam. Reduced-motion headless geometry/state assertions pass;
+native grayscale/960x540/resized capture acceptance remains Task 0020 Gate 2.
+
 ## Task 0020 eight-level finale closure
 
 The product is frozen at eight levels with `two_echo_convergence` as the sole
@@ -8,11 +21,10 @@ ending direction is the existing completion overlay plus one deterministic
 final acknowledgment/return state, triggered only by the validated
 catalog-derived `final_level` route fact. Completion-copy-only is fallback.
 
-The implementation must reuse the current Gameplay/AppRoot presentation seam,
+The implementation reuses the current Gameplay/AppRoot presentation seam,
 remain readable at 960x540, grayscale, reduced motion, and mute, preserve
 non-final auto-return, and avoid a new cutscene/scene architecture, audio-only
-meaning, localization dependency, or hard-coded level ID. No presentation
-implementation is authorized by Task 0020.
+meaning, localization dependency, or hard-coded level ID.
 
 ## Task 0018 finale presentation plan
 

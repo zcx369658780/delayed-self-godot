@@ -23,6 +23,7 @@ var _catalog: Dictionary = {}
 var _progress
 var _current_route := ROUTE_BOOT
 var _active_screen: Node
+var _gameplay_completion_handled := false
 
 @onready var route_host: Control = $RouteHost
 
@@ -96,10 +97,11 @@ func _route_level_id(level_id: String, development_direct: bool) -> void:
 		gameplay.free()
 		_show_safe_error("APP_GAMEPLAY_CONFIGURATION_FAILED", "Gameplay rejected the validated route payload")
 		return
+	_gameplay_completion_handled = false
 	if gameplay.has_signal("gameplay_completed"):
-		gameplay.gameplay_completed.connect(_on_gameplay_completed)
+		gameplay.gameplay_completed.connect(_on_gameplay_completed.bind(gameplay))
 	if gameplay.has_signal("request_back"):
-		gameplay.request_back.connect(func(): navigate(ROUTE_LEVEL_SELECT))
+		gameplay.request_back.connect(_on_gameplay_request_back.bind(gameplay))
 	_replace_screen(gameplay, ROUTE_GAMEPLAY)
 
 
@@ -139,8 +141,22 @@ func _replace_screen(screen: Node, route_id: String) -> void:
 	route_host.add_child(screen)
 
 
-func _on_gameplay_completed(level_id: String, turns: int) -> void:
-	if _progress != null and _progress.record_completion(level_id, turns):
+func _on_gameplay_completed(level_id: String, turns: int, gameplay: Node) -> void:
+	if _gameplay_completion_handled or _current_route != ROUTE_GAMEPLAY or gameplay != _active_screen:
+		return
+	var payload: Dictionary = gameplay.get_route_payload() if gameplay.has_method("get_route_payload") else {}
+	if str(payload.get("level_id", "")) != level_id:
+		return
+	_gameplay_completion_handled = true
+	var recorded := false
+	if _progress != null:
+		recorded = _progress.record_completion(level_id, turns)
+	if recorded and not bool(payload.get("final_level", false)):
+		navigate(ROUTE_LEVEL_SELECT)
+
+
+func _on_gameplay_request_back(gameplay: Node) -> void:
+	if _current_route == ROUTE_GAMEPLAY and gameplay == _active_screen:
 		navigate(ROUTE_LEVEL_SELECT)
 
 

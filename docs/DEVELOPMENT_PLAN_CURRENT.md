@@ -51,6 +51,7 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0019A band reconciliation and fallback-B pilot (blocked at B007 proof limit)
 → 0019B fixed B007 final complete-proof continuation (scope reassessment required)
 → 0020 eight-level finale closure and production-readiness planning (ready for GPT review)
+→ 0021 final completion acknowledgment and bounded return (ready for GPT review)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
@@ -69,7 +70,11 @@ bounded final-completion overlay plus acknowledgment/return state, inventories
 release gaps, and proposes the later gate spine: finale implementation,
 machine/capture acceptance, owner-only walkthrough, complete-flow/production
 closure, Windows build validation, RC acceptance, and festival packaging.
-Nothing after Task 0020 is automatically authorized.
+Task 0021 implements Gate 1 through the existing AppRoot/Gameplay seam:
+catalog-marked final completion records once and waits in a deterministic
+acknowledgment state; non-final auto-return remains unchanged. Focused 42 and
+aggregate 621/9 pass. Gate 2 native capture acceptance remains separately
+authorized; nothing after Task 0021 is automatic.
 
 ## Milestone spine
 

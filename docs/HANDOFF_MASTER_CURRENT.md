@@ -1,37 +1,43 @@
 # Handoff master (CURRENT)
 
-Task 0020 is complete at:
+Task 0021 is complete at:
 
 ```text
-EIGHT_LEVEL_FINALE_CLOSURE_PLAN_READY_FOR_GPT_REVIEW
+EIGHT_LEVEL_FINALE_PRESENTATION_READY_FOR_GPT_REVIEW
 ```
 
 Product scope is frozen at eight formal levels. Sequence 8
 `two_echo_convergence` remains the sole final level. Sequence 9 and B007 are
 historical/deferred concepts only; no candidate or proof continuation remains.
 
-Selected ending direction:
+Implemented ending direction:
 
 ```text
 B — FINAL_COMPLETION_OVERLAY_PLUS_BOUNDED_RETURN_STATE
 ```
 
-Fallback:
+AppRoot now records at most once per active Gameplay instance. Non-final
+completion preserves automatic Level Select return; catalog-marked final
+completion remains in Gameplay with exact state
+`FINAL_ACKNOWLEDGEMENT_VISIBLE`. The existing completion surface says:
 
 ```text
-A — FINAL_COMPLETION_COPY_ONLY
+THE SIGNAL ARRIVED LATE.
+IT WAS HEARD.
+
+Enter / Space: Level Select
+R: Replay
 ```
 
-The existing validated-catalog route payload already supplies `final_level`.
-The later implementation should preserve non-final auto-return, record final
-completion exactly once, hold the final Gameplay screen in one deterministic
-acknowledgment state, and provide a clear return/replay action. It must not
-change levels, catalog, Simulation, solver, schema, or persistence.
+Enter/Space/Esc emit one existing back request. R restores the exact initial
+state and permits replay while AppRoot's same-session guard prevents a second
+record. Focused 42 and aggregate 621 assertions / 9 vectors pass; all fourteen
+markers appear once. No generated cleanup was required.
 
-Read Task 0020, its plan/report, the Task 0019B GPT scope adjudication, current
-startup/active documents, and live Git truth. The next gate is finale
-presentation implementation only after GPT authorization.
+Read Task 0021, its report, Task 0020 acceptance/plan, current startup/active
+documents, and live Git truth. The next recommended gate is Task 0020 Gate 2:
+native machine/capture acceptance, not further implementation.
 
-Hard boundary: no sequence-9 revival, product implementation, save/settings,
+Hard boundary: no sequence-9 revival, unbounded product repair, save/settings,
 asset/audio acquisition, owner walkthrough, build/export, RC work, festival
 packaging, upload, release, or submission without a new bounded task.

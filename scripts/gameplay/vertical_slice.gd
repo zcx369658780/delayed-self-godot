@@ -15,6 +15,10 @@ const RIGHT_RAIL := Rect2(600, 84, 336, 420)
 const GOAL_STRIP := Rect2(24, 18, 912, 46)
 const HELP_RECT := Rect2(96, 54, 768, 432)
 const ECHO_DIVERGENCE_BADGE_RECT := Rect2(24, 66, 540, 18)
+const COMPLETION_RECT := Rect2(84, 210, 480, 120)
+const FINAL_ACKNOWLEDGEMENT_RECT := Rect2(84, 170, 480, 200)
+const FINAL_ACKNOWLEDGEMENT_VISIBLE := "FINAL_ACKNOWLEDGEMENT_VISIBLE"
+const FINAL_ACKNOWLEDGEMENT_COPY := "THE SIGNAL ARRIVED LATE.\nIT WAS HEARD.\n\nEnter / Space: Level Select\nR: Replay"
 const CARDINAL_ACTIONS := ["UP", "RIGHT", "DOWN", "LEFT"]
 const BRIDGE_CONTEXTUAL_HELP := "SPACING · Closed DOOR/wall BLOCKS one ECHO while another MOVES, changing spacing.\nEXPERIMENT · Compare MOVED/BLOCKED; try another route or loop.\nA+B · Two ECHOS hold separate Plates; YOU stays free to cross. Only YOU completes."
 
@@ -30,6 +34,7 @@ var hosted_by_app := false
 var help_expanded := false
 var reduced_motion := false
 var teaching_badge_consumed := false
+var acknowledgement_return_requested := false
 var visual_feedback := {
 	"echo_trails": [],
 	"blocked_door": {"visible": false},
@@ -81,6 +86,14 @@ func _ready() -> void:
 
 
 func _unhandled_input(event: InputEvent) -> void:
+	if is_final_acknowledgement_visible():
+		if event.is_echo():
+			return
+		if event.is_action_pressed("restart_level"):
+			_restart_level()
+		elif event.is_action_pressed("ui_cancel") or event.is_action_pressed("ui_accept") or event.is_action_pressed("wait_turn"):
+			_request_acknowledgement_return_once()
+		return
 	if event.is_action_pressed("ui_cancel"):
 		if help_expanded:
 			help_expanded = false
@@ -104,10 +117,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if help_expanded:
 		return
 	if event.is_action_pressed("restart_level"):
-		state = simulation.construct_initial_state(level)
-		_reset_visual_feedback()
-		_update_hud()
-		queue_redraw()
+		_restart_level()
 		return
 	var action := ""
 	if event.is_action_pressed("move_up"):
@@ -129,6 +139,7 @@ func _unhandled_input(event: InputEvent) -> void:
 			_update_visual_feedback(before, result, action)
 			_update_disclosure(before, result)
 			if not was_completed and state.completed and hosted_by_app:
+				help_expanded = false
 				gameplay_completed.emit(configured_level_id, state.turn_index - 1)
 		else:
 			printerr(result.status)
@@ -156,6 +167,14 @@ func get_route_payload() -> Dictionary:
 	return route_payload.duplicate(true)
 
 
+func is_final_acknowledgement_visible() -> bool:
+	return hosted_by_app and bool(route_payload.get("final_level", false)) and bool(state.get("completed", false))
+
+
+func get_final_acknowledgement_state() -> String:
+	return FINAL_ACKNOWLEDGEMENT_VISIBLE if is_final_acknowledgement_visible() else ""
+
+
 func get_hud_snapshot() -> Dictionary:
 	return {
 		"status": status_label.text,
@@ -166,6 +185,8 @@ func get_hud_snapshot() -> Dictionary:
 		"echo_next": echo_next_label.text if echo_next_label.visible else "",
 		"history": history_label.text,
 		"completion": completion_label.text if completion_label.visible else "",
+		"final_acknowledgement_state": get_final_acknowledgement_state(),
+		"acknowledgement_return_requested": acknowledgement_return_requested,
 		"help_expanded": help_expanded,
 		"help_body": help_body.text if help_expanded else "",
 		"disclosure": disclosure.duplicate(true),
@@ -371,6 +392,22 @@ func toggle_help() -> void:
 		_clear_teaching_badge()
 		_update_hud()
 		queue_redraw()
+
+
+func _restart_level() -> void:
+	state = simulation.construct_initial_state(level)
+	acknowledgement_return_requested = false
+	help_expanded = false
+	_reset_visual_feedback()
+	_update_hud()
+	queue_redraw()
+
+
+func _request_acknowledgement_return_once() -> void:
+	if acknowledgement_return_requested:
+		return
+	acknowledgement_return_requested = true
+	request_back.emit()
 
 
 func _draw() -> void:
@@ -587,7 +624,17 @@ func _update_hud() -> void:
 		_:
 			_update_standard_hud()
 	completion_label.visible = state.completed
-	completion_label.text = "COMPLETE\nYOU reached EXIT\nPress R to restart"
+	if is_final_acknowledgement_visible():
+		completion_label.position = FINAL_ACKNOWLEDGEMENT_RECT.position
+		completion_label.size = FINAL_ACKNOWLEDGEMENT_RECT.size
+		completion_label.add_theme_font_size_override("font_size", 22)
+		completion_label.text = FINAL_ACKNOWLEDGEMENT_COPY
+		timeline_label.visible = false
+	else:
+		completion_label.position = COMPLETION_RECT.position
+		completion_label.size = COMPLETION_RECT.size
+		completion_label.add_theme_font_size_override("font_size", 28)
+		completion_label.text = "COMPLETE\nYOU reached EXIT\nPress R to restart"
 	_update_help_modal()
 
 
@@ -644,6 +691,8 @@ func _update_standard_hud() -> void:
 
 
 func _update_help_modal() -> void:
+	if is_final_acknowledgement_visible():
+		help_expanded = false
 	help_card.visible = help_expanded
 	var contextual_help := bridge_contextual_help_applicable(level)
 	help_body.add_theme_font_size_override("font_size", 16 if contextual_help else 18)
