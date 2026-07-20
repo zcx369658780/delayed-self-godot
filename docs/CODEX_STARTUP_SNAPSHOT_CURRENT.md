@@ -2,12 +2,11 @@
 
 - Status: `CURRENT`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Current gate: Task 0023ZL cleanup/capture repair ready for GPT review
-- Active task: `tasks/0023ZL_cleanup_capture_repair_post_fetch_continuation_gate.md`
-- Last GPT-accepted gate: `TASK_0023ZG_APP_ROOT_PROFILE_SESSION_HARNESS_ORDER_REPAIR_ACCEPTED`
-- Latest adjudication: `TASK_0023ZK_BLOCKED_BY_CIRCULAR_PREFETCH_EVIDENCE_REQUIREMENT`
-- Required remote checkpoint: `789c79cdb42ba308f0bc87eefeaaebe2deabe700`
-- Required local pre-fast-forward HEAD: `fb8f2acc7d021bb7f01febb358e548f3b26b07bf`
+- Current gate: Task 0023ZJ finalized AppRoot Profile-session full-matrix execution
+- Active task: `tasks/0023ZJ_app_root_profile_session_full_matrix_execution_gate.md`
+- Last GPT-accepted gate: `TASK_0023ZL_APP_ROOT_PROFILE_SESSION_CLEANUP_AND_CAPTURE_REPAIR_ACCEPTED`
+- Required checkpoint: `8e45c3343d54ecf7b3f89f5296158ad5722c6815`
+- Accepted harness checkpoint: `413727fc804355c00f0900d98e668e8e69b4876b`
 - Formal scope: exactly eight levels
 - Formal finale: sequence 8 `two_echo_convergence`
 - Selected ending direction: `B — FINAL_COMPLETION_OVERLAY_PLUS_BOUNDED_RETURN_STATE`
@@ -16,16 +15,16 @@
 
 The eight-entry catalog and all formal level hashes/metrics remain frozen. Sequence 9 remains outside product scope. Existing non-final record-once return and final acknowledgment/return/replay behavior remain protected.
 
-Tasks 0023R–0023W remain the accepted path, codec, store and filesystem authorities. Task 0023X is the accepted pure adapter. Task 0023ZC is the accepted AppRoot compile architecture. Task 0023ZF is the accepted minimal diagnostic. Task 0023ZG is the accepted unlocked-order harness repair authority.
+Tasks 0023R–0023W remain the accepted path, codec, store and filesystem authorities. Task 0023X is the accepted pure adapter. Task 0023ZC is the accepted AppRoot compile architecture. Task 0023ZF is the accepted minimal persistence diagnostic. Tasks 0023ZG and 0023ZL are the accepted canonical harness repair and evidence-finalization authorities.
 
-Task 0023ZH passed sixteen behavior stages through `router_contract`, then failed a self-referential cleanup check; its runner stopped after 9/17 files because `Get-FileHash` was unavailable. Task 0023ZI began the authorized five-file repair but stopped before canonical evidence finalization and complete validator coverage.
+The finalized canonical harness targets Task 0023ZJ with fixture `task_0023zj_app_root_profile_session`, guard `--task-0023zj-fixture-execution`, 18 ordered stages, 41 stable cases, 11 Qualification files and 17 Execute files. It preserves the sorted unlocked-ID expectation, exact 25-owned-path cleanup invariant, static no-enumeration proof, portable direct .NET SHA-256, and fail-closed inventory-last evidence finalization.
 
-Task 0023ZK correctly stopped after the first fetch because its task text required draft intake evidence before that same fetch. Since fetch updates remote-tracking references, pre-fetch evidence cannot be recreated honestly. GPT classifies the block as a circular task-ordering defect and accepts that the five local drafts remain authorized continuation input.
+Task 0023ZJ may execute only this frozen harness through the frozen runner. No product, test, harness, runner, parser, validator, manifest, scene, formal-data, or project-setting file may change.
 
-Task 0023ZL captured the already-fetched inherited draft honestly, proved remote commits touched no harness artifact, and fast-forwarded while preserving the five-file patch byte-identically.
+Passing requires two consecutive runner Execute attempts from separately absent exact fixture states, with no intervening edits. Each must externally audit to `PASS_COMPLETE_MATRIX`: all 18 stage begin/pass pairs in order, 41 assertions, one final pass marker, 17/17 evidence, exit 0, empty stderr, exact cleanup, unchanged production metadata/test-root existence, empty valid worktree patch, and no Godot process.
 
-The final source has direct .NET SHA-256, bounded fail-closed 17-file finalization, inventory-last ordering, the exact-owned cleanup invariant, 313-assertion validator coverage, and inert 0023ZJ retargeting. Final parser, no-guard exit-2 proof, two 11-file zero-I/O Qualifications, and frozen regressions pass. See `docs/reports/0023ZL_APP_ROOT_PROFILE_SESSION_CLEANUP_AND_CAPTURE_REPAIR_REPORT.md`.
+On any nonpass, preserve evidence before exact owned cleanup, stop, and commit only a docs-only blocker report. No repair or rerun is authorized.
 
-The normal unconfigured AppRoot remains memory-only. Runner Execute, the 0023ZJ guard, fixture checks/operations, configured AppRoot tree entry, full behavior execution, production Profile content/default persistence, aggregate, menus/settings/localization, build/export, RC, release, upload and festival submission remain closed.
+The normal unconfigured AppRoot path remains memory-only. Production Profile content/default persistence, aggregate, menus/settings/localization, build/export, RC, release, upload and festival submission remain closed.
 
-Do not resume Tasks 0023Y, 0023Z, 0023ZA, 0023ZB, 0023ZE, 0023ZF, 0023ZH, 0023ZI or 0023ZK, or reuse their fixtures. Historical blocked tasks 0023, 0023S and 0023U remain closed.
+Do not resume Tasks 0023Y, 0023Z, 0023ZA, 0023ZB, 0023ZE, 0023ZF, 0023ZH, 0023ZI, 0023ZK or 0023ZL, or reuse their fixtures. Historical blocked tasks 0023, 0023S and 0023U remain closed.
