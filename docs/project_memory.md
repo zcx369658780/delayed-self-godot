@@ -1,5 +1,25 @@
 # Project memory
 
+## Task 0023ZJ finalized full-matrix execution blocker
+
+Task 0023ZJ passed startup, the complete pre-regression matrix, no-guard exit-2
+proof, pre-Qualification and exact fixture freshness. Its only Execute attempt
+ran through the accepted runner and passed all 18 ordered stages with no
+assertion failure or abort. The runner retained 17/17 evidence files, completed
+exact-owned cleanup and classified `PASS_CANDIDATE`.
+
+The external acceptance audit observed `TASK_0023ZJ_ASSERTIONS=42`, not the
+required `=41`. The task classification is exactly
+`UNCLASSIFIED_NONPASS`, and the terminal verdict is
+`BLOCKED_APP_ROOT_PROFILE_SESSION_EXECUTION_CLASSIFIED`. Attempt 2,
+post-Qualification, post-regressions, diagnosis, repair and rerun did not
+occur.
+
+The exact 0023ZJ fixture, target and 24 owned siblings are absent. Production
+Profile metadata remains `true / 473 / 2026-07-19T08:15:02.2089459Z`;
+content was not accessed, test-root existence remains true without
+enumeration, all 38 frozen hashes match, and no Godot process remains.
+
 ## Task 0023ZL cleanup/capture repair continuation
 
 Task 0023ZL honestly captured the post-fetch inherited five-file draft and

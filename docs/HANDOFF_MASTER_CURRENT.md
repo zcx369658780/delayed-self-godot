@@ -1,5 +1,23 @@
 # Handoff master (CURRENT)
 
+Task 0023ZJ stopped at:
+
+```text
+BLOCKED_APP_ROOT_PROFILE_SESSION_EXECUTION_CLASSIFIED
+```
+
+Startup, pre-regressions, no-guard proof, pre-Qualification and exact fixture
+freshness passed. Attempt 1 ran exactly once through the accepted runner: all
+18 ordered stages passed, no assertion failure or abort occurred, 17/17
+canonical evidence files were retained, exact cleanup passed, protected and
+frozen state remained unchanged, and the runner classified `PASS_CANDIDATE`.
+
+The external acceptance audit observed `TASK_0023ZJ_ASSERTIONS=42` instead of
+the required `=41`. The task-level classification is
+`UNCLASSIFIED_NONPASS`. Attempt 2, post-Qualification and post-regressions were
+not run. No diagnosis, repair or rerun is authorized. See
+`docs/reports/0023ZJ_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_BLOCKER_REPORT.md`.
+
 Task 0023ZL completed at:
 
 ```text
@@ -81,10 +99,10 @@ post-Qualification, post-regressions, repair, or rerun. See
 
 Production Profile metadata remains
 `true / 473 / 2026-07-19T08:15:02.2089459Z`; content was not accessed.
-Test-root existence remains true without enumeration. The 0023W, 0023ZE and
-0023ZF fixtures and the 0023ZH fixture are absent, all recorded frozen hashes
-match, and no Godot process remains. Await GPT adjudication; do not retry or
-repair without a new bounded task.
+Test-root existence remains true without enumeration. The 0023W, 0023ZE,
+0023ZF, 0023ZH and 0023ZJ fixtures are absent, all recorded frozen hashes
+match, and no Godot process remains. Await GPT adjudication; do not retry,
+diagnose or repair without a new bounded task.
 
 Hard boundary: no sequence-9 revival, unbounded product repair, save/settings
 implementation, asset/audio acquisition, owner walkthrough, build/export, RC

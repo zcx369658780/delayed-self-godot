@@ -5,12 +5,14 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0023ZL`](../tasks/0023ZL_cleanup_capture_repair_post_fetch_continuation_gate.md) — completed post-fetch cleanup/capture repair continuation
-5. [`Task 0023ZL report`](reports/0023ZL_APP_ROOT_PROFILE_SESSION_CLEANUP_AND_CAPTURE_REPAIR_REPORT.md) — 313-assertion validator, guard proof and two zero-I/O Qualifications
-4. [`Task 0023ZH`](../tasks/0023ZH_app_root_profile_session_full_matrix_execution_gate.md) — stopped repaired full-matrix execution gate
-5. [`Task 0023ZH blocker report`](reports/0023ZH_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_BLOCKER_REPORT.md) — cleanup assertion plus incomplete 9/17 runner evidence
-6. [`Task 0023ZG`](../tasks/0023ZG_app_root_profile_session_harness_order_repair_gate.md) — unlocked-order harness repair and 0023ZH retargeting
-7. [`Task 0023ZG report`](reports/0023ZG_APP_ROOT_PROFILE_SESSION_HARNESS_ORDER_REPAIR_REPORT.md) — parser, 279-assertion validator, guard and zero-I/O Qualification evidence
+4. [`Task 0023ZJ`](../tasks/0023ZJ_app_root_profile_session_full_matrix_execution_gate.md) — stopped finalized full-matrix execution gate
+5. [`Task 0023ZJ blocker report`](reports/0023ZJ_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_BLOCKER_REPORT.md) — Attempt 1 passed 18 stages but emitted 42 assertions instead of required 41
+6. [`Task 0023ZL`](../tasks/0023ZL_cleanup_capture_repair_post_fetch_continuation_gate.md) — completed post-fetch cleanup/capture repair continuation
+7. [`Task 0023ZL report`](reports/0023ZL_APP_ROOT_PROFILE_SESSION_CLEANUP_AND_CAPTURE_REPAIR_REPORT.md) — 313-assertion validator, guard proof and two zero-I/O Qualifications
+8. [`Task 0023ZH`](../tasks/0023ZH_app_root_profile_session_full_matrix_execution_gate.md) — stopped repaired full-matrix execution gate
+9. [`Task 0023ZH blocker report`](reports/0023ZH_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_BLOCKER_REPORT.md) — cleanup assertion plus incomplete 9/17 runner evidence
+10. [`Task 0023ZG`](../tasks/0023ZG_app_root_profile_session_harness_order_repair_gate.md) — unlocked-order harness repair and 0023ZH retargeting
+11. [`Task 0023ZG report`](reports/0023ZG_APP_ROOT_PROFILE_SESSION_HARNESS_ORDER_REPAIR_REPORT.md) — parser, 279-assertion validator, guard and zero-I/O Qualification evidence
 6. [`Task 0023ZF GPT/root-cause adjudication`](reports/0023ZF_GPT_TUTORIAL_PERSIST_DIAGNOSTIC_ACCEPTANCE_AND_0023ZE_ROOT_CAUSE_ADJUDICATION.md) — accepted diagnostic and harness-order root cause
 7. [`Task 0023ZF`](../tasks/0023ZF_tutorial_zero_persist_subcondition_diagnostic_gate.md) — bounded Tutorial-0 persistence subcondition diagnostic
 8. [`Task 0023ZF report`](reports/0023ZF_TUTORIAL_PERSIST_SUBCONDITION_DIAGNOSTIC_REPORT.md) — expected immediate/delayed contract observation and exact cleanup evidence
@@ -58,6 +60,7 @@
 
 ## Compliance and reports
 
+- [`Task 0023ZJ AppRoot Profile-session full-matrix blocker report`](reports/0023ZJ_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_BLOCKER_REPORT.md)
 - [`Task 0023ZL cleanup/capture repair continuation report`](reports/0023ZL_APP_ROOT_PROFILE_SESSION_CLEANUP_AND_CAPTURE_REPAIR_REPORT.md)
 - [`Task 0023ZH AppRoot Profile-session full-matrix blocker report`](reports/0023ZH_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_BLOCKER_REPORT.md)
 - [`Task 0023ZG AppRoot Profile-session harness order-repair report`](reports/0023ZG_APP_ROOT_PROFILE_SESSION_HARNESS_ORDER_REPAIR_REPORT.md)

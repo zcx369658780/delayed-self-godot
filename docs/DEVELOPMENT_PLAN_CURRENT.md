@@ -70,6 +70,7 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0023ZH repaired full-matrix execution (blocked: cleanup assertion and 9/17 runner evidence)
 → 0023ZI/0023ZK incomplete/circular continuation attempts (closed without commit)
 → 0023ZL cleanup assertion and capture-finalization repair (ready for GPT review; zero future-fixture execution)
+→ 0023ZJ finalized full-matrix execution (blocked: observed 42 assertions vs required 41)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
@@ -137,7 +138,15 @@ success remains unestablished. Task 0023ZL completes the bounded harness-only
 repair: exact-owned-path cleanup, direct .NET SHA-256, fail-closed 17-file
 finalization, a 313-assertion validator, no-guard proof, two zero-I/O
 Qualifications and frozen regressions all pass. Actual execution remains a
-later separately authorized Task 0023ZJ.
+later separately authorized Task 0023ZJ. Task 0023ZJ then ran Attempt 1 exactly
+once through the accepted runner. All 18 ordered stages passed, no assertion
+failure or abort occurred, all 17 canonical evidence files were retained, the
+exact fixture was absent after cleanup, and the runner classified
+`PASS_CANDIDATE`. The external acceptance audit observed
+`TASK_0023ZJ_ASSERTIONS=42` instead of the required `=41`, so the task-level
+classification is `UNCLASSIFIED_NONPASS`. Attempt 2, post-Qualification and
+post-regressions were not run; actual two-attempt full-matrix success remains
+unestablished.
 
 ## Milestone spine
 

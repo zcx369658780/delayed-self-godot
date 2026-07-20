@@ -198,7 +198,16 @@ fixture execution. Cleanup now proves exact-owned-path bounds without reading
 its own source, and the runner uses direct .NET SHA-256 plus fail-closed
 17-file finalization with inventory last. Its parser, 313-assertion validator,
 no-guard proof, two zero-I/O Qualifications and frozen regressions pass. Actual
-full-matrix execution remains a later separately authorized Task 0023ZJ.
+full-matrix execution remained a later separately authorized Task 0023ZJ.
+
+Task 0023ZJ ran Attempt 1 exactly once through the accepted runner. All 18
+ordered stages passed, no assertion failure or abort occurred, 17/17 evidence
+files were retained, exact cleanup passed, and the runner classified
+`PASS_CANDIDATE`. The external audit observed
+`TASK_0023ZJ_ASSERTIONS=42` rather than the required `=41`, so the task
+classified `UNCLASSIFIED_NONPASS` and stopped. Attempt 2, post-Qualification
+and post-regressions were not run. Two-attempt full-matrix success and
+configured production persistence remain unestablished.
 
 | # | Objective / likely path domains | Prerequisites and acceptance | P0/P1 stop, rollback, non-claims |
 |---|---|---|---|
