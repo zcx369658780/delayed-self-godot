@@ -1,5 +1,24 @@
 # Project memory
 
+## Task 0023ZH full-matrix execution blocker
+
+Task 0023ZH passed its complete pre-regression matrix, no-guard exit-2 proof,
+and 11-file pre-Qualification. Its only Execute attempt passed 16 stages
+through `router_contract`, then failed
+`cleanup_no_test_root_enumeration` and controlled-aborted in `cleanup`.
+
+The accepted runner's invocation environment could not resolve
+`Get-FileHash`, so only 9/17 canonical attempt files were retained. The task
+classification is exactly `DIAGNOSTIC_CAPTURE_INCOMPLETE`; Attempt 2,
+post-Qualification, post-regressions, repair, and rerun did not occur.
+Read-only inspection records that the frozen failing check searches its own
+source for enumeration-method literals that also occur in the check itself.
+
+The exact 0023ZH owned fixture is absent, production Profile metadata remains
+`true / 473 / 2026-07-19T08:15:02.2089459Z`, test-root existence remains true
+without enumeration, all 38 frozen hashes match, and no Godot process remains.
+Any harness or runner-environment repair and retry requires a new bounded task.
+
 ## Task 0023ZG full-matrix harness order repair
 
 GPT classified the Task 0023ZE Tutorial-0 failure as a harness expectation

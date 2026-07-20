@@ -185,8 +185,14 @@ comparisons with sorted local expected arrays, reinforces the validator, and
 retargets the future fixture/guard contract to 0023ZH. Its parser, 279 static
 assertions, no-guard proof and two zero-I/O Qualifications pass, with no
 fixture operation or full behavior execution. Configured product persistence
-and actual full-matrix success remain unestablished; execution requires a
-separate 0023ZH task.
+and actual full-matrix success remained unestablished until Task 0023ZH.
+Task 0023ZH's only authorized attempt passed 16 stages through
+`router_contract`, then controlled-aborted on the cleanup
+no-test-root-enumeration assertion. Its runner invocation retained only 9/17
+canonical attempt files after `Get-FileHash` was unavailable, so the gate
+stopped as `DIAGNOSTIC_CAPTURE_INCOMPLETE` without Attempt 2 or repair. Actual
+full-matrix success remains unestablished; any correction and retry requires a
+new bounded task.
 
 | # | Objective / likely path domains | Prerequisites and acceptance | P0/P1 stop, rollback, non-claims |
 |---|---|---|---|

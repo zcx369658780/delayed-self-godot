@@ -67,6 +67,7 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0023ZE full-matrix execution (controlled abort at Tutorial-0 compound persistence assertion)
 → 0023ZF Tutorial-0 persistence subcondition diagnostic (expected bounded contract observed; ready for GPT review)
 → 0023ZG harness unlocked-order repair and 0023ZH retargeting (ready for GPT review)
+→ 0023ZH repaired full-matrix execution (blocked: cleanup assertion and 9/17 runner evidence)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
@@ -124,8 +125,13 @@ defect: the product sorts unlocked IDs while the harness expected the reversed
 literal. Task 0023ZG repairs both exact comparisons with a sorted local
 expected array, reinforces the validator, and retargets the inert future
 contract to 0023ZH. Parser, 279 static assertions, no-guard proof and two
-zero-I/O Qualifications pass. Actual full-matrix execution remains separately
-gated.
+zero-I/O Qualifications pass. Task 0023ZH then ran one authorized attempt:
+16 stages through `router_contract` passed, `cleanup` failed its
+no-test-root-enumeration assertion, and the behavior controlled-aborted. The
+runner retained only 9/17 required files after its invocation environment
+could not resolve `Get-FileHash`, so the task stopped as
+`DIAGNOSTIC_CAPTURE_INCOMPLETE`. Attempt 2 was not run. Actual full-matrix
+success remains unestablished and any repair/retry requires a new task.
 
 ## Milestone spine
 
