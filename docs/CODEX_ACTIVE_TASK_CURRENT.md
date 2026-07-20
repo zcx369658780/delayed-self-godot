@@ -1,6 +1,6 @@
 # Codex active task (CURRENT)
 
-- Status: `APP_ROOT_PROFILE_SESSION_CLEANUP_AND_CAPTURE_REPAIR_POST_FETCH_CONTINUATION_READY_FOR_CODEX`
+- Status: `APP_ROOT_PROFILE_SESSION_CLEANUP_AND_CAPTURE_REPAIR_READY_FOR_GPT_REVIEW`
 - Active task: `tasks/0023ZL_cleanup_capture_repair_post_fetch_continuation_gate.md`
 - Last GPT-accepted gate: `TASK_0023ZG_APP_ROOT_PROFILE_SESSION_HARNESS_ORDER_REPAIR_ACCEPTED`
 - Latest adjudication: `TASK_0023ZK_BLOCKED_BY_CIRCULAR_PREFETCH_EVIDENCE_REQUIREMENT`
@@ -15,9 +15,9 @@ Tasks 0023R, 0023T, 0023V, 0023W, 0023X, 0023ZC, 0023ZD, 0023ZF and 0023ZG are G
 
 Task 0023ZH exposed two harness/capture defects: a self-referential cleanup no-enumeration assertion and a nonportable `Get-FileHash` evidence path. Task 0023ZI began the five-file repair but stopped before finalization. Task 0023ZK then stopped because it required evidence before the first fetch even though the new task text itself was obtained through that fetch. GPT classifies this as a circular task-ordering defect, not a draft, harness, AppRoot or persistence defect.
 
-Task 0023ZL is the only active scope. The first fetch has already occurred and must not be disguised as unfetched. It must capture the current post-fetch inherited five-file draft state, verify local HEAD is still `fb8f2acc7d021bb7f01febb358e548f3b26b07bf`, verify no staged or unauthorized dirty path exists, prove fetched remote commits touch none of the five draft files, and then fast-forward while preserving the draft byte-identically.
+Task 0023ZL completed the controlled post-fetch continuation. The inherited five-file draft was captured with SHA-256 `1266fa7a2a971648c84bdcdc73916efa81036c4fd6f8692dd121f5ae20d19a85`, remote changes touched no harness artifact, and fast-forward preserved the draft byte-identically.
 
-After safe fast-forward, Task 0023ZL must finish the non-self-referential cleanup invariant, static no-enumeration authority, direct .NET SHA-256, guaranteed canonical 17-file post-process finalization, final classification/inventory ordering, and exact inert Task 0023ZJ contract. Final parser, strengthened validator, no-guard proof, two fresh zero-I/O Qualifications and frozen regressions must run from the completed source state.
+The repaired harness now has the non-self-referential cleanup invariant, direct .NET SHA-256, bounded fail-closed 17-file post-process finalization, inventory-last ordering, and exact inert Task 0023ZJ contract. Final parser passed, the strengthened validator passed 313 assertions, no-guard exited 2, both 11-file zero-I/O Qualifications passed their known-vector proof, and all frozen regressions passed.
 
 Runner Execute, the 0023ZJ guard, future fixture checks/operations, configured AppRoot tree entry, full behavior execution, production Profile content/default persistence, aggregate, menus/settings/localization, scenes, export, release, upload and festival submission remain closed.
 

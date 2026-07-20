@@ -1,5 +1,20 @@
 # Handoff master (CURRENT)
 
+Task 0023ZL completed at:
+
+```text
+APP_ROOT_PROFILE_SESSION_CLEANUP_AND_CAPTURE_REPAIR_READY_FOR_GPT_REVIEW
+```
+
+The five canonical harness artifacts now target inert future Task 0023ZJ.
+Cleanup uses the bounded exact 25-owned-path invariant. The runner uses direct
+.NET SHA-256 and bounded fail-closed 17-file finalization with inventory last.
+Final parser passed; the validator passed 313 assertions; no-guard exited 2;
+two final 11-file zero-I/O Qualifications and all frozen regressions passed.
+Execute, guard-passing, future-fixture commands and full behavior executions
+remain zero. See
+`docs/reports/0023ZL_APP_ROOT_PROFILE_SESSION_CLEANUP_AND_CAPTURE_REPAIR_REPORT.md`.
+
 Task 0023ZH stopped at:
 
 ```text

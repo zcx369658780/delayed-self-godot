@@ -1,9 +1,9 @@
 {
   "schema_version": 1,
-  "future_task": "0023ZH",
-  "fixture_id": "task_0023zh_app_root_profile_session",
-  "canonical_profile_path": "user://delayed_self_test_profiles/task_0023zh_app_root_profile_session/delayed_self_profile.json",
-  "execution_guard": "--task-0023zh-fixture-execution",
+  "future_task": "0023ZJ",
+  "fixture_id": "task_0023zj_app_root_profile_session",
+  "canonical_profile_path": "user://delayed_self_test_profiles/task_0023zj_app_root_profile_session/delayed_self_profile.json",
+  "execution_guard": "--task-0023zj-fixture-execution",
   "stage_order": [
     "startup",
     "invalid_configuration",

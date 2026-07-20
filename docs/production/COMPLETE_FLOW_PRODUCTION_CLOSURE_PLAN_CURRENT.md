@@ -191,8 +191,14 @@ Task 0023ZH's only authorized attempt passed 16 stages through
 no-test-root-enumeration assertion. Its runner invocation retained only 9/17
 canonical attempt files after `Get-FileHash` was unavailable, so the gate
 stopped as `DIAGNOSTIC_CAPTURE_INCOMPLETE` without Attempt 2 or repair. Actual
-full-matrix success remains unestablished; any correction and retry requires a
-new bounded task.
+full-matrix success remains unestablished.
+
+Task 0023ZL repairs both validation-infrastructure defects without future
+fixture execution. Cleanup now proves exact-owned-path bounds without reading
+its own source, and the runner uses direct .NET SHA-256 plus fail-closed
+17-file finalization with inventory last. Its parser, 313-assertion validator,
+no-guard proof, two zero-I/O Qualifications and frozen regressions pass. Actual
+full-matrix execution remains a later separately authorized Task 0023ZJ.
 
 | # | Objective / likely path domains | Prerequisites and acceptance | P0/P1 stop, rollback, non-claims |
 |---|---|---|---|

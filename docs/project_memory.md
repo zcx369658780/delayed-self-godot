@@ -1,5 +1,19 @@
 # Project memory
 
+## Task 0023ZL cleanup/capture repair continuation
+
+Task 0023ZL honestly captured the post-fetch inherited five-file draft and
+fast-forwarded without changing its binary patch. It completed the exact-owned
+cleanup invariant, direct .NET SHA-256, bounded fail-closed canonical 17-file
+finalization, inventory-last ordering, and inert Task 0023ZJ retargeting.
+
+Final parser passes; the validator passes 313 assertions; no-guard exits 2;
+two 11-file zero-I/O Qualifications pass the empty-file SHA-256 known vector;
+and all frozen regressions pass. Execute, guard-passing, future-fixture
+commands and full behavior executions remain zero. Production Profile metadata
+remains `true / 473 / 2026-07-19T08:15:02.2089459Z`; test-root existence
+remains true without enumeration.
+
 ## Task 0023ZH full-matrix execution blocker
 
 Task 0023ZH passed its complete pre-regression matrix, no-guard exit-2 proof,

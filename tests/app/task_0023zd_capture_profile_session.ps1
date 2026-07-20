@@ -25,13 +25,13 @@ $ErrorActionPreference = 'Stop'
 
 $parserScript = 'res://tests/app/task_0023zd_full_matrix_parser_smoke.gd'
 $fullMatrixScript = 'res://tests/app/task_0023zd_app_root_profile_session_full_matrix.gd'
-$executionGuard = '--task-0023zh-fixture-execution'
-$parserMarker = 'TASK_0023ZG_FULL_MATRIX_PARSER_SMOKE_PASS'
-$fullMatrixMarker = 'TASK_0023ZH_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_PASS'
+$executionGuard = '--task-0023zj-fixture-execution'
+$parserMarker = 'TASK_0023ZL_FULL_MATRIX_PARSER_SMOKE_PASS'
+$fullMatrixMarker = 'TASK_0023ZJ_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_PASS'
 $userDataRoot = Join-Path $env:APPDATA 'Godot\app_userdata\Delayed Self'
 $productionProfile = Join-Path $userDataRoot 'delayed_self_profile.json'
 $testRoot = Join-Path $userDataRoot 'delayed_self_test_profiles'
-$futureFixtureDirectory = Join-Path $testRoot 'task_0023zh_app_root_profile_session'
+$futureFixtureDirectory = Join-Path $testRoot 'task_0023zj_app_root_profile_session'
 $futureTarget = Join-Path $futureFixtureDirectory 'delayed_self_profile.json'
 
 if (-not (Test-Path -LiteralPath $GodotPath -PathType Leaf)) {
@@ -131,6 +131,29 @@ function Assert-Inventory {
     }
 }
 
+function Get-Sha256Hex {
+    param([Parameter(Mandatory = $true)][string]$Path)
+    $stream = $null
+    $sha256 = $null
+    try {
+        $stream = [System.IO.File]::OpenRead($Path)
+        $sha256 = [System.Security.Cryptography.SHA256]::Create()
+        $bytes = $sha256.ComputeHash($stream)
+        return ([System.BitConverter]::ToString($bytes)).Replace('-', '').ToLowerInvariant()
+    }
+    catch {
+        return ''
+    }
+    finally {
+        if ($null -ne $sha256) {
+            $sha256.Dispose()
+        }
+        if ($null -ne $stream) {
+            $stream.Dispose()
+        }
+    }
+}
+
 if ($Mode -eq 'Qualify') {
     $prefix = 'capture_qualification'
     $commandPath = Join-Path $resolvedEvidenceRoot ($prefix + '_command.txt')
@@ -180,6 +203,16 @@ if ($Mode -eq 'Qualify') {
     $stdout = [System.IO.File]::ReadAllText($stdoutPath)
     $stderrLength = (Get-Item -LiteralPath $stderrPath).Length
     $markerCount = ([regex]::Matches($stdout, [regex]::Escape($parserMarker))).Count
+    $portableHashPath = Join-Path $resolvedEvidenceRoot 'capture_qualification_portable_sha256.tmp'
+    try {
+        [System.IO.File]::WriteAllBytes($portableHashPath, [byte[]]@())
+        $portableSha256Passed = (Get-Sha256Hex -Path $portableHashPath) -eq 'e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855'
+    }
+    finally {
+        if (Test-Path -LiteralPath $portableHashPath -PathType Leaf) {
+            Remove-Item -LiteralPath $portableHashPath -Force
+        }
+    }
     $qualificationPassed = (
         $process.ExitCode -eq 0 -and
         $stderrLength -eq 0 -and
@@ -187,7 +220,8 @@ if ($Mode -eq 'Qualify') {
         ($processBefore -join "`n") -eq 'Count=0' -and
         ($processAfter -join "`n") -eq 'Count=0' -and
         ($productionBefore -join "`n") -eq ($productionAfter -join "`n") -and
-        $testRootBefore -eq $testRootAfter
+        $testRootBefore -eq $testRootAfter -and
+        $portableSha256Passed
     )
     $inventoryLines = @(
         'Mode=Qualify',
@@ -196,6 +230,7 @@ if ($Mode -eq 'Qualify') {
         ('ExitCode=' + $process.ExitCode),
         ('StderrLength=' + $stderrLength),
         ('ParserMarkerCount=' + $markerCount),
+        ('PortableSha256Passed=' + $portableSha256Passed),
         ('ProductionMetadataUnchanged=' + (($productionBefore -join "`n") -eq ($productionAfter -join "`n"))),
         ('TestRootExistenceUnchanged=' + ($testRootBefore -eq $testRootAfter)),
         ('ProcessBeforeZero=' + (($processBefore -join "`n") -eq 'Count=0')),
@@ -209,7 +244,7 @@ if ($Mode -eq 'Qualify') {
     if (-not $qualificationPassed) {
         throw 'Parser capture qualification failed.'
     }
-    Write-Output 'TASK_0023ZG_CAPTURE_QUALIFICATION_PASS'
+    Write-Output 'TASK_0023ZL_CAPTURE_QUALIFICATION_PASS'
     exit 0
 }
 
@@ -246,38 +281,6 @@ $arguments = @('--headless', '--path', $resolvedRepositoryRoot, '--script', $ful
 $process = Start-Process -FilePath $GodotPath -ArgumentList $arguments -Wait -PassThru -NoNewWindow -RedirectStandardOutput $stdoutPath -RedirectStandardError $stderrPath
 Write-Lines -Path $exitPath -Lines @($process.ExitCode.ToString())
 
-$patchProcess = Start-Process -FilePath 'git' -ArgumentList @('-C', $resolvedRepositoryRoot, 'diff', '--binary', '--no-ext-diff') -Wait -PassThru -NoNewWindow -RedirectStandardOutput $patchPath
-if ($patchProcess.ExitCode -ne 0) {
-    throw 'Worktree patch capture failed.'
-}
-$patchHash = (Get-FileHash -LiteralPath $patchPath -Algorithm SHA256).Hash.ToLowerInvariant()
-Write-Lines -Path $patchHashPath -Lines @($patchHash)
-
-$processAfter = @(Get-GodotProcessSnapshot)
-$productionAfter = @(Get-ProductionMetadata)
-$testRootAfter = Get-TestRootExists
-$fixtureAfter = @(Get-FutureFixtureExactState)
-Write-Lines -Path $processAfterPath -Lines $processAfter
-Write-Lines -Path $productionAfterPath -Lines $productionAfter
-Write-Lines -Path $testRootAfterPath -Lines @($testRootAfter)
-Write-Lines -Path $fixtureAfterPath -Lines $fixtureAfter
-
-$stdout = [System.IO.File]::ReadAllText($stdoutPath)
-$stageLines = @($stdout -split "`r?`n" | Where-Object { $_ -match '^TASK_0023ZH_(BEHAVIOR_PROCESS_STARTED|STAGE_BEGIN=|STAGE_PASS=|ASSERT_FAIL|ABORT|ASSERTIONS=|APP_ROOT_PROFILE_SESSION_FULL_MATRIX_PASS)' })
-Write-Lines -Path $stageSummaryPath -Lines $stageLines
-$stderrLength = (Get-Item -LiteralPath $stderrPath).Length
-$successMarkerCount = ([regex]::Matches($stdout, [regex]::Escape($fullMatrixMarker))).Count
-$classification = if ($process.ExitCode -eq 0 -and $stderrLength -eq 0 -and $successMarkerCount -eq 1) { 'PASS_CANDIDATE' } elseif ($stdout.Contains('TASK_0023ZH_ABORT')) { 'CONTROLLED_ABORT' } elseif ($stdout.Contains('TASK_0023ZH_ASSERT_FAIL')) { 'ASSERTION_FAILURE' } else { 'UNCLASSIFIED_NONPASS' }
-Write-Lines -Path $classificationPath -Lines @(
-    ('Classification=' + $classification),
-    ('ExitCode=' + $process.ExitCode),
-    ('StderrLength=' + $stderrLength),
-    ('SuccessMarkerCount=' + $successMarkerCount),
-    ('ProductionMetadataUnchanged=' + (($productionBefore -join "`n") -eq ($productionAfter -join "`n"))),
-    ('TestRootExistenceUnchanged=' + ($testRootBefore -eq $testRootAfter)),
-    ('ProcessAfterZero=' + (($processAfter -join "`n") -eq 'Count=0'))
-)
-
 $attemptFiles = @(
     $commandPath,
     $stdoutPath,
@@ -296,20 +299,144 @@ $attemptFiles = @(
     $stageSummaryPath,
     $classificationPath
 )
-Assert-Inventory -Paths $attemptFiles
-$inventoryLines = @(
-    'Mode=Execute',
-    ('AttemptNumber=' + $AttemptNumber),
-    ('Script=' + $fullMatrixScript),
-    'ExecutionGuardPassed=True',
-    'InventoryComplete=True'
-)
-$inventoryLines += $attemptFiles | ForEach-Object { 'File=' + [System.IO.Path]::GetFileName($_) }
-$inventoryLines += 'File=' + [System.IO.Path]::GetFileName($inventoryPath)
-Write-Lines -Path $inventoryPath -Lines $inventoryLines
-Assert-Inventory -Paths ($attemptFiles + $inventoryPath)
+$captureIncomplete = $false
+$playerDataSafetyFault = $false
+$patchCaptured = $false
+$hashValid = $false
+$stderrLength = -1
+$successMarkerCount = 0
+$stdout = ''
+$processAfter = @('POST_STATE_UNAVAILABLE')
+$productionAfter = @('POST_STATE_UNAVAILABLE')
+$testRootAfter = 'POST_STATE_UNAVAILABLE'
+$fixtureAfter = @('POST_STATE_UNAVAILABLE')
+$initialClassification = 'UNCLASSIFIED_NONPASS'
+$classification = 'DIAGNOSTIC_CAPTURE_INCOMPLETE'
 
-if ($process.ExitCode -ne 0 -or $stderrLength -ne 0 -or $successMarkerCount -ne 1) {
+try {
+    try {
+        $processAfter = @(Get-GodotProcessSnapshot)
+        Write-Lines -Path $processAfterPath -Lines $processAfter
+    }
+    catch {
+        $captureIncomplete = $true
+        Write-Lines -Path $processAfterPath -Lines @('POST_STATE_UNAVAILABLE')
+    }
+    try {
+        $productionAfter = @(Get-ProductionMetadata)
+        Write-Lines -Path $productionAfterPath -Lines $productionAfter
+    }
+    catch {
+        $captureIncomplete = $true
+        Write-Lines -Path $productionAfterPath -Lines @('POST_STATE_UNAVAILABLE')
+    }
+    try {
+        $testRootAfter = Get-TestRootExists
+        Write-Lines -Path $testRootAfterPath -Lines @($testRootAfter)
+    }
+    catch {
+        $captureIncomplete = $true
+        Write-Lines -Path $testRootAfterPath -Lines @('POST_STATE_UNAVAILABLE')
+    }
+    try {
+        $fixtureAfter = @(Get-FutureFixtureExactState)
+        Write-Lines -Path $fixtureAfterPath -Lines $fixtureAfter
+    }
+    catch {
+        $captureIncomplete = $true
+        Write-Lines -Path $fixtureAfterPath -Lines @('POST_STATE_UNAVAILABLE')
+    }
+
+    try {
+        $stdout = [System.IO.File]::ReadAllText($stdoutPath)
+        $stageLines = @($stdout -split "`r?`n" | Where-Object { $_ -match '^TASK_0023ZJ_(BEHAVIOR_PROCESS_STARTED|STAGE_BEGIN=|STAGE_PASS=|ASSERT_FAIL|ABORT|ASSERTIONS=|APP_ROOT_PROFILE_SESSION_FULL_MATRIX_PASS)' })
+        Write-Lines -Path $stageSummaryPath -Lines $stageLines
+        $stderrLength = (Get-Item -LiteralPath $stderrPath).Length
+        $successMarkerCount = ([regex]::Matches($stdout, [regex]::Escape($fullMatrixMarker))).Count
+        $initialClassification = if ($stdout.Contains('TASK_0023ZJ_ABORT')) { 'CONTROLLED_ABORT' } elseif ($stdout.Contains('TASK_0023ZJ_ASSERT_FAIL')) { 'ASSERTION_FAILURE' } elseif ($process.ExitCode -ne 0 -or $stderrLength -ne 0) { 'PROCESS_OR_RUNTIME_FAILURE' } elseif ($process.ExitCode -eq 0 -and $stderrLength -eq 0 -and $successMarkerCount -eq 1) { 'PASS_CANDIDATE' } else { 'UNCLASSIFIED_NONPASS' }
+        Write-Lines -Path $classificationPath -Lines @('Classification=INITIAL_' + $initialClassification)
+    }
+    catch {
+        $captureIncomplete = $true
+        Write-Lines -Path $stageSummaryPath -Lines @('STAGE_SUMMARY_UNAVAILABLE')
+        Write-Lines -Path $classificationPath -Lines @('Classification=INITIAL_DIAGNOSTIC_CAPTURE_INCOMPLETE')
+    }
+
+    try {
+        $patchProcess = Start-Process -FilePath 'git' -ArgumentList @('-C', $resolvedRepositoryRoot, 'diff', '--binary', '--no-ext-diff') -Wait -PassThru -NoNewWindow -RedirectStandardOutput $patchPath
+        if ($patchProcess.ExitCode -ne 0) {
+            throw 'PATCH_CAPTURE_FAILED'
+        }
+        $patchCaptured = $true
+    }
+    catch {
+        $captureIncomplete = $true
+        Write-Lines -Path $patchPath -Lines @('PATCH_CAPTURE_FAILED')
+    }
+
+    if ($patchCaptured) {
+        $patchHash = Get-Sha256Hex -Path $patchPath
+        $hashValid = $patchHash -match '^[0-9a-f]{64}$'
+        if ($hashValid) {
+            Write-Lines -Path $patchHashPath -Lines @($patchHash)
+        }
+        else {
+            $captureIncomplete = $true
+            Write-Lines -Path $patchHashPath -Lines @('HASH_UNAVAILABLE')
+        }
+    }
+    else {
+        Write-Lines -Path $patchHashPath -Lines @('HASH_UNAVAILABLE')
+    }
+}
+finally {
+    $productionUnchanged = ($productionBefore -join "`n") -eq ($productionAfter -join "`n")
+    $testRootUnchanged = $testRootBefore -eq $testRootAfter
+    $processAfterZero = ($processAfter -join "`n") -eq 'Count=0'
+    if (-not $productionUnchanged -or -not $testRootUnchanged) {
+        $playerDataSafetyFault = $true
+    }
+    $preInventoryComplete = @($attemptFiles | Where-Object { -not (Test-Path -LiteralPath $_ -PathType Leaf) }).Count -eq 0
+    if (-not $preInventoryComplete) {
+        $captureIncomplete = $true
+    }
+    $classification = if ($playerDataSafetyFault) {
+        'PLAYER_DATA_SAFETY_FAULT'
+    }
+    elseif ($captureIncomplete -or -not $hashValid) {
+        'DIAGNOSTIC_CAPTURE_INCOMPLETE'
+    }
+    else {
+        $initialClassification
+    }
+    Write-Lines -Path $classificationPath -Lines @(
+        ('Classification=' + $classification),
+        ('InitialClassification=' + $initialClassification),
+        ('ExitCode=' + $process.ExitCode),
+        ('StderrLength=' + $stderrLength),
+        ('SuccessMarkerCount=' + $successMarkerCount),
+        ('PatchCaptured=' + $patchCaptured),
+        ('PatchHashValid=' + $hashValid),
+        ('ProductionMetadataUnchanged=' + $productionUnchanged),
+        ('TestRootExistenceUnchanged=' + $testRootUnchanged),
+        ('ProcessAfterZero=' + $processAfterZero),
+        ('CaptureIncomplete=' + $captureIncomplete)
+    )
+    $inventoryLines = @(
+        'Mode=Execute',
+        ('AttemptNumber=' + $AttemptNumber),
+        ('Script=' + $fullMatrixScript),
+        'ExecutionGuardPassed=True',
+        ('Classification=' + $classification),
+        ('InventoryComplete=' + $preInventoryComplete)
+    )
+    $inventoryLines += $attemptFiles | ForEach-Object { 'File=' + [System.IO.Path]::GetFileName($_) }
+    $inventoryLines += 'File=' + [System.IO.Path]::GetFileName($inventoryPath)
+    Write-Lines -Path $inventoryPath -Lines $inventoryLines
+}
+
+Assert-Inventory -Paths ($attemptFiles + $inventoryPath)
+if ($classification -ne 'PASS_CANDIDATE') {
     exit $(if ($process.ExitCode -ne 0) { $process.ExitCode } else { 1 })
 }
 exit 0

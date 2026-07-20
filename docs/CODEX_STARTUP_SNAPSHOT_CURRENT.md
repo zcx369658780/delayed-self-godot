@@ -2,7 +2,7 @@
 
 - Status: `CURRENT`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Current gate: Task 0023ZL post-fetch continuation of cleanup/capture repair
+- Current gate: Task 0023ZL cleanup/capture repair ready for GPT review
 - Active task: `tasks/0023ZL_cleanup_capture_repair_post_fetch_continuation_gate.md`
 - Last GPT-accepted gate: `TASK_0023ZG_APP_ROOT_PROFILE_SESSION_HARNESS_ORDER_REPAIR_ACCEPTED`
 - Latest adjudication: `TASK_0023ZK_BLOCKED_BY_CIRCULAR_PREFETCH_EVIDENCE_REQUIREMENT`
@@ -22,9 +22,9 @@ Task 0023ZH passed sixteen behavior stages through `router_contract`, then faile
 
 Task 0023ZK correctly stopped after the first fetch because its task text required draft intake evidence before that same fetch. Since fetch updates remote-tracking references, pre-fetch evidence cannot be recreated honestly. GPT classifies the block as a circular task-ordering defect and accepts that the five local drafts remain authorized continuation input.
 
-Task 0023ZL starts from the already-fetched state. It must capture explicitly labeled post-fetch inherited-draft evidence, verify local HEAD `fb8f2acc7d021bb7f01febb358e548f3b26b07bf`, no staged changes, no dirty path beyond the five canonical harness artifacts, and no remote modification to those artifacts. It may then fast-forward while preserving the draft byte-identically.
+Task 0023ZL captured the already-fetched inherited draft honestly, proved remote commits touched no harness artifact, and fast-forwarded while preserving the five-file patch byte-identically.
 
-After fast-forward it must finish direct .NET SHA-256, fail-closed 17-file finalization, inventory-last ordering, the bounded exact-owned cleanup invariant, complete validator reinforcement, and inert 0023ZJ retargeting. Final parser, validator, no-guard proof and two fresh zero-I/O Qualifications must run from the final source state.
+The final source has direct .NET SHA-256, bounded fail-closed 17-file finalization, inventory-last ordering, the exact-owned cleanup invariant, 313-assertion validator coverage, and inert 0023ZJ retargeting. Final parser, no-guard exit-2 proof, two 11-file zero-I/O Qualifications, and frozen regressions pass. See `docs/reports/0023ZL_APP_ROOT_PROFILE_SESSION_CLEANUP_AND_CAPTURE_REPAIR_REPORT.md`.
 
 The normal unconfigured AppRoot remains memory-only. Runner Execute, the 0023ZJ guard, fixture checks/operations, configured AppRoot tree entry, full behavior execution, production Profile content/default persistence, aggregate, menus/settings/localization, build/export, RC, release, upload and festival submission remain closed.
 

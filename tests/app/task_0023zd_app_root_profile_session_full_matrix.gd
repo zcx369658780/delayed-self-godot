@@ -6,9 +6,9 @@ const LocalProfile = preload("res://scripts/app/local_profile.gd")
 const ProfileCodec = preload("res://scripts/app/profile_codec.gd")
 const ProfileProgressAdapter = preload("res://scripts/app/profile_progress_adapter.gd")
 
-const EXECUTION_GUARD: String = "--task-0023zh-fixture-execution"
-const FIXTURE_ID: String = "task_0023zh_app_root_profile_session"
-const CANONICAL_PROFILE_PATH: String = "user://delayed_self_test_profiles/task_0023zh_app_root_profile_session/delayed_self_profile.json"
+const EXECUTION_GUARD: String = "--task-0023zj-fixture-execution"
+const FIXTURE_ID: String = "task_0023zj_app_root_profile_session"
+const CANONICAL_PROFILE_PATH: String = "user://delayed_self_test_profiles/task_0023zj_app_root_profile_session/delayed_self_profile.json"
 const TUTORIAL_0_ID: String = "tutorial_reach_exit"
 const TUTORIAL_1_ID: String = "tutorial_echo_bridge"
 const PUBLIC_PROGRESS_KEYS: Array[String] = ["best_turns", "completed_level_ids", "unlocked_level_ids"]
@@ -28,14 +28,14 @@ var failure_contract_ok: bool = true
 func _initialize() -> void:
 	var arguments: PackedStringArray = OS.get_cmdline_user_args()
 	if not arguments.has(EXECUTION_GUARD):
-		print("TASK_0023ZH_EXECUTION_GUARD_BLOCKED")
+		print("TASK_0023ZJ_EXECUTION_GUARD_BLOCKED")
 		quit(2)
 		return
 	call_deferred("_run_authorized")
 
 
 func _run_authorized() -> void:
-	print("TASK_0023ZH_BEHAVIOR_PROCESS_STARTED")
+	print("TASK_0023ZJ_BEHAVIOR_PROCESS_STARTED")
 	if not await _run_startup_stage():
 		return
 	if not await _run_invalid_configuration_stage():
@@ -72,8 +72,8 @@ func _run_authorized() -> void:
 		return
 	if not await _run_final_stage():
 		return
-	print("TASK_0023ZH_ASSERTIONS=%d" % assertions)
-	print("TASK_0023ZH_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_PASS")
+	print("TASK_0023ZJ_ASSERTIONS=%d" % assertions)
+	print("TASK_0023ZJ_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_PASS")
 	quit(0)
 
 
@@ -503,9 +503,7 @@ func _stage_router_contract() -> void:
 func _stage_cleanup() -> void:
 	_expect_case("cleanup_tracks_owned_inventory", owned_paths.size() == 25 and _unique_string_count(owned_paths) == owned_paths.size(), "owned_inventory_complete")
 	_expect_case("cleanup_exact_fixture_only", _all_owned_paths_bounded(), "cleanup_exact_fixture")
-	var source_text: String = FileAccess.get_file_as_string("res://tests/app/task_0023zd_app_root_profile_session_full_matrix.gd")
-	var no_enumeration: bool = not source_text.contains("list_dir_begin") and not source_text.contains("get_files_at") and not source_text.contains("get_directories_at")
-	_expect_case("cleanup_no_test_root_enumeration", no_enumeration, "no_test_root_enumeration")
+	_expect_case("cleanup_no_test_root_enumeration", _cleanup_uses_exact_owned_paths_only(), "no_test_root_enumeration")
 	for owned_path: String in owned_paths:
 		_remove_exact_file(owned_path)
 	if DirAccess.dir_exists_absolute(ProjectSettings.globalize_path(fixture_dir)):
@@ -518,6 +516,19 @@ func _stage_cleanup() -> void:
 		all_absent = all_absent and not FileAccess.file_exists(owned_path)
 	_expect_case("cleanup_owned_paths_absent", all_absent and not DirAccess.dir_exists_absolute(ProjectSettings.globalize_path(fixture_dir)), "owned_paths_absent")
 	await process_frame
+
+
+func _cleanup_uses_exact_owned_paths_only() -> bool:
+	if fixture_dir != CANONICAL_PROFILE_PATH.get_base_dir():
+		return false
+	if owned_paths.size() != 25 or _unique_string_count(owned_paths) != 25:
+		return false
+	if owned_paths[0] != CANONICAL_PROFILE_PATH:
+		return false
+	for owned_path: String in owned_paths:
+		if owned_path != CANONICAL_PROFILE_PATH and owned_path.get_base_dir() != fixture_dir:
+			return false
+	return true
 
 
 func _stage_final() -> void:
@@ -697,14 +708,14 @@ func _unique_string_count(values: Array[String]) -> int:
 
 func _begin_stage(stage_id: String) -> void:
 	current_stage = stage_id
-	print("TASK_0023ZH_STAGE_BEGIN=" + stage_id)
+	print("TASK_0023ZJ_STAGE_BEGIN=" + stage_id)
 
 
 func _finish_stage(stage_id: String, failures_before: int) -> bool:
 	if failures > failures_before:
 		_abort_stage("stage_assertion_failed")
 		return false
-	print("TASK_0023ZH_STAGE_PASS=" + stage_id)
+	print("TASK_0023ZJ_STAGE_PASS=" + stage_id)
 	return true
 
 
@@ -712,9 +723,9 @@ func _expect_case(case_id: String, condition: bool, bounded_label: String) -> vo
 	assertions += 1
 	if not condition:
 		failures += 1
-		print("TASK_0023ZH_ASSERT_FAIL stage=%s label=%s" % [current_stage, (case_id + "_" + bounded_label).left(120)])
+		print("TASK_0023ZJ_ASSERT_FAIL stage=%s label=%s" % [current_stage, (case_id + "_" + bounded_label).left(120)])
 
 
 func _abort_stage(bounded_reason: String) -> void:
-	print("TASK_0023ZH_ABORT stage=%s reason=%s" % [current_stage, bounded_reason.left(120)])
+	print("TASK_0023ZJ_ABORT stage=%s reason=%s" % [current_stage, bounded_reason.left(120)])
 	quit(1)
