@@ -2,11 +2,11 @@
 
 - Status: `CURRENT`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Current gate: Task 0023ZA instrumented AppRoot test-profile session retry
-- Active task: `tasks/0023ZA_app_root_test_profile_session_instrumented_diagnostic_retry.md`
+- Current gate: Task 0023ZB evidence-complete AppRoot test-profile session rebuild
+- Active task: `tasks/0023ZB_app_root_test_profile_session_evidence_complete_rebuild.md`
 - Last GPT-accepted gate: `TASK_0023X_PROFILE_MEMORY_PROGRESS_ADAPTER_GATE_ACCEPTED`
-- Latest blocker adjudication: `TASK_0023Z_BLOCKED_BY_UNCLASSIFIED_BEHAVIOR_PROCESS_EXIT`
-- Required checkpoint: `661361e7409cb4811c9946f75d28cda68b91de89`
+- Latest adjudication: `TASK_0023ZA_CLASSIFIED_APPROOT_FIX_DIRECTION_ACCEPTED_EVIDENCE_INCOMPLETE`
+- Required checkpoint: `4af0340c6fb626473e7eda3a541dc6c1d9fccb7f`
 - Formal scope: exactly eight levels
 - Formal finale: sequence 8 `two_echo_convergence`
 - Selected ending direction: `B — FINAL_COMPLETION_OVERLAY_PLUS_BOUNDED_RETURN_STATE`
@@ -17,10 +17,10 @@ The eight-entry catalog and all formal level hashes/metrics remain frozen. Seque
 
 Tasks 0023R–0023W remain the accepted path, codec, external store-configuration and fixed-fixture filesystem authorities. Task 0023X remains the accepted zero-I/O Profile-to-MemoryProgress adapter with non-mutating candidate preparation and explicit atomic in-memory commit.
 
-Task 0023Y produced no implementation commit after an uncovered behavior-script parser failure. Task 0023Z added full parser and interface preflights and both passed, but its first fixed-fixture behavior process exited 1 without safely retained diagnostic output. Its uncommitted AppRoot/test changes were rolled back; production Profile metadata remained `true / 473 / 2026-07-19T08:15:02.2089459Z`, its fixture remained absent, and no Godot process remained.
+Tasks 0023Y and 0023Z produced no implementation commits. Task 0023ZA retained a classified diagnostic: at `tutorial_0_persist / persist_commit`, configured AppRoot exposed the adapter wrapper snapshot instead of the public nested runtime progress shape. A targeted correction reached exit 0, but the evidence inventory and full rollback/recovery matrix were incomplete; all source/test drafts were rolled back.
 
-Task 0023ZA may modify only AppRoot plus new task-owned tests/reports/current docs. Before any correction it must retain stdout, stderr, exit code, deterministic stage markers, assertion/abort labels, a worktree patch and hash, exact owned-fixture state, protected metadata and process state. Only evidence-classified test-local or AppRoot-contract-local corrections are permitted within bounded attempt counts. Unclassified failure, incomplete capture, cross-layer uncertainty or player-data safety uncertainty must stop.
+Task 0023ZB may modify only AppRoot plus new task-owned tests/reports/current docs. It must directly implement the classified three-key public progress snapshot correction, qualify the independent capture procedure before fixture behavior, retain a complete evidence inventory for every attempt, execute the full matrix, and obtain two consecutive complete clean-fixture passes before review.
 
 The normal unconfigured AppRoot path remains memory-only and must not construct a store or touch any Profile path. Production Profile content/default persistence, frozen codec/store/adapter/MemoryProgress files, existing tests, aggregate persistence regression, menus/settings/localization, build/export, RC, release, upload and festival submission remain closed.
 
-Do not resume either Task 0023Y file, Task 0023Z, or historical blocked tasks 0023, 0023S or 0023U.
+Do not resume Tasks 0023Y, 0023Z, 0023ZA, or historical blocked tasks 0023, 0023S and 0023U.
