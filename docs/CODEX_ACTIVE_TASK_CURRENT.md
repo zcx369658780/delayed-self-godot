@@ -1,7 +1,7 @@
 # Codex active task (CURRENT)
 
-- Status: `PRODUCTION_PROFILE_ACTIVATION_DESIGN_READY_FOR_CODEX`
-- Active task: `tasks/0023ZO_production_profile_activation_design_and_authorization_gate.md`
+- Status: `PRODUCTION_PROFILE_ACTIVATION_DESIGN_READY_FOR_GPT_REVIEW`
+- Completed task awaiting GPT review: `tasks/0023ZO_production_profile_activation_design_and_authorization_gate.md`
 - Last GPT-accepted gate: `TASK_0023ZN_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_ACCEPTED`
 - Required checkpoint: `72dc42448261b8847c224a903743d815cf9e6136`
 - Gate: `PROTECTED PLAYER DATA / PRODUCTION PROFILE ACTIVATION DESIGN + AUTHORIZATION PACKAGE`
@@ -15,9 +15,23 @@ Task 0023ZN completed two separately fresh exact-fixture runs. Both passed all 1
 
 The configured test-only AppRoot/Profile matrix is now accepted. This does not activate the production path. Normal unconfigured AppRoot remains memory-only.
 
-Task 0023ZO is the only active scope. It is docs-only and static-inspection-only. It must design the production activation seam, boot-state contract, first-read/first-write authorization model, existing 473-byte Profile handling, fixture and production evidence sequence, rollback/compatibility rules, and narrowly decomposed future tasks.
+Task 0023ZO selects a dedicated boot/composition object that configures
+AppRoot before adding it to the tree. AppRoot remains the only router. The
+composition policy separates `MEMORY_ONLY`, guarded
+`PRODUCTION_READ_ONLY`, guarded `PRODUCTION_WRITE_ON_INTENT`, and later
+default activation. Development-direct launches remain memory-only.
 
-Task 0023ZO must not run Godot, PowerShell, runners, aggregate tests, exports, or builds. It must not read, parse, hash, copy, rename, delete, reset, repair, compare, or write the production Profile content. It must not access or enumerate the test-root filesystem and must not modify product/test/harness/scene/project-setting files.
+The plan keeps code/static implementation, isolated fixtures, controlled
+production read, conditional recovery, controlled first-write/NO_CHANGE,
+default activation, aggregate registration, and Menu flow as separate gates.
+Read authorization does not authorize copying or writing; first-write
+authorization does not authorize retry, reset or default activation.
+
+The existing 473-byte Profile was not accessed or reclassified. This task ran
+no Godot, validation script, runner, aggregate, export or build, accessed no
+test-root filesystem, and changed no product/test/harness/scene/project-setting
+file. See
+`docs/reports/0023ZO_PRODUCTION_PROFILE_ACTIVATION_DESIGN_AND_AUTHORIZATION_PLAN.md`.
 
 Production Profile metadata remains the accepted recorded fact:
 
@@ -27,7 +41,12 @@ Length = 473
 LastWriteTimeUtc = 2026-07-19T08:15:02.2089459Z
 ```
 
-Production Profile runtime read/write, default persistence activation, aggregate registration, Menu New/Continue/Reset, settings, localization, scenes, export, release, upload, and festival submission remain closed. Any later task that reads or writes the existing production Profile requires explicit user authorization.
+Await GPT adjudication or a new bounded task. Production Profile runtime
+read/write, recovery/backup, default persistence activation, aggregate
+registration, Menu New/Continue/Reset, settings, localization, scenes, export,
+release, upload, and festival submission remain closed. Any later task that
+reads or writes the existing production Profile requires explicit user
+authorization.
 
 Do not resume Tasks 0023Y, 0023Z, 0023ZA, 0023ZB, 0023ZE, 0023ZF, 0023ZH, 0023ZI, 0023ZK, 0023ZL, 0023ZJ, 0023ZM or 0023ZN, or reuse their fixtures. Historical blocked tasks 0023, 0023S and 0023U remain closed. Sequence 9 remains `DEFERRED_CONCEPT_NOT_PRODUCT_SCOPE`.
 

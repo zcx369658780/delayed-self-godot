@@ -1,5 +1,30 @@
 # Project memory
 
+## Task 0023ZO production Profile activation design
+
+Task 0023ZO selects a dedicated composition bootstrap that configures AppRoot
+before tree entry. It extends the accepted configure-before-tree seam while
+AppRoot remains the sole router. Internal policies distinguish memory-only,
+guarded production read-only, guarded write-on-intent and later default
+activation; development-direct launches remain memory-only.
+
+The future sequence separates zero-production-I/O code/static work, isolated
+fixtures, explicit-user-authorized production read, conditional recovery,
+explicit-user-authorized first intentional completion write plus NO_CHANGE,
+default activation, aggregate registration and Menu flow.
+
+Missing boot creates no file. Valid read-only boot changes no metadata.
+Malformed data requires preservation before clean recovery. Unsupported newer
+versions are preserved and make an older process write-disabled. Any
+persistence failure prevents adapter commit and retains pre-completion runtime
+progress.
+
+The existing accepted Profile metadata remains only the historical record
+`true / 473 / 2026-07-19T08:15:02.2089459Z`; this task did not refresh or
+access it. Production read, recovery copy, durable first-write backup, target
+write, reset and default activation remain separate explicit user
+authorizations.
+
 ## Task 0023ZN normalized full-matrix execution
 
 Task 0023ZN executed only the frozen normalized AppRoot/Profile harness through

@@ -1,5 +1,36 @@
 # Handoff master (CURRENT)
 
+Task 0023ZO completed at:
+
+```text
+PRODUCTION_PROFILE_ACTIVATION_DESIGN_READY_FOR_GPT_REVIEW
+```
+
+The selected seam is a dedicated composition bootstrap that configures
+AppRoot before adding it to the tree. AppRoot remains the only router; no
+autoload/global store or second navigation framework is introduced.
+
+The design separates memory-only, controlled production read-only, controlled
+write-on-intent and later default activation. Development-direct launches stay
+memory-only. Missing, valid, sanitizable, malformed, unsupported-version,
+recovery-failure and runtime persistence-failure contracts are explicit.
+
+Future work is decomposed into zero-production-I/O compile/static
+implementation, isolated fixture behavior, explicit-user-authorized controlled
+read, conditional recovery, explicit-user-authorized first intentional
+write/NO_CHANGE, final default activation, aggregate registration and Menu
+flow. Read authorization never implies copy/write authorization.
+
+The existing recorded 473-byte Profile was not opened or refreshed. No
+test-root filesystem was accessed. No Godot, validation script, runner,
+aggregate, export or build ran, and no product/test/harness/scene/project
+setting changed. See
+`docs/reports/0023ZO_PRODUCTION_PROFILE_ACTIVATION_DESIGN_AND_AUTHORIZATION_PLAN.md`.
+
+Await GPT adjudication or a new bounded task. Production read/write, recovery,
+default persistence, reset, Menu/settings/localization, aggregate, build,
+release, upload and submission remain closed.
+
 Task 0023ZN completed at:
 
 ```text

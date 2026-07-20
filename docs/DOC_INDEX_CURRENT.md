@@ -5,8 +5,10 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0023ZN`](../tasks/0023ZN_app_root_profile_session_full_matrix_execution_gate.md) — completed normalized two-attempt full-matrix execution
-5. [`Task 0023ZN report`](reports/0023ZN_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_EXECUTION_REPORT.md) — two `PASS_COMPLETE_MATRIX` audits, complete evidence and protected-state validation
+4. [`Task 0023ZO`](../tasks/0023ZO_production_profile_activation_design_and_authorization_gate.md) — completed production activation design and authorization package
+5. [`Task 0023ZO plan`](reports/0023ZO_PRODUCTION_PROFILE_ACTIVATION_DESIGN_AND_AUTHORIZATION_PLAN.md) — selected composition seam, boot contracts, protected read/write gates and future sequence
+6. [`Task 0023ZN`](../tasks/0023ZN_app_root_profile_session_full_matrix_execution_gate.md) — completed normalized two-attempt full-matrix execution
+7. [`Task 0023ZN report`](reports/0023ZN_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_EXECUTION_REPORT.md) — two `PASS_COMPLETE_MATRIX` audits, complete evidence and protected-state validation
 6. [`Task 0023ZM`](../tasks/0023ZM_assertion_case_cardinality_normalization_gate.md) — completed assertion/case cardinality normalization
 7. [`Task 0023ZM report`](reports/0023ZM_ASSERTION_CASE_CARDINALITY_NORMALIZATION_REPORT.md) — schema 2, 42 unique cases, 328-assertion validator and zero-I/O requalification
 6. [`Task 0023ZJ GPT cardinality adjudication`](reports/0023ZJ_GPT_ASSERTION_CASE_CARDINALITY_ADJUDICATION.md) — duplicate case-ID root cause and bounded normalization direction
@@ -65,6 +67,7 @@
 
 ## Compliance and reports
 
+- [`Task 0023ZO production Profile activation design and authorization plan`](reports/0023ZO_PRODUCTION_PROFILE_ACTIVATION_DESIGN_AND_AUTHORIZATION_PLAN.md)
 - [`Task 0023ZN normalized AppRoot Profile-session full-matrix execution report`](reports/0023ZN_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_EXECUTION_REPORT.md)
 - [`Task 0023ZM assertion/case-cardinality normalization report`](reports/0023ZM_ASSERTION_CASE_CARDINALITY_NORMALIZATION_REPORT.md)
 - [`Task 0023ZJ GPT assertion/case-cardinality adjudication`](reports/0023ZJ_GPT_ASSERTION_CASE_CARDINALITY_ADJUDICATION.md)

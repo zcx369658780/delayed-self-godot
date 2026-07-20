@@ -73,6 +73,7 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0023ZJ finalized full-matrix execution (blocked: observed 42 assertions vs required 41)
 → 0023ZM assertion/case cardinality normalization and 0023ZN retargeting (ready for GPT review; zero future-fixture execution)
 → 0023ZN normalized full-matrix execution (ready for GPT review; two consecutive complete-matrix passes)
+→ 0023ZO production Profile activation design and explicit authorization package (ready for GPT review; zero player-data I/O)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
@@ -169,6 +170,16 @@ the 328-assertion validator, all 38 frozen hashes, protected state, exact
 fixture absence, and pollution checks pass. This establishes the normalized
 test-only matrix twice; production persistence activation remains separately
 gated.
+
+Task 0023ZO selects a dedicated composition bootstrap as the smallest safe
+production activation owner. It configures AppRoot before tree entry while
+AppRoot remains the sole router. The design separates zero-production-I/O
+implementation, isolated fixture behavior, explicit-user-authorized read-only
+boot, conditional recovery copy, explicit-user-authorized first intentional
+write plus NO_CHANGE, final default activation, later aggregate registration,
+and the Menu flow slice. The existing 473-byte Profile was not accessed and no
+product source or runtime command changed. Production activation remains a
+future protected gate pending GPT acceptance and explicit user authorization.
 
 ## Milestone spine
 

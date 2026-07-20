@@ -2,8 +2,8 @@
 
 - Status: `CURRENT`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Current gate: Task 0023ZO production Profile activation design and authorization package
-- Active task: `tasks/0023ZO_production_profile_activation_design_and_authorization_gate.md`
+- Current gate: Task 0023ZO production Profile activation design completed for GPT review
+- Completed task: `tasks/0023ZO_production_profile_activation_design_and_authorization_gate.md`
 - Last GPT-accepted gate: `TASK_0023ZN_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_ACCEPTED`
 - Required checkpoint: `72dc42448261b8847c224a903743d815cf9e6136`
 - Formal scope: exactly eight levels
@@ -20,9 +20,26 @@ Task 0023ZN is accepted. Two separately fresh fixed-fixture attempts each passed
 
 The configured test-only persistence matrix is closed. Normal AppRoot remains memory-only because production Profile activation has not been implemented or authorized.
 
-Task 0023ZO is docs-only. It must select the smallest production activation seam, define missing/valid/malformed/unknown-version boot contracts, separate implementation from production first-read/first-write authorization, protect the existing recorded 473-byte Profile, define rollback and compatibility behavior, and produce a narrow future task sequence.
+Task 0023ZO selects a dedicated boot/composition object that configures
+AppRoot before tree entry. This reuses the accepted AppRoot seam without a
+second router and permits implementation/fixture work while the current main
+scene remains memory-only.
 
-Do not run Godot, PowerShell, runners, aggregate tests, exports, or builds. Do not access production Profile content or the test-root filesystem. Do not modify product source, tests, harnesses, scenes, `project.godot`, assets, localization, or export settings.
+The design freezes separate policies for memory-only, controlled production
+read-only, controlled write-on-intent and later default activation. Missing,
+valid, sanitizable, malformed, unknown-version, recovery-failure and runtime
+persistence-failure behavior are specified. A newer unsupported Profile is
+preserved and leaves an older process write-disabled.
+
+The existing Profile was not accessed and its metadata was not refreshed.
+Production read, recovery copy, durable first-write backup, target write and
+default activation each require separate explicit user authorization. See
+`docs/reports/0023ZO_PRODUCTION_PROFILE_ACTIVATION_DESIGN_AND_AUTHORIZATION_PLAN.md`.
+
+No Godot, validation script, runner, aggregate, export or build ran. Product
+source, tests, harnesses, scenes, `project.godot`, assets, localization and
+export settings remain unchanged. Await GPT adjudication or a new bounded
+task.
 
 Accepted production Profile metadata remains:
 

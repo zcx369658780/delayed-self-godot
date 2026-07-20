@@ -231,6 +231,21 @@ frozen normalized matrix evidence gap only. Production Profile activation,
 default persistence and subsequent production-closure gates remain
 unimplemented and require separate authorization.
 
+Task 0023ZO now supplies the production-activation decision package without
+player-data I/O. A dedicated composition bootstrap is selected to configure
+AppRoot before tree entry; AppRoot remains the sole router and the existing
+main scene remains memory-only through code/static and fixture gates. The
+design separates guarded read-only production access, conditional recovery,
+guarded first intentional write plus NO_CHANGE, and final default activation.
+Development-direct launches remain memory-only.
+
+The existing 473-byte Profile is not assumed valid and was not accessed.
+Missing boot creates no file; valid boot performs no write; malformed and
+unsupported data must be preserved before clean fallback; unsupported newer
+versions leave an older process write-disabled. Code rollback changes only
+composition policy and never deletes or rewrites player data. See
+`docs/reports/0023ZO_PRODUCTION_PROFILE_ACTIVATION_DESIGN_AND_AUTHORIZATION_PLAN.md`.
+
 | # | Objective / likely path domains | Prerequisites and acceptance | P0/P1 stop, rollback, non-claims |
 |---|---|---|---|
 | 1 **SELECTED** | Persistent local profile core and isolated tests; `scripts/app/`, focused `tests/app/`, test registration, docs | Contract above; clean/malformed/version/atomic-failure/isolation coverage; catalog and formal hashes unchanged | Stop on real-profile touch, unsafe overwrite, or semantic drift. Roll back adapter/test topic only. Not UI, migration breadth, cloud, or release readiness. |
