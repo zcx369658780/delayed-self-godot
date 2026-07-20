@@ -1,29 +1,29 @@
 # Codex active task (CURRENT)
 
-- Status: `APP_ROOT_TEST_PROFILE_SESSION_INSTRUMENTED_RETRY_READY_FOR_CODEX`
-- Active task: `tasks/0023ZA_app_root_test_profile_session_instrumented_diagnostic_retry.md`
+- Status: `APP_ROOT_TEST_PROFILE_SESSION_EVIDENCE_COMPLETE_READY_FOR_CODEX`
+- Active task: `tasks/0023ZB_app_root_test_profile_session_evidence_complete_rebuild.md`
 - Last GPT-accepted gate: `TASK_0023X_PROFILE_MEMORY_PROGRESS_ADAPTER_GATE_ACCEPTED`
-- Latest blocker adjudication: `TASK_0023Z_BLOCKED_BY_UNCLASSIFIED_BEHAVIOR_PROCESS_EXIT`
-- Required checkpoint: `661361e7409cb4811c9946f75d28cda68b91de89`
-- Gate: `PROTECTED PLAYER DATA / INSTRUMENTED APPROOT SESSION REPRODUCTION + CLASSIFIED CORRECTION`
+- Latest adjudication: `TASK_0023ZA_CLASSIFIED_APPROOT_FIX_DIRECTION_ACCEPTED_EVIDENCE_INCOMPLETE`
+- Required checkpoint: `4af0340c6fb626473e7eda3a541dc6c1d9fccb7f`
+- Gate: `PROTECTED PLAYER DATA / CLASSIFIED APPROOT REBUILD + COMPLETE EVIDENCE MATRIX`
 - Formal scope: exactly eight levels
 - Formal finale: sequence 8 `two_echo_convergence`
 - Current plan: `docs/production/COMPLETE_FLOW_PRODUCTION_CLOSURE_PLAN_CURRENT.md`
 
 Tasks 0023R, 0023T, 0023V, 0023W and 0023X are GPT-accepted and frozen. Task 0023W provides the configured fixed-fixture filesystem store; Task 0023X provides the pure Profile↔MemoryProgress adapter and atomic in-memory hydration.
 
-Task 0023Y closed the parser-coverage gap but produced no implementation commit. Task 0023Z then passed its full-script parser and interface compile preflights, but the first fixed-fixture behavior process exited 1 without retained output sufficient to classify the failing stage, assertion, file, line, stack or subsystem. All uncommitted changes were rolled back; production metadata remained unchanged and the fixture remained absent.
+Tasks 0023Y and 0023Z produced no implementation commits. Task 0023ZA classified the first AppRoot integration failure at `tutorial_0_persist / persist_commit`: configured test-profile mode returned the adapter wrapper snapshot instead of the required nested runtime progress shape. One targeted correction produced an exit-0 reduced diagnostic run, but capture files and the full rollback/recovery matrix were incomplete; all product/test drafts were rolled back and only the diagnostic report was committed.
 
-Task 0023ZA is the only active scope. It retries the same bounded AppRoot test-profile session using a new fixture, but every behavior attempt must retain independent stdout/stderr, exit code, deterministic stage markers, exact assertion labels, a pre-rollback worktree patch and hash, protected metadata and exact fixture state. No correction is allowed until the failure is evidence-classified; only bounded test-local or AppRoot-contract-local corrections are authorized.
+Task 0023ZB is the only active implementation scope. It must rebuild the test-only AppRoot session from clean accepted sources, encode the classified public-progress-shape correction directly, qualify independent stdout/stderr/exit capture before fixture behavior, execute the complete persistence/rollback/recovery matrix, and obtain two consecutive full clean-fixture passes with complete evidence.
 
 Normal unconfigured AppRoot remains memory-only. Production Profile content/default persistence, frozen codec/store/adapter/MemoryProgress sources, existing tests, aggregate, menus, settings, localization, scenes, export, release, upload and festival submission remain closed.
 
-Do not resume either Task 0023Y file, Task 0023Z, or historical blocked tasks 0023, 0023S or 0023U. Sequence 9 remains `DEFERRED_CONCEPT_NOT_PRODUCT_SCOPE`; B007 and candidate continuation remain historical and closed.
+Do not resume Tasks 0023Y, 0023Z, 0023ZA, or historical blocked tasks 0023, 0023S and 0023U. Sequence 9 remains `DEFERRED_CONCEPT_NOT_PRODUCT_SCOPE`; B007 and candidate continuation remain historical and closed.
 
 Expected terminal verdict:
 
 ```text
-APP_ROOT_TEST_PROFILE_SESSION_INSTRUMENTED_READY_FOR_GPT_REVIEW
-BLOCKED_APP_ROOT_TEST_PROFILE_SESSION_DIAGNOSTIC_CLASSIFIED
-BLOCKED_APP_ROOT_TEST_PROFILE_SESSION_DIAGNOSTIC_UNCLASSIFIED
+APP_ROOT_TEST_PROFILE_SESSION_EVIDENCE_COMPLETE_READY_FOR_GPT_REVIEW
+BLOCKED_APP_ROOT_TEST_PROFILE_SESSION_EVIDENCE_CLASSIFIED
+BLOCKED_APP_ROOT_TEST_PROFILE_SESSION_EVIDENCE_INCOMPLETE
 ```
