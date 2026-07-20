@@ -1,33 +1,33 @@
 # Codex active task (CURRENT)
 
-- Status: `BLOCKED_APP_ROOT_PROFILE_SESSION_EXECUTION_CLASSIFIED`
-- Active task: `tasks/0023ZJ_app_root_profile_session_full_matrix_execution_gate.md`
+- Status: `APP_ROOT_PROFILE_SESSION_ASSERTION_CARDINALITY_NORMALIZATION_READY_FOR_CODEX`
+- Active task: `tasks/0023ZM_assertion_case_cardinality_normalization_gate.md`
 - Last GPT-accepted gate: `TASK_0023ZL_APP_ROOT_PROFILE_SESSION_CLEANUP_AND_CAPTURE_REPAIR_ACCEPTED`
-- Required checkpoint: `8e45c3343d54ecf7b3f89f5296158ad5722c6815`
-- Accepted harness checkpoint: `413727fc804355c00f0900d98e668e8e69b4876b`
-- Gate: `PROTECTED PLAYER DATA / FINALIZED FIXED-FIXTURE APPROOT FULL-MATRIX EXECUTION`
+- Latest adjudication: `TASK_0023ZJ_BEHAVIOR_PASS_CANDIDATE_BLOCKED_BY_DUPLICATE_CASE_ID_CARDINALITY_MISMATCH`
+- Required checkpoint: `31cc1f58a106abc61f618d199aac8b69bee6dde7`
+- Accepted harness checkpoint to revise: `413727fc804355c00f0900d98e668e8e69b4876b`
+- Gate: `PROTECTED PLAYER DATA / CASE-ASSERTION CARDINALITY NORMALIZATION + ZERO-FIXTURE REQUALIFICATION`
 - Formal scope: exactly eight levels
 - Formal finale: sequence 8 `two_echo_convergence`
 - Current plan: `docs/production/COMPLETE_FLOW_PRODUCTION_CLOSURE_PLAN_CURRENT.md`
 
-Tasks 0023R, 0023T, 0023V, 0023W, 0023X, 0023ZC, 0023ZD, 0023ZF, 0023ZG and 0023ZL are GPT-accepted and frozen within their stated scopes. AppRoot, MemoryProgress, store, adapter, Gameplay, product data, accepted prerequisite tests, diagnostics, and the finalized five-file canonical harness remain frozen.
+Tasks 0023R, 0023T, 0023V, 0023W, 0023X, 0023ZC, 0023ZD, 0023ZF, 0023ZG and 0023ZL are GPT-accepted and frozen within their stated scopes. AppRoot, MemoryProgress, store, adapter, Gameplay, product data, accepted prerequisite tests and diagnostics remain frozen.
 
-Task 0023ZH exposed a self-referential cleanup assertion and nonportable/incompletely ordered evidence capture. Tasks 0023ZI–0023ZL repaired those harness/capture defects without fixture execution. The accepted finalized harness now has an exact 25-owned-path cleanup invariant, static no-enumeration proof, direct .NET SHA-256, bounded fail-closed 17-file finalization, inventory-last ordering, and exact Task 0023ZJ contract.
+Task 0023ZJ Attempt 1 passed all 18 ordered stages, emitted no assertion failure or abort, retained 17/17 evidence, completed exact cleanup, preserved protected/frozen state, and was classified `PASS_CANDIDATE`. It stopped only because the task expected 41 runtime assertions while the behavior emitted 42.
 
-Task 0023ZJ ran Attempt 1 exactly once through the accepted runner. Startup, pre-regressions, no-guard proof, pre-Qualification and exact fixture freshness passed. The behavior passed all 18 stages, emitted no assertion failure or abort, retained 17/17 evidence, cleaned the exact fixture, and the runner classified `PASS_CANDIDATE`.
+GPT review identified a deterministic metadata defect: `single_active_screen_router` is used by both the fresh-reload single-screen assertion and the full router-contract assertion. The manifest therefore has 41 unique case IDs while the behavior executes 42 assertions. No product or configured-session behavior defect is established.
 
-The external audit observed `TASK_0023ZJ_ASSERTIONS=42`, not the required `=41`. Task-level classification is therefore `UNCLASSIFIED_NONPASS`. Attempt 2, post-Qualification and post-regressions were not run. See `docs/reports/0023ZJ_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_BLOCKER_REPORT.md`.
+Task 0023ZM is the only active scope. It may revise only the five canonical harness artifacts plus authorized reports/current docs. It must give the fresh-reload screen assertion its own case ID, normalize the manifest to schema 2 with 42 unique cases and `expected_assertion_count = 42`, add an internal non-counting assertion-count guard, strengthen validator one-to-one case mapping, and retarget the inert future contract to Task 0023ZN.
 
-Any assertion failure, controlled abort, process/runtime failure, evidence gap, fixture residue, protected-state change, or frozen-source drift stops the task without source repair or rerun. Only an authorized docs-only execution or blocker report may be committed.
+Task 0023ZM must execute no full matrix and perform no fixture check or operation. Parser, validator, no-guard proof, two zero-I/O Qualifications and frozen regressions are the only authorized dynamic validation. Runner Execute, the 0023ZN guard, configured AppRoot tree entry and future fixture operations remain closed.
 
-Normal unconfigured AppRoot remains memory-only. Production Profile content/default persistence, source/harness repair, aggregate, menus, settings, localization, scenes, export, release, upload and festival submission remain closed.
+Normal unconfigured AppRoot remains memory-only. Production Profile content/default persistence, actual full-matrix execution, aggregate, menus, settings, localization, scenes, export, release, upload and festival submission remain closed.
 
-Do not resume Tasks 0023Y, 0023Z, 0023ZA, 0023ZB, 0023ZE, 0023ZF, 0023ZH, 0023ZI, 0023ZK or 0023ZL, or reuse their fixtures. Historical blocked tasks 0023, 0023S and 0023U remain closed. Sequence 9 remains `DEFERRED_CONCEPT_NOT_PRODUCT_SCOPE`.
+Do not resume Tasks 0023Y, 0023Z, 0023ZA, 0023ZB, 0023ZE, 0023ZF, 0023ZH, 0023ZI, 0023ZK, 0023ZL or 0023ZJ, or reuse their fixtures. Historical blocked tasks 0023, 0023S and 0023U remain closed. Sequence 9 remains `DEFERRED_CONCEPT_NOT_PRODUCT_SCOPE`.
 
 Expected terminal verdict:
 
 ```text
-APP_ROOT_PROFILE_SESSION_FULL_MATRIX_EXECUTION_READY_FOR_GPT_REVIEW
-BLOCKED_APP_ROOT_PROFILE_SESSION_EXECUTION_CLASSIFIED
-BLOCKED_APP_ROOT_PROFILE_SESSION_EXECUTION_EVIDENCE_INCOMPLETE
+APP_ROOT_PROFILE_SESSION_ASSERTION_CARDINALITY_NORMALIZATION_READY_FOR_GPT_REVIEW
+BLOCKED_APP_ROOT_PROFILE_SESSION_ASSERTION_CARDINALITY_NORMALIZATION
 ```
