@@ -61,6 +61,8 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0023V Profile-store instance configuration compile gate (ready for GPT review)
 → 0023W configured test-only Profile filesystem store (ready for GPT review)
 → 0023X pure Profile-to-MemoryProgress adapter (ready for GPT review)
+→ 0023Y/0023Z/0023ZA/0023ZB AppRoot fixture-session attempts (closed without accepted implementation)
+→ 0023ZC AppRoot orchestration compile/architecture gate (ready for GPT review)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
@@ -99,9 +101,14 @@ negative paths. Task 0023T then separates the type/interface concern into a
 zero-I/O pure codec gate: a first-attempt compile smoke and 34 synthetic
 assertions prove defaulting, normalization, stable serialization and candidate
 progress only. Task 0023V separately resolves the self-type construction
-blocker through a zero-I/O external-instance configuration gate. No Profile
-filesystem implementation may resume until GPT reviews this gate and issues a
-later revised task.
+blocker through a zero-I/O external-instance configuration gate. Tasks 0023W
+and 0023X then establish the accepted configured test store and pure progress
+adapter. Tasks 0023Y–0023ZB close without accepted AppRoot implementation.
+Task 0023ZC isolates source architecture from fixture execution: parser smoke
+and a 17-assertion zero-Profile-I/O contract pass while configured
+adapter/store/load and persistence-before-commit branches remain unexecuted. A
+later task must separately authorize complete harness construction before any
+fixture execution.
 
 ## Milestone spine
 

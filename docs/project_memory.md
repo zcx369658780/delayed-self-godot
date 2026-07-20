@@ -245,6 +245,18 @@ authorized.
 
 ## Pending decisions
 
+## Task 0023ZC AppRoot Profile orchestration compile architecture
+
+Task 0023ZC is implemented and awaiting GPT review. AppRoot now accepts one
+frozen-policy-validated canonical test path only before tree entry or boot,
+encodes adapter→catalog facts→store→load→hydrate and
+prepare→persist→commit source ordering, and returns only the exact defensive
+three-key runtime progress shape. Parser smoke passed on attempt 1 and the
+zero-Profile-I/O contract passed 17 assertions; both passed again from fresh
+processes. No successfully configured AppRoot entered the tree, no Task 0023ZC
+fixture exists, and no configured Profile behavior was executed. Production
+metadata remained `true / 473 / 2026-07-19T08:15:02.2089459Z`.
+
 ## Task 0023W configured fixture-only Profile filesystem store
 
 ## Task 0023X pure Profile-to-MemoryProgress adapter

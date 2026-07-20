@@ -169,6 +169,13 @@ export, RC, release, and submission are incomplete.
 
 ## 7. Reversible implementation slices
 
+Slice 1 is being decomposed into protected gates. Tasks 0023R/T/V/W/X establish
+the accepted test-path, codec, configured store and pure adapter authorities.
+Task 0023ZC is ready for GPT review only as a zero-Profile-I/O AppRoot
+compile/architecture gate; it does not complete configured filesystem
+integration or persistent product behavior. Later complete-harness
+construction and fixture execution still require separate tasks.
+
 | # | Objective / likely path domains | Prerequisites and acceptance | P0/P1 stop, rollback, non-claims |
 |---|---|---|---|
 | 1 **SELECTED** | Persistent local profile core and isolated tests; `scripts/app/`, focused `tests/app/`, test registration, docs | Contract above; clean/malformed/version/atomic-failure/isolation coverage; catalog and formal hashes unchanged | Stop on real-profile touch, unsafe overwrite, or semantic drift. Roll back adapter/test topic only. Not UI, migration breadth, cloud, or release readiness. |
