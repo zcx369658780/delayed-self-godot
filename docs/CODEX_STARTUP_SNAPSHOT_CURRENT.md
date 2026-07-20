@@ -2,7 +2,7 @@
 
 - Status: `CURRENT`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Current gate: Task 0023ZD complete AppRoot Profile-session harness construction
+- Current gate: Task 0023ZD complete AppRoot Profile-session harness awaiting GPT review
 - Active task: `tasks/0023ZD_app_root_profile_session_full_matrix_harness_gate.md`
 - Last GPT-accepted gate: `TASK_0023ZC_APP_ROOT_PROFILE_ORCHESTRATION_COMPILE_GATE_ACCEPTED`
 - Required checkpoint: `5dc7e68759d2294d83c4d21a4da813a8d49b3306`
@@ -16,9 +16,9 @@ The eight-entry catalog and all formal level hashes/metrics remain frozen. Seque
 
 Tasks 0023R–0023W remain the accepted path, codec, external store-configuration and fixed-fixture filesystem authorities. Task 0023X is the accepted pure adapter. Task 0023ZC is accepted only as zero-Profile-I/O AppRoot compile architecture: bounded pre-tree test configuration, adapter/store/load/hydration source order, prepare/persist/commit source order, exact nested-runtime public progress snapshot, and unchanged normal memory-only boot.
 
-Task 0023ZD may create only task-owned future harness files and authorized reports/current docs. The complete future behavior script must include the exact Task 0023ZE execution guard, full configuration/persistence/reload/NO_CHANGE/failure/rollback/recovery/snapshot/router/cleanup matrix, deterministic stage protocol, and future fixture constants. It must not be executed in this task.
+Task 0023ZD has created only its five task-owned future harness files and authorized reports/current docs. Parser smoke passes, the static validator passes 251 assertions, the manifest contains the exact 18 stages and 41 cases, and two zero-I/O Qualifications contain all 11 required files.
 
-The parser smoke and static validator may compile/read repository task-owned source only. The PowerShell runner may be run only in `Qualify` mode against parser smoke; `Execute` mode and `--task-0023ze-fixture-execution` remain forbidden. No configured AppRoot may enter the tree and no future fixture may be built, checked, created, inspected, or cleaned.
+Only `Qualify` mode was run against parser smoke. `Execute` mode and `--task-0023ze-fixture-execution` were never supplied; the complete behavior script was never run. No configured AppRoot entered the tree and the future fixture was never built, checked, created, inspected, or cleaned.
 
 Production Profile content/default persistence, actual fixture execution, two consecutive matrix passes, aggregate, menus/settings/localization, build/export, RC, release, upload and festival submission remain closed.
 

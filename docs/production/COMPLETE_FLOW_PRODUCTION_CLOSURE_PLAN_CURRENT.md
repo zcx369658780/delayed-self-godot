@@ -171,10 +171,11 @@ export, RC, release, and submission are incomplete.
 
 Slice 1 is being decomposed into protected gates. Tasks 0023R/T/V/W/X establish
 the accepted test-path, codec, configured store and pure adapter authorities.
-Task 0023ZC is ready for GPT review only as a zero-Profile-I/O AppRoot
-compile/architecture gate; it does not complete configured filesystem
-integration or persistent product behavior. Later complete-harness
-construction and fixture execution still require separate tasks.
+Task 0023ZC is the accepted zero-Profile-I/O AppRoot compile/architecture gate.
+Task 0023ZD is ready for GPT review with the complete guarded future harness,
+18 stages, 41 cases, 251-assertion static validation and two zero-I/O capture
+Qualifications. It does not establish configured filesystem integration or
+persistent product behavior. Actual fixture execution remains a separate gate.
 
 | # | Objective / likely path domains | Prerequisites and acceptance | P0/P1 stop, rollback, non-claims |
 |---|---|---|---|

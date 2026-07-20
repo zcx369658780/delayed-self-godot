@@ -245,6 +245,19 @@ authorized.
 
 ## Pending decisions
 
+## Task 0023ZD complete AppRoot Profile-session harness
+
+Task 0023ZD is implemented and awaiting GPT review. It adds exactly five
+task-owned harness files for the future Task 0023ZE gate: a guard-protected
+behavior source with 18 ordered stages and 41 stable cases, deterministic
+manifest, parser smoke, 251-assertion static validator, and a strict
+`Qualify`/`Execute` capture runner. Two Qualifications ran parser smoke only
+and retained all 11 required files. Guard and full-matrix execution counts are
+zero; no configured AppRoot entered the tree and the future fixture was never
+checked or operated. Frozen 0023R–0023ZC regressions pass, production metadata
+remains `true / 473 / 2026-07-19T08:15:02.2089459Z`, and the 0023W fixture is
+absent. Actual fixture behavior remains separately gated.
+
 ## Task 0023ZC AppRoot Profile orchestration compile architecture
 
 Task 0023ZC is implemented and awaiting GPT review. AppRoot now accepts one
