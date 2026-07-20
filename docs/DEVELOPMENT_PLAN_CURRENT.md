@@ -71,6 +71,7 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0023ZI/0023ZK incomplete/circular continuation attempts (closed without commit)
 → 0023ZL cleanup assertion and capture-finalization repair (ready for GPT review; zero future-fixture execution)
 → 0023ZJ finalized full-matrix execution (blocked: observed 42 assertions vs required 41)
+→ 0023ZM assertion/case cardinality normalization and 0023ZN retargeting (ready for GPT review; zero future-fixture execution)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
@@ -146,7 +147,15 @@ exact fixture was absent after cleanup, and the runner classified
 `TASK_0023ZJ_ASSERTIONS=42` instead of the required `=41`, so the task-level
 classification is `UNCLASSIFIED_NONPASS`. Attempt 2, post-Qualification and
 post-regressions were not run; actual two-attempt full-matrix success remains
-unestablished.
+unestablished. GPT identified one duplicated case ID rather than a product
+defect: `single_active_screen_router` covered two distinct successful checks.
+Task 0023ZM gives the fresh-reload check its own ID, normalizes the manifest to
+schema 2 with 42 unique cases and expected assertion count 42, adds a
+non-counting internal guard, reinforces one-to-one validation, and retargets
+the inert future contract to Task 0023ZN. Parser, 328-validator, no-guard, two
+zero-I/O Qualifications and frozen regressions pass without Execute or future
+fixture operation. Actual two-attempt full-matrix success remains separately
+gated.
 
 ## Milestone spine
 

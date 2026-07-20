@@ -6,10 +6,11 @@ const RUNNER_PATH: String = "res://tests/app/task_0023zd_capture_profile_session
 const PARSER_PATH: String = "res://tests/app/task_0023zd_full_matrix_parser_smoke.gd"
 const APP_ROOT_PATH: String = "res://scripts/app/app_root.gd"
 const MEMORY_PROGRESS_PATH: String = "res://scripts/app/memory_progress.gd"
-const FIXTURE_ID: String = "task_0023zj_app_root_profile_session"
-const CANONICAL_PROFILE_PATH: String = "user://delayed_self_test_profiles/task_0023zj_app_root_profile_session/delayed_self_profile.json"
-const EXECUTION_GUARD: String = "--task-0023zj-fixture-execution"
-const FUTURE_TASK: String = "0023ZJ"
+const FIXTURE_ID: String = "task_0023zn_app_root_profile_session"
+const CANONICAL_PROFILE_PATH: String = "user://delayed_self_test_profiles/task_0023zn_app_root_profile_session/delayed_self_profile.json"
+const EXECUTION_GUARD: String = "--task-0023zn-fixture-execution"
+const FUTURE_TASK: String = "0023ZN"
+const EXPECTED_ASSERTION_COUNT: int = 42
 
 const STAGE_ORDER: Array[String] = [
 	"startup",
@@ -47,6 +48,7 @@ const CASE_IDS: Array[String] = [
 	"tutorial_zero_persisted_progress_route",
 	"canonical_target_bytes",
 	"fresh_reload_progress",
+	"fresh_reload_single_active_screen",
 	"single_active_screen_router",
 	"no_change_equal_or_worse_replay",
 	"no_change_target_metadata_bytes",
@@ -84,6 +86,13 @@ const ACCEPTED_FAILURE_STAGES: Array[String] = [
 	"REPLACE",
 	"POST_REPLACE_VERIFY",
 ]
+
+const DELEGATED_CASE_STAGES: Dictionary = {
+	"temp_write_rollback": "TEMP_WRITE",
+	"temp_readback_rollback": "TEMP_READBACK",
+	"replace_rollback": "REPLACE",
+	"post_replace_verify_rollback": "POST_REPLACE_VERIFY",
+}
 
 const EXPECTED_FROZEN_SHA256: Dictionary = {
 	"res://scripts/app/app_root.gd": "f6050d344a44d718aeef1f97729aa5a394defea55b7568fe0999ca6006e0e83c",
@@ -145,6 +154,7 @@ func _validate_manifest(manifest: Dictionary) -> void:
 		"case_ids",
 		"evidence_files",
 		"execution_guard",
+		"expected_assertion_count",
 		"fixture_id",
 		"forbidden_disclosures",
 		"future_task",
@@ -154,15 +164,16 @@ func _validate_manifest(manifest: Dictionary) -> void:
 	var actual_keys: Array = manifest.keys()
 	actual_keys.sort()
 	_expect(actual_keys == expected_keys, "manifest_exact_top_level_keys")
-	_expect(int(manifest.get("schema_version", 0)) == 1, "manifest_schema_version")
+	_expect(int(manifest.get("schema_version", 0)) == 2, "manifest_schema_version")
 	_expect(str(manifest.get("future_task", "")) == FUTURE_TASK, "manifest_future_task")
 	_expect(str(manifest.get("fixture_id", "")) == FIXTURE_ID, "manifest_fixture_id")
 	_expect(str(manifest.get("canonical_profile_path", "")) == CANONICAL_PROFILE_PATH, "manifest_canonical_path")
 	_expect(str(manifest.get("execution_guard", "")) == EXECUTION_GUARD, "manifest_execution_guard")
+	_expect(int(manifest.get("expected_assertion_count", 0)) == EXPECTED_ASSERTION_COUNT, "manifest_expected_assertion_count")
 	_expect(manifest.get("stage_order", []) == STAGE_ORDER, "manifest_stage_order")
 	_expect(manifest.get("case_ids", []) == CASE_IDS, "manifest_case_order")
 	_expect(STAGE_ORDER.size() == 18, "manifest_stage_count_exact")
-	_expect(CASE_IDS.size() == 41, "manifest_case_count_exact")
+	_expect(CASE_IDS.size() == EXPECTED_ASSERTION_COUNT, "manifest_case_count_exact")
 	_expect(_unique_count(manifest.get("stage_order", [])) == STAGE_ORDER.size(), "manifest_unique_stages")
 	_expect(_unique_count(manifest.get("case_ids", [])) == CASE_IDS.size(), "manifest_unique_cases")
 	_expect(manifest.get("accepted_failure_stages", []) == ACCEPTED_FAILURE_STAGES, "manifest_failure_stages")
@@ -179,7 +190,7 @@ func _validate_manifest(manifest: Dictionary) -> void:
 
 func _validate_behavior(behavior: String, manifest: Dictionary) -> void:
 	_expect(not behavior.is_empty(), "behavior_source_readable")
-	for closed_suffix: String in ["ZE", "ZH"]:
+	for closed_suffix: String in ["ZE", "ZH", "ZJ"]:
 		var closed_task_token: String = "0023" + closed_suffix
 		var closed_fixture_id: String = "task_0023" + closed_suffix.to_lower() + "_app_root_profile_session"
 		var closed_execution_guard: String = "--task-0023" + closed_suffix.to_lower() + "-fixture-execution"
@@ -187,7 +198,7 @@ func _validate_behavior(behavior: String, manifest: Dictionary) -> void:
 	_expect(behavior.count(FIXTURE_ID) == 2, "behavior_fixture_id_exact_constant_and_path")
 	_expect(behavior.count(CANONICAL_PROFILE_PATH) == 1, "behavior_canonical_path_unique")
 	_expect(behavior.contains('const EXECUTION_GUARD: String = "' + EXECUTION_GUARD + '"'), "behavior_guard_constant")
-	_expect(behavior.contains('print("TASK_0023ZJ_EXECUTION_GUARD_BLOCKED")'), "behavior_guard_marker")
+	_expect(behavior.contains('print("TASK_0023ZN_EXECUTION_GUARD_BLOCKED")'), "behavior_guard_marker")
 	_expect(behavior.contains("quit(2)"), "behavior_guard_exit_two")
 	var init_start: int = behavior.find("func _initialize()")
 	var run_start: int = behavior.find("func _run_authorized()")
@@ -207,18 +218,37 @@ func _validate_behavior(behavior: String, manifest: Dictionary) -> void:
 		_expect(position > previous_position, "behavior_stage_order_" + stage)
 		previous_position = position
 	for case_id: String in CASE_IDS:
-		_expect(behavior.contains('"' + case_id + '"'), "behavior_case_" + case_id)
-	_expect(behavior.count("_expect_case(") >= 35, "behavior_common_assertion_helper_used")
+		var direct_case_call: String = '_expect_case("' + case_id + '"'
+		var delegated_case_call: String = ""
+		if DELEGATED_CASE_STAGES.has(case_id):
+			delegated_case_call = '_run_failure_case("' + str(DELEGATED_CASE_STAGES.get(case_id, "")) + '", "' + case_id + '")'
+		var mapped_case_count: int = behavior.count(direct_case_call)
+		if not delegated_case_call.is_empty():
+			mapped_case_count += behavior.count(delegated_case_call)
+		_expect(mapped_case_count == 1, "behavior_case_call_exactly_once_" + case_id)
+	_expect(behavior.count('_expect_case("') == 38, "behavior_direct_literal_case_calls_exact")
+	_expect(behavior.count('_run_failure_case("') == 4, "behavior_delegated_literal_case_calls_exact")
+	_expect(DELEGATED_CASE_STAGES.size() == 4, "behavior_delegated_case_map_exact")
+	_expect(behavior.count("_expect_case(") == 40, "behavior_common_assertion_helper_call_sites_exact")
 	_expect(not behavior.contains("assert("), "behavior_no_direct_assert")
 	for forbidden: String in ["TODO", "FIXME", "placeholder", "assert(true)", "skip_stage", "SKIP_STAGE"]:
 		_expect(not behavior.contains(forbidden), "behavior_no_" + forbidden.to_snake_case())
-	_expect(behavior.contains("TASK_0023ZJ_BEHAVIOR_PROCESS_STARTED"), "behavior_process_marker")
-	_expect(behavior.contains("TASK_0023ZJ_STAGE_BEGIN="), "behavior_stage_begin_protocol")
-	_expect(behavior.contains("TASK_0023ZJ_STAGE_PASS="), "behavior_stage_pass_protocol")
-	_expect(behavior.contains("TASK_0023ZJ_ASSERT_FAIL stage=%s label=%s"), "behavior_failure_protocol")
-	_expect(behavior.contains("TASK_0023ZJ_ABORT stage=%s reason=%s"), "behavior_abort_protocol")
-	_expect(behavior.contains("TASK_0023ZJ_ASSERTIONS=%d"), "behavior_assertion_count_protocol")
-	_expect(behavior.contains("TASK_0023ZJ_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_PASS"), "behavior_terminal_marker")
+	_expect(behavior.contains("TASK_0023ZN_BEHAVIOR_PROCESS_STARTED"), "behavior_process_marker")
+	_expect(behavior.contains("TASK_0023ZN_STAGE_BEGIN="), "behavior_stage_begin_protocol")
+	_expect(behavior.contains("TASK_0023ZN_STAGE_PASS="), "behavior_stage_pass_protocol")
+	_expect(behavior.contains("TASK_0023ZN_ASSERT_FAIL stage=%s label=%s"), "behavior_failure_protocol")
+	_expect(behavior.contains("TASK_0023ZN_ABORT stage=%s reason=%s"), "behavior_abort_protocol")
+	_expect(behavior.contains("TASK_0023ZN_ASSERTIONS=%d"), "behavior_assertion_count_protocol")
+	_expect(behavior.contains("TASK_0023ZN_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_PASS"), "behavior_terminal_marker")
+	_expect(behavior.contains("const EXPECTED_ASSERTION_COUNT: int = 42"), "behavior_expected_assertion_count_constant")
+	var final_stage_call_position: int = behavior.find("if not await _run_final_stage():", run_start)
+	var count_guard_position: int = behavior.find("if assertions != EXPECTED_ASSERTION_COUNT:", final_stage_call_position)
+	var assertion_marker_position: int = behavior.find('print("TASK_0023ZN_ASSERTIONS=%d" % assertions)', count_guard_position)
+	var final_marker_position: int = behavior.find('print("TASK_0023ZN_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_PASS")', assertion_marker_position)
+	var count_guard_block: String = behavior.substr(count_guard_position, assertion_marker_position - count_guard_position) if count_guard_position >= 0 and assertion_marker_position > count_guard_position else ""
+	_expect(final_stage_call_position >= 0 and count_guard_position > final_stage_call_position and assertion_marker_position > count_guard_position and final_marker_position > assertion_marker_position, "behavior_count_guard_after_stages_before_pass_markers")
+	_expect(count_guard_block.contains('_abort_stage("assertion_count_mismatch")') and count_guard_block.contains("return"), "behavior_count_guard_bounded_abort")
+	_expect(not count_guard_block.contains("_expect_case") and not count_guard_block.contains("assertions +="), "behavior_count_guard_non_counting")
 	var helper_start: int = behavior.find("func _expected_tutorial_unlocked_ids() -> Array[String]:")
 	var helper_end: int = behavior.find("\n\nfunc ", helper_start + 1)
 	var helper_block: String = behavior.substr(helper_start, helper_end - helper_start) if helper_start >= 0 and helper_end > helper_start else ""
@@ -235,6 +265,12 @@ func _validate_behavior(behavior: String, manifest: Dictionary) -> void:
 	var reload_end: int = behavior.find("\n\nfunc _stage_no_change()", reload_start)
 	var reload_block: String = behavior.substr(reload_start, reload_end - reload_start) if reload_start >= 0 and reload_end > reload_start else ""
 	_expect(reload_block.contains('progress.get("unlocked_level_ids", []) == _expected_tutorial_unlocked_ids()'), "behavior_fresh_reload_sorted_exact_comparison")
+	_expect(reload_block.contains('_expect_case("fresh_reload_single_active_screen", current_app.get_active_screen_count() == 1, "reload_single_screen")'), "behavior_fresh_reload_single_screen_case")
+	var router_start: int = behavior.find("func _stage_router_contract()")
+	var router_end: int = behavior.find("\n\nfunc ", router_start + 1)
+	var router_block: String = behavior.substr(router_start, router_end - router_start) if router_start >= 0 and router_end > router_start else ""
+	_expect(router_block.contains('_expect_case("single_active_screen_router", router_ok, "router_single_screen")'), "behavior_router_single_screen_case")
+	_expect(behavior.count('"single_active_screen_router"') == 1, "behavior_router_case_id_unique")
 	_expect(not behavior.contains("== [TUTORIAL_0_ID, TUTORIAL_1_ID]"), "behavior_no_raw_unsorted_tutorial_equality")
 	_expect(behavior.contains('["best_turns", "completed_level_ids", "unlocked_level_ids"]'), "behavior_exact_public_keys")
 	_expect(behavior.contains('wrapper.get("runtime", {})'), "behavior_nested_runtime_assertion")
@@ -268,7 +304,7 @@ func _validate_behavior(behavior: String, manifest: Dictionary) -> void:
 
 func _validate_runner(runner: String, manifest: Dictionary) -> void:
 	_expect(not runner.is_empty(), "runner_source_readable")
-	for closed_suffix: String in ["ZE", "ZH"]:
+	for closed_suffix: String in ["ZE", "ZH", "ZJ"]:
 		var closed_task_token: String = "0023" + closed_suffix
 		var closed_fixture_id: String = "task_0023" + closed_suffix.to_lower() + "_app_root_profile_session"
 		var closed_execution_guard: String = "--task-0023" + closed_suffix.to_lower() + "-fixture-execution"
@@ -287,9 +323,9 @@ func _validate_runner(runner: String, manifest: Dictionary) -> void:
 	_expect(runner.contains("if ($ScriptPath -ne $fullMatrixScript)"), "runner_execute_exact_script")
 	_expect(runner.contains("$executionGuard = '" + EXECUTION_GUARD + "'"), "runner_future_guard_constant")
 	_expect(runner.contains("$futureFixtureDirectory = Join-Path $testRoot '" + FIXTURE_ID + "'"), "runner_future_fixture_constant")
-	_expect(runner.contains("$parserMarker = 'TASK_0023ZL_FULL_MATRIX_PARSER_SMOKE_PASS'"), "runner_parser_marker")
-	_expect(runner.contains("$fullMatrixMarker = 'TASK_0023ZJ_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_PASS'"), "runner_full_matrix_marker")
-	_expect(runner.contains("TASK_0023ZL_CAPTURE_QUALIFICATION_PASS"), "runner_qualification_marker")
+	_expect(runner.contains("$parserMarker = 'TASK_0023ZM_FULL_MATRIX_PARSER_SMOKE_PASS'"), "runner_parser_marker")
+	_expect(runner.contains("$fullMatrixMarker = 'TASK_0023ZN_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_PASS'"), "runner_full_matrix_marker")
+	_expect(runner.contains("TASK_0023ZM_CAPTURE_QUALIFICATION_PASS"), "runner_qualification_marker")
 	_expect(runner.contains("'--', $executionGuard"), "runner_execute_guard")
 	_expect(runner.contains("Get-FutureFixtureExactState"), "runner_execute_fixture_state")
 	_expect(runner.contains("git") and runner.contains("'diff', '--binary', '--no-ext-diff'"), "runner_worktree_patch")
@@ -305,7 +341,7 @@ func _validate_runner(runner: String, manifest: Dictionary) -> void:
 	_expect(qualify_block.contains("e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"), "runner_qualification_empty_hash_vector")
 	_expect(qualify_block.contains("capture_qualification_portable_sha256.tmp") and qualify_block.contains("PortableSha256Passed="), "runner_qualification_hash_proof_recorded")
 	_expect(qualify_block.contains("finally") and qualify_block.contains("Remove-Item -LiteralPath $portableHashPath"), "runner_qualification_temp_cleanup")
-	_expect(runner.contains("TASK_0023ZJ_(BEHAVIOR_PROCESS_STARTED|STAGE_BEGIN=|STAGE_PASS=|ASSERT_FAIL|ABORT|ASSERTIONS=|APP_ROOT_PROFILE_SESSION_FULL_MATRIX_PASS)"), "runner_stage_summary")
+	_expect(runner.contains("TASK_0023ZN_(BEHAVIOR_PROCESS_STARTED|STAGE_BEGIN=|STAGE_PASS=|ASSERT_FAIL|ABORT|ASSERTIONS=|APP_ROOT_PROFILE_SESSION_FULL_MATRIX_PASS)"), "runner_stage_summary")
 	_expect(runner.contains("PASS_CANDIDATE") and runner.contains("CONTROLLED_ABORT") and runner.contains("ASSERTION_FAILURE") and runner.contains("UNCLASSIFIED_NONPASS"), "runner_classification")
 	_expect(not runner.contains("Get-ChildItem -LiteralPath $testRoot") and not runner.contains("ReadAllText($productionProfile)") and not runner.contains("Get-Content -LiteralPath $productionProfile"), "runner_no_protected_content_or_root_enumeration")
 	var evidence: Dictionary = manifest.get("evidence_files", {})
@@ -342,9 +378,10 @@ func _validate_runner(runner: String, manifest: Dictionary) -> void:
 
 func _validate_parser(parser: String) -> void:
 	_expect(not parser.is_empty(), "parser_source_readable")
-	_expect(parser.contains('print("TASK_0023ZL_FULL_MATRIX_PARSER_SMOKE_PASS")'), "parser_revised_marker")
+	_expect(parser.contains('print("TASK_0023ZM_FULL_MATRIX_PARSER_SMOKE_PASS")'), "parser_revised_marker")
 	_expect(not parser.contains("TASK_0023" + "ZE_"), "parser_closed_protocol_absent")
 	_expect(not parser.contains("TASK_0023" + "ZH_"), "parser_prior_execution_protocol_absent")
+	_expect(not parser.contains("TASK_0023" + "ZJ_"), "parser_prior_cardinality_protocol_absent")
 
 
 func _validate_app_root_ordering(app_root: String) -> void:
@@ -409,14 +446,14 @@ func _expect(condition: bool, label: String) -> void:
 	assertions += 1
 	if not condition:
 		failures += 1
-		print("TASK_0023ZL_VALIDATOR_ASSERT_FAIL label=" + label.left(140))
+		print("TASK_0023ZM_VALIDATOR_ASSERT_FAIL label=" + label.left(140))
 
 
 func _finish() -> void:
-	print("TASK_0023ZL_VALIDATOR_ASSERTIONS=%d" % assertions)
+	print("TASK_0023ZM_VALIDATOR_ASSERTIONS=%d" % assertions)
 	if failures == 0:
-		print("TASK_0023ZL_CLEANUP_CAPTURE_VALIDATOR_PASS")
+		print("TASK_0023ZM_CASE_CARDINALITY_VALIDATOR_PASS")
 		quit(0)
 	else:
-		print("TASK_0023ZL_CLEANUP_CAPTURE_VALIDATOR_FAIL failures=%d" % failures)
+		print("TASK_0023ZM_CASE_CARDINALITY_VALIDATOR_FAIL failures=%d" % failures)
 		quit(1)

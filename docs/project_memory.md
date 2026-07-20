@@ -1,5 +1,25 @@
 # Project memory
 
+## Task 0023ZM assertion/case cardinality normalization
+
+GPT classified Task 0023ZJ's 42-vs-41 mismatch as duplicate case-ID metadata,
+not an established product defect. Task 0023ZM changes only the fresh-reload
+single-screen case ID from `single_active_screen_router` to
+`fresh_reload_single_active_screen`; the full router contract retains the
+original ID.
+
+The canonical manifest is now schema 2 with 18 stages, 42 unique case IDs and
+expected assertion count 42. The behavior has a typed non-counting count guard,
+and the 328-assertion validator proves 38 direct plus four delegated one-to-one
+case mappings. All five canonical artifacts target inert future Task 0023ZN.
+
+Draft/final parser, no-guard exit-2 proof, two 11/11 zero-I/O Qualifications,
+and pre/post frozen regressions pass. Execute, 0023ZN guard-passing,
+future-fixture commands and full behavior executions remain zero. Production
+Profile metadata remains `true / 473 / 2026-07-19T08:15:02.2089459Z`;
+content was not accessed, test-root existence remains true without
+enumeration, frozen non-harness hashes match, and no Godot process remains.
+
 ## Task 0023ZJ finalized full-matrix execution blocker
 
 Task 0023ZJ passed startup, the complete pre-regression matrix, no-guard exit-2

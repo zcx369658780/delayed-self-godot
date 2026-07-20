@@ -1,5 +1,25 @@
 # Handoff master (CURRENT)
 
+Task 0023ZM completed at:
+
+```text
+APP_ROOT_PROFILE_SESSION_ASSERTION_CARDINALITY_NORMALIZATION_READY_FOR_GPT_REVIEW
+```
+
+The fresh-reload single-screen assertion now uses
+`fresh_reload_single_active_screen`; `single_active_screen_router` remains
+only in the full router contract. The manifest is schema 2 with 18 stages, 42
+unique cases and expected assertion count 42. A typed non-counting guard
+prevents success markers on count mismatch, and the validator proves 38 direct
+plus four delegated one-to-one case mappings.
+
+All five canonical artifacts now target inert Task 0023ZN. Draft/final parser
+passes, the validator passes 328 assertions, no-guard exits 2, two 11/11
+zero-I/O Qualifications pass, and pre/post frozen regressions match. Execute,
+0023ZN guard-passing, future-fixture commands and full behavior executions are
+zero. See
+`docs/reports/0023ZM_ASSERTION_CASE_CARDINALITY_NORMALIZATION_REPORT.md`.
+
 Task 0023ZJ stopped at:
 
 ```text

@@ -1,9 +1,10 @@
 {
-  "schema_version": 1,
-  "future_task": "0023ZJ",
-  "fixture_id": "task_0023zj_app_root_profile_session",
-  "canonical_profile_path": "user://delayed_self_test_profiles/task_0023zj_app_root_profile_session/delayed_self_profile.json",
-  "execution_guard": "--task-0023zj-fixture-execution",
+  "schema_version": 2,
+  "future_task": "0023ZN",
+  "fixture_id": "task_0023zn_app_root_profile_session",
+  "canonical_profile_path": "user://delayed_self_test_profiles/task_0023zn_app_root_profile_session/delayed_self_profile.json",
+  "execution_guard": "--task-0023zn-fixture-execution",
+  "expected_assertion_count": 42,
   "stage_order": [
     "startup",
     "invalid_configuration",
@@ -39,6 +40,7 @@
     "tutorial_zero_persisted_progress_route",
     "canonical_target_bytes",
     "fresh_reload_progress",
+    "fresh_reload_single_active_screen",
     "single_active_screen_router",
     "no_change_equal_or_worse_replay",
     "no_change_target_metadata_bytes",

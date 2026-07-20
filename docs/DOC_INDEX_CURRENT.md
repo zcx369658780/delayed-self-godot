@@ -5,8 +5,11 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0023ZJ`](../tasks/0023ZJ_app_root_profile_session_full_matrix_execution_gate.md) — stopped finalized full-matrix execution gate
-5. [`Task 0023ZJ blocker report`](reports/0023ZJ_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_BLOCKER_REPORT.md) — Attempt 1 passed 18 stages but emitted 42 assertions instead of required 41
+4. [`Task 0023ZM`](../tasks/0023ZM_assertion_case_cardinality_normalization_gate.md) — completed assertion/case cardinality normalization
+5. [`Task 0023ZM report`](reports/0023ZM_ASSERTION_CASE_CARDINALITY_NORMALIZATION_REPORT.md) — schema 2, 42 unique cases, 328-assertion validator and zero-I/O requalification
+6. [`Task 0023ZJ GPT cardinality adjudication`](reports/0023ZJ_GPT_ASSERTION_CASE_CARDINALITY_ADJUDICATION.md) — duplicate case-ID root cause and bounded normalization direction
+7. [`Task 0023ZJ`](../tasks/0023ZJ_app_root_profile_session_full_matrix_execution_gate.md) — stopped finalized full-matrix execution gate
+8. [`Task 0023ZJ blocker report`](reports/0023ZJ_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_BLOCKER_REPORT.md) — Attempt 1 passed 18 stages but emitted 42 assertions instead of required 41
 6. [`Task 0023ZL`](../tasks/0023ZL_cleanup_capture_repair_post_fetch_continuation_gate.md) — completed post-fetch cleanup/capture repair continuation
 7. [`Task 0023ZL report`](reports/0023ZL_APP_ROOT_PROFILE_SESSION_CLEANUP_AND_CAPTURE_REPAIR_REPORT.md) — 313-assertion validator, guard proof and two zero-I/O Qualifications
 8. [`Task 0023ZH`](../tasks/0023ZH_app_root_profile_session_full_matrix_execution_gate.md) — stopped repaired full-matrix execution gate
@@ -60,6 +63,8 @@
 
 ## Compliance and reports
 
+- [`Task 0023ZM assertion/case-cardinality normalization report`](reports/0023ZM_ASSERTION_CASE_CARDINALITY_NORMALIZATION_REPORT.md)
+- [`Task 0023ZJ GPT assertion/case-cardinality adjudication`](reports/0023ZJ_GPT_ASSERTION_CASE_CARDINALITY_ADJUDICATION.md)
 - [`Task 0023ZJ AppRoot Profile-session full-matrix blocker report`](reports/0023ZJ_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_BLOCKER_REPORT.md)
 - [`Task 0023ZL cleanup/capture repair continuation report`](reports/0023ZL_APP_ROOT_PROFILE_SESSION_CLEANUP_AND_CAPTURE_REPAIR_REPORT.md)
 - [`Task 0023ZH AppRoot Profile-session full-matrix blocker report`](reports/0023ZH_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_BLOCKER_REPORT.md)

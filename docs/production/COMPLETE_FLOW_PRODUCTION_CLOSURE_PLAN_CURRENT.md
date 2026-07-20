@@ -209,6 +209,16 @@ classified `UNCLASSIFIED_NONPASS` and stopped. Attempt 2, post-Qualification
 and post-regressions were not run. Two-attempt full-matrix success and
 configured production persistence remain unestablished.
 
+GPT later classified the mismatch as duplicate case-ID metadata:
+`single_active_screen_router` covered both fresh reload and the router
+contract. Task 0023ZM gives fresh reload its own ID, normalizes schema/stage/
+case/assertion cardinality to `2/18/42/42`, adds a non-counting internal count
+guard, reinforces one-to-one validation, and retargets the inert future
+contract to Task 0023ZN. Parser, 328-assertion validator, no-guard proof, two
+zero-I/O Qualifications and frozen regressions pass. Execute and future-fixture
+operations remain zero; configured production persistence and two-attempt
+full-matrix acceptance remain unestablished.
+
 | # | Objective / likely path domains | Prerequisites and acceptance | P0/P1 stop, rollback, non-claims |
 |---|---|---|---|
 | 1 **SELECTED** | Persistent local profile core and isolated tests; `scripts/app/`, focused `tests/app/`, test registration, docs | Contract above; clean/malformed/version/atomic-failure/isolation coverage; catalog and formal hashes unchanged | Stop on real-profile touch, unsafe overwrite, or semantic drift. Roll back adapter/test topic only. Not UI, migration breadth, cloud, or release readiness. |

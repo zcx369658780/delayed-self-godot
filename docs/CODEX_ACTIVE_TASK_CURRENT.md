@@ -1,6 +1,6 @@
 # Codex active task (CURRENT)
 
-- Status: `APP_ROOT_PROFILE_SESSION_ASSERTION_CARDINALITY_NORMALIZATION_READY_FOR_CODEX`
+- Status: `APP_ROOT_PROFILE_SESSION_ASSERTION_CARDINALITY_NORMALIZATION_READY_FOR_GPT_REVIEW`
 - Active task: `tasks/0023ZM_assertion_case_cardinality_normalization_gate.md`
 - Last GPT-accepted gate: `TASK_0023ZL_APP_ROOT_PROFILE_SESSION_CLEANUP_AND_CAPTURE_REPAIR_ACCEPTED`
 - Latest adjudication: `TASK_0023ZJ_BEHAVIOR_PASS_CANDIDATE_BLOCKED_BY_DUPLICATE_CASE_ID_CARDINALITY_MISMATCH`
@@ -17,9 +17,9 @@ Task 0023ZJ Attempt 1 passed all 18 ordered stages, emitted no assertion failure
 
 GPT review identified a deterministic metadata defect: `single_active_screen_router` is used by both the fresh-reload single-screen assertion and the full router-contract assertion. The manifest therefore has 41 unique case IDs while the behavior executes 42 assertions. No product or configured-session behavior defect is established.
 
-Task 0023ZM is the only active scope. It may revise only the five canonical harness artifacts plus authorized reports/current docs. It must give the fresh-reload screen assertion its own case ID, normalize the manifest to schema 2 with 42 unique cases and `expected_assertion_count = 42`, add an internal non-counting assertion-count guard, strengthen validator one-to-one case mapping, and retarget the inert future contract to Task 0023ZN.
+Task 0023ZM gives the fresh-reload single-screen assertion the unique case ID `fresh_reload_single_active_screen`, retains `single_active_screen_router` only for the full router contract, and normalizes the manifest to schema 2 with 42 unique cases and `expected_assertion_count = 42`. The behavior has a typed non-counting count-consistency guard, and the validator proves 38 direct plus four delegated one-to-one case mappings.
 
-Task 0023ZM must execute no full matrix and perform no fixture check or operation. Parser, validator, no-guard proof, two zero-I/O Qualifications and frozen regressions are the only authorized dynamic validation. Runner Execute, the 0023ZN guard, configured AppRoot tree entry and future fixture operations remain closed.
+All five canonical harness artifacts now target inert future Task 0023ZN. Draft/final parser passes, the validator passes 328 assertions, no-guard exits 2 before behavior start, two 11/11 zero-I/O Qualifications pass, and pre/post frozen regressions match. Runner Execute, 0023ZN guard-passing commands, future-fixture commands and full behavior executions remain zero. See `docs/reports/0023ZM_ASSERTION_CASE_CARDINALITY_NORMALIZATION_REPORT.md`.
 
 Normal unconfigured AppRoot remains memory-only. Production Profile content/default persistence, actual full-matrix execution, aggregate, menus, settings, localization, scenes, export, release, upload and festival submission remain closed.
 
