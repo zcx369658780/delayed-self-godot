@@ -64,6 +64,8 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0023Y/0023Z/0023ZA/0023ZB AppRoot fixture-session attempts (closed without accepted implementation)
 → 0023ZC AppRoot orchestration compile/architecture gate (ready for GPT review)
 → 0023ZD complete AppRoot Profile-session harness construction and zero-I/O qualification (ready for GPT review)
+→ 0023ZE full-matrix execution (controlled abort at Tutorial-0 compound persistence assertion)
+→ 0023ZF Tutorial-0 persistence subcondition diagnostic (expected bounded contract observed; ready for GPT review)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
@@ -111,8 +113,13 @@ adapter/store/load and persistence-before-commit branches remain unexecuted.
 Task 0023ZD then constructs the complete guarded future harness: 18 stages, 41
 stable cases, deterministic manifest, parser smoke, 251-assertion static
 validator and two complete zero-I/O capture Qualifications. The execution
-guard and full matrix were never run. A later task must separately authorize
-fixture execution and behavioral evidence.
+guard and full matrix remained closed until Task 0023ZE. Task 0023ZE later ran
+one authorized attempt and controlled-aborted at the Tutorial-0 compound
+persistence assertion. Task 0023ZF then isolated the authorized subconditions
+without source repair: one minimal run observed the expected immediate and
+one-frame-delayed route, progress, best-turn, unlock, persist-status, screen
+and target facts. This does not explain the original compound failure or
+authorize a full-matrix rerun; GPT must separately adjudicate any next gate.
 
 ## Milestone spine
 

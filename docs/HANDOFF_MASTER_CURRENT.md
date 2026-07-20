@@ -1,9 +1,9 @@
 # Handoff master (CURRENT)
 
-Task 0023ZD is implemented at:
+Task 0023ZF is complete at:
 
 ```text
-APP_ROOT_PROFILE_SESSION_FULL_MATRIX_HARNESS_READY_FOR_GPT_REVIEW
+TUTORIAL_ZERO_PERSIST_SUBCONDITION_DIAGNOSTIC_READY_FOR_GPT_REVIEW
 ```
 
 Product scope is frozen at eight formal levels. Sequence 8
@@ -40,25 +40,23 @@ implementation slice; see
 
 Tasks 0023R/T/V/W/X remain the accepted frozen path, codec, store and adapter
 authorities. Tasks 0023Y/Z/ZA/ZB are historical closed scopes. Task 0023ZC is
-the accepted compile-only AppRoot orchestration authority. Task 0023ZD adds
-only five future harness files: the guarded behavior source, deterministic
-manifest, parser smoke, static validator, and `Qualify`/`Execute` capture
-runner.
+the accepted compile-only AppRoot orchestration authority, and Task 0023ZD is
+the accepted guarded full-matrix harness authority.
 
-The manifest freezes 18 ordered stages and 41 stable cases. Final parser smoke
-passes; the static validator passes 251 assertions. Two capture Qualifications
-targeted only parser smoke and retained all 11 required files. The exact
-execution guard was never supplied and the full-matrix behavior source was
-never run. Final 0023R/T/V/W/X/ZC regressions pass 123/34/28/68/31/17
-assertions with every compile/parser marker once, exit 0 and empty stderr.
+Task 0023ZE ran one full-matrix attempt and controlled-aborted at the
+Tutorial-0 compound persistence assertion. Task 0023ZF did not repair or rerun
+that matrix. Its sole task-owned minimal run observed expected immediate and
+one-frame-delayed route, screen, completion, best-turn, unlock, persist-status
+and target facts, classified `EXPECTED_CONTRACT_OBSERVED`. Parser and no-guard
+proofs, 17/17 capture inventory, exact cleanup, and all pre/post frozen
+regressions passed. This does not identify the original failure cause.
 
 Production Profile metadata remains
 `true / 473 / 2026-07-19T08:15:02.2089459Z`; content was not accessed.
-Test-root existence remains true without enumeration. The 0023W fixture is
-absent, 16 frozen files match the required checkpoint, and no Godot process
-remains. No successfully configured AppRoot entered the tree and the future
-0023ZE fixture was never checked or operated. Await GPT review; do not execute
-the fixture/full matrix without a new task.
+Test-root existence remains true without enumeration. The 0023W, 0023ZE and
+0023ZF fixtures are absent, frozen checkpoint/worktree diffs are zero, and no
+Godot process remains. Await GPT review; do not infer a root cause, repair
+AppRoot/harness, or execute the full matrix without a new task.
 
 Hard boundary: no sequence-9 revival, unbounded product repair, save/settings
 implementation, asset/audio acquisition, owner walkthrough, build/export, RC

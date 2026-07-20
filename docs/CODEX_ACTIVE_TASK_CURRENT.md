@@ -1,6 +1,6 @@
 # Codex active task (CURRENT)
 
-- Status: `TUTORIAL_ZERO_PERSIST_SUBCONDITION_DIAGNOSTIC_READY_FOR_CODEX`
+- Status: `TUTORIAL_ZERO_PERSIST_SUBCONDITION_DIAGNOSTIC_READY_FOR_GPT_REVIEW`
 - Active task: `tasks/0023ZF_tutorial_zero_persist_subcondition_diagnostic_gate.md`
 - Last GPT-accepted gate: `TASK_0023ZD_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_HARNESS_ACCEPTED`
 - Latest adjudication: `TASK_0023ZE_REPRODUCIBLE_TUTORIAL_PERSIST_FAILURE_ROOT_SUBCONDITION_UNRESOLVED`
@@ -14,11 +14,20 @@ Tasks 0023R, 0023T, 0023V, 0023W, 0023X, 0023ZC and 0023ZD are GPT-accepted and 
 
 Task 0023ZE executed one full-matrix attempt with complete evidence and safe cleanup. It passed through `missing_profile_boot` and then controlled-aborted in `tutorial_0_persist` at the compound persisted-progress/route assertion. The target existed, but the evidence does not identify whether route, runtime completion, best turns, unlocks, persist status, screen count or frame timing caused the compound failure. Attempt 2 was correctly not run; all frozen files remained unchanged.
 
-Task 0023ZF is the only active scope. It freezes AppRoot and the accepted full harness/runner, uses a new exact fixture, and may add only a task-owned minimal Tutorial-0 persistence diagnostic, parser smoke, capture wrapper and report. It must record bounded immediate and one-additional-frame subcondition facts, classify the failure without source repair, preserve evidence, and perform exact owned cleanup.
+Task 0023ZF is complete and awaiting GPT review. Its sole minimal execution
+observed the expected route, screen count, completion, best-turn, unlock,
+persist-status and target facts both immediately and after one additional
+frame, with classification `EXPECTED_CONTRACT_OBSERVED`. Parser, guard,
+17/17 capture inventory, exact cleanup, and pre/post frozen regressions passed.
+This bounded result does not explain the earlier 0023ZE compound failure.
 
 Normal unconfigured AppRoot remains memory-only. Production Profile content/default persistence, AppRoot/harness repair, full-matrix rerun, aggregate, menus, settings, localization, scenes, export, release, upload and festival submission remain closed.
 
-Do not resume Tasks 0023Y, 0023Z, 0023ZA, 0023ZB or 0023ZE, or historical blocked tasks 0023, 0023S and 0023U. Sequence 9 remains `DEFERRED_CONCEPT_NOT_PRODUCT_SCOPE`; B007 and candidate continuation remain historical and closed.
+Do not resume Tasks 0023Y, 0023Z, 0023ZA, 0023ZB or 0023ZE, infer a root cause,
+or repair/rerun the full matrix without a new GPT-authored task. Historical
+blocked tasks 0023, 0023S and 0023U remain closed. Sequence 9 remains
+`DEFERRED_CONCEPT_NOT_PRODUCT_SCOPE`; B007 and candidate continuation remain
+historical and closed.
 
 Expected terminal verdict:
 

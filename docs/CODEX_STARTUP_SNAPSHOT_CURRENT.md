@@ -2,7 +2,7 @@
 
 - Status: `CURRENT`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Current gate: Task 0023ZF Tutorial-0 persistence subcondition diagnostic
+- Current gate: Task 0023ZF Tutorial-0 persistence subcondition diagnostic complete; awaiting GPT review
 - Active task: `tasks/0023ZF_tutorial_zero_persist_subcondition_diagnostic_gate.md`
 - Last GPT-accepted gate: `TASK_0023ZD_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_HARNESS_ACCEPTED`
 - Latest adjudication: `TASK_0023ZE_REPRODUCIBLE_TUTORIAL_PERSIST_FAILURE_ROOT_SUBCONDITION_UNRESOLVED`
@@ -19,8 +19,15 @@ Tasks 0023R–0023W remain the accepted path, codec, store and filesystem author
 
 Task 0023ZE proved the execution guard, runner Qualification, fresh fixture and complete Attempt-1 evidence. The attempt passed the first five stages and controlled-aborted at the compound `tutorial_0_persist` route/progress/best-turn assertion. Exact cleanup succeeded, protected metadata remained unchanged, and all frozen files remained unmodified. The evidence does not isolate the failed subcondition, so the full matrix remains closed.
 
-Task 0023ZF may add only a new guarded minimal diagnostic script, parser smoke, dedicated capture wrapper and report using `task_0023zf_tutorial_persist_diagnostic`. It must reproduce missing-profile boot and the accepted three-turn Tutorial-0 completion, record bounded immediate and delayed route/progress/persist/screen/target facts, classify the failing subcondition, retain complete evidence, and perform exact owned cleanup. AppRoot and the accepted full harness/runner remain frozen.
+Task 0023ZF completed one guarded minimal diagnostic execution using
+`task_0023zf_tutorial_persist_diagnostic`. Both immediate and one-frame-delayed
+route/progress/persist/screen/target observations matched the expected
+contract, producing `EXPECTED_CONTRACT_OBSERVED`. Parser and guard proofs,
+17/17 capture evidence, exact owned cleanup, and frozen regressions passed.
+AppRoot and the accepted full harness/runner remained frozen.
 
 The normal unconfigured AppRoot path remains memory-only. Production Profile content/default persistence, source/harness correction, full-matrix execution, aggregate, menus/settings/localization, build/export, RC, release, upload and festival submission remain closed.
 
-Do not resume Tasks 0023Y, 0023Z, 0023ZA, 0023ZB or 0023ZE, or historical blocked tasks 0023, 0023S and 0023U.
+Do not resume Tasks 0023Y, 0023Z, 0023ZA, 0023ZB or 0023ZE, infer the original
+failure cause, or repair/rerun the full matrix without a new GPT-authored
+task. Historical blocked tasks 0023, 0023S and 0023U remain closed.

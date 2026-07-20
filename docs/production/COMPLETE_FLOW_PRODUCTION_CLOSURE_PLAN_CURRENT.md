@@ -175,7 +175,13 @@ Task 0023ZC is the accepted zero-Profile-I/O AppRoot compile/architecture gate.
 Task 0023ZD is ready for GPT review with the complete guarded future harness,
 18 stages, 41 cases, 251-assertion static validation and two zero-I/O capture
 Qualifications. It does not establish configured filesystem integration or
-persistent product behavior. Actual fixture execution remains a separate gate.
+persistent product behavior. Task 0023ZE later executed one full-matrix attempt
+and controlled-aborted at the Tutorial-0 compound persistence assertion. Task
+0023ZF's separately owned minimal diagnostic observed the expected immediate
+and one-frame-delayed route/progress/best/unlock/persist/screen/target contract.
+That bounded result neither explains the 0023ZE failure nor establishes full
+configured product persistence. Full-matrix repair or rerun remains closed
+pending a new GPT-authored task.
 
 | # | Objective / likely path domains | Prerequisites and acceptance | P0/P1 stop, rollback, non-claims |
 |---|---|---|---|

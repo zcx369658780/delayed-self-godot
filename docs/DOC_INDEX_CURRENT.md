@@ -5,8 +5,11 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0023ZD`](../tasks/0023ZD_app_root_profile_session_full_matrix_harness_gate.md) — complete guarded AppRoot Profile-session harness construction
-5. [`Task 0023ZD report`](reports/0023ZD_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_HARNESS_REPORT.md) — parser, static-validator and zero-I/O Qualification evidence
+4. [`Task 0023ZF`](../tasks/0023ZF_tutorial_zero_persist_subcondition_diagnostic_gate.md) — bounded Tutorial-0 persistence subcondition diagnostic
+5. [`Task 0023ZF report`](reports/0023ZF_TUTORIAL_PERSIST_SUBCONDITION_DIAGNOSTIC_REPORT.md) — expected immediate/delayed contract observation and exact cleanup evidence
+6. [`Task 0023ZE blocker report`](reports/0023ZE_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_BLOCKER_REPORT.md) — original controlled-abort evidence and boundary
+7. [`Task 0023ZD`](../tasks/0023ZD_app_root_profile_session_full_matrix_harness_gate.md) — complete guarded AppRoot Profile-session harness construction
+8. [`Task 0023ZD report`](reports/0023ZD_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_HARNESS_REPORT.md) — parser, static-validator and zero-I/O Qualification evidence
 6. [`Task 0023ZC`](../tasks/0023ZC_app_root_test_profile_session_compile_architecture_gate.md) — AppRoot orchestration compile/architecture gate
 7. [`Task 0023ZC report`](reports/0023ZC_APP_ROOT_PROFILE_ORCHESTRATION_COMPILE_GATE_REPORT.md) — zero-Profile-I/O AppRoot compile evidence
 6. [`Task 0023X`](../tasks/0023X_profile_memory_progress_adapter_gate.md) — pure Profile-to-runtime-progress adapter gate
@@ -48,6 +51,8 @@
 
 ## Compliance and reports
 
+- [`Task 0023ZF Tutorial-0 persistence subcondition diagnostic report`](reports/0023ZF_TUTORIAL_PERSIST_SUBCONDITION_DIAGNOSTIC_REPORT.md)
+- [`Task 0023ZE AppRoot Profile-session full-matrix blocker report`](reports/0023ZE_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_BLOCKER_REPORT.md)
 - [`Task 0023ZD AppRoot Profile-session full-matrix harness report`](reports/0023ZD_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_HARNESS_REPORT.md)
 - [`Task 0023ZC AppRoot Profile orchestration compile-gate report`](reports/0023ZC_APP_ROOT_PROFILE_ORCHESTRATION_COMPILE_GATE_REPORT.md)
 - [`Task 0023X Profile-to-MemoryProgress adapter report`](reports/0023X_PROFILE_MEMORY_PROGRESS_ADAPTER_GATE_REPORT.md)

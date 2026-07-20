@@ -1,5 +1,24 @@
 # Project memory
 
+## Task 0023ZF Tutorial-0 persistence subcondition diagnostic
+
+Task 0023ZE's one authorized full-matrix attempt controlled-aborted at a
+compound Tutorial-0 persisted-progress/route assertion without isolating its
+failed subcondition. Task 0023ZF added only a guarded minimal diagnostic,
+parser smoke and exact capture wrapper. Its sole execution reproduced the
+accepted missing-profile boot and three-action Tutorial-0 completion. Both
+immediate and one-additional-frame observations showed Level Select route,
+screen count 1, one completed ID including Tutorial 0, best turns 3, Tutorial 1
+unlocked, `COMMITTED_AFTER_PERSISTED`, and the canonical target present. The
+classification is `EXPECTED_CONTRACT_OBSERVED`.
+
+Parser and guard proofs, 17/17 capture evidence, exact fixture cleanup, and
+pre/post 0023R/T/V/W/X/ZC/ZD frozen regressions passed. Production metadata
+remained `true / 473 / 2026-07-19T08:15:02.2089459Z`; test-root existence
+remained true without enumeration. The 0023W/0023ZE/0023ZF fixtures are absent.
+This minimal result does not explain Task 0023ZE, prove production persistence,
+or authorize AppRoot/harness repair or full-matrix rerun.
+
 ## Task 0023V store-instance configuration compile gate
 
 Task 0023V resolves the Task 0023U self-type compile blocker without I/O.
