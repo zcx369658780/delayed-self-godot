@@ -1,49 +1,39 @@
 # Codex active task (CURRENT)
 
-- Status: `APP_ROOT_PROFILE_SESSION_FULL_MATRIX_EXECUTION_READY_FOR_GPT_REVIEW`
-- Completed task awaiting GPT review: `tasks/0023ZN_app_root_profile_session_full_matrix_execution_gate.md`
-- Last GPT-accepted gate: `TASK_0023ZM_ASSERTION_CASE_CARDINALITY_NORMALIZATION_ACCEPTED`
-- Required checkpoint: `f57090341b32d76a0a6ce5bc467cec5808cfef49`
-- Accepted harness checkpoint: `d11e52d2fbdd5b9878182730673cca5d570aad87`
-- Gate: `PROTECTED PLAYER DATA / NORMALIZED FIXED-FIXTURE APPROOT FULL-MATRIX EXECUTION`
+- Status: `PRODUCTION_PROFILE_ACTIVATION_DESIGN_READY_FOR_CODEX`
+- Active task: `tasks/0023ZO_production_profile_activation_design_and_authorization_gate.md`
+- Last GPT-accepted gate: `TASK_0023ZN_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_ACCEPTED`
+- Required checkpoint: `72dc42448261b8847c224a903743d815cf9e6136`
+- Gate: `PROTECTED PLAYER DATA / PRODUCTION PROFILE ACTIVATION DESIGN + AUTHORIZATION PACKAGE`
 - Formal scope: exactly eight levels
 - Formal finale: sequence 8 `two_echo_convergence`
 - Current plan: `docs/production/COMPLETE_FLOW_PRODUCTION_CLOSURE_PLAN_CURRENT.md`
 
-Tasks 0023R, 0023T, 0023V, 0023W, 0023X, 0023ZC, 0023ZD, 0023ZF, 0023ZG, 0023ZL and 0023ZM are GPT-accepted and frozen within their stated scopes. AppRoot, MemoryProgress, store, adapter, Gameplay, product data, accepted prerequisite tests, diagnostics, and the normalized five-file canonical harness remain frozen.
+Tasks 0023R, 0023T, 0023V, 0023W, 0023X, 0023ZC, 0023ZD, 0023ZF, 0023ZG, 0023ZL, 0023ZM and 0023ZN are GPT-accepted and frozen within their stated scopes.
 
-Task 0023ZJ Attempt 1 passed all 18 stages and all 42 runtime checks with zero assertion failure or abort, complete 17-file evidence, exact cleanup, unchanged protected/frozen state, and runner `PASS_CANDIDATE`. It stopped only because one case ID was reused and the task incorrectly required 41 assertions. Task 0023ZM split the duplicate case ID and normalized the contract to schema 2 with 42 unique cases and expected assertion count 42.
+Task 0023ZN completed two separately fresh exact-fixture runs. Both passed all 18 ordered stages and 42 one-to-one assertions, retained 17/17 evidence, emitted one final pass marker, exited 0 with empty stderr, completed exact owned cleanup, preserved production metadata/test-root existence, had empty valid-hash worktree patches, and left zero Godot processes. The first audit's CRLF-only false negative was corrected from retained evidence without rerunning the product.
 
-The accepted canonical harness now targets Task 0023ZN, fixture `task_0023zn_app_root_profile_session`, guard `--task-0023zn-fixture-execution`, 18 stages, 42 one-to-one cases, a non-counting runtime count guard, exact 25-owned-path cleanup, portable SHA-256, and fail-closed inventory-last evidence finalization. Parser, 328-assertion validator, no-guard proof, two zero-I/O Qualifications, and frozen regressions pass.
+The configured test-only AppRoot/Profile matrix is now accepted. This does not activate the production path. Normal unconfigured AppRoot remains memory-only.
 
-Task 0023ZN passed two consecutive clean-fixture executions. Both retained
-17/17 canonical files, all 18 stage begin/pass pairs in manifest order,
-`TASK_0023ZN_ASSERTIONS=42`, one final pass marker, exit 0, empty stderr, an
-empty valid-hash worktree patch, exact owned cleanup, unchanged protected
-state, and zero residual Godot processes. Both externally audit to
-`PASS_COMPLETE_MATRIX`.
+Task 0023ZO is the only active scope. It is docs-only and static-inspection-only. It must design the production activation seam, boot-state contract, first-read/first-write authorization model, existing 473-byte Profile handling, fixture and production evidence sequence, rollback/compatibility rules, and narrowly decomposed future tasks.
 
-The first external audit's CRLF-sensitive stage parser produced a
-retained-evidence false negative. The original audit is preserved; a corrected
-audit records `AUDITOR_CRLF_FALSE_NEGATIVE`. No product execution was rerun.
+Task 0023ZO must not run Godot, PowerShell, runners, aggregate tests, exports, or builds. It must not read, parse, hash, copy, rename, delete, reset, repair, compare, or write the production Profile content. It must not access or enumerate the test-root filesystem and must not modify product/test/harness/scene/project-setting files.
 
-Post-Qualification, the complete post-regression matrix, the 328-assertion
-validator, all 38 frozen hashes, exact fixture-absence checks, and final
-pollution checks pass. See
-`docs/reports/0023ZN_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_EXECUTION_REPORT.md`.
+Production Profile metadata remains the accepted recorded fact:
 
-Await GPT adjudication or a new bounded task. Do not begin production
-persistence activation or the next production-closure slice without explicit
-authorization.
+```text
+exists = true
+Length = 473
+LastWriteTimeUtc = 2026-07-19T08:15:02.2089459Z
+```
 
-Normal unconfigured AppRoot remains memory-only. Production Profile content/default persistence, source/harness repair, aggregate, menus, settings, localization, scenes, export, release, upload and festival submission remain closed.
+Production Profile runtime read/write, default persistence activation, aggregate registration, Menu New/Continue/Reset, settings, localization, scenes, export, release, upload, and festival submission remain closed. Any later task that reads or writes the existing production Profile requires explicit user authorization.
 
-Do not resume Tasks 0023Y, 0023Z, 0023ZA, 0023ZB, 0023ZE, 0023ZF, 0023ZH, 0023ZI, 0023ZK, 0023ZL, 0023ZJ or 0023ZM, or reuse their fixtures. Historical blocked tasks 0023, 0023S and 0023U remain closed. Sequence 9 remains `DEFERRED_CONCEPT_NOT_PRODUCT_SCOPE`.
+Do not resume Tasks 0023Y, 0023Z, 0023ZA, 0023ZB, 0023ZE, 0023ZF, 0023ZH, 0023ZI, 0023ZK, 0023ZL, 0023ZJ, 0023ZM or 0023ZN, or reuse their fixtures. Historical blocked tasks 0023, 0023S and 0023U remain closed. Sequence 9 remains `DEFERRED_CONCEPT_NOT_PRODUCT_SCOPE`.
 
 Expected terminal verdict:
 
 ```text
-APP_ROOT_PROFILE_SESSION_FULL_MATRIX_EXECUTION_READY_FOR_GPT_REVIEW
-BLOCKED_APP_ROOT_PROFILE_SESSION_EXECUTION_CLASSIFIED
-BLOCKED_APP_ROOT_PROFILE_SESSION_EXECUTION_EVIDENCE_INCOMPLETE
+PRODUCTION_PROFILE_ACTIVATION_DESIGN_READY_FOR_GPT_REVIEW
+BLOCKED_PRODUCTION_PROFILE_ACTIVATION_DESIGN
 ```
