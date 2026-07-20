@@ -9,6 +9,18 @@ const VALID_LANGUAGES: Array[String] = ["en", "zh-Hans"]
 const VALID_WINDOW_MODES: Array[String] = ["windowed", "fullscreen"]
 
 
+static func classify_profile_schema(raw_value: Variant) -> Dictionary:
+	if not raw_value is Dictionary:
+		return {"status": "PROFILE_ROOT_INVALID"}
+	var root: Dictionary = raw_value
+	var version_value: Variant = root.get("profile_schema_version", null)
+	if not version_value is int:
+		return {"status": "PROFILE_VERSION_INVALID"}
+	if int(version_value) == PROFILE_SCHEMA_VERSION:
+		return {"status": "PROFILE_VERSION_SUPPORTED"}
+	return {"status": "PROFILE_VERSION_UNSUPPORTED"}
+
+
 static func default_profile() -> Dictionary:
 	return {
 		"ok": true,

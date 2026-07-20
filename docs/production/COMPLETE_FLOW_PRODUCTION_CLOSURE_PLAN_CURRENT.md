@@ -246,6 +246,13 @@ versions leave an older process write-disabled. Code rollback changes only
 composition policy and never deletes or rewrites player data. See
 `docs/reports/0023ZO_PRODUCTION_PROFILE_ACTIVATION_DESIGN_AND_AUTHORIZATION_PLAN.md`.
 
+Task 0023ZP implements Gate 1's static composition/API surface with the main
+scene still memory-only. The bootstrap, AppRoot/store configuration APIs and
+codec classifier compile; the 60-assertion static contract and all ten named
+zero-I/O regressions pass. No production configuration or player-data/test-root
+operation ran. Isolated activation-policy fixture behavior remains the next
+separately authorized gate after GPT acceptance.
+
 | # | Objective / likely path domains | Prerequisites and acceptance | P0/P1 stop, rollback, non-claims |
 |---|---|---|---|
 | 1 **SELECTED** | Persistent local profile core and isolated tests; `scripts/app/`, focused `tests/app/`, test registration, docs | Contract above; clean/malformed/version/atomic-failure/isolation coverage; catalog and formal hashes unchanged | Stop on real-profile touch, unsafe overwrite, or semantic drift. Roll back adapter/test topic only. Not UI, migration breadth, cloud, or release readiness. |

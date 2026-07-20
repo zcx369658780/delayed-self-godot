@@ -19,8 +19,12 @@ const ROUTE_GAMEPLAY := "GAMEPLAY"
 const ROUTE_SAFE_ERROR := "SAFE_ERROR"
 const ROUTES := [ROUTE_BOOT, ROUTE_MAIN_MENU, ROUTE_LEVEL_SELECT, ROUTE_GAMEPLAY, ROUTE_SAFE_ERROR]
 const PROFILE_LOAD_ACCEPTED_STATUSES := ["MISSING_CLEAN", "LOADED", "SANITIZED", "RECOVERED_CLEAN"]
+const PRODUCTION_PROFILE_LOAD_ACCEPTED_STATUSES := ["MISSING_CLEAN", "LOADED", "SANITIZED_PENDING_RECOVERY", "RECOVERED_CLEAN", "UNSUPPORTED_VERSION_PRESERVED"]
 const PROFILE_PERSIST_ACCEPTED_STATUSES := ["PERSISTED", "NO_CHANGE"]
 const PROFILE_FAILURE_SEAM_STAGES := ["NONE", "RECOVERY_COPY", "TEMP_WRITE", "TEMP_READBACK", "REPLACE", "POST_REPLACE_VERIFY"]
+const PROFILE_MODE_MEMORY: String = "MEMORY_ONLY"
+const PROFILE_MODE_TEST: String = "TEST_PROFILE"
+const PROFILE_MODE_PRODUCTION: String = "PRODUCTION_PROFILE"
 
 @export var catalog_path: String = "res://data/catalog/level_catalog_v1.json"
 
@@ -32,6 +36,8 @@ var _gameplay_completion_handled: bool = false
 var _boot_started: bool = false
 var _test_profile_configured: bool = false
 var _test_profile_path: String = ""
+var _production_profile_configured: bool = false
+var _production_access_policy: String = ""
 var _profile_adapter: RefCounted
 var _profile_store: RefCounted
 var _profile_boot_status: String = "NOT_STARTED"
@@ -49,7 +55,7 @@ func _ready() -> void:
 func configure_test_profile(canonical_test_profile_path: String) -> Dictionary:
 	if is_inside_tree() or _boot_started:
 		return _profile_configuration_rejected("APP_PROFILE_CONFIGURATION_TOO_LATE")
-	if _test_profile_configured:
+	if _test_profile_configured or _production_profile_configured:
 		return _profile_configuration_rejected("APP_PROFILE_ALREADY_CONFIGURED")
 	var validation: Dictionary = LocalProfile.validate_test_profile_path(canonical_test_profile_path)
 	if not bool(validation.get("ok", false)):
@@ -64,6 +70,24 @@ func configure_test_profile(canonical_test_profile_path: String) -> Dictionary:
 	}
 
 
+func configure_production_profile(access_policy: String) -> Dictionary:
+	if is_inside_tree() or _boot_started:
+		return _profile_configuration_rejected("APP_PROFILE_CONFIGURATION_TOO_LATE")
+	if _test_profile_configured or _production_profile_configured:
+		return _profile_configuration_rejected("APP_PROFILE_ALREADY_CONFIGURED")
+	if not [LocalProfile.ACCESS_READ_ONLY, LocalProfile.ACCESS_WRITE_ON_INTENT].has(access_policy):
+		return _profile_configuration_rejected("APP_PROFILE_ACCESS_POLICY_REJECTED")
+	_production_access_policy = access_policy
+	_production_profile_configured = true
+	return {
+		"ok": true,
+		"status": "APP_PRODUCTION_PROFILE_CONFIGURED",
+		"configured": true,
+		"mode": PROFILE_MODE_PRODUCTION,
+		"access_policy": _production_access_policy,
+	}
+
+
 func boot_with_user_args(arguments: PackedStringArray) -> void:
 	_boot_started = true
 	_current_route = ROUTE_BOOT
@@ -75,7 +99,10 @@ func boot_with_user_args(arguments: PackedStringArray) -> void:
 		return
 	_catalog = (loaded.get("catalog", {}) as Dictionary).duplicate(true)
 	if _test_profile_configured:
-		if not _boot_configured_test_profile():
+		if not _boot_configured_profile():
+			return
+	elif _production_profile_configured:
+		if not _boot_configured_profile():
 			return
 	else:
 		_progress = MemoryProgress.new(_catalog)
@@ -89,20 +116,25 @@ func boot_with_user_args(arguments: PackedStringArray) -> void:
 		navigate(ROUTE_MAIN_MENU)
 
 
-func _boot_configured_test_profile() -> bool:
+func _boot_configured_profile() -> bool:
 	var adapter: RefCounted = ProfileProgressAdapter.new()
 	var adapter_configuration: Dictionary = adapter.configure(_catalog)
 	if not bool(adapter_configuration.get("ok", false)):
 		return _configured_boot_failed(str(adapter_configuration.get("status", "ADAPTER_CONFIGURATION_FAILED")))
 	var catalog_facts: Dictionary = (adapter_configuration.get("catalog_facts", {}) as Dictionary).duplicate(true)
 	var store: RefCounted = LocalProfile.new()
-	var store_configuration: Dictionary = store.configure_test(catalog_facts, _test_profile_path)
+	var store_configuration: Dictionary
+	if _test_profile_configured:
+		store_configuration = store.configure_test(catalog_facts, _test_profile_path)
+	else:
+		store_configuration = store.configure_production(catalog_facts, _production_access_policy)
 	if not bool(store_configuration.get("ok", false)):
 		return _configured_boot_failed(str(store_configuration.get("status", "STORE_CONFIGURATION_FAILED")))
 	_profile_store = store
 	var load_result: Dictionary = store.load_profile()
 	_profile_load_status = str(load_result.get("status", "LOAD_FAILED"))
-	if not bool(load_result.get("ok", false)) or not PROFILE_LOAD_ACCEPTED_STATUSES.has(_profile_load_status):
+	var accepted_load_statuses: Array = PROFILE_LOAD_ACCEPTED_STATUSES if _test_profile_configured else PRODUCTION_PROFILE_LOAD_ACCEPTED_STATUSES
+	if not bool(load_result.get("ok", false)) or not accepted_load_statuses.has(_profile_load_status):
 		return _configured_boot_failed(_profile_load_status)
 	var loaded_profile: Dictionary = (load_result.get("profile", {}) as Dictionary).duplicate(true)
 	var hydration_result: Dictionary = adapter.load_profile(loaded_profile)
@@ -110,13 +142,16 @@ func _boot_configured_test_profile() -> bool:
 		return _configured_boot_failed(str(hydration_result.get("status", "PROFILE_HYDRATION_FAILED")))
 	_profile_adapter = adapter
 	_progress = adapter
-	_profile_boot_status = "TEST_PROFILE_READY"
+	_profile_boot_status = "TEST_PROFILE_READY" if _test_profile_configured else "PRODUCTION_PROFILE_READY"
 	return true
 
 
 func _configured_boot_failed(status: String) -> bool:
 	_profile_boot_status = "FAILED_" + status.left(64)
-	_show_safe_error("APP_TEST_PROFILE_BOOT_FAILED", "Test Profile session could not be initialized (" + status.left(64) + ")")
+	if _production_profile_configured:
+		_show_safe_error("APP_PROFILE_BOOT_FAILED", "Profile session could not be initialized")
+	else:
+		_show_safe_error("APP_TEST_PROFILE_BOOT_FAILED", "Test Profile session could not be initialized (" + status.left(64) + ")")
 	return false
 
 
@@ -218,7 +253,7 @@ func _on_gameplay_completed(level_id: String, turns: int, gameplay: Node) -> voi
 		return
 	_gameplay_completion_handled = true
 	var recorded: bool = false
-	if _test_profile_configured:
+	if _test_profile_configured or _production_profile_configured:
 		recorded = _record_configured_completion(level_id, turns)
 	elif _progress != null:
 		recorded = _progress.record_completion(level_id, turns)
@@ -253,7 +288,10 @@ func _record_configured_completion(level_id: String, turns: int) -> bool:
 
 func _configured_completion_failed(status: String) -> bool:
 	_profile_persist_status = "FAILED_" + status.left(64)
-	_show_safe_error("APP_TEST_PROFILE_COMPLETION_FAILED", "Test Profile completion could not be committed (" + status.left(64) + ")")
+	if _production_profile_configured:
+		_show_safe_error("APP_PROFILE_COMPLETION_FAILED", "Profile completion could not be committed")
+	else:
+		_show_safe_error("APP_TEST_PROFILE_COMPLETION_FAILED", "Test Profile completion could not be committed (" + status.left(64) + ")")
 	return false
 
 
@@ -295,10 +333,10 @@ func get_catalog_snapshot() -> Dictionary:
 
 func get_progress_snapshot() -> Dictionary:
 	var source: Dictionary = {}
-	if _test_profile_configured and _profile_adapter != null:
+	if (_test_profile_configured or _production_profile_configured) and _profile_adapter != null:
 		var adapter_snapshot: Dictionary = _profile_adapter.snapshot()
 		source = (adapter_snapshot.get("runtime", {}) as Dictionary).duplicate(true)
-	elif not _test_profile_configured and _progress != null:
+	elif not _test_profile_configured and not _production_profile_configured and _progress != null:
 		source = (_progress.snapshot() as Dictionary).duplicate(true)
 	return _bounded_progress_snapshot(source)
 
@@ -316,7 +354,7 @@ func _bounded_progress_snapshot(source: Dictionary) -> Dictionary:
 
 func get_test_profile_session_snapshot() -> Dictionary:
 	return {
-		"mode": "TEST_PROFILE" if _test_profile_configured else "MEMORY_ONLY",
+		"mode": PROFILE_MODE_TEST if _test_profile_configured else PROFILE_MODE_MEMORY,
 		"configured": _test_profile_configured,
 		"boot_status": _profile_boot_status,
 		"load_status": _profile_load_status,
@@ -325,8 +363,20 @@ func get_test_profile_session_snapshot() -> Dictionary:
 	}
 
 
+func get_profile_session_snapshot() -> Dictionary:
+	return {
+		"mode": _configured_profile_mode(),
+		"configured": _test_profile_configured or _production_profile_configured,
+		"write_authorized": _production_profile_configured and _production_access_policy == LocalProfile.ACCESS_WRITE_ON_INTENT,
+		"boot_status": _profile_boot_status,
+		"load_status": _profile_load_status,
+		"persist_status": _profile_persist_status,
+		"progress": get_progress_snapshot(),
+	}
+
+
 func set_test_profile_failure_seam(stage: String) -> Dictionary:
-	if _profile_store == null:
+	if not _test_profile_configured or _profile_store == null:
 		return {
 			"ok": false,
 			"status": "APP_PROFILE_STORE_NOT_READY",
@@ -350,9 +400,17 @@ func _profile_configuration_rejected(status: String) -> Dictionary:
 	return {
 		"ok": false,
 		"status": status,
-		"configured": _test_profile_configured,
-		"mode": "TEST_PROFILE" if _test_profile_configured else "MEMORY_ONLY",
+		"configured": _test_profile_configured or _production_profile_configured,
+		"mode": _configured_profile_mode(),
 	}
+
+
+func _configured_profile_mode() -> String:
+	if _test_profile_configured:
+		return PROFILE_MODE_TEST
+	if _production_profile_configured:
+		return PROFILE_MODE_PRODUCTION
+	return PROFILE_MODE_MEMORY
 
 
 func get_window_presentation_snapshot(client_size: Vector2i = Vector2i.ZERO) -> Dictionary:

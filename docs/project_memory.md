@@ -1,5 +1,27 @@
 # Project memory
 
+## Task 0023ZP production Profile static bootstrap implementation
+
+Task 0023ZP implements the accepted option-B composition/API surface without
+activating it. `DelayedSelfAppBootstrap` defaults to `MEMORY_ONLY`, classifies
+development-direct/invalid arguments before any production configuration,
+configures at most one AppRoot before tree entry for a production policy, and
+never routes or owns Profile behavior. The project main scene remains the
+existing memory-only AppRoot.
+
+AppRoot/store now expose mutually exclusive pre-tree production configuration,
+read-only/write-on-intent policy state, bounded production errors/snapshots,
+hard-coded private production targeting and distinct production sibling names.
+The pure codec classifier distinguishes invalid root/version, supported v1 and
+unsupported integer versions without normalization, serialization or I/O.
+
+The new compile smoke passes once and the static validator passes 60
+assertions once. Ten authorized zero-I/O regressions pass with exit 0 and empty
+stderr. No source correction followed those new tests. Production Profile
+metadata/content and the test root were not accessed; production configuration,
+fixtures, filesystem behavior, canonical execution, aggregate, main scene,
+export and build were not run.
+
 ## Task 0023ZO production Profile activation design
 
 Task 0023ZO selects a dedicated composition bootstrap that configures AppRoot

@@ -5,6 +5,10 @@ const PRODUCTION_PROFILE_PATH := "user://delayed_self_profile.json"
 const TEST_PROFILE_ROOT := "user://delayed_self_test_profiles/"
 const PROFILE_FILENAME := "delayed_self_profile.json"
 const MAX_FIXTURE_ID_LENGTH := 64
+const MODE_TEST: String = "TEST"
+const MODE_PRODUCTION: String = "PRODUCTION"
+const ACCESS_READ_ONLY: String = "READ_ONLY"
+const ACCESS_WRITE_ON_INTENT: String = "WRITE_ON_INTENT"
 
 
 static func build_test_profile_path(fixture_id: String) -> Dictionary:
@@ -81,7 +85,9 @@ static func _rejected(status: String) -> Dictionary:
 
 var _configured: bool = false
 var _catalog_facts: Dictionary = {}
-var _test_profile_path: String = ""
+var _mode: String = ""
+var _access_policy: String = ""
+var _target_path: String = ""
 
 const ProfileCodec = preload("res://scripts/app/profile_codec.gd")
 const MAX_PROFILE_SOURCE_BYTES: int = 65536
@@ -95,6 +101,8 @@ var _pending_recovery_source: String = ""
 var _recovery_sibling_name: String = ""
 var _write_disabled: bool = false
 var _failure_seam: String = "NONE"
+var _activation_backup_required: bool = false
+var _activation_backup_created: bool = false
 
 
 func configure_test(catalog_facts: Dictionary, canonical_test_profile_path: String) -> Dictionary:
@@ -107,11 +115,33 @@ func configure_test(catalog_facts: Dictionary, canonical_test_profile_path: Stri
 	if not bool(catalog_validation.get("ok", false)):
 		return _configuration_rejected(str(catalog_validation.get("status", "CATALOG_FACTS_INVALID")))
 	_catalog_facts = (catalog_validation.get("catalog_facts", {}) as Dictionary).duplicate(true)
-	_test_profile_path = str(path_validation.get("path", ""))
+	_mode = MODE_TEST
+	_access_policy = ACCESS_WRITE_ON_INTENT
+	_target_path = str(path_validation.get("path", ""))
 	_configured = true
 	return {
 		"ok": true,
 		"status": "TEST_STORE_CONFIGURED",
+		"configuration": get_configuration_snapshot(),
+	}
+
+
+func configure_production(catalog_facts: Dictionary, access_policy: String) -> Dictionary:
+	if _configured:
+		return _configuration_rejected("PRODUCTION_STORE_ALREADY_CONFIGURED")
+	if not [ACCESS_READ_ONLY, ACCESS_WRITE_ON_INTENT].has(access_policy):
+		return _configuration_rejected("PRODUCTION_ACCESS_POLICY_REJECTED")
+	var catalog_validation: Dictionary = _validate_catalog_facts(catalog_facts)
+	if not bool(catalog_validation.get("ok", false)):
+		return _configuration_rejected(str(catalog_validation.get("status", "CATALOG_FACTS_INVALID")))
+	_catalog_facts = (catalog_validation.get("catalog_facts", {}) as Dictionary).duplicate(true)
+	_mode = MODE_PRODUCTION
+	_access_policy = access_policy
+	_target_path = PRODUCTION_PROFILE_PATH
+	_configured = true
+	return {
+		"ok": true,
+		"status": "PRODUCTION_STORE_CONFIGURED",
 		"configuration": get_configuration_snapshot(),
 	}
 
@@ -125,10 +155,16 @@ func get_configuration_snapshot() -> Dictionary:
 		return {
 			"configured": false,
 		}
+	if _mode == MODE_TEST:
+		return {
+			"configured": true,
+			"test_profile_path": _target_path,
+			"catalog_facts": _catalog_facts.duplicate(true),
+		}
 	return {
 		"configured": true,
-		"test_profile_path": _test_profile_path,
-		"catalog_facts": _catalog_facts.duplicate(true),
+		"mode": MODE_PRODUCTION,
+		"access_policy": _access_policy,
 	}
 
 
@@ -191,34 +227,47 @@ func load_profile() -> Dictionary:
 		return _store_rejected("STORE_NOT_CONFIGURED")
 	if _write_disabled:
 		return _store_rejected("RECOVERY_FAILED")
-	if not FileAccess.file_exists(_test_profile_path):
+	if not FileAccess.file_exists(_target_path):
 		_set_clean_default()
 		_committed_target_verified = false
+		_activation_backup_required = false
 		return _store_result("MISSING_CLEAN")
 	var source: Dictionary = _read_target_bytes()
 	if not bool(source.get("ok", false)):
-		return _recover_or_disable()
+		return _handle_unreadable_source()
 	var raw_bytes: PackedByteArray = source.get("bytes", PackedByteArray())
 	var parsed: Dictionary = _parse_json_bytes(raw_bytes)
 	if not bool(parsed.get("ok", false)):
-		return _recover_or_disable()
-	var normalized: Dictionary = ProfileCodec.normalize_profile(parsed.get("value", null), _catalog_facts)
+		return _handle_unreadable_source()
+	var parsed_value: Variant = parsed.get("value", null)
+	var schema: Dictionary = ProfileCodec.classify_profile_schema(parsed_value)
+	var schema_status: String = str(schema.get("status", "PROFILE_VERSION_INVALID"))
+	if schema_status == "PROFILE_VERSION_UNSUPPORTED":
+		return _handle_unsupported_source()
+	if schema_status != "PROFILE_VERSION_SUPPORTED":
+		return _handle_unreadable_source()
+	var normalized: Dictionary = ProfileCodec.normalize_profile(parsed_value, _catalog_facts)
 	if not bool(normalized.get("ok", false)):
-		return _recover_or_disable()
+		return _handle_unreadable_source()
 	var serialized: Dictionary = ProfileCodec.serialize_profile(normalized.get("profile", {}))
 	if not bool(serialized.get("ok", false)):
-		return _recover_or_disable()
+		return _handle_unreadable_source()
 	_committed_profile = (serialized.get("profile", {}) as Dictionary).duplicate(true)
 	_committed_json = str(serialized.get("json", ""))
 	_committed_target_verified = true
 	_pending_recovery = bool(normalized.get("sanitized", false))
-	_pending_recovery_source = _test_profile_path if _pending_recovery else ""
+	_pending_recovery_source = _target_path if _pending_recovery else ""
+	_activation_backup_required = _mode == MODE_PRODUCTION
+	if _pending_recovery and _mode == MODE_PRODUCTION:
+		return _store_result("SANITIZED_PENDING_RECOVERY")
 	return _store_result("SANITIZED" if _pending_recovery else "LOADED")
 
 
 func persist_profile(candidate_profile: Dictionary) -> Dictionary:
 	if not is_configured():
 		return _store_rejected("STORE_NOT_CONFIGURED")
+	if _mode == MODE_PRODUCTION and _access_policy != ACCESS_WRITE_ON_INTENT:
+		return _store_rejected("PRODUCTION_WRITE_POLICY_REJECTED")
 	if _write_disabled:
 		return _store_rejected("RECOVERY_FAILED")
 	var normalized: Dictionary = ProfileCodec.normalize_profile(candidate_profile, _catalog_facts)
@@ -234,6 +283,10 @@ func persist_profile(candidate_profile: Dictionary) -> Dictionary:
 	if _pending_recovery and not _preserve_recovery_copy():
 		_write_disabled = true
 		return _store_rejected("RECOVERY_FAILED")
+	if _mode == MODE_PRODUCTION and _activation_backup_required and not _activation_backup_created:
+		if not _preserve_activation_backup():
+			_write_disabled = true
+			return _store_rejected("ACTIVATION_BACKUP_FAILED")
 	var transaction: Dictionary = _transactional_replace(intended_json)
 	if not bool(transaction.get("ok", false)):
 		var rejected: Dictionary = _store_rejected("WRITE_FAILED")
@@ -244,16 +297,19 @@ func persist_profile(candidate_profile: Dictionary) -> Dictionary:
 	_committed_target_verified = true
 	_pending_recovery = false
 	_pending_recovery_source = ""
+	_activation_backup_required = false
 	return _store_result("PERSISTED")
 
 
 func reset_test_profile() -> Dictionary:
 	if not is_configured():
 		return _store_rejected("STORE_NOT_CONFIGURED")
+	if _mode != MODE_TEST:
+		return _store_rejected("TEST_MODE_REQUIRED")
 	if _write_disabled:
 		return _store_rejected("RECOVERY_FAILED")
-	if FileAccess.file_exists(_test_profile_path):
-		if DirAccess.remove_absolute(ProjectSettings.globalize_path(_test_profile_path)) != OK:
+	if FileAccess.file_exists(_target_path):
+		if DirAccess.remove_absolute(ProjectSettings.globalize_path(_target_path)) != OK:
 			return _store_rejected("WRITE_FAILED")
 	_set_clean_default()
 	_committed_target_verified = false
@@ -273,6 +329,8 @@ func get_committed_profile() -> Dictionary:
 func set_test_failure_seam(stage: String) -> Dictionary:
 	if not is_configured():
 		return _store_rejected("STORE_NOT_CONFIGURED")
+	if _mode != MODE_TEST:
+		return _store_rejected("TEST_MODE_REQUIRED")
 	if not ["NONE", "RECOVERY_COPY", "TEMP_WRITE", "TEMP_READBACK", "REPLACE", "POST_REPLACE_VERIFY"].has(stage):
 		return _store_rejected("FAILURE_SEAM_REJECTED")
 	_failure_seam = stage
@@ -293,7 +351,7 @@ func _store_result(status: String) -> Dictionary:
 		"profile": _committed_profile.duplicate(true),
 		"configured": _configured,
 	}
-	if not _recovery_sibling_name.is_empty():
+	if _mode == MODE_TEST and not _recovery_sibling_name.is_empty():
 		result["recovery_sibling_name"] = _recovery_sibling_name
 	return result
 
@@ -307,7 +365,7 @@ func _store_rejected(status: String) -> Dictionary:
 
 
 func _read_target_bytes() -> Dictionary:
-	var file := FileAccess.open(_test_profile_path, FileAccess.READ)
+	var file := FileAccess.open(_target_path, FileAccess.READ)
 	if file == null:
 		return {"ok": false}
 	var length: int = file.get_length()
@@ -358,10 +416,35 @@ func _recover_or_disable() -> Dictionary:
 	return _store_rejected("RECOVERY_FAILED")
 
 
+func _handle_unreadable_source() -> Dictionary:
+	if _mode == MODE_PRODUCTION and _access_policy == ACCESS_READ_ONLY:
+		return _store_rejected("RECOVERY_REQUIRED_READ_ONLY")
+	return _recover_or_disable()
+
+
+func _handle_unsupported_source() -> Dictionary:
+	if _mode == MODE_PRODUCTION and _access_policy == ACCESS_READ_ONLY:
+		_write_disabled = true
+		return _store_rejected("UNSUPPORTED_VERSION_READ_ONLY")
+	if _mode == MODE_PRODUCTION:
+		if not _preserve_recovery_copy():
+			_write_disabled = true
+			return _store_rejected("RECOVERY_FAILED")
+		_set_clean_default()
+		_committed_target_verified = false
+		_pending_recovery = false
+		_pending_recovery_source = ""
+		_write_disabled = true
+		return _store_result("UNSUPPORTED_VERSION_PRESERVED")
+	return _recover_or_disable()
+
+
 func _preserve_recovery_copy() -> bool:
 	if _failure_seam == "RECOVERY_COPY":
 		return false
-	var source_path: String = _pending_recovery_source if not _pending_recovery_source.is_empty() else _test_profile_path
+	if _mode == MODE_PRODUCTION and _access_policy != ACCESS_WRITE_ON_INTENT:
+		return false
+	var source_path: String = _pending_recovery_source if not _pending_recovery_source.is_empty() else _target_path
 	var source_os_path: String = ProjectSettings.globalize_path(source_path)
 	for index in range(OWNED_NAME_LIMIT):
 		var recovery_path: String = _owned_sibling_path("recovery", index)
@@ -373,8 +456,22 @@ func _preserve_recovery_copy() -> bool:
 	return false
 
 
+func _preserve_activation_backup() -> bool:
+	if _mode != MODE_PRODUCTION or _access_policy != ACCESS_WRITE_ON_INTENT:
+		return false
+	var source_os_path: String = ProjectSettings.globalize_path(_target_path)
+	for index in range(OWNED_NAME_LIMIT):
+		var backup_path: String = _owned_sibling_path("activation_backup", index)
+		if FileAccess.file_exists(backup_path):
+			continue
+		if DirAccess.copy_absolute(source_os_path, ProjectSettings.globalize_path(backup_path)) == OK:
+			_activation_backup_created = true
+			return true
+	return false
+
+
 func _transactional_replace(intended_json: String) -> Dictionary:
-	var directory_path: String = _test_profile_path.get_base_dir()
+	var directory_path: String = _target_path.get_base_dir()
 	if DirAccess.make_dir_recursive_absolute(ProjectSettings.globalize_path(directory_path)) != OK:
 		return {"ok": false, "stage": "DIRECTORY"}
 	var temp_path: String = _first_available_owned_path("temp")
@@ -386,14 +483,14 @@ func _transactional_replace(intended_json: String) -> Dictionary:
 	if not _verify_temp(temp_path, intended_json):
 		_remove_owned(temp_path)
 		return {"ok": false, "stage": "TEMP_READBACK"}
-	var had_old_target: bool = FileAccess.file_exists(_test_profile_path)
+	var had_old_target: bool = FileAccess.file_exists(_target_path)
 	var backup_path: String = ""
 	if had_old_target:
 		backup_path = _first_available_owned_path("transaction")
-		if backup_path.is_empty() or DirAccess.copy_absolute(ProjectSettings.globalize_path(_test_profile_path), ProjectSettings.globalize_path(backup_path)) != OK:
+		if backup_path.is_empty() or DirAccess.copy_absolute(ProjectSettings.globalize_path(_target_path), ProjectSettings.globalize_path(backup_path)) != OK:
 			_remove_owned(temp_path)
 			return {"ok": false, "stage": "BACKUP"}
-	var renamed: bool = DirAccess.rename_absolute(ProjectSettings.globalize_path(temp_path), ProjectSettings.globalize_path(_test_profile_path)) == OK
+	var renamed: bool = DirAccess.rename_absolute(ProjectSettings.globalize_path(temp_path), ProjectSettings.globalize_path(_target_path)) == OK
 	if not renamed:
 		_cleanup_transaction(temp_path, backup_path)
 		return {"ok": false, "stage": "RENAME"}
@@ -453,13 +550,13 @@ func _verify_target(intended_json: String) -> bool:
 
 func _restore_old_target(had_old_target: bool, backup_path: String) -> bool:
 	if not had_old_target:
-		return DirAccess.remove_absolute(ProjectSettings.globalize_path(_test_profile_path)) == OK
+		return DirAccess.remove_absolute(ProjectSettings.globalize_path(_target_path)) == OK
 	var backup := FileAccess.open(backup_path, FileAccess.READ)
 	if backup == null:
 		return false
 	var bytes: PackedByteArray = backup.get_buffer(backup.get_length())
 	backup.close()
-	var target := FileAccess.open(_test_profile_path, FileAccess.WRITE)
+	var target := FileAccess.open(_target_path, FileAccess.WRITE)
 	if target == null:
 		return false
 	target.store_buffer(bytes)
@@ -477,7 +574,9 @@ func _first_available_owned_path(kind: String) -> String:
 
 
 func _owned_sibling_path(kind: String, index: int) -> String:
-	return _test_profile_path.get_base_dir() + "/.delayed_self_0023w_" + kind + "_" + str(index) + ".json"
+	if _mode == MODE_PRODUCTION:
+		return _target_path.get_base_dir() + "/.delayed_self_profile_" + kind + "_" + str(index) + ".json"
+	return _target_path.get_base_dir() + "/.delayed_self_0023w_" + kind + "_" + str(index) + ".json"
 
 
 func _cleanup_transaction(temp_path: String, backup_path: String) -> void:
