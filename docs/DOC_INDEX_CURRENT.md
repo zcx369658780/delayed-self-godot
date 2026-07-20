@@ -5,8 +5,10 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0023ZM`](../tasks/0023ZM_assertion_case_cardinality_normalization_gate.md) — completed assertion/case cardinality normalization
-5. [`Task 0023ZM report`](reports/0023ZM_ASSERTION_CASE_CARDINALITY_NORMALIZATION_REPORT.md) — schema 2, 42 unique cases, 328-assertion validator and zero-I/O requalification
+4. [`Task 0023ZN`](../tasks/0023ZN_app_root_profile_session_full_matrix_execution_gate.md) — completed normalized two-attempt full-matrix execution
+5. [`Task 0023ZN report`](reports/0023ZN_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_EXECUTION_REPORT.md) — two `PASS_COMPLETE_MATRIX` audits, complete evidence and protected-state validation
+6. [`Task 0023ZM`](../tasks/0023ZM_assertion_case_cardinality_normalization_gate.md) — completed assertion/case cardinality normalization
+7. [`Task 0023ZM report`](reports/0023ZM_ASSERTION_CASE_CARDINALITY_NORMALIZATION_REPORT.md) — schema 2, 42 unique cases, 328-assertion validator and zero-I/O requalification
 6. [`Task 0023ZJ GPT cardinality adjudication`](reports/0023ZJ_GPT_ASSERTION_CASE_CARDINALITY_ADJUDICATION.md) — duplicate case-ID root cause and bounded normalization direction
 7. [`Task 0023ZJ`](../tasks/0023ZJ_app_root_profile_session_full_matrix_execution_gate.md) — stopped finalized full-matrix execution gate
 8. [`Task 0023ZJ blocker report`](reports/0023ZJ_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_BLOCKER_REPORT.md) — Attempt 1 passed 18 stages but emitted 42 assertions instead of required 41
@@ -63,6 +65,7 @@
 
 ## Compliance and reports
 
+- [`Task 0023ZN normalized AppRoot Profile-session full-matrix execution report`](reports/0023ZN_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_EXECUTION_REPORT.md)
 - [`Task 0023ZM assertion/case-cardinality normalization report`](reports/0023ZM_ASSERTION_CASE_CARDINALITY_NORMALIZATION_REPORT.md)
 - [`Task 0023ZJ GPT assertion/case-cardinality adjudication`](reports/0023ZJ_GPT_ASSERTION_CASE_CARDINALITY_ADJUDICATION.md)
 - [`Task 0023ZJ AppRoot Profile-session full-matrix blocker report`](reports/0023ZJ_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_BLOCKER_REPORT.md)

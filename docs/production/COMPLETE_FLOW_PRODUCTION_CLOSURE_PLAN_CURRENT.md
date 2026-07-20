@@ -219,6 +219,18 @@ zero-I/O Qualifications and frozen regressions pass. Execute and future-fixture
 operations remain zero; configured production persistence and two-attempt
 full-matrix acceptance remain unestablished.
 
+Task 0023ZN subsequently completed the normalized test-only execution gate.
+Two separately fresh exact-fixture attempts each retained 17/17 evidence,
+passed all 18 ordered stages and 42 assertions, emitted one final pass marker,
+exited 0 with empty stderr, and completed exact owned cleanup. Both externally
+audit to `PASS_COMPLETE_MATRIX`; the first audit's CRLF-only parser false
+negative was corrected from retained evidence without a product rerun.
+Post-Qualification, complete post-regressions, the 328-assertion validator, all
+38 frozen hashes, protected state and pollution checks pass. This closes the
+frozen normalized matrix evidence gap only. Production Profile activation,
+default persistence and subsequent production-closure gates remain
+unimplemented and require separate authorization.
+
 | # | Objective / likely path domains | Prerequisites and acceptance | P0/P1 stop, rollback, non-claims |
 |---|---|---|---|
 | 1 **SELECTED** | Persistent local profile core and isolated tests; `scripts/app/`, focused `tests/app/`, test registration, docs | Contract above; clean/malformed/version/atomic-failure/isolation coverage; catalog and formal hashes unchanged | Stop on real-profile touch, unsafe overwrite, or semantic drift. Roll back adapter/test topic only. Not UI, migration breadth, cloud, or release readiness. |

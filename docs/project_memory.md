@@ -1,5 +1,31 @@
 # Project memory
 
+## Task 0023ZN normalized full-matrix execution
+
+Task 0023ZN executed only the frozen normalized AppRoot/Profile harness through
+the accepted runner. Two attempts started from separately absent exact 0023ZN
+fixture states and each retained 17/17 canonical evidence, passed all 18 stages
+in manifest order, emitted exactly 42 assertions and one final pass marker,
+exited 0 with empty stderr, retained an empty valid-hash worktree patch,
+completed exact owned cleanup, preserved protected state, and left zero Godot
+processes. Both externally audit to `PASS_COMPLETE_MATRIX`.
+
+The first external audit initially produced four false stage count/order
+failures because its regex did not tolerate CRLF. The original audit is
+preserved. A retained-evidence-only correction records
+`AUDITOR_CRLF_FALSE_NEGATIVE`; no Godot process or behavior attempt was rerun.
+
+Post-Qualification, all 14 post-regression processes, the 328-assertion
+validator, all 38 frozen hashes, exact absence of the 0023W/ZE/ZF/ZH/ZJ/ZN
+fixtures, and pollution checks pass. Production Profile content was not
+accessed; metadata remains
+`true / 473 / 2026-07-19T08:15:02.2089459Z`. Test-root existence remains true
+without enumeration.
+
+This establishes only the frozen normalized test-only matrix twice. Production
+Profile persistence activation, default persistence and later production
+closure remain separately gated.
+
 ## Task 0023ZM assertion/case cardinality normalization
 
 GPT classified Task 0023ZJ's 42-vs-41 mismatch as duplicate case-ID metadata,

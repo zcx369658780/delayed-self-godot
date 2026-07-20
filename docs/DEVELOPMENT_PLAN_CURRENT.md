@@ -72,6 +72,7 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0023ZL cleanup assertion and capture-finalization repair (ready for GPT review; zero future-fixture execution)
 → 0023ZJ finalized full-matrix execution (blocked: observed 42 assertions vs required 41)
 → 0023ZM assertion/case cardinality normalization and 0023ZN retargeting (ready for GPT review; zero future-fixture execution)
+→ 0023ZN normalized full-matrix execution (ready for GPT review; two consecutive complete-matrix passes)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
@@ -155,6 +156,18 @@ non-counting internal guard, reinforces one-to-one validation, and retargets
 the inert future contract to Task 0023ZN. Parser, 328-validator, no-guard, two
 zero-I/O Qualifications and frozen regressions pass without Execute or future
 fixture operation. Actual two-attempt full-matrix success remains separately
+gated.
+
+Task 0023ZN then executed only the frozen normalized harness through the
+accepted runner. Two separately fresh exact-fixture attempts each retained
+17/17 evidence, passed all 18 ordered stages and 42 assertions, emitted one
+final pass marker, exited 0 with empty stderr, and completed exact owned-path
+cleanup. Both externally audit to `PASS_COMPLETE_MATRIX`. The first audit's
+CRLF-sensitive parser false negative was corrected from retained evidence
+without rerunning the product. Post-Qualification, complete post-regressions,
+the 328-assertion validator, all 38 frozen hashes, protected state, exact
+fixture absence, and pollution checks pass. This establishes the normalized
+test-only matrix twice; production persistence activation remains separately
 gated.
 
 ## Milestone spine
