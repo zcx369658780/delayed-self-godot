@@ -1,5 +1,25 @@
 # Project memory
 
+## Task 0023ZG full-matrix harness order repair
+
+GPT classified the Task 0023ZE Tutorial-0 failure as a harness expectation
+defect: `MemoryProgress.snapshot()` sorts unlocked IDs, while the harness
+expected `[TUTORIAL_0_ID, TUTORIAL_1_ID]` in the reverse lexical order. Task
+0023ZG repairs both `tutorial_0_persist` and `fresh_reload` with a fresh typed
+local expected array that is sorted before exact equality.
+
+The canonical five-file harness now targets future Task 0023ZH, fixture
+`task_0023zh_app_root_profile_session`, guard
+`--task-0023zh-fixture-execution`, and `TASK_0023ZH_` behavior markers. Parser
+passes first and final fresh processes; the reinforced validator passes 279
+assertions; no-guard exit 2 and two 11-file zero-I/O Qualifications pass.
+Execute, guard-passing, future-fixture commands and full behavior executions
+are zero. Production metadata remains
+`true / 473 / 2026-07-19T08:15:02.2089459Z`; the test root was not enumerated,
+and 0023W/0023ZE/0023ZF fixtures are absent. This does not establish
+full-matrix or production persistence success; actual execution remains a
+future 0023ZH gate.
+
 ## Task 0023ZF Tutorial-0 persistence subcondition diagnostic
 
 Task 0023ZE's one authorized full-matrix attempt controlled-aborted at a
@@ -16,8 +36,9 @@ Parser and guard proofs, 17/17 capture evidence, exact fixture cleanup, and
 pre/post 0023R/T/V/W/X/ZC/ZD frozen regressions passed. Production metadata
 remained `true / 473 / 2026-07-19T08:15:02.2089459Z`; test-root existence
 remained true without enumeration. The 0023W/0023ZE/0023ZF fixtures are absent.
-This minimal result does not explain Task 0023ZE, prove production persistence,
-or authorize AppRoot/harness repair or full-matrix rerun.
+This minimal result alone did not explain Task 0023ZE or prove production
+persistence. GPT's later root-cause adjudication and Task 0023ZG harness repair
+are recorded above.
 
 ## Task 0023V store-instance configuration compile gate
 

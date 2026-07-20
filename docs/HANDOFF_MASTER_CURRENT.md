@@ -1,9 +1,9 @@
 # Handoff master (CURRENT)
 
-Task 0023ZF is complete at:
+Task 0023ZG is complete at:
 
 ```text
-TUTORIAL_ZERO_PERSIST_SUBCONDITION_DIAGNOSTIC_READY_FOR_GPT_REVIEW
+APP_ROOT_PROFILE_SESSION_HARNESS_ORDER_REPAIR_READY_FOR_GPT_REVIEW
 ```
 
 Product scope is frozen at eight formal levels. Sequence 8
@@ -44,19 +44,24 @@ the accepted compile-only AppRoot orchestration authority, and Task 0023ZD is
 the accepted guarded full-matrix harness authority.
 
 Task 0023ZE ran one full-matrix attempt and controlled-aborted at the
-Tutorial-0 compound persistence assertion. Task 0023ZF did not repair or rerun
-that matrix. Its sole task-owned minimal run observed expected immediate and
-one-frame-delayed route, screen, completion, best-turn, unlock, persist-status
-and target facts, classified `EXPECTED_CONTRACT_OBSERVED`. Parser and no-guard
-proofs, 17/17 capture inventory, exact cleanup, and all pre/post frozen
-regressions passed. This does not identify the original failure cause.
+Tutorial-0 compound persistence assertion. Task 0023ZF observed the expected
+semantic contract. GPT identified the deterministic cause: the frozen product
+sorts unlocked IDs while the harness expected the reversed unsorted literal.
+
+Task 0023ZG repairs both Tutorial-0 and fresh-reload exact comparisons with a
+fresh typed locally sorted expected array. All five canonical harness artifacts
+now target future Task 0023ZH, its fresh fixture ID and guard, with
+`TASK_0023ZH_` behavior markers. Parser passes first and final fresh processes;
+the validator passes 279 assertions; no-guard exit 2 and two complete 11-file
+zero-I/O Qualifications pass. Execute, guard-passing, future-fixture command
+and full behavior execution counts are zero.
 
 Production Profile metadata remains
 `true / 473 / 2026-07-19T08:15:02.2089459Z`; content was not accessed.
 Test-root existence remains true without enumeration. The 0023W, 0023ZE and
 0023ZF fixtures are absent, frozen checkpoint/worktree diffs are zero, and no
-Godot process remains. Await GPT review; do not infer a root cause, repair
-AppRoot/harness, or execute the full matrix without a new task.
+Godot process remains. Await GPT review; do not execute the 0023ZH fixture or
+full matrix without a new bounded task.
 
 Hard boundary: no sequence-9 revival, unbounded product repair, save/settings
 implementation, asset/audio acquisition, owner walkthrough, build/export, RC

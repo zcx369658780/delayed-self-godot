@@ -2,7 +2,7 @@
 
 - Status: `CURRENT`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Current gate: Task 0023ZG full-matrix harness unlocked-order repair and zero-fixture requalification
+- Current gate: Task 0023ZG full-matrix harness unlocked-order repair complete; awaiting GPT review
 - Active task: `tasks/0023ZG_app_root_profile_session_harness_order_repair_gate.md`
 - Last GPT-accepted gate: `TASK_0023ZF_TUTORIAL_ZERO_PERSIST_DIAGNOSTIC_ACCEPTED`
 - Latest adjudication: `TASK_0023ZE_FAILED_ON_HARNESS_UNLOCKED_ORDER_EXPECTATION_MISMATCH`
@@ -19,9 +19,17 @@ Tasks 0023R–0023W remain the accepted path, codec, store and filesystem author
 
 Task 0023ZE's full-matrix attempt failed only when its harness compared the sorted public unlocked snapshot against the reversed unsorted literal `[TUTORIAL_0_ID, TUTORIAL_1_ID]`. Frozen MemoryProgress sorts `unlocked_level_ids`; `tutorial_echo_bridge` sorts before `tutorial_reach_exit`. Task 0023ZF independently observed the expected route, screen, completion, best-turn, unlock membership, persist status and target facts. The reported failure is therefore a harness expectation defect, not an established AppRoot defect.
 
-Task 0023ZG may revise only the five canonical 0023ZD harness artifacts and authorized docs. It must use a sorted fresh local expected array for every exact two-level unlock comparison, update validator coverage, and retarget the future harness contract to Task 0023ZH with fixture `task_0023zh_app_root_profile_session` and guard `--task-0023zh-fixture-execution`.
+Task 0023ZG repaired both exact two-level unlocked-array comparisons with a
+fresh typed sorted expected array and retargeted all five canonical harness
+artifacts to Task 0023ZH with fixture
+`task_0023zh_app_root_profile_session` and guard
+`--task-0023zh-fixture-execution`. Parser passed first draft and final fresh
+process; the validator passed 279 assertions; no-guard exit 2 and two 11-file
+zero-I/O Qualifications passed.
 
-No fixture may be checked or operated in Task 0023ZG. Runner Execute and the 0023ZH guard must not be used. Only parser, validator, no-guard exit-2 proof and two zero-I/O Qualifications are authorized. AppRoot and all product/prerequisite source remain frozen.
+No fixture was checked or operated. Runner Execute, the 0023ZH guard,
+configured AppRoot tree entry and full behavior execution counts are zero.
+AppRoot and all product/prerequisite source remain frozen.
 
 The normal unconfigured AppRoot path remains memory-only. Production Profile content/default persistence, actual full-matrix execution, aggregate, menus/settings/localization, build/export, RC, release, upload and festival submission remain closed.
 

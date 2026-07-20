@@ -3,10 +3,13 @@ extends SceneTree
 const BEHAVIOR_PATH: String = "res://tests/app/task_0023zd_app_root_profile_session_full_matrix.gd"
 const MANIFEST_PATH: String = "res://tests/app/task_0023zd_full_matrix_manifest.json"
 const RUNNER_PATH: String = "res://tests/app/task_0023zd_capture_profile_session.ps1"
+const PARSER_PATH: String = "res://tests/app/task_0023zd_full_matrix_parser_smoke.gd"
 const APP_ROOT_PATH: String = "res://scripts/app/app_root.gd"
-const FIXTURE_ID: String = "task_0023ze_app_root_profile_session"
-const CANONICAL_PROFILE_PATH: String = "user://delayed_self_test_profiles/task_0023ze_app_root_profile_session/delayed_self_profile.json"
-const EXECUTION_GUARD: String = "--task-0023ze-fixture-execution"
+const MEMORY_PROGRESS_PATH: String = "res://scripts/app/memory_progress.gd"
+const FIXTURE_ID: String = "task_0023zh_app_root_profile_session"
+const CANONICAL_PROFILE_PATH: String = "user://delayed_self_test_profiles/task_0023zh_app_root_profile_session/delayed_self_profile.json"
+const EXECUTION_GUARD: String = "--task-0023zh-fixture-execution"
+const FUTURE_TASK: String = "0023ZH"
 
 const STAGE_ORDER: Array[String] = [
 	"startup",
@@ -99,6 +102,9 @@ const EXPECTED_FROZEN_SHA256: Dictionary = {
 	"res://tests/app/task_0023x_profile_memory_progress_adapter.gd": "9caf087bc247d635c46d770ea8b69dc85095d90fd40eb4702cfddd9b0761399d",
 	"res://tests/app/task_0023zc_app_root_profile_orchestration_parser_smoke.gd": "2ddefd01652bc5e0247c498b4ef0b2cb88349fc45c089ac2d8fae5cfe30c114f",
 	"res://tests/app/task_0023zc_app_root_profile_orchestration_compile_contract.gd": "a0c9a6cf009b108aeeabdd030d9b3f909a7b7902372d8922e8a55ae32f9d621c",
+	"res://tests/app/task_0023zf_tutorial_persist_diagnostic.gd": "65965fbba12fb90d251f5c6d66cf0a5f0e3a45aea0450145859d83d7ab84deaf",
+	"res://tests/app/task_0023zf_tutorial_persist_diagnostic_parser_smoke.gd": "b5fec5fcafe46d19083544dc79504849ce4e52d83c3f1a0a905a2cb62fb5aa38",
+	"res://tests/app/task_0023zf_capture_tutorial_persist_diagnostic.ps1": "7be59cc06211e71410944c8f66dadb38e84358c5f9fe0888c64498cb9b0a0371",
 }
 
 var assertions: int = 0
@@ -113,7 +119,9 @@ func _run() -> void:
 	var behavior: String = _read_text(BEHAVIOR_PATH)
 	var manifest_text: String = _read_text(MANIFEST_PATH)
 	var runner: String = _read_text(RUNNER_PATH)
+	var parser: String = _read_text(PARSER_PATH)
 	var app_root: String = _read_text(APP_ROOT_PATH)
+	var memory_progress: String = _read_text(MEMORY_PROGRESS_PATH)
 	var parsed_value: Variant = JSON.parse_string(manifest_text)
 	_expect(parsed_value is Dictionary, "manifest_json_dictionary")
 	if not parsed_value is Dictionary:
@@ -123,7 +131,9 @@ func _run() -> void:
 	_validate_manifest(manifest)
 	_validate_behavior(behavior, manifest)
 	_validate_runner(runner, manifest)
+	_validate_parser(parser)
 	_validate_app_root_ordering(app_root)
+	_validate_memory_progress_ordering(memory_progress)
 	_validate_frozen_hashes()
 	_finish()
 
@@ -145,16 +155,20 @@ func _validate_manifest(manifest: Dictionary) -> void:
 	actual_keys.sort()
 	_expect(actual_keys == expected_keys, "manifest_exact_top_level_keys")
 	_expect(int(manifest.get("schema_version", 0)) == 1, "manifest_schema_version")
-	_expect(str(manifest.get("future_task", "")) == "0023ZE", "manifest_future_task")
+	_expect(str(manifest.get("future_task", "")) == FUTURE_TASK, "manifest_future_task")
 	_expect(str(manifest.get("fixture_id", "")) == FIXTURE_ID, "manifest_fixture_id")
 	_expect(str(manifest.get("canonical_profile_path", "")) == CANONICAL_PROFILE_PATH, "manifest_canonical_path")
 	_expect(str(manifest.get("execution_guard", "")) == EXECUTION_GUARD, "manifest_execution_guard")
 	_expect(manifest.get("stage_order", []) == STAGE_ORDER, "manifest_stage_order")
 	_expect(manifest.get("case_ids", []) == CASE_IDS, "manifest_case_order")
+	_expect(STAGE_ORDER.size() == 18, "manifest_stage_count_exact")
+	_expect(CASE_IDS.size() == 41, "manifest_case_count_exact")
 	_expect(_unique_count(manifest.get("stage_order", [])) == STAGE_ORDER.size(), "manifest_unique_stages")
 	_expect(_unique_count(manifest.get("case_ids", [])) == CASE_IDS.size(), "manifest_unique_cases")
 	_expect(manifest.get("accepted_failure_stages", []) == ACCEPTED_FAILURE_STAGES, "manifest_failure_stages")
+	_expect(ACCEPTED_FAILURE_STAGES.size() == 6, "manifest_failure_stage_count_exact")
 	var disclosures: Array = manifest.get("forbidden_disclosures", [])
+	_expect(disclosures.size() == 7, "manifest_disclosure_count_exact")
 	for required: String in ["Profile content", "virtual paths", "globalized paths", "raw filesystem errors", "store objects", "adapter objects", "sibling filenames"]:
 		_expect(disclosures.has(required), "manifest_disclosure_" + required.to_snake_case())
 	var evidence: Dictionary = manifest.get("evidence_files", {})
@@ -165,10 +179,14 @@ func _validate_manifest(manifest: Dictionary) -> void:
 
 func _validate_behavior(behavior: String, manifest: Dictionary) -> void:
 	_expect(not behavior.is_empty(), "behavior_source_readable")
+	var closed_task_token: String = "0023" + "ZE"
+	var closed_fixture_id: String = "task_0023" + "ze_app_root_profile_session"
+	var closed_execution_guard: String = "--task-0023" + "ze-fixture-execution"
+	_expect(not behavior.contains(closed_task_token) and not behavior.contains(closed_fixture_id) and not behavior.contains(closed_execution_guard), "behavior_closed_contract_absent")
 	_expect(behavior.count(FIXTURE_ID) == 2, "behavior_fixture_id_exact_constant_and_path")
 	_expect(behavior.count(CANONICAL_PROFILE_PATH) == 1, "behavior_canonical_path_unique")
 	_expect(behavior.contains('const EXECUTION_GUARD: String = "' + EXECUTION_GUARD + '"'), "behavior_guard_constant")
-	_expect(behavior.contains('print("TASK_0023ZD_EXECUTION_GUARD_BLOCKED")'), "behavior_guard_marker")
+	_expect(behavior.contains('print("TASK_0023ZH_EXECUTION_GUARD_BLOCKED")'), "behavior_guard_marker")
 	_expect(behavior.contains("quit(2)"), "behavior_guard_exit_two")
 	var init_start: int = behavior.find("func _initialize()")
 	var run_start: int = behavior.find("func _run_authorized()")
@@ -193,13 +211,30 @@ func _validate_behavior(behavior: String, manifest: Dictionary) -> void:
 	_expect(not behavior.contains("assert("), "behavior_no_direct_assert")
 	for forbidden: String in ["TODO", "FIXME", "placeholder", "assert(true)", "skip_stage", "SKIP_STAGE"]:
 		_expect(not behavior.contains(forbidden), "behavior_no_" + forbidden.to_snake_case())
-	_expect(behavior.contains("TASK_0023ZE_BEHAVIOR_PROCESS_STARTED"), "behavior_process_marker")
-	_expect(behavior.contains("TASK_0023ZE_STAGE_BEGIN="), "behavior_stage_begin_protocol")
-	_expect(behavior.contains("TASK_0023ZE_STAGE_PASS="), "behavior_stage_pass_protocol")
-	_expect(behavior.contains("TASK_0023ZE_ASSERT_FAIL stage=%s label=%s"), "behavior_failure_protocol")
-	_expect(behavior.contains("TASK_0023ZE_ABORT stage=%s reason=%s"), "behavior_abort_protocol")
-	_expect(behavior.contains("TASK_0023ZE_ASSERTIONS=%d"), "behavior_assertion_count_protocol")
-	_expect(behavior.contains("TASK_0023ZE_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_PASS"), "behavior_terminal_marker")
+	_expect(behavior.contains("TASK_0023ZH_BEHAVIOR_PROCESS_STARTED"), "behavior_process_marker")
+	_expect(behavior.contains("TASK_0023ZH_STAGE_BEGIN="), "behavior_stage_begin_protocol")
+	_expect(behavior.contains("TASK_0023ZH_STAGE_PASS="), "behavior_stage_pass_protocol")
+	_expect(behavior.contains("TASK_0023ZH_ASSERT_FAIL stage=%s label=%s"), "behavior_failure_protocol")
+	_expect(behavior.contains("TASK_0023ZH_ABORT stage=%s reason=%s"), "behavior_abort_protocol")
+	_expect(behavior.contains("TASK_0023ZH_ASSERTIONS=%d"), "behavior_assertion_count_protocol")
+	_expect(behavior.contains("TASK_0023ZH_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_PASS"), "behavior_terminal_marker")
+	var helper_start: int = behavior.find("func _expected_tutorial_unlocked_ids() -> Array[String]:")
+	var helper_end: int = behavior.find("\n\nfunc ", helper_start + 1)
+	var helper_block: String = behavior.substr(helper_start, helper_end - helper_start) if helper_start >= 0 and helper_end > helper_start else ""
+	_expect(not helper_block.is_empty(), "behavior_expected_unlocked_helper_defined")
+	_expect(helper_block.contains("var expected: Array[String] = [TUTORIAL_0_ID, TUTORIAL_1_ID]"), "behavior_expected_unlocked_helper_exact_ids")
+	_expect(helper_block.contains("expected.sort()"), "behavior_expected_unlocked_helper_sorts")
+	_expect(helper_block.contains("return expected"), "behavior_expected_unlocked_helper_returns_local")
+	_expect(behavior.count("_expected_tutorial_unlocked_ids()") == 3, "behavior_expected_unlocked_helper_exact_uses")
+	var tutorial_start: int = behavior.find("func _stage_tutorial_0_persist()")
+	var tutorial_end: int = behavior.find("\n\nfunc _stage_fresh_reload()", tutorial_start)
+	var tutorial_block: String = behavior.substr(tutorial_start, tutorial_end - tutorial_start) if tutorial_start >= 0 and tutorial_end > tutorial_start else ""
+	_expect(tutorial_block.contains("unlocked == _expected_tutorial_unlocked_ids()"), "behavior_tutorial_persist_sorted_exact_comparison")
+	var reload_start: int = tutorial_end
+	var reload_end: int = behavior.find("\n\nfunc _stage_no_change()", reload_start)
+	var reload_block: String = behavior.substr(reload_start, reload_end - reload_start) if reload_start >= 0 and reload_end > reload_start else ""
+	_expect(reload_block.contains('progress.get("unlocked_level_ids", []) == _expected_tutorial_unlocked_ids()'), "behavior_fresh_reload_sorted_exact_comparison")
+	_expect(not behavior.contains("== [TUTORIAL_0_ID, TUTORIAL_1_ID]"), "behavior_no_raw_unsorted_tutorial_equality")
 	_expect(behavior.contains('["best_turns", "completed_level_ids", "unlocked_level_ids"]'), "behavior_exact_public_keys")
 	_expect(behavior.contains('wrapper.get("runtime", {})'), "behavior_nested_runtime_assertion")
 	_expect(behavior.contains("persist_precedes_adapter_commit"), "behavior_persist_commit_case")
@@ -212,6 +247,10 @@ func _validate_behavior(behavior: String, manifest: Dictionary) -> void:
 
 func _validate_runner(runner: String, manifest: Dictionary) -> void:
 	_expect(not runner.is_empty(), "runner_source_readable")
+	var closed_task_token: String = "0023" + "ZE"
+	var closed_fixture_id: String = "task_0023" + "ze_app_root_profile_session"
+	var closed_execution_guard: String = "--task-0023" + "ze-fixture-execution"
+	_expect(not runner.contains(closed_task_token) and not runner.contains(closed_fixture_id) and not runner.contains(closed_execution_guard), "runner_closed_contract_absent")
 	_expect(runner.contains("[ValidateSet('Qualify', 'Execute')]"), "runner_exact_modes")
 	_expect(runner.contains("Set-StrictMode -Version Latest"), "runner_strict_mode")
 	_expect(runner.contains("$ErrorActionPreference = 'Stop'"), "runner_error_stop")
@@ -224,11 +263,16 @@ func _validate_runner(runner: String, manifest: Dictionary) -> void:
 	_expect(qualify_block.contains("$parserScript") and not qualify_block.contains("$executionGuard") and not qualify_block.contains("$fullMatrixScript"), "runner_qualify_parser_only")
 	_expect(runner.contains("if ($AttemptNumber -le 0)"), "runner_execute_positive_attempt")
 	_expect(runner.contains("if ($ScriptPath -ne $fullMatrixScript)"), "runner_execute_exact_script")
+	_expect(runner.contains("$executionGuard = '" + EXECUTION_GUARD + "'"), "runner_future_guard_constant")
+	_expect(runner.contains("$futureFixtureDirectory = Join-Path $testRoot '" + FIXTURE_ID + "'"), "runner_future_fixture_constant")
+	_expect(runner.contains("$parserMarker = 'TASK_0023ZG_FULL_MATRIX_PARSER_SMOKE_PASS'"), "runner_parser_marker")
+	_expect(runner.contains("$fullMatrixMarker = 'TASK_0023ZH_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_PASS'"), "runner_full_matrix_marker")
+	_expect(runner.contains("TASK_0023ZG_CAPTURE_QUALIFICATION_PASS"), "runner_qualification_marker")
 	_expect(runner.contains("'--', $executionGuard"), "runner_execute_guard")
 	_expect(runner.contains("Get-FutureFixtureExactState"), "runner_execute_fixture_state")
 	_expect(runner.contains("git") and runner.contains("'diff', '--binary', '--no-ext-diff'"), "runner_worktree_patch")
 	_expect(runner.contains("Get-FileHash -LiteralPath $patchPath -Algorithm SHA256"), "runner_patch_hash")
-	_expect(runner.contains("TASK_0023ZE_(BEHAVIOR_PROCESS_STARTED|STAGE_BEGIN=|STAGE_PASS=|ASSERT_FAIL|ABORT|ASSERTIONS=|APP_ROOT_PROFILE_SESSION_FULL_MATRIX_PASS)"), "runner_stage_summary")
+	_expect(runner.contains("TASK_0023ZH_(BEHAVIOR_PROCESS_STARTED|STAGE_BEGIN=|STAGE_PASS=|ASSERT_FAIL|ABORT|ASSERTIONS=|APP_ROOT_PROFILE_SESSION_FULL_MATRIX_PASS)"), "runner_stage_summary")
 	_expect(runner.contains("PASS_CANDIDATE") and runner.contains("CONTROLLED_ABORT") and runner.contains("ASSERTION_FAILURE") and runner.contains("UNCLASSIFIED_NONPASS"), "runner_classification")
 	_expect(not runner.contains("Get-ChildItem -LiteralPath $testRoot") and not runner.contains("ReadAllText($productionProfile)") and not runner.contains("Get-Content -LiteralPath $productionProfile"), "runner_no_protected_content_or_root_enumeration")
 	var evidence: Dictionary = manifest.get("evidence_files", {})
@@ -244,6 +288,12 @@ func _validate_runner(runner: String, manifest: Dictionary) -> void:
 	_expect(runner.contains("ExecutionGuardPassed=False") and runner.contains("ExecutionGuardPassed=True"), "runner_guard_inventory")
 
 
+func _validate_parser(parser: String) -> void:
+	_expect(not parser.is_empty(), "parser_source_readable")
+	_expect(parser.contains('print("TASK_0023ZG_FULL_MATRIX_PARSER_SMOKE_PASS")'), "parser_revised_marker")
+	_expect(not parser.contains("TASK_0023" + "ZE_"), "parser_closed_protocol_absent")
+
+
 func _validate_app_root_ordering(app_root: String) -> void:
 	var prepare_position: int = app_root.find("_profile_adapter.prepare_completion")
 	var persist_position: int = app_root.find("_profile_store.persist_profile", prepare_position)
@@ -257,6 +307,18 @@ func _validate_app_root_ordering(app_root: String) -> void:
 	var hydrate_position: int = app_root.find("adapter.load_profile", load_position)
 	_expect(adapter_position >= 0 and facts_position > adapter_position and store_position > facts_position and load_position > store_position and hydrate_position > load_position, "accepted_app_root_boot_order")
 	_expect(app_root.contains('adapter_snapshot.get("runtime", {})'), "accepted_app_root_nested_runtime")
+
+
+func _validate_memory_progress_ordering(memory_progress: String) -> void:
+	_expect(not memory_progress.is_empty(), "memory_progress_source_readable")
+	var snapshot_start: int = memory_progress.find("func snapshot()")
+	var snapshot_end: int = memory_progress.find("\n\nfunc ", snapshot_start + 1)
+	var snapshot_block: String = memory_progress.substr(snapshot_start, snapshot_end - snapshot_start) if snapshot_start >= 0 and snapshot_end > snapshot_start else ""
+	_expect(not snapshot_block.is_empty(), "memory_progress_snapshot_block")
+	var append_position: int = snapshot_block.find("unlocked_level_ids.append")
+	var sort_position: int = snapshot_block.find("unlocked_level_ids.sort()")
+	var return_position: int = snapshot_block.find('"unlocked_level_ids": unlocked_level_ids')
+	_expect(append_position >= 0 and sort_position > append_position and return_position > sort_position, "memory_progress_unlocked_ids_sorted_before_return")
 
 
 func _validate_frozen_hashes() -> void:
@@ -278,7 +340,7 @@ func _sha256(path: String) -> String:
 
 
 func _read_text(path: String) -> String:
-	if path.begins_with("res://tests/app/task_0023zd_") or path == APP_ROOT_PATH:
+	if path.begins_with("res://tests/app/task_0023zd_") or path == APP_ROOT_PATH or path == MEMORY_PROGRESS_PATH:
 		return FileAccess.get_file_as_string(path)
 	return ""
 
@@ -294,14 +356,14 @@ func _expect(condition: bool, label: String) -> void:
 	assertions += 1
 	if not condition:
 		failures += 1
-		print("TASK_0023ZD_VALIDATOR_ASSERT_FAIL label=" + label.left(140))
+		print("TASK_0023ZG_VALIDATOR_ASSERT_FAIL label=" + label.left(140))
 
 
 func _finish() -> void:
-	print("TASK_0023ZD_VALIDATOR_ASSERTIONS=%d" % assertions)
+	print("TASK_0023ZG_VALIDATOR_ASSERTIONS=%d" % assertions)
 	if failures == 0:
-		print("TASK_0023ZD_FULL_MATRIX_HARNESS_VALIDATOR_PASS")
+		print("TASK_0023ZG_FULL_MATRIX_HARNESS_VALIDATOR_PASS")
 		quit(0)
 	else:
-		print("TASK_0023ZD_FULL_MATRIX_HARNESS_VALIDATOR_FAIL failures=%d" % failures)
+		print("TASK_0023ZG_FULL_MATRIX_HARNESS_VALIDATOR_FAIL failures=%d" % failures)
 		quit(1)

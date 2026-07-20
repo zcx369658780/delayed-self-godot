@@ -179,9 +179,14 @@ persistent product behavior. Task 0023ZE later executed one full-matrix attempt
 and controlled-aborted at the Tutorial-0 compound persistence assertion. Task
 0023ZF's separately owned minimal diagnostic observed the expected immediate
 and one-frame-delayed route/progress/best/unlock/persist/screen/target contract.
-That bounded result neither explains the 0023ZE failure nor establishes full
-configured product persistence. Full-matrix repair or rerun remains closed
-pending a new GPT-authored task.
+GPT then classified the failure as a harness unlocked-order expectation defect,
+not an established AppRoot defect. Task 0023ZG repairs both affected exact
+comparisons with sorted local expected arrays, reinforces the validator, and
+retargets the future fixture/guard contract to 0023ZH. Its parser, 279 static
+assertions, no-guard proof and two zero-I/O Qualifications pass, with no
+fixture operation or full behavior execution. Configured product persistence
+and actual full-matrix success remain unestablished; execution requires a
+separate 0023ZH task.
 
 | # | Objective / likely path domains | Prerequisites and acceptance | P0/P1 stop, rollback, non-claims |
 |---|---|---|---|

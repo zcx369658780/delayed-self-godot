@@ -5,9 +5,12 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
-4. [`Task 0023ZF`](../tasks/0023ZF_tutorial_zero_persist_subcondition_diagnostic_gate.md) — bounded Tutorial-0 persistence subcondition diagnostic
-5. [`Task 0023ZF report`](reports/0023ZF_TUTORIAL_PERSIST_SUBCONDITION_DIAGNOSTIC_REPORT.md) — expected immediate/delayed contract observation and exact cleanup evidence
-6. [`Task 0023ZE blocker report`](reports/0023ZE_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_BLOCKER_REPORT.md) — original controlled-abort evidence and boundary
+4. [`Task 0023ZG`](../tasks/0023ZG_app_root_profile_session_harness_order_repair_gate.md) — unlocked-order harness repair and future 0023ZH retargeting
+5. [`Task 0023ZG report`](reports/0023ZG_APP_ROOT_PROFILE_SESSION_HARNESS_ORDER_REPAIR_REPORT.md) — parser, 279-assertion validator, guard and zero-I/O Qualification evidence
+6. [`Task 0023ZF GPT/root-cause adjudication`](reports/0023ZF_GPT_TUTORIAL_PERSIST_DIAGNOSTIC_ACCEPTANCE_AND_0023ZE_ROOT_CAUSE_ADJUDICATION.md) — accepted diagnostic and harness-order root cause
+7. [`Task 0023ZF`](../tasks/0023ZF_tutorial_zero_persist_subcondition_diagnostic_gate.md) — bounded Tutorial-0 persistence subcondition diagnostic
+8. [`Task 0023ZF report`](reports/0023ZF_TUTORIAL_PERSIST_SUBCONDITION_DIAGNOSTIC_REPORT.md) — expected immediate/delayed contract observation and exact cleanup evidence
+9. [`Task 0023ZE blocker report`](reports/0023ZE_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_BLOCKER_REPORT.md) — original controlled-abort evidence and boundary
 7. [`Task 0023ZD`](../tasks/0023ZD_app_root_profile_session_full_matrix_harness_gate.md) — complete guarded AppRoot Profile-session harness construction
 8. [`Task 0023ZD report`](reports/0023ZD_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_HARNESS_REPORT.md) — parser, static-validator and zero-I/O Qualification evidence
 6. [`Task 0023ZC`](../tasks/0023ZC_app_root_test_profile_session_compile_architecture_gate.md) — AppRoot orchestration compile/architecture gate
@@ -51,6 +54,8 @@
 
 ## Compliance and reports
 
+- [`Task 0023ZG AppRoot Profile-session harness order-repair report`](reports/0023ZG_APP_ROOT_PROFILE_SESSION_HARNESS_ORDER_REPAIR_REPORT.md)
+- [`Task 0023ZF GPT diagnostic acceptance and 0023ZE root-cause adjudication`](reports/0023ZF_GPT_TUTORIAL_PERSIST_DIAGNOSTIC_ACCEPTANCE_AND_0023ZE_ROOT_CAUSE_ADJUDICATION.md)
 - [`Task 0023ZF Tutorial-0 persistence subcondition diagnostic report`](reports/0023ZF_TUTORIAL_PERSIST_SUBCONDITION_DIAGNOSTIC_REPORT.md)
 - [`Task 0023ZE AppRoot Profile-session full-matrix blocker report`](reports/0023ZE_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_BLOCKER_REPORT.md)
 - [`Task 0023ZD AppRoot Profile-session full-matrix harness report`](reports/0023ZD_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_HARNESS_REPORT.md)

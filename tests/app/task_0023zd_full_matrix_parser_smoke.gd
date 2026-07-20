@@ -15,5 +15,5 @@ func _run() -> void:
 	if FullMatrixBehavior == null or AppRootScript == null or AppRootScene == null or LocalProfile == null or ProfileProgressAdapter == null:
 		quit(1)
 		return
-	print("TASK_0023ZD_FULL_MATRIX_PARSER_SMOKE_PASS")
+	print("TASK_0023ZG_FULL_MATRIX_PARSER_SMOKE_PASS")
 	quit(0)

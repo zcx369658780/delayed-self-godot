@@ -25,13 +25,13 @@ $ErrorActionPreference = 'Stop'
 
 $parserScript = 'res://tests/app/task_0023zd_full_matrix_parser_smoke.gd'
 $fullMatrixScript = 'res://tests/app/task_0023zd_app_root_profile_session_full_matrix.gd'
-$executionGuard = '--task-0023ze-fixture-execution'
-$parserMarker = 'TASK_0023ZD_FULL_MATRIX_PARSER_SMOKE_PASS'
-$fullMatrixMarker = 'TASK_0023ZE_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_PASS'
+$executionGuard = '--task-0023zh-fixture-execution'
+$parserMarker = 'TASK_0023ZG_FULL_MATRIX_PARSER_SMOKE_PASS'
+$fullMatrixMarker = 'TASK_0023ZH_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_PASS'
 $userDataRoot = Join-Path $env:APPDATA 'Godot\app_userdata\Delayed Self'
 $productionProfile = Join-Path $userDataRoot 'delayed_self_profile.json'
 $testRoot = Join-Path $userDataRoot 'delayed_self_test_profiles'
-$futureFixtureDirectory = Join-Path $testRoot 'task_0023ze_app_root_profile_session'
+$futureFixtureDirectory = Join-Path $testRoot 'task_0023zh_app_root_profile_session'
 $futureTarget = Join-Path $futureFixtureDirectory 'delayed_self_profile.json'
 
 if (-not (Test-Path -LiteralPath $GodotPath -PathType Leaf)) {
@@ -209,7 +209,7 @@ if ($Mode -eq 'Qualify') {
     if (-not $qualificationPassed) {
         throw 'Parser capture qualification failed.'
     }
-    Write-Output 'TASK_0023ZD_CAPTURE_QUALIFICATION_PASS'
+    Write-Output 'TASK_0023ZG_CAPTURE_QUALIFICATION_PASS'
     exit 0
 }
 
@@ -263,11 +263,11 @@ Write-Lines -Path $testRootAfterPath -Lines @($testRootAfter)
 Write-Lines -Path $fixtureAfterPath -Lines $fixtureAfter
 
 $stdout = [System.IO.File]::ReadAllText($stdoutPath)
-$stageLines = @($stdout -split "`r?`n" | Where-Object { $_ -match '^TASK_0023ZE_(BEHAVIOR_PROCESS_STARTED|STAGE_BEGIN=|STAGE_PASS=|ASSERT_FAIL|ABORT|ASSERTIONS=|APP_ROOT_PROFILE_SESSION_FULL_MATRIX_PASS)' })
+$stageLines = @($stdout -split "`r?`n" | Where-Object { $_ -match '^TASK_0023ZH_(BEHAVIOR_PROCESS_STARTED|STAGE_BEGIN=|STAGE_PASS=|ASSERT_FAIL|ABORT|ASSERTIONS=|APP_ROOT_PROFILE_SESSION_FULL_MATRIX_PASS)' })
 Write-Lines -Path $stageSummaryPath -Lines $stageLines
 $stderrLength = (Get-Item -LiteralPath $stderrPath).Length
 $successMarkerCount = ([regex]::Matches($stdout, [regex]::Escape($fullMatrixMarker))).Count
-$classification = if ($process.ExitCode -eq 0 -and $stderrLength -eq 0 -and $successMarkerCount -eq 1) { 'PASS_CANDIDATE' } elseif ($stdout.Contains('TASK_0023ZE_ABORT')) { 'CONTROLLED_ABORT' } elseif ($stdout.Contains('TASK_0023ZE_ASSERT_FAIL')) { 'ASSERTION_FAILURE' } else { 'UNCLASSIFIED_NONPASS' }
+$classification = if ($process.ExitCode -eq 0 -and $stderrLength -eq 0 -and $successMarkerCount -eq 1) { 'PASS_CANDIDATE' } elseif ($stdout.Contains('TASK_0023ZH_ABORT')) { 'CONTROLLED_ABORT' } elseif ($stdout.Contains('TASK_0023ZH_ASSERT_FAIL')) { 'ASSERTION_FAILURE' } else { 'UNCLASSIFIED_NONPASS' }
 Write-Lines -Path $classificationPath -Lines @(
     ('Classification=' + $classification),
     ('ExitCode=' + $process.ExitCode),

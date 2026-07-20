@@ -6,9 +6,9 @@ const LocalProfile = preload("res://scripts/app/local_profile.gd")
 const ProfileCodec = preload("res://scripts/app/profile_codec.gd")
 const ProfileProgressAdapter = preload("res://scripts/app/profile_progress_adapter.gd")
 
-const EXECUTION_GUARD: String = "--task-0023ze-fixture-execution"
-const FIXTURE_ID: String = "task_0023ze_app_root_profile_session"
-const CANONICAL_PROFILE_PATH: String = "user://delayed_self_test_profiles/task_0023ze_app_root_profile_session/delayed_self_profile.json"
+const EXECUTION_GUARD: String = "--task-0023zh-fixture-execution"
+const FIXTURE_ID: String = "task_0023zh_app_root_profile_session"
+const CANONICAL_PROFILE_PATH: String = "user://delayed_self_test_profiles/task_0023zh_app_root_profile_session/delayed_self_profile.json"
 const TUTORIAL_0_ID: String = "tutorial_reach_exit"
 const TUTORIAL_1_ID: String = "tutorial_echo_bridge"
 const PUBLIC_PROGRESS_KEYS: Array[String] = ["best_turns", "completed_level_ids", "unlocked_level_ids"]
@@ -28,14 +28,14 @@ var failure_contract_ok: bool = true
 func _initialize() -> void:
 	var arguments: PackedStringArray = OS.get_cmdline_user_args()
 	if not arguments.has(EXECUTION_GUARD):
-		print("TASK_0023ZD_EXECUTION_GUARD_BLOCKED")
+		print("TASK_0023ZH_EXECUTION_GUARD_BLOCKED")
 		quit(2)
 		return
 	call_deferred("_run_authorized")
 
 
 func _run_authorized() -> void:
-	print("TASK_0023ZE_BEHAVIOR_PROCESS_STARTED")
+	print("TASK_0023ZH_BEHAVIOR_PROCESS_STARTED")
 	if not await _run_startup_stage():
 		return
 	if not await _run_invalid_configuration_stage():
@@ -72,8 +72,8 @@ func _run_authorized() -> void:
 		return
 	if not await _run_final_stage():
 		return
-	print("TASK_0023ZE_ASSERTIONS=%d" % assertions)
-	print("TASK_0023ZE_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_PASS")
+	print("TASK_0023ZH_ASSERTIONS=%d" % assertions)
+	print("TASK_0023ZH_APP_ROOT_PROFILE_SESSION_FULL_MATRIX_PASS")
 	quit(0)
 
 
@@ -314,7 +314,7 @@ func _stage_tutorial_0_persist() -> void:
 	var unlocked: Array = progress.get("unlocked_level_ids", [])
 	_expect_case("tutorial_zero_real_three_turn_completion", current_app.get_current_route() == "LEVEL_SELECT" and completed == [TUTORIAL_0_ID] and int(best_turns.get(TUTORIAL_0_ID, 0)) == 3, "tutorial_zero_three_turns")
 	_expect_case("persist_precedes_adapter_commit", str(session.get("persist_status", "")).begins_with("COMMITTED_AFTER_PERSISTED"), "persist_before_commit")
-	_expect_case("tutorial_zero_persisted_progress_route", completed == [TUTORIAL_0_ID] and unlocked == [TUTORIAL_0_ID, TUTORIAL_1_ID] and current_app.get_active_screen_count() == 1, "persisted_progress_route")
+	_expect_case("tutorial_zero_persisted_progress_route", completed == [TUTORIAL_0_ID] and unlocked == _expected_tutorial_unlocked_ids() and current_app.get_active_screen_count() == 1, "persisted_progress_route")
 	var committed_result: Dictionary = current_app._profile_store.get_committed_profile()
 	var committed_profile: Dictionary = committed_result.get("profile", {})
 	var serialized: Dictionary = ProfileCodec.serialize_profile(committed_profile)
@@ -333,7 +333,7 @@ func _stage_fresh_reload() -> void:
 		current_app.get_current_route() == "MAIN_MENU"
 		and progress.get("completed_level_ids", []) == [TUTORIAL_0_ID]
 		and int(best_turns.get(TUTORIAL_0_ID, 0)) == 3
-		and progress.get("unlocked_level_ids", []) == [TUTORIAL_0_ID, TUTORIAL_1_ID]
+		and progress.get("unlocked_level_ids", []) == _expected_tutorial_unlocked_ids()
 	)
 	_expect_case("fresh_reload_progress", reload_ok, "fresh_reload_progress")
 	_expect_case("single_active_screen_router", current_app.get_active_screen_count() == 1, "reload_single_screen")
@@ -600,6 +600,12 @@ func _tutorial_profile(turns: int) -> Dictionary:
 	}
 
 
+func _expected_tutorial_unlocked_ids() -> Array[String]:
+	var expected: Array[String] = [TUTORIAL_0_ID, TUTORIAL_1_ID]
+	expected.sort()
+	return expected
+
+
 func _write_canonical_tutorial_profile() -> void:
 	var serialized: Dictionary = ProfileCodec.serialize_profile(_tutorial_profile(3))
 	var text: String = str(serialized.get("json", ""))
@@ -691,14 +697,14 @@ func _unique_string_count(values: Array[String]) -> int:
 
 func _begin_stage(stage_id: String) -> void:
 	current_stage = stage_id
-	print("TASK_0023ZE_STAGE_BEGIN=" + stage_id)
+	print("TASK_0023ZH_STAGE_BEGIN=" + stage_id)
 
 
 func _finish_stage(stage_id: String, failures_before: int) -> bool:
 	if failures > failures_before:
 		_abort_stage("stage_assertion_failed")
 		return false
-	print("TASK_0023ZE_STAGE_PASS=" + stage_id)
+	print("TASK_0023ZH_STAGE_PASS=" + stage_id)
 	return true
 
 
@@ -706,9 +712,9 @@ func _expect_case(case_id: String, condition: bool, bounded_label: String) -> vo
 	assertions += 1
 	if not condition:
 		failures += 1
-		print("TASK_0023ZE_ASSERT_FAIL stage=%s label=%s" % [current_stage, (case_id + "_" + bounded_label).left(120)])
+		print("TASK_0023ZH_ASSERT_FAIL stage=%s label=%s" % [current_stage, (case_id + "_" + bounded_label).left(120)])
 
 
 func _abort_stage(bounded_reason: String) -> void:
-	print("TASK_0023ZE_ABORT stage=%s reason=%s" % [current_stage, bounded_reason.left(120)])
+	print("TASK_0023ZH_ABORT stage=%s reason=%s" % [current_stage, bounded_reason.left(120)])
 	quit(1)
