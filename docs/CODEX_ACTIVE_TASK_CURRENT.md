@@ -1,32 +1,30 @@
 # Codex active task (CURRENT)
 
-- Status: `CONTROLLED_PRODUCTION_READ_ONLY_HARNESS_READY_FOR_GPT_REVIEW`
-- Active task: `tasks/0023ZT_controlled_production_read_only_harness_construction_gate.md`
-- Last GPT-accepted gate: `TASK_0023ZS_ISOLATED_PRODUCTION_POLICY_SANDBOX_MATRIX_ACCEPTED`
-- Required checkpoint: `7739ac26420e4c006b8fc6eba0f6b01a9d641ea1`
+- Status: `AWAITING_OWNER_AUTHORIZATION_FOR_CONTROLLED_PRODUCTION_READ_ONLY`
+- Active task: `NONE`
+- Reserved next task: `0023ZU` controlled production read-only observation
+- Last GPT-accepted gate: `TASK_0023ZT_CONTROLLED_PRODUCTION_READ_ONLY_HARNESS_ACCEPTED`
+- Required checkpoint for any future authorization task: `e474294604ab937abce4692e0969a177d4efefde`
 - Accepted implementation under future observation: `afe8c6fffdc98992b732fce46f206ad0dc8553a1`
-- Gate: `PROTECTED PLAYER DATA / CONTROLLED PRODUCTION READ-ONLY HARNESS CONSTRUCTION + ZERO REAL-DATA I/O`
+- Gate: `PROTECTED PLAYER DATA / OWNER AUTHORIZATION REQUIRED BEFORE REAL PROFILE READ`
 - Formal scope: exactly eight levels
 - Formal finale: sequence 8 `two_echo_convergence`
 - Current plan: `docs/production/COMPLETE_FLOW_PRODUCTION_CLOSURE_PLAN_CURRENT.md`
 
-Tasks 0023R–0023ZS are GPT-accepted and frozen within their stated scopes. Task 0023ZO remains the accepted production-activation design authority, Task 0023ZP remains the accepted static implementation authority, and Task 0023ZS is the accepted isolated production-policy behavior authority.
+Tasks 0023R–0023ZT are GPT-accepted and frozen within their stated scopes. Task 0023ZO remains the accepted production-activation design authority, Task 0023ZP remains the accepted static implementation authority, Task 0023ZS remains the accepted isolated production-policy behavior authority, and Task 0023ZT is the accepted dormant controlled-read harness authority.
 
-Task 0023ZS retained the argument-safe launcher, repaired only the URI left boundary while preserving genuine drive/UNC disclosure detection, and completed two fresh process-local external sandbox attempts. Each passed 22/22 cases and 132/132 marker rows as `PASS_COMPLETE_MATRIX`, with scanner qualification 11/11 pre/post, zero-I/O validation 14/14 pre/post, exact cleanup and zero residual Godot processes. No ordinary production Profile/user-data/test-root access occurred.
+Task 0023ZT added five inert harness artifacts. The parser passed, the corrected static validator passed 123 assertions, all 14 authorized zero-I/O regressions passed, and both one-time missing-authorization proofs exited 2 with empty stderr. Production Profile content/metadata/sibling access, ordinary user-data discovery, test-root operations, production configuration and guard-passing executions remained zero.
 
-Task 0023ZT completed its only authorized scope. Five inert controlled production read-only harness artifacts were added with an exact runner owner gate, exact future CURRENT authority gate, and exact child environment/user-argument guards. The parser passed; the corrected static validator passed 123 assertions; all 14 authorized zero-I/O regressions passed; both one-time no-authorization proofs exited 2 as required. Product source, project settings, main scene, autoload, accepted 0023ZQ/ZS harnesses, historical authorities, catalog/formal data and UI/gameplay remain frozen.
+No Codex task is active. Do not create, activate or execute Task 0023ZU unless the owner explicitly authorizes the complete controlled-read scope described in `docs/reports/0023ZT_GPT_CONTROLLED_PRODUCTION_READ_ONLY_HARNESS_ACCEPTANCE.md`.
 
-Task 0023ZT accessed no production Profile content or metadata, ordinary user-data directory, production sibling, test root or future Task 0023ZU evidence root. Production configuration runtime calls and future guard-passing execution count remained zero. See `docs/reports/0023ZT_CONTROLLED_PRODUCTION_READ_ONLY_HARNESS_CONSTRUCTION_REPORT.md`.
+A sufficient owner authorization must explicitly permit exactly one `PRODUCTION_READ_ONLY` boot against the existing production Profile, content read only through the accepted product code path for bounded classifications/counts, exact target existence/length/UTC-write-time observations before and after, exact existence checks for 32 fixed owned sibling candidates with category counts only, and creation of the fixed external evidence root. It must also explicitly forbid writes, recovery copies, activation backups, target replacement, reset, deletion, cleanup, retry and raw content/path disclosure.
 
-Any actual controlled production read-only observation is reserved for future Task 0023ZU and requires separate explicit owner authorization. The future contract may retain only bounded load/boot/route classifications, progress counts, non-content target metadata equality and exact owned-sibling category counts; it may not retain raw Profile content, hashes, IDs, best turns, settings, paths, filenames or raw errors.
+Until that authorization is supplied, production Profile content, metadata, ordinary user-data discovery, sibling checks and the future evidence root all remain closed. Real recovery or write, default activation, aggregate registration, Menu New/Continue/Reset, settings, localization, build/export, RC, release, upload and festival submission also remain closed.
 
-Production Profile access, real recovery or write, default activation, aggregate registration, Menu New/Continue/Reset, settings, localization, build/export, RC, release, upload and festival submission remain closed.
+Do not resume Tasks 0023ZQ, 0023ZR, 0023ZS or 0023ZT. Do not resume Tasks 0023Y, 0023Z, 0023ZA, 0023ZB, 0023ZE, 0023ZF, 0023ZH, 0023ZI, 0023ZK, 0023ZL, 0023ZJ, 0023ZM, 0023ZN, 0023ZO or 0023ZP, and do not reuse their fixtures. Historical blocked tasks 0023, 0023S and 0023U remain closed. Sequence 9 remains `DEFERRED_CONCEPT_NOT_PRODUCT_SCOPE`.
 
-Do not resume Tasks 0023ZQ, 0023ZR or 0023ZS. Do not resume Tasks 0023Y, 0023Z, 0023ZA, 0023ZB, 0023ZE, 0023ZF, 0023ZH, 0023ZI, 0023ZK, 0023ZL, 0023ZJ, 0023ZM, 0023ZN, 0023ZO or 0023ZP, and do not reuse their fixtures. Historical blocked tasks 0023, 0023S and 0023U remain closed. Sequence 9 remains `DEFERRED_CONCEPT_NOT_PRODUCT_SCOPE`.
-
-Expected terminal verdict:
+Expected next state:
 
 ```text
-CONTROLLED_PRODUCTION_READ_ONLY_HARNESS_READY_FOR_GPT_REVIEW
-BLOCKED_CONTROLLED_PRODUCTION_READ_ONLY_HARNESS
+OWNER_AUTHORIZATION_REQUIRED
 ```
