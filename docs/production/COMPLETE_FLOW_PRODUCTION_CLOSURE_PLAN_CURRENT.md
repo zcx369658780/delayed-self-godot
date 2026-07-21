@@ -1,5 +1,12 @@
 # Complete-flow production-closure plan (CURRENT)
 
+> **Planning succession (0023ZW, 2026-07-21):** this document remains the
+> historical closure plan for the frozen eight-level implementation. Its
+> persistence-first sequencing is superseded *as future planning direction*
+> by `EXPANDED_CONTENT_SUBMISSION_ROADMAP_CURRENT.md`, subject to GPT/owner
+> acceptance. No implementation baseline, Profile policy or protected action
+> changes through this notice.
+
 - Task: `tasks/0022_complete_flow_and_production_closure_planning.md`
 - Status: `COMPLETE_FLOW_PRODUCTION_CLOSURE_PLAN_READY_FOR_GPT_REVIEW`
 - Product changes in this task: none

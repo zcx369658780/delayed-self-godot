@@ -1,5 +1,13 @@
 # 《迟到的我 / Delayed Self》独立游戏策划案（CURRENT）
 
+> **0023ZW planning rebaseline, 2026-07-21:** the eight implemented levels and
+> sequence-8 `two_echo_convergence` remain frozen implementation baseline.
+> Pending GPT/owner review, the recommended next product target is a 12-room
+> Chinese-default complete flow with two date/stability-gated stretch rooms,
+> broader delayed-self mechanics and a hand-drawn ink-notebook presentation.
+> This is not catalog, Profile, asset, font, music, schema or implementation
+> authority. See `GAMEPLAY_BREADTH_AND_MECHANICS_REBASELINE_CURRENT.md`.
+
 - 文档状态：`CURRENT / PRE-PRODUCTION`
 - 生成日期：2026-07-14
 - 目标赛事：第四届 Godot 游戏创作节（GodotHub Festival 2026）

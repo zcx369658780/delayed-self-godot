@@ -1,5 +1,9 @@
 # Handoff master (CURRENT)
 
+# Task 0023ZW gameplay/presentation roadmap rebaseline
+
+Task 0023ZW is complete as a documentation-only recommendation and awaits GPT/owner review. Its target is a 12-level Chinese-default complete flow, hand-drawn delayed-notebook presentation and minimal credited Crow Producer music; levels 13–14 and advanced mechanics are stretch only. The implementation remains exactly eight levels with `two_echo_convergence` as sequence-8 finale. Do not implement, migrate/reset Profile, acquire/import assets/audio/fonts, build, upload or submit until a new accepted gate authorizes the specific surface. Read `docs/reports/0023ZW_GAMEPLAY_PRESENTATION_ROADMAP_REBASELINE_REPORT.md` and the four linked CURRENT planning documents first.
+
 Task 0023ZS completed at:
 
 ```text

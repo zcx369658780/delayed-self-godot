@@ -1,5 +1,9 @@
 # Project memory
 
+## Task 0023ZW gameplay/presentation roadmap rebaseline
+
+Task 0023ZW produced documentation only, pending GPT/owner review. It recommends testing C: 12 submission-core levels plus two stability/date-gated stretch rooms, preserving the eight implemented rooms and sequence-8 `two_echo_convergence` while planning. Core candidate contracts are YOU-only crates, YOU-only consumable keys/locks, multi-cell barriers/bridges, typed sensors and one-shot latches; portals, one-way gates, fragile floors and conveyors are stretch. The visual direction is hand-drawn delayed notebook/ink-ECHO, zh-Hans is a recommended new-profile default pending an explicit Profile compatibility decision, and Crow Producer terms are owner-supplied planning inputs rather than legal interpretation. No Profile/content, Godot run, downloads/imports or product files were accessed/changed.
+
 ## Task 0023ZV process reconciliation and controlled read
 
 Task 0023ZV preserved all eight local 0023ZU blocker documents externally,

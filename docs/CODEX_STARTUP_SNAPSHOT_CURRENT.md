@@ -4,7 +4,7 @@
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
 - Current gate: Task 0023ZW gameplay-breadth, presentation, localization and audio roadmap rebaseline
 - Active task: `tasks/0023ZW_gameplay_breadth_presentation_localization_audio_roadmap_rebaseline_gate.md`
-- Active status: `GAMEPLAY_PRESENTATION_ROADMAP_REBASELINE_READY_FOR_CODEX`
+- Active status: `GAMEPLAY_PRESENTATION_ROADMAP_REBASELINE_READY_FOR_GPT_REVIEW`
 - Last GPT-accepted gate: `TASK_0023ZV_PROCESS_RECONCILIATION_AND_CONTROLLED_READ_ACCEPTED`
 - Required checkpoint: `c1bc679ef73b8a86d9dac8559b3dfc010ccbe5b6`
 - Task publication commit: `a5e750d6214dfb56961d35083877e4d3829c2047`
@@ -12,11 +12,11 @@
 - Candidate submission target under planning: 12 core levels + 2 conditional stretch levels
 - Current implemented finale: sequence 8 `two_echo_convergence`
 - Selected ending direction at current baseline: `B — FINAL_COMPLETION_OVERLAY_PLUS_BOUNDED_RETURN_STATE`
-- Current plan: `docs/production/COMPLETE_FLOW_PRODUCTION_CLOSURE_PLAN_CURRENT.md`
+- Recommended future plan: `docs/production/EXPANDED_CONTENT_SUBMISSION_ROADMAP_CURRENT.md` (awaits GPT/owner acceptance)
 
 Tasks 0023R–0023ZV remain accepted historical authorities. Task 0023ZV completed one valid production read-only boot as `LOADED / PRODUCTION_PROFILE_READY / MAIN_MENU`, with bounded counts `7 / 7 / 8`, unchanged target metadata and zero owned-sibling categories. No further read is authorized.
 
-Task 0023ZW is documentation-only and reopens product-scope planning without changing the implemented baseline. It must evaluate 12-level, 14-level and bonus-room structures; decide how the existing sequence-8 finale would relate to any expanded curriculum; and address stable IDs, catalog order and the existing development Profile before any implementation authorization.
+Task 0023ZW documentation-only planning is complete and reopens product-scope direction without changing the implemented baseline. It recommends 12 core levels plus 2 conditional stretch rooms, a possible new finale only after a future accepted catalog/migration gate, and explicit stable-ID/Profile policy decisions before any implementation authorization.
 
 Required core mechanic candidates are player-only push crates, player-only consumable keys/locks, multi-cell barriers/bridges, typed occupancy sensors and one-shot room latches. Paired portals, one-way gates, fragile floors and conveyors are stretch candidates only. The doctrine is broader mechanics without a higher difficulty ceiling.
 

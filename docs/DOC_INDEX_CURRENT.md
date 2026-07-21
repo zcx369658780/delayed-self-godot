@@ -2,6 +2,13 @@
 
 ## Start here
 
+0. [`Task 0023ZW`](../tasks/0023ZW_gameplay_breadth_presentation_localization_audio_roadmap_rebaseline_gate.md) — current documentation-only gameplay/presentation roadmap rebaseline
+1. [`Gameplay breadth rebaseline`](game_design/GAMEPLAY_BREADTH_AND_MECHANICS_REBASELINE_CURRENT.md) — count decision, mechanic contracts and curriculum
+2. [`Presentation direction`](presentation/HAND_DRAWN_NOTEBOOK_PRESENTATION_DIRECTION_CURRENT.md) — ink-notebook visual and font/asset controls
+3. [`Music audition plan`](audio/MUSIC_SOURCE_LICENSE_AND_AUDITION_PLAN_CURRENT.md) — supplied-source terms, shortlist and license boundary
+4. [`Expanded submission roadmap`](production/EXPANDED_CONTENT_SUBMISSION_ROADMAP_CURRENT.md) — dated gates and scope cuts
+5. [`Task 0023ZW report`](reports/0023ZW_GAMEPLAY_PRESENTATION_ROADMAP_REBASELINE_REPORT.md) — documentation-only closeout
+
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state

@@ -1,5 +1,10 @@
 # Development plan (CURRENT)
 
+> 2026-07-21 — Task 0023ZW has produced a planning-only recommended successor:
+> `docs/production/EXPANDED_CONTENT_SUBMISSION_ROADMAP_CURRENT.md`. The 12-core
+> plus 2 conditional-stretch direction awaits GPT/owner acceptance; the
+> eight-level implementation remains frozen meanwhile.
+
 The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAME_DESIGN_DOCUMENT_CURRENT.md). This document records the accepted execution spine and clearly labels future tasks as planning recommendations until separately authorized.
 
 ## Near-term gates
