@@ -2,7 +2,7 @@
 
 - Status: `CURRENT`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Current gate: Task 0023ZS disclosure-scanner URI-boundary repair and fresh isolated matrix retry
+- Current gate: Task 0023ZS disclosure-scanner URI-boundary repair and fresh isolated matrix retry completed for GPT review
 - Active task: `tasks/0023ZS_disclosure_scanner_uri_boundary_repair_and_matrix_retry_gate.md`
 - Last GPT-accepted gate: `TASK_0023ZP_PRODUCTION_PROFILE_STATIC_BOOTSTRAP_ACCEPTED`
 - Latest GPT adjudication: `TASK_0023ZR_BLOCKED_ON_DISCLOSURE_SCANNER_URI_SCHEME_FALSE_POSITIVE_AFTER_FIRST_CASE`
@@ -19,6 +19,8 @@ The eight-entry catalog, formal level hashes/metrics, Simulation, solver, schema
 Tasks 0023R–0023ZP remain accepted historical authorities. Task 0023ZN proves the normalized test-only AppRoot/Profile matrix twice. Task 0023ZO selects the production activation architecture. Task 0023ZP implements and statically validates the non-default bootstrap/API seam with zero player-data I/O.
 
 Task 0023ZR proved that the PowerShell runner can launch a Godot executable path containing spaces through `ProcessStartInfo.FileName` and separate `ArgumentList` entries. Its 14/14 pre-validation and no-guard proof passed. Attempt 1 reached the first behavior case, but the disclosure scanner falsely matched the `s:/` substring within the Godot banner URL `https://godotengine.org` as a disk path. Exact sandbox-data cleanup succeeded, no Godot process remained, Attempt 2 did not run, and no actual absolute-path disclosure or product defect was established.
+
+Task 0023ZS repairs only that URI-boundary false positive while retaining genuine drive and UNC detection. Scanner qualification passed 11/11 before behavior and again post-pass; pre/post 14/14 zero-I/O validation, no-guard proof and the 393-assertion validator pass. Two fresh isolated attempts each pass 22/22 cases and 132/132 marker rows as `PASS_COMPLETE_MATRIX`, with exact sandbox-data cleanup and zero residual processes.
 
 Task 0023ZS is a narrow continuation, not a direct resume of 0023ZQ or 0023ZR. The startup dirty-state exception permits only the exact five authorized untracked harness files, with zero staged or modified/deleted tracked paths. Their hashes, lengths and line counts must be recorded before edits.
 

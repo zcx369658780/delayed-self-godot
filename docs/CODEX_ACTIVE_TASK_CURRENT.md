@@ -1,6 +1,6 @@
 # Codex active task (CURRENT)
 
-- Status: `ISOLATED_PRODUCTION_POLICY_DISCLOSURE_RETRY_READY_FOR_CODEX`
+- Status: `ISOLATED_PRODUCTION_POLICY_SANDBOX_MATRIX_DISCLOSURE_RETRY_READY_FOR_GPT_REVIEW`
 - Active task: `tasks/0023ZS_disclosure_scanner_uri_boundary_repair_and_matrix_retry_gate.md`
 - Last GPT-accepted gate: `TASK_0023ZP_PRODUCTION_PROFILE_STATIC_BOOTSTRAP_ACCEPTED`
 - Latest GPT adjudication: `TASK_0023ZR_BLOCKED_ON_DISCLOSURE_SCANNER_URI_SCHEME_FALSE_POSITIVE_AFTER_FIRST_CASE`
@@ -14,6 +14,8 @@
 Tasks 0023R–0023ZP are GPT-accepted and frozen within their stated scopes. Task 0023ZO remains the accepted production-activation design authority, and Task 0023ZP remains the accepted static/compile implementation authority.
 
 Task 0023ZR qualified the argument-safe launcher with a Godot path containing spaces, passed the full 14/14 pre-validation and passed the no-guard proof. Attempt 1 entered its first behavior case with normal markers, but the runner disclosure regex matched the `s:/` substring inside the standard `https://godotengine.org` banner URL as a Windows drive path. This is classified as a disclosure-scanner URI-boundary false positive, not an established actual path leak or product/Profile-policy defect. Attempt 1 is incomplete and unaccepted; Attempt 2 did not run.
+
+Task 0023ZS completed successfully. The drive classifier now requires a non-URI left boundary while separate UNC detection remains active. Both scanner qualifications pass 11/11, pre/post zero-I/O matrices pass 14/14, no-guard exits 2 as required, and the final validator passes 393 assertions. Fresh Attempts 1 and 2 each pass all 22 cases and 132 marker rows as `PASS_COMPLETE_MATRIX`, with disclosure PASS, exact owned cleanup, empty runner stderr and zero residual Godot processes.
 
 Task 0023ZS is the only active scope. It may inherit exactly the five authorized untracked 0023ZQ harness files and no other dirty state. It must preserve the qualified `ProcessStartInfo.FileName` plus per-argument `ArgumentList` launcher, repair only the fail-closed drive-path classifier and its minimal validator surface, and preserve every matrix case, status, assertion and protected-data boundary.
 

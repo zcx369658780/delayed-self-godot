@@ -1,5 +1,24 @@
 # Project memory
 
+## Task 0023ZS disclosure-scanner repair and isolated matrix retry
+
+Task 0023ZS retains the argument-safe PowerShell launcher and changes only the
+forbidden-disclosure drive-path boundary plus its validation surface. The
+classifier no longer treats `s:/` inside an HTTP/HTTPS scheme as a drive path;
+real drive paths, drive paths inside `file:///`, UNC paths and every other
+forbidden category remain fail-closed.
+
+Scanner qualification passes 11/11 before behavior and post-pass. Pre/post
+14/14 zero-I/O validation, no-guard proof and the 393-assertion validator pass.
+Two fresh process-local APPDATA attempts each pass 22/22 cases and 132/132
+marker rows as `PASS_COMPLETE_MATRIX`, with disclosure PASS, exact sandbox
+cleanup and zero residual Godot processes.
+
+Historical blocked evidence remains byte-identical. No ordinary production
+Profile/user-data/test-root access occurred. This establishes isolated policy
+behavior only; real access, recovery/write and default activation remain
+separately gated.
+
 ## Task 0023ZP production Profile static bootstrap implementation
 
 Task 0023ZP implements the accepted option-B composition/API surface without

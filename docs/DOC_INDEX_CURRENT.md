@@ -5,6 +5,8 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
+4. [`Task 0023ZS`](../tasks/0023ZS_disclosure_scanner_uri_boundary_repair_and_matrix_retry_gate.md) — completed disclosure URI-boundary repair and two-attempt isolated matrix retry
+5. [`Task 0023ZS report`](reports/0023ZS_ISOLATED_PRODUCTION_POLICY_DISCLOSURE_SCANNER_REPAIR_AND_RETRY_REPORT.md) — 11/11 scanner qualification, two `PASS_COMPLETE_MATRIX` attempts and protected-data boundary evidence
 4. [`Task 0023ZP`](../tasks/0023ZP_production_profile_static_bootstrap_implementation_gate.md) — completed production Profile bootstrap/API static implementation with zero player-data I/O
 5. [`Task 0023ZP report`](reports/0023ZP_PRODUCTION_PROFILE_STATIC_BOOTSTRAP_IMPLEMENTATION_REPORT.md) — compile/static and zero-I/O regression evidence
 6. [`Task 0023ZO`](../tasks/0023ZO_production_profile_activation_design_and_authorization_gate.md) — accepted production activation design and authorization package

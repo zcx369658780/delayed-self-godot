@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "expected_assertion_count": 22,
+  "expected_markers_per_case": {
+    "sandbox_attested": 1,
+    "behavior_started": 1,
+    "stage": 1,
+    "assert_pass": 1,
+    "case_status": 1,
+    "case_pass": 1
+  },
+  "stages": [
+    "bootstrap_policy",
+    "production_read_only",
+    "production_write_on_intent"
+  ],
+  "cases": [
+    {"id":"bootstrap_memory_default","stage":"bootstrap_policy","expected_status":"MEMORY_ONLY","target_creation":false,"target_mutation":false,"recovery_sibling":false,"activation_backup":false,"transaction_sibling":false,"write_disabled":false},
+    {"id":"bootstrap_development_direct","stage":"bootstrap_policy","expected_status":"MEMORY_ONLY","target_creation":false,"target_mutation":false,"recovery_sibling":false,"activation_backup":false,"transaction_sibling":false,"write_disabled":false},
+    {"id":"bootstrap_invalid_direct","stage":"bootstrap_policy","expected_status":"MEMORY_ONLY","target_creation":false,"target_mutation":false,"recovery_sibling":false,"activation_backup":false,"transaction_sibling":false,"write_disabled":false},
+    {"id":"bootstrap_normal_production_composition","stage":"bootstrap_policy","expected_status":"PRODUCTION_PROFILE_READY","target_creation":false,"target_mutation":false,"recovery_sibling":false,"activation_backup":false,"transaction_sibling":false,"write_disabled":false},
+
+    {"id":"read_only_missing","stage":"production_read_only","expected_status":"MISSING_CLEAN","target_creation":false,"target_mutation":false,"recovery_sibling":false,"activation_backup":false,"transaction_sibling":false,"write_disabled":false},
+    {"id":"read_only_valid_partial","stage":"production_read_only","expected_status":"LOADED","target_creation":false,"target_mutation":false,"recovery_sibling":false,"activation_backup":false,"transaction_sibling":false,"write_disabled":false},
+    {"id":"read_only_valid_completed","stage":"production_read_only","expected_status":"LOADED","target_creation":false,"target_mutation":false,"recovery_sibling":false,"activation_backup":false,"transaction_sibling":false,"write_disabled":false},
+    {"id":"read_only_sanitizable","stage":"production_read_only","expected_status":"SANITIZED_PENDING_RECOVERY","target_creation":false,"target_mutation":false,"recovery_sibling":false,"activation_backup":false,"transaction_sibling":false,"write_disabled":false},
+    {"id":"read_only_malformed","stage":"production_read_only","expected_status":"RECOVERY_REQUIRED_READ_ONLY","target_creation":false,"target_mutation":false,"recovery_sibling":false,"activation_backup":false,"transaction_sibling":false,"write_disabled":false},
+    {"id":"read_only_unsupported","stage":"production_read_only","expected_status":"UNSUPPORTED_VERSION_READ_ONLY","target_creation":false,"target_mutation":false,"recovery_sibling":false,"activation_backup":false,"transaction_sibling":false,"write_disabled":true},
+    {"id":"read_only_write_reset_seam_rejection","stage":"production_read_only","expected_status":"PRODUCTION_WRITE_POLICY_REJECTED","target_creation":false,"target_mutation":false,"recovery_sibling":false,"activation_backup":false,"transaction_sibling":false,"write_disabled":false},
+
+    {"id":"write_on_intent_missing","stage":"production_write_on_intent","expected_status":"MISSING_CLEAN","target_creation":false,"target_mutation":false,"recovery_sibling":false,"activation_backup":false,"transaction_sibling":false,"write_disabled":false},
+    {"id":"write_on_intent_valid","stage":"production_write_on_intent","expected_status":"LOADED","target_creation":false,"target_mutation":false,"recovery_sibling":false,"activation_backup":false,"transaction_sibling":false,"write_disabled":false},
+    {"id":"write_on_intent_no_change","stage":"production_write_on_intent","expected_status":"NO_CHANGE","target_creation":false,"target_mutation":false,"recovery_sibling":false,"activation_backup":false,"transaction_sibling":false,"write_disabled":false},
+    {"id":"write_on_intent_first_write","stage":"production_write_on_intent","expected_status":"COMMITTED_AFTER_PERSISTED","target_creation":false,"target_mutation":true,"recovery_sibling":false,"activation_backup":true,"transaction_sibling":false,"write_disabled":false},
+    {"id":"write_on_intent_sanitizable_write","stage":"production_write_on_intent","expected_status":"COMMITTED_AFTER_PERSISTED","target_creation":false,"target_mutation":true,"recovery_sibling":true,"activation_backup":true,"transaction_sibling":false,"write_disabled":false},
+    {"id":"write_on_intent_malformed_boot","stage":"production_write_on_intent","expected_status":"RECOVERED_CLEAN","target_creation":false,"target_mutation":false,"recovery_sibling":true,"activation_backup":false,"transaction_sibling":false,"write_disabled":false},
+    {"id":"write_on_intent_unsupported_boot","stage":"production_write_on_intent","expected_status":"UNSUPPORTED_VERSION_PRESERVED","target_creation":false,"target_mutation":false,"recovery_sibling":true,"activation_backup":false,"transaction_sibling":false,"write_disabled":true},
+    {"id":"write_on_intent_recovery_collision","stage":"production_write_on_intent","expected_status":"RECOVERY_FAILED","target_creation":false,"target_mutation":false,"recovery_sibling":false,"activation_backup":false,"transaction_sibling":false,"write_disabled":true},
+    {"id":"write_on_intent_activation_collision","stage":"production_write_on_intent","expected_status":"ACTIVATION_BACKUP_FAILED","target_creation":false,"target_mutation":false,"recovery_sibling":false,"activation_backup":false,"transaction_sibling":false,"write_disabled":true},
+    {"id":"write_on_intent_transaction_rollback","stage":"production_write_on_intent","expected_status":"WRITE_FAILED","target_creation":false,"target_mutation":false,"recovery_sibling":false,"activation_backup":true,"transaction_sibling":false,"write_disabled":false},
+    {"id":"write_on_intent_test_seams_rejected","stage":"production_write_on_intent","expected_status":"TEST_MODE_REQUIRED","target_creation":false,"target_mutation":false,"recovery_sibling":false,"activation_backup":false,"transaction_sibling":false,"write_disabled":false}
+  ],
+  "required_attempt_evidence": [
+    "audit/attempt_summary.json",
+    "audit/case_results.csv",
+    "audit/marker_cardinality.csv",
+    "audit/forbidden_disclosure.txt",
+    "audit/environment_assignments.txt",
+    "audit/cleanup.json"
+  ],
+  "forbidden_disclosure_categories": [
+    "absolute_drive_path",
+    "production_target_name",
+    "production_sibling_name",
+    "raw_profile_schema_key",
+    "raw_json",
+    "unsupported_numeric_version",
+    "raw_filesystem_error",
+    "store_or_adapter_object"
+  ],
+  "frozen_sha256": {
+    "res://scripts/app/app_bootstrap.gd": "96ba1be8afd85ea548f823f095511f643879c6127322dbb91aa9cce01faf7f74",
+    "res://scenes/app/app_bootstrap.tscn": "7391270ff909370ac727e10cb14e732488e5652f9e37bec904b9fe027f1d25b0",
+    "res://scripts/app/app_root.gd": "79d92b823d4483c0ec97caced1c77bace147313e7b1694e12537146031fe89b7",
+    "res://scripts/app/local_profile.gd": "91cb39e1d75189d0eb7b7d5e26a05f6a4524c2f95131ecb7276417f76d3aa89b",
+    "res://scripts/app/profile_codec.gd": "c594ef1aed66471be18f8d95567dc5bce486a2c64cb62cd637431251070f8e12",
+    "res://scripts/app/profile_progress_adapter.gd": "4c35ee3f0ec1c932ab30ffa3c3130870a3febfc7b2f2a6a219efd2a819f5f563",
+    "res://scripts/app/memory_progress.gd": "41651ebcff17fd09247c3e5e820fff940c896efc25c5ba17ee7af668bbd4d567",
+    "res://scripts/app/route_request.gd": "63e72c4c2b268d7909892665e1bdfb606a3992e5b1fe0f976b188032f66b561d",
+    "res://project.godot": "faeb4a90b435aa81bd1c122ee12972e82db8dd5a90c448e850781e3d4b88c0d2",
+    "res://data/catalog/level_catalog_v1.json": "a2bfa892f77370ac4d7e93ba5b6ce5970f0d7ba75160e1b2d00c4384f3da4e51"
+  }
+}

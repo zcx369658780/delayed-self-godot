@@ -253,6 +253,13 @@ zero-I/O regressions pass. No production configuration or player-data/test-root
 operation ran. Isolated activation-policy fixture behavior remains the next
 separately authorized gate after GPT acceptance.
 
+Task 0023ZS now completes that isolated activation-policy behavior gate after
+two runner-only blockers in 0023ZQ/0023ZR. Its URI-boundary classifier repair
+preserves genuine drive/UNC detection, and two fresh process-local external
+sandbox attempts each pass all 22 policy cases as `PASS_COMPLETE_MATRIX` with
+exact cleanup. This does not activate production persistence or authorize any
+real Profile read, recovery or write.
+
 | # | Objective / likely path domains | Prerequisites and acceptance | P0/P1 stop, rollback, non-claims |
 |---|---|---|---|
 | 1 **SELECTED** | Persistent local profile core and isolated tests; `scripts/app/`, focused `tests/app/`, test registration, docs | Contract above; clean/malformed/version/atomic-failure/isolation coverage; catalog and formal hashes unchanged | Stop on real-profile touch, unsafe overwrite, or semantic drift. Roll back adapter/test topic only. Not UI, migration breadth, cloud, or release readiness. |

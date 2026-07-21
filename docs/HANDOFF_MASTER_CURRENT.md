@@ -1,5 +1,28 @@
 # Handoff master (CURRENT)
 
+Task 0023ZS completed at:
+
+```text
+ISOLATED_PRODUCTION_POLICY_SANDBOX_MATRIX_DISCLOSURE_RETRY_READY_FOR_GPT_REVIEW
+```
+
+The runner retains `ProcessStartInfo.FileName` plus one `ArgumentList` entry
+per Godot argument. Its drive classifier now requires a non-URI left boundary;
+genuine drive paths, `file:///C:/...` and UNC paths remain detected. Scanner
+qualification passes 11/11 before behavior and again post-pass.
+
+Pre/post 14/14 zero-I/O validation, no-guard proof and the final
+393-assertion validator pass. Two separately fresh 0023ZS sandbox attempts
+each pass 22/22 cases and 132/132 marker rows as `PASS_COMPLETE_MATRIX`.
+Disclosure scanning passes, exact owned sandbox-data cleanup completes, and no
+Godot process remains.
+
+The two earlier blocked audits remain byte-identical and historical 0023ZR
+Attempt 1 remains unmodified and unaccepted. Ordinary production Profile,
+metadata, ordinary user data and test root were not accessed. Await GPT review;
+real Profile read/recovery/write, default activation and later product-closure
+surfaces remain closed.
+
 Task 0023ZP completed at:
 
 ```text

@@ -75,6 +75,9 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0023ZN normalized full-matrix execution (ready for GPT review; two consecutive complete-matrix passes)
 → 0023ZO production Profile activation design and explicit authorization package (ready for GPT review; zero player-data I/O)
 → 0023ZP production Profile bootstrap/API static implementation (ready for GPT review; zero player-data I/O)
+→ 0023ZQ isolated production-policy matrix (blocked before behavior by outer path binding)
+→ 0023ZR runner binding repair/retry (blocked after first case by URI-scheme disclosure false positive)
+→ 0023ZS disclosure URI-boundary repair and fresh isolated matrix retry (ready for GPT review; two complete passes)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.
@@ -190,6 +193,14 @@ coverage. The new compile smoke and 60-assertion static validator pass, along
 with all ten authorized zero-I/O regressions. No production configuration,
 player-data/test-root access, fixture behavior, aggregate, main-scene run,
 export or build occurred.
+
+Tasks 0023ZQ and 0023ZR stopped before a complete matrix result on runner-only
+invocation and disclosure-scanner defects. Task 0023ZS retains the qualified
+argument-safe launcher, repairs only the URI left boundary while preserving
+drive/UNC fail-closed detection, and completes two fresh isolated attempts.
+Each passes 22/22 cases and 132/132 marker rows as `PASS_COMPLETE_MATRIX` with
+exact sandbox-data cleanup. Real production Profile access and activation
+remain separately gated.
 
 ## Milestone spine
 
