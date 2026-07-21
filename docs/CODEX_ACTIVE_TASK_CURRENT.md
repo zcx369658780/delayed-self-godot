@@ -1,30 +1,28 @@
 # Codex active task (CURRENT)
 
-- Status: `GAMEPLAY_PRESENTATION_ROADMAP_REBASELINE_READY_FOR_GPT_REVIEW`
-- Active task: `tasks/0023ZW_gameplay_breadth_presentation_localization_audio_roadmap_rebaseline_gate.md`
-- Last GPT-accepted gate: `TASK_0023ZV_PROCESS_RECONCILIATION_AND_CONTROLLED_READ_ACCEPTED`
-- Required checkpoint: `c1bc679ef73b8a86d9dac8559b3dfc010ccbe5b6`
-- Task publication commit: `a5e750d6214dfb56961d35083877e4d3829c2047`
-- Accepted controlled-read result: `LOADED / PRODUCTION_PROFILE_READY / MAIN_MENU`
-- Gate: `DOCUMENTATION ONLY / MAJOR PRODUCT-SCOPE REBASELINE + ZERO IMPLEMENTATION`
-- Current implemented baseline: exactly eight levels
-- Candidate submission target under planning: 12 core levels + 2 conditional stretch levels
+- Status: `CORE_MECHANICS_SIMULATION_FOUNDATION_READY_FOR_CODEX`
+- Active task: `tasks/0023ZX_core_mechanics_schema_simulation_solver_foundation_gate.md`
+- Last GPT-accepted gate: `TASK_0023ZW_GAMEPLAY_PRESENTATION_ROADMAP_REBASELINE_ACCEPTED_WITH_BINDING_SEQUENCE_POLICY`
+- Required checkpoint: `3515b6b5a8e09e6a7725c8024861063e3bbb8c45`
+- Task publication commit: `b291a0d5c6ba157e8030f7e7132e4589d9923576`
+- Gate: `IMPLEMENTATION / BACKWARD-COMPATIBLE CORE MECHANICS FOUNDATION + ZERO CATALOG/PROFILE CHANGE`
+- Implemented baseline: exactly eight formal levels
+- Accepted product target: 12 core levels + 2 conditional stretch rooms
+- Binding sequence policy: preserve sequences/IDs 1–8; append future 9–12
 - Current implemented finale: sequence 8 `two_echo_convergence`
-- Recommended future plan: `docs/production/EXPANDED_CONTENT_SUBMISSION_ROADMAP_CURRENT.md` (awaits GPT/owner acceptance)
+- Accepted future plan: `docs/production/EXPANDED_CONTENT_SUBMISSION_ROADMAP_CURRENT.md`
 
-Tasks 0023R–0023ZV are GPT-accepted and frozen within their stated scopes. Task 0023ZV completed one bounded production read-only observation with unchanged target metadata, zero sibling creation and no product/harness change. The one-read authorization is consumed.
+Tasks 0023R–0023ZW are GPT-accepted and frozen within their stated scopes. Task 0023ZW accepted the broader-mechanics, hand-drawn notebook, Simplified-Chinese-default and minimal credited-music direction.
 
-The owner has explicitly requested a major roadmap rebaseline: broaden puzzle mechanics rather than increase difficulty; add player-only crate pushing, player-only consumable keys/locks and broader multi-cell mechanisms; consider additional delayed-self-specific interactions; replace raw geometric presentation with a coherent hand-drawn/handwriting-adjacent style; make Simplified Chinese the submission default; and plan a minimal credited music layer using the supplied Crow Producer library.
+The binding expansion policy does not reorder or replace any existing room. Existing IDs, completion records, best turns and settings remain stable. `two_echo_convergence` remains the implemented sequence-8 finale during Task 0023ZX; future rooms 9–12, final-flag movement and Profile compatibility remain separate gates.
 
-Task 0023ZW documentation is complete and awaits GPT/owner review. Its recommendation is C: 12 submission-core levels plus two stability/date-gated stretch rooms, with a Chinese-default complete-flow plan, hand-drawn notebook presentation and minimal credited music. It did not modify product source, scenes, level/catalog data, schema, tests, project settings, Profile files, assets or build outputs.
+Task 0023ZX is the only active scope. It may extend only the versioned schema/loader, shared Simulation transition, canonical state, restart/replay behavior and BFS solver for YOU-only crates, YOU-only keys/locks, grouped barriers, typed sensors and one-shot latches. It may add only focused non-catalog fixtures/tests and the exact contract/report/current paths authorized by the task.
 
-The existing eight-level implementation remains frozen as the planning baseline. No expansion count, finale move, Profile reset/migration, asset choice or license interpretation becomes product authority until GPT/owner acceptance of Task 0023ZW.
-
-Production recovery/write/default activation, Menu New/Continue/Reset, settings implementation, localization implementation, asset import, build/export, release, upload and festival submission remain closed.
+All schema-v1 behavior and all eight formal levels must remain exact. Formal catalog/level data, scenes, gameplay/UI, App/Profile code and data, project settings, assets, fonts, audio, localization, build/export and release surfaces remain frozen.
 
 Expected terminal verdict:
 
 ```text
-GAMEPLAY_PRESENTATION_ROADMAP_REBASELINE_READY_FOR_GPT_REVIEW
-BLOCKED_GAMEPLAY_PRESENTATION_ROADMAP_REBASELINE
+CORE_MECHANICS_SIMULATION_FOUNDATION_READY_FOR_GPT_REVIEW
+BLOCKED_CORE_MECHANICS_SIMULATION_FOUNDATION
 ```
