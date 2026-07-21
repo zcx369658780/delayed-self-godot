@@ -1,5 +1,24 @@
 # Project memory
 
+## Task 0023ZV process reconciliation and controlled read
+
+Task 0023ZV preserved all eight local 0023ZU blocker documents externally,
+restored only those paths, fast-forwarded to current authority and retained the
+original 0023ZU `BLOCKED_BEFORE_AUTHORIZED_CHILD_START` report. The initial
+reconciled Godot process count was zero, so no process termination occurred.
+
+Exactly one accepted runner invocation started one guard-passing production
+read-only child. The bounded result was
+`LOADED / PRODUCTION_PROFILE_READY / MAIN_MENU`, progress counts `7 / 7 / 8`,
+and three public progress keys. Target metadata remained
+`true / 473 / 2026-07-19T08:15:02.2089459Z`; all four owned sibling-category
+counts remained zero before/after. Exit/stderr/markers were `0 / 0 / 1+1`,
+disclosure/frozen-hash/Git checks passed and final Godot count was zero.
+
+The one-read authorization is consumed. This establishes no recovery, write,
+reset, default activation, aggregate, menu, settings/localization or release
+authority.
+
 ## Task 0023ZT controlled production read-only harness construction
 
 Task 0023ZT adds an inert future Task 0023ZU observation harness without

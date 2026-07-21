@@ -250,3 +250,24 @@ content/metadata/sibling access, ordinary user-data discovery, test-root
 operation or future evidence-root creation occurred. Task 0023ZU is inactive
 and requires a separate task plus explicit owner authorization. See
 `docs/reports/0023ZT_CONTROLLED_PRODUCTION_READ_ONLY_HARNESS_CONSTRUCTION_REPORT.md`.
+# Task 0023ZV process reconciliation and controlled read
+
+Task 0023ZV completed at
+`PROCESS_RECONCILIATION_AND_CONTROLLED_READ_READY_FOR_GPT_REVIEW`. The eight
+Task 0023ZU continuation inputs were preserved byte-identically before exact
+restoration and ff-only synchronization. The reconciled Godot process set was
+already empty; no process termination occurred.
+
+One accepted runner invocation started one guard-passing
+`PRODUCTION_READ_ONLY` child. It passed as
+`LOADED / PRODUCTION_PROFILE_READY / MAIN_MENU`, with progress counts
+`7 / 7 / 8` and three public keys. Target metadata remained
+`true / 473 / 2026-07-19T08:15:02.2089459Z`; recovery, activation-backup, temp
+and transaction counts all remained `0 / 0`. Native exit was 0, stderr was
+empty, marker counts were 1/1, disclosure checks passed and final Godot count
+was zero.
+
+The single authorization is consumed. Do not retry or perform another read.
+Recovery/write/reset/default activation and later closure surfaces remain
+closed. See
+`docs/reports/0023ZV_PROCESS_RECONCILIATION_AND_CONTROLLED_READ_REPORT.md`.

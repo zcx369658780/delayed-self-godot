@@ -5,6 +5,9 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
+4. [`Task 0023ZV`](../tasks/0023ZV_residual_godot_process_reconciliation_and_controlled_read_retry_gate.md) — completed process reconciliation and single controlled-read continuation
+5. [`Task 0023ZV report`](reports/0023ZV_PROCESS_RECONCILIATION_AND_CONTROLLED_READ_REPORT.md) — zero-process reconciliation, one bounded `LOADED` observation and exact no-write proof
+6. [`Task 0023ZU report`](reports/0023ZU_CONTROLLED_PRODUCTION_READ_ONLY_OBSERVATION_REPORT.md) — preserved original pre-child blocker result
 4. [`Task 0023ZT`](../tasks/0023ZT_controlled_production_read_only_harness_construction_gate.md) — completed inert controlled production read-only harness construction gate
 5. [`Task 0023ZT report`](reports/0023ZT_CONTROLLED_PRODUCTION_READ_ONLY_HARNESS_CONSTRUCTION_REPORT.md) — triple-guard design, 123-assertion static qualification, 14 zero-I/O regressions and two no-authorization proofs
 4. [`Task 0023ZS`](../tasks/0023ZS_disclosure_scanner_uri_boundary_repair_and_matrix_retry_gate.md) — completed disclosure URI-boundary repair and two-attempt isolated matrix retry

@@ -12,6 +12,14 @@ closed before ordinary user-data discovery. Task 0023ZT performed zero real
 Profile I/O and does not activate the reserved Task 0023ZU execution; a new
 task and explicit owner authorization remain mandatory.
 
+Task 0023ZU stopped before its child on preflight residue. Task 0023ZV
+preserved that blocker record, reconciled an already-empty Godot process set,
+and completed one new owner-authorized controlled read-only observation. The
+result was `LOADED / PRODUCTION_PROFILE_READY / MAIN_MENU`; target metadata and
+all four fixed owned-sibling category totals remained exact before/after. The
+one-read authorization is consumed. Recovery, first write and default
+activation remain separate closed gates.
+
 ## 1. Authority and current architecture
 
 The formal product remains exactly eight catalog entries. Sequence 8
