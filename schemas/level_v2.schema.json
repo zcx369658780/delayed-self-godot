@@ -1,0 +1,35 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/zcx369658780/delayed-self-godot/main/schemas/level_v2.schema.json",
+  "title": "Delayed Self Level Schema v2",
+  "description": "Strict additive core-mechanics contract. Schema v1 remains independently valid and unchanged.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "level_id", "title", "terrain_rows", "player_spawn", "echoes", "plates", "doors", "exit", "metadata", "validation", "crates", "keys", "locks", "barrier_groups", "sensors", "latches"],
+  "properties": {
+    "schema_version": {"const": 2},
+    "level_id": {"$ref": "level_v1.schema.json#/$defs/stable_id"},
+    "title": {"type": "string", "minLength": 1, "maxLength": 120},
+    "terrain_rows": {"type": "array", "minItems": 1, "maxItems": 64, "items": {"type": "string", "minLength": 1, "maxLength": 64, "pattern": "^[#.]+$"}},
+    "player_spawn": {"$ref": "level_v1.schema.json#/$defs/coordinate"},
+    "echoes": {"type": "array", "maxItems": 8, "items": {"$ref": "level_v1.schema.json#/$defs/echo"}},
+    "plates": {"type": "array", "maxItems": 64, "items": {"$ref": "level_v1.schema.json#/$defs/plate"}},
+    "doors": {"type": "array", "maxItems": 64, "items": {"$ref": "level_v1.schema.json#/$defs/door"}},
+    "exit": {"$ref": "level_v1.schema.json#/$defs/exit"},
+    "metadata": {"$ref": "level_v1.schema.json#/$defs/metadata"},
+    "validation": {"$ref": "level_v1.schema.json#/$defs/validation"},
+    "crates": {"type": "array", "maxItems": 16, "items": {"$ref": "#/$defs/positioned_id"}},
+    "keys": {"type": "array", "maxItems": 16, "items": {"$ref": "#/$defs/key"}},
+    "locks": {"type": "array", "maxItems": 16, "items": {"$ref": "#/$defs/key"}},
+    "barrier_groups": {"type": "array", "maxItems": 16, "items": {"$ref": "#/$defs/barrier_group"}},
+    "sensors": {"type": "array", "maxItems": 32, "items": {"$ref": "#/$defs/sensor"}},
+    "latches": {"type": "array", "maxItems": 16, "items": {"$ref": "#/$defs/latch"}}
+  },
+  "$defs": {
+    "positioned_id": {"type": "object", "additionalProperties": false, "required": ["id", "position"], "properties": {"id": {"$ref": "level_v1.schema.json#/$defs/stable_id"}, "position": {"$ref": "level_v1.schema.json#/$defs/coordinate"}}},
+    "key": {"type": "object", "additionalProperties": false, "required": ["id", "position", "key_type"], "properties": {"id": {"$ref": "level_v1.schema.json#/$defs/stable_id"}, "position": {"$ref": "level_v1.schema.json#/$defs/coordinate"}, "key_type": {"const": "main"}}},
+    "barrier_group": {"type": "object", "additionalProperties": false, "required": ["id", "cells", "initial_open", "all_sensor_ids"], "properties": {"id": {"$ref": "level_v1.schema.json#/$defs/stable_id"}, "cells": {"type": "array", "minItems": 1, "maxItems": 16, "uniqueItems": true, "items": {"$ref": "level_v1.schema.json#/$defs/coordinate"}}, "initial_open": {"type": "boolean"}, "all_sensor_ids": {"type": "array", "minItems": 1, "maxItems": 32, "uniqueItems": true, "items": {"$ref": "level_v1.schema.json#/$defs/stable_id"}}}},
+    "sensor": {"type": "object", "additionalProperties": false, "required": ["id", "position", "activator", "include_crates"], "properties": {"id": {"$ref": "level_v1.schema.json#/$defs/stable_id"}, "position": {"$ref": "level_v1.schema.json#/$defs/coordinate"}, "activator": {"enum": ["ANY_ACTOR", "YOU_ONLY", "ECHO_ONLY"]}, "include_crates": {"type": "boolean"}}},
+    "latch": {"type": "object", "additionalProperties": false, "required": ["id", "position", "activator", "target_barrier_group_id", "target_open"], "properties": {"id": {"$ref": "level_v1.schema.json#/$defs/stable_id"}, "position": {"$ref": "level_v1.schema.json#/$defs/coordinate"}, "activator": {"enum": ["ANY_ACTOR", "YOU_ONLY", "ECHO_ONLY"]}, "target_barrier_group_id": {"$ref": "level_v1.schema.json#/$defs/stable_id"}, "target_open": {"type": "boolean"}}}
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "vector_contract_version": 2,
+  "simulation_contract": "simulation_v2",
+  "status": "TASK_0024_IMPLEMENTATION_FIXTURES",
+  "action_order": ["UP", "RIGHT", "DOWN", "LEFT", "WAIT"],
+  "fixtures": [
+    {"id":"crate_echo","path":"res://tests/simulation/fixtures/task_0023zx_crate_echo.json"},
+    {"id":"key_lock","path":"res://tests/simulation/fixtures/task_0023zx_key_lock.json"},
+    {"id":"sensor_barrier","path":"res://tests/simulation/fixtures/task_0023zx_sensor_barrier.json"},
+    {"id":"latch_defer","path":"res://tests/simulation/fixtures/task_0023zx_latch_defer.json"},
+    {"id":"integration","path":"res://tests/simulation/fixtures/task_0023zx_integration.json"}
+  ],
+  "coverage": ["you_only_crate_push", "echo_crate_block", "you_only_key_collection", "same_turn_lock_consumption", "typed_sensor", "grouped_barrier_next_turn", "deferred_closure", "one_shot_latch", "canonical_v2_mutable_state"]
+}

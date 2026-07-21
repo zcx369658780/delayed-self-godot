@@ -545,3 +545,7 @@ Catalog migration, sequence 9, route walkthrough Help, new mechanics, and new
 puzzle rooms remain closed. Localization, persistent save/settings,
 production assets/audio, accessibility, Windows export, RC, festival package,
 Web, release, and submission remain separate gates.
+
+## 2026-07-22 — owned headless Godot lifecycle policy
+
+Headless tests run through `tests/tools/run_owned_godot_headless.ps1` with PowerShell 7. The wrapper records its direct PID and exact arguments, preserves native test result, and always cleans only its owned PID/verified descendants in `finally`; timeout cleanup is lifecycle management, not a retry. Tasks 0023ZX/ZY/ZZ remain historical blockers; Task 0024 closes the lifecycle contract without changing formal product data.

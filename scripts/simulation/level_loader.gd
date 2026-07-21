@@ -2,6 +2,7 @@ class_name DelayedSelfLevelLoader
 extends RefCounted
 
 const TOP_FIELDS := ["schema_version", "level_id", "title", "terrain_rows", "player_spawn", "echoes", "plates", "doors", "exit", "metadata", "validation"]
+const TOP_FIELDS_V2 := ["schema_version", "level_id", "title", "terrain_rows", "player_spawn", "echoes", "plates", "doors", "exit", "metadata", "validation", "crates", "keys", "locks", "barrier_groups", "sensors", "latches"]
 const ID_PATTERN := "^[a-z][a-z0-9]*(?:_[a-z0-9]+)*$"
 
 
@@ -16,6 +17,12 @@ func load_file(path: String) -> Dictionary:
 
 
 func validate_dict(source) -> Dictionary:
+	if source is Dictionary and _integer_number(source.get("schema_version")) and int(source.get("schema_version")) == 2:
+		return _validate_v2(source)
+	return _validate_v1(source)
+
+
+func _validate_v1(source) -> Dictionary:
 	var errors: Array = []
 	if not source is Dictionary:
 		return _invalid([_error("SCHEMA_SHAPE_ERROR", "$", "Top level must be an object")])
@@ -212,6 +219,157 @@ func _cross_validate(source: Dictionary, rows, width: int, height: int, echoes: 
 			_add(errors, "INITIAL_DOOR_STATE_MISMATCH", "$.doors[%d].initial_open" % index, "Initial door state is not combinationally consistent")
 
 
+func _validate_v2(source: Dictionary) -> Dictionary:
+	var errors: Array = []
+	if not source is Dictionary:
+		return _invalid([_error("SCHEMA_SHAPE_ERROR", "$", "Top level must be an object")])
+	_shape_object(source, "$", TOP_FIELDS_V2, TOP_FIELDS_V2, errors)
+	var base: Dictionary = {}
+	for field in TOP_FIELDS:
+		base[field] = source.get(field)
+	base["schema_version"] = 1
+	var v1 := _validate_v1(base)
+	if not v1.ok:
+		for error in v1.errors:
+			errors.append(error)
+	var rows = source.get("terrain_rows", [])
+	var width: int = rows[0].length() if rows is Array and not rows.is_empty() and rows[0] is String else 0
+	var height: int = rows.size() if rows is Array else 0
+	var ids := {}
+	var static_cells := {}
+	for door in source.get("doors", []) if source.get("doors") is Array else []:
+		if door is Dictionary and _coordinate_ok(door.get("position")):
+			static_cells[_coord_key(door.position)] = true
+	var exit_data = source.get("exit", {})
+	if exit_data is Dictionary and _coordinate_ok(exit_data.get("position")):
+		static_cells[_coord_key(exit_data.position)] = true
+	var families := {"crates": ["id", "position"], "keys": ["id", "position", "key_type"], "locks": ["id", "position", "key_type"], "sensors": ["id", "position", "activator", "include_crates"], "latches": ["id", "position", "activator", "target_barrier_group_id", "target_open"]}
+	for family in families:
+		var items = source.get(family)
+		if not items is Array or items.size() > (32 if family == "sensors" else 16):
+			_add(errors, "SCHEMA_SHAPE_ERROR", "$." + family, "v2 entity array has an invalid size")
+			continue
+		var seen := {}
+		for index in items.size():
+			var item = items[index]
+			var path := "$.%s[%d]" % [family, index]
+			if not item is Dictionary:
+				_add(errors, "SCHEMA_SHAPE_ERROR", path, "Entity must be an object")
+				continue
+			_shape_object(item, path, families[family], families[family], errors)
+			_validate_string(item.get("id"), path + ".id", 1, 64, true, errors)
+			_track_id(item.get("id"), seen, path + ".id", errors)
+			_validate_coordinate(item.get("position"), path + ".position", errors)
+			_check_placement(item.get("position"), path + ".position", rows, width, height, errors)
+			if family == "keys" or family == "locks":
+				if item.get("key_type") != "main": _add(errors, "SCHEMA_SHAPE_ERROR", path + ".key_type", "Only main key family is supported")
+			if family == "sensors" or family == "latches":
+				if not ["ANY_ACTOR", "YOU_ONLY", "ECHO_ONLY"].has(item.get("activator")):
+					_add(errors, "SCHEMA_SHAPE_ERROR", path + ".activator", "Unknown activator")
+			if family == "sensors" and typeof(item.get("include_crates")) != TYPE_BOOL:
+				_add(errors, "SCHEMA_SHAPE_ERROR", path + ".include_crates", "include_crates must be boolean")
+			if family == "latches" and typeof(item.get("target_open")) != TYPE_BOOL:
+				_add(errors, "SCHEMA_SHAPE_ERROR", path + ".target_open", "target_open must be boolean")
+			if ["crates", "keys", "locks"].has(family) and _coordinate_ok(item.get("position")):
+				var cell := _coord_key(item.position)
+				if static_cells.has(cell): _add(errors, "STATIC_POSITION_OVERLAP", path + ".position", "Static v2 cell overlaps another blocking static cell")
+				static_cells[cell] = true
+			ids[family] = seen
+	var barrier_ids := {}
+	var crate_cells := {}
+	for crate in source.get("crates", []) if source.get("crates") is Array else []:
+		if crate is Dictionary and _coordinate_ok(crate.get("position")):
+			crate_cells[_coord_key(crate.position)] = true
+	var barriers = source.get("barrier_groups")
+	if not barriers is Array or barriers.size() > 16:
+		_add(errors, "SCHEMA_SHAPE_ERROR", "$.barrier_groups", "Barrier groups must be an array with at most 16 entries")
+		barriers = []
+	for index in barriers.size():
+		var group = barriers[index]
+		var path := "$.barrier_groups[%d]" % index
+		if not group is Dictionary:
+			_add(errors, "SCHEMA_SHAPE_ERROR", path, "Barrier group must be an object")
+			continue
+		_shape_object(group, path, ["id", "cells", "initial_open", "all_sensor_ids"], ["id", "cells", "initial_open", "all_sensor_ids"], errors)
+		_validate_string(group.get("id"), path + ".id", 1, 64, true, errors)
+		_track_id(group.get("id"), barrier_ids, path + ".id", errors)
+		if typeof(group.get("initial_open")) != TYPE_BOOL: _add(errors, "SCHEMA_SHAPE_ERROR", path + ".initial_open", "initial_open must be boolean")
+		var cells = group.get("cells")
+		if not cells is Array or cells.is_empty() or cells.size() > 16:
+			_add(errors, "SCHEMA_SHAPE_ERROR", path + ".cells", "Barrier group needs 1 to 16 cells")
+		else:
+			var cell_seen := {}
+			for cell_index in cells.size():
+				var position = cells[cell_index]
+				_validate_coordinate(position, path + ".cells[%d]" % cell_index, errors)
+				_check_placement(position, path + ".cells[%d]" % cell_index, rows, width, height, errors)
+				if _coordinate_ok(position):
+					var key := _coord_key(position)
+					if cell_seen.has(key) or (static_cells.has(key) and not crate_cells.has(key)): _add(errors, "STATIC_POSITION_OVERLAP", path + ".cells[%d]" % cell_index, "Barrier cell overlaps a blocking static cell")
+					cell_seen[key] = true; static_cells[key] = true
+		var references = group.get("all_sensor_ids")
+		if not references is Array or references.is_empty() or references.size() > 32: _add(errors, "SCHEMA_SHAPE_ERROR", path + ".all_sensor_ids", "Barrier group needs sensor references")
+		else:
+			var ref_seen := {}
+			for reference in references:
+				_validate_string(reference, path + ".all_sensor_ids", 1, 64, true, errors)
+				if ref_seen.has(reference): _add(errors, "DUPLICATE_SENSOR_REFERENCE", path + ".all_sensor_ids", "Sensor reference is duplicated")
+				ref_seen[reference] = true
+	for index in barriers.size():
+		var group = barriers[index]
+		if not group is Dictionary: continue
+		for sensor_id in group.get("all_sensor_ids", []):
+			if not ids.get("sensors", {}).has(sensor_id): _add(errors, "UNKNOWN_SENSOR_REFERENCE", "$.barrier_groups[%d].all_sensor_ids" % index, "Barrier references missing sensor")
+	var latches = source.get("latches", [])
+	if not latches is Array: latches = []
+	for index in latches.size():
+		var latch = latches[index]
+		if latch is Dictionary and not barrier_ids.has(latch.get("target_barrier_group_id")):
+			_add(errors, "UNKNOWN_BARRIER_REFERENCE", "$.latches[%d].target_barrier_group_id" % index, "Latch targets missing barrier group")
+	var initial_occupied := {}
+	if _coordinate_ok(source.get("player_spawn")): initial_occupied[_coord_key(source.player_spawn)] = true
+	for echo in source.get("echoes", []) if source.get("echoes") is Array else []:
+		if echo is Dictionary and _coordinate_ok(echo.get("spawn")): initial_occupied[_coord_key(echo.spawn)] = true
+	for crate in source.get("crates", []) if source.get("crates") is Array else []:
+		if crate is Dictionary and _coordinate_ok(crate.get("position")):
+			var crate_cell := _coord_key(crate.position)
+			if initial_occupied.has(crate_cell): _add(errors, "FORBIDDEN_INITIAL_OCCUPANCY", "$.crates", "Crate may not share an initial actor cell")
+			initial_occupied[crate_cell] = true
+	for group in barriers:
+		if not group is Dictionary or typeof(group.get("initial_open")) != TYPE_BOOL: continue
+		var should_open := true
+		for sensor_id in group.get("all_sensor_ids", []):
+			var sensor := {}
+			for candidate in source.get("sensors", []) if source.get("sensors") is Array else []:
+				if candidate is Dictionary and candidate.get("id") == sensor_id: sensor = candidate
+			if sensor.is_empty(): continue
+			var occupied := _coordinate_ok(sensor.get("position")) and initial_occupied.has(_coord_key(sensor.position))
+			if sensor.get("activator") == "ECHO_ONLY":
+				occupied = false
+				for echo in source.get("echoes", []) if source.get("echoes") is Array else []:
+					if echo is Dictionary and _coordinate_ok(echo.get("spawn")) and echo.spawn == sensor.position: occupied = true
+			elif sensor.get("activator") == "YOU_ONLY":
+				occupied = _coordinate_ok(source.get("player_spawn")) and source.player_spawn == sensor.position
+			if not sensor.get("include_crates", false):
+				# Actor occupancy above is already explicit for all three activator classes.
+				pass
+			should_open = should_open and occupied
+		var initially_occupied := false
+		for cell in group.get("cells", []):
+			if _coordinate_ok(cell) and initial_occupied.has(_coord_key(cell)): initially_occupied = true
+		if group.initial_open != should_open and not (group.initial_open and initially_occupied): _add(errors, "INITIAL_BARRIER_STATE_MISMATCH", "$.barrier_groups", "Initial barrier state is not sensor-consistent")
+	if not errors.is_empty(): return _invalid(errors)
+	var normalized: Dictionary = source.duplicate(true)
+	_normalize_numbers(normalized)
+	for family in ["echoes", "plates", "doors", "crates", "keys", "locks", "barrier_groups", "sensors", "latches"]:
+		normalized[family].sort_custom(func(a, b): return a.id < b.id)
+	for door in normalized.doors: door.all_plate_ids.sort()
+	for group in normalized.barrier_groups:
+		group.all_sensor_ids.sort()
+		group.cells.sort_custom(func(a, b): return _coord_key(a) < _coord_key(b))
+	return {"ok": true, "status": "VALID_LEVEL", "errors": [], "level": normalized}
+
+
 func _check_static(position, path: String, rows, width: int, height: int, positions: Dictionary, errors: Array) -> void:
 	_check_placement(position, path, rows, width, height, errors)
 	if _coordinate_ok(position):
@@ -290,6 +448,11 @@ func _normalize_numbers(level: Dictionary) -> void:
 		plate.position = [int(plate.position[0]), int(plate.position[1])]
 	for door in level.doors:
 		door.position = [int(door.position[0]), int(door.position[1])]
+	if int(level.schema_version) == 2:
+		for family in ["crates", "keys", "locks", "sensors", "latches"]:
+			for item in level[family]: item.position = [int(item.position[0]), int(item.position[1])]
+		for group in level.barrier_groups:
+			for index in group.cells.size(): group.cells[index] = [int(group.cells[index][0]), int(group.cells[index][1])]
 	level.exit.position = [int(level.exit.position[0]), int(level.exit.position[1])]
 	level.validation.recommended_search_depth = int(level.validation.recommended_search_depth)
 	if level.validation.has("expected_min_turns"):

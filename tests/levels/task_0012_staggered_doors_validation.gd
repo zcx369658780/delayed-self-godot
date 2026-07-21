@@ -292,21 +292,23 @@ func _test_exit_restart_and_blocked_history(level: Dictionary, solved: Dictionar
 
 func _test_catalog_progression() -> void:
 	var loaded := CatalogLoader.new().load_file("res://data/catalog/level_catalog_v1.json")
-	_require(loaded.ok and loaded.catalog.entries.size() == 6, "tracked catalog validates with exactly six entries")
-	if not loaded.ok or loaded.catalog.entries.size() != 6:
+	_require(loaded.ok and loaded.catalog.entries.size() == 8, "tracked catalog validates with exactly eight entries")
+	if not loaded.ok or loaded.catalog.entries.size() != 8:
 		return
 	var entries: Array = loaded.catalog.entries
-	_require(entries.map(func(entry): return entry.level_id) == ["tutorial_reach_exit", "tutorial_echo_bridge", "vertical_slice_delay_3", "door_one_turn_late", "two_keys_one_door", "staggered_doors"], "catalog sequence appends only Level 6")
-	_require(not entries[4].final_level and entries[5].final_level and entries.filter(func(entry): return entry.final_level).size() == 1, "Level 6 is the sole final catalog entry")
+	_require(entries.map(func(entry): return entry.level_id) == ["tutorial_reach_exit", "tutorial_echo_bridge", "vertical_slice_delay_3", "door_one_turn_late", "two_keys_one_door", "staggered_doors", "echo_spacing_bridge", "two_echo_convergence"], "catalog sequence preserves the accepted eight-level order")
+	_require(not entries[5].final_level and entries[7].final_level and entries.filter(func(entry): return entry.final_level).size() == 1, "Level 8 is the sole final catalog entry")
 	_require(entries[5].unlock_prerequisites == ["two_keys_one_door"] and entries[5].hud_mode == "STANDARD_COMPACT" and entries[5].classification == "standard", "Level 6 catalog route facts are exact")
 	var progress = ProgressStore.new(loaded.catalog)
 	_require(progress.snapshot().unlocked_level_ids == ["tutorial_reach_exit"], "six-level progress initially unlocks only Tutorial 0")
 	for item in [["tutorial_reach_exit", 3], ["tutorial_echo_bridge", 9], ["vertical_slice_delay_3", 9], ["door_one_turn_late", 9]]:
 		_require(progress.record_completion(item[0], item[1]), "accepted progression records " + item[0])
 	_require(progress.is_unlocked("two_keys_one_door") and not progress.is_unlocked("staggered_doors"), "Level 6 remains locked before Level 5 completion")
-	_require(progress.record_completion("two_keys_one_door", 12) and progress.is_unlocked("staggered_doors"), "Level 5 completion unlocks exactly Level 6")
+	_require(progress.record_completion("two_keys_one_door", 12) and progress.is_unlocked("staggered_doors") and not progress.is_unlocked("echo_spacing_bridge"), "Level 5 completion unlocks exactly Level 6")
+	_require(progress.record_completion("staggered_doors", 15) and progress.is_unlocked("echo_spacing_bridge") and not progress.is_unlocked("two_echo_convergence"), "Level 6 completion unlocks sequence 7")
+	_require(progress.record_completion("echo_spacing_bridge", 16) and progress.is_unlocked("two_echo_convergence"), "Level 7 completion unlocks the final sequence 8")
 	progress.reset_test_profile()
-	_require(progress.snapshot() == {"completed_level_ids": [], "best_turns": {}, "unlocked_level_ids": ["tutorial_reach_exit"]}, "six-level reset restores exact initial progress")
+	_require(progress.snapshot() == {"completed_level_ids": [], "best_turns": {}, "unlocked_level_ids": ["tutorial_reach_exit"]}, "eight-level reset restores exact initial progress")
 	var direct := RouteRequest.parse_user_args(["--level-id=staggered_doors"])
 	_require(direct.ok and direct.level_id == "staggered_doors", "generic direct-level parser accepts Level 6 ID")
 
@@ -319,7 +321,7 @@ func _test_runtime_smoke(level: Dictionary, solved: Dictionary) -> void:
 		"hud_mode": "STANDARD_COMPACT",
 		"classification": "standard",
 		"development_direct": true,
-		"final_level": true,
+		"final_level": false,
 	})
 	_require(configured, "Level 6 configures the reusable Gameplay public route")
 	root.add_child(scene)
