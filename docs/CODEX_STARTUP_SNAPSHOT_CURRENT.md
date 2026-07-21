@@ -4,7 +4,7 @@
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
 - Current gate: Task 0024 owned Godot headless-test lifecycle and core-mechanics closeout
 - Active task: `tasks/0024_owned_godot_headless_test_lifecycle_and_core_mechanics_closeout_gate.md`
-- Active status: `OWNED_GODOT_TEST_LIFECYCLE_AND_CORE_MECHANICS_CLOSEOUT_READY_FOR_CODEX`
+- Active status: `BLOCKED_OWNED_GODOT_TEST_LIFECYCLE_OR_CORE_MECHANICS_FOUNDATION`
 - Closed predecessors: all Tasks through `0023ZZ`
 - Latest GPT adjudication: `TASKS_0023ZX_0023ZY_0023ZZ_CLOSED_ON_TEST_PROCESS_LIFECYCLE_CONTRACT_DEFECT`
 - Last GPT-accepted product gate: `TASK_0023ZW_GAMEPLAY_PRESENTATION_ROADMAP_REBASELINE_ACCEPTED_WITH_BINDING_SEQUENCE_POLICY`
@@ -24,6 +24,6 @@ Before synchronization, Task 0024 must preserve the complete current dirty state
 
 Task 0024 must implement an ownership-aware wrapper for every Godot headless invocation. It records the direct PID and exact arguments, derives only proven descendants, waits normally, and always performs exact owned-process cleanup in `finally`. That cleanup is part of the same test invocation and remains mandatory after pass, failure or timeout; it is not a validation retry.
 
-After wrapper qualification, the preserved schema-v2/Simulation/solver, 66 reviewed UID sidecars and narrow Task 0012 work may continue. Exactly one complete final core-mechanics validation is authorized, with no substantive-failure rerun.
+The unique final-matrix invocation was consumed before wrapper qualification and matrix coverage were complete. The pushed `fdaf2b8` implementation is preserved, but Task 0024 is blocked and its matrix must not be rerun. A new explicit correction gate is required before wrapper repair, qualification completion, or final validation can continue.
 
 Formal catalog and eight formal level JSON files, final flag, production Profile, Gameplay/UI, project settings, assets, fonts, audio, localization, build/export, release, upload and submission remain closed.

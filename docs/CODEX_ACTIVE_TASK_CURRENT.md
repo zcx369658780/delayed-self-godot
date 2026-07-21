@@ -1,6 +1,6 @@
 # Codex active task (CURRENT)
 
-- Status: `OWNED_GODOT_TEST_LIFECYCLE_AND_CORE_MECHANICS_CLOSEOUT_READY_FOR_CODEX`
+- Status: `BLOCKED_OWNED_GODOT_TEST_LIFECYCLE_OR_CORE_MECHANICS_FOUNDATION`
 - Active task: `tasks/0024_owned_godot_headless_test_lifecycle_and_core_mechanics_closeout_gate.md`
 - Closed predecessors: all Tasks through `0023ZZ`; none may be resumed directly
 - Latest GPT adjudication: `TASKS_0023ZX_0023ZY_0023ZZ_CLOSED_ON_TEST_PROCESS_LIFECYCLE_CONTRACT_DEFECT`
@@ -23,10 +23,10 @@ After wrapper qualification, Task 0024 may finish the preserved schema-v2/Simula
 
 Formal catalog and eight formal level JSON files, final flag, production Profile, Gameplay/UI, project settings, assets, fonts, audio, localization, build/export, release, upload and submission remain closed.
 
-Expected terminal verdict:
+Task 0024 is blocked after its unique final-matrix invocation was consumed before all Section 6 qualification requirements were proven. The committed wrapper lacks complete descendant identity validation and independent stderr-policy classification, and the committed final runner does not cover the complete required v2 matrix. Do not rerun the final matrix or represent `fdaf2b8` as ready for GPT review without a new explicit correction gate.
+
+Terminal verdict:
 
 ```text
-OWNED_GODOT_TEST_LIFECYCLE_AND_CORE_MECHANICS_FOUNDATION_READY_FOR_GPT_REVIEW
 BLOCKED_OWNED_GODOT_TEST_LIFECYCLE_OR_CORE_MECHANICS_FOUNDATION
-PROTECTED_DATA_BOUNDARY_BREACH
 ```

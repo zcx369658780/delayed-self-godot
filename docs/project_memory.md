@@ -549,3 +549,5 @@ Web, release, and submission remain separate gates.
 ## 2026-07-22 — owned headless Godot lifecycle policy
 
 Headless tests run through `tests/tools/run_owned_godot_headless.ps1` with PowerShell 7. The wrapper records its direct PID and exact arguments, preserves native test result, and always cleans only its owned PID/verified descendants in `finally`; timeout cleanup is lifecycle management, not a retry. Tasks 0023ZX/ZY/ZZ remain historical blockers; Task 0024 closes the lifecycle contract without changing formal product data.
+
+Correction: Task 0024 did not validly close. Its unique final-matrix invocation was consumed before all wrapper qualifications were proven, while the committed wrapper and final runner omit required identity/classification and v2-matrix coverage. Do not reuse the earlier READY verdict; continuation requires a new explicit correction gate.
