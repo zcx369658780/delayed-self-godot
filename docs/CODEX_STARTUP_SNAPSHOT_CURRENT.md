@@ -2,26 +2,26 @@
 
 - Status: `CURRENT`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Current gate: Task 0023ZW gameplay-breadth, presentation, localization and audio roadmap rebaseline
-- Active task: `tasks/0023ZW_gameplay_breadth_presentation_localization_audio_roadmap_rebaseline_gate.md`
-- Active status: `GAMEPLAY_PRESENTATION_ROADMAP_REBASELINE_READY_FOR_GPT_REVIEW`
-- Last GPT-accepted gate: `TASK_0023ZV_PROCESS_RECONCILIATION_AND_CONTROLLED_READ_ACCEPTED`
-- Required checkpoint: `c1bc679ef73b8a86d9dac8559b3dfc010ccbe5b6`
-- Task publication commit: `a5e750d6214dfb56961d35083877e4d3829c2047`
-- Current implemented baseline: exactly eight levels
-- Candidate submission target under planning: 12 core levels + 2 conditional stretch levels
+- Current gate: Task 0023ZX backward-compatible core mechanics schema/Simulation/solver foundation
+- Active task: `tasks/0023ZX_core_mechanics_schema_simulation_solver_foundation_gate.md`
+- Active status: `CORE_MECHANICS_SIMULATION_FOUNDATION_READY_FOR_CODEX`
+- Last GPT-accepted gate: `TASK_0023ZW_GAMEPLAY_PRESENTATION_ROADMAP_REBASELINE_ACCEPTED_WITH_BINDING_SEQUENCE_POLICY`
+- Required checkpoint: `3515b6b5a8e09e6a7725c8024861063e3bbb8c45`
+- Task publication commit: `b291a0d5c6ba157e8030f7e7132e4589d9923576`
+- Implemented baseline: exactly eight formal levels
+- Accepted product target: 12 core levels + 2 conditional stretch rooms
+- Binding sequence policy: preserve sequences/IDs 1–8; append future 9–12
 - Current implemented finale: sequence 8 `two_echo_convergence`
-- Selected ending direction at current baseline: `B — FINAL_COMPLETION_OVERLAY_PLUS_BOUNDED_RETURN_STATE`
-- Recommended future plan: `docs/production/EXPANDED_CONTENT_SUBMISSION_ROADMAP_CURRENT.md` (awaits GPT/owner acceptance)
+- Selected presentation direction: hand-drawn delayed notebook / ink-ECHO
+- Submission language direction: new-profile default `zh-Hans` after a future compatibility gate
+- Current plan: `docs/production/EXPANDED_CONTENT_SUBMISSION_ROADMAP_CURRENT.md`
 
-Tasks 0023R–0023ZV remain accepted historical authorities. Task 0023ZV completed one valid production read-only boot as `LOADED / PRODUCTION_PROFILE_READY / MAIN_MENU`, with bounded counts `7 / 7 / 8`, unchanged target metadata and zero owned-sibling categories. No further read is authorized.
+Tasks 0023R–0023ZW are accepted historical authorities. Task 0023ZV proved one bounded production read-only boot with unchanged metadata and zero sibling creation. Task 0023ZW accepted the 12-core/14-stretch product direction while preserving the existing eight-level implementation.
 
-Task 0023ZW documentation-only planning is complete and reopens product-scope direction without changing the implemented baseline. It recommends 12 core levels plus 2 conditional stretch rooms, a possible new finale only after a future accepted catalog/migration gate, and explicit stable-ID/Profile policy decisions before any implementation authorization.
+Task 0023ZX may implement only the versioned pure rules foundation for YOU-only crates, YOU-only keys/locks, grouped multi-cell barriers, typed sensors and one-shot latches. It must extend schema/loader, the single Simulation authority, canonical state, restart/replay and BFS, using focused non-catalog fixtures.
 
-Required core mechanic candidates are player-only push crates, player-only consumable keys/locks, multi-cell barriers/bridges, typed occupancy sensors and one-shot room latches. Paired portals, one-way gates, fragile floors and conveyors are stretch candidates only. The doctrine is broader mechanics without a higher difficulty ceiling.
+Schema v1, all existing transition vectors and all eight formal levels must remain behavior-identical. Existing IDs/order, catalog, final flag, production Profile, App/UI/gameplay scenes, project settings, assets, fonts, audio and localization remain unchanged.
 
-The presentation candidate is a hand-drawn delayed-notebook/ink-ECHO style that keeps the grid/collision system underneath. Simplified Chinese is the proposed submission default. Audio planning must use the owner-supplied Crow Producer library only as a licensed audition source and must preserve required attribution. No asset, font or music file may be downloaded or imported in this task.
+Future implementation order remains: pure mechanics foundation → non-catalog gameplay vertical slices → append-only rooms 9–12/catalog/Profile compatibility → hand-drawn presentation → Chinese/font → licensed music → production write/default/menu flow → complete-flow/build/submission.
 
-Product source, scenes, level/catalog data, schema, tests, project settings, Profile files and build outputs remain frozen. Recovery/write/default activation, Menu/settings/localization implementation, asset import, build/export, release, upload and submission remain closed.
-
-Do not resume Tasks 0023ZQ, 0023ZR, 0023ZS, 0023ZT, 0023ZU or 0023ZV. Do not resume Tasks 0023Y, 0023Z, 0023ZA, 0023ZB, 0023ZE, 0023ZF, 0023ZH, 0023ZI, 0023ZK, 0023ZL, 0023ZJ, 0023ZM, 0023ZN, 0023ZO or 0023ZP, and do not reuse their fixtures. Historical blocked tasks 0023, 0023S and 0023U remain closed.
+Do not resume Tasks 0023ZQ–0023ZW. Do not access production Profile or test-root data. Do not import/download assets, fonts or audio. Do not build, export, upload or submit.
