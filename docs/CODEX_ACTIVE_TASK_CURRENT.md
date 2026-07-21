@@ -1,29 +1,33 @@
 # Codex active task (CURRENT)
 
-- Status: `AWAITING_OWNER_AUTHORIZATION_AFTER_CORE_MECHANICS_PREFLIGHT_BLOCK`
-- Active task: `NONE`
-- Closed task: `0023ZX` core-mechanics schema/Simulation/solver foundation
-- Reserved continuation: `0023ZY` core-mechanics preflight reconciliation and retry
+- Status: `OWNER_AUTHORIZED_CORE_MECHANICS_PREFLIGHT_RECONCILIATION_AND_RETRY`
+- Active task: `tasks/0023ZY_core_mechanics_preflight_reconciliation_uid_baseline_and_retry_gate.md`
+- Closed predecessor: `0023ZX` core-mechanics schema/Simulation/solver foundation
 - Latest GPT adjudication: `TASK_0023ZX_BLOCKED_ON_STALE_SIX_LEVEL_REGRESSION_UID_ADOPTION_AND_RESIDUAL_GODOT_PROCESSES`
 - Last GPT-accepted gate: `TASK_0023ZW_GAMEPLAY_PRESENTATION_ROADMAP_REBASELINE_ACCEPTED_WITH_BINDING_SEQUENCE_POLICY`
-- Required checkpoint for any continuation: `64f30c41132deeefc9cc440b54f8673ae0b51eaf`
+- Required checkpoint: `64f30c41132deeefc9cc440b54f8673ae0b51eaf`
+- Task publication commit: `93e2664c13d0fc8278b82cb1e2247438a9973016`
 - Implemented baseline: exactly eight formal levels
 - Accepted product target: 12 core levels + 2 conditional stretch rooms
 - Binding sequence policy: preserve sequences/IDs 1–8; append future 9–12
-- Gate: `OWNER AUTHORIZATION REQUIRED / PROCESS RECONCILIATION + UID POLICY + STALE REGRESSION CORRECTION + DRAFT PRESERVATION`
+- Gate: `OWNER-AUTHORIZED CONTINUATION / DRAFT PRESERVATION + PROCESS RECONCILIATION + UID BASELINE + STALE REGRESSION CORRECTION + ONE COMPLETE RETRY`
 
-Task 0023ZX stopped before acceptance. The existing regression `tests/levels/task_0012_staggered_doors_validation.gd` still hard-codes a six-entry catalog and six-level finale/progression facts, which conflict with the accepted eight-level implementation baseline. This is a stale historical-test assertion, not evidence that the new v2 mechanic semantics failed.
+Task 0023ZY is the only active scope. Before fetch, reconciliation or edits it must inventory and externally preserve every current Task 0023ZX draft, focused fixture and generated `.uid` continuation input byte-identically. No unrelated dirty path, broad reset, clean or unreviewed stash is permitted.
 
-Godot generated uncommitted `.uid` sidecars during the test run. These files must not be broadly deleted or ignored: a future continuation must inventory and review the exact generated set, pair each UID with its source file and adopt only an explicitly authorized set. Four residual Godot processes were also reported; no process action is currently authorized.
+The owner authorizes one bounded Godot-process reconciliation phase. Only processes unambiguously attributable to Delayed Self Task 0023ZX headless tests may be closed. Any ambiguous, unrelated, editor, project-manager or possibly manual process blocks the task and remains untouched. Zero Godot processes are required before test continuation.
 
-Uncommitted 0023ZX draft source changes, fixtures and UID files remain local continuation inputs. Do not discard, overwrite, stage, commit or push them. Do not run broad `git reset`, `git clean` or stash operations. A future task must preserve them byte-identically in external evidence before reconciling the checkout with remote authority.
+Every generated `.uid` sidecar must be reviewed individually. Adopt only valid unique sidecars paired with an eligible repository `.gd`/`.gdshader` source; remove only individually proven invalid/orphan/duplicate sidecars after verified external preservation. Wildcard or directory-level deletion is forbidden.
 
-No Codex task is active. A continuation requires explicit owner authorization for: bounded process inspection and proven-owned termination only; exact draft/fixture preservation and reconciliation; reviewed UID adoption without broad deletion; correction of the stale six-level assertions to the accepted eight-level baseline; and one fresh no-retry 0023ZX execution.
+The only historical test repair authorized is the catalog/progression/final-level portion of `tests/levels/task_0012_staggered_doors_validation.gd`. It must match the exact accepted eight-level order, keep `staggered_doors` as non-final sequence 6, and keep `two_echo_convergence` as the sole final sequence 8. All Level 6 solver, replay, door-window, necessity, Help, presentation and restart evidence remains frozen.
 
-Formal catalog/levels, Profile, UI/gameplay presentation, project settings, assets, fonts, audio, localization, build/export, release, upload and submission remain closed.
+After preservation, reconciliation, UID review and stale-test correction pass, Codex may continue the preserved schema-v2/Simulation/canonical-state/restart/replay/BFS drafts and focused non-catalog fixtures. Formal catalog/levels, Profile, Gameplay/UI, project settings, assets, fonts, audio and localization remain frozen.
 
-Expected next state:
+Exactly one complete final Task 0023ZX validation is authorized after implementation is ready. A new substantive semantic, solver, replay, state-space, formal-level, UID-policy or protected-boundary failure requires immediate stop with no complete-validation retry.
+
+Expected terminal verdict:
 
 ```text
-OWNER_AUTHORIZATION_REQUIRED
+CORE_MECHANICS_PREFLIGHT_RECONCILIATION_AND_RETRY_READY_FOR_GPT_REVIEW
+BLOCKED_CORE_MECHANICS_PREFLIGHT_RECONCILIATION_OR_RETRY
+PROTECTED_DATA_BOUNDARY_BREACH
 ```
