@@ -1,6 +1,6 @@
 # Codex active task (CURRENT)
 
-- Status: `CONTROLLED_PRODUCTION_READ_ONLY_HARNESS_READY_FOR_CODEX`
+- Status: `CONTROLLED_PRODUCTION_READ_ONLY_HARNESS_READY_FOR_GPT_REVIEW`
 - Active task: `tasks/0023ZT_controlled_production_read_only_harness_construction_gate.md`
 - Last GPT-accepted gate: `TASK_0023ZS_ISOLATED_PRODUCTION_POLICY_SANDBOX_MATRIX_ACCEPTED`
 - Required checkpoint: `7739ac26420e4c006b8fc6eba0f6b01a9d641ea1`
@@ -14,9 +14,9 @@ Tasks 0023R–0023ZS are GPT-accepted and frozen within their stated scopes. Tas
 
 Task 0023ZS retained the argument-safe launcher, repaired only the URI left boundary while preserving genuine drive/UNC disclosure detection, and completed two fresh process-local external sandbox attempts. Each passed 22/22 cases and 132/132 marker rows as `PASS_COMPLETE_MATRIX`, with scanner qualification 11/11 pre/post, zero-I/O validation 14/14 pre/post, exact cleanup and zero residual Godot processes. No ordinary production Profile/user-data/test-root access occurred.
 
-Task 0023ZT is the only active scope. It may add only the five named controlled production read-only harness artifacts, its report and authorized CURRENT documentation. Product source, project settings, main scene, autoload, accepted 0023ZQ/ZS harnesses, historical authorities, catalog/formal data and UI/gameplay remain frozen.
+Task 0023ZT completed its only authorized scope. Five inert controlled production read-only harness artifacts were added with an exact runner owner gate, exact future CURRENT authority gate, and exact child environment/user-argument guards. The parser passed; the corrected static validator passed 123 assertions; all 14 authorized zero-I/O regressions passed; both one-time no-authorization proofs exited 2 as required. Product source, project settings, main scene, autoload, accepted 0023ZQ/ZS harnesses, historical authorities, catalog/formal data and UI/gameplay remain frozen.
 
-Task 0023ZT has zero authority to access or refresh production Profile content or metadata, query the ordinary user-data directory, probe production siblings, access the test root, configure production at runtime, or create the future Task 0023ZU evidence root. It must construct an inert dual/triple-guard harness, pass parser/static and no-authorization proofs, and leave future guard-passing execution count at zero.
+Task 0023ZT accessed no production Profile content or metadata, ordinary user-data directory, production sibling, test root or future Task 0023ZU evidence root. Production configuration runtime calls and future guard-passing execution count remained zero. See `docs/reports/0023ZT_CONTROLLED_PRODUCTION_READ_ONLY_HARNESS_CONSTRUCTION_REPORT.md`.
 
 Any actual controlled production read-only observation is reserved for future Task 0023ZU and requires separate explicit owner authorization. The future contract may retain only bounded load/boot/route classifications, progress counts, non-content target metadata equality and exact owned-sibling category counts; it may not retain raw Profile content, hashes, IDs, best turns, settings, paths, filenames or raw errors.
 

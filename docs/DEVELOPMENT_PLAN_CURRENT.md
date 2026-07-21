@@ -78,6 +78,7 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0023ZQ isolated production-policy matrix (blocked before behavior by outer path binding)
 → 0023ZR runner binding repair/retry (blocked after first case by URI-scheme disclosure false positive)
 → 0023ZS disclosure URI-boundary repair and fresh isolated matrix retry (ready for GPT review; two complete passes)
+→ 0023ZT controlled production read-only harness construction (ready for GPT review; inert and zero real-data I/O)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.

@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "future_task_id": "0023ZU",
+  "owner_parameter_name": "OwnerAuthorization",
+  "owner_authorization": "TASK_0023ZU_OWNER_AUTHORIZED_PRODUCTION_READ_ONLY",
+  "child_environment_name": "DELAYED_SELF_0023ZU_PRODUCTION_READ_AUTHORIZATION",
+  "child_environment_value": "TASK_0023ZU_OWNER_AUTHORIZED_PRODUCTION_READ_ONLY",
+  "engine_user_argument": "--task-0023zu-controlled-production-read-only",
+  "required_active_status": "OWNER_AUTHORIZED_CONTROLLED_PRODUCTION_READ_ONLY_EXECUTION",
+  "future_evidence_root": "D:\\Delayed_Self_Evidence\\0023ZU_controlled_production_read_only\\",
+  "maximum_guard_passing_processes": 1,
+  "sibling_categories": ["recovery", "activation_backup", "temp", "transaction"],
+  "sibling_index_min": 0,
+  "sibling_index_max": 7,
+  "allowed_outcomes": [
+    {"load_status":"MISSING_CLEAN","boot_status":"PRODUCTION_PROFILE_READY","route":"MAIN_MENU"},
+    {"load_status":"LOADED","boot_status":"PRODUCTION_PROFILE_READY","route":"MAIN_MENU"},
+    {"load_status":"SANITIZED_PENDING_RECOVERY","boot_status":"PRODUCTION_PROFILE_READY","route":"MAIN_MENU"},
+    {"load_status":"RECOVERY_REQUIRED_READ_ONLY","boot_status":"FAILED_RECOVERY_REQUIRED_READ_ONLY","route":"SAFE_ERROR"},
+    {"load_status":"UNSUPPORTED_VERSION_READ_ONLY","boot_status":"FAILED_UNSUPPORTED_VERSION_READ_ONLY","route":"SAFE_ERROR"}
+  ],
+  "allowed_retained_fields": [
+    "target_exists_before", "target_exists_after", "length_before", "length_after",
+    "last_write_time_utc_before", "last_write_time_utc_after", "load_status", "boot_status",
+    "route", "completed_count", "best_turn_count", "unlocked_count", "public_progress_key_count",
+    "recovery_count_before", "recovery_count_after", "activation_backup_count_before",
+    "activation_backup_count_after", "temp_count_before", "temp_count_after",
+    "transaction_count_before", "transaction_count_after", "native_exit", "stderr_byte_count",
+    "observation_started_marker_count", "observation_pass_marker_count"
+  ],
+  "forbidden_disclosure_categories": [
+    "profile_content", "content_hash", "completed_level_ids", "best_turn_values", "settings_values",
+    "unsupported_numeric_version", "ordinary_absolute_user_data_path", "ordinary_absolute_profile_path",
+    "sibling_filenames", "raw_filesystem_errors", "store_objects", "adapter_objects"
+  ],
+  "required_evidence_files": ["stdout.txt", "stderr.txt", "audit.json"],
+  "expected_markers": {"observation_started": 1, "observation_pass": 1},
+  "frozen_sha256": {
+    "res://scripts/app/app_bootstrap.gd": "96ba1be8afd85ea548f823f095511f643879c6127322dbb91aa9cce01faf7f74",
+    "res://scenes/app/app_bootstrap.tscn": "7391270ff909370ac727e10cb14e732488e5652f9e37bec904b9fe027f1d25b0",
+    "res://scripts/app/app_root.gd": "79d92b823d4483c0ec97caced1c77bace147313e7b1694e12537146031fe89b7",
+    "res://scripts/app/local_profile.gd": "91cb39e1d75189d0eb7b7d5e26a05f6a4524c2f95131ecb7276417f76d3aa89b",
+    "res://scripts/app/profile_codec.gd": "c594ef1aed66471be18f8d95567dc5bce486a2c64cb62cd637431251070f8e12",
+    "res://scripts/app/profile_progress_adapter.gd": "4c35ee3f0ec1c932ab30ffa3c3130870a3febfc7b2f2a6a219efd2a819f5f563",
+    "res://scripts/app/memory_progress.gd": "41651ebcff17fd09247c3e5e820fff940c896efc25c5ba17ee7af668bbd4d567",
+    "res://scripts/app/route_request.gd": "63e72c4c2b268d7909892665e1bdfb606a3992e5b1fe0f976b188032f66b561d",
+    "res://project.godot": "faeb4a90b435aa81bd1c122ee12972e82db8dd5a90c448e850781e3d4b88c0d2",
+    "res://tests/app/task_0023zq_isolated_production_policy_case.gd": "fdfbb4aa66a8661476e174527fadf2d95ba0abb3bece66b45aa1c23242c594a4",
+    "res://tests/app/task_0023zq_isolated_production_policy_parser_smoke.gd": "8a638516c9cdd166a06aa8e68034a2d5da8ba36f656693f99002f57c8d6f10ed",
+    "res://tests/app/task_0023zq_isolated_production_policy_validator.gd": "cb63d02db02c7a01e098665abdbdc977b60e1933a60dadb26706c0123c7d1f69",
+    "res://tests/app/task_0023zq_isolated_production_policy_manifest.json": "aa96b15a33a7951642bbf08542cbdc2d298b3beb8da913fdb02cc22775a96a24",
+    "res://tests/app/task_0023zq_capture_isolated_production_policy.ps1": "faae65ded5bcba6afe2ab1bbc4f57c08434ae264d18df0a4e414c4135bb8fe2c"
+  }
+}

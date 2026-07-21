@@ -1,5 +1,24 @@
 # Project memory
 
+## Task 0023ZT controlled production read-only harness construction
+
+Task 0023ZT adds an inert future Task 0023ZU observation harness without
+performing a real-data read. The runner requires exact owner authorization and
+exact future CURRENT task/status; the child independently requires an exact
+environment value and user argument before product-code loading or any
+ordinary user-data/filesystem/configuration operation.
+
+The future branch is fixed to one `PRODUCTION_READ_ONLY` composition and
+bounded public status/count output. The runner design compares only exact
+target non-content metadata and 4 categories x 8 fixed owned sibling candidates
+before/after, with no enumeration, wildcard, retry, cleanup or rollback.
+
+Parser/static qualification, 14 named zero-I/O regressions and both one-time
+missing-authorization proofs passed. Guard-passing executions, production
+configuration, production Profile content/metadata/sibling reads, ordinary
+user-data discovery, writes and test-root operations all remained zero. Task
+0023ZU remains separately owner-gated.
+
 ## Task 0023ZS disclosure-scanner repair and isolated matrix retry
 
 Task 0023ZS retains the argument-safe PowerShell launcher and changes only the

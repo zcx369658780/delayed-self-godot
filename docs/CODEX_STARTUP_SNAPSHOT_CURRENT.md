@@ -2,7 +2,7 @@
 
 - Status: `CURRENT`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Current gate: Task 0023ZT controlled production read-only observation harness construction
+- Current gate: Task 0023ZT controlled production read-only observation harness construction — ready for GPT review
 - Active task: `tasks/0023ZT_controlled_production_read_only_harness_construction_gate.md`
 - Last GPT-accepted gate: `TASK_0023ZS_ISOLATED_PRODUCTION_POLICY_SANDBOX_MATRIX_ACCEPTED`
 - Required checkpoint: `7739ac26420e4c006b8fc6eba0f6b01a9d641ea1`
@@ -19,9 +19,9 @@ Tasks 0023R–0023ZS remain accepted historical authorities. Task 0023ZN proves 
 
 Task 0023ZS scanner qualification passed 11/11 before and after behavior; pre/post zero-I/O validation passed 14/14; the final validator passed 393 assertions. Both fresh attempts passed all 22 cases and 132 marker rows as `PASS_COMPLETE_MATRIX`, completed exact owned cleanup and left zero Godot processes. The ordinary production Profile, metadata, user-data directory and test root were not accessed.
 
-Task 0023ZT is construction-only. It must add a dedicated future Task 0023ZU controlled production read-only harness with an exact owner parameter, exact child environment authorization and exact engine/user guard. All guards must fail closed before `OS.get_user_data_dir()`, `globalize_path`, filesystem/Profile operations, scene instantiation or production configuration.
+Task 0023ZT constructed the dedicated future Task 0023ZU harness with an exact owner parameter, exact CURRENT authority, exact child environment authorization and exact engine/user guard. Static validation proves all guards fail closed before ordinary user-data discovery, filesystem/Profile operations, product-code loading, scene instantiation or production configuration.
 
-Task 0023ZT must not access or refresh the production Profile content or metadata, query the ordinary user-data directory, probe exact production siblings, create the future evidence root, or run any guard-passing observation. Authorized execution is limited to parser/static validation, named zero-I/O regressions, one GDScript no-guard proof and one runner no-authorization proof.
+Task 0023ZT parser/static validation, all 14 named zero-I/O regressions, one GDScript no-guard proof and one runner no-authorization proof completed. Real-data and production-configuration counts remained zero, and no future evidence root was created or inspected. The result is `CONTROLLED_PRODUCTION_READ_ONLY_HARNESS_READY_FOR_GPT_REVIEW`.
 
 The future Task 0023ZU contract permits at most one explicitly owner-authorized `PRODUCTION_READ_ONLY` boot and only bounded classifications/counts plus non-content metadata and exact sibling-category equality. Raw content, content hashes, completed IDs, best turns, settings, ordinary paths, sibling filenames and raw errors remain forbidden. Task 0023ZU is not active and has no authorization yet.
 

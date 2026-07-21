@@ -5,6 +5,8 @@
 1. [`AGENTS.md`](../AGENTS.md) — durable hard rules and startup order
 2. [`CODEX_STARTUP_SNAPSHOT_CURRENT.md`](CODEX_STARTUP_SNAPSHOT_CURRENT.md) — live gate and frozen facts
 3. [`CODEX_ACTIVE_TASK_CURRENT.md`](CODEX_ACTIVE_TASK_CURRENT.md) — current task state
+4. [`Task 0023ZT`](../tasks/0023ZT_controlled_production_read_only_harness_construction_gate.md) — completed inert controlled production read-only harness construction gate
+5. [`Task 0023ZT report`](reports/0023ZT_CONTROLLED_PRODUCTION_READ_ONLY_HARNESS_CONSTRUCTION_REPORT.md) — triple-guard design, 123-assertion static qualification, 14 zero-I/O regressions and two no-authorization proofs
 4. [`Task 0023ZS`](../tasks/0023ZS_disclosure_scanner_uri_boundary_repair_and_matrix_retry_gate.md) — completed disclosure URI-boundary repair and two-attempt isolated matrix retry
 5. [`Task 0023ZS report`](reports/0023ZS_ISOLATED_PRODUCTION_POLICY_DISCLOSURE_SCANNER_REPAIR_AND_RETRY_REPORT.md) — 11/11 scanner qualification, two `PASS_COMPLETE_MATRIX` attempts and protected-data boundary evidence
 4. [`Task 0023ZP`](../tasks/0023ZP_production_profile_static_bootstrap_implementation_gate.md) — completed production Profile bootstrap/API static implementation with zero player-data I/O

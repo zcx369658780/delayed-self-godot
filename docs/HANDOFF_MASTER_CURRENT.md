@@ -236,3 +236,17 @@ Hard boundary: no sequence-9 revival, unbounded product repair, save/settings
 implementation, asset/audio acquisition, owner walkthrough, build/export, RC
 work, festival packaging, upload, release, or submission without a new bounded
 task.
+# Task 0023ZT controlled production read-only harness construction
+
+Task 0023ZT completed at
+`CONTROLLED_PRODUCTION_READ_ONLY_HARNESS_READY_FOR_GPT_REVIEW`. Five new inert
+harness artifacts freeze a future Task 0023ZU owner/CURRENT/child dual-guard
+contract. The corrected static validator passed 123 assertions, all 14 named
+zero-I/O regressions passed, and the exactly-once GDScript/runner missing-guard
+proofs each exited 2 with one bounded marker and empty stderr.
+
+No guard-passing execution, production configuration, production Profile
+content/metadata/sibling access, ordinary user-data discovery, test-root
+operation or future evidence-root creation occurred. Task 0023ZU is inactive
+and requires a separate task plus explicit owner authorization. See
+`docs/reports/0023ZT_CONTROLLED_PRODUCTION_READ_ONLY_HARNESS_CONSTRUCTION_REPORT.md`.

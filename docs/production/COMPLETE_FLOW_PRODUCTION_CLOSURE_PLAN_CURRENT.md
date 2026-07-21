@@ -6,6 +6,12 @@
 - Selected first implementation slice: **persistent local profile core and isolated tests**
 - Isolation prerequisite: Task 0023R zero-I/O canonical test-path gate remains exact. Task 0023T proves the typed v1 codec, Task 0023V proves external one-time test-store configuration, and Task 0023W implements the configured fixed-fixture filesystem store pending GPT review; production integration remains closed.
 
+Task 0023ZT now provides an inert, statically qualified future controlled
+production read-only observation harness. Its owner/CURRENT/child guards fail
+closed before ordinary user-data discovery. Task 0023ZT performed zero real
+Profile I/O and does not activate the reserved Task 0023ZU execution; a new
+task and explicit owner authorization remain mandatory.
+
 ## 1. Authority and current architecture
 
 The formal product remains exactly eight catalog entries. Sequence 8
