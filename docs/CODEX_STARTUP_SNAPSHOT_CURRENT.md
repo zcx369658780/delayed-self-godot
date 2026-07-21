@@ -2,26 +2,24 @@
 
 - Status: `CURRENT`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Current gate: Task 0023ZX backward-compatible core mechanics schema/Simulation/solver foundation
-- Active task: `tasks/0023ZX_core_mechanics_schema_simulation_solver_foundation_gate.md`
-- Active status: `CORE_MECHANICS_SIMULATION_FOUNDATION_READY_FOR_CODEX`
+- Current gate: owner-authorization hold after Task 0023ZX preflight blockers
+- Active task: `NONE`
+- Closed task: `0023ZX` core-mechanics schema/Simulation/solver foundation
+- Reserved continuation: `0023ZY` core-mechanics preflight reconciliation and retry
+- Latest GPT adjudication: `TASK_0023ZX_BLOCKED_ON_STALE_SIX_LEVEL_REGRESSION_UID_ADOPTION_AND_RESIDUAL_GODOT_PROCESSES`
 - Last GPT-accepted gate: `TASK_0023ZW_GAMEPLAY_PRESENTATION_ROADMAP_REBASELINE_ACCEPTED_WITH_BINDING_SEQUENCE_POLICY`
-- Required checkpoint: `3515b6b5a8e09e6a7725c8024861063e3bbb8c45`
-- Task publication commit: `b291a0d5c6ba157e8030f7e7132e4589d9923576`
+- Required checkpoint for any continuation: `64f30c41132deeefc9cc440b54f8673ae0b51eaf`
 - Implemented baseline: exactly eight formal levels
 - Accepted product target: 12 core levels + 2 conditional stretch rooms
-- Binding sequence policy: preserve sequences/IDs 1–8; append future 9–12
-- Current implemented finale: sequence 8 `two_echo_convergence`
-- Selected presentation direction: hand-drawn delayed notebook / ink-ECHO
-- Submission language direction: new-profile default `zh-Hans` after a future compatibility gate
+- Binding sequence policy: existing sequences/IDs 1–8 remain stable; future rooms append as 9–12
 - Current plan: `docs/production/EXPANDED_CONTENT_SUBMISSION_ROADMAP_CURRENT.md`
 
-Tasks 0023R–0023ZW are accepted historical authorities. Task 0023ZV proved one bounded production read-only boot with unchanged metadata and zero sibling creation. Task 0023ZW accepted the 12-core/14-stretch product direction while preserving the existing eight-level implementation.
+Task 0023ZX is closed as a controlled blocker. The formal catalog and all eight formal level JSON hashes reportedly remained unchanged, and no commit/push was made. The first named existing-level regression failed because its historical assertions still require a six-entry catalog and six-level finale/progression structure, conflicting with the accepted eight-level baseline.
 
-Task 0023ZX may implement only the versioned pure rules foundation for YOU-only crates, YOU-only keys/locks, grouped multi-cell barriers, typed sensors and one-shot latches. It must extend schema/loader, the single Simulation authority, canonical state, restart/replay and BFS, using focused non-catalog fixtures.
+The test run also generated uncommitted `.uid` sidecars and left four Godot processes. UID sidecars require an explicit reviewed adoption policy; they are not presumed disposable cache. No process inspection or termination is currently authorized.
 
-Schema v1, all existing transition vectors and all eight formal levels must remain behavior-identical. Existing IDs/order, catalog, final flag, production Profile, App/UI/gameplay scenes, project settings, assets, fonts, audio and localization remain unchanged.
+Local uncommitted 0023ZX authored drafts, focused fixtures and generated UID files must remain preserved exactly. Before any future fast-forward or edit, a bounded continuation must inventory every dirty path and copy all continuation inputs byte-identically to external evidence. Broad reset/clean/stash operations are forbidden.
 
-Future implementation order remains: pure mechanics foundation → non-catalog gameplay vertical slices → append-only rooms 9–12/catalog/Profile compatibility → hand-drawn presentation → Chinese/font → licensed music → production write/default/menu flow → complete-flow/build/submission.
+No active implementation may proceed until the owner explicitly authorizes: process ownership inspection and proven-owned termination only; continuation preservation/reconciliation; exact UID inventory and reviewed adoption; correction of the stale six-level regression to the accepted eight-level baseline; and one fresh 0023ZX execution with no retry after a substantive failure.
 
-Do not resume Tasks 0023ZQ–0023ZW. Do not access production Profile or test-root data. Do not import/download assets, fonts or audio. Do not build, export, upload or submit.
+Formal catalog/levels, Profile, gameplay/UI, project settings, assets, fonts, audio, localization, build/export, release, upload and submission remain closed.
