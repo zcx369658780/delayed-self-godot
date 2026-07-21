@@ -2,28 +2,24 @@
 
 - Status: `CURRENT`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Current gate: Task 0024 owned Godot headless-test lifecycle and core-mechanics closeout
-- Active task: `tasks/0024_owned_godot_headless_test_lifecycle_and_core_mechanics_closeout_gate.md`
-- Active status: `BLOCKED_OWNED_GODOT_TEST_LIFECYCLE_OR_CORE_MECHANICS_FOUNDATION`
-- Closed predecessors: all Tasks through `0023ZZ`
-- Latest GPT adjudication: `TASKS_0023ZX_0023ZY_0023ZZ_CLOSED_ON_TEST_PROCESS_LIFECYCLE_CONTRACT_DEFECT`
+- Current gate: Task 0024R owned Godot wrapper complete qualification correction
+- Active task: `tasks/0024R_owned_godot_wrapper_complete_qualification_correction_gate.md`
+- Active status: `OWNED_GODOT_WRAPPER_COMPLETE_QUALIFICATION_CORRECTION_READY_FOR_CODEX`
+- Closed predecessors: all Tasks through `0024`
+- Latest GPT adjudication: `TASK_0024_BLOCKED_ON_INCOMPLETE_WRAPPER_QUALIFICATION_AND_PREMATURE_FINAL_MATRIX`
 - Last GPT-accepted product gate: `TASK_0023ZW_GAMEPLAY_PRESENTATION_ROADMAP_REBASELINE_ACCEPTED_WITH_BINDING_SEQUENCE_POLICY`
-- Required checkpoint: `dab500f605ffb70ca06624fc9de1a559290b6cc8`
-- Task publication commit: `fc1cb6dd7957fe7cfe409ad299ec8a9b69fa7819`
-- Durable lifecycle memory: `docs/project_memory/HEADLESS_GODOT_TEST_PROCESS_LIFECYCLE_FAILURE_AND_POLICY_CURRENT.md`
+- Required checkpoint: `e18919da11ebf37829b43ca53503f4f3d1a8bc58`
+- Task publication commit: `bc32548b1243c18bf31a050f3442fe249bea8336`
+- Provisional implementation baseline: `fdaf2b81fc71c60e4b3548422be94953146f25f4`
 - Implemented product baseline: exactly eight formal levels
 - Accepted product target: 12 core levels + 2 conditional stretch rooms
 - Binding sequence policy: existing sequences/IDs 1–8 remain stable; future rooms append as 9–12
 - Current plan: `docs/production/EXPANDED_CONTENT_SUBMISSION_ROADMAP_CURRENT.md`
 
-All earlier task files are closed historical authorities. Do not resume 0023ZX, 0023ZY or 0023ZZ. Their current local drafts, UID sidecars, narrow Task 0012 repair and external preservation evidence are continuation inputs only under Task 0024.
+Task 0024 is closed. Its unique final matrix ran before wrapper qualification was complete and did not cover the complete required v2 matrix. Do not rerun it or resume Task 0024.
 
-The repeated process blockers are adjudicated as a task-contract defect: previous tasks allowed only a pre-test reconciliation phase, later tests created new Godot processes, zero final residue was required, and cleanup of those task-owned processes was then forbidden. No core-mechanics defect was established.
+Task 0024R is a harness-only correction. It may repair and rerun focused wrapper qualifications until every case passes or a task stop condition is reached. It must prove descendant executable/command consistency in addition to ancestry, unproven-descendant exclusion, independent stderr-policy classification, deterministic bounded ownership records, deepest-first cleanup, exactly-once `finally`, no broad process termination and zero-process isolation.
 
-Before synchronization, Task 0024 must preserve the complete current dirty state to a new external evidence root and reconcile it with the earlier 77-file evidence set. No broad reset, clean or unreviewed stash is permitted.
+Do not run any complete core-mechanics matrix in Task 0024R. Schema v2, Simulation, solver, core-mechanics tests, Task 0012, UID sidecars, formal catalog/levels and product surfaces are frozen. A later task will receive a new single final-validation authorization only after GPT accepts 0024R.
 
-Task 0024 must implement an ownership-aware wrapper for every Godot headless invocation. It records the direct PID and exact arguments, derives only proven descendants, waits normally, and always performs exact owned-process cleanup in `finally`. That cleanup is part of the same test invocation and remains mandatory after pass, failure or timeout; it is not a validation retry.
-
-The unique final-matrix invocation was consumed before wrapper qualification and matrix coverage were complete. The pushed `fdaf2b8` implementation is preserved, but Task 0024 is blocked and its matrix must not be rerun. A new explicit correction gate is required before wrapper repair, qualification completion, or final validation can continue.
-
-Formal catalog and eight formal level JSON files, final flag, production Profile, Gameplay/UI, project settings, assets, fonts, audio, localization, build/export, release, upload and submission remain closed.
+Formal catalog and eight level JSON files, final flag, production Profile, Gameplay/UI, project settings, assets, fonts, audio, localization, build/export, release, upload and submission remain closed.
