@@ -1,28 +1,29 @@
 # Codex active task (CURRENT)
 
-- Status: `CORE_MECHANICS_SIMULATION_FOUNDATION_READY_FOR_CODEX`
-- Active task: `tasks/0023ZX_core_mechanics_schema_simulation_solver_foundation_gate.md`
+- Status: `AWAITING_OWNER_AUTHORIZATION_AFTER_CORE_MECHANICS_PREFLIGHT_BLOCK`
+- Active task: `NONE`
+- Closed task: `0023ZX` core-mechanics schema/Simulation/solver foundation
+- Reserved continuation: `0023ZY` core-mechanics preflight reconciliation and retry
+- Latest GPT adjudication: `TASK_0023ZX_BLOCKED_ON_STALE_SIX_LEVEL_REGRESSION_UID_ADOPTION_AND_RESIDUAL_GODOT_PROCESSES`
 - Last GPT-accepted gate: `TASK_0023ZW_GAMEPLAY_PRESENTATION_ROADMAP_REBASELINE_ACCEPTED_WITH_BINDING_SEQUENCE_POLICY`
-- Required checkpoint: `3515b6b5a8e09e6a7725c8024861063e3bbb8c45`
-- Task publication commit: `b291a0d5c6ba157e8030f7e7132e4589d9923576`
-- Gate: `IMPLEMENTATION / BACKWARD-COMPATIBLE CORE MECHANICS FOUNDATION + ZERO CATALOG/PROFILE CHANGE`
+- Required checkpoint for any continuation: `64f30c41132deeefc9cc440b54f8673ae0b51eaf`
 - Implemented baseline: exactly eight formal levels
 - Accepted product target: 12 core levels + 2 conditional stretch rooms
 - Binding sequence policy: preserve sequences/IDs 1–8; append future 9–12
-- Current implemented finale: sequence 8 `two_echo_convergence`
-- Accepted future plan: `docs/production/EXPANDED_CONTENT_SUBMISSION_ROADMAP_CURRENT.md`
+- Gate: `OWNER AUTHORIZATION REQUIRED / PROCESS RECONCILIATION + UID POLICY + STALE REGRESSION CORRECTION + DRAFT PRESERVATION`
 
-Tasks 0023R–0023ZW are GPT-accepted and frozen within their stated scopes. Task 0023ZW accepted the broader-mechanics, hand-drawn notebook, Simplified-Chinese-default and minimal credited-music direction.
+Task 0023ZX stopped before acceptance. The existing regression `tests/levels/task_0012_staggered_doors_validation.gd` still hard-codes a six-entry catalog and six-level finale/progression facts, which conflict with the accepted eight-level implementation baseline. This is a stale historical-test assertion, not evidence that the new v2 mechanic semantics failed.
 
-The binding expansion policy does not reorder or replace any existing room. Existing IDs, completion records, best turns and settings remain stable. `two_echo_convergence` remains the implemented sequence-8 finale during Task 0023ZX; future rooms 9–12, final-flag movement and Profile compatibility remain separate gates.
+Godot generated uncommitted `.uid` sidecars during the test run. These files must not be broadly deleted or ignored: a future continuation must inventory and review the exact generated set, pair each UID with its source file and adopt only an explicitly authorized set. Four residual Godot processes were also reported; no process action is currently authorized.
 
-Task 0023ZX is the only active scope. It may extend only the versioned schema/loader, shared Simulation transition, canonical state, restart/replay behavior and BFS solver for YOU-only crates, YOU-only keys/locks, grouped barriers, typed sensors and one-shot latches. It may add only focused non-catalog fixtures/tests and the exact contract/report/current paths authorized by the task.
+Uncommitted 0023ZX draft source changes, fixtures and UID files remain local continuation inputs. Do not discard, overwrite, stage, commit or push them. Do not run broad `git reset`, `git clean` or stash operations. A future task must preserve them byte-identically in external evidence before reconciling the checkout with remote authority.
 
-All schema-v1 behavior and all eight formal levels must remain exact. Formal catalog/level data, scenes, gameplay/UI, App/Profile code and data, project settings, assets, fonts, audio, localization, build/export and release surfaces remain frozen.
+No Codex task is active. A continuation requires explicit owner authorization for: bounded process inspection and proven-owned termination only; exact draft/fixture preservation and reconciliation; reviewed UID adoption without broad deletion; correction of the stale six-level assertions to the accepted eight-level baseline; and one fresh no-retry 0023ZX execution.
 
-Expected terminal verdict:
+Formal catalog/levels, Profile, UI/gameplay presentation, project settings, assets, fonts, audio, localization, build/export, release, upload and submission remain closed.
+
+Expected next state:
 
 ```text
-CORE_MECHANICS_SIMULATION_FOUNDATION_READY_FOR_GPT_REVIEW
-BLOCKED_CORE_MECHANICS_SIMULATION_FOUNDATION
+OWNER_AUTHORIZATION_REQUIRED
 ```
