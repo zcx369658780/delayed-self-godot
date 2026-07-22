@@ -92,3 +92,9 @@ Ten path cases and eight lifecycle cases pass. Cleanup count is one per case, ow
 Task 0024T statically validated and sealed a four-case final package, but its exactly-once driver stopped before attempt creation and before the wrapper. The expression `Get-GodotCount -eq 0` was parsed as a command invocation with arguments rather than a comparison; integer zero was then Boolean false at the assertion boundary. Actual Godot counts before and after were zero.
 
 Future static validators for PowerShell harnesses must reject bare command invocations inside comparison-like parenthesized argument expressions and require `(Get-FunctionResult) -eq value` or an assigned scalar followed by an explicit comparison. Under one-shot seal rules, a pre-attempt harness defect still consumes the driver-invocation budget when the contract says the driver itself may be invoked only once.
+
+## 9. Task 0024U corrected driver and complete session
+
+Task 0024U statically and behaviorally qualified the assigned-scalar doctrine before sealing: zero/one scalar behavior, historical rejection, corrected acceptance, four driver assignments/comparisons and zero wrapper/Godot launches all passed. The corrected driver then created its attempt record and executed four cases once each.
+
+Lifecycle behavior was correct even though the task verdict was blocked: cleanup invocation count was one for every case, no owned/unproven PID remained, every before/after count was zero, final Godot count was zero and no unrelated process was touched. The nonpass came from aggregate and complete-v2 test results, not process ownership or cleanup.

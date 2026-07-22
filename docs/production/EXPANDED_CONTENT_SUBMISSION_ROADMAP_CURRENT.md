@@ -6,7 +6,7 @@
 - Original planning date: 2026-07-21
 - Project-source synchronization date: 2026-07-22
 
-Task 0024T did not establish core-mechanics foundation acceptance. Its sealed final driver failed before any validation case because of a PowerShell assertion-expression defect, and no rerun is authorized. The roadmap's mechanics and content-expansion gates remain blocked behind a new bounded validation-continuation task.
+Task 0024U corrected the Task 0024T driver precondition and completed one fresh four-case session, but did not establish core-mechanics foundation acceptance. Aggregate failed one unsupported-version assertion and immutable complete-v2 failed parsing. No rerun is authorized; mechanics and content expansion remain blocked behind a new bounded correction/validation task.
 
 ## Product target
 
@@ -55,7 +55,7 @@ Music target: two restrained looping tracks plus an optional finale cue. Any Cro
 
 ## Current execution position
 
-Task 0024S has qualified the owned Godot headless-test wrapper. Task 0024T is the active manifest-locked, one-session final validation of the provisional schema-v2/Simulation/solver foundation. Formal rooms 9–12, catalog expansion, finale movement, Profile migration/default activation, presentation integration, localization, font/audio import, build/export, release and submission remain closed until their own later gates.
+Task 0024S has qualified the owned Godot headless-test wrapper. Task 0024U completed but blocked the manifest-locked final validation; the schema-v2/Simulation/solver foundation remains provisional. Formal rooms 9–12, catalog expansion, finale movement, Profile migration/default activation, presentation integration, localization, font/audio import, build/export, release and submission remain closed until their own later gates.
 
 ## Implementation order
 

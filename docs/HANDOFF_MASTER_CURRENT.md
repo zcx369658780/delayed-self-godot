@@ -1,5 +1,9 @@
 # Handoff master (CURRENT)
 
+## Task 0024U complete final-session blocker
+
+Task 0024U corrected and qualified the PowerShell preconditions, wrote one fresh read-only seal and executed all four wrapper cases exactly once. Task 0012 standalone and focused-v2 passed. Aggregate exited 1 on one unsupported-version assertion failure out of 621; immutable complete-v2 exited 1 on 15 GDScript type-inference parse errors. Cleanup ran once per case, Godot ended at zero and all frozen/historical hashes stayed exact. Do not rerun or modify sealed artifacts. Continue only from a new task after reading `docs/reports/0024U_CORRECTED_COMPLETE_CORE_MECHANICS_FINAL_VALIDATION_REPORT.md`.
+
 ## Task 0024T terminal blocker
 
 Task 0024T sealed its complete four-case validation package after a passing static audit, then consumed its single final-driver invocation. The sealed driver stopped before attempt creation and before every wrapper/Godot case because PowerShell treated `Get-GodotCount -eq 0` as a function call with arguments, not a comparison. Actual pre/post Godot counts were zero. Do not modify or rerun the sealed artifacts under 0024T. Continue only from a new bounded task after reading `docs/reports/0024T_COMPLETE_CORE_MECHANICS_FINAL_VALIDATION_REPORT.md`.

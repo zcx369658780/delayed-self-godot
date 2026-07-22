@@ -1,5 +1,12 @@
 # Development plan (CURRENT)
 
+> 2026-07-22 — Task 0024U qualified corrected assigned-scalar driver
+> preconditions, sealed a fresh four-case package and consumed one complete
+> final session. Task 0012 and focused v2 passed; aggregate failed one of 621
+> assertions and immutable complete-v2 failed on 15 parse errors. Cleanup,
+> zero-process and frozen-hash audits passed. Foundation acceptance remains
+> blocked and any correction requires a new task.
+
 > 2026-07-22 — Task 0024T is terminally blocked after its exactly-once sealed
 > final driver failed before attempt creation or any Godot case. Static
 > preparation passed (4 cases, 44 coverage IDs, 26 frozen hashes), but a

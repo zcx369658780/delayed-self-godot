@@ -1,5 +1,9 @@
 # Project memory
 
+## Task 0024U corrected sealed final-validation blocker
+
+Task 0024U proved the assigned-scalar PowerShell correction through pure behavior and AST qualification, then sealed and ran one fresh four-case session. Task 0012 standalone and focused-v2 passed. Aggregate failed one unsupported-version assertion at 621 assertions, and the immutable complete-v2 script failed parsing on 15 type-inference sites. Every wrapper cleanup count was one; all case boundaries and final state had zero Godot; frozen and historical hashes stayed exact. The complete session cannot be rerun under 0024U and establishes no foundation acceptance.
+
 ## Task 0024T manifest-locked final-validation blocker
 
 Task 0024T completed a passing static audit for four ordered cases, 44 coverage IDs and 26 frozen hashes, then wrote and verified one read-only external seal. Its exactly-once final driver stopped before attempt creation and before the wrapper because PowerShell parsed `Get-GodotCount -eq 0` as a function invocation with arguments rather than a comparison. Actual pre/post Godot counts were zero. No core-mechanics case ran and no foundation conclusion was established. The sealed artifacts may not be edited or rerun under 0024T; continuation requires a new bounded task.
