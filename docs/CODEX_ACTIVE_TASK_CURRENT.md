@@ -1,21 +1,20 @@
 # Codex active task (CURRENT)
 
-- Status: `COMPLETE_CORE_MECHANICS_FOUNDATION_VALIDATION_READY_FOR_GPT_REVIEW`
-- Active task: `tasks/0024W_manifest_locked_corrected_complete_core_mechanics_final_validation_gate.md`
-- Closed predecessors: all Tasks through `0024V`; none may be resumed directly
-- Latest GPT adjudication: `TASK_0024V_TEST_CORRECTION_QUALIFICATION_ACCEPTED_READY_FOR_NEW_FINAL_GATE`
-- Required accepted checkpoint: `3058c03537361ab28e015c6a8a0b244b23db1d37`
-- Task publication commit: `26873ebee1aeff7690ebfcf7ae2ebda5654c20ae`
+- Status: `SUBMISSION_CORE_LEVELS_9_12_SCOPE_FINALIZATION_READY_FOR_CODEX`
+- Active task: `tasks/0024X_submission_core_levels_9_12_scope_finalization.md`
+- Closed predecessors: all Tasks through `0024W`; none may be resumed directly
+- Latest GPT adjudication: `TASK_0024W_COMPLETE_CORE_MECHANICS_FOUNDATION_ACCEPTED`
+- Accepted foundation result commit: `7072566ef814f6969693bbc9335fcced5e424585`
+- GPT acceptance report commit: `328d1d87be7dbb4da513961abe0edc3d0cb67f00`
+- Task publication commit: `1a3ced27301014bac082df8487f92b74d279483a`
+- Accepted foundation seal SHA-256: `0e288adfe29c5881ab1f8cf40adf2df842a6fbbb8c6e5bce7aa14c797cf67ec0`
 - Accepted wrapper implementation/blob: `7c0712d6a602dc23200ccb147d0096acc6333305` / `5f14eb0feff903b40311c1c7283b20e2eabbffc2`
-- Provisional foundation implementation: `fdaf2b81fc71c60e4b3548422be94953146f25f4`
-- Historical 0024T seal SHA-256: `c9f7f2eb1f781280bc9d4a778367da2cde2dfc805ce20578c42098e9bb3caf29`
-- Historical 0024U seal SHA-256: `2e2ca41e22f54f73b4566125991e2b1ec47dd4a8d052a7a96b6c51028e4e49ed`
 - Implemented product baseline: exactly eight formal levels
 
-Task 0024V is GPT accepted as a bounded test-contract correction and qualification gate. Aggregate now passes exactly 621 assertions/nine vectors with only `LEVEL_ID_MISMATCH` stderr. The semantically equivalent Task 0024V complete-v2 script passes with all 44 coverage IDs preserved, empty stderr, one cleanup and zero residual Godot processes. The follow-up reproducibility commit correctly binds equivalence to fixed startup commit `5cd82fbc742bfe2664ea0b0b0df6d48bc8dd717a` rather than dynamic `HEAD`.
+Task 0024W is GPT accepted as the complete validation gate for the corrected schema-v2, shared Simulation and BFS-solver foundation. Its exactly-once driver executed Aggregate, Task 0012 standalone, focused v2 and corrected complete v2 once each; all passed with exact markers and stderr policy. Cleanup count was one per case, no owned/unproven PID remained, final Godot count was zero, and all sealed/historical identities remained exact.
 
-Task 0024W completed its authorized scope. Static and pure-PowerShell qualification passed without launching Godot or the wrapper. One read-only seal (`0e288adfe29c5881ab1f8cf40adf2df842a6fbbb8c6e5bce7aa14c797cf67ec0`) bound 53 repository files and 12 historical external evidence files. The final driver was invoked exactly once; all four cases passed with native exit zero, exact markers/stderr policy, cleanup count one, no residual owned/unproven PID and zero final Godot processes. The retained records are mutually consistent and sealed/historical hashes remain exact.
+Task 0024W's driver/case budget is consumed. Do not rerun or modify its sealed artifacts or historical Task 0024T/0024U evidence.
 
-Await GPT adjudication of `docs/reports/0024W_CORRECTED_COMPLETE_CORE_MECHANICS_FINAL_VALIDATION_REPORT.md`. Do not rerun the Task 0024W driver or cases and do not infer foundation acceptance from the Codex pass verdict.
+Task 0024X is the only active scope. It is planning-only and must finalize the submission-core sequence 9–12 curriculum, mechanic assignments, solver/difficulty/necessity evidence requirements, cut policy and future catalog/Profile compatibility contract. It must not create formal level JSON, change the catalog/final flag/Profile, modify Gameplay/UI or access user-data surfaces.
 
-The loader, Simulation, BFS solver, corrected tests, wrapper, schemas, fixtures, catalog, eight formal levels, all historical 0024T/0024U/0024V evidence, Profile/user data, Gameplay/UI, presentation, localization, assets/fonts/audio, build/export, release, upload and submission remain frozen or closed.
+Sequences and IDs 1–8 remain immutable. `two_echo_convergence` remains sequence 8 and the current sole formal finale. Sequence 12 may be planned only as `FINALE_CANDIDATE_ONLY` pending a later separately accepted catalog/Profile integration gate.
