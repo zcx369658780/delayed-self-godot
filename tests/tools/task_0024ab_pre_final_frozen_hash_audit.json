@@ -1,0 +1,162 @@
+{
+  "schema_version": 1,
+  "task": "0024AB",
+  "phase": "PRE_FINAL",
+  "audited_utc": "2026-07-22T11:09:16.0301923Z",
+  "head": "8fd4be3661213ad2a3c8b6b1117c246fea484b44",
+  "seal_path": "D:\\Delayed_Self_Evidence\\0024W_complete_core_mechanics_final_validation\\pre_execution_seal.json",
+  "seal_sha256": "0e288adfe29c5881ab1f8cf40adf2df842a6fbbb8c6e5bce7aa14c797cf67ec0",
+  "repository_file_count": 53,
+  "repository_mismatch_count": 0,
+  "repository_mismatches": [],
+  "historical_external_evidence_file_count": 12,
+  "historical_external_evidence_mismatch_count": 0,
+  "historical_external_evidence_mismatches": [],
+  "explicit_frozen_path_count": 33,
+  "explicit_frozen_hashes": {
+    "scripts/simulation/level_loader.gd": {
+      "sha256": "58948ec5207210a4afc6513429935291c1ac8677f0cd413ff5dd306a6274674e",
+      "git_blob": "acf9695769859debc5acc5081d25feca01b4eace"
+    },
+    "scripts/simulation/simulation.gd": {
+      "sha256": "9860feafdc16926cdc5db86768f31990d25d5c816ad2ca3d065043aaa4f03579",
+      "git_blob": "7d8779c4ed3418bbbc2fbbfbfd6dd856c71a66ce"
+    },
+    "scripts/solver/bfs_solver.gd": {
+      "sha256": "48e22a8cc0a36b7e8d14b71cb5df84487079ab6d9a083301a85c87ad4383f3bc",
+      "git_blob": "e549f939800c9dcd83aeb5af80a87b2a590aeec2"
+    },
+    "schemas/level_v1.schema.json": {
+      "sha256": "6cc9cb017facfb34d1217c7f85aee6a1e4fa86342f6d79a5552c2f893a727267",
+      "git_blob": "3b68c3879759e135e605b0aa2e9a938ac056b368"
+    },
+    "schemas/level_v2.schema.json": {
+      "sha256": "54146b644f9db246d5d43ffb4958ee1512ba5aefb0dd19d6296524ffb28a28c9",
+      "git_blob": "172989d3d72db62def63ee7fafc57682e512c936"
+    },
+    "schemas/catalog_v1.schema.json": {
+      "sha256": "6d1fbc6b5f042995f8f245ff37173282fad5004ced9783ba99a368dc16b2630e",
+      "git_blob": "8bf1be0c8550c553315892e13211d4a9aaa03618"
+    },
+    "docs/level_design/reference/turn_transition_vectors_v1.json": {
+      "sha256": "2587d33e9e13c13fd62df7e8211f41fbb73bc60c7c13c33b1d2637dc8b2ca576",
+      "git_blob": "e232440adebc18de57b0f7733af3ed378c78bf71"
+    },
+    "docs/level_design/reference/turn_transition_vectors_v2.json": {
+      "sha256": "7aa003bf51b65e7ed9134c01ee96dae887c11e79c8ba1538099daebd386f4062",
+      "git_blob": "b4415f0f6d0fcf1c75462222d0e3fbdd63bd9113"
+    },
+    "tests/simulation/fixtures/task_0023zx_crate_echo.json": {
+      "sha256": "7e888ca5a39ca76f5ff7e3ee53f0f78b5f5befc811b68817301ea3211cc4a0ef",
+      "git_blob": "e02389ef3db6f5d81ff0f398ab3af36fb45c0b95"
+    },
+    "tests/simulation/fixtures/task_0023zx_integration.json": {
+      "sha256": "eb16553764cb9b27809efd888e67ddd7876899cea1ca46f7197a90e94579de62",
+      "git_blob": "757aa0f076e03afe90071f2bad35da9d130d1fc7"
+    },
+    "tests/simulation/fixtures/task_0023zx_key_lock.json": {
+      "sha256": "117606037a712ea7f63eeb3a4507e7f003c790630909996fddfa9404e58c874c",
+      "git_blob": "e42d1d25f9ef27d3f842f8fdf834b4d9c5fb0354"
+    },
+    "tests/simulation/fixtures/task_0023zx_latch_defer.json": {
+      "sha256": "94a791cf64cf3525d299b4a4e37d657276c2f1f1cf392c40070b27bcfa96f916",
+      "git_blob": "920dcb5210c6050e3e2755a66a585050c49dd9d2"
+    },
+    "tests/simulation/fixtures/task_0023zx_sensor_barrier.json": {
+      "sha256": "3e25c4588575de6ec9e63f6d974fadf6c4e84b95eae655cf822eaa4dd6de9f12",
+      "git_blob": "1c9e350cd8fc99725d338e1e7d8a688822403638"
+    },
+    "data/catalog/level_catalog_v1.json": {
+      "sha256": "a2bfa892f77370ac4d7e93ba5b6ce5970f0d7ba75160e1b2d00c4384f3da4e51",
+      "git_blob": "4ec09dcaeffc68b57b7e8d27c84e92fe573eeee7"
+    },
+    "data/levels/tutorial_reach_exit.json": {
+      "sha256": "38e466bb5922f1987a99d79c7527a4a8eab8e6cfdbe76fd8159f80b0a40cf2c4",
+      "git_blob": "9800d32b6a1e05d6e318188bf570e53c87879d59"
+    },
+    "data/levels/tutorial_echo_bridge.json": {
+      "sha256": "681d99057c4e6034a490644d75960ff23d8f43bd1b91850f48179b79fc04a3cf",
+      "git_blob": "e10a26199088a0d3168e825d316a93e44383d839"
+    },
+    "data/levels/vertical_slice_delay_3.json": {
+      "sha256": "8751da5051fbebaaa5ae7c895d9be9f086e8d8f2e87876a80c379dc06262f1d8",
+      "git_blob": "f28170c81cd5b1c95fb170a6aea2e0da99501323"
+    },
+    "data/levels/door_one_turn_late.json": {
+      "sha256": "1775cf89ae4a94f65a76dac2b791a31395443de88205d0ed1b6233331dbda577",
+      "git_blob": "8892e2391a564be684797941a0e07a0087f936b2"
+    },
+    "data/levels/two_keys_one_door.json": {
+      "sha256": "f4c6791dfc84d17fb450721e654091a2baeb522e55d660a5d73878cd977651cd",
+      "git_blob": "128d024e2fb5496fb76b529e6226514c9f2d1b93"
+    },
+    "data/levels/staggered_doors.json": {
+      "sha256": "3f14c19b50775e36dd5b52664798381cf1292b0a30b377641c03435f45696bc8",
+      "git_blob": "5b1cb947db68e73e34eeaabc7e29264799246734"
+    },
+    "data/levels/echo_spacing_bridge.json": {
+      "sha256": "805cdc05ea9b3805189ba7be4938cb7ede4e7056b9ae9a7e911df96a801d58ee",
+      "git_blob": "02b42271628523120ddbd5eb50a279df476df979"
+    },
+    "data/levels/two_echo_convergence.json": {
+      "sha256": "772410d3b8bb807e35472ee2a7d07b703de66e1e0e92ffb4d1ff8433a345d5fd",
+      "git_blob": "95e36203cbe2f620c377bf9b04eb084f54653443"
+    },
+    "data/levels/crate_shadow_timing.json": {
+      "sha256": "1910f4dc07b1ee508ddbc529b0f0d02db5ca8a3a16a7a277ed236b4efbbe50d1",
+      "git_blob": "3d808cee8f419a982cb179864840a18e6f62038c"
+    },
+    "tests/levels/task_0024y_crate_shadow_timing_validation.gd": {
+      "sha256": "e81564034bcdf78e62fb2099a11b023d06a8453ca628f15fc2be7617d48a6508",
+      "git_blob": "9238e89d7aa0db04146cf2b24899b8ccead57411"
+    },
+    "docs/level_design/validation/sequence_09_crate_shadow_timing_validation.json": {
+      "sha256": "3012eaa965b3a90d271006ebaee121c23fcd92c753ad3520c69d663f9b130c4f",
+      "git_blob": "05ecfbd74bebe0a53e8e688ea94b6f8fa8f4848e"
+    },
+    "docs/reports/0024Y_SEQUENCE_9_CRATE_SHADOW_TIMING_MACHINE_VALIDATION_REPORT.md": {
+      "sha256": "d22d08d2538179d2acfbe6e12c499fa6e030044272b743b0e254885a4e30247a",
+      "git_blob": "7d63aad59939c2f589c2a2f25160df6be9fa5d39"
+    },
+    "docs/reports/0024Y_GPT_SEQUENCE_9_CRATE_SHADOW_TIMING_MACHINE_VALIDATION_ACCEPTANCE.md": {
+      "sha256": "b05a572bda8ccf34fe2a837dccaa22844e152cc6cd23ed159e9cfbd43436a6e7",
+      "git_blob": "e15286a495eea046c1a03acca713dff3a1748616"
+    },
+    "data/levels/key_route_commitment.json": {
+      "sha256": "2c44c8cdeeeb6f502f5c5d9dda87883dd762515348ee3c4b6d71d34fde276a2a",
+      "git_blob": "23c4398ae518de1f7db6063ae5661a29c0341dea"
+    },
+    "tests/levels/task_0024z_key_route_commitment_validation.gd": {
+      "sha256": "f80a50cc95190783b1586dd816e6f6cfd156caec9821a7c77a004968afdea709",
+      "git_blob": "1ec33f4b4d680efd63fa6b3aa07ff6c88fd169f3"
+    },
+    "docs/level_design/validation/sequence_10_key_route_commitment_validation.json": {
+      "sha256": "26acd07fbe476e3b9f2ff7d2923ef3ec527759ae83f38c61349d230d22d23dba",
+      "git_blob": "837bacac471fa922ae6270121398f0c8a551c2bf"
+    },
+    "docs/reports/0024Z_SEQUENCE_10_KEY_ROUTE_COMMITMENT_MACHINE_VALIDATION_REPORT.md": {
+      "sha256": "a60ba0aad5dc96fd2f7bee7a0f55243bda00df4f8b0e6d5fd40de4acbe38f16c",
+      "git_blob": "d02e66507455713e5c4e411396362771b7eea0c8"
+    },
+    "docs/reports/0024Z_GPT_SEQUENCE_10_KEY_ROUTE_COMMITMENT_MACHINE_VALIDATION_ACCEPTANCE.md": {
+      "sha256": "87ea0bf0dda0372c8232b2f6ce1a42404ef0f78762284fd8632809bea603efef",
+      "git_blob": "70a2f8dcdc5445328e31b72b0bb30b981e08923b"
+    },
+    "tests/tools/run_owned_godot_headless.ps1": {
+      "sha256": "17c03970f1a4c59d9d87a826471429fef55da75afb7b86c676bb3bdf5205afbc",
+      "git_blob": "5f14eb0feff903b40311c1c7283b20e2eabbffc2"
+    }
+  },
+  "head_blob_mismatch_count": 0,
+  "head_blob_mismatches": [],
+  "accepted_candidate_mismatch_count": 0,
+  "accepted_candidate_mismatches": [],
+  "historical_commit": "e2938b61a6207e970302675db8bb454c08c40cd3",
+  "historical_path_count": 19,
+  "historical_mismatch_count": 0,
+  "historical_mismatches": [],
+  "candidate_sha256": "8856d3c64978cef7cff7f1680a7ae2f412c9b0cab058d598cbe3aee0225052e0",
+  "historical_validator_sha256": "bff20626fb4830f4a8fed2e3b7f4b485a172d443db358978d1d1eeafeebc5a82",
+  "wrapper_blob": "5f14eb0feff903b40311c1c7283b20e2eabbffc2",
+  "status": "PASS"
+}

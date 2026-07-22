@@ -1,5 +1,11 @@
 # Project memory
 
+## Task 0024AB sequence-11 evidence correction
+
+Task 0024AB preserved the exact `identity_shift_bridge` candidate and replaced only the focused validator/output identity. Static equivalence proved 22 semantic functions and 53 assertion labels unchanged. The fresh solve retained `L*=18`, exact `N*=1`, 1002 states, frontier 130 and exact `elapsed_ms=233`; all-shortest is `1/1` with zero omissions. Thirteen JSON records are independently parseable and at most 1011 UTF-8 bytes.
+
+All controls, shortcuts, replay/restart/canonical checks and three frozen audits passed. The fresh five-case cycle passed with exact stderr, marker count one, cleanup one, Godot 0/0 and no PID residue. Status is ready for GPT review, not catalog or owner acceptance. The fresh cycle is consumed; sequence 12 and protected product surfaces remain closed.
+
 ## Task 0024AA sequence-11 identity bridge evidence blocker
 
 Task 0024AA authored the uncatalogued 11×7 schema-v2 `identity_shift_bridge` fallback: one delay-2 ECHO, exact YOU-only/ECHO-only sensors, one initially closed two-cell group and no crates/keys/locks/latches/Plates/Doors. Solver facts are `L*=18`, exact `N*=1`, 1002 states and frontier 130. The single shortest path carries the full ordered event mask; no-ECHO, swapped and no-deferral controls are complete-unsolved, while one-cell changes to `14/1`.

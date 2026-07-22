@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "task": "0024AB",
+  "status": "PASS",
+  "baseline_record": "tests/tools/task_0024ab_qualification_case_01.json",
+  "baseline_sha256": "bdb7503cadf8658cf3140691bb906c78497efd4faf59aac0cb85a721d183184d",
+  "probe_count": 5,
+  "probes": [
+    {
+      "name": "missing",
+      "parser_exit": 1,
+      "parser_stdout": "TASK_0024AB_CAPTURE_FAIL D:\\Delayed_Self\\tests\\tools\\task_0024ab_parser_probe_missing_result.json",
+      "parser_stderr": "",
+      "result_status": "FAIL",
+      "errors": [
+        "count:TASK_0024AB_METRICS_JSON:0/1"
+      ],
+      "expected_error_prefix": "count:TASK_0024AB_METRICS_JSON",
+      "expected_rejection": true,
+      "input_path": "tests/tools/task_0024ab_parser_probe_missing_input.json",
+      "result_path": "tests/tools/task_0024ab_parser_probe_missing_result.json"
+    },
+    {
+      "name": "duplicate",
+      "parser_exit": 1,
+      "parser_stdout": "TASK_0024AB_CAPTURE_FAIL D:\\Delayed_Self\\tests\\tools\\task_0024ab_parser_probe_duplicate_result.json",
+      "parser_stderr": "",
+      "result_status": "FAIL",
+      "errors": [
+        "count:TASK_0024AB_METRICS_JSON:2/1"
+      ],
+      "expected_error_prefix": "count:TASK_0024AB_METRICS_JSON",
+      "expected_rejection": true,
+      "input_path": "tests/tools/task_0024ab_parser_probe_duplicate_input.json",
+      "result_path": "tests/tools/task_0024ab_parser_probe_duplicate_result.json"
+    },
+    {
+      "name": "truncated",
+      "parser_exit": 1,
+      "parser_stdout": "TASK_0024AB_CAPTURE_FAIL D:\\Delayed_Self\\tests\\tools\\task_0024ab_parser_probe_truncated_result.json",
+      "parser_stderr": "",
+      "result_status": "FAIL",
+      "errors": [
+        "non_json_or_truncated:TASK_0024AB_METRICS_JSON",
+        "count:TASK_0024AB_METRICS_JSON:0/1"
+      ],
+      "expected_error_prefix": "non_json_or_truncated:TASK_0024AB_METRICS_JSON",
+      "expected_rejection": true,
+      "input_path": "tests/tools/task_0024ab_parser_probe_truncated_input.json",
+      "result_path": "tests/tools/task_0024ab_parser_probe_truncated_result.json"
+    },
+    {
+      "name": "non_json",
+      "parser_exit": 1,
+      "parser_stdout": "TASK_0024AB_CAPTURE_FAIL D:\\Delayed_Self\\tests\\tools\\task_0024ab_parser_probe_non_json_result.json",
+      "parser_stderr": "",
+      "result_status": "FAIL",
+      "errors": [
+        "non_json_or_truncated:TASK_0024AB_METRICS_JSON",
+        "count:TASK_0024AB_METRICS_JSON:0/1"
+      ],
+      "expected_error_prefix": "non_json_or_truncated:TASK_0024AB_METRICS_JSON",
+      "expected_rejection": true,
+      "input_path": "tests/tools/task_0024ab_parser_probe_non_json_input.json",
+      "result_path": "tests/tools/task_0024ab_parser_probe_non_json_result.json"
+    },
+    {
+      "name": "over_bound",
+      "parser_exit": 1,
+      "parser_stdout": "TASK_0024AB_CAPTURE_FAIL D:\\Delayed_Self\\tests\\tools\\task_0024ab_parser_probe_over_bound_result.json",
+      "parser_stderr": "",
+      "result_status": "FAIL",
+      "errors": [
+        "over_bound:TASK_0024AB_METRICS_JSON:2000"
+      ],
+      "expected_error_prefix": "over_bound:TASK_0024AB_METRICS_JSON",
+      "expected_rejection": true,
+      "input_path": "tests/tools/task_0024ab_parser_probe_over_bound_input.json",
+      "result_path": "tests/tools/task_0024ab_parser_probe_over_bound_result.json"
+    }
+  ],
+  "failures": []
+}

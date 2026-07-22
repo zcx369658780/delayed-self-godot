@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "task": "0024AB",
+  "status": "FAIL",
+  "historical_commit": "e2938b61a6207e970302675db8bb454c08c40cd3",
+  "candidate_sha256": "8856d3c64978cef7cff7f1680a7ae2f412c9b0cab058d598cbe3aee0225052e0",
+  "historical_validator_sha256": "bff20626fb4830f4a8fed2e3b7f4b485a172d443db358978d1d1eeafeebc5a82",
+  "semantic_function_count": 22,
+  "semantic_function_mismatches": [],
+  "extra_output_function_names": [
+    "_compact_any_control",
+    "_compact_control",
+    "_compact_geometry_control",
+    "_emit_bounded_records",
+    "_emit_record"
+  ],
+  "assertion_label_count": 53,
+  "assertion_labels_exact": true,
+  "constant_checks": {
+    "ACTIONS": true,
+    "LIMITS": true,
+    "FULL_MASK": true
+  },
+  "candidate_path_checks": {
+    "old_count": 1,
+    "new_count": 1
+  },
+  "init_checks": {
+    "run_call_preserved": true,
+    "failure_branch_preserved": true,
+    "bounded_emitter_used": true,
+    "old_monolithic_prefix_absent": true,
+    "pass_marker_preserved": true
+  },
+  "bounded_prefixes": [
+    "TASK_0024AB_METRICS_JSON",
+    "TASK_0024AB_WITNESS_JSON",
+    "TASK_0024AB_EVENT_JSON",
+    "TASK_0024AB_ALL_SHORTEST_JSON",
+    "TASK_0024AB_CONTROL_IDENTITY_JSON",
+    "TASK_0024AB_CONTROL_GEOMETRY_JSON",
+    "TASK_0024AB_SHORTCUTS_JSON",
+    "TASK_0024AB_REPLAY_RESTART_JSON"
+  ],
+  "missing_bounded_prefixes": [],
+  "historical_path_count": 19,
+  "historical_mismatches": [],
+  "dynamic_head_baseline_absent": false,
+  "errors": [
+    "dynamic_head_baseline"
+  ]
+}

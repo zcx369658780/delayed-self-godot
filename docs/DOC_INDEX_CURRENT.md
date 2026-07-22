@@ -2,6 +2,10 @@
 
 ## Start here
 
+0. [`Task 0024AB`](../tasks/0024AB_sequence_11_evidence_capture_correction_and_fresh_validation.md) — completed fresh sequence-11 evidence-capture correction and validation
+1. [`Sequence-11 corrected machine summary`](level_design/validation/sequence_11_identity_shift_bridge_validation_0024ab.json) — exact fresh metrics, bounded records, equivalence, controls and five-case evidence
+2. [`Task 0024AB report`](reports/0024AB_SEQUENCE_11_EVIDENCE_CAPTURE_CORRECTION_REPORT.md) — correction history, exact elapsed time, audits and protected boundaries
+
 0. [`Task 0024AA`](../tasks/0024AA_sequence_11_identity_shift_bridge_candidate_authoring_and_machine_validation.md) — terminally blocked sequence-11 candidate validation after consumed final cycle
 1. [`Sequence-11 blocked machine summary`](level_design/validation/sequence_11_identity_shift_bridge_validation.json) — retained solver/events/controls/five-case facts and exact evidence gap
 2. [`Task 0024AA blocker report`](reports/0024AA_SEQUENCE_11_IDENTITY_SHIFT_BRIDGE_MACHINE_VALIDATION_REPORT.md) — authoring history, technical passes, 2048-byte truncation blocker and protected boundaries

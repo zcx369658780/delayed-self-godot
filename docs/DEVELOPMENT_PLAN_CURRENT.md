@@ -1,5 +1,13 @@
 # Development plan (CURRENT)
 
+> 2026-07-22 — Task 0024AB corrected sequence-11 evidence capture without
+> modifying the candidate or simulation contract. Fresh exact facts are
+> `L*=18`, exact `N*=1`, 1002 states, frontier 130 and `elapsed_ms=233`;
+> all-shortest full event is `1/1` with zero omissions. Thirteen bounded
+> records (maximum 1011 bytes), semantic equivalence, controls, frozen audits
+> and the fresh five-case cycle passed. Status is ready for GPT review;
+> sequence 12, catalog/Profile integration and owner playthrough remain gated.
+
 > 2026-07-22 — Task 0024AA produced a technically passing uncatalogued
 > sequence-11 `identity_shift_bridge` fallback candidate at `L*=18`, exact
 > `N*=1`, all-shortest event `1/1` and zero omissions. All controls and the
