@@ -1,0 +1,40 @@
+{
+  "schema_version": 2,
+  "level_id": "crate_shadow_timing",
+  "title": "Crate-Shadow Timing",
+  "terrain_rows": [
+    "#########",
+    "#.#..#..#",
+    "#....#..#",
+    "##.##...#",
+    "##.#...##",
+    "##...####",
+    "#########"
+  ],
+  "player_spawn": [1, 1],
+  "echoes": [
+    {"id": "echo_phase", "delay": 2, "spawn": [3, 1]}
+  ],
+  "plates": [
+    {"id": "plate_window", "position": [4, 2]}
+  ],
+  "doors": [
+    {"id": "door_window", "position": [5, 4], "initial_open": false, "all_plate_ids": ["plate_window"]}
+  ],
+  "exit": {"position": [7, 1]},
+  "metadata": {
+    "teaching_goal": "Use a persistent YOU-pushed crate to change ECHO phase and create a next-turn Door window.",
+    "intended_mechanics": ["you_only_crate_push", "echo_crate_block", "crate_phase_timing", "next_turn_door"],
+    "notes": "Uncatalogued Task 0024Y sequence-9 candidate.",
+    "allow_zero_echo_tutorial": false
+  },
+  "validation": {"recommended_search_depth": 48},
+  "crates": [
+    {"id": "crate_phase", "position": [2, 2]}
+  ],
+  "keys": [],
+  "locks": [],
+  "barrier_groups": [],
+  "sensors": [],
+  "latches": []
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 2,
+  "status": "NONZERO_EXIT",
+  "underlying_status": "NONZERO_EXIT",
+  "native_exit_code": 1,
+  "timed_out": false,
+  "marker_pass": false,
+  "stderr_policy": "ForbidNonempty",
+  "stderr_pass": false,
+  "cleanup_invocation_count": 1,
+  "cleanup_order": [
+    47032
+  ],
+  "cleanup_closed_pids": [],
+  "remaining_owned_pids": [],
+  "remaining_unproven_pids": [],
+  "owned_records": [
+    {
+      "pid": 47032,
+      "parent_pid": null,
+      "depth": 0,
+      "ancestry_path": "direct",
+      "direct": true,
+      "executable": "d:\\program files (x86)\\steam\\steamapps\\common\\godot engine\\godot.windows.opt.tools.64.exe",
+      "start_utc": "2026-07-22T07:43:57.3035947Z",
+      "arguments": [
+        "--headless",
+        "--path",
+        "D:\\Delayed_Self",
+        "--script",
+        "res://tests/levels/task_0024y_crate_shadow_timing_validation.gd"
+      ],
+      "classification": "DIRECT",
+      "alive_at_discovery": true,
+      "cleanup_eligible": true
+    }
+  ],
+  "unproven_records": [],
+  "stdout": [
+    "Godot Engine v4.7.1.stable.steam.a13da4feb - https://godotengine.org",
+    "TASK_0024Y_ALL_SHORTEST_DIAGNOSTIC {\"counts_by_mask\":{\"1\":13,\"7\":4},\"full_event_paths\":4,\"goal_depth\":15,\"maximum_pushes\":1,\"omitting_event_paths\":13,\"sample_by_mask\":{\"1\":[\"RIGHT\",\"UP\",\"UP\",\"RIGHT\",\"DOWN\",\"DOWN\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"DOWN\",\"DOWN\",\"LEFT\",\"LEFT\",\"LEFT\",\"LEFT\"],\"7\":[\"RIGHT\",\"UP\",\"LEFT\",\"RIGHT\",\"DOWN\",\"DOWN\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"DOWN\",\"DOWN\",\"LEFT\",\"LEFT\",\"LEFT\",\"LEFT\"]},\"status\":\"COMPLETE\",\"total_completed_paths\":17,\"visited_composite_states\":2688}",
+    "TASK_0024Y_OMISSION_TRACE {\"blocked_you_count\":3,\"completion_index\":15,\"consequential_push_count\":1,\"door_cross_index\":-1,\"echo_block_index\":-1,\"max_repeated_identical_blocked\":2,\"push_index\":4,\"required_trace\":[{\"action\":\"RIGHT\",\"action_index\":4,\"after\":{\"completed\":false,\"crate\":[3,1],\"door_open\":false,\"echo\":[4,1],\"history\":[\"UP\",\"RIGHT\"],\"player\":[2,1],\"pressed_plates\":[]},\"before\":{\"crate\":[2,1],\"door_open\":false,\"echo\":[4,1],\"history\":[\"UP\",\"UP\"],\"player\":[1,1],\"pressed_plates\":[]},\"echo_history_action\":\"UP\",\"event\":\"YOU_PUSH\"},{\"action\":\"LEFT\",\"action_index\":15,\"after\":{\"completed\":true,\"crate\":[3,1],\"door_open\":false,\"echo\":[5,1],\"history\":[\"LEFT\",\"LEFT\"],\"player\":[1,5],\"pressed_plates\":[]},\"before\":{\"crate\":[3,1],\"door_open\":true,\"echo\":[6,1],\"history\":[\"LEFT\",\"LEFT\"],\"player\":[2,5],\"pressed_plates\":[\"plate_window\"]},\"echo_history_action\":\"LEFT\",\"event\":\"YOU_EXIT_COMPLETION\"}],\"state_after_push\":{\"barrier_states\":[],\"completed\":false,\"crate_positions\":[{\"id\":\"crate_phase\",\"position\":[3,1]}],\"door_states\":[{\"id\":\"door_window\",\"open\":false}],\"echo_positions\":[{\"id\":\"echo_phase\",\"position\":[4,1]}],\"held_keys\":[],\"history\":[\"UP\",\"RIGHT\"],\"latch_states\":[],\"player_position\":[2,1],\"remaining_key_ids\":[],\"removed_lock_ids\":[],\"turn_index\":5},\"state_before_block\":{},\"wait_count\":0}"
+  ],
+  "stderr": [
+    "TASK_0024Y_CASE_FAIL witness_later_echo_block",
+    "TASK_0024Y_CASE_FAIL witness_echo_plate_door",
+    "TASK_0024Y_CASE_FAIL all_shortest_full_event",
+    "TASK_0024Y_CASE_FAIL all_shortest_zero_omissions",
+    "TASK_0024Y_CASE_FAIL echo_cannot_move_crate",
+    "TASK_0024Y_CRATE_SHADOW_TIMING_FAIL failures=5"
+  ],
+  "wrapper_error": "",
+  "cleanup_error": "",
+  "wrapper_process_exit": 1
+}

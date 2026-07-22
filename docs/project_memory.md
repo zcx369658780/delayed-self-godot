@@ -1,5 +1,13 @@
 # Project memory
 
+## Task 0024Y sequence-9 crate timing candidate
+
+Task 0024Y created an uncatalogued 9×7 schema-v2 candidate, `crate_shadow_timing`, with one delay-2 ECHO, one YOU-only crate, one Plate and one Door. The shortest witness pushes the crate on action 2, blocks the replaying ECHO on action 3, crosses the ECHO-held Door on action 9 and completes by YOU on action 14. Solver result is `L*=14`, exact `N*=6`; all six shortest solutions carry the full event mask, zero omit it and maximum pushes is one.
+
+No-push (`99` states), displaced-crate (`3275`) and no-ECHO (`23`) controls exhaust complete-unsolved. Static-wall substitution has the same `14/6` numbers but no crate temporal event, so it does not reproduce the accepted numerical-and-temporal structure. Replay/restart/canonical and shortcut probes pass.
+
+Final invocation `0d9ee9ef-3213-4266-a94c-6b8e8a0ae44b` passed focused, Aggregate and corrected complete-v2 once each with exact stderr, cleanup once, no remaining owned/unproven PID and final Godot zero. The 0024W seal plus 53 repository and 12 external historical hashes stayed exact. The candidate is not catalog-admitted; owner playthrough and sequence 10 remain future gates.
+
 ## Task 0024X submission-core scope finalization
 
 Task 0024X froze the future append-only curriculum: sequence 9 introduces player-positioned persistent crate timing; 10 adds one YOU-only `main` key/lock route commitment; 11 tests YOU/ECHO identity through a grouped next-turn bridge and closure deferral; 12 adds a one-shot latch and synthesizes already taught sensor/barrier behavior. Sequence 11 is the highest-risk room and has a two-sensor/two-cell-barrier fallback.

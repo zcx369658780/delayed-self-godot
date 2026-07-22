@@ -1,0 +1,48 @@
+{
+  "schema_version": 2,
+  "status": "PASS",
+  "underlying_status": "PASS",
+  "native_exit_code": 0,
+  "timed_out": false,
+  "marker_pass": true,
+  "stderr_policy": "ForbidNonempty",
+  "stderr_pass": true,
+  "cleanup_invocation_count": 1,
+  "cleanup_order": [
+    41468
+  ],
+  "cleanup_closed_pids": [],
+  "remaining_owned_pids": [],
+  "remaining_unproven_pids": [],
+  "owned_records": [
+    {
+      "pid": 41468,
+      "parent_pid": null,
+      "depth": 0,
+      "ancestry_path": "direct",
+      "direct": true,
+      "executable": "d:\\program files (x86)\\steam\\steamapps\\common\\godot engine\\godot.windows.opt.tools.64.exe",
+      "start_utc": "2026-07-22T07:30:18.0748433Z",
+      "arguments": [
+        "--headless",
+        "--path",
+        "D:\\Delayed_Self",
+        "--script",
+        "res://tests/levels/task_0024y_crate_shadow_timing_validation.gd"
+      ],
+      "classification": "DIRECT",
+      "alive_at_discovery": true,
+      "cleanup_eligible": true
+    }
+  ],
+  "unproven_records": [],
+  "stdout": [
+    "Godot Engine v4.7.1.stable.steam.a13da4feb - https://godotengine.org",
+    "TASK_0024Y_SEARCH_HIT {\"connector\":5,\"delay\":2,\"echo_spawn\":[3,1],\"events\":{\"echo_block\":true,\"echo_plate_door\":true,\"push\":true},\"exit\":[1,4],\"frontier\":161,\"l\":15,\"n\":18,\"plate\":[5,1],\"solution\":[\"DOWN\",\"UP\",\"UP\",\"RIGHT\",\"DOWN\",\"RIGHT\",\"UP\",\"RIGHT\",\"RIGHT\",\"DOWN\",\"DOWN\",\"LEFT\",\"LEFT\",\"LEFT\",\"LEFT\"],\"visited\":1003}",
+    "TASK_0024Y_AUTHORING_SEARCH_DONE hits=1"
+  ],
+  "stderr": [],
+  "wrapper_error": "",
+  "cleanup_error": "",
+  "wrapper_process_exit": 0
+}

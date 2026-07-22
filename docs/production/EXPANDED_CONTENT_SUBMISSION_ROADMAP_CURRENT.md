@@ -6,7 +6,7 @@
 - Original planning date: 2026-07-21
 - Project-source synchronization date: 2026-07-22
 
-Task 0024W is GPT accepted as the schema-v2/Simulation/solver foundation. Task 0024X has frozen the planning-only sequence 9–12 curriculum and compatibility contract at `docs/level_design/SUBMISSION_CORE_LEVELS_9_12_SCOPE_CURRENT.md`. Formal content implementation remains separately gated.
+Task 0024W is GPT accepted as the schema-v2/Simulation/solver foundation. Task 0024X has frozen the sequence 9–12 curriculum and compatibility contract at `docs/level_design/SUBMISSION_CORE_LEVELS_9_12_SCOPE_CURRENT.md`. Task 0024Y has machine-validated one uncatalogued sequence-9 candidate for GPT review; formal catalog admission and later content remain separately gated.
 
 ## Product target
 
@@ -55,7 +55,7 @@ Music target: two restrained looping tracks plus an optional finale cue. Any Cro
 
 ## Current execution position
 
-Task 0024W is GPT accepted. Task 0024X is ready for GPT review with room-specific briefs for crate timing, key-route commitment, typed-sensor/grouped-bridge identity timing and latch synthesis. Sequence 11 carries the pre-agreed fallback; sequence 12 remains `FINALE_CANDIDATE_ONLY`. Formal rooms 9–12, catalog expansion, finale movement, Profile migration/default activation, presentation integration, localization, font/audio import, build/export, release and submission remain closed until their own later gates.
+Task 0024W and the Task 0024X scope are GPT accepted. Task 0024Y has produced the uncatalogued `crate_shadow_timing` candidate at `L*=14`, exact `N*=6`, all-shortest event `6/6`, and is ready for GPT review. Owner playthrough and catalog admission remain later gates; sequence 10 has not started. Sequence 11 retains the pre-agreed fallback and sequence 12 remains `FINALE_CANDIDATE_ONLY`. Catalog expansion, finale movement, Profile migration/default activation, presentation integration, localization, font/audio import, build/export, release and submission remain closed until their own later gates.
 
 ## Implementation order
 

@@ -1,0 +1,50 @@
+{
+  "schema_version": 2,
+  "status": "NONZERO_EXIT",
+  "underlying_status": "NONZERO_EXIT",
+  "native_exit_code": 1,
+  "timed_out": false,
+  "marker_pass": false,
+  "stderr_policy": "ForbidNonempty",
+  "stderr_pass": false,
+  "cleanup_invocation_count": 1,
+  "cleanup_order": [
+    14524
+  ],
+  "cleanup_closed_pids": [],
+  "remaining_owned_pids": [],
+  "remaining_unproven_pids": [],
+  "owned_records": [
+    {
+      "pid": 14524,
+      "parent_pid": null,
+      "depth": 0,
+      "ancestry_path": "direct",
+      "direct": true,
+      "executable": "d:\\program files (x86)\\steam\\steamapps\\common\\godot engine\\godot.windows.opt.tools.64.exe",
+      "start_utc": "2026-07-22T07:36:17.5614749Z",
+      "arguments": [
+        "--headless",
+        "--path",
+        "D:\\Delayed_Self",
+        "--script",
+        "res://tests/levels/task_0024y_crate_shadow_timing_validation.gd"
+      ],
+      "classification": "DIRECT",
+      "alive_at_discovery": true,
+      "cleanup_eligible": true
+    }
+  ],
+  "unproven_records": [],
+  "stdout": [
+    "Godot Engine v4.7.1.stable.steam.a13da4feb - https://godotengine.org"
+  ],
+  "stderr": [
+    "TASK_0024Y_CASE_FAIL public_loader_valid",
+    "TASK_0024Y_LOAD_DETAIL {\"errors\":[{\"code\":\"NOT_FLOOR\",\"message\":\"Overlay must be placed on floor terrain\",\"path\":\"$.doors[0].position\"}],\"level\":null,\"ok\":false,\"status\":\"INVALID_LEVEL\"}",
+    "TASK_0024Y_CRATE_SHADOW_TIMING_FAIL failures=1"
+  ],
+  "wrapper_error": "",
+  "cleanup_error": "",
+  "wrapper_process_exit": 1
+}

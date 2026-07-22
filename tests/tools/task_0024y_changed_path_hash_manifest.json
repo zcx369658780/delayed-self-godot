@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "task": "0024Y",
+  "generated_utc": "2026-07-22T08:25:46.5497110Z",
+  "entry_count": 50,
+  "entries": [
+    {
+      "path": "data/levels/crate_shadow_timing.json",
+      "sha256": "1910f4dc07b1ee508ddbc529b0f0d02db5ca8a3a16a7a277ed236b4efbbe50d1"
+    },
+    {
+      "path": "docs/CODEX_ACTIVE_TASK_CURRENT.md",
+      "sha256": "6874696599f362f88ff845064521b6f76b1fae3e8debbeb191b4d0d7bbe6c7f8"
+    },
+    {
+      "path": "docs/CODEX_STARTUP_SNAPSHOT_CURRENT.md",
+      "sha256": "09e0e7f4c4431a975b773279f83fa613e536dcff0425336268d62691044343fb"
+    },
+    {
+      "path": "docs/DEVELOPMENT_PLAN_CURRENT.md",
+      "sha256": "81a830a0d86b2c78a7e1ce0a1e0bec63fa4cb8d2cbdcf84de1bc8a740450f68f"
+    },
+    {
+      "path": "docs/DOC_INDEX_CURRENT.md",
+      "sha256": "56be9682cb3f9bb4ab72773aa9b544aa85e0dd73f7f72a311227bb59a2f722af"
+    },
+    {
+      "path": "docs/HANDOFF_MASTER_CURRENT.md",
+      "sha256": "11baa9bfbad27f57c169650c525db25270471cc20ae35115325fe81e8c3b230d"
+    },
+    {
+      "path": "docs/level_design/validation/sequence_09_crate_shadow_timing_validation.json",
+      "sha256": "3012eaa965b3a90d271006ebaee121c23fcd92c753ad3520c69d663f9b130c4f"
+    },
+    {
+      "path": "docs/production/EXPANDED_CONTENT_SUBMISSION_ROADMAP_CURRENT.md",
+      "sha256": "10576ed2f7752699000b10d1c831c4c80c9d3ab483599b9c824593af12ad6509"
+    },
+    {
+      "path": "docs/project_memory.md",
+      "sha256": "75870c3fe7d43abb9c6d9bba6691039b6d550e81ce176dd5f676529736b2ab11"
+    },
+    {
+      "path": "tests/levels/task_0024y_crate_shadow_timing_validation.gd",
+      "sha256": "e81564034bcdf78e62fb2099a11b023d06a8453ca628f15fc2be7617d48a6508"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_focused_009.json",
+      "sha256": "80e44ea6e3e26afc762a7807e47c69c2b1af75928eb2667c735137d9239e6b8b"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_focused_010.json",
+      "sha256": "56c60f2185e95df04b7a799e3de9edac89caff4fe2e76f58f921636218c38a9d"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_focused_011.json",
+      "sha256": "dd601f87957e4fed69c49ee05e10567d3441bd691da70862ebcc91ee172544b6"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_focused_012.json",
+      "sha256": "c6a62c6e410be89edb7d01eae7b788a14401449ba9f09c2d4f92888be2ae6b3f"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_focused_013.json",
+      "sha256": "a7d83ae972bfd08421b219f55d08b5038b975a3833f9a749fb732ee8391a458b"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_focused_014.json",
+      "sha256": "6e3993802efbfc7010b485c979bf5f415dbd38bc4f089c5096c15f13b00a6874"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_focused_015.json",
+      "sha256": "1ea81d1dbe59ed16dc0c5bdeaa5a39ccd0e8b66d93119b45eb7683a9a49cea9d"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_focused_016.json",
+      "sha256": "3dd2d9a484864a6fe058d1de99882b8eb36609305cb58eeaf364f1468654978f"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_focused_017.json",
+      "sha256": "75f7d450efc0934040f9b9d698a0dcd79c1ab99cf71d9b020435ded04748f9f4"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_focused_018.json",
+      "sha256": "9b76292cca18011527c174877e65cb1a708c6410ff0b5bfd7e8fdec83d42a783"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_focused_019.json",
+      "sha256": "6301064867df2bb90c1ef653ea5eae4dc1b94a0e5f32aafddbf302ad3acf9782"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_focused_020.json",
+      "sha256": "bb642852e83d94c8f2c01562d4df71adc911c4ba96012db7af6b85224c3e2ee1"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_focused_021.json",
+      "sha256": "f9dab5c8ca1a08c5c2a3516a1ae3f68551aa96aeac0463da22ac6056e7f85010"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_focused_022.json",
+      "sha256": "d4b5a09cfa2140de12d69bc32ce08b1c22d9242d73ac66e2e64846225d07e44e"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_focused_023.json",
+      "sha256": "1de20b0646593f7f0335e5c3cc54569b9e65c35bfb78e6daeba0874b6e4372ce"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_focused_024.json",
+      "sha256": "c923eb6d48225b49cda1bdcb9040bcc4a96cef2b7a6e8bba3c7c77478cbfcd08"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_focused_025.json",
+      "sha256": "f4a7e190ce2d8482d13f1b84c6c4ff19ec1edbb867f7f55d4854776245cd0115"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_focused_026.json",
+      "sha256": "349e4fcb52f3b1ec88576a5b64422df5bd9c905fa77b9efe7f6213dfaed8a3f2"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_focused_027.json",
+      "sha256": "977ab760b2049539c64d465385a2166468af13516097e819f4a2e26944f315ba"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_focused_028.json",
+      "sha256": "09552e2dad2ee427942f74857fa19d6f03e9da2a1cc61c7eb25c48d6959ba2d2"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_focused_029.json",
+      "sha256": "225397b187bd14ab2ab1506175af62e798f3cb0841cea792455cdb7c1360043d"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_focused_030.json",
+      "sha256": "26fab3ef3e99a28eccd1b551c4dc48f6b41d187defb23f2eb62c66276b5c5d5f"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_focused_031.json",
+      "sha256": "bb3db3fc9295050f90bf2bbbd71c5100c0647e2c6413d6e11cbfe73ce081216b"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_search_003.json",
+      "sha256": "a8aabef3ca1a4b5e255c185638c954996a65e5a05aadd473293255abcf5268d2"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_search_004.json",
+      "sha256": "4259804e54999a0d4b6526d57be3445c017427a5c9c649fde36756deaf527990"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_search_005.json",
+      "sha256": "54d28d2d21d4314032e541f2089e860c64ba436c31fdfea924ae7745352ed16d"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_search_006.json",
+      "sha256": "dbfa12d4475dd2a992312ae3f3cc340b3cc37bb49e06e1791dafb7b2ffa1a8cc"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_search_007.json",
+      "sha256": "a9815170f4fa499e012ed8b4b04a58fd1b0833cb079992c81fba6a87cf0875fa"
+    },
+    {
+      "path": "tests/tools/task_0024y_authoring_search_008.json",
+      "sha256": "46163ef87c3a22e5e348d5c35190e1982687c39690798dbf1a70e89d0738d418"
+    },
+    {
+      "path": "tests/tools/task_0024y_build_changed_path_hash_manifest.ps1",
+      "sha256": "c7f2723daf20f2a434971d86eadfc180c3f50371f9f29062caafba8824f15d89"
+    },
+    {
+      "path": "tests/tools/task_0024y_build_validation_summary.ps1",
+      "sha256": "91554ea9b92f2ecedf68247b9dc6ee863d7a00db157e3d6dbc8e93a10fc39403"
+    },
+    {
+      "path": "tests/tools/task_0024y_final_aggregate.json",
+      "sha256": "02aab856493da65c0c5c79ddfacf6db0d226663629a5d689e40d93ba62c4ac04"
+    },
+    {
+      "path": "tests/tools/task_0024y_final_complete_v2.json",
+      "sha256": "db9d0a911804b60ce60d89e65530267211a5d5907dd02e33b2907546d7acfb37"
+    },
+    {
+      "path": "tests/tools/task_0024y_final_focused.json",
+      "sha256": "91262896fa5f2383b28a696b0be774f33c8dc9d91989eb22b1d0fe2daa05f65d"
+    },
+    {
+      "path": "tests/tools/task_0024y_final_qualification_summary.json",
+      "sha256": "b5a902aceb52afe613c32f79bb9fd30794bd2daba2f040ac23856368049325d2"
+    },
+    {
+      "path": "tests/tools/task_0024y_final_qualification.ps1",
+      "sha256": "0a33c785f3d79e7d6687f7f8e6e01cead4584f71c25f8175e19e40b0b6704a6b"
+    },
+    {
+      "path": "tests/tools/task_0024y_frozen_hash_audit.ps1",
+      "sha256": "b0889cdcc74042b577c3b68a17539d9b508ec43e19b4eefdcb0e80179cf5b4c9"
+    },
+    {
+      "path": "tests/tools/task_0024y_post_final_frozen_hash_audit.json",
+      "sha256": "4e22c4c9ba08fad6ee8a6e4e9a452c649feb94fed7d45b1fb0fb404803b9d583"
+    },
+    {
+      "path": "tests/tools/task_0024y_pre_final_frozen_hash_audit.json",
+      "sha256": "fdd04943c3358bbd28861134d299895b503bd9e9c76515699aa63d7d7f7b78f4"
+    },
+    {
+      "path": "tests/tools/task_0024y_run_case.ps1",
+      "sha256": "9a36e446b00119adcd5203751619af08db5c4b3ffd888473df143232678bc4a9"
+    }
+  ],
+  "self_exclusion": "tests/tools/task_0024y_changed_path_hash_manifest.json",
+  "self_referential_report_exclusion": "docs/reports/0024Y_SEQUENCE_9_CRATE_SHADOW_TIMING_MACHINE_VALIDATION_REPORT.md"
+}

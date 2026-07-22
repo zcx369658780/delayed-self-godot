@@ -1,5 +1,12 @@
 # Development plan (CURRENT)
 
+> 2026-07-22 — Task 0024Y authored and machine-validated the uncatalogued
+> sequence-9 `crate_shadow_timing` candidate. Final solver facts are `L*=14`,
+> exact `N*=6`, all-shortest full event `6/6`, omissions `0`, maximum push `1`.
+> The retained focused/Aggregate/complete-v2 cycle passed with exact stderr,
+> one cleanup per case and zero final Godot. Owner playthrough, catalog admission
+> and every sequence-10/product/protected surface remain separately gated.
+
 > 2026-07-22 — Task 0024X completed the docs-only submission-core scope
 > package. Sequences 9–12 are frozen as crate timing, YOU-only key/lock route
 > commitment, typed-sensor/grouped-bridge identity timing, and latch synthesis.

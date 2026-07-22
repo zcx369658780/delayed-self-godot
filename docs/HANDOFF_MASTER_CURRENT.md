@@ -1,5 +1,13 @@
 # Handoff master (CURRENT)
 
+## Task 0024Y sequence-9 candidate ready for GPT review
+
+Task 0024Y completed at `SEQUENCE_9_CRATE_SHADOW_TIMING_MACHINE_VALIDATED_FOR_GPT_REVIEW`. The uncatalogued `crate_shadow_timing` schema-v2 candidate has `L*=14`, exact `N*=6`, six of six shortest paths with the complete crate/ECHO/Plate-Door event, zero omission and at most one push. No-push, displaced-crate and no-ECHO controls completely exhaust unsolved. Static-wall substitution retains the numerical `14/6` but cannot reproduce the crate push and later ECHO-crate-block temporal structure.
+
+Final invocation `0d9ee9ef-3213-4266-a94c-6b8e8a0ae44b` ran focused 0024Y, Aggregate and corrected complete-v2 once each. All passed; Aggregate stderr was exactly `LEVEL_ID_MISMATCH`, other stderr was empty, cleanup was one per case, no owned/unproven PID remained and final Godot count was zero. Pre/post Task 0024W seal audits retained 53 repository and 12 historical external files with zero drift.
+
+Read `docs/level_design/validation/sequence_09_crate_shadow_timing_validation.json` and `docs/reports/0024Y_SEQUENCE_9_CRATE_SHADOW_TIMING_MACHINE_VALIDATION_REPORT.md`. Await GPT review or a new explicit task. Do not rerun the final cycle or start sequence 10, catalog/finale/Profile, owner playthrough, Gameplay/UI, localization, assets/audio, build/export, release, upload or submission work.
+
 ## Task 0024X submission-core scope ready for GPT review
 
 Task 0024X completed at `SUBMISSION_CORE_LEVELS_9_12_SCOPE_READY_FOR_GPT_REVIEW`. The durable package freezes append-only sequences 9–12 as `crate_shadow_timing`, `key_route_commitment`, `identity_shift_bridge` and `lasting_echo_latch`. Difficulty bands are planning targets derived from accepted sequences 6–8, not solver claims.

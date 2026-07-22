@@ -1,0 +1,63 @@
+{
+  "schema_version": 2,
+  "status": "NONZERO_EXIT",
+  "underlying_status": "NONZERO_EXIT",
+  "native_exit_code": 1,
+  "timed_out": false,
+  "marker_pass": false,
+  "stderr_policy": "ForbidNonempty",
+  "stderr_pass": false,
+  "cleanup_invocation_count": 1,
+  "cleanup_order": [
+    55328
+  ],
+  "cleanup_closed_pids": [],
+  "remaining_owned_pids": [],
+  "remaining_unproven_pids": [],
+  "owned_records": [
+    {
+      "pid": 55328,
+      "parent_pid": null,
+      "depth": 0,
+      "ancestry_path": "direct",
+      "direct": true,
+      "executable": "d:\\program files (x86)\\steam\\steamapps\\common\\godot engine\\godot.windows.opt.tools.64.exe",
+      "start_utc": "2026-07-22T08:00:58.4896808Z",
+      "arguments": [
+        "--headless",
+        "--path",
+        "D:\\Delayed_Self",
+        "--script",
+        "res://tests/levels/task_0024y_crate_shadow_timing_validation.gd"
+      ],
+      "classification": "DIRECT",
+      "alive_at_discovery": true,
+      "cleanup_eligible": true
+    }
+  ],
+  "unproven_records": [],
+  "stdout": [
+    "Godot Engine v4.7.1.stable.steam.a13da4feb - https://godotengine.org",
+    "TASK_0024Y_TRACE_DIAGNOSTIC {\"action\":\"DOWN\",\"after_crate\":[2,2],\"after_door\":false,\"after_echo\":[3,1],\"after_player\":[1,2],\"before_crate\":[2,2],\"before_door\":false,\"before_echo\":[3,1],\"before_player\":[1,1],\"completed\":false,\"echo_action\":\"WAIT\",\"index\":1,\"ok\":true}",
+    "TASK_0024Y_TRACE_DIAGNOSTIC {\"action\":\"RIGHT\",\"after_crate\":[3,2],\"after_door\":false,\"after_echo\":[3,1],\"after_player\":[2,2],\"before_crate\":[2,2],\"before_door\":false,\"before_echo\":[3,1],\"before_player\":[1,2],\"completed\":false,\"echo_action\":\"WAIT\",\"index\":2,\"ok\":true}",
+    "TASK_0024Y_TRACE_DIAGNOSTIC {\"action\":\"RIGHT\",\"after_crate\":[3,2],\"after_door\":false,\"after_echo\":[3,1],\"after_player\":[2,2],\"before_crate\":[3,2],\"before_door\":false,\"before_echo\":[3,1],\"before_player\":[2,2],\"completed\":false,\"echo_action\":\"WAIT\",\"index\":3,\"ok\":true}",
+    "TASK_0024Y_TRACE_DIAGNOSTIC {\"action\":\"DOWN\",\"after_crate\":[3,2],\"after_door\":false,\"after_echo\":[3,1],\"after_player\":[2,3],\"before_crate\":[3,2],\"before_door\":false,\"before_echo\":[3,1],\"before_player\":[2,2],\"completed\":false,\"echo_action\":\"WAIT\",\"index\":4,\"ok\":true}",
+    "TASK_0024Y_TRACE_DIAGNOSTIC {\"action\":\"RIGHT\",\"after_crate\":[3,2],\"after_door\":false,\"after_echo\":[3,1],\"after_player\":[3,3],\"before_crate\":[3,2],\"before_door\":false,\"before_echo\":[3,1],\"before_player\":[2,3],\"completed\":false,\"echo_action\":\"DOWN\",\"index\":5,\"ok\":true}",
+    "TASK_0024Y_TRACE_DIAGNOSTIC {\"action\":\"RIGHT\",\"after_crate\":[3,2],\"after_door\":true,\"after_echo\":[4,1],\"after_player\":[4,3],\"before_crate\":[3,2],\"before_door\":false,\"before_echo\":[3,1],\"before_player\":[3,3],\"completed\":false,\"echo_action\":\"RIGHT\",\"index\":6,\"ok\":true}",
+    "TASK_0024Y_TRACE_DIAGNOSTIC {\"action\":\"UP\",\"after_crate\":[3,2],\"after_door\":true,\"after_echo\":[4,1],\"after_player\":[4,2],\"before_crate\":[3,2],\"before_door\":true,\"before_echo\":[4,1],\"before_player\":[4,3],\"completed\":false,\"echo_action\":\"RIGHT\",\"index\":7,\"ok\":true}",
+    "TASK_0024Y_TRACE_DIAGNOSTIC {\"action\":\"RIGHT\",\"after_crate\":[3,2],\"after_door\":false,\"after_echo\":[4,2],\"after_player\":[5,2],\"before_crate\":[3,2],\"before_door\":true,\"before_echo\":[4,1],\"before_player\":[4,2],\"completed\":false,\"echo_action\":\"DOWN\",\"index\":8,\"ok\":true}",
+    "TASK_0024Y_TRACE_DIAGNOSTIC {\"action\":\"RIGHT\",\"after_crate\":[3,2],\"after_door\":false,\"after_echo\":[5,2],\"after_player\":[6,2],\"before_crate\":[3,2],\"before_door\":false,\"before_echo\":[4,2],\"before_player\":[5,2],\"completed\":false,\"echo_action\":\"RIGHT\",\"index\":9,\"ok\":true}",
+    "TASK_0024Y_TRACE_DIAGNOSTIC {\"action\":\"DOWN\",\"after_crate\":[3,2],\"after_door\":false,\"after_echo\":[6,2],\"after_player\":[6,3],\"before_crate\":[3,2],\"before_door\":false,\"before_echo\":[5,2],\"before_player\":[6,2],\"completed\":false,\"echo_action\":\"RIGHT\",\"index\":10,\"ok\":true}",
+    "TASK_0024Y_TRACE_DIAGNOSTIC {\"action\":\"DOWN\",\"after_crate\":[3,2],\"after_door\":false,\"after_echo\":[6,2],\"after_player\":[6,4],\"before_crate\":[3,2],\"before_door\":false,\"before_echo\":[6,2],\"before_player\":[6,3],\"completed\":false,\"echo_action\":\"UP\",\"index\":11,\"ok\":true}",
+    "TASK_0024Y_TRACE_DIAGNOSTIC {\"action\":\"DOWN\",\"after_crate\":[3,2],\"after_door\":false,\"after_echo\":[7,2],\"after_player\":[6,5],\"before_crate\":[3,2],\"before_door\":false,\"before_echo\":[6,2],\"before_player\":[6,4],\"completed\":false,\"echo_action\":\"RIGHT\",\"index\":12,\"ok\":true}",
+    "TASK_0024Y_TRACE_DIAGNOSTIC {\"action\":\"RIGHT\",\"after_crate\":[3,2],\"after_door\":false,\"after_echo\":[7,2],\"after_player\":[7,5],\"before_crate\":[3,2],\"before_door\":false,\"before_echo\":[7,2],\"before_player\":[6,5],\"completed\":true,\"echo_action\":\"RIGHT\",\"index\":13,\"ok\":true}",
+    "TASK_0024Y_SOLVER_DIAGNOSTIC {\"limits\":{\"depth_limit\":48,\"solution_count_cap\":1000000,\"state_limit\":250000,\"time_limit_ms\":20000},\"maximum_frontier\":37539,\"status\":\"TIME_LIMIT\",\"visited_states\":102509}"
+  ],
+  "stderr": [
+    "TASK_0024Y_CASE_FAIL solver_solved",
+    "TASK_0024Y_CRATE_SHADOW_TIMING_FAIL failures=1"
+  ],
+  "wrapper_error": "",
+  "cleanup_error": "",
+  "wrapper_process_exit": 1
+}
