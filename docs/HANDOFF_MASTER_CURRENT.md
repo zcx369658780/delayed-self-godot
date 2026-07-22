@@ -1,5 +1,13 @@
 # Handoff master (CURRENT)
 
+## Task 0024AE isolated staging owner-review route ready for GPT review
+
+Task 0024AE completed at `ISOLATED_STAGING_OWNER_REVIEW_ROUTE_READY_FOR_GPT_REVIEW`. A test-owned 12-entry catalog preserves production entries 1–7, changes only sequence 8 `final_level` to false, appends accepted candidates 9–12, and makes sequence 12 the sole staging-only finale. The launcher fixes that catalog and exact `user://delayed_self_test_profiles/task_0024ae_owner_curriculum/delayed_self_profile.json` configuration before AppRoot enters the tree, then uses normal selection/completion/profile routing.
+
+Two repeatable qualifications passed with 18 bounded records each (maximum 487 bytes), parser negative probes passed, and the final invocation `6b20bea7-f3e0-4daf-8d05-090e6fea9cb5` ran route, accepted 0024AD batch, Aggregate and corrected complete-v2 exactly once. All passed; Aggregate stderr was exactly `LEVEL_ID_MISMATCH`, all others were empty, cleanup count was one per case, no owned/unproven PID remained and final Godot was zero. PRE_FINAL/POST_FINAL mismatches were zero. The cycle is consumed.
+
+Owner playthrough is still `NOT_YET_REVIEWED`; presentation is `BLOCKED_SCHEMA_V2_VISUALS`; production catalog admission is `NOT_AUTHORIZED`. Read the 0024AE report and await GPT/owner adjudication. Do not run the interactive owner session, rerun the final cycle, inspect production Profile data, change production catalog/finale/Profile, or begin presentation/localization/assets/build/release/submission without a new task.
+
 ## Task 0024AD 1–12 batch and owner-route audit ready for GPT review
 
 Task 0024AD completed at `SUBMISSION_CORE_1_12_BATCH_REGRESSION_AND_OWNER_REVIEW_ROUTE_READY_FOR_GPT_REVIEW`. Fresh direct-file validation solved all twelve planned rooms with exact shortest counts, deterministic replay, exact restart and YOU-only completion. The retained final invocation `fcd8d3bd-a67c-4b44-b664-98fa5e2f27d6` ran focused 0024AD, accepted focused 0024AC/AB/Z/Y, Aggregate and corrected complete-v2 exactly once. All passed; Aggregate stderr was exactly `LEVEL_ID_MISMATCH`, all others empty, cleanup was once per case, no owned/unproven PID remained and final Godot was zero. The focused capture SHA-256 is `79b8499b72f064c7036241338076ffce396952fba58b92f2fa9cf5066102b21b`; the cycle is consumed.

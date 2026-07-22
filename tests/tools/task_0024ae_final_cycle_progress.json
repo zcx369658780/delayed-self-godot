@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "task": "0024AE",
+  "invocation_id": "6b20bea7-f3e0-4daf-8d05-090e6fea9cb5",
+  "stage": "AFTER_ALL_CASES",
+  "completed_cases": [
+    {
+      "ordinal": 1,
+      "name": "isolated_staging_route",
+      "record": "tests/tools/task_0024ae_final_case_01_route.json",
+      "record_sha256": "a1f22c8109e512e5c579ac5d50bfbe8a2746332caa76097981f7ae3361961409",
+      "completed_utc": "2026-07-22T21:18:55.5086543Z"
+    },
+    {
+      "ordinal": 2,
+      "name": "accepted_0024ad_batch",
+      "record": "tests/tools/task_0024ae_final_case_02_batch.json",
+      "record_sha256": "2d8c7ada28f6d2eafb778152fde92f2adcc87df5ab686014632ca0e9a57f94f8",
+      "completed_utc": "2026-07-22T21:19:25.2223812Z"
+    },
+    {
+      "ordinal": 3,
+      "name": "aggregate",
+      "record": "tests/tools/task_0024ae_final_case_03_aggregate.json",
+      "record_sha256": "605b2dd2343518a420eb3dab898f26adb229bfb039b4a2eb67193fc6e409acd6",
+      "completed_utc": "2026-07-22T21:20:31.4960297Z"
+    },
+    {
+      "ordinal": 4,
+      "name": "corrected_complete_v2",
+      "record": "tests/tools/task_0024ae_final_case_04_complete_v2.json",
+      "record_sha256": "d915768faa332c83d8436a2525fa1edcba71456d3f3d9b5b7862449864e1158d",
+      "completed_utc": "2026-07-22T21:20:37.3312621Z"
+    }
+  ],
+  "updated_utc": "2026-07-22T21:20:37.4698640Z",
+  "focused_capture_sha256": "2c546746be454411002cc4748ad2411869b5b01acd1797303a0dc19fec174470",
+  "final_godot_count": 0,
+  "completed_utc": "2026-07-22T21:20:37.4698640Z"
+}

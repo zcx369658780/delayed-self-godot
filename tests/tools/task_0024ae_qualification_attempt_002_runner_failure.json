@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "task": "0024AE",
+  "attempt": 2,
+  "stage": "WRAPPER_ARGUMENT_BINDING",
+  "status": "FAIL_BEFORE_GODOT_LAUNCH",
+  "reason": "PowerShell treated a standalone -- ExtraArguments value as an ambiguous parameter name",
+  "godot_launched": false,
+  "godot_after_count": 0,
+  "qualification_runtime_consumed": false,
+  "final_cycle_consumed": false,
+  "correction": "Launcher now reads the explicit flag from OS.get_cmdline_args and runner passes the flag directly"
+}

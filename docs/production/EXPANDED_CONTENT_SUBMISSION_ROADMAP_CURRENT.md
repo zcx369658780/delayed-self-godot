@@ -6,7 +6,7 @@
 - Original planning date: 2026-07-21
 - Project-source synchronization date: 2026-07-22
 
-Task 0024W is GPT accepted as the schema-v2/Simulation/solver foundation. Task 0024X froze the sequence 9–12 curriculum and compatibility contract. Tasks 0024Y, 0024Z, 0024AB and 0024AC are GPT accepted as uncatalogued sequence-9/10/11/12 candidates. Task 0024AD has freshly batch-validated the exact 1–12 direct-file curriculum and selected `ISOLATED_STAGING_CATALOG_REQUIRED` for a later owner route; owner review and formal integration remain separately gated.
+Task 0024W is GPT accepted as the schema-v2/Simulation/solver foundation. Task 0024X froze the sequence 9–12 curriculum and compatibility contract. Tasks 0024Y, 0024Z, 0024AB and 0024AC are GPT accepted as uncatalogued sequence-9/10/11/12 candidates. Task 0024AD batch-validated the exact 1–12 direct-file curriculum and selected `ISOLATED_STAGING_CATALOG_REQUIRED`. Task 0024AE has now machine-qualified that test-owned route; owner review and formal integration remain separately gated.
 
 ## Product target
 
@@ -55,7 +55,7 @@ Music target: two restrained looping tracks plus an optional finale cue. Any Cro
 
 ## Current execution position
 
-Tasks 0024W/X/Y/Z/AB/AC are GPT accepted at their stated foundation/scope/candidate boundaries. Task 0024AD freshly passed all twelve direct-file rooms with exact shortest counts and the full seven-case regression lifecycle. Its owner worksheet remains `NOT_YET_REVIEWED`; sequences 3 and 9–12 require owner curriculum review. The safe later route requires a test-owned staging catalog and exact isolated Profile, and current Gameplay lacks visible schema-v2 crate/key/lock/sensor/barrier/latch presentation. Task 0024AD is ready for GPT review only. Catalog expansion, finale movement, Profile migration/default activation, presentation integration, localization, font/audio import, build/export, release and submission remain closed until their own later gates.
+Tasks 0024W/X/Y/Z/AB/AC are GPT accepted at their stated foundation/scope/candidate boundaries. Task 0024AD passed all twelve direct-file rooms, and Task 0024AE machine-qualified a test-owned staging catalog plus exact isolated Profile route through normal AppRoot selection, completion, unlock, reload and staging-finale behavior. The worksheet remains `NOT_YET_REVIEWED`; sequences 3 and 9–12 still require owner curriculum review. Current Gameplay lacks visible schema-v2 crate/key/lock/sensor/barrier/latch presentation, so `BLOCKED_SCHEMA_V2_VISUALS` remains. Production catalog expansion, finale movement, Profile migration/default activation, presentation integration, localization, font/audio import, build/export, release and submission remain closed until their own later gates.
 
 ## Implementation order
 

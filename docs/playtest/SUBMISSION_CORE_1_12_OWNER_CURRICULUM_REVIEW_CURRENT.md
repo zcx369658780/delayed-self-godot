@@ -1,8 +1,12 @@
 # Submission-core 1–12 owner curriculum review (CURRENT)
 
-- Task source: `0024AD`
+- Machine matrix source: `0024AD`
+- Route qualification source: `0024AE`
 - Machine matrix: `docs/level_design/validation/submission_core_1_12_curriculum_matrix.json`
-- Human review state: `NOT_YET_REVIEWED`
+- `owner_route_status = MACHINE_QUALIFIED_ISOLATED_STAGING_ROUTE`
+- `owner_playthrough_status = NOT_YET_REVIEWED`
+- `presentation_readiness = BLOCKED_SCHEMA_V2_VISUALS`
+- `catalog_admission_status = NOT_AUTHORIZED`
 - Formal product baseline: sequences 1–8; sequence 8 is the sole formal finale
 - Uncatalogued accepted candidates: sequences 9–12
 
@@ -205,4 +209,4 @@ Every blank subjective field below means **`NOT_YET_REVIEWED`**, never implicit 
 
 ## Boundary
 
-This worksheet is ready for a later owner playthrough only after a separately authorized isolated route and adequate v2 presentation exist. Task 0024AD did not launch interactive gameplay, access Profile data, populate subjective answers, admit candidates or change finale state.
+Task 0024AE machine-qualified the separately isolated staging route, but did not conduct the owner session. A fair owner playthrough still requires separately authorized work after adequate schema-v2 presentation exists. No subjective answer was populated, no candidate was admitted to the production catalog, and sequence 8 remains the sole formal product finale.

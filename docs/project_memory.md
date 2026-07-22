@@ -1,5 +1,13 @@
 # Project memory
 
+## Task 0024AE isolated staging owner-review route
+
+Task 0024AE created a test-owned 12-entry staging catalog and a pre-tree AppRoot launcher bound to the exact isolated Profile path. Production entries 1–7 remain semantically identical; sequence 8 differs only by staging `final_level=false`; accepted candidates 9–12 form the exact prerequisite chain and sequence 12 alone is staging-final. Production catalog, product route code, levels and accepted evidence remained unchanged.
+
+The launcher proved normal catalog-backed selection for sequences 1–12, exact payloads and accepted turn counts, AppRoot completion persistence, ordered unlocks, staging-finale acknowledgement and independent-session reload. Two repeatable qualifications passed with 18 records each, maximum 487 bytes. Missing, duplicate, truncated, non-JSON and over-bound probes were all rejected. Zero production-data probes and zero test-root enumerations occurred; exact owned fixture cleanup passed.
+
+Final invocation `6b20bea7-f3e0-4daf-8d05-090e6fea9cb5` ran four cases once. All passed; Aggregate stderr was exactly `LEVEL_ID_MISMATCH`, the other three were empty, cleanup was once per case, no owned/unproven PID remained and final Godot was zero. The final route capture SHA-256 is `2c546746be454411002cc4748ad2411869b5b01acd1797303a0dc19fec174470`. Owner playthrough remains `NOT_YET_REVIEWED`, presentation is `BLOCKED_SCHEMA_V2_VISUALS`, catalog admission is `NOT_AUTHORIZED`, and the cycle is consumed.
+
 ## Task 0024AD submission-core batch and owner-route audit
 
 Task 0024AD freshly validated the fixed direct-file sequence 1–12. All twelve rooms solved with exact `N*`, deterministic replay, exact restart and YOU-only completion. Fresh `(L*, N*)` for 1–12 are `(3,3)`, `(9,12)`, `(9,31)`, `(9,7)`, `(12,1)`, `(15,4)`, `(16,12)`, `(19,6)`, `(14,6)`, `(19,8)`, `(18,1)`, `(21,6)`. The focused capture has 38 independently parseable records, maximum 502 bytes, SHA-256 `79b8499b72f064c7036241338076ffce396952fba58b92f2fa9cf5066102b21b`.

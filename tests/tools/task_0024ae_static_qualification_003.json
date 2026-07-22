@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "task": "0024AE",
+  "phase": "STATIC",
+  "status": "PASS",
+  "audited_utc": "2026-07-22T21:17:37.0482843Z",
+  "head": "455be2d7d4e985a287df85d2b4e65627aae1b5e1",
+  "production_catalog_sha256": "a2bfa892f77370ac4d7e93ba5b6ce5970f0d7ba75160e1b2d00c4384f3da4e51",
+  "staging_catalog_sha256": "389e33babba6cf9840dc5ddf6e6b0beb3bf22412947ccd81cdb290bc536d1780",
+  "staging_entry_count": 12,
+  "staging_final_count": 1,
+  "staging_final_id": "lasting_echo_latch",
+  "semantic_differences": [
+    {
+      "sequence": 8,
+      "field": "final_level",
+      "production": true,
+      "staging": false
+    }
+  ],
+  "launcher_sha256": "ad6a2748c404a031c016d78696698a0d8b36dbfdb85ac981aa4cb0a20214ae4c",
+  "launcher_pre_tree_order": true,
+  "production_profile_probe_count": 0,
+  "test_profile_root_enumeration_count": 0,
+  "frozen_hashes": {
+    "data/catalog/level_catalog_v1.json": {
+      "sha256": "a2bfa892f77370ac4d7e93ba5b6ce5970f0d7ba75160e1b2d00c4384f3da4e51",
+      "git_blob": "4ec09dcaeffc68b57b7e8d27c84e92fe573eeee7"
+    },
+    "data/levels/tutorial_reach_exit.json": {
+      "sha256": "38e466bb5922f1987a99d79c7527a4a8eab8e6cfdbe76fd8159f80b0a40cf2c4",
+      "git_blob": "9800d32b6a1e05d6e318188bf570e53c87879d59"
+    },
+    "data/levels/tutorial_echo_bridge.json": {
+      "sha256": "681d99057c4e6034a490644d75960ff23d8f43bd1b91850f48179b79fc04a3cf",
+      "git_blob": "e10a26199088a0d3168e825d316a93e44383d839"
+    },
+    "data/levels/vertical_slice_delay_3.json": {
+      "sha256": "8751da5051fbebaaa5ae7c895d9be9f086e8d8f2e87876a80c379dc06262f1d8",
+      "git_blob": "f28170c81cd5b1c95fb170a6aea2e0da99501323"
+    },
+    "data/levels/door_one_turn_late.json": {
+      "sha256": "1775cf89ae4a94f65a76dac2b791a31395443de88205d0ed1b6233331dbda577",
+      "git_blob": "8892e2391a564be684797941a0e07a0087f936b2"
+    },
+    "data/levels/two_keys_one_door.json": {
+      "sha256": "f4c6791dfc84d17fb450721e654091a2baeb522e55d660a5d73878cd977651cd",
+      "git_blob": "128d024e2fb5496fb76b529e6226514c9f2d1b93"
+    },
+    "data/levels/staggered_doors.json": {
+      "sha256": "3f14c19b50775e36dd5b52664798381cf1292b0a30b377641c03435f45696bc8",
+      "git_blob": "5b1cb947db68e73e34eeaabc7e29264799246734"
+    },
+    "data/levels/echo_spacing_bridge.json": {
+      "sha256": "805cdc05ea9b3805189ba7be4938cb7ede4e7056b9ae9a7e911df96a801d58ee",
+      "git_blob": "02b42271628523120ddbd5eb50a279df476df979"
+    },
+    "data/levels/two_echo_convergence.json": {
+      "sha256": "772410d3b8bb807e35472ee2a7d07b703de66e1e0e92ffb4d1ff8433a345d5fd",
+      "git_blob": "95e36203cbe2f620c377bf9b04eb084f54653443"
+    },
+    "data/levels/crate_shadow_timing.json": {
+      "sha256": "1910f4dc07b1ee508ddbc529b0f0d02db5ca8a3a16a7a277ed236b4efbbe50d1",
+      "git_blob": "3d808cee8f419a982cb179864840a18e6f62038c"
+    },
+    "data/levels/key_route_commitment.json": {
+      "sha256": "2c44c8cdeeeb6f502f5c5d9dda87883dd762515348ee3c4b6d71d34fde276a2a",
+      "git_blob": "23c4398ae518de1f7db6063ae5661a29c0341dea"
+    },
+    "data/levels/identity_shift_bridge.json": {
+      "sha256": "8856d3c64978cef7cff7f1680a7ae2f412c9b0cab058d598cbe3aee0225052e0",
+      "git_blob": "86ecb05f57489a2ec2b6bf6566522d5549579058"
+    },
+    "data/levels/lasting_echo_latch.json": {
+      "sha256": "a1d7dcd30832cfdcfe93ead34884fa5a21fd19ef3cafa481860688640bd5ea5f",
+      "git_blob": "f26f5e623187b5514e518b3c9aa63c26195e9d21"
+    },
+    "scripts/app/app_root.gd": {
+      "sha256": "79d92b823d4483c0ec97caced1c77bace147313e7b1694e12537146031fe89b7",
+      "git_blob": "8f3e74b703225c1f02a6f94a5013bdb7bcb25e99"
+    },
+    "scripts/app/catalog_loader.gd": {
+      "sha256": "ce18165de39bff20e1bf57fa4eb18d5ed91bd268aa80953568007994e2ff7f7d",
+      "git_blob": "327313e9f68b714a2a7e62342d55c0558dd9d921"
+    },
+    "scripts/app/local_profile.gd": {
+      "sha256": "91cb39e1d75189d0eb7b7d5e26a05f6a4524c2f95131ecb7276417f76d3aa89b",
+      "git_blob": "4d8ea06bf5d51a7d72e66a209e12b7c3a91645e4"
+    },
+    "scripts/app/profile_progress_adapter.gd": {
+      "sha256": "4c35ee3f0ec1c932ab30ffa3c3130870a3febfc7b2f2a6a219efd2a819f5f563",
+      "git_blob": "6f84bceee31275917c3d89ba64d00b3a8e139eac"
+    },
+    "scripts/app/memory_progress.gd": {
+      "sha256": "41651ebcff17fd09247c3e5e820fff940c896efc25c5ba17ee7af668bbd4d567",
+      "git_blob": "a3ebb0ebac7739dace19e751972808e45d2443bf"
+    },
+    "scripts/app/route_request.gd": {
+      "sha256": "63e72c4c2b268d7909892665e1bdfb606a3992e5b1fe0f976b188032f66b561d",
+      "git_blob": "9d7954debedd445c289a9b0b3d35c7a47b5ab089"
+    },
+    "scripts/gameplay/vertical_slice.gd": {
+      "sha256": "f474d36906c7b771a842978d17066b0e187f84d6a75e9ee7e054724e58f2c203",
+      "git_blob": "5f02c0e1750f33c799c590059e8126be31f4dbb6"
+    },
+    "scenes/app/app_root.tscn": {
+      "sha256": "8801addede59631e15e8ee98aa49a8b438536f2e5ef1df7441d9fc5a06248d91",
+      "git_blob": "fe68324be38a0aed3d1495c3de8308e2cea10cf3"
+    },
+    "scenes/vertical_slice/vertical_slice.tscn": {
+      "sha256": "114b2156f30aa4891b43ed9015d52ec3d115b63f85c1ec086f89a45579d2585a",
+      "git_blob": "ee06cba36bcfffc893e4ed67d18fb915213d41d1"
+    },
+    "project.godot": {
+      "sha256": "faeb4a90b435aa81bd1c122ee12972e82db8dd5a90c448e850781e3d4b88c0d2",
+      "git_blob": "1b29cc83000b4b77694f61d2ee1857080c91add4"
+    },
+    "tests/tools/run_owned_godot_headless.ps1": {
+      "sha256": "17c03970f1a4c59d9d87a826471429fef55da75afb7b86c676bb3bdf5205afbc",
+      "git_blob": "5f14eb0feff903b40311c1c7283b20e2eabbffc2"
+    },
+    "tests/curriculum/task_0024ad_submission_core_1_12_batch_validation.gd": {
+      "sha256": "3d36a237ff1162bb6fb248c9cf35cd7caf2ccac28b81c68b2fe47641ce9c1c03",
+      "git_blob": "b879676ac792cbb530dbae5def38d2a03f093084"
+    },
+    "tests/run_all.gd": {
+      "sha256": "a9fb670d9c20faab005b151febebd34205ad55ea6f39b3db49a3c95456cf7303",
+      "git_blob": "0cd060912689edd9bf3799b7364377644be7053c"
+    },
+    "tests/simulation/task_0024v_v2_solver_replay_canonical_malformed.gd": {
+      "sha256": "b3b670f160bdaa0b57773c7769fc6712543f205e4d3ef953e352f8f9da247321",
+      "git_blob": "79eb61c606e36356535267fcb11a75bb00248194"
+    },
+    "docs/reports/0024Y_GPT_SEQUENCE_9_CRATE_SHADOW_TIMING_MACHINE_VALIDATION_ACCEPTANCE.md": {
+      "sha256": "b05a572bda8ccf34fe2a837dccaa22844e152cc6cd23ed159e9cfbd43436a6e7",
+      "git_blob": "e15286a495eea046c1a03acca713dff3a1748616"
+    },
+    "docs/reports/0024Z_GPT_SEQUENCE_10_KEY_ROUTE_COMMITMENT_MACHINE_VALIDATION_ACCEPTANCE.md": {
+      "sha256": "87ea0bf0dda0372c8232b2f6ce1a42404ef0f78762284fd8632809bea603efef",
+      "git_blob": "70a2f8dcdc5445328e31b72b0bb30b981e08923b"
+    },
+    "docs/reports/0024AB_GPT_SEQUENCE_11_IDENTITY_SHIFT_BRIDGE_CORRECTED_MACHINE_VALIDATION_ACCEPTANCE.md": {
+      "sha256": "bd54b21da9a7dee9d5d88238b1fbe59f05a457e68595b27ed2cb49db6172dbdc",
+      "git_blob": "054dc71bd0a19efc987232eb2e32eaff55b7106b"
+    },
+    "docs/reports/0024AC_GPT_SEQUENCE_12_LASTING_ECHO_LATCH_MACHINE_VALIDATION_ACCEPTANCE.md": {
+      "sha256": "43ba671316bd29f301711fb0065c015eb9abaeeb714503c7aee7fe2ea8604cd5",
+      "git_blob": "05d3d9f7ee826f095796c63c9526cc899ed9c586"
+    },
+    "docs/reports/0024AD_SUBMISSION_CORE_1_12_BATCH_REGRESSION_AND_OWNER_REVIEW_ROUTE_AUDIT_REPORT.md": {
+      "sha256": "debb02c2f8911af2f927dcd99db6fd71008184baecaaf2ad3268e79f25a5cd54",
+      "git_blob": "5861b6a4f5993e24a698c49e420e1057213c3446"
+    },
+    "docs/reports/0024AD_GPT_SUBMISSION_CORE_1_12_BATCH_REGRESSION_AND_OWNER_ROUTE_ACCEPTANCE.md": {
+      "sha256": "5fdee6ced239d88e4c1dbc99f562b99c46934bc9a8006ab032ff436bdbc0b074",
+      "git_blob": "54b29dfe013fff25224f023ab7cebba43e7776a7"
+    }
+  },
+  "frozen_mismatch_count": 0,
+  "frozen_mismatches": [],
+  "accepted_0024ad_path_count": 0,
+  "accepted_0024ad_mismatch_count": 0,
+  "accepted_0024ad_mismatches": [],
+  "wrapper_blob": "5f14eb0feff903b40311c1c7283b20e2eabbffc2",
+  "changed_paths": [
+    "tests/playtest/fixtures/task_0024ae_submission_core_staging_catalog.json",
+    "tests/playtest/task_0024ae_submission_core_owner_review_launcher.gd",
+    "tests/tools/task_0024ae_final_cycle.ps1",
+    "tests/tools/task_0024ae_final_cycle_manifest.json",
+    "tests/tools/task_0024ae_owner_review_route_manifest.json",
+    "tests/tools/task_0024ae_owner_review_route_runner.ps1",
+    "tests/tools/task_0024ae_owner_review_route_static_qualification.ps1",
+    "tests/tools/task_0024ae_qualification_attempt_002_runner_failure.json",
+    "tests/tools/task_0024ae_qualification_case_001.json",
+    "tests/tools/task_0024ae_qualify_capture_parser.ps1",
+    "tests/tools/task_0024ae_static_qualification.json",
+    "tests/tools/task_0024ae_static_qualification_002.json",
+    "tests/tools/task_0024ae_validate_capture.ps1"
+  ],
+  "unauthorized_changed_paths": [],
+  "errors": []
+}

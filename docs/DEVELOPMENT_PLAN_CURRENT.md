@@ -1,5 +1,15 @@
 # Development plan (CURRENT)
 
+> 2026-07-23 — Task 0024AE implemented one test-owned 12-entry staging catalog
+> and one pre-tree AppRoot launcher bound to the exact isolated test Profile.
+> Normal catalog selection, ordered unlocks, completion persistence, reload and
+> staging-only sequence-12 acknowledgement passed twice before the retained
+> four-case cycle. Final invocation `6b20bea7-f3e0-4daf-8d05-090e6fea9cb5`
+> passed route, accepted 0024AD batch, Aggregate and corrected complete-v2 once
+> each with exact stderr/lifecycle policy and final Godot zero. Owner review is
+> still unperformed, catalog admission is unauthorized, and schema-v2 visuals
+> remain blocked. Status is ready for GPT review only.
+
 > 2026-07-22 — Task 0024AD completed the fresh submission-core 1–12 direct-file
 > batch: 12/12 solved, exact shortest counts, deterministic replay and exact
 > restart. The one retained seven-case cycle passed with exact stderr/lifecycle

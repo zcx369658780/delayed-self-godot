@@ -1,9 +1,9 @@
 # Codex startup snapshot (CURRENT)
 
-- Status: `CURRENT / TASK 0024AE ISOLATED STAGING OWNER ROUTE QUALIFICATION`
+- Status: `CURRENT / TASK 0024AE READY FOR GPT REVIEW`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
 - Active task: `tasks/0024AE_isolated_staging_catalog_and_owner_review_route_qualification.md`
-- Active status: `ISOLATED_STAGING_OWNER_REVIEW_ROUTE_READY_FOR_CODEX`
+- Active status: `ISOLATED_STAGING_OWNER_REVIEW_ROUTE_READY_FOR_GPT_REVIEW`
 - Closed predecessors: all Tasks through `0024AD`
 - Latest GPT adjudication: `TASK_0024AD_SUBMISSION_CORE_1_12_BATCH_REGRESSION_AND_OWNER_ROUTE_AUDIT_ACCEPTED`
 - Required accepted checkpoint: `30b40ea75ac53a4e8447e27238f54dbe5ef77b1f`
@@ -21,6 +21,6 @@
 
 Task 0024AD is GPT accepted. The direct-file 1–12 batch passed with exact counts, deterministic replay and exact restart; its seven-case retained cycle is consumed. The owner worksheet remains `NOT_YET_REVIEWED`. The accepted safe route decision is a test-owned twelve-entry staging catalog and exact isolated test Profile configured before AppRoot enters the tree.
 
-Task 0024AE may implement only that test-owned staging route and its qualification artifacts. It must preserve production catalog/code/Profile implementation and all accepted levels/evidence, exercise normal AppRoot unlock/completion/finale plumbing against the exact Task 0024AE test fixture, and clean only exact owned paths.
+Task 0024AE implemented and machine-qualified that test-owned route without changing production catalog/code/Profile implementation or accepted levels/evidence. Two repeatable qualifications and the unique four-case retained cycle passed. Owner review remains `NOT_YET_REVIEWED`, product admission remains `NOT_AUTHORIZED`, and presentation remains `BLOCKED_SCHEMA_V2_VISUALS`.
 
-Start by reading `AGENTS.md`, this file, `docs/CODEX_ACTIVE_TASK_CURRENT.md`, the full Task 0024AE file, the Task 0024AD report/matrix/route audit/GPT acceptance and the headless lifecycle policy. Do not run owner subjective playthrough, inspect production Profile data, or begin schema-v2 presentation, localization, assets/audio, build/export, release, upload or submission work.
+Start by reading `AGENTS.md`, this file, `docs/CODEX_ACTIVE_TASK_CURRENT.md`, the full Task 0024AE file, its report, the Task 0024AD report/matrix/route audit/GPT acceptance and the headless lifecycle policy. Await GPT/owner adjudication or a new explicit bounded task. Do not rerun the consumed 0024AE final cycle, run owner subjective playthrough, inspect production Profile data, or begin presentation/release work.

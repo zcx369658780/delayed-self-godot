@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "task": "0024AE",
+  "qualification_flag": "--task-0024ae-route-qualification",
+  "script": "res://tests/playtest/task_0024ae_submission_core_owner_review_launcher.gd",
+  "marker": "TASK_0024AE_ISOLATED_STAGING_OWNER_ROUTE_PASS",
+  "stderr_policy": "ForbidNonempty",
+  "timeout_seconds": 240,
+  "expected_records": {
+    "TASK_0024AE_CONFIGURATION_JSON": 1,
+    "TASK_0024AE_CATALOG_JSON": 1,
+    "TASK_0024AE_ROUTE_JSON": 12,
+    "TASK_0024AE_FINALE_JSON": 1,
+    "TASK_0024AE_RELOAD_JSON": 1,
+    "TASK_0024AE_BOUNDARY_JSON": 1,
+    "TASK_0024AE_CLEANUP_JSON": 1
+  }
+}

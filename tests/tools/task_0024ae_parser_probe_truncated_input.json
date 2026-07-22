@@ -1,0 +1,72 @@
+{
+  "schema_version": 2,
+  "status": "PASS",
+  "underlying_status": "PASS",
+  "native_exit_code": 0,
+  "timed_out": false,
+  "marker_pass": true,
+  "stderr_policy": "ForbidNonempty",
+  "stderr_pass": true,
+  "cleanup_invocation_count": 1,
+  "cleanup_order": [
+    38420
+  ],
+  "cleanup_closed_pids": [],
+  "remaining_owned_pids": [],
+  "remaining_unproven_pids": [],
+  "owned_records": [
+    {
+      "pid": 38420,
+      "parent_pid": null,
+      "depth": 0,
+      "ancestry_path": "direct",
+      "direct": true,
+      "executable": "d:\\program files (x86)\\steam\\steamapps\\common\\godot engine\\godot.windows.opt.tools.64.exe",
+      "start_utc": "2026-07-22T21:17:37.8685726Z",
+      "arguments": [
+        "--headless",
+        "--path",
+        "D:\\Delayed_Self",
+        "--script",
+        "res://tests/playtest/task_0024ae_submission_core_owner_review_launcher.gd",
+        "--task-0024ae-route-qualification"
+      ],
+      "classification": "DIRECT",
+      "alive_at_discovery": true,
+      "cleanup_eligible": true
+    }
+  ],
+  "unproven_records": [],
+  "stdout": [
+    "Godot Engine v4.7.1.stable.steam.a13da4feb - https://godotengine.org",
+    "TASK_0024AE_CONFIGURATION_JSON {\"boot_status\":\"TEST_PROFILE_READY\",\"catalog_path\":\"res://tests/playtest/fixtures/task_0024ae_submission_core_staging_catalog.json\",\"configured_before_tree\":true,\"load_status\":\"MISSING_CLEAN\",\"mode\":\"TEST_PROFILE\",\"profile_path\":\"user://delayed_self_test_profiles/task_0024ae_owner_curriculum/delayed_self_profile.json\",\"write_authorized\":false}",
+    "TASK_0024AE_CATALOG_JSON {\"catalog_path\":\"res://tests/playtest/fixtures/task_0024ae_submission_core_staging_catalog.json\",\"entry_count\":12,\"ordered_ids\":[\"tutorial_reach_exit\",\"tutorial_echo_bridge\",\"vertical_slice_delay_3\",\"door_one_turn_late\",\"two_keys_one_door\",\"staggered_doors\",\"echo_spacing_bridge\",\"two_echo_convergence\",\"crate_shadow_timing\",\"key_route_commitment\",\"identity_shift_bridge\",\"lasting_echo_latch\"],\"sequence_8_staging_final\":false,\"sole_finale\":\"lasting_echo_latch\"}",
+    "TASK_0024AE_ROUTE_JSON {\"completed_count\":1,\"development_direct\":false,\"final_level\":false,\"level_id\":\"tutorial_reach_exit\",\"level_path\":\"res://data/levels/tutorial_reach_exit.json\",\"persist_status\":\"COMMITTED_AFTER_PERSISTED\",\"route_after\":\"LEVEL_SELECT\",\"sequence\":1,\"turns\":3,\"unlocked_count\":2",
+    "TASK_0024AE_ROUTE_JSON {\"completed_count\":2,\"development_direct\":false,\"final_level\":false,\"level_id\":\"tutorial_echo_bridge\",\"level_path\":\"res://data/levels/tutorial_echo_bridge.json\",\"persist_status\":\"COMMITTED_AFTER_PERSISTED\",\"route_after\":\"LEVEL_SELECT\",\"sequence\":2,\"turns\":9,\"unlocked_count\":3}",
+    "TASK_0024AE_ROUTE_JSON {\"completed_count\":3,\"development_direct\":false,\"final_level\":false,\"level_id\":\"vertical_slice_delay_3\",\"level_path\":\"res://data/levels/vertical_slice_delay_3.json\",\"persist_status\":\"COMMITTED_AFTER_PERSISTED\",\"route_after\":\"LEVEL_SELECT\",\"sequence\":3,\"turns\":9,\"unlocked_count\":4}",
+    "TASK_0024AE_ROUTE_JSON {\"completed_count\":4,\"development_direct\":false,\"final_level\":false,\"level_id\":\"door_one_turn_late\",\"level_path\":\"res://data/levels/door_one_turn_late.json\",\"persist_status\":\"COMMITTED_AFTER_PERSISTED\",\"route_after\":\"LEVEL_SELECT\",\"sequence\":4,\"turns\":9,\"unlocked_count\":5}",
+    "TASK_0024AE_ROUTE_JSON {\"completed_count\":5,\"development_direct\":false,\"final_level\":false,\"level_id\":\"two_keys_one_door\",\"level_path\":\"res://data/levels/two_keys_one_door.json\",\"persist_status\":\"COMMITTED_AFTER_PERSISTED\",\"route_after\":\"LEVEL_SELECT\",\"sequence\":5,\"turns\":12,\"unlocked_count\":6}",
+    "TASK_0024AE_ROUTE_JSON {\"completed_count\":6,\"development_direct\":false,\"final_level\":false,\"level_id\":\"staggered_doors\",\"level_path\":\"res://data/levels/staggered_doors.json\",\"persist_status\":\"COMMITTED_AFTER_PERSISTED\",\"route_after\":\"LEVEL_SELECT\",\"sequence\":6,\"turns\":15,\"unlocked_count\":7}",
+    "TASK_0024AE_ROUTE_JSON {\"completed_count\":7,\"development_direct\":false,\"final_level\":false,\"level_id\":\"echo_spacing_bridge\",\"level_path\":\"res://data/levels/echo_spacing_bridge.json\",\"persist_status\":\"COMMITTED_AFTER_PERSISTED\",\"route_after\":\"LEVEL_SELECT\",\"sequence\":7,\"turns\":16,\"unlocked_count\":8}",
+    "TASK_0024AE_ROUTE_JSON {\"completed_count\":8,\"development_direct\":false,\"final_level\":false,\"level_id\":\"two_echo_convergence\",\"level_path\":\"res://data/levels/two_echo_convergence.json\",\"persist_status\":\"COMMITTED_AFTER_PERSISTED\",\"route_after\":\"LEVEL_SELECT\",\"sequence\":8,\"turns\":19,\"unlocked_count\":9}",
+    "TASK_0024AE_ROUTE_JSON {\"completed_count\":9,\"development_direct\":false,\"final_level\":false,\"level_id\":\"crate_shadow_timing\",\"level_path\":\"res://data/levels/crate_shadow_timing.json\",\"persist_status\":\"COMMITTED_AFTER_PERSISTED\",\"route_after\":\"LEVEL_SELECT\",\"sequence\":9,\"turns\":14,\"unlocked_count\":10}",
+    "TASK_0024AE_ROUTE_JSON {\"completed_count\":10,\"development_direct\":false,\"final_level\":false,\"level_id\":\"key_route_commitment\",\"level_path\":\"res://data/levels/key_route_commitment.json\",\"persist_status\":\"COMMITTED_AFTER_PERSISTED\",\"route_after\":\"LEVEL_SELECT\",\"sequence\":10,\"turns\":19,\"unlocked_count\":11}",
+    "TASK_0024AE_ROUTE_JSON {\"completed_count\":11,\"development_direct\":false,\"final_level\":false,\"level_id\":\"identity_shift_bridge\",\"level_path\":\"res://data/levels/identity_shift_bridge.json\",\"persist_status\":\"COMMITTED_AFTER_PERSISTED\",\"route_after\":\"LEVEL_SELECT\",\"sequence\":11,\"turns\":18,\"unlocked_count\":12}",
+    "TASK_0024AE_ROUTE_JSON {\"completed_count\":12,\"development_direct\":false,\"final_level\":true,\"level_id\":\"lasting_echo_latch\",\"level_path\":\"res://data/levels/lasting_echo_latch.json\",\"persist_status\":\"COMMITTED_AFTER_PERSISTED\",\"route_after\":\"GAMEPLAY\",\"sequence\":12,\"turns\":21,\"unlocked_count\":12}",
+    "TASK_0024AE_FINALE_JSON {\"acknowledgement_visible\":true,\"current_route\":\"GAMEPLAY\",\"level_id\":\"lasting_echo_latch\",\"sequence_13_unlocked\":false,\"staging_only\":true}",
+    "TASK_0024AE_RELOAD_JSON {\"best_turn_count\":12,\"completed_count\":12,\"exact_turns\":true,\"load_status\":\"LOADED\",\"unlocked_count\":12}",
+    "TASK_0024AE_BOUNDARY_JSON {\"catalog_admission_status\":\"NOT_AUTHORIZED\",\"owned_path_count\":25,\"presentation_readiness\":\"BLOCKED_SCHEMA_V2_VISUALS\",\"production_data_probe_count\":0,\"production_write_authorized\":false,\"profile_path\":\"user://delayed_self_test_profiles/task_0024ae_owner_curriculum/delayed_self_profile.json\",\"test_root_enumeration_count\":0}",
+    "TASK_0024AE_CLEANUP_JSON {\"all_exact_owned_paths_absent\":true,\"broad_enumeration_used\":false,\"exact_owned_path_count\":25,\"fixture_directory_absent\":true,\"production_data_probe_count\":0}",
+    "TASK_0024AE_ISOLATED_STAGING_OWNER_ROUTE_PASS"
+  ],
+  "stderr": [],
+  "wrapper_error": "",
+  "cleanup_error": "",
+  "wrapper_process_exit": 0,
+  "case_script_path": "res://tests/playtest/task_0024ae_submission_core_owner_review_launcher.gd",
+  "qualification_flag": "--task-0024ae-route-qualification",
+  "required_marker": "TASK_0024AE_ISOLATED_STAGING_OWNER_ROUTE_PASS",
+  "required_marker_count": 1,
+  "godot_before_count": 0,
+  "godot_after_count": 0
+}

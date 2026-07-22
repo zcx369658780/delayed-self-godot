@@ -1,0 +1,323 @@
+{
+  "schema_version": 1,
+  "task": "0024AE",
+  "phase": "QUALIFICATION",
+  "status": "FAIL",
+  "source_record": "tests/tools/task_0024ae_parser_probe_missing_input.json",
+  "source_record_sha256": "a2ab550e23327c9c9c4044cc3ae7a8fa566127b86fef79e700cbf684a804a2f7",
+  "expected_counts": {
+    "TASK_0024AE_CONFIGURATION_JSON": 1,
+    "TASK_0024AE_CATALOG_JSON": 1,
+    "TASK_0024AE_ROUTE_JSON": 12,
+    "TASK_0024AE_FINALE_JSON": 1,
+    "TASK_0024AE_RELOAD_JSON": 1,
+    "TASK_0024AE_BOUNDARY_JSON": 1,
+    "TASK_0024AE_CLEANUP_JSON": 1
+  },
+  "observed_counts": {
+    "TASK_0024AE_CONFIGURATION_JSON": 1,
+    "TASK_0024AE_CATALOG_JSON": 1,
+    "TASK_0024AE_ROUTE_JSON": 11,
+    "TASK_0024AE_FINALE_JSON": 1,
+    "TASK_0024AE_RELOAD_JSON": 1,
+    "TASK_0024AE_BOUNDARY_JSON": 1,
+    "TASK_0024AE_CLEANUP_JSON": 1
+  },
+  "marker_count": 1,
+  "record_count": 17,
+  "maximum_utf8_bytes": 487,
+  "records": [
+    {
+      "prefix": "TASK_0024AE_CONFIGURATION_JSON",
+      "utf8_bytes": 376,
+      "raw_line": "TASK_0024AE_CONFIGURATION_JSON {\"boot_status\":\"TEST_PROFILE_READY\",\"catalog_path\":\"res://tests/playtest/fixtures/task_0024ae_submission_core_staging_catalog.json\",\"configured_before_tree\":true,\"load_status\":\"MISSING_CLEAN\",\"mode\":\"TEST_PROFILE\",\"profile_path\":\"user://delayed_self_test_profiles/task_0024ae_owner_curriculum/delayed_self_profile.json\",\"write_authorized\":false}",
+      "payload": {
+        "boot_status": "TEST_PROFILE_READY",
+        "catalog_path": "res://tests/playtest/fixtures/task_0024ae_submission_core_staging_catalog.json",
+        "configured_before_tree": true,
+        "load_status": "MISSING_CLEAN",
+        "mode": "TEST_PROFILE",
+        "profile_path": "user://delayed_self_test_profiles/task_0024ae_owner_curriculum/delayed_self_profile.json",
+        "write_authorized": false
+      }
+    },
+    {
+      "prefix": "TASK_0024AE_CATALOG_JSON",
+      "utf8_bytes": 487,
+      "raw_line": "TASK_0024AE_CATALOG_JSON {\"catalog_path\":\"res://tests/playtest/fixtures/task_0024ae_submission_core_staging_catalog.json\",\"entry_count\":12,\"ordered_ids\":[\"tutorial_reach_exit\",\"tutorial_echo_bridge\",\"vertical_slice_delay_3\",\"door_one_turn_late\",\"two_keys_one_door\",\"staggered_doors\",\"echo_spacing_bridge\",\"two_echo_convergence\",\"crate_shadow_timing\",\"key_route_commitment\",\"identity_shift_bridge\",\"lasting_echo_latch\"],\"sequence_8_staging_final\":false,\"sole_finale\":\"lasting_echo_latch\"}",
+      "payload": {
+        "catalog_path": "res://tests/playtest/fixtures/task_0024ae_submission_core_staging_catalog.json",
+        "entry_count": 12,
+        "ordered_ids": [
+          "tutorial_reach_exit",
+          "tutorial_echo_bridge",
+          "vertical_slice_delay_3",
+          "door_one_turn_late",
+          "two_keys_one_door",
+          "staggered_doors",
+          "echo_spacing_bridge",
+          "two_echo_convergence",
+          "crate_shadow_timing",
+          "key_route_commitment",
+          "identity_shift_bridge",
+          "lasting_echo_latch"
+        ],
+        "sequence_8_staging_final": false,
+        "sole_finale": "lasting_echo_latch"
+      }
+    },
+    {
+      "prefix": "TASK_0024AE_ROUTE_JSON",
+      "utf8_bytes": 300,
+      "raw_line": "TASK_0024AE_ROUTE_JSON {\"completed_count\":2,\"development_direct\":false,\"final_level\":false,\"level_id\":\"tutorial_echo_bridge\",\"level_path\":\"res://data/levels/tutorial_echo_bridge.json\",\"persist_status\":\"COMMITTED_AFTER_PERSISTED\",\"route_after\":\"LEVEL_SELECT\",\"sequence\":2,\"turns\":9,\"unlocked_count\":3}",
+      "payload": {
+        "completed_count": 2,
+        "development_direct": false,
+        "final_level": false,
+        "level_id": "tutorial_echo_bridge",
+        "level_path": "res://data/levels/tutorial_echo_bridge.json",
+        "persist_status": "COMMITTED_AFTER_PERSISTED",
+        "route_after": "LEVEL_SELECT",
+        "sequence": 2,
+        "turns": 9,
+        "unlocked_count": 3
+      }
+    },
+    {
+      "prefix": "TASK_0024AE_ROUTE_JSON",
+      "utf8_bytes": 304,
+      "raw_line": "TASK_0024AE_ROUTE_JSON {\"completed_count\":3,\"development_direct\":false,\"final_level\":false,\"level_id\":\"vertical_slice_delay_3\",\"level_path\":\"res://data/levels/vertical_slice_delay_3.json\",\"persist_status\":\"COMMITTED_AFTER_PERSISTED\",\"route_after\":\"LEVEL_SELECT\",\"sequence\":3,\"turns\":9,\"unlocked_count\":4}",
+      "payload": {
+        "completed_count": 3,
+        "development_direct": false,
+        "final_level": false,
+        "level_id": "vertical_slice_delay_3",
+        "level_path": "res://data/levels/vertical_slice_delay_3.json",
+        "persist_status": "COMMITTED_AFTER_PERSISTED",
+        "route_after": "LEVEL_SELECT",
+        "sequence": 3,
+        "turns": 9,
+        "unlocked_count": 4
+      }
+    },
+    {
+      "prefix": "TASK_0024AE_ROUTE_JSON",
+      "utf8_bytes": 296,
+      "raw_line": "TASK_0024AE_ROUTE_JSON {\"completed_count\":4,\"development_direct\":false,\"final_level\":false,\"level_id\":\"door_one_turn_late\",\"level_path\":\"res://data/levels/door_one_turn_late.json\",\"persist_status\":\"COMMITTED_AFTER_PERSISTED\",\"route_after\":\"LEVEL_SELECT\",\"sequence\":4,\"turns\":9,\"unlocked_count\":5}",
+      "payload": {
+        "completed_count": 4,
+        "development_direct": false,
+        "final_level": false,
+        "level_id": "door_one_turn_late",
+        "level_path": "res://data/levels/door_one_turn_late.json",
+        "persist_status": "COMMITTED_AFTER_PERSISTED",
+        "route_after": "LEVEL_SELECT",
+        "sequence": 4,
+        "turns": 9,
+        "unlocked_count": 5
+      }
+    },
+    {
+      "prefix": "TASK_0024AE_ROUTE_JSON",
+      "utf8_bytes": 295,
+      "raw_line": "TASK_0024AE_ROUTE_JSON {\"completed_count\":5,\"development_direct\":false,\"final_level\":false,\"level_id\":\"two_keys_one_door\",\"level_path\":\"res://data/levels/two_keys_one_door.json\",\"persist_status\":\"COMMITTED_AFTER_PERSISTED\",\"route_after\":\"LEVEL_SELECT\",\"sequence\":5,\"turns\":12,\"unlocked_count\":6}",
+      "payload": {
+        "completed_count": 5,
+        "development_direct": false,
+        "final_level": false,
+        "level_id": "two_keys_one_door",
+        "level_path": "res://data/levels/two_keys_one_door.json",
+        "persist_status": "COMMITTED_AFTER_PERSISTED",
+        "route_after": "LEVEL_SELECT",
+        "sequence": 5,
+        "turns": 12,
+        "unlocked_count": 6
+      }
+    },
+    {
+      "prefix": "TASK_0024AE_ROUTE_JSON",
+      "utf8_bytes": 291,
+      "raw_line": "TASK_0024AE_ROUTE_JSON {\"completed_count\":6,\"development_direct\":false,\"final_level\":false,\"level_id\":\"staggered_doors\",\"level_path\":\"res://data/levels/staggered_doors.json\",\"persist_status\":\"COMMITTED_AFTER_PERSISTED\",\"route_after\":\"LEVEL_SELECT\",\"sequence\":6,\"turns\":15,\"unlocked_count\":7}",
+      "payload": {
+        "completed_count": 6,
+        "development_direct": false,
+        "final_level": false,
+        "level_id": "staggered_doors",
+        "level_path": "res://data/levels/staggered_doors.json",
+        "persist_status": "COMMITTED_AFTER_PERSISTED",
+        "route_after": "LEVEL_SELECT",
+        "sequence": 6,
+        "turns": 15,
+        "unlocked_count": 7
+      }
+    },
+    {
+      "prefix": "TASK_0024AE_ROUTE_JSON",
+      "utf8_bytes": 299,
+      "raw_line": "TASK_0024AE_ROUTE_JSON {\"completed_count\":7,\"development_direct\":false,\"final_level\":false,\"level_id\":\"echo_spacing_bridge\",\"level_path\":\"res://data/levels/echo_spacing_bridge.json\",\"persist_status\":\"COMMITTED_AFTER_PERSISTED\",\"route_after\":\"LEVEL_SELECT\",\"sequence\":7,\"turns\":16,\"unlocked_count\":8}",
+      "payload": {
+        "completed_count": 7,
+        "development_direct": false,
+        "final_level": false,
+        "level_id": "echo_spacing_bridge",
+        "level_path": "res://data/levels/echo_spacing_bridge.json",
+        "persist_status": "COMMITTED_AFTER_PERSISTED",
+        "route_after": "LEVEL_SELECT",
+        "sequence": 7,
+        "turns": 16,
+        "unlocked_count": 8
+      }
+    },
+    {
+      "prefix": "TASK_0024AE_ROUTE_JSON",
+      "utf8_bytes": 301,
+      "raw_line": "TASK_0024AE_ROUTE_JSON {\"completed_count\":8,\"development_direct\":false,\"final_level\":false,\"level_id\":\"two_echo_convergence\",\"level_path\":\"res://data/levels/two_echo_convergence.json\",\"persist_status\":\"COMMITTED_AFTER_PERSISTED\",\"route_after\":\"LEVEL_SELECT\",\"sequence\":8,\"turns\":19,\"unlocked_count\":9}",
+      "payload": {
+        "completed_count": 8,
+        "development_direct": false,
+        "final_level": false,
+        "level_id": "two_echo_convergence",
+        "level_path": "res://data/levels/two_echo_convergence.json",
+        "persist_status": "COMMITTED_AFTER_PERSISTED",
+        "route_after": "LEVEL_SELECT",
+        "sequence": 8,
+        "turns": 19,
+        "unlocked_count": 9
+      }
+    },
+    {
+      "prefix": "TASK_0024AE_ROUTE_JSON",
+      "utf8_bytes": 300,
+      "raw_line": "TASK_0024AE_ROUTE_JSON {\"completed_count\":9,\"development_direct\":false,\"final_level\":false,\"level_id\":\"crate_shadow_timing\",\"level_path\":\"res://data/levels/crate_shadow_timing.json\",\"persist_status\":\"COMMITTED_AFTER_PERSISTED\",\"route_after\":\"LEVEL_SELECT\",\"sequence\":9,\"turns\":14,\"unlocked_count\":10}",
+      "payload": {
+        "completed_count": 9,
+        "development_direct": false,
+        "final_level": false,
+        "level_id": "crate_shadow_timing",
+        "level_path": "res://data/levels/crate_shadow_timing.json",
+        "persist_status": "COMMITTED_AFTER_PERSISTED",
+        "route_after": "LEVEL_SELECT",
+        "sequence": 9,
+        "turns": 14,
+        "unlocked_count": 10
+      }
+    },
+    {
+      "prefix": "TASK_0024AE_ROUTE_JSON",
+      "utf8_bytes": 304,
+      "raw_line": "TASK_0024AE_ROUTE_JSON {\"completed_count\":10,\"development_direct\":false,\"final_level\":false,\"level_id\":\"key_route_commitment\",\"level_path\":\"res://data/levels/key_route_commitment.json\",\"persist_status\":\"COMMITTED_AFTER_PERSISTED\",\"route_after\":\"LEVEL_SELECT\",\"sequence\":10,\"turns\":19,\"unlocked_count\":11}",
+      "payload": {
+        "completed_count": 10,
+        "development_direct": false,
+        "final_level": false,
+        "level_id": "key_route_commitment",
+        "level_path": "res://data/levels/key_route_commitment.json",
+        "persist_status": "COMMITTED_AFTER_PERSISTED",
+        "route_after": "LEVEL_SELECT",
+        "sequence": 10,
+        "turns": 19,
+        "unlocked_count": 11
+      }
+    },
+    {
+      "prefix": "TASK_0024AE_ROUTE_JSON",
+      "utf8_bytes": 306,
+      "raw_line": "TASK_0024AE_ROUTE_JSON {\"completed_count\":11,\"development_direct\":false,\"final_level\":false,\"level_id\":\"identity_shift_bridge\",\"level_path\":\"res://data/levels/identity_shift_bridge.json\",\"persist_status\":\"COMMITTED_AFTER_PERSISTED\",\"route_after\":\"LEVEL_SELECT\",\"sequence\":11,\"turns\":18,\"unlocked_count\":12}",
+      "payload": {
+        "completed_count": 11,
+        "development_direct": false,
+        "final_level": false,
+        "level_id": "identity_shift_bridge",
+        "level_path": "res://data/levels/identity_shift_bridge.json",
+        "persist_status": "COMMITTED_AFTER_PERSISTED",
+        "route_after": "LEVEL_SELECT",
+        "sequence": 11,
+        "turns": 18,
+        "unlocked_count": 12
+      }
+    },
+    {
+      "prefix": "TASK_0024AE_ROUTE_JSON",
+      "utf8_bytes": 295,
+      "raw_line": "TASK_0024AE_ROUTE_JSON {\"completed_count\":12,\"development_direct\":false,\"final_level\":true,\"level_id\":\"lasting_echo_latch\",\"level_path\":\"res://data/levels/lasting_echo_latch.json\",\"persist_status\":\"COMMITTED_AFTER_PERSISTED\",\"route_after\":\"GAMEPLAY\",\"sequence\":12,\"turns\":21,\"unlocked_count\":12}",
+      "payload": {
+        "completed_count": 12,
+        "development_direct": false,
+        "final_level": true,
+        "level_id": "lasting_echo_latch",
+        "level_path": "res://data/levels/lasting_echo_latch.json",
+        "persist_status": "COMMITTED_AFTER_PERSISTED",
+        "route_after": "GAMEPLAY",
+        "sequence": 12,
+        "turns": 21,
+        "unlocked_count": 12
+      }
+    },
+    {
+      "prefix": "TASK_0024AE_FINALE_JSON",
+      "utf8_bytes": 164,
+      "raw_line": "TASK_0024AE_FINALE_JSON {\"acknowledgement_visible\":true,\"current_route\":\"GAMEPLAY\",\"level_id\":\"lasting_echo_latch\",\"sequence_13_unlocked\":false,\"staging_only\":true}",
+      "payload": {
+        "acknowledgement_visible": true,
+        "current_route": "GAMEPLAY",
+        "level_id": "lasting_echo_latch",
+        "sequence_13_unlocked": false,
+        "staging_only": true
+      }
+    },
+    {
+      "prefix": "TASK_0024AE_RELOAD_JSON",
+      "utf8_bytes": 129,
+      "raw_line": "TASK_0024AE_RELOAD_JSON {\"best_turn_count\":12,\"completed_count\":12,\"exact_turns\":true,\"load_status\":\"LOADED\",\"unlocked_count\":12}",
+      "payload": {
+        "best_turn_count": 12,
+        "completed_count": 12,
+        "exact_turns": true,
+        "load_status": "LOADED",
+        "unlocked_count": 12
+      }
+    },
+    {
+      "prefix": "TASK_0024AE_BOUNDARY_JSON",
+      "utf8_bytes": 352,
+      "raw_line": "TASK_0024AE_BOUNDARY_JSON {\"catalog_admission_status\":\"NOT_AUTHORIZED\",\"owned_path_count\":25,\"presentation_readiness\":\"BLOCKED_SCHEMA_V2_VISUALS\",\"production_data_probe_count\":0,\"production_write_authorized\":false,\"profile_path\":\"user://delayed_self_test_profiles/task_0024ae_owner_curriculum/delayed_self_profile.json\",\"test_root_enumeration_count\":0}",
+      "payload": {
+        "catalog_admission_status": "NOT_AUTHORIZED",
+        "owned_path_count": 25,
+        "presentation_readiness": "BLOCKED_SCHEMA_V2_VISUALS",
+        "production_data_probe_count": 0,
+        "production_write_authorized": false,
+        "profile_path": "user://delayed_self_test_profiles/task_0024ae_owner_curriculum/delayed_self_profile.json",
+        "test_root_enumeration_count": 0
+      }
+    },
+    {
+      "prefix": "TASK_0024AE_CLEANUP_JSON",
+      "utf8_bytes": 185,
+      "raw_line": "TASK_0024AE_CLEANUP_JSON {\"all_exact_owned_paths_absent\":true,\"broad_enumeration_used\":false,\"exact_owned_path_count\":25,\"fixture_directory_absent\":true,\"production_data_probe_count\":0}",
+      "payload": {
+        "all_exact_owned_paths_absent": true,
+        "broad_enumeration_used": false,
+        "exact_owned_path_count": 25,
+        "fixture_directory_absent": true,
+        "production_data_probe_count": 0
+      }
+    }
+  ],
+  "wrapper": {
+    "status": "PASS",
+    "native_exit_code": 0,
+    "cleanup_invocation_count": 1,
+    "cleanup_order": [
+      38420
+    ],
+    "remaining_owned_pids": [],
+    "remaining_unproven_pids": [],
+    "godot_before_count": 0,
+    "godot_after_count": 0,
+    "stderr": []
+  },
+  "errors": [
+    "count:TASK_0024AE_ROUTE_JSON:11/12"
+  ]
+}

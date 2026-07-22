@@ -1,0 +1,125 @@
+{
+  "catalog_version": 1,
+  "entries": [
+    {
+      "level_id": "tutorial_reach_exit",
+      "level_path": "res://data/levels/tutorial_reach_exit.json",
+      "sequence": 1,
+      "display_title_key": "level.tutorial_reach_exit.title",
+      "classification": "tutorial",
+      "unlock_prerequisites": [],
+      "hud_mode": "INTRO_MINIMAL",
+      "final_level": false
+    },
+    {
+      "level_id": "tutorial_echo_bridge",
+      "level_path": "res://data/levels/tutorial_echo_bridge.json",
+      "sequence": 2,
+      "display_title_key": "level.tutorial_echo_bridge.title",
+      "classification": "tutorial",
+      "unlock_prerequisites": ["tutorial_reach_exit"],
+      "hud_mode": "GUIDED_ECHO",
+      "final_level": false
+    },
+    {
+      "level_id": "vertical_slice_delay_3",
+      "level_path": "res://data/levels/vertical_slice_delay_3.json",
+      "sequence": 3,
+      "display_title_key": "level.vertical_slice_delay_3.title",
+      "classification": "standard",
+      "unlock_prerequisites": ["tutorial_echo_bridge"],
+      "hud_mode": "STANDARD_COMPACT",
+      "final_level": false
+    },
+    {
+      "level_id": "door_one_turn_late",
+      "level_path": "res://data/levels/door_one_turn_late.json",
+      "sequence": 4,
+      "display_title_key": "level.door_one_turn_late.title",
+      "classification": "standard",
+      "unlock_prerequisites": ["vertical_slice_delay_3"],
+      "hud_mode": "STANDARD_COMPACT",
+      "final_level": false
+    },
+    {
+      "level_id": "two_keys_one_door",
+      "level_path": "res://data/levels/two_keys_one_door.json",
+      "sequence": 5,
+      "display_title_key": "level.two_keys_one_door.title",
+      "classification": "standard",
+      "unlock_prerequisites": ["door_one_turn_late"],
+      "hud_mode": "STANDARD_COMPACT",
+      "final_level": false
+    },
+    {
+      "level_id": "staggered_doors",
+      "level_path": "res://data/levels/staggered_doors.json",
+      "sequence": 6,
+      "display_title_key": "level.staggered_doors.title",
+      "classification": "standard",
+      "unlock_prerequisites": ["two_keys_one_door"],
+      "hud_mode": "STANDARD_COMPACT",
+      "final_level": false
+    },
+    {
+      "level_id": "echo_spacing_bridge",
+      "level_path": "res://data/levels/echo_spacing_bridge.json",
+      "sequence": 7,
+      "display_title_key": "level.echo_spacing_bridge.title",
+      "classification": "standard",
+      "unlock_prerequisites": ["staggered_doors"],
+      "hud_mode": "STANDARD_COMPACT",
+      "final_level": false
+    },
+    {
+      "level_id": "two_echo_convergence",
+      "level_path": "res://data/levels/two_echo_convergence.json",
+      "sequence": 8,
+      "display_title_key": "level.two_echo_convergence.title",
+      "classification": "standard",
+      "unlock_prerequisites": ["echo_spacing_bridge"],
+      "hud_mode": "STANDARD_COMPACT",
+      "final_level": false
+    },
+    {
+      "level_id": "crate_shadow_timing",
+      "level_path": "res://data/levels/crate_shadow_timing.json",
+      "sequence": 9,
+      "display_title_key": "level.crate_shadow_timing.title",
+      "classification": "standard",
+      "unlock_prerequisites": ["two_echo_convergence"],
+      "hud_mode": "STANDARD_COMPACT",
+      "final_level": false
+    },
+    {
+      "level_id": "key_route_commitment",
+      "level_path": "res://data/levels/key_route_commitment.json",
+      "sequence": 10,
+      "display_title_key": "level.key_route_commitment.title",
+      "classification": "standard",
+      "unlock_prerequisites": ["crate_shadow_timing"],
+      "hud_mode": "STANDARD_COMPACT",
+      "final_level": false
+    },
+    {
+      "level_id": "identity_shift_bridge",
+      "level_path": "res://data/levels/identity_shift_bridge.json",
+      "sequence": 11,
+      "display_title_key": "level.identity_shift_bridge.title",
+      "classification": "standard",
+      "unlock_prerequisites": ["key_route_commitment"],
+      "hud_mode": "STANDARD_COMPACT",
+      "final_level": false
+    },
+    {
+      "level_id": "lasting_echo_latch",
+      "level_path": "res://data/levels/lasting_echo_latch.json",
+      "sequence": 12,
+      "display_title_key": "level.lasting_echo_latch.title",
+      "classification": "standard",
+      "unlock_prerequisites": ["identity_shift_bridge"],
+      "hud_mode": "STANDARD_COMPACT",
+      "final_level": true
+    }
+  ]
+}

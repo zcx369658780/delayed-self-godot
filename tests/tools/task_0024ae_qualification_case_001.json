@@ -1,0 +1,56 @@
+{
+  "schema_version": 2,
+  "status": "TIMEOUT",
+  "underlying_status": "TIMEOUT",
+  "native_exit_code": null,
+  "timed_out": true,
+  "marker_pass": false,
+  "stderr_policy": "ForbidNonempty",
+  "stderr_pass": true,
+  "cleanup_invocation_count": 1,
+  "cleanup_order": [
+    37012
+  ],
+  "cleanup_closed_pids": [
+    37012
+  ],
+  "remaining_owned_pids": [],
+  "remaining_unproven_pids": [],
+  "owned_records": [
+    {
+      "pid": 37012,
+      "parent_pid": null,
+      "depth": 0,
+      "ancestry_path": "direct",
+      "direct": true,
+      "executable": "d:\\program files (x86)\\steam\\steamapps\\common\\godot engine\\godot.windows.opt.tools.64.exe",
+      "start_utc": "2026-07-22T21:12:28.6275693Z",
+      "arguments": [
+        "--headless",
+        "--path",
+        "D:\\Delayed_Self",
+        "--script",
+        "res://tests/playtest/task_0024ae_submission_core_owner_review_launcher.gd",
+        "--task-0024ae-route-qualification"
+      ],
+      "classification": "DIRECT",
+      "alive_at_discovery": true,
+      "cleanup_eligible": true
+    }
+  ],
+  "unproven_records": [],
+  "stdout": [
+    "Godot Engine v4.7.1.stable.steam.a13da4feb - https://godotengine.org",
+    "TASK_0024AE_CONFIGURATION_JSON {\"catalog_path\":\"res://tests/playtest/fixtures/task_0024ae_submission_core_staging_catalog.json\",\"mode\":\"INTERACTIVE_STAGING\",\"presentation_readiness\":\"BLOCKED_SCHEMA_V2_VISUALS\",\"profile_path\":\"user://delayed_self_test_profiles/task_0024ae_owner_curriculum/delayed_self_profile.json\",\"route\":\"MAIN_MENU\"}"
+  ],
+  "stderr": [],
+  "wrapper_error": "",
+  "cleanup_error": "",
+  "wrapper_process_exit": 1,
+  "case_script_path": "res://tests/playtest/task_0024ae_submission_core_owner_review_launcher.gd",
+  "qualification_flag": "--task-0024ae-route-qualification",
+  "required_marker": "TASK_0024AE_ISOLATED_STAGING_OWNER_ROUTE_PASS",
+  "required_marker_count": 0,
+  "godot_before_count": 0,
+  "godot_after_count": 0
+}

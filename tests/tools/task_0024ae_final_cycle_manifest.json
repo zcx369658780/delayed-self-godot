@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "task": "0024AE",
+  "cycle_kind": "FRESH_RETAINED_FINAL",
+  "cases": [
+    {"ordinal": 1, "name": "isolated_staging_route", "script": "res://tests/playtest/task_0024ae_submission_core_owner_review_launcher.gd", "marker": "TASK_0024AE_ISOLATED_STAGING_OWNER_ROUTE_PASS", "stderr_policy": "ForbidNonempty", "timeout_seconds": 240, "record": "tests/tools/task_0024ae_final_case_01_route.json"},
+    {"ordinal": 2, "name": "accepted_0024ad_batch", "script": "res://tests/curriculum/task_0024ad_submission_core_1_12_batch_validation.gd", "marker": "TASK_0024AD_SUBMISSION_CORE_1_12_BATCH_PASS", "stderr_policy": "ForbidNonempty", "timeout_seconds": 300, "record": "tests/tools/task_0024ae_final_case_02_batch.json"},
+    {"ordinal": 3, "name": "aggregate", "script": "res://tests/run_all.gd", "marker": "TASK_0003_TESTS_PASS assertions=621 vectors=9", "stderr_policy": "Allow", "timeout_seconds": 240, "record": "tests/tools/task_0024ae_final_case_03_aggregate.json"},
+    {"ordinal": 4, "name": "corrected_complete_v2", "script": "res://tests/simulation/task_0024v_v2_solver_replay_canonical_malformed.gd", "marker": "TASK_0024V_V2_COMPLETE_PASS", "stderr_policy": "ForbidNonempty", "timeout_seconds": 180, "record": "tests/tools/task_0024ae_final_case_04_complete_v2.json"}
+  ]
+}

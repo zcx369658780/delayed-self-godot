@@ -2,6 +2,10 @@
 
 ## Start here
 
+0. [`Task 0024AE`](../tasks/0024AE_isolated_staging_catalog_and_owner_review_route_qualification.md) — completed isolated staging catalog and owner-route machine qualification
+1. [`Task 0024AE report`](reports/0024AE_SUBMISSION_CORE_OWNER_REVIEW_ROUTE_REPORT.md) — route architecture, boundary proof, repeatable qualification and retained four-case evidence
+2. [`Owner curriculum worksheet`](playtest/SUBMISSION_CORE_1_12_OWNER_CURRICULUM_REVIEW_CURRENT.md) — route-qualified but subjective fields remain `NOT_YET_REVIEWED`
+
 0. [`Task 0024AD`](../tasks/0024AD_submission_core_1_12_batch_regression_and_owner_review_route_audit.md) — completed fresh 1–12 batch regression and read-only owner-route audit
 1. [`Submission-core curriculum matrix`](level_design/validation/submission_core_1_12_curriculum_matrix.json) — final per-room machine facts, continuity findings and review recommendations
 2. [`Owner curriculum worksheet`](playtest/SUBMISSION_CORE_1_12_OWNER_CURRICULUM_REVIEW_CURRENT.md) — unfilled `NOT_YET_REVIEWED` human review form

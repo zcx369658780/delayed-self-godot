@@ -1,6 +1,6 @@
 # Codex active task (CURRENT)
 
-- Status: `ISOLATED_STAGING_OWNER_REVIEW_ROUTE_READY_FOR_CODEX`
+- Status: `ISOLATED_STAGING_OWNER_REVIEW_ROUTE_READY_FOR_GPT_REVIEW`
 - Active task: `tasks/0024AE_isolated_staging_catalog_and_owner_review_route_qualification.md`
 - Closed predecessors: all Tasks through `0024AD`; none may be resumed directly
 - Latest GPT adjudication: `TASK_0024AD_SUBMISSION_CORE_1_12_BATCH_REGRESSION_AND_OWNER_ROUTE_AUDIT_ACCEPTED`
@@ -19,6 +19,6 @@
 
 Task 0024AD is GPT accepted as machine curriculum readiness plus a route decision. All twelve planned rooms solved with exact counts, deterministic replay and exact restart. Owner subjective fields remain `NOT_YET_REVIEWED`. Its retained seven-case cycle is consumed and must never be rerun.
 
-Task 0024AE is the only active scope. It may create one test-owned twelve-entry staging catalog and one test-owned launcher that configures the exact isolated Profile path before AppRoot enters the tree. It must prove normal catalog-backed routing, ordered unlocks, completion persistence, reload and staging-only sequence-12 finale behavior, then clean only exact owned fixture paths.
+Task 0024AE completed its bounded implementation and qualification. The test-owned twelve-entry staging catalog and launcher proved normal AppRoot catalog routing, ordered unlocks, completion persistence, reload and staging-only sequence-12 acknowledgement against the exact isolated Profile fixture. Final invocation `6b20bea7-f3e0-4daf-8d05-090e6fea9cb5` passed all four cases once and ended at Godot zero. Await GPT/owner adjudication; do not rerun the consumed cycle.
 
-Do not modify production catalog, product code, scenes, levels, Profile implementation, accepted evidence or production user data. Do not conduct owner subjective playthrough or begin schema-v2 presentation, localization, assets/audio, build/export, release, upload or submission work. The presentation blocker remains explicit.
+The route result is not owner acceptance or product admission. Do not modify production catalog, product code, scenes, levels, Profile implementation, accepted evidence or production user data. Do not conduct owner subjective playthrough or begin schema-v2 presentation, localization, assets/audio, build/export, release, upload or submission work. `BLOCKED_SCHEMA_V2_VISUALS` remains explicit.
