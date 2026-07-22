@@ -1,22 +1,22 @@
 # Codex startup snapshot (CURRENT)
 
-- Status: `CURRENT / TASK 0024Z SEQUENCE-10 CANDIDATE READY FOR GPT REVIEW`
+- Status: `CURRENT / TASK 0024AA SEQUENCE-11 FALLBACK CANDIDATE MACHINE VALIDATION`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Active task: none; Task 0024Z is terminal and awaiting adjudication
-- Active status: `SEQUENCE_10_KEY_ROUTE_COMMITMENT_MACHINE_VALIDATED_FOR_GPT_REVIEW`
-- Closed predecessors: all Tasks through `0024Y`; Task 0024Z retained cycle consumed
-- Latest GPT adjudication: `TASK_0024Y_SEQUENCE_9_CRATE_SHADOW_TIMING_MACHINE_VALIDATION_ACCEPTED`
-- Required accepted checkpoint: `19a068334b583a1e72180d5c609fed4bf2c94e50`
-- Task publication commit: `0ffb59738ad44d7eff598c78302d0310fe02e199`
+- Active task: `tasks/0024AA_sequence_11_identity_shift_bridge_candidate_authoring_and_machine_validation.md`
+- Active status: `SEQUENCE_11_IDENTITY_SHIFT_BRIDGE_MACHINE_VALIDATION_READY_FOR_CODEX`
+- Closed predecessors: all Tasks through `0024Z`
+- Latest GPT adjudication: `TASK_0024Z_SEQUENCE_10_KEY_ROUTE_COMMITMENT_MACHINE_VALIDATION_ACCEPTED`
+- Required accepted checkpoint: `3b9b576d4a729b1f2e2d673c76c8efdce4a5d494`
+- Task publication commit: `6cb5700da7c4c2a9739b02e045ba04b3cc9525ea`
+- Accepted sequence-10 result commit: `b8378bc2e1e96642ff99eded436df65e2435cc9f`
 - Accepted sequence-9 result commit: `445122ab035a4c9210f3280af58d054a35bef2bd`
 - Accepted foundation result commit: `7072566ef814f6969693bbc9335fcced5e424585`
 - Accepted wrapper blob: `5f14eb0feff903b40311c1c7283b20e2eabbffc2`
 - Implemented/cataloged product baseline: exactly eight formal levels
-- Accepted uncatalogued sequence-9 candidate: `data/levels/crate_shadow_timing.json`
-- Machine-validated, not-yet-accepted sequence-10 candidate: `data/levels/key_route_commitment.json`
+- Accepted uncatalogued candidates: `crate_shadow_timing`, `key_route_commitment`
 
-Task 0024Y is GPT accepted. The candidate has `L*=14`, exact `N*=6`, all-shortest required crate event `6/6`, zero omissions, exact replay/restart/canonical evidence, complete no-push/displaced/no-ECHO controls and passing focused/Aggregate/complete-v2 wrapper qualification. It remains uncatalogued and owner playthrough remains pending.
+Task 0024Z is GPT accepted. The sequence-10 candidate has `L*=19`, exact `N*=8`, all-shortest ordered key collection → same-turn lock consumption/entry → ECHO-only Plate/Door crossing `8/8`, zero omissions, complete no-key/displaced/no-ECHO controls, material no-lock metrics `11/7`, and a passing focused-0024Z/focused-0024Y/Aggregate/complete-v2 wrapper cycle. It remains uncatalogued and owner playthrough remains pending.
 
-Task 0024Z produced the uncatalogued `key_route_commitment` candidate at `L*=19`, exact `N*=8`, with 8/8 all-shortest full ordered events and zero omission. Controls, ECHO-item/intact-lock probes, replay/restart/canonical checks and the retained four-case wrapper cycle passed. Invocation is `e0b62d7e-539e-415e-aea9-a9bc40d16c26`; final Godot count is zero.
+Task 0024AA is active and starts directly from the pre-agreed sequence-11 fallback envelope. It may create only an uncatalogued `identity_shift_bridge` candidate and its dedicated validation/evidence artifacts. The room must use one YOU-only sensor, one ECHO-only sensor and one initially closed two-cell grouped bridge; it must prove exact typed identity, next-turn entry, occupied closure deferral and closure after vacancy in every shortest solution. Optional crate and ANY_ACTOR scope is forbidden.
 
-Start by reading `AGENTS.md`, this file, `docs/CODEX_ACTIVE_TASK_CURRENT.md`, the Task 0024Z report/summary, the full Task 0024Z file, Task 0024Y acceptance, Task 0024X scope, schema-v2/Simulation-v2 contracts and headless lifecycle policy. Await GPT/owner acceptance or a new explicit task; do not rerun 0024Z final cases or begin sequence 11 by implication.
+Start by reading `AGENTS.md`, this file, `docs/CODEX_ACTIVE_TASK_CURRENT.md`, the full Task 0024AA file, Task 0024Z report/summary/GPT acceptance, Task 0024Y acceptance, Task 0024X scope, schema-v2/Simulation-v2 contracts and the headless lifecycle policy. Do not alter catalog/finale/Profile, accepted candidate artifacts, foundation implementation, existing formal content/tests or product/release surfaces.
