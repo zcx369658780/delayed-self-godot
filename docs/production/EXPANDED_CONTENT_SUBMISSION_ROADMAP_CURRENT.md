@@ -6,7 +6,7 @@
 - Original planning date: 2026-07-21
 - Project-source synchronization date: 2026-07-22
 
-Task 0024W is GPT accepted as the schema-v2/Simulation/solver foundation. Task 0024X has frozen the sequence 9–12 curriculum and compatibility contract at `docs/level_design/SUBMISSION_CORE_LEVELS_9_12_SCOPE_CURRENT.md`. Task 0024Y is GPT accepted as the uncatalogued sequence-9 candidate. Task 0024Z is GPT accepted as the uncatalogued sequence-10 candidate. Task 0024AB has corrected evidence capture and machine-validated the uncatalogued sequence-11 candidate for GPT review; formal catalog admission and later content remain separately gated.
+Task 0024W is GPT accepted as the schema-v2/Simulation/solver foundation. Task 0024X has frozen the sequence 9–12 curriculum and compatibility contract at `docs/level_design/SUBMISSION_CORE_LEVELS_9_12_SCOPE_CURRENT.md`. Tasks 0024Y, 0024Z and 0024AB are GPT accepted as the uncatalogued sequence-9/10/11 candidates. Task 0024AC has machine-validated the uncatalogued sequence-12 finale candidate for GPT review; formal catalog admission and later content remain separately gated.
 
 ## Product target
 
@@ -55,7 +55,7 @@ Music target: two restrained looping tracks plus an optional finale cue. Any Cro
 
 ## Current execution position
 
-Task 0024W and the Task 0024X scope are GPT accepted. Task 0024Y is accepted as the uncatalogued `crate_shadow_timing` candidate at `L*=14`, exact `N*=6`, all-shortest event `6/6`; Task 0024Z is accepted as the uncatalogued `key_route_commitment` candidate at `L*=19`, exact `N*=8`, all-shortest event `8/8`. Task 0024AB has corrected capture for the uncatalogued `identity_shift_bridge` candidate and retained fresh `L*=18`, exact `N*=1`, all-shortest event `1/1`, exact `elapsed_ms=233`; it is ready for GPT review, not accepted or catalog-admitted. Sequence 12 remains `FINALE_CANDIDATE_ONLY` and may not start without a new gate. Catalog expansion, finale movement, Profile migration/default activation, presentation integration, localization, font/audio import, build/export, release and submission remain closed until their own later gates.
+Task 0024W and the Task 0024X scope are GPT accepted. Task 0024Y is accepted as the uncatalogued `crate_shadow_timing` candidate at `L*=14`, exact `N*=6`, all-shortest event `6/6`; Task 0024Z is accepted as the uncatalogued `key_route_commitment` candidate at `L*=19`, exact `N*=8`, all-shortest event `8/8`; Task 0024AB is accepted as the uncatalogued `identity_shift_bridge` candidate at fresh `L*=18`, exact `N*=1`, all-shortest event `1/1`. Task 0024AC machine-validated the uncatalogued `lasting_echo_latch` candidate at `L*=21`, exact `N*=6`, all-shortest event `6/6`, exact `elapsed_ms=3936`; it is ready for GPT review, not accepted or catalog-admitted, and remains `FINALE_CANDIDATE_ONLY`. Catalog expansion, finale movement, Profile migration/default activation, presentation integration, localization, font/audio import, build/export, release and submission remain closed until their own later gates.
 
 ## Implementation order
 

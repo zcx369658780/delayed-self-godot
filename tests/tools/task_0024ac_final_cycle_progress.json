@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "task": "0024AC",
+  "invocation_id": "f56d4606-244b-4b82-b35e-93a413470840",
+  "stage": "AFTER_ALL_CASES",
+  "completed_cases": [
+    {
+      "ordinal": 1,
+      "name": "focused_0024ac",
+      "record": "tests/tools/task_0024ac_final_case_01_lasting_echo_latch.json",
+      "record_sha256": "7affb90d787a936555a8df362ee459531927c550320de886213adc9b590207f1",
+      "completed_utc": "2026-07-22T12:38:10.5160819Z"
+    },
+    {
+      "ordinal": 2,
+      "name": "accepted_focused_0024ab",
+      "record": "tests/tools/task_0024ac_final_case_02_sequence_11.json",
+      "record_sha256": "aa97928f48f0582ca6666c369c198574d876b528a801b3f4a122422dd8f9d270",
+      "completed_utc": "2026-07-22T12:38:18.9113863Z"
+    },
+    {
+      "ordinal": 3,
+      "name": "accepted_focused_0024z",
+      "record": "tests/tools/task_0024ac_final_case_03_sequence_10.json",
+      "record_sha256": "16b01dbf6c762461d7290fac95d34aa3f05cb5a20458d90c8bf96a08f8778d9b",
+      "completed_utc": "2026-07-22T12:38:25.8533835Z"
+    },
+    {
+      "ordinal": 4,
+      "name": "accepted_focused_0024y",
+      "record": "tests/tools/task_0024ac_final_case_04_sequence_09.json",
+      "record_sha256": "12fe6c55188dd380536b489eed6a0e065f7ef866f5db5a2db29354a0969326b4",
+      "completed_utc": "2026-07-22T12:38:35.5273230Z"
+    },
+    {
+      "ordinal": 5,
+      "name": "aggregate",
+      "record": "tests/tools/task_0024ac_final_case_05_aggregate.json",
+      "record_sha256": "bd22e76e042236f487458363bde581ae09a5fb6268acb63f0cfdba270ede9309",
+      "completed_utc": "2026-07-22T12:39:33.7534346Z"
+    },
+    {
+      "ordinal": 6,
+      "name": "corrected_complete_v2",
+      "record": "tests/tools/task_0024ac_final_case_06_complete_v2.json",
+      "record_sha256": "bb96ca40253cab827d81b02981a566e00fdee2c4f9a80153948e161514380daf",
+      "completed_utc": "2026-07-22T12:39:40.2106306Z"
+    }
+  ],
+  "updated_utc": "2026-07-22T12:39:40.4352698Z",
+  "focused_capture_sha256": "0584f6e090b9712e9c87049bbb617a2d821f5876332be5bb2434167309768257",
+  "final_godot_count": 0,
+  "completed_utc": "2026-07-22T12:39:40.4352698Z"
+}

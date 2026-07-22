@@ -1,5 +1,13 @@
 # Project memory
 
+## Task 0024AC sequence-12 lasting-echo latch candidate
+
+Task 0024AC authored the uncatalogued 11×9 schema-v2 `lasting_echo_latch` candidate: one delay-2 ECHO, one ECHO-only latch `latch_phase`, two typed sensors, the two-cell persistent target `barrier_phase` and the two-cell phase-two group `barrier_typed`. Candidate SHA-256 is `a1d7dcd30832cfdcfe93ead34884fa5a21fd19ef3cafa481860688640bd5ea5f`; it is `FINALE_CANDIDATE_ONLY`, not catalog-admitted.
+
+The fresh solve retained `L*=21`, exact `N*=6`, 13,459 states, frontier 1,389 and exact `elapsed_ms=3936`; all-shortest is `6/6` with zero omissions across 22,049 composite states. Latch-disabled/reset and no-ECHO controls are complete-unsolved; target reversal is complete-unsolved; direct route changes to `20/1`; sensor simplification eliminates the exact typed-identity claim. Fifteen JSON records are independently parseable and at most 932 UTF-8 bytes.
+
+All controls, shortcuts, replay/restart/canonical checks, parser probes and three frozen audits passed. The retained six-case invocation `f56d4606-244b-4b82-b35e-93a413470840` passed with exact stderr, marker count one, cleanup one, Godot 0/0 and no PID residue. The cycle is consumed. Status is ready for GPT review, not final acceptance, catalog/finale/Profile integration or owner playthrough authority.
+
 ## Task 0024AB sequence-11 evidence correction
 
 Task 0024AB preserved the exact `identity_shift_bridge` candidate and replaced only the focused validator/output identity. Static equivalence proved 22 semantic functions and 53 assertion labels unchanged. The fresh solve retained `L*=18`, exact `N*=1`, 1002 states, frontier 130 and exact `elapsed_ms=233`; all-shortest is `1/1` with zero omissions. Thirteen JSON records are independently parseable and at most 1011 UTF-8 bytes.

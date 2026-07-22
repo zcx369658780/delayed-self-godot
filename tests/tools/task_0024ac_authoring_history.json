@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "task": "0024AC",
+  "status": "SELECTED_FOR_PRE_FINAL_QUALIFICATION",
+  "candidate_iterations": [
+    {
+      "attempt": 1,
+      "candidate_sha256": "cf7d90df75179f103a80e0e8ac141545b6c9988aeba08b51e7fdaba0a6c9fee1",
+      "record_sha256": "9fdc9b732954cd6343736cc26653f9cf58975bf8c204698a82a093f322e0e7f3",
+      "metrics": {"L": 23, "N": 17, "visited_states": 7556, "maximum_frontier": 595, "elapsed_ms": 2049},
+      "disposition": "DISCARDED",
+      "reason": "Exact shortest count exceeded 1-6; phase-one admitted equivalent repeated blocked-UP histories."
+    },
+    {
+      "attempt": 2,
+      "candidate_sha256": "cf7d90df75179f103a80e0e8ac141545b6c9988aeba08b51e7fdaba0a6c9fee1",
+      "record_sha256": "a2f4d59a1f7d6cc823d68726d3f6fb620b9546fd19a07d12d2d1acc36343ec3c",
+      "metrics": {"L": 23, "N": 17, "visited_states": 7556, "maximum_frontier": 595, "elapsed_ms": 2034},
+      "disposition": "DIAGNOSTIC_ONLY",
+      "reason": "Same discarded candidate rerun only after adding bounded per-turn authoring records; trace confirmed phase-one multiplicity and repeated blocked-UP behavior."
+    },
+    {
+      "attempt": 3,
+      "candidate_sha256": "d0a09d0cd3641f553381583e877fc68e50fd3e0f358af479644599dede83115f",
+      "record_sha256": "c610cd75a9fffdf72173c5cc49130acf765723a31c406f712b3ca60a53756bed",
+      "metrics": {"L": 23, "N": 11, "visited_states": 18091, "maximum_frontier": 1718, "elapsed_ms": 5314},
+      "disposition": "DISCARDED",
+      "reason": "Paired phase-gate cells closed terrain bypass and reduced multiplicity, but N remained above 6 and the shortest witness still used repeated blocked UP."
+    },
+    {
+      "attempt": 4,
+      "candidate_sha256": "12c35c6c5a4bdd7d288f405dc7e3b4c25d11469974b0cbe68a2046c6fe6f88a7",
+      "record_sha256": "cb99b28b881d6b175af433dbe4e1f9fcde61660347a1f978312791e12dcc8a57",
+      "metrics": {"L": 22, "N": 11, "visited_states": 13001, "maximum_frontier": 1287, "elapsed_ms": 3676},
+      "disposition": "DISCARDED",
+      "reason": "Horizontal ECHO latch activation removed the direct bypass, but a short gate approach still allowed too many equivalent waiting histories."
+    },
+    {
+      "attempt": 5,
+      "candidate_sha256": "a1d7dcd30832cfdcfe93ead34884fa5a21fd19ef3cafa481860688640bd5ea5f",
+      "record_sha256": "8e80c27c708f8362a52672630e4e827e8816c9284ca39db4b1e6aef644ed3988",
+      "metrics": {"L": 21, "N": 6, "visited_states": 13459, "maximum_frontier": 1389, "elapsed_ms": 3880},
+      "disposition": "SELECTED",
+      "reason": "Two-step structural gate approach reached the frozen L/N bands with one blocked YOU action and no repeated identical blocked macro beyond one."
+    }
+  ],
+  "focused_qualification_history": [
+    {"case": 1, "status": "FAIL_PARSE", "reason": "Two restart locals required explicit Dictionary annotations; no validation logic executed."},
+    {"case": 2, "status": "FAIL_VALIDATOR_STATE", "reason": "Witness event mask was reset on every turn instead of accumulated; candidate metrics were unchanged."},
+    {"case": 3, "status": "PASS", "capture": "PASS", "reason": "Full solver, all-shortest, controls, shortcuts, replay and restart contract passed."},
+    {"case": 4, "status": "PASS", "capture": "PASS", "reason": "Independent repeat after parser qualification passed; fresh elapsed_ms was retained."}
+  ],
+  "capture_history": [
+    {"record": "task_0024ac_qualification_capture_001.json", "status": "PASS", "note": "All per-record byte counts retained; initial maximum summary aggregation was null."},
+    {"record": "task_0024ac_qualification_capture_002.json", "status": "PASS", "note": "Confirmed independent focused output; maximum summary aggregation remained null."},
+    {"record": "task_0024ac_qualification_capture_003.json", "status": "PASS", "note": "Retained-evidence-only parser correction reports exact maximum 932 UTF-8 bytes; no Godot rerun."},
+    {"record": "task_0024ac_capture_parser_qualification.json", "status": "PASS", "note": "Missing, duplicate, truncated, non-JSON and over-bound records rejected."},
+    {"record": "task_0024ac_capture_parser_requalification.json", "status": "PASS", "note": "Five negative probes repeated after maximum-byte aggregation correction."}
+  ]
+}

@@ -1,5 +1,13 @@
 # Development plan (CURRENT)
 
+> 2026-07-22 — Task 0024AC authored and machine-validated the uncatalogued
+> sequence-12 `lasting_echo_latch` finale candidate at `L*=21`, exact `N*=6`,
+> 13,459 states, frontier 1,389 and fresh `elapsed_ms=3936`. All-shortest is
+> `6/6` with zero omissions. Fifteen bounded records (maximum 932 bytes), six
+> controls, parser probes, frozen audits and the retained six-case cycle
+> passed. Status is ready for GPT review; catalog/finale/Profile integration
+> and owner curriculum playthrough remain separately gated.
+
 > 2026-07-22 — Task 0024AB corrected sequence-11 evidence capture without
 > modifying the candidate or simulation contract. Fresh exact facts are
 > `L*=18`, exact `N*=1`, 1002 states, frontier 130 and `elapsed_ms=233`;

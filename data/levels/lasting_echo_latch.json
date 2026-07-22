@@ -1,0 +1,44 @@
+{
+  "schema_version": 2,
+  "level_id": "lasting_echo_latch",
+  "title": "The Lasting Echo",
+  "terrain_rows": [
+    "###########",
+    "#.........#",
+    "#.###.###.#",
+    "#.....###.#",
+    "###.#######",
+    "#...#...###",
+    "###.###.###",
+    "#.......###",
+    "###########"
+  ],
+  "player_spawn": [1, 7],
+  "echoes": [
+    {"id": "echo_phase_main", "delay": 2, "spawn": [6, 7]}
+  ],
+  "plates": [],
+  "doors": [],
+  "exit": {"position": [9, 3]},
+  "metadata": {
+    "teaching_goal": "Create one permanent latch phase, then reuse typed identity and grouped-barrier timing across the changed topology.",
+    "intended_mechanics": ["two_phase_latch_permanence", "restart_full_reset", "reused_identity_barrier_timing"],
+    "notes": "Uncatalogued Task 0024AC sequence-12 finale candidate only; route is intentionally not embedded.",
+    "allow_zero_echo_tutorial": false
+  },
+  "validation": {"recommended_search_depth": 80},
+  "crates": [],
+  "keys": [],
+  "locks": [],
+  "barrier_groups": [
+    {"id": "barrier_phase", "cells": [[3, 6], [7, 6]], "initial_open": false, "all_sensor_ids": ["sensor_phase_you", "sensor_phase_echo"]},
+    {"id": "barrier_typed", "cells": [[4, 1], [5, 1]], "initial_open": false, "all_sensor_ids": ["sensor_phase_you", "sensor_phase_echo"]}
+  ],
+  "sensors": [
+    {"id": "sensor_phase_you", "position": [3, 1], "activator": "YOU_ONLY", "include_crates": false},
+    {"id": "sensor_phase_echo", "position": [5, 5], "activator": "ECHO_ONLY", "include_crates": false}
+  ],
+  "latches": [
+    {"id": "latch_phase", "position": [7, 7], "activator": "ECHO_ONLY", "target_barrier_group_id": "barrier_phase", "target_open": true}
+  ]
+}

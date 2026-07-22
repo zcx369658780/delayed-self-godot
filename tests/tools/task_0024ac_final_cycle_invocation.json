@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "task": "0024AC",
+  "invocation_id": "f56d4606-244b-4b82-b35e-93a413470840",
+  "status": "DECLARED_AND_CONSUMED",
+  "started_utc": "2026-07-22T12:37:43.8847744Z",
+  "head": "add661f5d545156aaf163ec065b31b4340403f1f",
+  "manifest_sha256": "e5bd4df8d57787e46970f057fec78280e9f5873b6a7c5023fa743a30eb64e8a5",
+  "candidate_sha256": "a1d7dcd30832cfdcfe93ead34884fa5a21fd19ef3cafa481860688640bd5ea5f",
+  "godot_before": 0
+}

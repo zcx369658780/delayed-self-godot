@@ -1,5 +1,13 @@
 # Handoff master (CURRENT)
 
+## Task 0024AC sequence-12 latch finale candidate ready for GPT review
+
+Task 0024AC completed at `SEQUENCE_12_LASTING_ECHO_LATCH_MACHINE_VALIDATED_FOR_GPT_REVIEW`. The uncatalogued 11×9 `lasting_echo_latch / The Lasting Echo / 余响落锁` candidate has SHA-256 `a1d7dcd30832cfdcfe93ead34884fa5a21fd19ef3cafa481860688640bd5ea5f`. It uses one delay-2 ECHO, one ECHO-only one-shot latch, two typed sensors with `include_crates=false`, one two-cell latch-target group and one two-cell phase-two group. It remains `FINALE_CANDIDATE_ONLY`.
+
+Fresh solver facts are `L*=21`, exact `N*=6`, 13,459 states, frontier 1,389 and exact `elapsed_ms=3936`; all-shortest is `6/6`, omissions zero, with 22,049 composite states. Latch-disabled and latch-reset controls are complete-unsolved at 620 states; target-reversed is complete-unsolved at 1,100; direct route is `20/1`; no-ECHO is complete-unsolved at 7; the ANY_ACTOR control removes the exact typed-identity claim. Fifteen split records parse independently, maximum 932 bytes, and all parser probes passed.
+
+The retained final cycle invocation `f56d4606-244b-4b82-b35e-93a413470840` ran focused 0024AC, accepted focused 0024AB/0024Z/0024Y, Aggregate and corrected complete-v2 once each. All passed; Aggregate stderr was exactly `LEVEL_ID_MISMATCH`, all others empty, marker count one, cleanup one, Godot 0/0 and no owned/unproven residue. PRE_TASK/PRE_FINAL/POST_FINAL audits preserved the seal, 53 repository files, 12 external evidence files and accepted historical paths with zero drift. The cycle is consumed. Read `docs/level_design/validation/sequence_12_lasting_echo_latch_validation.json` and `docs/reports/0024AC_SEQUENCE_12_LASTING_ECHO_LATCH_MACHINE_VALIDATION_REPORT.md`; await GPT review. Do not modify the candidate or begin catalog/finale/Profile/product/release work.
+
 ## Task 0024AB corrected sequence-11 validation ready for GPT review
 
 Task 0024AB completed at `SEQUENCE_11_IDENTITY_SHIFT_BRIDGE_CORRECTED_MACHINE_VALIDATED_FOR_GPT_REVIEW`. The candidate stayed byte-identical at SHA-256 `8856d3c64978cef7cff7f1680a7ae2f412c9b0cab058d598cbe3aee0225052e0`. Fresh solver facts are `L*=18`, exact `N*=1`, 1002 states, frontier 130 and exact `elapsed_ms=233`; all-shortest is `1/1`, omissions zero. No-ECHO, swapped and no-deferral are complete-unsolved; one-cell is `14/1`; ANY controls eliminate exact typed-identity necessity.
