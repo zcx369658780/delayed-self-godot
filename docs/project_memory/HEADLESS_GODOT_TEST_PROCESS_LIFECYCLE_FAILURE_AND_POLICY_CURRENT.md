@@ -86,3 +86,9 @@ This policy supersedes the earlier pattern of permitting only a pre-test cleanup
 Task 0024S qualifies the wrapper's descendant identity and lifecycle policy without running a core-mechanics matrix. Windows command lines are parsed into argv rather than searched as raw text. Project admission accepts one exact `--path value` or `--path=value`, requires a fully-qualified canonical Windows path and uses exact `OrdinalIgnoreCase` equality after separator, redundant-segment and trailing-separator normalization. Exact descendant script identity, executable identity, ancestry, creation time, headless mode and forbidden-mode rejection remain independent gates.
 
 Ten path cases and eight lifecycle cases pass. Cleanup count is one per case, owned descendants close deepest-first with direct last, unproven descendants never enter cleanup and self-exit within the qualification bound, repeated record semantics match, static broad-cleanup checks pass and every case ends with zero Godot processes. This is wrapper qualification only; a complete foundation validation remains separately gated.
+
+## 8. Task 0024T sealed-driver pre-execution blocker
+
+Task 0024T statically validated and sealed a four-case final package, but its exactly-once driver stopped before attempt creation and before the wrapper. The expression `Get-GodotCount -eq 0` was parsed as a command invocation with arguments rather than a comparison; integer zero was then Boolean false at the assertion boundary. Actual Godot counts before and after were zero.
+
+Future static validators for PowerShell harnesses must reject bare command invocations inside comparison-like parenthesized argument expressions and require `(Get-FunctionResult) -eq value` or an assigned scalar followed by an explicit comparison. Under one-shot seal rules, a pre-attempt harness defect still consumes the driver-invocation budget when the contract says the driver itself may be invoked only once.

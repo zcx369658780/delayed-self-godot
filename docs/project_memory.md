@@ -1,5 +1,9 @@
 # Project memory
 
+## Task 0024T manifest-locked final-validation blocker
+
+Task 0024T completed a passing static audit for four ordered cases, 44 coverage IDs and 26 frozen hashes, then wrote and verified one read-only external seal. Its exactly-once final driver stopped before attempt creation and before the wrapper because PowerShell parsed `Get-GodotCount -eq 0` as a function invocation with arguments rather than a comparison. Actual pre/post Godot counts were zero. No core-mechanics case ran and no foundation conclusion was established. The sealed artifacts may not be edited or rerun under 0024T; continuation requires a new bounded task.
+
 ## Task 0024S Windows path identity and wrapper qualification
 
 Task 0024S preserved the eleven-file 0024R continuation externally before ff-only synchronization, then replaced raw project-token identity with parsed Windows argv identity. The wrapper accepts exactly one `--path value` or `--path=value`, canonicalizes fully-qualified Windows paths with separator, redundant-segment and trailing-separator normalization, and compares with exact `OrdinalIgnoreCase` equality. Prefix/suffix/subproject/backup/other-root forms remain non-equivalent. Exact script identity and all ancestry/executable/time/forbidden-mode gates remain required.

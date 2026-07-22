@@ -2,6 +2,9 @@
 
 ## Start here
 
+0. [`Task 0024T`](../tasks/0024T_manifest_locked_complete_core_mechanics_final_validation_gate.md) — terminally blocked exactly-once manifest-locked validation
+1. [`Task 0024T blocker report`](reports/0024T_COMPLETE_CORE_MECHANICS_FINAL_VALIDATION_REPORT.md) — static seal pass, pre-attempt PowerShell driver defect, zero executed cases and no-rerun boundary
+
 0. [`Task 0024S`](../tasks/0024S_windows_path_identity_and_wrapper_qualification_continuation_gate.md) — Windows path identity and complete owned-wrapper qualification continuation
 1. [`Task 0024S report`](reports/0024S_WINDOWS_PATH_IDENTITY_AND_WRAPPER_QUALIFICATION_REPORT.md) — continuation preservation, canonical argv/path doctrine and 10+8 focused qualification pass
 

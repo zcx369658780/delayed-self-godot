@@ -1,5 +1,12 @@
 # Development plan (CURRENT)
 
+> 2026-07-22 — Task 0024T is terminally blocked after its exactly-once sealed
+> final driver failed before attempt creation or any Godot case. Static
+> preparation passed (4 cases, 44 coverage IDs, 26 frozen hashes), but a
+> PowerShell function-call/comparison ambiguity made the zero-process assertion
+> fail at an actual count of zero. No rerun, sealed-file repair or foundation
+> acceptance is authorized. A new bounded task is required.
+
 > 2026-07-22 — Task 0024S completed the owned Godot wrapper qualification:
 > Windows argv/path identity, 10 focused path cases and 8 lifecycle cases pass
 > with exactly-once cleanup and zero Godot after every case. This is harness

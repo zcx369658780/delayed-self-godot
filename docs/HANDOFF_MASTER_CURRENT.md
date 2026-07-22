@@ -1,5 +1,9 @@
 # Handoff master (CURRENT)
 
+## Task 0024T terminal blocker
+
+Task 0024T sealed its complete four-case validation package after a passing static audit, then consumed its single final-driver invocation. The sealed driver stopped before attempt creation and before every wrapper/Godot case because PowerShell treated `Get-GodotCount -eq 0` as a function call with arguments, not a comparison. Actual pre/post Godot counts were zero. Do not modify or rerun the sealed artifacts under 0024T. Continue only from a new bounded task after reading `docs/reports/0024T_COMPLETE_CORE_MECHANICS_FINAL_VALIDATION_REPORT.md`.
+
 # Task 0024S Windows path identity and owned-wrapper qualification
 
 Task 0024S completed at `WINDOWS_PATH_IDENTITY_AND_OWNED_WRAPPER_QUALIFICATION_READY_FOR_GPT_REVIEW`. The exact eleven-file 0024R continuation was preserved byte-identically before ff-only synchronization. The wrapper now parses the real Windows argv vector, accepts one exact Godot `--path` form, canonicalizes fully-qualified Windows paths and compares exact identity with `OrdinalIgnoreCase`; exact script, ancestry, creation-time, executable, headless and forbidden-mode gates remain intact.

@@ -6,6 +6,8 @@
 - Original planning date: 2026-07-21
 - Project-source synchronization date: 2026-07-22
 
+Task 0024T did not establish core-mechanics foundation acceptance. Its sealed final driver failed before any validation case because of a PowerShell assertion-expression defect, and no rerun is authorized. The roadmap's mechanics and content-expansion gates remain blocked behind a new bounded validation-continuation task.
+
 ## Product target
 
 Deliver a stable **12-level, zh-Hans-default, hand-drawn ink-notebook complete flow**. Levels 13–14, advanced mechanics, full English and audio breadth are stretch scope only.
