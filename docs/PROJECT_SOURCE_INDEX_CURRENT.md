@@ -4,6 +4,8 @@
 - Current product-roadmap acceptance: `TASK_0023ZW_GAMEPLAY_PRESENTATION_ROADMAP_REBASELINE_ACCEPTED_WITH_BINDING_SEQUENCE_POLICY`
 - Current GPT Project Sources successor: `docs/project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_AFTER_0024T_BLOCKER_2026_07_22.md`
 - Current successor UTF-8 SHA-256: `345e756b82b3425459f2f967e04e43c5a42d04b139285fb3ff351bbec119026a`
+- Current active-task overlay: `docs/project_source/DELAYED_SELF_PROJECT_SOURCE_ACTIVE_TASK_OVERLAY_0024U_2026_07_22.md`
+- Active-task overlay UTF-8 SHA-256: `916bbf48342e5c5ac14a3d9b3aa5f93617f8c4855f9ad88d832894411b7013c2`
 - Roadmap synchronization baseline package: `docs/project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_2026_07_22.md`
 - Baseline package UTF-8 SHA-256: `f2bae76d576cb9b8ccca3189861a4b328d5e5925af4754de7986f646e8d7ad7b`
 
@@ -15,7 +17,8 @@
 | [`Canonical GDD seed`](game_design/DELAYED_SELF_GAME_DESIGN_DOCUMENT_CURRENT.md) | Original product/design baseline and retained core design history | Preserve; sections superseded by an accepted successor must not be treated as current |
 | [`Accepted design rebaseline`](game_design/DELAYED_SELF_GAME_DESIGN_REBASELINE_CURRENT.md) | Current authority for target level count, sequence policy, mechanic breadth, presentation, language, audio and post-2026-07-21 roadmap | Current design successor; outranks conflicting seed-GDD passages |
 | [`Expanded submission roadmap`](production/EXPANDED_CONTENT_SUBMISSION_ROADMAP_CURRENT.md) | Accepted dated gate sequence, scope cuts and current execution position | Current roadmap; implementation remains separately gated |
-| [`Current GPT Project Sources successor`](project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_AFTER_0024T_BLOCKER_2026_07_22.md) | Upload-ready current package including accepted roadmap and latest technical gate/blocker state | Latest GPT Project Sources authority; update after material gate changes |
+| [`Current GPT Project Sources successor`](project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_AFTER_0024T_BLOCKER_2026_07_22.md) | Upload-ready current package including accepted roadmap and Task 0024T blocker state | Current source package; combine with the active-task overlay below |
+| [`Current active-task overlay`](project_source/DELAYED_SELF_PROJECT_SOURCE_ACTIVE_TASK_OVERLAY_0024U_2026_07_22.md) | Updates only the current active task after the post-0024T package was generated | Read after the current successor; latest task/status overlay |
 | [`Roadmap synchronization baseline package`](project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_2026_07_22.md) | Full accepted roadmap and source-authority consolidation before the Task 0024T blocker | Retain as historical synchronization baseline |
 | [`Rule source seed`](project_rules/PROJECT_RULE_SOURCE_SEED_CURRENT.md) | Auditable bootstrap source | Preserve as source history; do not treat as a live-progress pointer |
 | [`Split project rules`](project_rules/) | Operational detail organized by concern | Must not weaken the seed or `AGENTS.md` |
@@ -39,14 +42,14 @@
 ## Current technical position
 
 - Task 0024S wrapper qualification is GPT accepted.
-- Task 0024T is terminally blocked after its exactly-once sealed driver failed before attempt creation and before any Godot case.
+- Task 0024T is closed after its exactly-once sealed driver failed before attempt creation and before any Godot case.
 - Static preparation passed for four ordered cases, 44 coverage IDs and 26 frozen hashes.
-- The final-driver invocation budget is consumed under Task 0024T.
 - Zero of four validation cases ran; no foundation conclusion or product defect was established.
-- There is currently no active Codex task. A new bounded correction gate is required.
+- Task 0024U is now the only active task.
+- Task 0024U uses new artifact identities and a new seal, statically qualifies assigned-scalar PowerShell comparisons, then authorizes one fresh final driver exactly once.
 
 ## Resolution rules
 
-Repository facts and the live task outrank conversational memory. `AGENTS.md` freezes cross-task safety. A newly published task controls the present allowed surface. The accepted design rebaseline controls changed product-direction sections; the original GDD seed continues to govern retained sections not superseded. The expanded submission roadmap controls the dated execution spine. The current GPT Project Sources successor summarizes these authorities and the latest technical state, but does not outrank repository facts. When sources conflict materially, stop and request GPT Project Sources advisor resolution rather than silently choosing.
+Repository facts and the live task outrank conversational memory. `AGENTS.md` freezes cross-task safety. The currently published task controls the present allowed surface. The accepted design rebaseline controls changed product-direction sections; the original GDD seed continues to govern retained sections not superseded. The expanded submission roadmap controls the dated execution spine. Read the current GPT Project Sources successor, then its active-task overlay. These packages summarize repository authority but do not outrank repository facts. When sources conflict materially, stop and request GPT Project Sources advisor resolution rather than silently choosing.
 
-Task 0000 did not rewrite either seed. It materialized concise execution rules, current pointers, indexes, and compliance placeholders from them. The 2026-07-22 project-source synchronization adds accepted successors rather than rewriting historical seeds. The old 2026-07-14 files and the first 2026-07-22 consolidated package remain historical sources; current technical status is controlled by the post-0024T successor.
+Task 0000 did not rewrite either seed. It materialized concise execution rules, current pointers, indexes, and compliance placeholders from them. The 2026-07-22 project-source synchronization adds accepted successors rather than rewriting historical seeds. The 2026-07-14 files and first consolidated package remain historical sources; current technical status is the post-0024T successor plus the Task 0024U overlay.
