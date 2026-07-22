@@ -1,0 +1,229 @@
+{
+  "schema_version": 1,
+  "qualification": "Task 0024S Windows path identity and focused owned Godot wrapper lifecycle qualification",
+  "result": "PASS",
+  "case_count": 8,
+  "cases": [
+    {
+      "name": "normal_exit",
+      "status": "PASS",
+      "underlying_status": "PASS",
+      "native_exit_code": 0,
+      "timed_out": false,
+      "marker_pass": true,
+      "stderr_pass": true,
+      "cleanup_invocation_count": 1,
+      "owned_record_count": 1,
+      "unproven_record_count": 0,
+      "cleanup_order_depths": [
+        0
+      ],
+      "zero_godot_after": true
+    },
+    {
+      "name": "nonzero_exit_7",
+      "status": "NONZERO_EXIT",
+      "underlying_status": "NONZERO_EXIT",
+      "native_exit_code": 7,
+      "timed_out": false,
+      "marker_pass": true,
+      "stderr_pass": true,
+      "cleanup_invocation_count": 1,
+      "owned_record_count": 1,
+      "unproven_record_count": 0,
+      "cleanup_order_depths": [
+        0
+      ],
+      "zero_godot_after": true
+    },
+    {
+      "name": "timeout_exact_pid",
+      "status": "TIMEOUT",
+      "underlying_status": "TIMEOUT",
+      "native_exit_code": null,
+      "timed_out": true,
+      "marker_pass": true,
+      "stderr_pass": true,
+      "cleanup_invocation_count": 1,
+      "owned_record_count": 1,
+      "unproven_record_count": 0,
+      "cleanup_order_depths": [
+        0
+      ],
+      "zero_godot_after": true
+    },
+    {
+      "name": "stderr_forbidden",
+      "status": "STDERR_POLICY_FAILURE",
+      "underlying_status": "STDERR_POLICY_FAILURE",
+      "native_exit_code": 0,
+      "timed_out": false,
+      "marker_pass": true,
+      "stderr_pass": false,
+      "cleanup_invocation_count": 1,
+      "owned_record_count": 1,
+      "unproven_record_count": 0,
+      "cleanup_order_depths": [
+        0
+      ],
+      "zero_godot_after": true
+    },
+    {
+      "name": "missing_marker",
+      "status": "MARKER_FAILURE",
+      "underlying_status": "MARKER_FAILURE",
+      "native_exit_code": 0,
+      "timed_out": false,
+      "marker_pass": false,
+      "stderr_pass": true,
+      "cleanup_invocation_count": 1,
+      "owned_record_count": 1,
+      "unproven_record_count": 0,
+      "cleanup_order_depths": [
+        0
+      ],
+      "zero_godot_after": true
+    },
+    {
+      "name": "owned_descendant_first",
+      "status": "TIMEOUT",
+      "underlying_status": "TIMEOUT",
+      "native_exit_code": null,
+      "timed_out": true,
+      "marker_pass": true,
+      "stderr_pass": true,
+      "cleanup_invocation_count": 1,
+      "owned_record_count": 2,
+      "unproven_record_count": 0,
+      "cleanup_order_depths": [
+        1,
+        0
+      ],
+      "zero_godot_after": true
+    },
+    {
+      "name": "owned_descendant_repeat",
+      "status": "TIMEOUT",
+      "underlying_status": "TIMEOUT",
+      "native_exit_code": null,
+      "timed_out": true,
+      "marker_pass": true,
+      "stderr_pass": true,
+      "cleanup_invocation_count": 1,
+      "owned_record_count": 2,
+      "unproven_record_count": 0,
+      "cleanup_order_depths": [
+        1,
+        0
+      ],
+      "zero_godot_after": true
+    },
+    {
+      "name": "unproven_descendant_exclusion",
+      "status": "UNPROVEN_DESCENDANT",
+      "underlying_status": "TIMEOUT",
+      "native_exit_code": null,
+      "timed_out": true,
+      "marker_pass": true,
+      "stderr_pass": true,
+      "cleanup_invocation_count": 1,
+      "owned_record_count": 1,
+      "unproven_record_count": 2,
+      "cleanup_order_depths": [
+        0
+      ],
+      "zero_godot_after": true
+    }
+  ],
+  "path_identity_case_count": 10,
+  "path_identity_cases": [
+    {
+      "name": "forward_slash_equivalence",
+      "valid": true,
+      "equivalent": true,
+      "reason": "VALID",
+      "option_count": 1
+    },
+    {
+      "name": "case_insensitive_equivalence",
+      "valid": true,
+      "equivalent": true,
+      "reason": "VALID",
+      "option_count": 1
+    },
+    {
+      "name": "trailing_separator_equivalence",
+      "valid": true,
+      "equivalent": true,
+      "reason": "VALID",
+      "option_count": 1
+    },
+    {
+      "name": "redundant_dot_equivalence",
+      "valid": true,
+      "equivalent": true,
+      "reason": "VALID",
+      "option_count": 1
+    },
+    {
+      "name": "deceptive_suffix_rejected",
+      "valid": true,
+      "equivalent": false,
+      "reason": "VALID",
+      "option_count": 1
+    },
+    {
+      "name": "subproject_rejected",
+      "valid": true,
+      "equivalent": false,
+      "reason": "VALID",
+      "option_count": 1
+    },
+    {
+      "name": "backup_suffix_rejected",
+      "valid": true,
+      "equivalent": false,
+      "reason": "VALID",
+      "option_count": 1
+    },
+    {
+      "name": "other_root_rejected",
+      "valid": true,
+      "equivalent": false,
+      "reason": "VALID",
+      "option_count": 1
+    },
+    {
+      "name": "missing_path_rejected",
+      "valid": false,
+      "equivalent": false,
+      "reason": "MISSING",
+      "option_count": 0
+    },
+    {
+      "name": "duplicate_path_rejected",
+      "valid": false,
+      "equivalent": false,
+      "reason": "DUPLICATE",
+      "option_count": 2
+    }
+  ],
+  "deterministic_repeat_semantics_equal": true,
+  "static_safety": {
+    "process_start_info": true,
+    "separate_argument_list": true,
+    "shell_execute_disabled": true,
+    "no_process_name_stop": true,
+    "no_wildcard_stop": true,
+    "no_start_process_launch": true,
+    "exact_pid_stop_only": true,
+    "no_process_name_enumerated_cleanup": true,
+    "exact_project_option_parser": true,
+    "canonical_windows_path_comparison": true,
+    "no_project_identity_substring_test": true
+  },
+  "every_case_cleanup_exactly_once": true,
+  "every_case_zero_godot_after": true,
+  "complete_core_mechanics_matrix_ran": false,
+  "terminal_marker": "WINDOWS_PATH_IDENTITY_AND_OWNED_WRAPPER_QUALIFICATION_READY_FOR_GPT_REVIEW"
+}

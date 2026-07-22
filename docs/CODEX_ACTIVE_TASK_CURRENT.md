@@ -1,6 +1,6 @@
 # Codex active task (CURRENT)
 
-- Status: `WINDOWS_PATH_IDENTITY_AND_OWNED_WRAPPER_QUALIFICATION_READY_FOR_CODEX`
+- Status: `WINDOWS_PATH_IDENTITY_AND_OWNED_WRAPPER_QUALIFICATION_READY_FOR_GPT_REVIEW`
 - Active task: `tasks/0024S_windows_path_identity_and_wrapper_qualification_continuation_gate.md`
 - Closed predecessors: all Tasks through `0024R`; none may be resumed directly
 - Latest GPT adjudication: `TASK_0024R_BLOCKED_ON_WINDOWS_PROJECT_PATH_IDENTITY_NORMALIZATION`
@@ -15,13 +15,13 @@
 
 Tasks 0024 and 0024R are closed. Task 0024R stopped safely after the owned-descendant case compared the observed project path `D:/Delayed_Self` against a backslash/lowercase normalized expected form by raw token semantics and classified the descendant `UNPROVEN_PROJECT_IDENTITY`. The wrapper did not close that unproven descendant; it later exited naturally. No process boundary breach occurred.
 
-Task 0024S is the only active scope. Before fetch or edits, it must preserve the exact eleven local 0024R continuation paths byte-identically. It may then correct only Windows project-path parsing/canonical equivalence and complete the focused wrapper qualification suite.
+Task 0024S preserved the exact eleven local 0024R continuation paths byte-identically before ff-only synchronization. The synchronized continuation then corrected only Windows project-path parsing/canonical equivalence and completed the focused wrapper qualification suite.
 
-Project identity must be based on the parsed `--path` argument and canonical Windows path equality: separator-insensitive, case-insensitive, trailing-separator normalized, but never substring/prefix/suffix matching. Ancestry, creation time, executable, test identity and forbidden-mode checks remain mandatory.
+Project identity is based on the argv-parsed single `--path` argument and canonical Windows path equality: separator-insensitive, case-insensitive and trailing-separator normalized, but never substring/prefix/suffix matching. Exact `--script` identity, ancestry, creation time, executable identity, headless mode and forbidden-mode checks remain mandatory.
 
-Focused qualification may be repaired and rerun within Task 0024S. This task must not run or imitate the core-mechanics final matrix and must not modify schema v2, Simulation, solver, core-mechanics tests, Task 0012, UID sidecars, catalog, formal levels, Profile or product surfaces.
+The final focused qualification passed 10 path-identity cases and 8 lifecycle invocations. Cleanup count was exactly one in every case, owned descendants were cleaned deepest-first with the direct PID last, unproven descendants were excluded and self-exited, repeated ownership semantics matched, all static safety checks passed and every case ended with zero Godot processes. No core-mechanics final matrix ran.
 
-A later separately authorized task will run one fresh complete final validation only after GPT accepts Task 0024S.
+Await GPT review. A later separately authorized task may run one fresh complete final validation only after GPT accepts Task 0024S.
 
 Expected terminal verdict:
 

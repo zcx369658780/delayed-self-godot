@@ -1,5 +1,11 @@
 # Development plan (CURRENT)
 
+> 2026-07-22 — Task 0024S completed the owned Godot wrapper qualification:
+> Windows argv/path identity, 10 focused path cases and 8 lifecycle cases pass
+> with exactly-once cleanup and zero Godot after every case. This is harness
+> evidence only. The next core-mechanics final validation remains separately
+> gated pending GPT acceptance.
+
 > 2026-07-21 — Task 0023ZW has produced a planning-only recommended successor:
 > `docs/production/EXPANDED_CONTENT_SUBMISSION_ROADMAP_CURRENT.md`. The 12-core
 > plus 2 conditional-stretch direction awaits GPT/owner acceptance; the

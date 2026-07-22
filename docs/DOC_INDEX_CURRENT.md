@@ -2,6 +2,9 @@
 
 ## Start here
 
+0. [`Task 0024S`](../tasks/0024S_windows_path_identity_and_wrapper_qualification_continuation_gate.md) — Windows path identity and complete owned-wrapper qualification continuation
+1. [`Task 0024S report`](reports/0024S_WINDOWS_PATH_IDENTITY_AND_WRAPPER_QUALIFICATION_REPORT.md) — continuation preservation, canonical argv/path doctrine and 10+8 focused qualification pass
+
 0. [`Task 0023ZW`](../tasks/0023ZW_gameplay_breadth_presentation_localization_audio_roadmap_rebaseline_gate.md) — current documentation-only gameplay/presentation roadmap rebaseline
 1. [`Gameplay breadth rebaseline`](game_design/GAMEPLAY_BREADTH_AND_MECHANICS_REBASELINE_CURRENT.md) — count decision, mechanic contracts and curriculum
 2. [`Presentation direction`](presentation/HAND_DRAWN_NOTEBOOK_PRESENTATION_DIRECTION_CURRENT.md) — ink-notebook visual and font/asset controls

@@ -1,5 +1,13 @@
 # Handoff master (CURRENT)
 
+# Task 0024S Windows path identity and owned-wrapper qualification
+
+Task 0024S completed at `WINDOWS_PATH_IDENTITY_AND_OWNED_WRAPPER_QUALIFICATION_READY_FOR_GPT_REVIEW`. The exact eleven-file 0024R continuation was preserved byte-identically before ff-only synchronization. The wrapper now parses the real Windows argv vector, accepts one exact Godot `--path` form, canonicalizes fully-qualified Windows paths and compares exact identity with `OrdinalIgnoreCase`; exact script, ancestry, creation-time, executable, headless and forbidden-mode gates remain intact.
+
+Ten path equivalence/rejection cases and eight lifecycle invocations pass. Every invocation reports cleanup count one and zero final Godot processes. Owned descendants clean depth 1 before direct depth 0; repeated record semantics match. The controlled PowerShell/conhost unproven chain remained cleanup-ineligible, was never closed and self-exited within the bound. Static broad-cleanup/shell-launch checks pass. No core-mechanics final matrix, Profile access or product/frozen-surface change occurred. Read `docs/reports/0024S_WINDOWS_PATH_IDENTITY_AND_WRAPPER_QUALIFICATION_REPORT.md` before any continuation.
+
+Await GPT review. A later task may authorize one fresh complete core-mechanics validation only after Task 0024S acceptance; no aggregate/final matrix is authorized now.
+
 # Task 0023ZW gameplay/presentation roadmap rebaseline
 
 Task 0023ZW is complete as a documentation-only recommendation and awaits GPT/owner review. Its target is a 12-level Chinese-default complete flow, hand-drawn delayed-notebook presentation and minimal credited Crow Producer music; levels 13–14 and advanced mechanics are stretch only. The implementation remains exactly eight levels with `two_echo_convergence` as sequence-8 finale. Do not implement, migrate/reset Profile, acquire/import assets/audio/fonts, build, upload or submit until a new accepted gate authorizes the specific surface. Read `docs/reports/0023ZW_GAMEPLAY_PRESENTATION_ROADMAP_REBASELINE_REPORT.md` and the four linked CURRENT planning documents first.

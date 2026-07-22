@@ -1,5 +1,11 @@
 # Project memory
 
+## Task 0024S Windows path identity and wrapper qualification
+
+Task 0024S preserved the eleven-file 0024R continuation externally before ff-only synchronization, then replaced raw project-token identity with parsed Windows argv identity. The wrapper accepts exactly one `--path value` or `--path=value`, canonicalizes fully-qualified Windows paths with separator, redundant-segment and trailing-separator normalization, and compares with exact `OrdinalIgnoreCase` equality. Prefix/suffix/subproject/backup/other-root forms remain non-equivalent. Exact script identity and all ancestry/executable/time/forbidden-mode gates remain required.
+
+The final focused suite passed 10 path cases and 8 lifecycle invocations. Cleanup ran exactly once in every case; owned descendants cleaned deepest-first and direct last; unproven helper descendants were never closed and self-exited; repeat semantics matched; every case ended at zero Godot. No core-mechanics final matrix ran. This qualifies only the wrapper and leaves the provisional foundation pending a later separately authorized final validation after GPT acceptance.
+
 ## Task 0023ZW gameplay/presentation roadmap rebaseline
 
 Task 0023ZW produced documentation only, pending GPT/owner review. It recommends testing C: 12 submission-core levels plus two stability/date-gated stretch rooms, preserving the eight implemented rooms and sequence-8 `two_echo_convergence` while planning. Core candidate contracts are YOU-only crates, YOU-only consumable keys/locks, multi-cell barriers/bridges, typed sensors and one-shot latches; portals, one-way gates, fragile floors and conveyors are stretch. The visual direction is hand-drawn delayed notebook/ink-ECHO, zh-Hans is a recommended new-profile default pending an explicit Profile compatibility decision, and Crow Producer terms are owner-supplied planning inputs rather than legal interpretation. No Profile/content, Godot run, downloads/imports or product files were accessed/changed.

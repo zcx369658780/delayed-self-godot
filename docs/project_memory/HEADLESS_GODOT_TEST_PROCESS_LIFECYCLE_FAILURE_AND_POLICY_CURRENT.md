@@ -80,3 +80,9 @@ A complete validation may still be authorized exactly once. Its owned-process `f
 Tasks 0023ZX, 0023ZY and 0023ZZ are closed and must not be resumed directly. Their preserved local work and external evidence are continuation inputs for Task 0024 only. Their process blockers do not establish a schema-v2, Simulation, replay, solver, UID or formal-level defect.
 
 This policy supersedes the earlier pattern of permitting only a pre-test cleanup phase while forbidding cleanup of later task-owned processes.
+
+## 7. Task 0024S Windows identity qualification
+
+Task 0024S qualifies the wrapper's descendant identity and lifecycle policy without running a core-mechanics matrix. Windows command lines are parsed into argv rather than searched as raw text. Project admission accepts one exact `--path value` or `--path=value`, requires a fully-qualified canonical Windows path and uses exact `OrdinalIgnoreCase` equality after separator, redundant-segment and trailing-separator normalization. Exact descendant script identity, executable identity, ancestry, creation time, headless mode and forbidden-mode rejection remain independent gates.
+
+Ten path cases and eight lifecycle cases pass. Cleanup count is one per case, owned descendants close deepest-first with direct last, unproven descendants never enter cleanup and self-exit within the qualification bound, repeated record semantics match, static broad-cleanup checks pass and every case ends with zero Godot processes. This is wrapper qualification only; a complete foundation validation remains separately gated.

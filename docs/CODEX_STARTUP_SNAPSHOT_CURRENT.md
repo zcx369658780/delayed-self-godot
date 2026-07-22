@@ -4,7 +4,7 @@
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
 - Current gate: Task 0024S Windows project-path identity and owned-wrapper qualification continuation
 - Active task: `tasks/0024S_windows_path_identity_and_wrapper_qualification_continuation_gate.md`
-- Active status: `WINDOWS_PATH_IDENTITY_AND_OWNED_WRAPPER_QUALIFICATION_READY_FOR_CODEX`
+- Active status: `WINDOWS_PATH_IDENTITY_AND_OWNED_WRAPPER_QUALIFICATION_READY_FOR_GPT_REVIEW`
 - Closed predecessors: all Tasks through `0024R`
 - Latest GPT adjudication: `TASK_0024R_BLOCKED_ON_WINDOWS_PROJECT_PATH_IDENTITY_NORMALIZATION`
 - Last GPT-accepted product gate: `TASK_0023ZW_GAMEPLAY_PRESENTATION_ROADMAP_REBASELINE_ACCEPTED_WITH_BINDING_SEQUENCE_POLICY`
@@ -18,10 +18,10 @@
 
 Task 0024R stopped after a real stop condition. Its owned-descendant case used a forward-slash project path while the wrapper compared against a backslash/lowercase expected token, producing a false `UNPROVEN_PROJECT_IDENTITY`. The wrapper correctly excluded and did not close the unproven descendant; it later exited naturally. Current reported Godot process count is zero.
 
-Before synchronization, Task 0024S must inventory and externally preserve exactly one modified wrapper plus ten untracked 0024R qualification files. No unrelated path, broad reset, clean or unreviewed stash is permitted.
+Task 0024S preserved exactly one modified wrapper plus ten untracked 0024R qualification files byte-identically under the task-owned external evidence root, then fast-forwarded to the task authority with all eleven identities unchanged.
 
-Task 0024S corrects only project-path argument parsing and canonical Windows-path equality, then completes all focused wrapper qualifications. Expected equivalent path forms include slash, case and trailing-separator variants. Deceptive prefix, suffix, backup, subproject and unrelated paths must remain non-equivalent.
+Task 0024S now parses the actual Windows argv vector, accepts exactly one `--path value` or `--path=value`, and compares canonical fully-qualified Windows paths by exact case-insensitive equality. Ten equivalence/rejection cases and eight complete lifecycle invocations pass. Cleanup ran exactly once per case, owned descendants were cleaned deepest-first, unproven descendants were never closed, repeat semantics matched and every case ended with zero Godot processes.
 
-Focused qualification may be repaired and rerun. No core-mechanics final matrix may run in Task 0024S. Schema v2, Simulation, solver, core-mechanics tests, Task 0012, UID sidecars, formal catalog/levels and product surfaces remain frozen.
+No core-mechanics final matrix ran in Task 0024S. Schema v2, Simulation, solver, core-mechanics tests, Task 0012, UID sidecars, formal catalog/levels and product surfaces remained frozen.
 
-A later task receives one fresh complete final-validation authorization only after GPT accepts Task 0024S.
+A later task may receive one fresh complete final-validation authorization only after GPT accepts Task 0024S. Until then, do not run the aggregate/final matrix.
