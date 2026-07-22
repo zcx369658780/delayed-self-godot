@@ -28,7 +28,7 @@ def main() -> int:
     corrected_path = repo / baseline["complete_v2"]["corrected_path"]
 
     committed_bytes = subprocess.run(
-        ["git", "-C", str(repo), "show", f"HEAD:{aggregate['path']}"],
+        ["git", "-C", str(repo), "show", f"{aggregate['source_commit']}:{aggregate['path']}"],
         check=True,
         stdout=subprocess.PIPE,
     ).stdout

@@ -7,6 +7,7 @@
   },
   "aggregate": {
     "path": "tests/run_all.gd",
+    "source_commit": "5cd82fbc742bfe2664ea0b0b0df6d48bc8dd717a",
     "pre_sha256": "fb77fec7a6cb4556a770e00a98ef032d212d08dcd4b08f5a7674f1e8f24d9ed0",
     "corrected_sha256": "a9fb670d9c20faab005b151febebd34205ad55ea6f39b3db49a3c95456cf7303",
     "old_line": "value = base.duplicate(true); value.schema_version = 2",

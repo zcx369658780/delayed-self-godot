@@ -21,7 +21,7 @@ The aggregate correction is exactly:
 	_expect_code(loader.validate_dict(value), "UNSUPPORTED_SCHEMA_VERSION", "unsupported version")
 ```
 
-The pre-correction SHA-256 was `fb77fec7a6cb4556a770e00a98ef032d212d08dcd4b08f5a7674f1e8f24d9ed0`; the corrected SHA-256 is `a9fb670d9c20faab005b151febebd34205ad55ea6f39b3db49a3c95456cf7303`. The semantic-equivalence helper reconstructed the current file from `HEAD:tests/run_all.gd` with that one replacement only. Expectation-call structure stayed `253 → 253`; the runtime marker contract remains `621` assertions and nine vectors.
+The pre-correction SHA-256 was `fb77fec7a6cb4556a770e00a98ef032d212d08dcd4b08f5a7674f1e8f24d9ed0`; the corrected SHA-256 is `a9fb670d9c20faab005b151febebd34205ad55ea6f39b3db49a3c95456cf7303`. The semantic-equivalence helper reconstructs the current file from fixed startup commit `5cd82fbc742bfe2664ea0b0b0df6d48bc8dd717a:tests/run_all.gd` with that one replacement only, so post-commit validation remains reproducible. Expectation-call structure stayed `253 → 253`; the runtime marker contract remains `621` assertions and nine vectors.
 
 The new complete-v2 script was derived from immutable `tests/simulation/task_0024t_v2_solver_replay_canonical_malformed.gd`. Its historical SHA-256 remains `f61e7eba9c246d0ea21c88ebff1c476c320db2e3a927e0c1eacac5244df9f4f5`; the new SHA-256 is `b3b670f160bdaa0b57773c7769fc6712543f205e4d3ef953e352f8f9da247321`. Exact transformation audit:
 
