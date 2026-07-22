@@ -2,6 +2,9 @@
 
 ## Start here
 
+0. [`Task 0024W`](../tasks/0024W_manifest_locked_corrected_complete_core_mechanics_final_validation_gate.md) — completed manifest-locked corrected one-shot foundation validation
+1. [`Task 0024W report`](reports/0024W_CORRECTED_COMPLETE_CORE_MECHANICS_FINAL_VALIDATION_REPORT.md) — qualification, read-only seal, exact four-case pass and retained evidence identities
+
 0. [`Task 0024V`](../tasks/0024V_stale_schema_regression_and_complete_v2_test_correction_qualification.md) — qualified repeatable test-contract correction gate
 1. [`Task 0024V report`](reports/0024V_TEST_CORRECTION_QUALIFICATION_REPORT.md) — exact two-artifact correction, static equivalence, cycle history and passing two-case qualification
 

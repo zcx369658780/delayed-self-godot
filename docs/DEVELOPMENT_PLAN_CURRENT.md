@@ -1,5 +1,13 @@
 # Development plan (CURRENT)
 
+> 2026-07-22 — Task 0024W qualified a new manifest and driver without launching
+> Godot or the wrapper, wrote one read-only seal, and consumed one exactly-once
+> four-case final session. Aggregate, Task 0012, focused v2 and corrected
+> complete v2 all passed with exact markers/stderr policy, cleanup count one and
+> zero residual/final Godot. Sealed and historical hashes remained exact. The
+> result is ready for GPT adjudication; it is not foundation acceptance and
+> does not open expansion or protected product surfaces.
+
 > 2026-07-22 — Task 0024V corrected the stale aggregate schema probe and the
 > 15 declaration-only complete-v2 parse sites. Static equivalence retained 621
 > aggregate assertions and all 44 coverage IDs. After one honestly recorded
@@ -114,6 +122,12 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0023ZT controlled production read-only harness construction (ready for GPT review; inert and zero real-data I/O)
 → 0023ZU controlled production read-only observation (blocked before child start; no production-data contact)
 → 0023ZV process reconciliation and single controlled production read-only observation (ready for GPT review; one bounded pass)
+→ 0023ZW gameplay breadth/presentation/localization/audio roadmap rebaseline (GPT accepted as planning; implementation separately gated)
+→ 0023ZX/0023ZY/0023ZZ core-mechanics foundation and process-lifecycle attempts (closed; continuation evidence preserved)
+→ 0024/0024R/0024S owned Godot wrapper lifecycle and Windows path-identity qualification (GPT accepted through 0024S)
+→ 0024T/0024U sealed final-validation blockers (closed; one-shot budgets consumed)
+→ 0024V corrected Aggregate/complete-v2 test qualification (GPT accepted)
+→ 0024W corrected manifest-locked complete core-mechanics validation (ready for GPT review; four-case pass)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.

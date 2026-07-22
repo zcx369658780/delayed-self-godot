@@ -1,5 +1,11 @@
 # Project memory
 
+## Task 0024W manifest-locked corrected final validation
+
+Task 0024W statically and behaviorally qualified a new four-case driver package without launching Godot or the wrapper, then wrote one read-only seal binding 53 repository files and 12 historical external evidence files. The seal SHA-256 is `0e288adfe29c5881ab1f8cf40adf2df842a6fbbb8c6e5bce7aa14c797cf67ec0`.
+
+The exactly-once driver executed Aggregate, Task 0012 standalone, focused v2 and corrected complete v2 once each. All passed with wrapper/native exit zero and exact markers; Aggregate emitted only the accepted `LEVEL_ID_MISMATCH`, while the other cases had empty stderr. Cleanup count was one for each case, no owned/unproven PID remained, no unrelated process was touched and final Godot count was zero. The retained records agree and all sealed/historical hashes remain exact. The verdict is ready for GPT review, not foundation acceptance; the driver and case budget is consumed.
+
 ## Task 0024V test-contract correction qualification
 
 Task 0024V changed the aggregate unsupported-version probe from supported v2 to unsupported v3 and derived a new complete-v2 script from immutable 0024T with explicit typing at exactly 15 parse sites. Static equivalence proves no mechanics, fixture, solver-limit, malformed-case or canonical-state condition changed; the aggregate retains 253 expectation calls and 621 runtime assertions, and all 44 complete-v2 IDs occur once.

@@ -1,5 +1,13 @@
 # Handoff master (CURRENT)
 
+## Task 0024W complete foundation validation ready for GPT review
+
+Task 0024W completed at `COMPLETE_CORE_MECHANICS_FOUNDATION_VALIDATION_READY_FOR_GPT_REVIEW`. Static and pure-PowerShell driver/record qualification passed without launching Godot or the wrapper. One read-only seal with SHA-256 `0e288adfe29c5881ab1f8cf40adf2df842a6fbbb8c6e5bce7aa14c797cf67ec0` bound 53 repository files and 12 historical external evidence files.
+
+The final driver was invoked exactly once. Aggregate, Task 0012 standalone, focused v2 and corrected complete v2 each ran once and passed with native exit zero and their exact marker. Aggregate stderr was exactly `LEVEL_ID_MISMATCH`; the other three were empty. Cleanup ran once per case, no owned/unproven PID remained, no unrelated process was touched, every case boundary was zero and final Godot count was zero. Retained attempt/progress/case/final records are consistent and sealed/historical hashes did not drift.
+
+Read `docs/reports/0024W_CORRECTED_COMPLETE_CORE_MECHANICS_FINAL_VALIDATION_REPORT.md` and await GPT adjudication. Do not rerun the consumed driver/cases or alter sealed artifacts. This Codex pass is not foundation acceptance and grants no authority for sequences 9–12, catalog/finale/Profile migration, Gameplay/UI, presentation/localization/assets/audio, build/export, release, upload or submission.
+
 ## Task 0024V test correction qualified
 
 Task 0024V completed at `CORE_MECHANICS_TEST_CORRECTION_QUALIFIED_FOR_GPT_REVIEW`. Aggregate changed only its unsupported-version probe from 2 to 3 and still passes 621 assertions. The new complete-v2 test changes only 15 explicit declaration types plus Task 0024V markers and retains all 44 coverage IDs. Cycle 001 is recorded as an unproven harness-record failure; after adding immediate progress checkpoints, repeatable cycle 002 passed both wrapper cases with native exit 0, exact stderr policy, cleanup count one and zero residual/final Godot processes.

@@ -104,3 +104,9 @@ Lifecycle behavior was correct even though the task verdict was blocked: cleanup
 Task 0024V separates repeatable correction qualification from any later one-shot seal. Static validation launches no Godot/wrapper and must pass before each cycle. A qualification runner must checkpoint its invocation before launching a case and after static/case milestones; if it returns without retained evidence, the case execution is unproven and must not be reconstructed.
 
 Cycle 001 exposed that record-lifecycle defect and is retained as unproven. After adding immediate progress checkpoints, cycle 002 ran exactly Aggregate and the new complete-v2 script through the accepted wrapper. Both passed with native exit zero, exact marker/stderr policy, cleanup count one, no residual owned/unproven PID and zero final Godot. This evidence qualifies corrected tests only; it is not a seal, final driver or foundation acceptance.
+
+## 11. Task 0024W corrected sealed final validation
+
+Task 0024W qualified the final driver's assigned-scalar checks and record lifecycle before sealing, with zero Godot/wrapper launches. The new read-only seal binds 53 repository files and 12 historical external evidence files. Its exactly-once driver retained attempt and progress before execution, checkpointed every case, wrote four immutable case records and a final summary, and ended at `AFTER_FINAL_SUMMARY`.
+
+All four ordered cases passed. Cleanup ran exactly once per case; every case began and ended with zero Godot, no owned or unproven PID remained, no unrelated process was touched and final Godot count was zero. This confirms the wrapper lifecycle contract in the completed foundation validation. The one-shot driver/case budget is consumed, and the result remains ready for GPT adjudication rather than self-accepting the foundation.
