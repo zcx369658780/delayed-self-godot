@@ -1,9 +1,11 @@
 # Project-source roadmap synchronization — 2026-07-22
 
-- Status: `COMPLETE / DOCUMENTATION ONLY`
+- Status: `COMPLETE / REPOSITORY + GPT PROJECT SOURCES PACKAGE`
 - Product authority changed: no new product decision; this sync materializes the already accepted Task 0023ZW direction
 - Accepted verdict: `TASK_0023ZW_GAMEPLAY_PRESENTATION_ROADMAP_REBASELINE_ACCEPTED_WITH_BINDING_SEQUENCE_POLICY`
 - Active implementation gate at sync time: `tasks/0024T_manifest_locked_complete_core_mechanics_final_validation_gate.md`
+- Consolidated package path: `docs/project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_2026_07_22.md`
+- Consolidated UTF-8 SHA-256: `f2bae76d576cb9b8ccca3189861a4b328d5e5925af4754de7986f646e8d7ad7b`
 
 ## Reason for synchronization
 
@@ -31,7 +33,15 @@ Updated:
 - `docs/PROJECT_SOURCE_INDEX_CURRENT.md`
   - establishes the accepted design rebaseline as the current authority for superseded GDD sections;
   - establishes the expanded submission roadmap as the current dated execution spine;
-  - records the accepted 12-core plus 2 conditional-stretch direction and immutable sequence 1–8 policy.
+  - records the accepted 12-core plus 2 conditional-stretch direction and immutable sequence 1–8 policy;
+  - indexes the consolidated GPT Project Sources successor and its SHA-256.
+
+Created and versioned:
+
+- `docs/project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_2026_07_22.md`
+  - upload-ready consolidated successor for the 2026-07-14 GPT Project Sources package;
+  - records authority order, accepted roadmap, current technical gate, lifecycle policy, protected Profile boundary and startup order;
+  - keeps the original three source files as historical seeds rather than deleting or rewriting them.
 
 ## Current synchronized product direction
 
@@ -47,6 +57,13 @@ Updated:
 - Language target: Simplified Chinese, with no silent overwrite of existing Profile language.
 - Audio target: two loops plus optional restrained finale cue, license-ledger gated.
 
+## Current technical position
+
+- Task 0024S wrapper qualification is GPT accepted.
+- Task 0024T is the only active validation gate.
+- Task 0024T remains unexecuted at the time of this package synchronization.
+- No Task 0024T manifest, pre-execution seal or one-shot final driver was created or invoked by this documentation sync.
+
 ## Protected boundaries
 
 This synchronization did not modify or authorize:
@@ -60,12 +77,20 @@ This synchronization did not modify or authorize:
 - assets, fonts, music or localization;
 - build, export, release, upload or submission.
 
-Task 0024T remains the only active implementation/validation authority. Its manifest, seal and one-shot final driver were not created or executed by this documentation sync.
+Task 0024T remains the only active implementation/validation authority.
 
 ## GPT Project Sources package
 
-A consolidated upload file is generated outside the repository:
+The upload file is:
 
 `DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_2026_07_22.md`
 
-It should be added to GPT Project Sources as the current successor to the 2026-07-14 pre-repository source package. The older files remain historical seeds and should not control superseded target-count or roadmap sections.
+It is byte-identical to the repository version at:
+
+`docs/project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_2026_07_22.md`
+
+UTF-8 SHA-256:
+
+`f2bae76d576cb9b8ccca3189861a4b328d5e5925af4754de7986f646e8d7ad7b`
+
+Add it to GPT Project Sources as the CURRENT successor to the 2026-07-14 pre-repository source package. Keep the older files as historical seeds; they must not control superseded target-count, sequence, roadmap, presentation, language, audio or process-lifecycle sections.
