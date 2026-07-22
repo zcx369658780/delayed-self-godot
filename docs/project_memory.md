@@ -1,5 +1,11 @@
 # Project memory
 
+## Task 0024AA sequence-11 identity bridge evidence blocker
+
+Task 0024AA authored the uncatalogued 11×7 schema-v2 `identity_shift_bridge` fallback: one delay-2 ECHO, exact YOU-only/ECHO-only sensors, one initially closed two-cell group and no crates/keys/locks/latches/Plates/Doors. Solver facts are `L*=18`, exact `N*=1`, 1002 states and frontier 130. The single shortest path carries the full ordered event mask; no-ECHO, swapped and no-deferral controls are complete-unsolved, while one-cell changes to `14/1`.
+
+All five unique final cases technically passed with exact stderr, one cleanup each, no PID residue and final Godot zero. The accepted wrapper retained the focused compact result/control lines at exactly 2048 characters, truncating the exact elapsed-time field. Because the cycle is consumed and no rerun is authorized, the terminal status is `BLOCKED_SEQUENCE_11_IDENTITY_SHIFT_BRIDGE_VALIDATION`. The artifact is not GPT accepted or catalog-admitted, and sequence 12 remains closed.
+
 ## Task 0024Z sequence-10 key route commitment candidate
 
 Task 0024Z created an uncatalogued 9×7 schema-v2 candidate, `key_route_commitment`, with one delay-2 ECHO, one YOU-only `main` key, one matching lock, one Plate and one initially closed Door. The key sits in a lower detour: YOU collects it on action 4, returns to the main route, consumes it and enters the lock cell on action 12, crosses the ECHO-held Door on action 13 and completes by YOU on action 19.

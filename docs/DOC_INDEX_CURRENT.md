@@ -2,6 +2,10 @@
 
 ## Start here
 
+0. [`Task 0024AA`](../tasks/0024AA_sequence_11_identity_shift_bridge_candidate_authoring_and_machine_validation.md) — terminally blocked sequence-11 candidate validation after consumed final cycle
+1. [`Sequence-11 blocked machine summary`](level_design/validation/sequence_11_identity_shift_bridge_validation.json) — retained solver/events/controls/five-case facts and exact evidence gap
+2. [`Task 0024AA blocker report`](reports/0024AA_SEQUENCE_11_IDENTITY_SHIFT_BRIDGE_MACHINE_VALIDATION_REPORT.md) — authoring history, technical passes, 2048-byte truncation blocker and protected boundaries
+
 0. [`Task 0024Z`](../tasks/0024Z_sequence_10_key_route_commitment_candidate_authoring_and_machine_validation.md) — completed uncatalogued sequence-10 candidate authoring and machine validation
 1. [`Sequence-10 machine summary`](level_design/validation/sequence_10_key_route_commitment_validation.json) — retained solver, all-shortest, controls, trace and four-case wrapper facts
 2. [`Task 0024Z report`](reports/0024Z_SEQUENCE_10_KEY_ROUTE_COMMITMENT_MACHINE_VALIDATION_REPORT.md) — authoring history, exact evidence, frozen-hash audit and protected boundaries

@@ -1,0 +1,39 @@
+{
+  "schema_version": 2,
+  "level_id": "identity_shift_bridge",
+  "title": "Identity-Shift Bridge",
+  "terrain_rows": [
+    "###########",
+    "#.........#",
+    "#.###.###.#",
+    "#.....###.#",
+    "###.#######",
+    "#...#...###",
+    "###########"
+  ],
+  "player_spawn": [1, 5],
+  "echoes": [
+    {"id": "echo_identity", "delay": 2, "spawn": [7, 5]}
+  ],
+  "plates": [],
+  "doors": [],
+  "exit": {"position": [9, 3]},
+  "metadata": {
+    "teaching_goal": "Coordinate exact YOU and ECHO identity to open a next-turn grouped bridge whose requested closure defers while occupied.",
+    "intended_mechanics": ["typed_actor_identity", "next_turn_grouped_bridge", "occupied_cell_closure_deferral"],
+    "notes": "Uncatalogued Task 0024AA sequence-11 frozen-fallback candidate.",
+    "allow_zero_echo_tutorial": false
+  },
+  "validation": {"recommended_search_depth": 64},
+  "crates": [],
+  "keys": [],
+  "locks": [],
+  "barrier_groups": [
+    {"id": "bridge_identity", "cells": [[4, 1], [5, 1]], "initial_open": false, "all_sensor_ids": ["sensor_you", "sensor_echo"]}
+  ],
+  "sensors": [
+    {"id": "sensor_you", "position": [3, 1], "activator": "YOU_ONLY", "include_crates": false},
+    {"id": "sensor_echo", "position": [5, 5], "activator": "ECHO_ONLY", "include_crates": false}
+  ],
+  "latches": []
+}

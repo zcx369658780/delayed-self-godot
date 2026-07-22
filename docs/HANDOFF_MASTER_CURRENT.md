@@ -1,5 +1,13 @@
 # Handoff master (CURRENT)
 
+## Task 0024AA blocked after consumed final cycle
+
+Task 0024AA ended at `BLOCKED_SEQUENCE_11_IDENTITY_SHIFT_BRIDGE_VALIDATION`. The uncatalogued 11×7 `identity_shift_bridge` artifact technically solves at `L*=18`, exact `N*=1`; all shortest paths (`1/1`) include typed-pair opening, next-snapshot first-cell entry, occupied closure deferral on both bridge cells, closure after vacancy and YOU-only completion. No-ECHO, swapped-identity and no-deferral searches exhaust complete-unsolved; one-cell changes metrics to `14/1`; both ANY controls expand identity eligibility and eliminate exact typed-identity necessity.
+
+The unique final cycle ran focused 0024AA, focused 0024Z, focused 0024Y, Aggregate and complete-v2 exactly once. All technically passed; Aggregate stderr was exactly `LEVEL_ID_MISMATCH`, all other stderr was empty, cleanup was once per case, no owned/unproven PID remained and final Godot was zero. The focused result/control lines were each retained at exactly 2048 characters and syntactically truncated, so exact `solver.elapsed_ms` is missing. The cycle is consumed and must not be rerun or reconstructed.
+
+Read `docs/level_design/validation/sequence_11_identity_shift_bridge_validation.json` and `docs/reports/0024AA_SEQUENCE_11_IDENTITY_SHIFT_BRIDGE_MACHINE_VALIDATION_REPORT.md`. Await GPT/owner adjudication or a new explicit correction task. Do not start sequence 12, catalog/finale/Profile, owner playthrough, Gameplay/UI, localization, assets/audio, build/export, release, upload or submission work.
+
 ## Task 0024Z sequence-10 candidate ready for GPT review
 
 Task 0024Z completed at `SEQUENCE_10_KEY_ROUTE_COMMITMENT_MACHINE_VALIDATED_FOR_GPT_REVIEW`. The uncatalogued `key_route_commitment` schema-v2 candidate has `L*=19`, exact `N*=8`, and all 8 shortest paths include YOU-only key collection, same-turn matching-lock consumption/entry and downstream ECHO-only Plate/Door crossing; omissions are zero. No-key, displaced-key and no-ECHO controls completely exhaust unsolved. Removing the lock changes metrics to `L*=11`, exact `N*=7` and removes the lock event.

@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "task_id": "0024AA",
+  "validation_status": "BLOCKED_SEQUENCE_11_IDENTITY_SHIFT_BRIDGE_VALIDATION",
+  "terminal_reason": "FINAL_FOCUSED_COMPACT_RESULT_AND_CONTROL_LINES_TRUNCATED_AT_2048_BYTES_EXACT_SOLVER_ELAPSED_MS_NOT_RETAINED",
+  "repository": {
+    "root": "D:\\Delayed_Self",
+    "branch": "main",
+    "validation_baseline_commit": "94791d70693093fb365ecfad3cae45213d9b871b",
+    "required_accepted_checkpoint": "3b9b576d4a729b1f2e2d673c76c8efdce4a5d494",
+    "accepted_sequence_10_result_commit": "b8378bc2e1e96642ff99eded436df65e2435cc9f",
+    "accepted_sequence_9_result_commit": "445122ab035a4c9210f3280af58d054a35bef2bd",
+    "accepted_foundation_result_commit": "7072566ef814f6969693bbc9335fcced5e424585",
+    "godot_version": "4.7.1.stable.steam.a13da4feb",
+    "accepted_wrapper_implementation_commit": "7c0712d6a602dc23200ccb147d0096acc6333305",
+    "accepted_wrapper_blob": "5f14eb0feff903b40311c1c7283b20e2eabbffc2"
+  },
+  "candidate": {
+    "path": "data/levels/identity_shift_bridge.json",
+    "sha256": "8856d3c64978cef7cff7f1680a7ae2f412c9b0cab058d598cbe3aee0225052e0",
+    "classification": "UNCATALOGUED_SEQUENCE_11_CORE_CANDIDATE",
+    "risk_envelope": "FROZEN_FALLBACK",
+    "identity": {
+      "schema_version": 2,
+      "level_id": "identity_shift_bridge",
+      "title": "Identity-Shift Bridge",
+      "width": 11,
+      "height": 7,
+      "echo_id": "echo_identity",
+      "echo_delay": 2,
+      "echo_spawn": [7, 5],
+      "sensor_you": {"position": [3, 1], "activator": "YOU_ONLY", "include_crates": false},
+      "sensor_echo": {"position": [5, 5], "activator": "ECHO_ONLY", "include_crates": false},
+      "barrier_group_id": "bridge_identity",
+      "barrier_cells": [[4, 1], [5, 1]],
+      "initial_open": false,
+      "all_sensor_ids": ["sensor_echo", "sensor_you"],
+      "exit_position": [9, 3]
+    },
+    "entity_counts": {"echoes": 1, "sensors": 2, "barrier_groups": 1, "barrier_cells": 2, "plates": 0, "doors": 0, "crates": 0, "keys": 0, "locks": 0, "latches": 0}
+  },
+  "limits": {"depth_limit": 64, "state_limit": 750000, "time_limit_ms": 35000, "solution_count_cap": 1000000},
+  "solver": {
+    "status": "SOLVED",
+    "shortest_turn_count": 18,
+    "shortest_solution_count": 1,
+    "shortest_solution_count_status": "EXACT",
+    "visited_states": 1002,
+    "maximum_frontier": 130,
+    "elapsed_ms": null,
+    "elapsed_ms_retention_status": "NOT_RETAINED_FINAL_COMPACT_LINE_TRUNCATED_AT_2048_BYTES_NO_RERUN_AUTHORIZED",
+    "witness": ["RIGHT", "RIGHT", "UP", "UP", "LEFT", "LEFT", "UP", "UP", "RIGHT", "RIGHT", "RIGHT", "RIGHT", "RIGHT", "RIGHT", "RIGHT", "RIGHT", "DOWN", "DOWN"]
+  },
+  "witness_facts": {
+    "wait_count": 0,
+    "blocked_you_count": 0,
+    "maximum_repeated_identical_blocked": 0,
+    "typed_pair_and_open_index": 10,
+    "next_open_snapshot_first_cell_entry_index": 11,
+    "first_cell_close_deferral_index": 11,
+    "second_cell_close_deferral_index": 12,
+    "group_vacated_and_closed_index": 13,
+    "you_exit_completion_index": 18
+  },
+  "all_shortest": {
+    "status": "COMPLETE",
+    "goal_depth": 18,
+    "total_completed_paths": 1,
+    "full_event_paths": 1,
+    "omitting_event_paths": 0,
+    "two_cell_cross_paths": 1,
+    "counts_by_mask": {"31": 1},
+    "visited_composite_states": 1707
+  },
+  "ordered_event_trace": [
+    {"index": 10, "event": "TYPED_PAIR_OPENS_NEXT_STATE", "player_after": [3, 1], "echo_after": [5, 5], "pressed_sensor_ids": ["sensor_echo", "sensor_you"], "barrier_after_open": true, "barrier_after_occupied": false},
+    {"index": 11, "event": "NEXT_OPEN_SNAPSHOT_FIRST_CELL_ENTRY_AND_CLOSE_DEFERRAL", "player_after": [4, 1], "pressed_sensor_ids": [], "requested_close": true, "barrier_after_open": true, "classification": "OCCUPIED_CELL_DEFERRED"},
+    {"index": 12, "event": "SECOND_CELL_OCCUPIED_CLOSE_DEFERRAL", "player_after": [5, 1], "pressed_sensor_ids": [], "requested_close": true, "barrier_after_open": true, "classification": "OCCUPIED_CELL_DEFERRED"},
+    {"index": 13, "event": "GROUP_VACATED_AND_CLOSED", "player_after": [6, 1], "barrier_after_open": false, "barrier_after_occupied": false},
+    {"index": 18, "event": "YOU_EXIT_COMPLETION", "player_after": [9, 3], "completed": true}
+  ],
+  "controls": {
+    "no_echo": {"schema_valid": true, "status": "UNSOLVABLE_WITHIN_COMPLETE_FINITE_STATE", "visited_states": 14, "maximum_frontier": 2},
+    "swapped_identity": {"schema_valid": true, "status": "UNSOLVABLE_WITHIN_COMPLETE_FINITE_STATE", "visited_states": 710, "maximum_frontier": 130},
+    "you_sensor_any": {"schema_valid": true, "status": "SOLVED", "shortest_turn_count": 18, "shortest_solution_count": 1, "metrics_changed": false, "baseline_eligible_actors": ["YOU"], "control_eligible_actors": ["YOU", "ECHO"], "solution_structure_changed": true, "ordered_exact_identity_chain_present": false},
+    "echo_sensor_any": {"schema_valid": true, "status": "SOLVED", "shortest_turn_count": 18, "shortest_solution_count": 1, "metrics_changed": false, "baseline_eligible_actors": ["ECHO"], "control_eligible_actors": ["YOU", "ECHO"], "solution_structure_changed": true, "ordered_exact_identity_chain_present": false},
+    "one_cell_group": {"schema_valid": true, "status": "SOLVED", "shortest_turn_count": 14, "shortest_solution_count": 1, "visited_states": 949, "maximum_frontier": 185, "metrics_changed": true, "two_cell_chain_eliminated": true},
+    "no_deferral": {"status": "UNSOLVABLE_WITHIN_COMPLETE_FINITE_STATE", "visited_states": 710, "maximum_frontier": 130, "rejected_deferrals": 1}
+  },
+  "shortcut_probes": {
+    "you_does_not_satisfy_sensor_echo": true,
+    "echo_does_not_satisfy_sensor_you": true,
+    "include_crates_false_and_no_crate": true,
+    "closed_same_result_blocks_entry": true,
+    "next_open_snapshot_permits_entry": true,
+    "requested_close_deferred_on_first_cell": true,
+    "requested_close_deferred_on_second_cell": true,
+    "closes_after_all_actors_vacate": true,
+    "two_cell_terrain_articulation": true,
+    "no_direct_exit_bypass": true,
+    "echo_exit_nonterminal": true,
+    "blocked_macro_limit": true,
+    "restart_zero_residue": true
+  },
+  "determinism": {"replay_twice_identical": true, "canonical_trace_length": 19, "restart_exact": true, "canonical_distinguishes_barrier_actor_positions_and_history": true},
+  "frozen_audit": {
+    "status": "PASS",
+    "seal_sha256": "0e288adfe29c5881ab1f8cf40adf2df842a6fbbb8c6e5bce7aa14c797cf67ec0",
+    "sealed_repository_file_count": 53,
+    "sealed_repository_mismatch_count": 0,
+    "historical_external_evidence_file_count": 12,
+    "historical_external_evidence_mismatch_count": 0,
+    "explicit_frozen_path_count": 33,
+    "head_blob_mismatch_count": 0,
+    "accepted_candidate_mismatch_count": 0
+  },
+  "final_qualification": {
+    "cycle_status": "ALL_FIVE_CASES_TECHNICALLY_PASS_EVIDENCE_RETENTION_BLOCKER_REMAINS",
+    "cycle_consumed": true,
+    "rerun_authorized": false,
+    "final_godot_process_count": 0,
+    "cases": [
+      {"case": 1, "record": "tests/tools/task_0024aa_final_case_01_identity_shift_bridge.json", "sha256": "d2adf20c8863e16927c0ae0b7494210ae1b2e6fc3db11c7ff0093b763e61438a", "native_exit": 0, "marker_pass": true, "stderr": [], "cleanup_count": 1, "pid": 49396, "remaining_owned": 0, "remaining_unproven": 0, "stdout_result_line_length": 2048, "stdout_control_line_length": 2048},
+      {"case": 2, "record": "tests/tools/task_0024aa_final_case_02_sequence_10.json", "sha256": "67ccd00a40f16fac3ad8eba5bea937ef1e021c2087cf1c37bcca75fb1f859cfd", "native_exit": 0, "marker_pass": true, "stderr": [], "cleanup_count": 1, "pid": 4776, "remaining_owned": 0, "remaining_unproven": 0},
+      {"case": 3, "record": "tests/tools/task_0024aa_final_case_03_sequence_09.json", "sha256": "c17a153a68adaf5826bd68385a9b7b44594dca32b4657479f744d925151b2056", "native_exit": 0, "marker_pass": true, "stderr": [], "cleanup_count": 1, "pid": 19572, "remaining_owned": 0, "remaining_unproven": 0},
+      {"case": 4, "record": "tests/tools/task_0024aa_final_case_04_aggregate.json", "sha256": "8402696b83a6e05cc2f64d9a0b0a33639724e176a23eb50cb48a11bcd1fc27ff", "native_exit": 0, "marker_pass": true, "stderr": ["LEVEL_ID_MISMATCH"], "cleanup_count": 1, "pid": 49352, "remaining_owned": 0, "remaining_unproven": 0},
+      {"case": 5, "record": "tests/tools/task_0024aa_final_case_05_v2_complete.json", "sha256": "4e08635a6d808a477cd64909254a9ddd8c3517362a9a5c109a68c36686ea33f6", "native_exit": 0, "marker_pass": true, "stderr": [], "cleanup_count": 1, "pid": 49028, "remaining_owned": 0, "remaining_unproven": 0}
+    ]
+  },
+  "evidence_gap": {
+    "blocking": true,
+    "affected_fields": ["solver.elapsed_ms", "complete final compact result JSON", "complete final compact control JSON"],
+    "cause": "The accepted wrapper retained each stdout line at a maximum of 2048 characters; both focused compact JSON lines were exactly 2048 characters and syntactically truncated.",
+    "disposition": "No rerun, repair or replacement capture is authorized after consumption of the unique final cycle. Preserve the actual bounded stream and return the task blocker."
+  },
+  "owner_playthrough_status": "PENDING_LATER_CURRICULUM_GATE",
+  "catalog_admission_status": "NOT_AUTHORIZED"
+}

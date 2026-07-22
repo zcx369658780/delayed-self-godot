@@ -1,0 +1,55 @@
+{
+  "schema_version": 2,
+  "status": "PASS",
+  "underlying_status": "PASS",
+  "native_exit_code": 0,
+  "timed_out": false,
+  "marker_pass": true,
+  "stderr_policy": "ForbidNonempty",
+  "stderr_pass": true,
+  "cleanup_invocation_count": 1,
+  "cleanup_order": [
+    49396
+  ],
+  "cleanup_closed_pids": [],
+  "remaining_owned_pids": [],
+  "remaining_unproven_pids": [],
+  "owned_records": [
+    {
+      "pid": 49396,
+      "parent_pid": null,
+      "depth": 0,
+      "ancestry_path": "direct",
+      "direct": true,
+      "executable": "d:\\program files (x86)\\steam\\steamapps\\common\\godot engine\\godot.windows.opt.tools.64.exe",
+      "start_utc": "2026-07-22T10:22:00.6650459Z",
+      "arguments": [
+        "--headless",
+        "--path",
+        "D:\\Delayed_Self",
+        "--script",
+        "res://tests/levels/task_0024aa_identity_shift_bridge_validation.gd"
+      ],
+      "classification": "DIRECT",
+      "alive_at_discovery": true,
+      "cleanup_eligible": true
+    }
+  ],
+  "unproven_records": [],
+  "stdout": [
+    "Godot Engine v4.7.1.stable.steam.a13da4feb - https://godotengine.org",
+    "TASK_0024AA_RESULT_JSON {\"all_shortest\":{\"counts_by_mask\":{\"31\":1},\"full_event_paths\":1,\"goal_depth\":18,\"omitting_event_paths\":0,\"status\":\"COMPLETE\",\"total_completed_paths\":1,\"two_cell_cross_paths\":1,\"visited_composite_states\":1707},\"canonical\":{\"barrier_actor_history_distinct\":true,\"keys\":{\"history\":\"[[1,5],[[\\\"echo_identity\\\",7,5]],[],[[\\\"bridge_identity\\\",false]],[],[],[],[],[],[\\\"RIGHT\\\"],false]\",\"initial\":\"[[1,5],[[\\\"echo_identity\\\",7,5]],[],[[\\\"bridge_identity\\\",false]],[],[],[],[],[],[\\\"WAIT\\\",\\\"WAIT\\\"],false]\",\"moved\":\"[[2,5],[[\\\"echo_identity\\\",6,5]],[],[[\\\"bridge_identity\\\",false]],[],[],[],[],[],[\\\"WAIT\\\",\\\"WAIT\\\"],false]\",\"open\":\"[[1,5],[[\\\"echo_identity\\\",7,5]],[],[[\\\"bridge_identity\\\",true]],[],[],[],[],[],[\\\"WAIT\\\",\\\"WAIT\\\"],false]\"}},\"identity\":{\"barrier_group\":{\"all_sensor_ids\":[\"sensor_echo\",\"sensor_you\"],\"cells\":[[4,1],[5,1]],\"id\":\"bridge_identity\",\"initial_open\":false},\"crates\":0,\"doors\":0,\"echo\":{\"delay\":2,\"id\":\"echo_identity\",\"spawn\":[7,5]},\"exit\":[9,3],\"height\":7,\"keys\":0,\"latches\":0,\"level_id\":\"identity_shift_bridge\",\"locks\":0,\"plates\":0,\"risk_envelope\":\"FROZEN_FALLBACK\",\"schema_version\":2,\"sensors\":[{\"activator\":\"ECHO_ONLY\",\"id\":\"sensor_echo\",\"include_crates\":false,\"position\":[5,5]},{\"activator\":\"YOU_ONLY\",\"id\":\"sensor_you\",\"include_crates\":false,\"position\":[3,1]}],\"title\":\"Identity-Shift Bridge\",\"width\":11},\"limits\":{\"depth_limit\":64,\"solution_count_cap\":1000000,\"state_limit\":750000,\"time_limit_ms\":35000},\"replay\":{\"canonical_trace_length\":19,\"completed\":true,\"deterministic\":true},\"restart\":{\"exact\":true},\"shortcuts\":{\"blocked_macro_limit\":true,\"closed_same_result_blocks_entry\":true,\"closes_after_all_actors_vacate\":true,\"echo_does_not_satisfy_sensor_you\":true,\"echo_exit_nonterminal\":true,\"include_crates_false_and_no_crate\":true,\"next_open_snapshot_permits_entry\":true,\"no_direct_exit_bypass\":true,\"requested_close_deferred_on_first_cell\":true,\"requested_close_deferred_on_second_cell\":true,\"restart_zero_residue\":true,\"two_cell_terrain_articulation\":true,\"you_does_not_satisfy_sensor_echo\":tr",
+    "TASK_0024AA_CONTROL_JSON {\"echo_sensor_any\":{\"baseline_eligible_actors\":[\"ECHO\"],\"complete_finite_state\":false,\"control_eligible_actors\":[\"YOU\",\"ECHO\"],\"maximum_frontier\":130,\"metrics_changed\":false,\"ordered_exact_identity_chain_present\":false,\"schema_ok\":true,\"shortest_solution_count\":1,\"shortest_solution_count_status\":\"EXACT\",\"shortest_turn_count\":18,\"solution_structure_changed\":true,\"status\":\"SOLVED\",\"typed_echo_necessity_eliminated\":true,\"visited_states\":1002,\"witness\":[\"RIGHT\",\"RIGHT\",\"UP\",\"UP\",\"LEFT\",\"LEFT\",\"UP\",\"UP\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"DOWN\",\"DOWN\"]},\"no_deferral\":{\"maximum_frontier\":130,\"rejected_deferrals\":1,\"status\":\"UNSOLVABLE_WITHIN_COMPLETE_FINITE_STATE\",\"visited_states\":710},\"no_echo\":{\"complete_finite_state\":true,\"maximum_frontier\":2,\"schema_ok\":true,\"shortest_solution_count\":-1,\"shortest_solution_count_status\":\"\",\"shortest_turn_count\":-1,\"status\":\"UNSOLVABLE_WITHIN_COMPLETE_FINITE_STATE\",\"visited_states\":14,\"witness\":[]},\"one_cell_group\":{\"complete_finite_state\":false,\"maximum_frontier\":185,\"metrics_changed\":true,\"schema_ok\":true,\"shortest_solution_count\":1,\"shortest_solution_count_status\":\"EXACT\",\"shortest_turn_count\":14,\"status\":\"SOLVED\",\"two_cell_chain_eliminated\":true,\"visited_states\":949,\"witness\":[\"RIGHT\",\"RIGHT\",\"UP\",\"UP\",\"RIGHT\",\"RIGHT\",\"UP\",\"UP\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"DOWN\",\"DOWN\"]},\"swapped_identity\":{\"complete_finite_state\":true,\"maximum_frontier\":130,\"schema_ok\":true,\"shortest_solution_count\":-1,\"shortest_solution_count_status\":\"\",\"shortest_turn_count\":-1,\"status\":\"UNSOLVABLE_WITHIN_COMPLETE_FINITE_STATE\",\"visited_states\":710,\"witness\":[]},\"you_sensor_any\":{\"baseline_eligible_actors\":[\"YOU\"],\"complete_finite_state\":false,\"control_eligible_actors\":[\"YOU\",\"ECHO\"],\"maximum_frontier\":130,\"metrics_changed\":false,\"ordered_exact_identity_chain_present\":false,\"schema_ok\":true,\"shortest_solution_count\":1,\"shortest_solution_count_status\":\"EXACT\",\"shortest_turn_count\":18,\"solution_structure_changed\":true,\"status\":\"SOLVED\",\"typed_you_necessity",
+    "TASK_0024AA_TRACE_EVENT_JSON {\"action\":\"RIGHT\",\"action_index\":10,\"after\":{\"barrier_occupied\":false,\"barrier_open\":true,\"closure_classification\":\"OPEN_REQUESTED\",\"completed\":false,\"echo\":[5,5],\"history\":[\"RIGHT\",\"RIGHT\"],\"player\":[3,1],\"pressed_sensor_ids\":[\"sensor_echo\",\"sensor_you\"],\"requested_close\":false,\"sensor_eligibility\":{\"sensor_echo\":{\"activator\":\"ECHO_ONLY\",\"echo_on_cell\":true,\"you_on_cell\":false},\"sensor_you\":{\"activator\":\"YOU_ONLY\",\"echo_on_cell\":false,\"you_on_cell\":true}}},\"before\":{\"barrier_occupied\":false,\"barrier_open\":false,\"echo\":[5,5],\"history\":[\"UP\",\"RIGHT\"],\"player\":[2,1],\"pressed_sensor_ids\":[\"sensor_echo\"]},\"echo_action\":\"UP\",\"event\":\"TYPED_PAIR_OPENS_NEXT_STATE\"}",
+    "TASK_0024AA_TRACE_EVENT_JSON {\"action\":\"RIGHT\",\"action_index\":11,\"after\":{\"barrier_occupied\":true,\"barrier_open\":true,\"closure_classification\":\"OCCUPIED_CELL_DEFERRED\",\"completed\":false,\"echo\":[6,5],\"history\":[\"RIGHT\",\"RIGHT\"],\"player\":[4,1],\"pressed_sensor_ids\":[],\"requested_close\":true,\"sensor_eligibility\":{\"sensor_echo\":{\"activator\":\"ECHO_ONLY\",\"echo_on_cell\":false,\"you_on_cell\":false},\"sensor_you\":{\"activator\":\"YOU_ONLY\",\"echo_on_cell\":false,\"you_on_cell\":false}}},\"before\":{\"barrier_occupied\":false,\"barrier_open\":true,\"echo\":[5,5],\"history\":[\"RIGHT\",\"RIGHT\"],\"player\":[3,1],\"pressed_sensor_ids\":[\"sensor_echo\",\"sensor_you\"]},\"echo_action\":\"RIGHT\",\"event\":\"NEXT_OPEN_SNAPSHOT_FIRST_CELL_ENTRY\"}",
+    "TASK_0024AA_TRACE_EVENT_JSON {\"action\":\"RIGHT\",\"action_index\":11,\"after\":{\"barrier_occupied\":true,\"barrier_open\":true,\"closure_classification\":\"OCCUPIED_CELL_DEFERRED\",\"completed\":false,\"echo\":[6,5],\"history\":[\"RIGHT\",\"RIGHT\"],\"player\":[4,1],\"pressed_sensor_ids\":[],\"requested_close\":true,\"sensor_eligibility\":{\"sensor_echo\":{\"activator\":\"ECHO_ONLY\",\"echo_on_cell\":false,\"you_on_cell\":false},\"sensor_you\":{\"activator\":\"YOU_ONLY\",\"echo_on_cell\":false,\"you_on_cell\":false}}},\"before\":{\"barrier_occupied\":false,\"barrier_open\":true,\"echo\":[5,5],\"history\":[\"RIGHT\",\"RIGHT\"],\"player\":[3,1],\"pressed_sensor_ids\":[\"sensor_echo\",\"sensor_you\"]},\"echo_action\":\"RIGHT\",\"event\":\"FIRST_CELL_OCCUPIED_CLOSE_DEFERRAL\"}",
+    "TASK_0024AA_TRACE_EVENT_JSON {\"action\":\"RIGHT\",\"action_index\":12,\"after\":{\"barrier_occupied\":true,\"barrier_open\":true,\"closure_classification\":\"OCCUPIED_CELL_DEFERRED\",\"completed\":false,\"echo\":[7,5],\"history\":[\"RIGHT\",\"RIGHT\"],\"player\":[5,1],\"pressed_sensor_ids\":[],\"requested_close\":true,\"sensor_eligibility\":{\"sensor_echo\":{\"activator\":\"ECHO_ONLY\",\"echo_on_cell\":false,\"you_on_cell\":false},\"sensor_you\":{\"activator\":\"YOU_ONLY\",\"echo_on_cell\":false,\"you_on_cell\":false}}},\"before\":{\"barrier_occupied\":true,\"barrier_open\":true,\"echo\":[6,5],\"history\":[\"RIGHT\",\"RIGHT\"],\"player\":[4,1],\"pressed_sensor_ids\":[]},\"echo_action\":\"RIGHT\",\"event\":\"SECOND_CELL_OCCUPIED_CLOSE_DEFERRAL\"}",
+    "TASK_0024AA_TRACE_EVENT_JSON {\"action\":\"RIGHT\",\"action_index\":13,\"after\":{\"barrier_occupied\":false,\"barrier_open\":false,\"closure_classification\":\"CLOSED_AFTER_VACANCY\",\"completed\":false,\"echo\":[7,5],\"history\":[\"RIGHT\",\"RIGHT\"],\"player\":[6,1],\"pressed_sensor_ids\":[],\"requested_close\":true,\"sensor_eligibility\":{\"sensor_echo\":{\"activator\":\"ECHO_ONLY\",\"echo_on_cell\":false,\"you_on_cell\":false},\"sensor_you\":{\"activator\":\"YOU_ONLY\",\"echo_on_cell\":false,\"you_on_cell\":false}}},\"before\":{\"barrier_occupied\":true,\"barrier_open\":true,\"echo\":[7,5],\"history\":[\"RIGHT\",\"RIGHT\"],\"player\":[5,1],\"pressed_sensor_ids\":[]},\"echo_action\":\"RIGHT\",\"event\":\"GROUP_VACATED_AND_CLOSED\"}",
+    "TASK_0024AA_TRACE_EVENT_JSON {\"action\":\"DOWN\",\"action_index\":18,\"after\":{\"barrier_occupied\":false,\"barrier_open\":false,\"closure_classification\":\"CLOSED_AFTER_VACANCY\",\"completed\":true,\"echo\":[7,5],\"history\":[\"DOWN\",\"DOWN\"],\"player\":[9,3],\"pressed_sensor_ids\":[],\"requested_close\":true,\"sensor_eligibility\":{\"sensor_echo\":{\"activator\":\"ECHO_ONLY\",\"echo_on_cell\":false,\"you_on_cell\":false},\"sensor_you\":{\"activator\":\"YOU_ONLY\",\"echo_on_cell\":false,\"you_on_cell\":false}}},\"before\":{\"barrier_occupied\":false,\"barrier_open\":false,\"echo\":[7,5],\"history\":[\"RIGHT\",\"DOWN\"],\"player\":[9,2],\"pressed_sensor_ids\":[]},\"echo_action\":\"RIGHT\",\"event\":\"YOU_EXIT_COMPLETION\"}",
+    "TASK_0024AA_IDENTITY_SHIFT_BRIDGE_PASS"
+  ],
+  "stderr": [],
+  "wrapper_error": "",
+  "cleanup_error": "",
+  "wrapper_process_exit": 0
+}

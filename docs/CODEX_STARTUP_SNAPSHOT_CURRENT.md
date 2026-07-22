@@ -1,9 +1,9 @@
 # Codex startup snapshot (CURRENT)
 
-- Status: `CURRENT / TASK 0024AA SEQUENCE-11 FALLBACK CANDIDATE MACHINE VALIDATION`
+- Status: `CURRENT / TASK 0024AA BLOCKED AFTER CONSUMED FINAL CYCLE`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Active task: `tasks/0024AA_sequence_11_identity_shift_bridge_candidate_authoring_and_machine_validation.md`
-- Active status: `SEQUENCE_11_IDENTITY_SHIFT_BRIDGE_MACHINE_VALIDATION_READY_FOR_CODEX`
+- Active task: none; read the completed Task 0024AA file and blocker report before any new gate
+- Active status: `BLOCKED_SEQUENCE_11_IDENTITY_SHIFT_BRIDGE_VALIDATION`
 - Closed predecessors: all Tasks through `0024Z`
 - Latest GPT adjudication: `TASK_0024Z_SEQUENCE_10_KEY_ROUTE_COMMITMENT_MACHINE_VALIDATION_ACCEPTED`
 - Required accepted checkpoint: `3b9b576d4a729b1f2e2d673c76c8efdce4a5d494`
@@ -14,9 +14,10 @@
 - Accepted wrapper blob: `5f14eb0feff903b40311c1c7283b20e2eabbffc2`
 - Implemented/cataloged product baseline: exactly eight formal levels
 - Accepted uncatalogued candidates: `crate_shadow_timing`, `key_route_commitment`
+- Blocked candidate artifact, not accepted: `identity_shift_bridge`
 
 Task 0024Z is GPT accepted. The sequence-10 candidate has `L*=19`, exact `N*=8`, all-shortest ordered key collection → same-turn lock consumption/entry → ECHO-only Plate/Door crossing `8/8`, zero omissions, complete no-key/displaced/no-ECHO controls, material no-lock metrics `11/7`, and a passing focused-0024Z/focused-0024Y/Aggregate/complete-v2 wrapper cycle. It remains uncatalogued and owner playthrough remains pending.
 
-Task 0024AA is active and starts directly from the pre-agreed sequence-11 fallback envelope. It may create only an uncatalogued `identity_shift_bridge` candidate and its dedicated validation/evidence artifacts. The room must use one YOU-only sensor, one ECHO-only sensor and one initially closed two-cell grouped bridge; it must prove exact typed identity, next-turn entry, occupied closure deferral and closure after vacancy in every shortest solution. Optional crate and ANY_ACTOR scope is forbidden.
+Task 0024AA is terminally blocked. The 11×7 fallback candidate reached `L*=18`, exact `N*=1`, full ordered event `1/1`, zero omissions, material one-cell `14/1`, and complete-unsolved no-ECHO/swapped/no-deferral controls. All five final cases technically passed with exact stderr and zero final Godot. The focused compact result/control lines were each truncated at 2048 bytes, leaving exact solver elapsed time unretained. The final cycle is consumed; no rerun or replacement capture is authorized.
 
-Start by reading `AGENTS.md`, this file, `docs/CODEX_ACTIVE_TASK_CURRENT.md`, the full Task 0024AA file, Task 0024Z report/summary/GPT acceptance, Task 0024Y acceptance, Task 0024X scope, schema-v2/Simulation-v2 contracts and the headless lifecycle policy. Do not alter catalog/finale/Profile, accepted candidate artifacts, foundation implementation, existing formal content/tests or product/release surfaces.
+Start by reading `AGENTS.md`, this file, `docs/CODEX_ACTIVE_TASK_CURRENT.md`, the full Task 0024AA file, its machine summary/report, Task 0024Z acceptance, Task 0024X scope and the headless lifecycle policy. Await a new explicit gate. Do not rerun 0024AA final cases, start sequence 12, or alter catalog/finale/Profile, accepted candidate artifacts, foundation implementation, existing formal content/tests or product/release surfaces.
