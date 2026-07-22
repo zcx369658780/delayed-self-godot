@@ -1,9 +1,9 @@
 # Codex startup snapshot (CURRENT)
 
-- Status: `CURRENT / TASK 0024X SUBMISSION-CORE SCOPE FINALIZATION`
+- Status: `CURRENT / TASK 0024X SCOPE PACKAGE READY FOR GPT REVIEW`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
 - Active task: `tasks/0024X_submission_core_levels_9_12_scope_finalization.md`
-- Active status: `SUBMISSION_CORE_LEVELS_9_12_SCOPE_FINALIZATION_READY_FOR_CODEX`
+- Active status: `SUBMISSION_CORE_LEVELS_9_12_SCOPE_READY_FOR_GPT_REVIEW`
 - Closed predecessors: all Tasks through `0024W`
 - Latest GPT adjudication: `TASK_0024W_COMPLETE_CORE_MECHANICS_FOUNDATION_ACCEPTED`
 - Accepted foundation result commit: `7072566ef814f6969693bbc9335fcced5e424585`
@@ -18,4 +18,6 @@ Task 0024W is GPT accepted. The unique final driver executed all four fixed case
 
 The accepted foundation covers the validated schema-v2 loader, shared deterministic Simulation, BFS witness/replay, restart/canonical behavior, malformed-input rejection and unchanged schema-v1/formal regression represented by the accepted test matrix. It does not authorize content, catalog, Profile, Gameplay/UI, presentation, localization, assets/audio, build/export or release work by implication.
 
-Start by reading `AGENTS.md`, this file, `docs/CODEX_ACTIVE_TASK_CURRENT.md`, the full Task 0024X file, `docs/reports/0024W_GPT_COMPLETE_CORE_MECHANICS_FOUNDATION_ACCEPTANCE.md`, the accepted expansion roadmap and the 0023ZW roadmap acceptance. Task 0024X is docs-only: audit sequences 1–8 read-only and freeze the sequence 9–12 scope/curriculum and future compatibility contract. Do not launch Godot, modify product/test/data paths, access Profile/user data, create formal level JSON or begin catalog/Profile integration.
+Task 0024X completed its docs-only scope. The frozen curriculum is crate timing, key-route commitment, typed-sensor/grouped-bridge identity timing, then latch synthesis. Sequence 11 is the highest-risk room and has a pre-agreed two-sensor/two-cell-barrier fallback. Sequence 12 remains `FINALE_CANDIDATE_ONLY`.
+
+Read `docs/level_design/SUBMISSION_CORE_LEVELS_9_12_SCOPE_CURRENT.md` and `docs/reports/0024X_SUBMISSION_CORE_LEVELS_9_12_SCOPE_FINALIZATION_REPORT.md`, then await GPT adjudication. Do not create formal level JSON, modify the catalog/final flag/Profile, launch an implementation gate, or open Gameplay/UI, localization, assets/audio, build/export, release or submission surfaces without a new accepted task.

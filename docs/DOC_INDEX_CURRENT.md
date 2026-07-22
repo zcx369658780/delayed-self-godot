@@ -2,6 +2,11 @@
 
 ## Start here
 
+0. [`Task 0024X`](../tasks/0024X_submission_core_levels_9_12_scope_finalization.md) — docs-only submission-core curriculum and compatibility finalization
+1. [`Levels 9–12 scope`](level_design/SUBMISSION_CORE_LEVELS_9_12_SCOPE_CURRENT.md) — frozen briefs, evidence budgets, cut policy and future integration contract
+2. [`Task 0024X report`](reports/0024X_SUBMISSION_CORE_LEVELS_9_12_SCOPE_FINALIZATION_REPORT.md) — read-only audit, decisions, boundaries and later-gate sequence
+3. [`Task 0024W GPT acceptance`](reports/0024W_GPT_COMPLETE_CORE_MECHANICS_FOUNDATION_ACCEPTANCE.md) — accepted schema-v2/Simulation/solver foundation and protected next gates
+
 0. [`Task 0024W`](../tasks/0024W_manifest_locked_corrected_complete_core_mechanics_final_validation_gate.md) — completed manifest-locked corrected one-shot foundation validation
 1. [`Task 0024W report`](reports/0024W_CORRECTED_COMPLETE_CORE_MECHANICS_FINAL_VALIDATION_REPORT.md) — qualification, read-only seal, exact four-case pass and retained evidence identities
 

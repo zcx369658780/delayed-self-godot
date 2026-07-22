@@ -1,6 +1,6 @@
 # Codex active task (CURRENT)
 
-- Status: `SUBMISSION_CORE_LEVELS_9_12_SCOPE_FINALIZATION_READY_FOR_CODEX`
+- Status: `SUBMISSION_CORE_LEVELS_9_12_SCOPE_READY_FOR_GPT_REVIEW`
 - Active task: `tasks/0024X_submission_core_levels_9_12_scope_finalization.md`
 - Closed predecessors: all Tasks through `0024W`; none may be resumed directly
 - Latest GPT adjudication: `TASK_0024W_COMPLETE_CORE_MECHANICS_FOUNDATION_ACCEPTED`
@@ -15,6 +15,8 @@ Task 0024W is GPT accepted as the complete validation gate for the corrected sch
 
 Task 0024W's driver/case budget is consumed. Do not rerun or modify its sealed artifacts or historical Task 0024T/0024U evidence.
 
-Task 0024X is the only active scope. It is planning-only and must finalize the submission-core sequence 9–12 curriculum, mechanic assignments, solver/difficulty/necessity evidence requirements, cut policy and future catalog/Profile compatibility contract. It must not create formal level JSON, change the catalog/final flag/Profile, modify Gameplay/UI or access user-data surfaces.
+Task 0024X completed its planning-only scope at `docs/level_design/SUBMISSION_CORE_LEVELS_9_12_SCOPE_CURRENT.md`. It freezes four append-only briefs, difficulty/evidence budgets, necessity controls, shortcut probes, cut policy and future catalog/Profile compatibility. The result awaits GPT review and authorizes no implementation.
 
 Sequences and IDs 1–8 remain immutable. `two_echo_convergence` remains sequence 8 and the current sole formal finale. Sequence 12 may be planned only as `FINALE_CANDIDATE_ONLY` pending a later separately accepted catalog/Profile integration gate.
+
+Do not begin sequence-9 authoring, create level JSON, alter catalog/Profile/finale state or access Gameplay/UI and release surfaces before a new GPT-authorized implementation task.

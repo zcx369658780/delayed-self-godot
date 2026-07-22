@@ -1,10 +1,16 @@
 # Project memory
 
+## Task 0024X submission-core scope finalization
+
+Task 0024X froze the future append-only curriculum: sequence 9 introduces player-positioned persistent crate timing; 10 adds one YOU-only `main` key/lock route commitment; 11 tests YOU/ECHO identity through a grouped next-turn bridge and closure deferral; 12 adds a one-shot latch and synthesizes already taught sensor/barrier behavior. Sequence 11 is the highest-risk room and has a two-sensor/two-cell-barrier fallback.
+
+Existing IDs/sequences 1–8 remain immutable, sequence 8 remains the sole formal finale, and sequence 12 is only `FINALE_CANDIDATE_ONLY`. Target bands and budgets are planning constraints, not measured solver results. Formal JSON, catalog/Profile integration and all product/release surfaces remain separately gated.
+
 ## Task 0024W manifest-locked corrected final validation
 
 Task 0024W statically and behaviorally qualified a new four-case driver package without launching Godot or the wrapper, then wrote one read-only seal binding 53 repository files and 12 historical external evidence files. The seal SHA-256 is `0e288adfe29c5881ab1f8cf40adf2df842a6fbbb8c6e5bce7aa14c797cf67ec0`.
 
-The exactly-once driver executed Aggregate, Task 0012 standalone, focused v2 and corrected complete v2 once each. All passed with wrapper/native exit zero and exact markers; Aggregate emitted only the accepted `LEVEL_ID_MISMATCH`, while the other cases had empty stderr. Cleanup count was one for each case, no owned/unproven PID remained, no unrelated process was touched and final Godot count was zero. The retained records agree and all sealed/historical hashes remain exact. The verdict is ready for GPT review, not foundation acceptance; the driver and case budget is consumed.
+The exactly-once driver executed Aggregate, Task 0012 standalone, focused v2 and corrected complete v2 once each. All passed with wrapper/native exit zero and exact markers; Aggregate emitted only the accepted `LEVEL_ID_MISMATCH`, while the other cases had empty stderr. Cleanup count was one for each case, no owned/unproven PID remained, no unrelated process was touched and final Godot count was zero. The retained records agree and all sealed/historical hashes remain exact. GPT subsequently accepted the mechanics foundation; the driver and case budget remains consumed.
 
 ## Task 0024V test-contract correction qualification
 

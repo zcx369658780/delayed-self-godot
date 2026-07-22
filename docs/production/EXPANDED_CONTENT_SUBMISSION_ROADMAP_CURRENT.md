@@ -6,7 +6,7 @@
 - Original planning date: 2026-07-21
 - Project-source synchronization date: 2026-07-22
 
-Task 0024W completed one manifest-locked corrected final validation. All four cases passed once through the accepted wrapper: Aggregate reported 621 assertions/nine vectors, and complete v2 retained all 44 coverage IDs. The seal, records, cleanup and zero-process audits passed. This is `READY_FOR_GPT_REVIEW`, not foundation acceptance; mechanics and content expansion remain blocked pending GPT adjudication and later separately authorized implementation gates.
+Task 0024W is GPT accepted as the schema-v2/Simulation/solver foundation. Task 0024X has frozen the planning-only sequence 9–12 curriculum and compatibility contract at `docs/level_design/SUBMISSION_CORE_LEVELS_9_12_SCOPE_CURRENT.md`. Formal content implementation remains separately gated.
 
 ## Product target
 
@@ -55,10 +55,10 @@ Music target: two restrained looping tracks plus an optional finale cue. Any Cro
 
 ## Current execution position
 
-Task 0024S qualified the owned Godot headless-test wrapper, Task 0024V qualified the corrected Aggregate/complete-v2 test artifacts, and Task 0024W completed the sealed four-case final validation with a Codex pass. The schema-v2/Simulation/solver foundation remains provisional until GPT accepts that evidence. Formal rooms 9–12, catalog expansion, finale movement, Profile migration/default activation, presentation integration, localization, font/audio import, build/export, release and submission remain closed until their own later gates.
+Task 0024W is GPT accepted. Task 0024X is ready for GPT review with room-specific briefs for crate timing, key-route commitment, typed-sensor/grouped-bridge identity timing and latch synthesis. Sequence 11 carries the pre-agreed fallback; sequence 12 remains `FINALE_CANDIDATE_ONLY`. Formal rooms 9–12, catalog expansion, finale movement, Profile migration/default activation, presentation integration, localization, font/audio import, build/export, release and submission remain closed until their own later gates.
 
 ## Implementation order
 
-Mechanics contract → shared system → vertical slices → 12-room batch → conditional stretch → presentation → language/font → music ledger/import → Profile activation/menu → complete-flow acceptance → owner walkthrough → build/package/video/submission.
+Accepted mechanics foundation → accepted 9–12 scope → four separately gated room authoring/validation tasks → 1–12 batch regression and owner curriculum review → separate catalog/finale/Profile integration → conditional stretch decision → presentation → language/font → music ledger/import → complete-flow acceptance → owner walkthrough → build/package/video/submission.
 
 No stage authorizes the next protected surface by implication.
