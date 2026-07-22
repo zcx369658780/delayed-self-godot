@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "task": "0024AD",
+  "phase": "QUALIFICATION",
+  "status": "FAIL",
+  "source_record": "tests/tools/task_0024ad_qualification_case_001.json",
+  "source_record_sha256": "6f444cb01c0cc1accbd814b9e21fb2ea3137c5f735fe61c4141ea2450ee637a2",
+  "expected_counts": {
+    "TASK_0024AD_MANIFEST_JSON": 12,
+    "TASK_0024AD_METRICS_JSON": 12,
+    "TASK_0024AD_REPLAY_JSON": 12,
+    "TASK_0024AD_CATALOG_JSON": 1,
+    "TASK_0024AD_BATCH_JSON": 1
+  },
+  "observed_counts": {
+    "TASK_0024AD_MANIFEST_JSON": 0,
+    "TASK_0024AD_METRICS_JSON": 0,
+    "TASK_0024AD_REPLAY_JSON": 0,
+    "TASK_0024AD_CATALOG_JSON": 0,
+    "TASK_0024AD_BATCH_JSON": 0
+  },
+  "marker_count": 0,
+  "record_count": 0,
+  "maximum_utf8_bytes": 0,
+  "records": [],
+  "wrapper": {
+    "status": "NONZERO_EXIT",
+    "native_exit_code": 1,
+    "cleanup_invocation_count": 1,
+    "cleanup_order": [
+      55080
+    ],
+    "remaining_owned_pids": [],
+    "remaining_unproven_pids": [],
+    "godot_before_count": 0,
+    "godot_after_count": 0,
+    "stderr": [
+      "SCRIPT ERROR: Parse Error: Cannot infer the type of \"is_blocked\" variable because the value doesn't have a set type.",
+      "   at: GDScript::reload (res://tests/curriculum/task_0024ad_submission_core_1_12_batch_validation.gd:136)",
+      "ERROR: Failed to load script \"res://tests/curriculum/task_0024ad_submission_core_1_12_batch_validation.gd\" with error \"Parse error\".",
+      "   at: load (modules/gdscript/gdscript_resource_format.cpp:46)"
+    ]
+  },
+  "errors": [
+    "count:TASK_0024AD_MANIFEST_JSON:0/12",
+    "count:TASK_0024AD_METRICS_JSON:0/12",
+    "count:TASK_0024AD_REPLAY_JSON:0/12",
+    "count:TASK_0024AD_CATALOG_JSON:0/1",
+    "count:TASK_0024AD_BATCH_JSON:0/1",
+    "marker_count:0",
+    "wrapper_or_native_status",
+    "stderr_nonempty"
+  ]
+}

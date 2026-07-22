@@ -1,7 +1,7 @@
 # Codex active task (CURRENT)
 
-- Status: `SUBMISSION_CORE_1_12_BATCH_REGRESSION_AND_OWNER_REVIEW_ROUTE_READY_FOR_CODEX`
-- Active task: `tasks/0024AD_submission_core_1_12_batch_regression_and_owner_review_route_audit.md`
+- Status: `SUBMISSION_CORE_1_12_BATCH_REGRESSION_AND_OWNER_REVIEW_ROUTE_READY_FOR_GPT_REVIEW`
+- Active task: none; Task `0024AD` is closed pending GPT/owner adjudication or a new explicit bounded task
 - Closed predecessors: all Tasks through `0024AC`; none may be resumed directly
 - Latest GPT adjudication: `TASK_0024AC_SEQUENCE_12_LASTING_ECHO_LATCH_MACHINE_VALIDATION_ACCEPTED`
 - Required accepted checkpoint: `4b89f15010719b96f872849b1ef69732b340e171`
@@ -17,6 +17,8 @@
 
 Task 0024AC is GPT accepted as an uncatalogued machine-validated sequence-12 `FINALE_CANDIDATE_ONLY`. Accepted facts are `L*=21`, exact `N*=6`, all-shortest `6/6`, omissions zero and fresh `elapsed_ms=3936`. Its six-case retained cycle is consumed and must not be rerun.
 
-Task 0024AD is the only active scope. It must run a fresh direct-file 1–12 batch regression, produce the fixed curriculum matrix and owner review worksheet, and audit the real catalog/gameplay/completion/Profile/finale route to select one safe later playtest approach. It may read product route code but must not modify product code, catalog, level data, Profile or accepted evidence.
+Task 0024AD completed the fresh direct-file 1–12 batch regression: all twelve levels solved with exact shortest counts, replay and restart exactness. The retained seven-case invocation `fcd8d3bd-a67c-4b44-b664-98fa5e2f27d6` passed once, with Aggregate stderr exactly `LEVEL_ID_MISMATCH`, all other stderr empty, cleanup once per case, no PID residue and final Godot zero. The final focused capture SHA-256 is `79b8499b72f064c7036241338076ffce396952fba58b92f2fa9cf5066102b21b`.
+
+The route audit selected `ISOLATED_STAGING_CATALOG_REQUIRED`. The owner worksheet remains `NOT_YET_REVIEWED`; current Gameplay lacks visible schema-v2 crate/key/lock/sensor/barrier/latch presentation, so human usability remains blocked. Await GPT review; the final cycle is consumed and must not be rerun.
 
 Do not implement a launcher, admit candidates, move the formal finale, access production/test Profile data, or begin presentation, localization, assets/audio, build/export, release, upload or submission work.

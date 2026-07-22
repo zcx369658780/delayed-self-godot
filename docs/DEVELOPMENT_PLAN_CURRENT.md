@@ -1,5 +1,15 @@
 # Development plan (CURRENT)
 
+> 2026-07-22 — Task 0024AD completed the fresh submission-core 1–12 direct-file
+> batch: 12/12 solved, exact shortest counts, deterministic replay and exact
+> restart. The one retained seven-case cycle passed with exact stderr/lifecycle
+> policy and final Godot zero; frozen mismatches remained zero. Curriculum
+> review recommends KEEP for 1,2,4–8 and OWNER_REVIEW_REQUIRED for 3,9–12.
+> Human fields remain unfilled. The safe later route classification is
+> `ISOLATED_STAGING_CATALOG_REQUIRED`; no launcher/catalog integration was
+> implemented, and missing schema-v2 presentation remains a major playtest
+> blocker. Status is ready for GPT review only.
+
 > 2026-07-22 — Task 0024AC authored and machine-validated the uncatalogued
 > sequence-12 `lasting_echo_latch` finale candidate at `L*=21`, exact `N*=6`,
 > 13,459 states, frontier 1,389 and fresh `elapsed_ms=3936`. All-shortest is

@@ -1,0 +1,1119 @@
+{
+  "schema_version": 1,
+  "task": "0024AD",
+  "phase": "FINAL",
+  "status": "PASS",
+  "source_record": "tests/tools/task_0024ad_final_case_01_batch.json",
+  "source_record_sha256": "f7f7180624d6644fd9df54bb688b9d3edd0f0cb2a4ab6d0b2bc99d9b19db53f1",
+  "expected_counts": {
+    "TASK_0024AD_MANIFEST_JSON": 12,
+    "TASK_0024AD_METRICS_JSON": 12,
+    "TASK_0024AD_REPLAY_JSON": 12,
+    "TASK_0024AD_CATALOG_JSON": 1,
+    "TASK_0024AD_BATCH_JSON": 1
+  },
+  "observed_counts": {
+    "TASK_0024AD_MANIFEST_JSON": 12,
+    "TASK_0024AD_METRICS_JSON": 12,
+    "TASK_0024AD_REPLAY_JSON": 12,
+    "TASK_0024AD_CATALOG_JSON": 1,
+    "TASK_0024AD_BATCH_JSON": 1
+  },
+  "marker_count": 1,
+  "record_count": 38,
+  "maximum_utf8_bytes": 502,
+  "records": [
+    {
+      "prefix": "TASK_0024AD_MANIFEST_JSON",
+      "utf8_bytes": 368,
+      "raw_line": "TASK_0024AD_MANIFEST_JSON {\"classification\":\"FORMAL_CATALOGED\",\"families\":{\"barrier_groups\":0,\"crates\":0,\"doors\":0,\"echoes\":0,\"keys\":0,\"latches\":0,\"locks\":0,\"plates\":0,\"sensors\":0},\"height\":4,\"level_id\":\"tutorial_reach_exit\",\"schema_version\":1,\"sequence\":1,\"sha256\":\"38e466bb5922f1987a99d79c7527a4a8eab8e6cfdbe76fd8159f80b0a40cf2c4\",\"title\":\"Reach the Exit\",\"width\":5}",
+      "payload": {
+        "classification": "FORMAL_CATALOGED",
+        "families": {
+          "barrier_groups": 0,
+          "crates": 0,
+          "doors": 0,
+          "echoes": 0,
+          "keys": 0,
+          "latches": 0,
+          "locks": 0,
+          "plates": 0,
+          "sensors": 0
+        },
+        "height": 4,
+        "level_id": "tutorial_reach_exit",
+        "schema_version": 1,
+        "sequence": 1,
+        "sha256": "38e466bb5922f1987a99d79c7527a4a8eab8e6cfdbe76fd8159f80b0a40cf2c4",
+        "title": "Reach the Exit",
+        "width": 5
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_METRICS_JSON",
+      "utf8_bytes": 366,
+      "raw_line": "TASK_0024AD_METRICS_JSON {\"level_id\":\"tutorial_reach_exit\",\"sequence\":1,\"solver\":{\"elapsed_ms\":0,\"frontier\":2,\"l\":3,\"limits\":{\"depth_limit\":16,\"solution_count_cap\":1000000,\"state_limit\":10000,\"time_limit_ms\":5000},\"n\":3,\"n_status\":\"EXACT\",\"status\":\"SOLVED\",\"visited\":6},\"witness\":{\"actions\":[\"UP\",\"RIGHT\",\"RIGHT\"],\"blocked_you\":0,\"max_repeated_blocked\":0,\"waits\":0}}",
+      "payload": {
+        "level_id": "tutorial_reach_exit",
+        "sequence": 1,
+        "solver": {
+          "elapsed_ms": 0,
+          "frontier": 2,
+          "l": 3,
+          "limits": {
+            "depth_limit": 16,
+            "solution_count_cap": 1000000,
+            "state_limit": 10000,
+            "time_limit_ms": 5000
+          },
+          "n": 3,
+          "n_status": "EXACT",
+          "status": "SOLVED",
+          "visited": 6
+        },
+        "witness": {
+          "actions": [
+            "UP",
+            "RIGHT",
+            "RIGHT"
+          ],
+          "blocked_you": 0,
+          "max_repeated_blocked": 0,
+          "waits": 0
+        }
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_REPLAY_JSON",
+      "utf8_bytes": 189,
+      "raw_line": "TASK_0024AD_REPLAY_JSON {\"level_id\":\"tutorial_reach_exit\",\"replay\":{\"canonical_trace_length\":4,\"completed\":true,\"deterministic\":true},\"restart_exact\":true,\"sequence\":1,\"you_only_exit\":true}",
+      "payload": {
+        "level_id": "tutorial_reach_exit",
+        "replay": {
+          "canonical_trace_length": 4,
+          "completed": true,
+          "deterministic": true
+        },
+        "restart_exact": true,
+        "sequence": 1,
+        "you_only_exit": true
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_MANIFEST_JSON",
+      "utf8_bytes": 372,
+      "raw_line": "TASK_0024AD_MANIFEST_JSON {\"classification\":\"FORMAL_CATALOGED\",\"families\":{\"barrier_groups\":0,\"crates\":0,\"doors\":1,\"echoes\":1,\"keys\":0,\"latches\":0,\"locks\":0,\"plates\":1,\"sensors\":0},\"height\":6,\"level_id\":\"tutorial_echo_bridge\",\"schema_version\":1,\"sequence\":2,\"sha256\":\"681d99057c4e6034a490644d75960ff23d8f43bd1b91850f48179b79fc04a3cf\",\"title\":\"Three Turns Later\",\"width\":7}",
+      "payload": {
+        "classification": "FORMAL_CATALOGED",
+        "families": {
+          "barrier_groups": 0,
+          "crates": 0,
+          "doors": 1,
+          "echoes": 1,
+          "keys": 0,
+          "latches": 0,
+          "locks": 0,
+          "plates": 1,
+          "sensors": 0
+        },
+        "height": 6,
+        "level_id": "tutorial_echo_bridge",
+        "schema_version": 1,
+        "sequence": 2,
+        "sha256": "681d99057c4e6034a490644d75960ff23d8f43bd1b91850f48179b79fc04a3cf",
+        "title": "Three Turns Later",
+        "width": 7
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_METRICS_JSON",
+      "utf8_bytes": 421,
+      "raw_line": "TASK_0024AD_METRICS_JSON {\"level_id\":\"tutorial_echo_bridge\",\"sequence\":2,\"solver\":{\"elapsed_ms\":275,\"frontier\":509,\"l\":9,\"limits\":{\"depth_limit\":32,\"solution_count_cap\":1000000,\"state_limit\":100000,\"time_limit_ms\":10000},\"n\":12,\"n_status\":\"EXACT\",\"status\":\"SOLVED\",\"visited\":1975},\"witness\":{\"actions\":[\"RIGHT\",\"RIGHT\",\"UP\",\"DOWN\",\"LEFT\",\"DOWN\",\"DOWN\",\"RIGHT\",\"RIGHT\"],\"blocked_you\":1,\"max_repeated_blocked\":1,\"waits\":0}}",
+      "payload": {
+        "level_id": "tutorial_echo_bridge",
+        "sequence": 2,
+        "solver": {
+          "elapsed_ms": 275,
+          "frontier": 509,
+          "l": 9,
+          "limits": {
+            "depth_limit": 32,
+            "solution_count_cap": 1000000,
+            "state_limit": 100000,
+            "time_limit_ms": 10000
+          },
+          "n": 12,
+          "n_status": "EXACT",
+          "status": "SOLVED",
+          "visited": 1975
+        },
+        "witness": {
+          "actions": [
+            "RIGHT",
+            "RIGHT",
+            "UP",
+            "DOWN",
+            "LEFT",
+            "DOWN",
+            "DOWN",
+            "RIGHT",
+            "RIGHT"
+          ],
+          "blocked_you": 1,
+          "max_repeated_blocked": 1,
+          "waits": 0
+        }
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_REPLAY_JSON",
+      "utf8_bytes": 191,
+      "raw_line": "TASK_0024AD_REPLAY_JSON {\"level_id\":\"tutorial_echo_bridge\",\"replay\":{\"canonical_trace_length\":10,\"completed\":true,\"deterministic\":true},\"restart_exact\":true,\"sequence\":2,\"you_only_exit\":true}",
+      "payload": {
+        "level_id": "tutorial_echo_bridge",
+        "replay": {
+          "canonical_trace_length": 10,
+          "completed": true,
+          "deterministic": true
+        },
+        "restart_exact": true,
+        "sequence": 2,
+        "you_only_exit": true
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_MANIFEST_JSON",
+      "utf8_bytes": 373,
+      "raw_line": "TASK_0024AD_MANIFEST_JSON {\"classification\":\"FORMAL_CATALOGED\",\"families\":{\"barrier_groups\":0,\"crates\":0,\"doors\":1,\"echoes\":1,\"keys\":0,\"latches\":0,\"locks\":0,\"plates\":1,\"sensors\":0},\"height\":4,\"level_id\":\"vertical_slice_delay_3\",\"schema_version\":1,\"sequence\":3,\"sha256\":\"8751da5051fbebaaa5ae7c895d9be9f086e8d8f2e87876a80c379dc06262f1d8\",\"title\":\"Three Turns Late\",\"width\":9}",
+      "payload": {
+        "classification": "FORMAL_CATALOGED",
+        "families": {
+          "barrier_groups": 0,
+          "crates": 0,
+          "doors": 1,
+          "echoes": 1,
+          "keys": 0,
+          "latches": 0,
+          "locks": 0,
+          "plates": 1,
+          "sensors": 0
+        },
+        "height": 4,
+        "level_id": "vertical_slice_delay_3",
+        "schema_version": 1,
+        "sequence": 3,
+        "sha256": "8751da5051fbebaaa5ae7c895d9be9f086e8d8f2e87876a80c379dc06262f1d8",
+        "title": "Three Turns Late",
+        "width": 9
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_METRICS_JSON",
+      "utf8_bytes": 421,
+      "raw_line": "TASK_0024AD_METRICS_JSON {\"level_id\":\"vertical_slice_delay_3\",\"sequence\":3,\"solver\":{\"elapsed_ms\":167,\"frontier\":393,\"l\":9,\"limits\":{\"depth_limit\":32,\"solution_count_cap\":1000000,\"state_limit\":100000,\"time_limit_ms\":10000},\"n\":31,\"n_status\":\"EXACT\",\"status\":\"SOLVED\",\"visited\":1318},\"witness\":{\"actions\":[\"RIGHT\",\"RIGHT\",\"UP\",\"UP\",\"UP\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"RIGHT\"],\"blocked_you\":2,\"max_repeated_blocked\":2,\"waits\":0}}",
+      "payload": {
+        "level_id": "vertical_slice_delay_3",
+        "sequence": 3,
+        "solver": {
+          "elapsed_ms": 167,
+          "frontier": 393,
+          "l": 9,
+          "limits": {
+            "depth_limit": 32,
+            "solution_count_cap": 1000000,
+            "state_limit": 100000,
+            "time_limit_ms": 10000
+          },
+          "n": 31,
+          "n_status": "EXACT",
+          "status": "SOLVED",
+          "visited": 1318
+        },
+        "witness": {
+          "actions": [
+            "RIGHT",
+            "RIGHT",
+            "UP",
+            "UP",
+            "UP",
+            "RIGHT",
+            "RIGHT",
+            "RIGHT",
+            "RIGHT"
+          ],
+          "blocked_you": 2,
+          "max_repeated_blocked": 2,
+          "waits": 0
+        }
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_REPLAY_JSON",
+      "utf8_bytes": 193,
+      "raw_line": "TASK_0024AD_REPLAY_JSON {\"level_id\":\"vertical_slice_delay_3\",\"replay\":{\"canonical_trace_length\":10,\"completed\":true,\"deterministic\":true},\"restart_exact\":true,\"sequence\":3,\"you_only_exit\":true}",
+      "payload": {
+        "level_id": "vertical_slice_delay_3",
+        "replay": {
+          "canonical_trace_length": 10,
+          "completed": true,
+          "deterministic": true
+        },
+        "restart_exact": true,
+        "sequence": 3,
+        "you_only_exit": true
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_MANIFEST_JSON",
+      "utf8_bytes": 366,
+      "raw_line": "TASK_0024AD_MANIFEST_JSON {\"classification\":\"FORMAL_CATALOGED\",\"families\":{\"barrier_groups\":0,\"crates\":0,\"doors\":1,\"echoes\":1,\"keys\":0,\"latches\":0,\"locks\":0,\"plates\":1,\"sensors\":0},\"height\":7,\"level_id\":\"door_one_turn_late\",\"schema_version\":1,\"sequence\":4,\"sha256\":\"1775cf89ae4a94f65a76dac2b791a31395443de88205d0ed1b6233331dbda577\",\"title\":\"One Turn Late\",\"width\":7}",
+      "payload": {
+        "classification": "FORMAL_CATALOGED",
+        "families": {
+          "barrier_groups": 0,
+          "crates": 0,
+          "doors": 1,
+          "echoes": 1,
+          "keys": 0,
+          "latches": 0,
+          "locks": 0,
+          "plates": 1,
+          "sensors": 0
+        },
+        "height": 7,
+        "level_id": "door_one_turn_late",
+        "schema_version": 1,
+        "sequence": 4,
+        "sha256": "1775cf89ae4a94f65a76dac2b791a31395443de88205d0ed1b6233331dbda577",
+        "title": "One Turn Late",
+        "width": 7
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_METRICS_JSON",
+      "utf8_bytes": 408,
+      "raw_line": "TASK_0024AD_METRICS_JSON {\"level_id\":\"door_one_turn_late\",\"sequence\":4,\"solver\":{\"elapsed_ms\":32,\"frontier\":116,\"l\":9,\"limits\":{\"depth_limit\":32,\"solution_count_cap\":1000000,\"state_limit\":100000,\"time_limit_ms\":10000},\"n\":7,\"n_status\":\"EXACT\",\"status\":\"SOLVED\",\"visited\":291},\"witness\":{\"actions\":[\"RIGHT\",\"RIGHT\",\"UP\",\"UP\",\"UP\",\"RIGHT\",\"RIGHT\",\"UP\",\"UP\"],\"blocked_you\":1,\"max_repeated_blocked\":1,\"waits\":0}}",
+      "payload": {
+        "level_id": "door_one_turn_late",
+        "sequence": 4,
+        "solver": {
+          "elapsed_ms": 32,
+          "frontier": 116,
+          "l": 9,
+          "limits": {
+            "depth_limit": 32,
+            "solution_count_cap": 1000000,
+            "state_limit": 100000,
+            "time_limit_ms": 10000
+          },
+          "n": 7,
+          "n_status": "EXACT",
+          "status": "SOLVED",
+          "visited": 291
+        },
+        "witness": {
+          "actions": [
+            "RIGHT",
+            "RIGHT",
+            "UP",
+            "UP",
+            "UP",
+            "RIGHT",
+            "RIGHT",
+            "UP",
+            "UP"
+          ],
+          "blocked_you": 1,
+          "max_repeated_blocked": 1,
+          "waits": 0
+        }
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_REPLAY_JSON",
+      "utf8_bytes": 189,
+      "raw_line": "TASK_0024AD_REPLAY_JSON {\"level_id\":\"door_one_turn_late\",\"replay\":{\"canonical_trace_length\":10,\"completed\":true,\"deterministic\":true},\"restart_exact\":true,\"sequence\":4,\"you_only_exit\":true}",
+      "payload": {
+        "level_id": "door_one_turn_late",
+        "replay": {
+          "canonical_trace_length": 10,
+          "completed": true,
+          "deterministic": true
+        },
+        "restart_exact": true,
+        "sequence": 4,
+        "you_only_exit": true
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_MANIFEST_JSON",
+      "utf8_bytes": 370,
+      "raw_line": "TASK_0024AD_MANIFEST_JSON {\"classification\":\"FORMAL_CATALOGED\",\"families\":{\"barrier_groups\":0,\"crates\":0,\"doors\":1,\"echoes\":1,\"keys\":0,\"latches\":0,\"locks\":0,\"plates\":2,\"sensors\":0},\"height\":7,\"level_id\":\"two_keys_one_door\",\"schema_version\":1,\"sequence\":5,\"sha256\":\"f4c6791dfc84d17fb450721e654091a2baeb522e55d660a5d73878cd977651cd\",\"title\":\"Two Keys, One Door\",\"width\":9}",
+      "payload": {
+        "classification": "FORMAL_CATALOGED",
+        "families": {
+          "barrier_groups": 0,
+          "crates": 0,
+          "doors": 1,
+          "echoes": 1,
+          "keys": 0,
+          "latches": 0,
+          "locks": 0,
+          "plates": 2,
+          "sensors": 0
+        },
+        "height": 7,
+        "level_id": "two_keys_one_door",
+        "schema_version": 1,
+        "sequence": 5,
+        "sha256": "f4c6791dfc84d17fb450721e654091a2baeb522e55d660a5d73878cd977651cd",
+        "title": "Two Keys, One Door",
+        "width": 9
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_METRICS_JSON",
+      "utf8_bytes": 435,
+      "raw_line": "TASK_0024AD_METRICS_JSON {\"level_id\":\"two_keys_one_door\",\"sequence\":5,\"solver\":{\"elapsed_ms\":210,\"frontier\":225,\"l\":12,\"limits\":{\"depth_limit\":40,\"solution_count_cap\":1000000,\"state_limit\":100000,\"time_limit_ms\":10000},\"n\":1,\"n_status\":\"EXACT\",\"status\":\"SOLVED\",\"visited\":1260},\"witness\":{\"actions\":[\"RIGHT\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"UP\",\"UP\",\"RIGHT\",\"RIGHT\",\"UP\",\"UP\",\"LEFT\",\"LEFT\"],\"blocked_you\":0,\"max_repeated_blocked\":0,\"waits\":0}}",
+      "payload": {
+        "level_id": "two_keys_one_door",
+        "sequence": 5,
+        "solver": {
+          "elapsed_ms": 210,
+          "frontier": 225,
+          "l": 12,
+          "limits": {
+            "depth_limit": 40,
+            "solution_count_cap": 1000000,
+            "state_limit": 100000,
+            "time_limit_ms": 10000
+          },
+          "n": 1,
+          "n_status": "EXACT",
+          "status": "SOLVED",
+          "visited": 1260
+        },
+        "witness": {
+          "actions": [
+            "RIGHT",
+            "RIGHT",
+            "RIGHT",
+            "RIGHT",
+            "UP",
+            "UP",
+            "RIGHT",
+            "RIGHT",
+            "UP",
+            "UP",
+            "LEFT",
+            "LEFT"
+          ],
+          "blocked_you": 0,
+          "max_repeated_blocked": 0,
+          "waits": 0
+        }
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_REPLAY_JSON",
+      "utf8_bytes": 188,
+      "raw_line": "TASK_0024AD_REPLAY_JSON {\"level_id\":\"two_keys_one_door\",\"replay\":{\"canonical_trace_length\":13,\"completed\":true,\"deterministic\":true},\"restart_exact\":true,\"sequence\":5,\"you_only_exit\":true}",
+      "payload": {
+        "level_id": "two_keys_one_door",
+        "replay": {
+          "canonical_trace_length": 13,
+          "completed": true,
+          "deterministic": true
+        },
+        "restart_exact": true,
+        "sequence": 5,
+        "you_only_exit": true
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_MANIFEST_JSON",
+      "utf8_bytes": 365,
+      "raw_line": "TASK_0024AD_MANIFEST_JSON {\"classification\":\"FORMAL_CATALOGED\",\"families\":{\"barrier_groups\":0,\"crates\":0,\"doors\":2,\"echoes\":1,\"keys\":0,\"latches\":0,\"locks\":0,\"plates\":2,\"sensors\":0},\"height\":7,\"level_id\":\"staggered_doors\",\"schema_version\":1,\"sequence\":6,\"sha256\":\"3f14c19b50775e36dd5b52664798381cf1292b0a30b377641c03435f45696bc8\",\"title\":\"Staggered Doors\",\"width\":9}",
+      "payload": {
+        "classification": "FORMAL_CATALOGED",
+        "families": {
+          "barrier_groups": 0,
+          "crates": 0,
+          "doors": 2,
+          "echoes": 1,
+          "keys": 0,
+          "latches": 0,
+          "locks": 0,
+          "plates": 2,
+          "sensors": 0
+        },
+        "height": 7,
+        "level_id": "staggered_doors",
+        "schema_version": 1,
+        "sequence": 6,
+        "sha256": "3f14c19b50775e36dd5b52664798381cf1292b0a30b377641c03435f45696bc8",
+        "title": "Staggered Doors",
+        "width": 9
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_METRICS_JSON",
+      "utf8_bytes": 454,
+      "raw_line": "TASK_0024AD_METRICS_JSON {\"level_id\":\"staggered_doors\",\"sequence\":6,\"solver\":{\"elapsed_ms\":1248,\"frontier\":1179,\"l\":15,\"limits\":{\"depth_limit\":48,\"solution_count_cap\":1000000,\"state_limit\":250000,\"time_limit_ms\":20000},\"n\":4,\"n_status\":\"EXACT\",\"status\":\"SOLVED\",\"visited\":6772},\"witness\":{\"actions\":[\"UP\",\"RIGHT\",\"RIGHT\",\"DOWN\",\"UP\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"UP\",\"UP\",\"UP\",\"LEFT\",\"LEFT\",\"LEFT\"],\"blocked_you\":0,\"max_repeated_blocked\":0,\"waits\":0}}",
+      "payload": {
+        "level_id": "staggered_doors",
+        "sequence": 6,
+        "solver": {
+          "elapsed_ms": 1248,
+          "frontier": 1179,
+          "l": 15,
+          "limits": {
+            "depth_limit": 48,
+            "solution_count_cap": 1000000,
+            "state_limit": 250000,
+            "time_limit_ms": 20000
+          },
+          "n": 4,
+          "n_status": "EXACT",
+          "status": "SOLVED",
+          "visited": 6772
+        },
+        "witness": {
+          "actions": [
+            "UP",
+            "RIGHT",
+            "RIGHT",
+            "DOWN",
+            "UP",
+            "RIGHT",
+            "RIGHT",
+            "RIGHT",
+            "RIGHT",
+            "UP",
+            "UP",
+            "UP",
+            "LEFT",
+            "LEFT",
+            "LEFT"
+          ],
+          "blocked_you": 0,
+          "max_repeated_blocked": 0,
+          "waits": 0
+        }
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_REPLAY_JSON",
+      "utf8_bytes": 186,
+      "raw_line": "TASK_0024AD_REPLAY_JSON {\"level_id\":\"staggered_doors\",\"replay\":{\"canonical_trace_length\":16,\"completed\":true,\"deterministic\":true},\"restart_exact\":true,\"sequence\":6,\"you_only_exit\":true}",
+      "payload": {
+        "level_id": "staggered_doors",
+        "replay": {
+          "canonical_trace_length": 16,
+          "completed": true,
+          "deterministic": true
+        },
+        "restart_exact": true,
+        "sequence": 6,
+        "you_only_exit": true
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_MANIFEST_JSON",
+      "utf8_bytes": 370,
+      "raw_line": "TASK_0024AD_MANIFEST_JSON {\"classification\":\"FORMAL_CATALOGED\",\"families\":{\"barrier_groups\":0,\"crates\":0,\"doors\":1,\"echoes\":2,\"keys\":0,\"latches\":0,\"locks\":0,\"plates\":2,\"sensors\":0},\"height\":7,\"level_id\":\"echo_spacing_bridge\",\"schema_version\":1,\"sequence\":7,\"sha256\":\"805cdc05ea9b3805189ba7be4938cb7ede4e7056b9ae9a7e911df96a801d58ee\",\"title\":\"Diverging Echoes\",\"width\":8}",
+      "payload": {
+        "classification": "FORMAL_CATALOGED",
+        "families": {
+          "barrier_groups": 0,
+          "crates": 0,
+          "doors": 1,
+          "echoes": 2,
+          "keys": 0,
+          "latches": 0,
+          "locks": 0,
+          "plates": 2,
+          "sensors": 0
+        },
+        "height": 7,
+        "level_id": "echo_spacing_bridge",
+        "schema_version": 1,
+        "sequence": 7,
+        "sha256": "805cdc05ea9b3805189ba7be4938cb7ede4e7056b9ae9a7e911df96a801d58ee",
+        "title": "Diverging Echoes",
+        "width": 8
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_METRICS_JSON",
+      "utf8_bytes": 462,
+      "raw_line": "TASK_0024AD_METRICS_JSON {\"level_id\":\"echo_spacing_bridge\",\"sequence\":7,\"solver\":{\"elapsed_ms\":4489,\"frontier\":3734,\"l\":16,\"limits\":{\"depth_limit\":56,\"solution_count_cap\":1000000,\"state_limit\":300000,\"time_limit_ms\":25000},\"n\":12,\"n_status\":\"EXACT\",\"status\":\"SOLVED\",\"visited\":19059},\"witness\":{\"actions\":[\"RIGHT\",\"RIGHT\",\"RIGHT\",\"UP\",\"UP\",\"UP\",\"LEFT\",\"RIGHT\",\"DOWN\",\"DOWN\",\"UP\",\"LEFT\",\"RIGHT\",\"UP\",\"UP\",\"UP\"],\"blocked_you\":1,\"max_repeated_blocked\":1,\"waits\":0}}",
+      "payload": {
+        "level_id": "echo_spacing_bridge",
+        "sequence": 7,
+        "solver": {
+          "elapsed_ms": 4489,
+          "frontier": 3734,
+          "l": 16,
+          "limits": {
+            "depth_limit": 56,
+            "solution_count_cap": 1000000,
+            "state_limit": 300000,
+            "time_limit_ms": 25000
+          },
+          "n": 12,
+          "n_status": "EXACT",
+          "status": "SOLVED",
+          "visited": 19059
+        },
+        "witness": {
+          "actions": [
+            "RIGHT",
+            "RIGHT",
+            "RIGHT",
+            "UP",
+            "UP",
+            "UP",
+            "LEFT",
+            "RIGHT",
+            "DOWN",
+            "DOWN",
+            "UP",
+            "LEFT",
+            "RIGHT",
+            "UP",
+            "UP",
+            "UP"
+          ],
+          "blocked_you": 1,
+          "max_repeated_blocked": 1,
+          "waits": 0
+        }
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_REPLAY_JSON",
+      "utf8_bytes": 190,
+      "raw_line": "TASK_0024AD_REPLAY_JSON {\"level_id\":\"echo_spacing_bridge\",\"replay\":{\"canonical_trace_length\":17,\"completed\":true,\"deterministic\":true},\"restart_exact\":true,\"sequence\":7,\"you_only_exit\":true}",
+      "payload": {
+        "level_id": "echo_spacing_bridge",
+        "replay": {
+          "canonical_trace_length": 17,
+          "completed": true,
+          "deterministic": true
+        },
+        "restart_exact": true,
+        "sequence": 7,
+        "you_only_exit": true
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_MANIFEST_JSON",
+      "utf8_bytes": 390,
+      "raw_line": "TASK_0024AD_MANIFEST_JSON {\"classification\":\"FORMAL_CATALOGED_CURRENT_FINALE\",\"families\":{\"barrier_groups\":0,\"crates\":0,\"doors\":1,\"echoes\":2,\"keys\":0,\"latches\":0,\"locks\":0,\"plates\":2,\"sensors\":0},\"height\":7,\"level_id\":\"two_echo_convergence\",\"schema_version\":1,\"sequence\":8,\"sha256\":\"772410d3b8bb807e35472ee2a7d07b703de66e1e0e92ffb4d1ff8433a345d5fd\",\"title\":\"Two Echo Convergence\",\"width\":9}",
+      "payload": {
+        "classification": "FORMAL_CATALOGED_CURRENT_FINALE",
+        "families": {
+          "barrier_groups": 0,
+          "crates": 0,
+          "doors": 1,
+          "echoes": 2,
+          "keys": 0,
+          "latches": 0,
+          "locks": 0,
+          "plates": 2,
+          "sensors": 0
+        },
+        "height": 7,
+        "level_id": "two_echo_convergence",
+        "schema_version": 1,
+        "sequence": 8,
+        "sha256": "772410d3b8bb807e35472ee2a7d07b703de66e1e0e92ffb4d1ff8433a345d5fd",
+        "title": "Two Echo Convergence",
+        "width": 9
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_METRICS_JSON",
+      "utf8_bytes": 485,
+      "raw_line": "TASK_0024AD_METRICS_JSON {\"level_id\":\"two_echo_convergence\",\"sequence\":8,\"solver\":{\"elapsed_ms\":11805,\"frontier\":21449,\"l\":19,\"limits\":{\"depth_limit\":64,\"solution_count_cap\":1000000,\"state_limit\":300000,\"time_limit_ms\":30000},\"n\":6,\"n_status\":\"EXACT\",\"status\":\"SOLVED\",\"visited\":61975},\"witness\":{\"actions\":[\"RIGHT\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"UP\",\"UP\",\"UP\",\"LEFT\",\"RIGHT\",\"DOWN\",\"DOWN\",\"UP\",\"DOWN\",\"UP\",\"UP\",\"UP\",\"UP\"],\"blocked_you\":1,\"max_repeated_blocked\":1,\"waits\":0}}",
+      "payload": {
+        "level_id": "two_echo_convergence",
+        "sequence": 8,
+        "solver": {
+          "elapsed_ms": 11805,
+          "frontier": 21449,
+          "l": 19,
+          "limits": {
+            "depth_limit": 64,
+            "solution_count_cap": 1000000,
+            "state_limit": 300000,
+            "time_limit_ms": 30000
+          },
+          "n": 6,
+          "n_status": "EXACT",
+          "status": "SOLVED",
+          "visited": 61975
+        },
+        "witness": {
+          "actions": [
+            "RIGHT",
+            "RIGHT",
+            "RIGHT",
+            "RIGHT",
+            "RIGHT",
+            "RIGHT",
+            "UP",
+            "UP",
+            "UP",
+            "LEFT",
+            "RIGHT",
+            "DOWN",
+            "DOWN",
+            "UP",
+            "DOWN",
+            "UP",
+            "UP",
+            "UP",
+            "UP"
+          ],
+          "blocked_you": 1,
+          "max_repeated_blocked": 1,
+          "waits": 0
+        }
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_REPLAY_JSON",
+      "utf8_bytes": 191,
+      "raw_line": "TASK_0024AD_REPLAY_JSON {\"level_id\":\"two_echo_convergence\",\"replay\":{\"canonical_trace_length\":20,\"completed\":true,\"deterministic\":true},\"restart_exact\":true,\"sequence\":8,\"you_only_exit\":true}",
+      "payload": {
+        "level_id": "two_echo_convergence",
+        "replay": {
+          "canonical_trace_length": 20,
+          "completed": true,
+          "deterministic": true
+        },
+        "restart_exact": true,
+        "sequence": 8,
+        "you_only_exit": true
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_MANIFEST_JSON",
+      "utf8_bytes": 388,
+      "raw_line": "TASK_0024AD_MANIFEST_JSON {\"classification\":\"ACCEPTED_UNCATALOGUED_CANDIDATE\",\"families\":{\"barrier_groups\":0,\"crates\":1,\"doors\":1,\"echoes\":1,\"keys\":0,\"latches\":0,\"locks\":0,\"plates\":1,\"sensors\":0},\"height\":7,\"level_id\":\"crate_shadow_timing\",\"schema_version\":2,\"sequence\":9,\"sha256\":\"1910f4dc07b1ee508ddbc529b0f0d02db5ca8a3a16a7a277ed236b4efbbe50d1\",\"title\":\"Crate-Shadow Timing\",\"width\":9}",
+      "payload": {
+        "classification": "ACCEPTED_UNCATALOGUED_CANDIDATE",
+        "families": {
+          "barrier_groups": 0,
+          "crates": 1,
+          "doors": 1,
+          "echoes": 1,
+          "keys": 0,
+          "latches": 0,
+          "locks": 0,
+          "plates": 1,
+          "sensors": 0
+        },
+        "height": 7,
+        "level_id": "crate_shadow_timing",
+        "schema_version": 2,
+        "sequence": 9,
+        "sha256": "1910f4dc07b1ee508ddbc529b0f0d02db5ca8a3a16a7a277ed236b4efbbe50d1",
+        "title": "Crate-Shadow Timing",
+        "width": 9
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_METRICS_JSON",
+      "utf8_bytes": 451,
+      "raw_line": "TASK_0024AD_METRICS_JSON {\"level_id\":\"crate_shadow_timing\",\"sequence\":9,\"solver\":{\"elapsed_ms\":653,\"frontier\":396,\"l\":14,\"limits\":{\"depth_limit\":48,\"solution_count_cap\":1000000,\"state_limit\":250000,\"time_limit_ms\":20000},\"n\":6,\"n_status\":\"EXACT\",\"status\":\"SOLVED\",\"visited\":2559},\"witness\":{\"actions\":[\"DOWN\",\"RIGHT\",\"DOWN\",\"DOWN\",\"DOWN\",\"RIGHT\",\"RIGHT\",\"UP\",\"RIGHT\",\"UP\",\"RIGHT\",\"UP\",\"RIGHT\",\"UP\"],\"blocked_you\":0,\"max_repeated_blocked\":0,\"waits\":0}}",
+      "payload": {
+        "level_id": "crate_shadow_timing",
+        "sequence": 9,
+        "solver": {
+          "elapsed_ms": 653,
+          "frontier": 396,
+          "l": 14,
+          "limits": {
+            "depth_limit": 48,
+            "solution_count_cap": 1000000,
+            "state_limit": 250000,
+            "time_limit_ms": 20000
+          },
+          "n": 6,
+          "n_status": "EXACT",
+          "status": "SOLVED",
+          "visited": 2559
+        },
+        "witness": {
+          "actions": [
+            "DOWN",
+            "RIGHT",
+            "DOWN",
+            "DOWN",
+            "DOWN",
+            "RIGHT",
+            "RIGHT",
+            "UP",
+            "RIGHT",
+            "UP",
+            "RIGHT",
+            "UP",
+            "RIGHT",
+            "UP"
+          ],
+          "blocked_you": 0,
+          "max_repeated_blocked": 0,
+          "waits": 0
+        }
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_REPLAY_JSON",
+      "utf8_bytes": 190,
+      "raw_line": "TASK_0024AD_REPLAY_JSON {\"level_id\":\"crate_shadow_timing\",\"replay\":{\"canonical_trace_length\":15,\"completed\":true,\"deterministic\":true},\"restart_exact\":true,\"sequence\":9,\"you_only_exit\":true}",
+      "payload": {
+        "level_id": "crate_shadow_timing",
+        "replay": {
+          "canonical_trace_length": 15,
+          "completed": true,
+          "deterministic": true
+        },
+        "restart_exact": true,
+        "sequence": 9,
+        "you_only_exit": true
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_MANIFEST_JSON",
+      "utf8_bytes": 387,
+      "raw_line": "TASK_0024AD_MANIFEST_JSON {\"classification\":\"ACCEPTED_UNCATALOGUED_CANDIDATE\",\"families\":{\"barrier_groups\":0,\"crates\":0,\"doors\":1,\"echoes\":1,\"keys\":1,\"latches\":0,\"locks\":1,\"plates\":1,\"sensors\":0},\"height\":7,\"level_id\":\"key_route_commitment\",\"schema_version\":2,\"sequence\":10,\"sha256\":\"2c44c8cdeeeb6f502f5c5d9dda87883dd762515348ee3c4b6d71d34fde276a2a\",\"title\":\"The Key Is Yours\",\"width\":9}",
+      "payload": {
+        "classification": "ACCEPTED_UNCATALOGUED_CANDIDATE",
+        "families": {
+          "barrier_groups": 0,
+          "crates": 0,
+          "doors": 1,
+          "echoes": 1,
+          "keys": 1,
+          "latches": 0,
+          "locks": 1,
+          "plates": 1,
+          "sensors": 0
+        },
+        "height": 7,
+        "level_id": "key_route_commitment",
+        "schema_version": 2,
+        "sequence": 10,
+        "sha256": "2c44c8cdeeeb6f502f5c5d9dda87883dd762515348ee3c4b6d71d34fde276a2a",
+        "title": "The Key Is Yours",
+        "width": 9
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_METRICS_JSON",
+      "utf8_bytes": 488,
+      "raw_line": "TASK_0024AD_METRICS_JSON {\"level_id\":\"key_route_commitment\",\"sequence\":10,\"solver\":{\"elapsed_ms\":237,\"frontier\":152,\"l\":19,\"limits\":{\"depth_limit\":56,\"solution_count_cap\":1000000,\"state_limit\":400000,\"time_limit_ms\":25000},\"n\":8,\"n_status\":\"EXACT\",\"status\":\"SOLVED\",\"visited\":1063},\"witness\":{\"actions\":[\"DOWN\",\"DOWN\",\"RIGHT\",\"RIGHT\",\"LEFT\",\"LEFT\",\"UP\",\"UP\",\"RIGHT\",\"RIGHT\",\"UP\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"UP\",\"UP\",\"LEFT\",\"LEFT\"],\"blocked_you\":1,\"max_repeated_blocked\":1,\"waits\":0}}",
+      "payload": {
+        "level_id": "key_route_commitment",
+        "sequence": 10,
+        "solver": {
+          "elapsed_ms": 237,
+          "frontier": 152,
+          "l": 19,
+          "limits": {
+            "depth_limit": 56,
+            "solution_count_cap": 1000000,
+            "state_limit": 400000,
+            "time_limit_ms": 25000
+          },
+          "n": 8,
+          "n_status": "EXACT",
+          "status": "SOLVED",
+          "visited": 1063
+        },
+        "witness": {
+          "actions": [
+            "DOWN",
+            "DOWN",
+            "RIGHT",
+            "RIGHT",
+            "LEFT",
+            "LEFT",
+            "UP",
+            "UP",
+            "RIGHT",
+            "RIGHT",
+            "UP",
+            "RIGHT",
+            "RIGHT",
+            "RIGHT",
+            "RIGHT",
+            "UP",
+            "UP",
+            "LEFT",
+            "LEFT"
+          ],
+          "blocked_you": 1,
+          "max_repeated_blocked": 1,
+          "waits": 0
+        }
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_REPLAY_JSON",
+      "utf8_bytes": 192,
+      "raw_line": "TASK_0024AD_REPLAY_JSON {\"level_id\":\"key_route_commitment\",\"replay\":{\"canonical_trace_length\":20,\"completed\":true,\"deterministic\":true},\"restart_exact\":true,\"sequence\":10,\"you_only_exit\":true}",
+      "payload": {
+        "level_id": "key_route_commitment",
+        "replay": {
+          "canonical_trace_length": 20,
+          "completed": true,
+          "deterministic": true
+        },
+        "restart_exact": true,
+        "sequence": 10,
+        "you_only_exit": true
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_MANIFEST_JSON",
+      "utf8_bytes": 403,
+      "raw_line": "TASK_0024AD_MANIFEST_JSON {\"classification\":\"ACCEPTED_UNCATALOGUED_FALLBACK_CANDIDATE\",\"families\":{\"barrier_groups\":1,\"crates\":0,\"doors\":0,\"echoes\":1,\"keys\":0,\"latches\":0,\"locks\":0,\"plates\":0,\"sensors\":2},\"height\":7,\"level_id\":\"identity_shift_bridge\",\"schema_version\":2,\"sequence\":11,\"sha256\":\"8856d3c64978cef7cff7f1680a7ae2f412c9b0cab058d598cbe3aee0225052e0\",\"title\":\"Identity-Shift Bridge\",\"width\":11}",
+      "payload": {
+        "classification": "ACCEPTED_UNCATALOGUED_FALLBACK_CANDIDATE",
+        "families": {
+          "barrier_groups": 1,
+          "crates": 0,
+          "doors": 0,
+          "echoes": 1,
+          "keys": 0,
+          "latches": 0,
+          "locks": 0,
+          "plates": 0,
+          "sensors": 2
+        },
+        "height": 7,
+        "level_id": "identity_shift_bridge",
+        "schema_version": 2,
+        "sequence": 11,
+        "sha256": "8856d3c64978cef7cff7f1680a7ae2f412c9b0cab058d598cbe3aee0225052e0",
+        "title": "Identity-Shift Bridge",
+        "width": 11
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_METRICS_JSON",
+      "utf8_bytes": 486,
+      "raw_line": "TASK_0024AD_METRICS_JSON {\"level_id\":\"identity_shift_bridge\",\"sequence\":11,\"solver\":{\"elapsed_ms\":281,\"frontier\":130,\"l\":18,\"limits\":{\"depth_limit\":64,\"solution_count_cap\":1000000,\"state_limit\":750000,\"time_limit_ms\":35000},\"n\":1,\"n_status\":\"EXACT\",\"status\":\"SOLVED\",\"visited\":1002},\"witness\":{\"actions\":[\"RIGHT\",\"RIGHT\",\"UP\",\"UP\",\"LEFT\",\"LEFT\",\"UP\",\"UP\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"DOWN\",\"DOWN\"],\"blocked_you\":0,\"max_repeated_blocked\":0,\"waits\":0}}",
+      "payload": {
+        "level_id": "identity_shift_bridge",
+        "sequence": 11,
+        "solver": {
+          "elapsed_ms": 281,
+          "frontier": 130,
+          "l": 18,
+          "limits": {
+            "depth_limit": 64,
+            "solution_count_cap": 1000000,
+            "state_limit": 750000,
+            "time_limit_ms": 35000
+          },
+          "n": 1,
+          "n_status": "EXACT",
+          "status": "SOLVED",
+          "visited": 1002
+        },
+        "witness": {
+          "actions": [
+            "RIGHT",
+            "RIGHT",
+            "UP",
+            "UP",
+            "LEFT",
+            "LEFT",
+            "UP",
+            "UP",
+            "RIGHT",
+            "RIGHT",
+            "RIGHT",
+            "RIGHT",
+            "RIGHT",
+            "RIGHT",
+            "RIGHT",
+            "RIGHT",
+            "DOWN",
+            "DOWN"
+          ],
+          "blocked_you": 0,
+          "max_repeated_blocked": 0,
+          "waits": 0
+        }
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_REPLAY_JSON",
+      "utf8_bytes": 193,
+      "raw_line": "TASK_0024AD_REPLAY_JSON {\"level_id\":\"identity_shift_bridge\",\"replay\":{\"canonical_trace_length\":19,\"completed\":true,\"deterministic\":true},\"restart_exact\":true,\"sequence\":11,\"you_only_exit\":true}",
+      "payload": {
+        "level_id": "identity_shift_bridge",
+        "replay": {
+          "canonical_trace_length": 19,
+          "completed": true,
+          "deterministic": true
+        },
+        "restart_exact": true,
+        "sequence": 11,
+        "you_only_exit": true
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_MANIFEST_JSON",
+      "utf8_bytes": 398,
+      "raw_line": "TASK_0024AD_MANIFEST_JSON {\"classification\":\"ACCEPTED_UNCATALOGUED_FINALE_CANDIDATE_ONLY\",\"families\":{\"barrier_groups\":2,\"crates\":0,\"doors\":0,\"echoes\":1,\"keys\":0,\"latches\":1,\"locks\":0,\"plates\":0,\"sensors\":2},\"height\":9,\"level_id\":\"lasting_echo_latch\",\"schema_version\":2,\"sequence\":12,\"sha256\":\"a1d7dcd30832cfdcfe93ead34884fa5a21fd19ef3cafa481860688640bd5ea5f\",\"title\":\"The Lasting Echo\",\"width\":11}",
+      "payload": {
+        "classification": "ACCEPTED_UNCATALOGUED_FINALE_CANDIDATE_ONLY",
+        "families": {
+          "barrier_groups": 2,
+          "crates": 0,
+          "doors": 0,
+          "echoes": 1,
+          "keys": 0,
+          "latches": 1,
+          "locks": 0,
+          "plates": 0,
+          "sensors": 2
+        },
+        "height": 9,
+        "level_id": "lasting_echo_latch",
+        "schema_version": 2,
+        "sequence": 12,
+        "sha256": "a1d7dcd30832cfdcfe93ead34884fa5a21fd19ef3cafa481860688640bd5ea5f",
+        "title": "The Lasting Echo",
+        "width": 11
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_METRICS_JSON",
+      "utf8_bytes": 502,
+      "raw_line": "TASK_0024AD_METRICS_JSON {\"level_id\":\"lasting_echo_latch\",\"sequence\":12,\"solver\":{\"elapsed_ms\":4137,\"frontier\":1389,\"l\":21,\"limits\":{\"depth_limit\":80,\"solution_count_cap\":1000000,\"state_limit\":1000000,\"time_limit_ms\":45000},\"n\":6,\"n_status\":\"EXACT\",\"status\":\"SOLVED\",\"visited\":13459},\"witness\":{\"actions\":[\"RIGHT\",\"UP\",\"RIGHT\",\"UP\",\"UP\",\"UP\",\"UP\",\"LEFT\",\"LEFT\",\"UP\",\"UP\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"DOWN\",\"DOWN\"],\"blocked_you\":1,\"max_repeated_blocked\":1,\"waits\":0}}",
+      "payload": {
+        "level_id": "lasting_echo_latch",
+        "sequence": 12,
+        "solver": {
+          "elapsed_ms": 4137,
+          "frontier": 1389,
+          "l": 21,
+          "limits": {
+            "depth_limit": 80,
+            "solution_count_cap": 1000000,
+            "state_limit": 1000000,
+            "time_limit_ms": 45000
+          },
+          "n": 6,
+          "n_status": "EXACT",
+          "status": "SOLVED",
+          "visited": 13459
+        },
+        "witness": {
+          "actions": [
+            "RIGHT",
+            "UP",
+            "RIGHT",
+            "UP",
+            "UP",
+            "UP",
+            "UP",
+            "LEFT",
+            "LEFT",
+            "UP",
+            "UP",
+            "RIGHT",
+            "RIGHT",
+            "RIGHT",
+            "RIGHT",
+            "RIGHT",
+            "RIGHT",
+            "RIGHT",
+            "RIGHT",
+            "DOWN",
+            "DOWN"
+          ],
+          "blocked_you": 1,
+          "max_repeated_blocked": 1,
+          "waits": 0
+        }
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_REPLAY_JSON",
+      "utf8_bytes": 190,
+      "raw_line": "TASK_0024AD_REPLAY_JSON {\"level_id\":\"lasting_echo_latch\",\"replay\":{\"canonical_trace_length\":22,\"completed\":true,\"deterministic\":true},\"restart_exact\":true,\"sequence\":12,\"you_only_exit\":true}",
+      "payload": {
+        "level_id": "lasting_echo_latch",
+        "replay": {
+          "canonical_trace_length": 22,
+          "completed": true,
+          "deterministic": true
+        },
+        "restart_exact": true,
+        "sequence": 12,
+        "you_only_exit": true
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_CATALOG_JSON",
+      "utf8_bytes": 384,
+      "raw_line": "TASK_0024AD_CATALOG_JSON {\"candidate_ids_absent\":[\"crate_shadow_timing\",\"key_route_commitment\",\"identity_shift_bridge\",\"lasting_echo_latch\"],\"entry_count\":8,\"ordered_ids\":[\"tutorial_reach_exit\",\"tutorial_echo_bridge\",\"vertical_slice_delay_3\",\"door_one_turn_late\",\"two_keys_one_door\",\"staggered_doors\",\"echo_spacing_bridge\",\"two_echo_convergence\"],\"sole_finale\":\"two_echo_convergence\"}",
+      "payload": {
+        "candidate_ids_absent": [
+          "crate_shadow_timing",
+          "key_route_commitment",
+          "identity_shift_bridge",
+          "lasting_echo_latch"
+        ],
+        "entry_count": 8,
+        "ordered_ids": [
+          "tutorial_reach_exit",
+          "tutorial_echo_bridge",
+          "vertical_slice_delay_3",
+          "door_one_turn_late",
+          "two_keys_one_door",
+          "staggered_doors",
+          "echo_spacing_bridge",
+          "two_echo_convergence"
+        ],
+        "sole_finale": "two_echo_convergence"
+      }
+    },
+    {
+      "prefix": "TASK_0024AD_BATCH_JSON",
+      "utf8_bytes": 132,
+      "raw_line": "TASK_0024AD_BATCH_JSON {\"candidate_count\":4,\"cataloged_count\":8,\"exact_count\":12,\"level_count\":12,\"solved_count\":12,\"status\":\"PASS\"}",
+      "payload": {
+        "candidate_count": 4,
+        "cataloged_count": 8,
+        "exact_count": 12,
+        "level_count": 12,
+        "solved_count": 12,
+        "status": "PASS"
+      }
+    }
+  ],
+  "wrapper": {
+    "status": "PASS",
+    "native_exit_code": 0,
+    "cleanup_invocation_count": 1,
+    "cleanup_order": [
+      16324
+    ],
+    "remaining_owned_pids": [],
+    "remaining_unproven_pids": [],
+    "godot_before_count": 0,
+    "godot_after_count": 0,
+    "stderr": []
+  },
+  "errors": []
+}

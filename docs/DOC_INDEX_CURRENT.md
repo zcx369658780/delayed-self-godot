@@ -2,6 +2,12 @@
 
 ## Start here
 
+0. [`Task 0024AD`](../tasks/0024AD_submission_core_1_12_batch_regression_and_owner_review_route_audit.md) — completed fresh 1–12 batch regression and read-only owner-route audit
+1. [`Submission-core curriculum matrix`](level_design/validation/submission_core_1_12_curriculum_matrix.json) — final per-room machine facts, continuity findings and review recommendations
+2. [`Owner curriculum worksheet`](playtest/SUBMISSION_CORE_1_12_OWNER_CURRICULUM_REVIEW_CURRENT.md) — unfilled `NOT_YET_REVIEWED` human review form
+3. [`Sequences 9–12 route audit`](playtest/SUBMISSION_CORE_9_12_PLAYTEST_ROUTE_AUDIT_CURRENT.md) — `ISOLATED_STAGING_CATALOG_REQUIRED`, exact route seams and future allowlist
+4. [`Task 0024AD report`](reports/0024AD_SUBMISSION_CORE_1_12_BATCH_REGRESSION_AND_OWNER_REVIEW_ROUTE_AUDIT_REPORT.md) — retained seven-case evidence, curriculum warnings and protected boundaries
+
 0. [`Task 0024AC`](../tasks/0024AC_sequence_12_lasting_echo_latch_candidate_authoring_and_machine_validation.md) — completed sequence-12 latch-finale candidate authoring and machine validation
 1. [`Sequence-12 machine summary`](level_design/validation/sequence_12_lasting_echo_latch_validation.json) — exact solver, events, all-shortest, controls, bounded records and six-case evidence
 2. [`Task 0024AC report`](reports/0024AC_SEQUENCE_12_LASTING_ECHO_LATCH_MACHINE_VALIDATION_REPORT.md) — authoring history, lifecycle evidence, frozen audits and protected boundaries

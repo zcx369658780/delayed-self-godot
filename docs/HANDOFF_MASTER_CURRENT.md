@@ -1,5 +1,13 @@
 # Handoff master (CURRENT)
 
+## Task 0024AD 1–12 batch and owner-route audit ready for GPT review
+
+Task 0024AD completed at `SUBMISSION_CORE_1_12_BATCH_REGRESSION_AND_OWNER_REVIEW_ROUTE_READY_FOR_GPT_REVIEW`. Fresh direct-file validation solved all twelve planned rooms with exact shortest counts, deterministic replay, exact restart and YOU-only completion. The retained final invocation `fcd8d3bd-a67c-4b44-b664-98fa5e2f27d6` ran focused 0024AD, accepted focused 0024AC/AB/Z/Y, Aggregate and corrected complete-v2 exactly once. All passed; Aggregate stderr was exactly `LEVEL_ID_MISMATCH`, all others empty, cleanup was once per case, no owned/unproven PID remained and final Godot was zero. The focused capture SHA-256 is `79b8499b72f064c7036241338076ffce396952fba58b92f2fa9cf5066102b21b`; the cycle is consumed.
+
+Curriculum recommendations are KEEP for 1, 2 and 4–8, and `OWNER_REVIEW_REQUIRED` for 3 and 9–12. All subjective worksheet fields remain `NOT_YET_REVIEWED`. Sequence 12 is mechanically credible only as a finale candidate; sequence 8 remains the sole formal finale. The route audit selected `ISOLATED_STAGING_CATALOG_REQUIRED`: a later test-owned launcher may use pre-tree `catalog_path` and exact isolated `configure_test_profile()`, but none was implemented. Current Gameplay does not visibly render v2 crates, keys/locks, typed sensors, grouped barriers or latches, which blocks fair owner usability review.
+
+Read the Task 0024AD report, curriculum matrix and route audit before any successor. Do not rerun the final cycle, inspect Profile data, implement a launcher, admit candidates, move the finale or begin presentation/release work without a new explicit task.
+
 ## Task 0024AC sequence-12 latch finale candidate ready for GPT review
 
 Task 0024AC completed at `SEQUENCE_12_LASTING_ECHO_LATCH_MACHINE_VALIDATED_FOR_GPT_REVIEW`. The uncatalogued 11×9 `lasting_echo_latch / The Lasting Echo / 余响落锁` candidate has SHA-256 `a1d7dcd30832cfdcfe93ead34884fa5a21fd19ef3cafa481860688640bd5ea5f`. It uses one delay-2 ECHO, one ECHO-only one-shot latch, two typed sensors with `include_crates=false`, one two-cell latch-target group and one two-cell phase-two group. It remains `FINALE_CANDIDATE_ONLY`.

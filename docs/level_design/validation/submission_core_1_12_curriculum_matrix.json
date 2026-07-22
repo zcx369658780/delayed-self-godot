@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "task": "0024AD",
+  "status": "MACHINE_VALIDATED_OWNER_REVIEW_PENDING",
+  "source_capture": "tests/tools/task_0024ad_final_case_01_capture_validation.json",
+  "source_capture_sha256": "79b8499b72f064c7036241338076ffce396952fba58b92f2fa9cf5066102b21b",
+  "final_invocation_id": "fcd8d3bd-a67c-4b44-b664-98fa5e2f27d6",
+  "catalog_baseline": {
+    "entry_count": 8,
+    "sole_formal_finale": "two_echo_convergence",
+    "candidate_ids_absent": ["crate_shadow_timing", "key_route_commitment", "identity_shift_bridge", "lasting_echo_latch"]
+  },
+  "levels": [
+    {
+      "sequence": 1, "level_id": "tutorial_reach_exit", "title": "Reach the Exit", "schema_version": 1,
+      "classification": "FORMAL_CATALOGED", "dimensions": {"width": 5, "height": 4},
+      "entity_families": {"echoes": 0, "plates": 0, "doors": 0, "crates": 0, "keys": 0, "locks": 0, "sensors": 0, "barrier_groups": 0, "latches": 0},
+      "new_mechanic_families": ["YOU movement", "YOU-only EXIT", "restart"], "reused_mechanics": [],
+      "solver": {"l_star": 3, "n_star": 3, "n_status": "EXACT", "visited": 6, "frontier": 2, "elapsed_ms": 0},
+      "conceptual_objective": "Learn movement, the YOU-only EXIT condition and restart in a minimal room.", "prerequisite_sequences": [],
+      "shortest_witness": {"waits": 0, "blocked_you": 0, "max_repeated_blocked": 0},
+      "level_sha256": "38e466bb5922f1987a99d79c7527a4a8eab8e6cfdbe76fd8159f80b0a40cf2c4", "candidate_acceptance": null,
+      "owner_review_state": "NOT_YET_REVIEWED", "recommended_decision": "KEEP", "catalog_finale_profile_state": "CATALOGED; NOT_FINALE; FORMAL_PROFILE_ID"
+    },
+    {
+      "sequence": 2, "level_id": "tutorial_echo_bridge", "title": "Three Turns Later", "schema_version": 1,
+      "classification": "FORMAL_CATALOGED", "dimensions": {"width": 7, "height": 6},
+      "entity_families": {"echoes": 1, "plates": 1, "doors": 1, "crates": 0, "keys": 0, "locks": 0, "sensors": 0, "barrier_groups": 0, "latches": 0},
+      "new_mechanic_families": ["delayed ECHO replay", "Plate", "next-turn Door"], "reused_mechanics": ["YOU movement", "YOU-only EXIT", "restart"],
+      "solver": {"l_star": 9, "n_star": 12, "n_status": "EXACT", "visited": 1975, "frontier": 509, "elapsed_ms": 275},
+      "conceptual_objective": "Record a route so the delayed ECHO holds a Plate while YOU uses the resulting Door window.", "prerequisite_sequences": [1],
+      "shortest_witness": {"waits": 0, "blocked_you": 1, "max_repeated_blocked": 1},
+      "level_sha256": "681d99057c4e6034a490644d75960ff23d8f43bd1b91850f48179b79fc04a3cf", "candidate_acceptance": null,
+      "owner_review_state": "NOT_YET_REVIEWED", "recommended_decision": "KEEP", "catalog_finale_profile_state": "CATALOGED; NOT_FINALE; FORMAL_PROFILE_ID"
+    },
+    {
+      "sequence": 3, "level_id": "vertical_slice_delay_3", "title": "Three Turns Late", "schema_version": 1,
+      "classification": "FORMAL_CATALOGED", "dimensions": {"width": 9, "height": 4},
+      "entity_families": {"echoes": 1, "plates": 1, "doors": 1, "crates": 0, "keys": 0, "locks": 0, "sensors": 0, "barrier_groups": 0, "latches": 0},
+      "new_mechanic_families": [], "reused_mechanics": ["delay-3 ECHO", "Plate", "next-turn Door"],
+      "solver": {"l_star": 9, "n_star": 31, "n_status": "EXACT", "visited": 1318, "frontier": 393, "elapsed_ms": 167},
+      "conceptual_objective": "Apply the delay-3 Plate/Door cooperation contract independently in a less-guided slice.", "prerequisite_sequences": [2],
+      "shortest_witness": {"waits": 0, "blocked_you": 2, "max_repeated_blocked": 2},
+      "level_sha256": "8751da5051fbebaaa5ae7c895d9be9f086e8d8f2e87876a80c379dc06262f1d8", "candidate_acceptance": null,
+      "owner_review_state": "NOT_YET_REVIEWED", "recommended_decision": "OWNER_REVIEW_REQUIRED", "catalog_finale_profile_state": "CATALOGED; NOT_FINALE; FORMAL_PROFILE_ID"
+    },
+    {
+      "sequence": 4, "level_id": "door_one_turn_late", "title": "One Turn Late", "schema_version": 1,
+      "classification": "FORMAL_CATALOGED", "dimensions": {"width": 7, "height": 7},
+      "entity_families": {"echoes": 1, "plates": 1, "doors": 1, "crates": 0, "keys": 0, "locks": 0, "sensors": 0, "barrier_groups": 0, "latches": 0},
+      "new_mechanic_families": ["closed-result/open-next-snapshot doctrine"], "reused_mechanics": ["delayed ECHO", "Plate", "Door"],
+      "solver": {"l_star": 9, "n_star": 7, "n_status": "EXACT", "visited": 291, "frontier": 116, "elapsed_ms": 32},
+      "conceptual_objective": "Isolate that a Door state committed now controls entry on the next submitted turn.", "prerequisite_sequences": [3],
+      "shortest_witness": {"waits": 0, "blocked_you": 1, "max_repeated_blocked": 1},
+      "level_sha256": "1775cf89ae4a94f65a76dac2b791a31395443de88205d0ed1b6233331dbda577", "candidate_acceptance": null,
+      "owner_review_state": "NOT_YET_REVIEWED", "recommended_decision": "KEEP", "catalog_finale_profile_state": "CATALOGED; NOT_FINALE; FORMAL_PROFILE_ID"
+    },
+    {
+      "sequence": 5, "level_id": "two_keys_one_door", "title": "Two Keys, One Door", "schema_version": 1,
+      "classification": "FORMAL_CATALOGED", "dimensions": {"width": 9, "height": 7},
+      "entity_families": {"echoes": 1, "plates": 2, "doors": 1, "crates": 0, "keys": 0, "locks": 0, "sensors": 0, "barrier_groups": 0, "latches": 0},
+      "new_mechanic_families": ["two-Plate AND Door"], "reused_mechanics": ["YOU/ECHO occupancy", "next-turn Door"],
+      "solver": {"l_star": 12, "n_star": 1, "n_status": "EXACT", "visited": 1260, "frontier": 225, "elapsed_ms": 210},
+      "conceptual_objective": "Coordinate distinct YOU and ECHO Plate occupancy to open one AND Door.", "prerequisite_sequences": [4],
+      "shortest_witness": {"waits": 0, "blocked_you": 0, "max_repeated_blocked": 0},
+      "level_sha256": "f4c6791dfc84d17fb450721e654091a2baeb522e55d660a5d73878cd977651cd", "candidate_acceptance": null,
+      "owner_review_state": "NOT_YET_REVIEWED", "recommended_decision": "KEEP", "catalog_finale_profile_state": "CATALOGED; NOT_FINALE; FORMAL_PROFILE_ID; TITLE SAYS KEYS BUT ENTITIES ARE PLATES"
+    },
+    {
+      "sequence": 6, "level_id": "staggered_doors", "title": "Staggered Doors", "schema_version": 1,
+      "classification": "FORMAL_CATALOGED", "dimensions": {"width": 9, "height": 7},
+      "entity_families": {"echoes": 1, "plates": 2, "doors": 2, "crates": 0, "keys": 0, "locks": 0, "sensors": 0, "barrier_groups": 0, "latches": 0},
+      "new_mechanic_families": ["staggered dependency chain"], "reused_mechanics": ["delay-3 ECHO", "Plate", "next-turn Door"],
+      "solver": {"l_star": 15, "n_star": 4, "n_status": "EXACT", "visited": 6772, "frontier": 1179, "elapsed_ms": 1248},
+      "conceptual_objective": "Create and use two temporally separated ECHO-held Door windows.", "prerequisite_sequences": [5],
+      "shortest_witness": {"waits": 0, "blocked_you": 0, "max_repeated_blocked": 0},
+      "level_sha256": "3f14c19b50775e36dd5b52664798381cf1292b0a30b377641c03435f45696bc8", "candidate_acceptance": null,
+      "owner_review_state": "NOT_YET_REVIEWED", "recommended_decision": "KEEP", "catalog_finale_profile_state": "CATALOGED; NOT_FINALE; FORMAL_PROFILE_ID"
+    },
+    {
+      "sequence": 7, "level_id": "echo_spacing_bridge", "title": "Diverging Echoes", "schema_version": 1,
+      "classification": "FORMAL_CATALOGED", "dimensions": {"width": 8, "height": 7},
+      "entity_families": {"echoes": 2, "plates": 2, "doors": 1, "crates": 0, "keys": 0, "locks": 0, "sensors": 0, "barrier_groups": 0, "latches": 0},
+      "new_mechanic_families": ["two ECHO delays", "terrain-induced spacing divergence"], "reused_mechanics": ["two-Plate convergence", "next-turn Door"],
+      "solver": {"l_star": 16, "n_star": 12, "n_status": "EXACT", "visited": 19059, "frontier": 3734, "elapsed_ms": 4489},
+      "conceptual_objective": "Observe spacing divergence between E2 and E4, then use their separated A+B occupancy.", "prerequisite_sequences": [6],
+      "shortest_witness": {"waits": 0, "blocked_you": 1, "max_repeated_blocked": 1},
+      "level_sha256": "805cdc05ea9b3805189ba7be4938cb7ede4e7056b9ae9a7e911df96a801d58ee", "candidate_acceptance": null,
+      "owner_review_state": "NOT_YET_REVIEWED", "recommended_decision": "KEEP", "catalog_finale_profile_state": "CATALOGED; NOT_FINALE; FORMAL_PROFILE_ID"
+    },
+    {
+      "sequence": 8, "level_id": "two_echo_convergence", "title": "Two Echo Convergence", "schema_version": 1,
+      "classification": "FORMAL_CATALOGED_CURRENT_FINALE", "dimensions": {"width": 9, "height": 7},
+      "entity_families": {"echoes": 2, "plates": 2, "doors": 1, "crates": 0, "keys": 0, "locks": 0, "sensors": 0, "barrier_groups": 0, "latches": 0},
+      "new_mechanic_families": ["two-ECHO recovery/convergence"], "reused_mechanics": ["E2/E4 spacing", "two-Plate AND Door", "next-turn crossing"],
+      "solver": {"l_star": 19, "n_star": 6, "n_status": "EXACT", "visited": 61975, "frontier": 21449, "elapsed_ms": 11805},
+      "conceptual_objective": "Deliberately align E2 and E4 on distinct Plates and cross on the following open snapshot.", "prerequisite_sequences": [7],
+      "shortest_witness": {"waits": 0, "blocked_you": 1, "max_repeated_blocked": 1},
+      "level_sha256": "772410d3b8bb807e35472ee2a7d07b703de66e1e0e92ffb4d1ff8433a345d5fd", "candidate_acceptance": null,
+      "owner_review_state": "NOT_YET_REVIEWED", "recommended_decision": "KEEP", "catalog_finale_profile_state": "CATALOGED; SOLE FORMAL FINALE; FORMAL PROFILE ID"
+    },
+    {
+      "sequence": 9, "level_id": "crate_shadow_timing", "title": "Crate-Shadow Timing", "schema_version": 2,
+      "classification": "ACCEPTED_UNCATALOGUED_CANDIDATE", "dimensions": {"width": 9, "height": 7},
+      "entity_families": {"echoes": 1, "plates": 1, "doors": 1, "crates": 1, "keys": 0, "locks": 0, "sensors": 0, "barrier_groups": 0, "latches": 0},
+      "new_mechanic_families": ["YOU-only crate push", "persistent object position"], "reused_mechanics": ["delayed ECHO", "Plate", "Door"],
+      "solver": {"l_star": 14, "n_star": 6, "n_status": "EXACT", "visited": 2559, "frontier": 396, "elapsed_ms": 653},
+      "conceptual_objective": "Coordinate one persistent crate placement with delayed ECHO movement instead of solving generic Sokoban.", "prerequisite_sequences": [8],
+      "shortest_witness": {"waits": 0, "blocked_you": 0, "max_repeated_blocked": 0},
+      "level_sha256": "1910f4dc07b1ee508ddbc529b0f0d02db5ca8a3a16a7a277ed236b4efbbe50d1",
+      "candidate_acceptance": {"result_commit": "445122ab035a4c9210f3280af58d054a35bef2bd", "gpt_acceptance_commit": "19a068334b583a1e72180d5c609fed4bf2c94e50"},
+      "owner_review_state": "NOT_YET_REVIEWED", "recommended_decision": "OWNER_REVIEW_REQUIRED", "catalog_finale_profile_state": "ABSENT FROM CATALOG; NOT FINALE; ABSENT FROM FORMAL PROFILE FACTS"
+    },
+    {
+      "sequence": 10, "level_id": "key_route_commitment", "title": "The Key Is Yours", "schema_version": 2,
+      "classification": "ACCEPTED_UNCATALOGUED_CANDIDATE", "dimensions": {"width": 9, "height": 7},
+      "entity_families": {"echoes": 1, "plates": 1, "doors": 1, "crates": 0, "keys": 1, "locks": 1, "sensors": 0, "barrier_groups": 0, "latches": 0},
+      "new_mechanic_families": ["YOU-only key", "consuming lock", "irreversible route commitment"], "reused_mechanics": ["delayed ECHO", "Plate", "Door"],
+      "solver": {"l_star": 19, "n_star": 8, "n_status": "EXACT", "visited": 1063, "frontier": 152, "elapsed_ms": 237},
+      "conceptual_objective": "Commit YOU to a key detour and consume the key before returning to the delayed Door route.", "prerequisite_sequences": [9],
+      "shortest_witness": {"waits": 0, "blocked_you": 1, "max_repeated_blocked": 1},
+      "level_sha256": "2c44c8cdeeeb6f502f5c5d9dda87883dd762515348ee3c4b6d71d34fde276a2a",
+      "candidate_acceptance": {"result_commit": "b8378bc2e1e96642ff99eded436df65e2435cc9f", "gpt_acceptance_commit": "3b9b576d4a729b1f2e2d673c76c8efdce4a5d494"},
+      "owner_review_state": "NOT_YET_REVIEWED", "recommended_decision": "OWNER_REVIEW_REQUIRED", "catalog_finale_profile_state": "ABSENT FROM CATALOG; NOT FINALE; ABSENT FROM FORMAL PROFILE FACTS"
+    },
+    {
+      "sequence": 11, "level_id": "identity_shift_bridge", "title": "Identity-Shift Bridge", "schema_version": 2,
+      "classification": "ACCEPTED_UNCATALOGUED_FALLBACK_CANDIDATE", "dimensions": {"width": 11, "height": 7},
+      "entity_families": {"echoes": 1, "plates": 0, "doors": 0, "crates": 0, "keys": 0, "locks": 0, "sensors": 2, "barrier_groups": 1, "latches": 0},
+      "new_mechanic_families": ["typed YOU/ECHO sensors", "grouped barrier", "closure deferral"], "reused_mechanics": ["actor identity", "delayed ECHO", "next-turn state"],
+      "solver": {"l_star": 18, "n_star": 1, "n_status": "EXACT", "visited": 1002, "frontier": 130, "elapsed_ms": 281},
+      "conceptual_objective": "Shift from item identity to actor identity and satisfy typed sensors with next-turn grouped-barrier timing.", "prerequisite_sequences": [10],
+      "shortest_witness": {"waits": 0, "blocked_you": 0, "max_repeated_blocked": 0},
+      "level_sha256": "8856d3c64978cef7cff7f1680a7ae2f412c9b0cab058d598cbe3aee0225052e0",
+      "candidate_acceptance": {"result_commit": "e6cd9fe76c19a144315b173b480ad5f9ccf2f115", "gpt_acceptance_commit": "349f0436691e7f0a7ee73af36870e0b026bba49d"},
+      "owner_review_state": "NOT_YET_REVIEWED", "recommended_decision": "OWNER_REVIEW_REQUIRED", "catalog_finale_profile_state": "ABSENT FROM CATALOG; NOT FINALE; ABSENT FROM FORMAL PROFILE FACTS"
+    },
+    {
+      "sequence": 12, "level_id": "lasting_echo_latch", "title": "The Lasting Echo", "schema_version": 2,
+      "classification": "ACCEPTED_UNCATALOGUED_FINALE_CANDIDATE_ONLY", "dimensions": {"width": 11, "height": 9},
+      "entity_families": {"echoes": 1, "plates": 0, "doors": 0, "crates": 0, "keys": 0, "locks": 0, "sensors": 2, "barrier_groups": 2, "latches": 1},
+      "new_mechanic_families": ["one-shot room-local latch"], "reused_mechanics": ["typed sensors", "grouped barriers", "actor identity", "delayed ECHO"],
+      "solver": {"l_star": 21, "n_star": 6, "n_status": "EXACT", "visited": 13459, "frontier": 1389, "elapsed_ms": 4137},
+      "conceptual_objective": "Use a persistent latch phase change to synthesize previously taught typed-sensor and grouped-barrier reasoning.", "prerequisite_sequences": [11],
+      "shortest_witness": {"waits": 0, "blocked_you": 1, "max_repeated_blocked": 1},
+      "level_sha256": "a1d7dcd30832cfdcfe93ead34884fa5a21fd19ef3cafa481860688640bd5ea5f",
+      "candidate_acceptance": {"result_commit": "5843b851d7b63d8b0645c6a8550e2199694b17b1", "gpt_acceptance_commit": "4b89f15010719b96f872849b1ef69732b340e171"},
+      "owner_review_state": "NOT_YET_REVIEWED", "recommended_decision": "OWNER_REVIEW_REQUIRED", "catalog_finale_profile_state": "ABSENT FROM CATALOG; FINALE_CANDIDATE_ONLY; SEQUENCE 8 REMAINS SOLE FORMAL FINALE; ABSENT FROM FORMAL PROFILE FACTS"
+    }
+  ],
+  "continuity_findings": {
+    "sequence_2_to_4": "All have L*=9, but sequence 2 teaches the contract, 3 applies it independently, and 4 isolates next-turn commitment; sequence 3 needs owner redundancy review because N*=31.",
+    "sequence_7_to_8": "Both use two ECHOs; sequence 7 teaches spacing divergence while sequence 8 tests deliberate recovery/convergence.",
+    "sequence_8_to_9": "The L* drop from 19 to 14 is acceptable as a new persistent-object introduction, but pacing and presentation require owner review.",
+    "sequence_9_to_10": "The curriculum moves from persistent crate state to irreversible YOU-only inventory routing.",
+    "sequence_10_to_11": "The L* drop from 19 to 18 is not a machine regression; actor identity, typed occupancy and next-turn deferral increase conceptual load and require owner review.",
+    "sequence_11_to_12": "Sequence 12 synthesizes typed sensors and grouped barriers through a latch phase change rather than acting as another tutorial.",
+    "finale": "Sequence 12 is mechanically credible as a finale candidate; sequence 8 remains the sole formal finale until a separate accepted integration gate.",
+    "presentation_blocker": "Current Gameplay visibly renders v1 Plates/Doors, actors and EXIT but not the v2 crate, key/lock, sensor, barrier or latch families; human usability conclusions are blocked."
+  }
+}

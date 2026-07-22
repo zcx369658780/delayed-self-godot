@@ -1,5 +1,13 @@
 # Project memory
 
+## Task 0024AD submission-core batch and owner-route audit
+
+Task 0024AD freshly validated the fixed direct-file sequence 1–12. All twelve rooms solved with exact `N*`, deterministic replay, exact restart and YOU-only completion. Fresh `(L*, N*)` for 1–12 are `(3,3)`, `(9,12)`, `(9,31)`, `(9,7)`, `(12,1)`, `(15,4)`, `(16,12)`, `(19,6)`, `(14,6)`, `(19,8)`, `(18,1)`, `(21,6)`. The focused capture has 38 independently parseable records, maximum 502 bytes, SHA-256 `79b8499b72f064c7036241338076ffce396952fba58b92f2fa9cf5066102b21b`.
+
+Final invocation `fcd8d3bd-a67c-4b44-b664-98fa5e2f27d6` ran exactly seven cases once. All passed; Aggregate stderr was exactly `LEVEL_ID_MISMATCH`, the other six were empty, cleanup count was one per case, no owned/unproven PID remained and final Godot was zero. PRE_TASK/PRE_FINAL/POST_FINAL audits ended with zero mismatch; production Profile/user data and the test-profile root were not accessed. The cycle is consumed.
+
+The curriculum recommends KEEP for sequences 1,2,4–8 and `OWNER_REVIEW_REQUIRED` for 3,9–12. Subjective owner fields are unfilled. The route classification is `ISOLATED_STAGING_CATALOG_REQUIRED`: existing `--level-id` remains catalog-bound, while AppRoot's pre-tree catalog/profile seams can support a later test-owned catalog and exact isolated Profile. No launcher was created. Current Gameplay lacks visible schema-v2 entity presentation, so machine readiness does not establish owner usability, admission or finale acceptance.
+
 ## Task 0024AC sequence-12 lasting-echo latch candidate
 
 Task 0024AC authored the uncatalogued 11×9 schema-v2 `lasting_echo_latch` candidate: one delay-2 ECHO, one ECHO-only latch `latch_phase`, two typed sensors, the two-cell persistent target `barrier_phase` and the two-cell phase-two group `barrier_typed`. Candidate SHA-256 is `a1d7dcd30832cfdcfe93ead34884fa5a21fd19ef3cafa481860688640bd5ea5f`; it is `FINALE_CANDIDATE_ONLY`, not catalog-admitted.

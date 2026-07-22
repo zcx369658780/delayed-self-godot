@@ -1,0 +1,61 @@
+{
+  "schema_version": 1,
+  "task": "0024AD",
+  "invocation_id": "fcd8d3bd-a67c-4b44-b664-98fa5e2f27d6",
+  "stage": "AFTER_ALL_CASES",
+  "completed_cases": [
+    {
+      "ordinal": 1,
+      "name": "focused_0024ad",
+      "record": "tests/tools/task_0024ad_final_case_01_batch.json",
+      "record_sha256": "f7f7180624d6644fd9df54bb688b9d3edd0f0cb2a4ab6d0b2bc99d9b19db53f1",
+      "completed_utc": "2026-07-22T13:55:27.9466681Z"
+    },
+    {
+      "ordinal": 2,
+      "name": "accepted_focused_0024ac",
+      "record": "tests/tools/task_0024ad_final_case_02_sequence_12.json",
+      "record_sha256": "77b5fcd533fdfc4d7396cabe8f2873886277447999b311a2d2d76516f8d1f96c",
+      "completed_utc": "2026-07-22T13:55:54.0316261Z"
+    },
+    {
+      "ordinal": 3,
+      "name": "accepted_focused_0024ab",
+      "record": "tests/tools/task_0024ad_final_case_03_sequence_11.json",
+      "record_sha256": "4fe32611c8e74e6c99cbab7c49cf0e43fae72f8ac752fc57b62754beb83f7a69",
+      "completed_utc": "2026-07-22T13:56:01.6865656Z"
+    },
+    {
+      "ordinal": 4,
+      "name": "accepted_focused_0024z",
+      "record": "tests/tools/task_0024ad_final_case_04_sequence_10.json",
+      "record_sha256": "099f9559a372159ab74cb1098e0186d08aac0a9c8cc42cbae2289a8f3d32d5b2",
+      "completed_utc": "2026-07-22T13:56:08.1905643Z"
+    },
+    {
+      "ordinal": 5,
+      "name": "accepted_focused_0024y",
+      "record": "tests/tools/task_0024ad_final_case_05_sequence_09.json",
+      "record_sha256": "22200a2b9c0d7e9f4dcd193919a3c5f28b270764b5345a906f2363024f66cdee",
+      "completed_utc": "2026-07-22T13:56:17.0080067Z"
+    },
+    {
+      "ordinal": 6,
+      "name": "aggregate",
+      "record": "tests/tools/task_0024ad_final_case_06_aggregate.json",
+      "record_sha256": "efefaedc2fbe4e1c6dca5e4fee23608574b8f3ff6ee1e0c933420cf751107e8f",
+      "completed_utc": "2026-07-22T13:57:12.1452190Z"
+    },
+    {
+      "ordinal": 7,
+      "name": "corrected_complete_v2",
+      "record": "tests/tools/task_0024ad_final_case_07_complete_v2.json",
+      "record_sha256": "8406e21701f1aaf6e5e9646335d1660212d5b6a9d5f101e8b529a787535fcffa",
+      "completed_utc": "2026-07-22T13:57:18.2156145Z"
+    }
+  ],
+  "updated_utc": "2026-07-22T13:57:18.3812702Z",
+  "focused_capture_sha256": "79b8499b72f064c7036241338076ffce396952fba58b92f2fa9cf5066102b21b",
+  "final_godot_count": 0,
+  "completed_utc": "2026-07-22T13:57:18.3812702Z"
+}

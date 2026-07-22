@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "task": "0024AD",
+  "cycle_kind": "FRESH_RETAINED_FINAL",
+  "cases": [
+    {"ordinal": 1, "name": "focused_0024ad", "script": "res://tests/curriculum/task_0024ad_submission_core_1_12_batch_validation.gd", "marker": "TASK_0024AD_SUBMISSION_CORE_1_12_BATCH_PASS", "stderr_policy": "ForbidNonempty", "timeout_seconds": 300, "record": "tests/tools/task_0024ad_final_case_01_batch.json"},
+    {"ordinal": 2, "name": "accepted_focused_0024ac", "script": "res://tests/levels/task_0024ac_lasting_echo_latch_validation.gd", "marker": "TASK_0024AC_LASTING_ECHO_LATCH_PASS", "stderr_policy": "ForbidNonempty", "timeout_seconds": 180, "record": "tests/tools/task_0024ad_final_case_02_sequence_12.json"},
+    {"ordinal": 3, "name": "accepted_focused_0024ab", "script": "res://tests/levels/task_0024ab_identity_shift_bridge_validation.gd", "marker": "TASK_0024AB_IDENTITY_SHIFT_BRIDGE_PASS", "stderr_policy": "ForbidNonempty", "timeout_seconds": 180, "record": "tests/tools/task_0024ad_final_case_03_sequence_11.json"},
+    {"ordinal": 4, "name": "accepted_focused_0024z", "script": "res://tests/levels/task_0024z_key_route_commitment_validation.gd", "marker": "TASK_0024Z_KEY_ROUTE_COMMITMENT_PASS", "stderr_policy": "ForbidNonempty", "timeout_seconds": 180, "record": "tests/tools/task_0024ad_final_case_04_sequence_10.json"},
+    {"ordinal": 5, "name": "accepted_focused_0024y", "script": "res://tests/levels/task_0024y_crate_shadow_timing_validation.gd", "marker": "TASK_0024Y_CRATE_SHADOW_TIMING_PASS", "stderr_policy": "ForbidNonempty", "timeout_seconds": 180, "record": "tests/tools/task_0024ad_final_case_05_sequence_09.json"},
+    {"ordinal": 6, "name": "aggregate", "script": "res://tests/run_all.gd", "marker": "TASK_0003_TESTS_PASS assertions=621 vectors=9", "stderr_policy": "Allow", "timeout_seconds": 240, "record": "tests/tools/task_0024ad_final_case_06_aggregate.json"},
+    {"ordinal": 7, "name": "corrected_complete_v2", "script": "res://tests/simulation/task_0024v_v2_solver_replay_canonical_malformed.gd", "marker": "TASK_0024V_V2_COMPLETE_PASS", "stderr_policy": "ForbidNonempty", "timeout_seconds": 180, "record": "tests/tools/task_0024ad_final_case_07_complete_v2.json"}
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "task": "0024AD",
+  "status": "PASS",
+  "baseline": "tests/tools/task_0024ad_qualification_case_002.json",
+  "probe_count": 5,
+  "probes": [
+    {
+      "name": "missing",
+      "parser_exit": 1,
+      "status": "FAIL",
+      "expected_error_prefix": "count:TASK_0024AD_METRICS_JSON",
+      "matched": true,
+      "input_path": "tests/tools/task_0024ad_parser_probe_missing_input.json",
+      "result_path": "tests/tools/task_0024ad_parser_probe_missing_result.json"
+    },
+    {
+      "name": "duplicate",
+      "parser_exit": 1,
+      "status": "FAIL",
+      "expected_error_prefix": "count:TASK_0024AD_METRICS_JSON",
+      "matched": true,
+      "input_path": "tests/tools/task_0024ad_parser_probe_duplicate_input.json",
+      "result_path": "tests/tools/task_0024ad_parser_probe_duplicate_result.json"
+    },
+    {
+      "name": "truncated",
+      "parser_exit": 1,
+      "status": "FAIL",
+      "expected_error_prefix": "non_json_or_truncated:TASK_0024AD_METRICS_JSON",
+      "matched": true,
+      "input_path": "tests/tools/task_0024ad_parser_probe_truncated_input.json",
+      "result_path": "tests/tools/task_0024ad_parser_probe_truncated_result.json"
+    },
+    {
+      "name": "non_json",
+      "parser_exit": 1,
+      "status": "FAIL",
+      "expected_error_prefix": "non_json_or_truncated:TASK_0024AD_METRICS_JSON",
+      "matched": true,
+      "input_path": "tests/tools/task_0024ad_parser_probe_non_json_input.json",
+      "result_path": "tests/tools/task_0024ad_parser_probe_non_json_result.json"
+    },
+    {
+      "name": "over_bound",
+      "parser_exit": 1,
+      "status": "FAIL",
+      "expected_error_prefix": "over_bound:TASK_0024AD_METRICS_JSON",
+      "matched": true,
+      "input_path": "tests/tools/task_0024ad_parser_probe_over_bound_input.json",
+      "result_path": "tests/tools/task_0024ad_parser_probe_over_bound_result.json"
+    }
+  ],
+  "failures": []
+}
