@@ -3,7 +3,7 @@
 - Status: `CURRENT / TASK 0024AI CANDIDATE GAMEPLAY ROUTE AND DYNAMIC VISUAL VALIDATION`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
 - Active task: `tasks/0024AI_candidate_gameplay_route_harness_correction_and_dynamic_schema_v2_visual_validation.md`
-- Active status: `SCHEMA_V2_CANDIDATE_GAMEPLAY_ROUTE_CORRECTION_READY_FOR_CODEX`
+- Active status: `BLOCKED_SCHEMA_V2_CANDIDATE_GAMEPLAY_ROUTE_VALIDATION`
 - Closed predecessors: all Tasks through `0024AH`
 - Latest GPT adjudication: `TASK_0024AH_HONEST_GAMEPLAY_ROUTE_PAYLOAD_ID_BLOCKER_ACCEPTED_FRESH_HARNESS_GATE_REQUIRED`
 - Required accepted checkpoint: `5b6b54b3d71b4f1117388e3b36f86c4c0b6a8609`

@@ -1,6 +1,6 @@
 # Codex active task (CURRENT)
 
-- Status: `SCHEMA_V2_CANDIDATE_GAMEPLAY_ROUTE_CORRECTION_READY_FOR_CODEX`
+- Status: `BLOCKED_SCHEMA_V2_CANDIDATE_GAMEPLAY_ROUTE_VALIDATION`
 - Active task: `tasks/0024AI_candidate_gameplay_route_harness_correction_and_dynamic_schema_v2_visual_validation.md`
 - Closed predecessors: all Tasks through `0024AH`; none may be resumed directly
 - Latest GPT adjudication: `TASK_0024AH_HONEST_GAMEPLAY_ROUTE_PAYLOAD_ID_BLOCKER_ACCEPTED_FRESH_HARNESS_GATE_REQUIRED`
