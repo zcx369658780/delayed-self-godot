@@ -1,5 +1,13 @@
 # Development plan (CURRENT)
 
+> 2026-07-22 — Task 0024Z authored and machine-validated the uncatalogued
+> sequence-10 `key_route_commitment` candidate. Final solver facts are `L*=19`,
+> exact `N*=8`, all-shortest full ordered event `8/8` and omissions `0`.
+> No-key, displaced-key and no-ECHO controls completely exhaust unsolved;
+> no-lock changes metrics to `11/7`. The retained four-case wrapper cycle
+> passed with exact stderr, one cleanup per case and zero final Godot. GPT
+> acceptance, owner playthrough, catalog admission and sequence 11 remain gated.
+
 > 2026-07-22 — Task 0024Y authored and machine-validated the uncatalogued
 > sequence-9 `crate_shadow_timing` candidate. Final solver facts are `L*=14`,
 > exact `N*=6`, all-shortest full event `6/6`, omissions `0`, maximum push `1`.
@@ -142,6 +150,8 @@ The canonical milestone detail remains in the [GDD](game_design/DELAYED_SELF_GAM
 → 0024V corrected Aggregate/complete-v2 test qualification (GPT accepted)
 → 0024W corrected manifest-locked complete core-mechanics validation (GPT accepted)
 → 0024X submission-core levels 9–12 scope finalization (ready for GPT review; docs only)
+→ 0024Y sequence-9 crate-shadow candidate authoring/validation (GPT accepted; uncatalogued)
+→ 0024Z sequence-10 key-route candidate authoring/validation (ready for GPT review; uncatalogued)
 ```
 
 Task 0001 inventories installed Godot/export tooling and evaluates Windows/Web targets without upgrades or downloads. Task 0002 freezes deterministic state transition, collision/settlement order, level schema, and solver/runtime contract. Task 0003 implements one minimal validated room and its conformance harness.

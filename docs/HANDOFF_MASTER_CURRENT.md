@@ -1,12 +1,16 @@
 # Handoff master (CURRENT)
 
-## Task 0024Y sequence-9 candidate ready for GPT review
+## Task 0024Z sequence-10 candidate ready for GPT review
 
-Task 0024Y completed at `SEQUENCE_9_CRATE_SHADOW_TIMING_MACHINE_VALIDATED_FOR_GPT_REVIEW`. The uncatalogued `crate_shadow_timing` schema-v2 candidate has `L*=14`, exact `N*=6`, six of six shortest paths with the complete crate/ECHO/Plate-Door event, zero omission and at most one push. No-push, displaced-crate and no-ECHO controls completely exhaust unsolved. Static-wall substitution retains the numerical `14/6` but cannot reproduce the crate push and later ECHO-crate-block temporal structure.
+Task 0024Z completed at `SEQUENCE_10_KEY_ROUTE_COMMITMENT_MACHINE_VALIDATED_FOR_GPT_REVIEW`. The uncatalogued `key_route_commitment` schema-v2 candidate has `L*=19`, exact `N*=8`, and all 8 shortest paths include YOU-only key collection, same-turn matching-lock consumption/entry and downstream ECHO-only Plate/Door crossing; omissions are zero. No-key, displaced-key and no-ECHO controls completely exhaust unsolved. Removing the lock changes metrics to `L*=11`, exact `N*=7` and removes the lock event.
 
-Final invocation `0d9ee9ef-3213-4266-a94c-6b8e8a0ae44b` ran focused 0024Y, Aggregate and corrected complete-v2 once each. All passed; Aggregate stderr was exactly `LEVEL_ID_MISMATCH`, other stderr was empty, cleanup was one per case, no owned/unproven PID remained and final Godot count was zero. Pre/post Task 0024W seal audits retained 53 repository and 12 historical external files with zero drift.
+Final invocation `e0b62d7e-539e-415e-aea9-a9bc40d16c26` ran focused 0024Z, accepted focused 0024Y, Aggregate and corrected complete-v2 once each. All passed; Aggregate stderr was exactly `LEVEL_ID_MISMATCH`, other stderr was empty, cleanup was one per case, no owned/unproven PID remained and final Godot count was zero. Pre/post Task 0024W seal audits retained 53 repository and 12 historical external files with zero drift.
 
-Read `docs/level_design/validation/sequence_09_crate_shadow_timing_validation.json` and `docs/reports/0024Y_SEQUENCE_9_CRATE_SHADOW_TIMING_MACHINE_VALIDATION_REPORT.md`. Await GPT review or a new explicit task. Do not rerun the final cycle or start sequence 10, catalog/finale/Profile, owner playthrough, Gameplay/UI, localization, assets/audio, build/export, release, upload or submission work.
+Read `docs/level_design/validation/sequence_10_key_route_commitment_validation.json` and `docs/reports/0024Z_SEQUENCE_10_KEY_ROUTE_COMMITMENT_MACHINE_VALIDATION_REPORT.md`. Await GPT review or a new explicit task. Do not rerun the final cycle or start sequence 11, catalog/finale/Profile, owner playthrough, Gameplay/UI, localization, assets/audio, build/export, release, upload or submission work.
+
+## Task 0024Y sequence-9 candidate accepted
+
+Task 0024Y remains GPT accepted as the uncatalogued `crate_shadow_timing` candidate at `L*=14`, exact `N*=6`, all-shortest full event `6/6` and zero omissions. Its artifacts remain frozen and were regression-checked by Task 0024Z.
 
 ## Task 0024X submission-core scope ready for GPT review
 

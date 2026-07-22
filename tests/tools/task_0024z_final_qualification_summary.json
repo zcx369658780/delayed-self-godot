@@ -1,0 +1,194 @@
+{
+  "schema_version": 1,
+  "task": "0024Z",
+  "invocation_id": "e0b62d7e-539e-415e-aea9-a9bc40d16c26",
+  "started_utc": "2026-07-22T09:43:06.0975913Z",
+  "completed_utc": "2026-07-22T09:44:27.6813688Z",
+  "case_count": 4,
+  "cases": [
+    {
+      "name": "focused_0024z",
+      "script_path": "res://tests/levels/task_0024z_key_route_commitment_validation.gd",
+      "record_path": "tests/tools/task_0024z_final_focused.json",
+      "record_sha256": "403b0ed9f0e90624d97e979e86e03f7888f93c21cd75cb8215b1ec8b619d6310",
+      "runner_exit": 0,
+      "wrapper_process_exit": 0,
+      "wrapper_status": "PASS",
+      "native_exit_code": 0,
+      "required_marker": "TASK_0024Z_KEY_ROUTE_COMMITMENT_PASS",
+      "exact_marker_count": 1,
+      "stderr": [],
+      "stderr_exact": true,
+      "cleanup_invocation_count": 1,
+      "cleanup_order": [
+        55372
+      ],
+      "direct_and_descendant_ownership": [
+        {
+          "pid": 55372,
+          "parent_pid": null,
+          "depth": 0,
+          "ancestry_path": "direct",
+          "direct": true,
+          "executable": "d:\\program files (x86)\\steam\\steamapps\\common\\godot engine\\godot.windows.opt.tools.64.exe",
+          "start_utc": "2026-07-22T09:43:06.7372342Z",
+          "arguments": [
+            "--headless",
+            "--path",
+            "D:\\Delayed_Self",
+            "--script",
+            "res://tests/levels/task_0024z_key_route_commitment_validation.gd"
+          ],
+          "classification": "DIRECT",
+          "alive_at_discovery": true,
+          "cleanup_eligible": true
+        }
+      ],
+      "unproven_records": [],
+      "remaining_owned_pids": [],
+      "remaining_unproven_pids": [],
+      "godot_count_before": 0,
+      "godot_count_after": 0,
+      "pass": true
+    },
+    {
+      "name": "accepted_focused_0024y",
+      "script_path": "res://tests/levels/task_0024y_crate_shadow_timing_validation.gd",
+      "record_path": "tests/tools/task_0024z_final_accepted_0024y.json",
+      "record_sha256": "e364935346e0801d7539df56ab1e0104ed05781b6b2384bb1976e48d6fb78ad9",
+      "runner_exit": 0,
+      "wrapper_process_exit": 0,
+      "wrapper_status": "PASS",
+      "native_exit_code": 0,
+      "required_marker": "TASK_0024Y_CRATE_SHADOW_TIMING_PASS",
+      "exact_marker_count": 1,
+      "stderr": [],
+      "stderr_exact": true,
+      "cleanup_invocation_count": 1,
+      "cleanup_order": [
+        56992
+      ],
+      "direct_and_descendant_ownership": [
+        {
+          "pid": 56992,
+          "parent_pid": null,
+          "depth": 0,
+          "ancestry_path": "direct",
+          "direct": true,
+          "executable": "d:\\program files (x86)\\steam\\steamapps\\common\\godot engine\\godot.windows.opt.tools.64.exe",
+          "start_utc": "2026-07-22T09:43:13.2915496Z",
+          "arguments": [
+            "--headless",
+            "--path",
+            "D:\\Delayed_Self",
+            "--script",
+            "res://tests/levels/task_0024y_crate_shadow_timing_validation.gd"
+          ],
+          "classification": "DIRECT",
+          "alive_at_discovery": true,
+          "cleanup_eligible": true
+        }
+      ],
+      "unproven_records": [],
+      "remaining_owned_pids": [],
+      "remaining_unproven_pids": [],
+      "godot_count_before": 0,
+      "godot_count_after": 0,
+      "pass": true
+    },
+    {
+      "name": "aggregate",
+      "script_path": "res://tests/run_all.gd",
+      "record_path": "tests/tools/task_0024z_final_aggregate.json",
+      "record_sha256": "2f78185e74e2865a31ea55f45c42afb705f2e5d1f849d75ea25386580f0ce08f",
+      "runner_exit": 0,
+      "wrapper_process_exit": 0,
+      "wrapper_status": "PASS",
+      "native_exit_code": 0,
+      "required_marker": "TASK_0003_TESTS_PASS assertions=621 vectors=9",
+      "exact_marker_count": 1,
+      "stderr": [
+        "LEVEL_ID_MISMATCH"
+      ],
+      "stderr_exact": true,
+      "cleanup_invocation_count": 1,
+      "cleanup_order": [
+        41436
+      ],
+      "direct_and_descendant_ownership": [
+        {
+          "pid": 41436,
+          "parent_pid": null,
+          "depth": 0,
+          "ancestry_path": "direct",
+          "direct": true,
+          "executable": "d:\\program files (x86)\\steam\\steamapps\\common\\godot engine\\godot.windows.opt.tools.64.exe",
+          "start_utc": "2026-07-22T09:43:22.5656504Z",
+          "arguments": [
+            "--headless",
+            "--path",
+            "D:\\Delayed_Self",
+            "--script",
+            "res://tests/run_all.gd"
+          ],
+          "classification": "DIRECT",
+          "alive_at_discovery": true,
+          "cleanup_eligible": true
+        }
+      ],
+      "unproven_records": [],
+      "remaining_owned_pids": [],
+      "remaining_unproven_pids": [],
+      "godot_count_before": 0,
+      "godot_count_after": 0,
+      "pass": true
+    },
+    {
+      "name": "complete_v2",
+      "script_path": "res://tests/simulation/task_0024v_v2_solver_replay_canonical_malformed.gd",
+      "record_path": "tests/tools/task_0024z_final_complete_v2.json",
+      "record_sha256": "835011eac24c2dda50496387259b3793aa57b72f188abb62f26ab201008f2247",
+      "runner_exit": 0,
+      "wrapper_process_exit": 0,
+      "wrapper_status": "PASS",
+      "native_exit_code": 0,
+      "required_marker": "TASK_0024V_V2_COMPLETE_PASS",
+      "exact_marker_count": 1,
+      "stderr": [],
+      "stderr_exact": true,
+      "cleanup_invocation_count": 1,
+      "cleanup_order": [
+        42220
+      ],
+      "direct_and_descendant_ownership": [
+        {
+          "pid": 42220,
+          "parent_pid": null,
+          "depth": 0,
+          "ancestry_path": "direct",
+          "direct": true,
+          "executable": "d:\\program files (x86)\\steam\\steamapps\\common\\godot engine\\godot.windows.opt.tools.64.exe",
+          "start_utc": "2026-07-22T09:44:22.4324705Z",
+          "arguments": [
+            "--headless",
+            "--path",
+            "D:\\Delayed_Self",
+            "--script",
+            "res://tests/simulation/task_0024v_v2_solver_replay_canonical_malformed.gd"
+          ],
+          "classification": "DIRECT",
+          "alive_at_discovery": true,
+          "cleanup_eligible": true
+        }
+      ],
+      "unproven_records": [],
+      "remaining_owned_pids": [],
+      "remaining_unproven_pids": [],
+      "godot_count_before": 0,
+      "godot_count_after": 0,
+      "pass": true
+    }
+  ],
+  "final_godot_count": 0,
+  "status": "PASS"
+}

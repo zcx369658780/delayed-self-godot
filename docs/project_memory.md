@@ -1,5 +1,13 @@
 # Project memory
 
+## Task 0024Z sequence-10 key route commitment candidate
+
+Task 0024Z created an uncatalogued 9×7 schema-v2 candidate, `key_route_commitment`, with one delay-2 ECHO, one YOU-only `main` key, one matching lock, one Plate and one initially closed Door. The key sits in a lower detour: YOU collects it on action 4, returns to the main route, consumes it and enters the lock cell on action 12, crosses the ECHO-held Door on action 13 and completes by YOU on action 19.
+
+Solver result is `L*=19`, exact `N*=8`; all eight shortest solutions carry the full ordered event mask and zero omit it. No-key (`277` states), displaced-key (`277`) and no-ECHO (`21`) controls exhaust complete-unsolved. No-lock is solved at `L*=11`, exact `N*=7`, proving the key detour is a route commitment rather than added walking distance. ECHO key/lock probes, replay/restart/canonical and shortcut probes pass.
+
+Final invocation `e0b62d7e-539e-415e-aea9-a9bc40d16c26` passed focused 0024Z, accepted focused 0024Y, Aggregate and corrected complete-v2 once each with exact stderr, cleanup once, no remaining owned/unproven PID and final Godot zero. The 0024W seal plus 53 repository and 12 external historical hashes stayed exact. The candidate is not GPT accepted or catalog-admitted; owner playthrough and sequence 11 remain future gates.
+
 ## Task 0024Y sequence-9 crate timing candidate
 
 Task 0024Y created an uncatalogued 9×7 schema-v2 candidate, `crate_shadow_timing`, with one delay-2 ECHO, one YOU-only crate, one Plate and one Door. The shortest witness pushes the crate on action 2, blocks the replaying ECHO on action 3, crosses the ECHO-held Door on action 9 and completes by YOU on action 14. Solver result is `L*=14`, exact `N*=6`; all six shortest solutions carry the full event mask, zero omit it and maximum pushes is one.

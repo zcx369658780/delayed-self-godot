@@ -1,0 +1,62 @@
+{
+  "schema_version": 2,
+  "status": "PASS",
+  "underlying_status": "PASS",
+  "native_exit_code": 0,
+  "timed_out": false,
+  "marker_pass": true,
+  "stderr_policy": "ForbidNonempty",
+  "stderr_pass": true,
+  "cleanup_invocation_count": 1,
+  "cleanup_order": [
+    4216
+  ],
+  "cleanup_closed_pids": [],
+  "remaining_owned_pids": [],
+  "remaining_unproven_pids": [],
+  "owned_records": [
+    {
+      "pid": 4216,
+      "parent_pid": null,
+      "depth": 0,
+      "ancestry_path": "direct",
+      "direct": true,
+      "executable": "d:\\program files (x86)\\steam\\steamapps\\common\\godot engine\\godot.windows.opt.tools.64.exe",
+      "start_utc": "2026-07-22T09:32:52.6608578Z",
+      "arguments": [
+        "--headless",
+        "--path",
+        "D:\\Delayed_Self",
+        "--script",
+        "res://tests/levels/task_0024z_authoring_probe.gd"
+      ],
+      "classification": "DIRECT",
+      "alive_at_discovery": true,
+      "cleanup_eligible": true
+    }
+  ],
+  "unproven_records": [],
+  "stdout": [
+    "Godot Engine v4.7.1.stable.steam.a13da4feb - https://godotengine.org",
+    "TASK_0024Z_AUTHORING_SOLVER_JSON {\"limits\":{\"depth_limit\":56,\"solution_count_cap\":1000000,\"state_limit\":400000,\"time_limit_ms\":25000},\"maximum_frontier\":765,\"shortest_solution_count\":61,\"shortest_solution_count_status\":\"EXACT\",\"shortest_turn_count\":14,\"solution\":[\"RIGHT\",\"LEFT\",\"UP\",\"UP\",\"RIGHT\",\"UP\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"RIGHT\",\"DOWN\",\"DOWN\",\"LEFT\",\"LEFT\"],\"status\":\"SOLVED\",\"visited_states\":4413}",
+    "TASK_0024Z_AUTHORING_STEP {\"action\":\"RIGHT\",\"after_echo\":[2,1],\"after_player\":[3,5],\"before_echo\":[2,1],\"before_player\":[3,5],\"completed\":false,\"door_open\":false,\"echo_action\":\"WAIT\",\"held_keys\":[],\"index\":1,\"pressed_plates\":[],\"remaining_keys\":[\"key_main\"],\"removed_locks\":[]}",
+    "TASK_0024Z_AUTHORING_STEP {\"action\":\"LEFT\",\"after_echo\":[2,1],\"after_player\":[2,5],\"before_echo\":[2,1],\"before_player\":[3,5],\"completed\":false,\"door_open\":false,\"echo_action\":\"WAIT\",\"held_keys\":[],\"index\":2,\"pressed_plates\":[],\"remaining_keys\":[\"key_main\"],\"removed_locks\":[]}",
+    "TASK_0024Z_AUTHORING_STEP {\"action\":\"UP\",\"after_echo\":[2,1],\"after_player\":[2,4],\"before_echo\":[2,1],\"before_player\":[2,5],\"completed\":false,\"door_open\":false,\"echo_action\":\"WAIT\",\"held_keys\":[],\"index\":3,\"pressed_plates\":[],\"remaining_keys\":[\"key_main\"],\"removed_locks\":[]}",
+    "TASK_0024Z_AUTHORING_STEP {\"action\":\"UP\",\"after_echo\":[3,1],\"after_player\":[2,3],\"before_echo\":[2,1],\"before_player\":[2,4],\"completed\":false,\"door_open\":true,\"echo_action\":\"RIGHT\",\"held_keys\":[],\"index\":4,\"pressed_plates\":[\"plate_route\"],\"remaining_keys\":[\"key_main\"],\"removed_locks\":[]}",
+    "TASK_0024Z_AUTHORING_STEP {\"action\":\"RIGHT\",\"after_echo\":[2,1],\"after_player\":[3,3],\"before_echo\":[3,1],\"before_player\":[2,3],\"completed\":false,\"door_open\":false,\"echo_action\":\"LEFT\",\"held_keys\":[\"main\"],\"index\":5,\"pressed_plates\":[],\"remaining_keys\":[],\"removed_locks\":[]}",
+    "TASK_0024Z_AUTHORING_STEP {\"action\":\"UP\",\"after_echo\":[2,1],\"after_player\":[3,3],\"before_echo\":[2,1],\"before_player\":[3,3],\"completed\":false,\"door_open\":false,\"echo_action\":\"UP\",\"held_keys\":[\"main\"],\"index\":6,\"pressed_plates\":[],\"remaining_keys\":[],\"removed_locks\":[]}",
+    "TASK_0024Z_AUTHORING_STEP {\"action\":\"RIGHT\",\"after_echo\":[2,1],\"after_player\":[4,3],\"before_echo\":[2,1],\"before_player\":[3,3],\"completed\":false,\"door_open\":false,\"echo_action\":\"UP\",\"held_keys\":[],\"index\":7,\"pressed_plates\":[],\"remaining_keys\":[],\"removed_locks\":[\"lock_main\"]}",
+    "TASK_0024Z_AUTHORING_STEP {\"action\":\"RIGHT\",\"after_echo\":[3,1],\"after_player\":[5,3],\"before_echo\":[2,1],\"before_player\":[4,3],\"completed\":false,\"door_open\":true,\"echo_action\":\"RIGHT\",\"held_keys\":[],\"index\":8,\"pressed_plates\":[\"plate_route\"],\"remaining_keys\":[],\"removed_locks\":[\"lock_main\"]}",
+    "TASK_0024Z_AUTHORING_STEP {\"action\":\"RIGHT\",\"after_echo\":[3,1],\"after_player\":[6,3],\"before_echo\":[3,1],\"before_player\":[5,3],\"completed\":false,\"door_open\":true,\"echo_action\":\"UP\",\"held_keys\":[],\"index\":9,\"pressed_plates\":[\"plate_route\"],\"remaining_keys\":[],\"removed_locks\":[\"lock_main\"]}",
+    "TASK_0024Z_AUTHORING_STEP {\"action\":\"RIGHT\",\"after_echo\":[3,1],\"after_player\":[7,3],\"before_echo\":[3,1],\"before_player\":[6,3],\"completed\":false,\"door_open\":true,\"echo_action\":\"RIGHT\",\"held_keys\":[],\"index\":10,\"pressed_plates\":[\"plate_route\"],\"remaining_keys\":[],\"removed_locks\":[\"lock_main\"]}",
+    "TASK_0024Z_AUTHORING_STEP {\"action\":\"DOWN\",\"after_echo\":[3,1],\"after_player\":[7,4],\"before_echo\":[3,1],\"before_player\":[7,3],\"completed\":false,\"door_open\":true,\"echo_action\":\"RIGHT\",\"held_keys\":[],\"index\":11,\"pressed_plates\":[\"plate_route\"],\"remaining_keys\":[],\"removed_locks\":[\"lock_main\"]}",
+    "TASK_0024Z_AUTHORING_STEP {\"action\":\"DOWN\",\"after_echo\":[3,1],\"after_player\":[7,5],\"before_echo\":[3,1],\"before_player\":[7,4],\"completed\":false,\"door_open\":true,\"echo_action\":\"RIGHT\",\"held_keys\":[],\"index\":12,\"pressed_plates\":[\"plate_route\"],\"remaining_keys\":[],\"removed_locks\":[\"lock_main\"]}",
+    "TASK_0024Z_AUTHORING_STEP {\"action\":\"LEFT\",\"after_echo\":[3,1],\"after_player\":[6,5],\"before_echo\":[3,1],\"before_player\":[7,5],\"completed\":false,\"door_open\":true,\"echo_action\":\"RIGHT\",\"held_keys\":[],\"index\":13,\"pressed_plates\":[\"plate_route\"],\"remaining_keys\":[],\"removed_locks\":[\"lock_main\"]}",
+    "TASK_0024Z_AUTHORING_STEP {\"action\":\"LEFT\",\"after_echo\":[3,1],\"after_player\":[5,5],\"before_echo\":[3,1],\"before_player\":[6,5],\"completed\":true,\"door_open\":true,\"echo_action\":\"DOWN\",\"held_keys\":[],\"index\":14,\"pressed_plates\":[\"plate_route\"],\"remaining_keys\":[],\"removed_locks\":[\"lock_main\"]}",
+    "TASK_0024Z_AUTHORING_PROBE_PASS"
+  ],
+  "stderr": [],
+  "wrapper_error": "",
+  "cleanup_error": "",
+  "wrapper_process_exit": 0
+}

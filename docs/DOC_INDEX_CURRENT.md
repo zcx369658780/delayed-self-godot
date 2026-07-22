@@ -2,9 +2,13 @@
 
 ## Start here
 
-0. [`Task 0024Y`](../tasks/0024Y_sequence_9_crate_shadow_timing_candidate_authoring_and_machine_validation.md) — completed uncatalogued sequence-9 candidate authoring and machine validation
-1. [`Sequence-9 machine summary`](level_design/validation/sequence_09_crate_shadow_timing_validation.json) — retained solver, all-shortest, controls, trace and final-wrapper facts
-2. [`Task 0024Y report`](reports/0024Y_SEQUENCE_9_CRATE_SHADOW_TIMING_MACHINE_VALIDATION_REPORT.md) — iteration history, exact evidence, frozen-hash audit and protected boundaries
+0. [`Task 0024Z`](../tasks/0024Z_sequence_10_key_route_commitment_candidate_authoring_and_machine_validation.md) — completed uncatalogued sequence-10 candidate authoring and machine validation
+1. [`Sequence-10 machine summary`](level_design/validation/sequence_10_key_route_commitment_validation.json) — retained solver, all-shortest, controls, trace and four-case wrapper facts
+2. [`Task 0024Z report`](reports/0024Z_SEQUENCE_10_KEY_ROUTE_COMMITMENT_MACHINE_VALIDATION_REPORT.md) — authoring history, exact evidence, frozen-hash audit and protected boundaries
+
+3. [`Task 0024Y`](../tasks/0024Y_sequence_9_crate_shadow_timing_candidate_authoring_and_machine_validation.md) — GPT-accepted uncatalogued sequence-9 candidate authoring and machine validation
+4. [`Sequence-9 machine summary`](level_design/validation/sequence_09_crate_shadow_timing_validation.json) — retained solver, all-shortest, controls, trace and final-wrapper facts
+5. [`Task 0024Y report`](reports/0024Y_SEQUENCE_9_CRATE_SHADOW_TIMING_MACHINE_VALIDATION_REPORT.md) — iteration history, exact evidence, frozen-hash audit and protected boundaries
 
 0. [`Task 0024X`](../tasks/0024X_submission_core_levels_9_12_scope_finalization.md) — docs-only submission-core curriculum and compatibility finalization
 1. [`Levels 9–12 scope`](level_design/SUBMISSION_CORE_LEVELS_9_12_SCOPE_CURRENT.md) — frozen briefs, evidence budgets, cut policy and future integration contract

@@ -1,0 +1,42 @@
+{
+  "schema_version": 2,
+  "level_id": "key_route_commitment",
+  "title": "The Key Is Yours",
+  "terrain_rows": [
+    "#########",
+    "#...#...#",
+    "#######.#",
+    "#.......#",
+    "#.#######",
+    "#...#####",
+    "#########"
+  ],
+  "player_spawn": [1, 3],
+  "echoes": [
+    {"id": "echo_route", "delay": 2, "spawn": [1, 1]}
+  ],
+  "plates": [
+    {"id": "plate_route", "position": [3, 1]}
+  ],
+  "doors": [
+    {"id": "door_route", "position": [5, 3], "initial_open": false, "all_plate_ids": ["plate_route"]}
+  ],
+  "exit": {"position": [5, 1]},
+  "metadata": {
+    "teaching_goal": "Only YOU can collect and spend the key; the committed route then depends on a delayed ECHO Door window.",
+    "intended_mechanics": ["you_only_key_collection", "same_turn_lock_consumption", "irreversible_route_commitment", "downstream_delayed_door"],
+    "notes": "Uncatalogued Task 0024Z sequence-10 candidate.",
+    "allow_zero_echo_tutorial": false
+  },
+  "validation": {"recommended_search_depth": 56},
+  "crates": [],
+  "keys": [
+    {"id": "key_main", "key_type": "main", "position": [3, 5]}
+  ],
+  "locks": [
+    {"id": "lock_main", "key_type": "main", "position": [4, 3]}
+  ],
+  "barrier_groups": [],
+  "sensors": [],
+  "latches": []
+}

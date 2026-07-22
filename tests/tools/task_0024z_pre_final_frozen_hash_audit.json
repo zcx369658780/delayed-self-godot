@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "task": "0024Z",
+  "phase": "PRE_FINAL",
+  "audited_utc": "2026-07-22T09:42:38.7783974Z",
+  "head": "5180dcacdf29336cde6248f7536f081b88510d9a",
+  "seal_path": "D:\\Delayed_Self_Evidence\\0024W_complete_core_mechanics_final_validation\\pre_execution_seal.json",
+  "seal_sha256": "0e288adfe29c5881ab1f8cf40adf2df842a6fbbb8c6e5bce7aa14c797cf67ec0",
+  "repository_file_count": 53,
+  "repository_mismatch_count": 0,
+  "repository_mismatches": [],
+  "historical_external_evidence_file_count": 12,
+  "historical_external_evidence_mismatch_count": 0,
+  "historical_external_evidence_mismatches": [],
+  "accepted_sequence_9_and_wrapper_hashes": {
+    "data/levels/crate_shadow_timing.json": "1910f4dc07b1ee508ddbc529b0f0d02db5ca8a3a16a7a277ed236b4efbbe50d1",
+    "tests/levels/task_0024y_crate_shadow_timing_validation.gd": "e81564034bcdf78e62fb2099a11b023d06a8453ca628f15fc2be7617d48a6508",
+    "docs/level_design/validation/sequence_09_crate_shadow_timing_validation.json": "3012eaa965b3a90d271006ebaee121c23fcd92c753ad3520c69d663f9b130c4f",
+    "docs/reports/0024Y_SEQUENCE_9_CRATE_SHADOW_TIMING_MACHINE_VALIDATION_REPORT.md": "d22d08d2538179d2acfbe6e12c499fa6e030044272b743b0e254885a4e30247a",
+    "docs/reports/0024Y_GPT_SEQUENCE_9_CRATE_SHADOW_TIMING_MACHINE_VALIDATION_ACCEPTANCE.md": "b05a572bda8ccf34fe2a837dccaa22844e152cc6cd23ed159e9cfbd43436a6e7",
+    "tests/tools/task_0024y_final_qualification_summary.json": "b5a902aceb52afe613c32f79bb9fd30794bd2daba2f040ac23856368049325d2",
+    "tests/tools/task_0024y_run_case.ps1": "9a36e446b00119adcd5203751619af08db5c4b3ffd888473df143232678bc4a9",
+    "tests/tools/run_owned_godot_headless.ps1": "17c03970f1a4c59d9d87a826471429fef55da75afb7b86c676bb3bdf5205afbc"
+  },
+  "status": "PASS"
+}
