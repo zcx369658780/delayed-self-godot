@@ -3,7 +3,7 @@
 - Status: `CURRENT / TASK 0024AG SCHEMA-V2 VISUAL EVIDENCE CORRECTION`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
 - Active task: `tasks/0024AG_schema_v2_visual_evidence_capture_correction_and_fresh_validation.md`
-- Active status: `SCHEMA_V2_VISUAL_EVIDENCE_CORRECTION_READY_FOR_CODEX`
+- Active status: `BLOCKED_SCHEMA_V2_VISUAL_EVIDENCE_CORRECTION`
 - Closed predecessors: all Tasks through `0024AF`
 - Latest GPT adjudication: `TASK_0024AF_HONEST_RETAINED_CYCLE_DRIVER_BLOCKER_ACCEPTED_FRESH_EVIDENCE_GATE_REQUIRED`
 - Required accepted checkpoint: `f7f0e08edeaebcc796d6908d8e822f0d68c33a17`

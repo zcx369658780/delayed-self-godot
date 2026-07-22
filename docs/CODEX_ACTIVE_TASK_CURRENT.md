@@ -1,6 +1,6 @@
 # Codex active task (CURRENT)
 
-- Status: `SCHEMA_V2_VISUAL_EVIDENCE_CORRECTION_READY_FOR_CODEX`
+- Status: `BLOCKED_SCHEMA_V2_VISUAL_EVIDENCE_CORRECTION`
 - Active task: `tasks/0024AG_schema_v2_visual_evidence_capture_correction_and_fresh_validation.md`
 - Closed predecessors: all Tasks through `0024AF`; none may be resumed directly
 - Latest GPT adjudication: `TASK_0024AF_HONEST_RETAINED_CYCLE_DRIVER_BLOCKER_ACCEPTED_FRESH_EVIDENCE_GATE_REQUIRED`
