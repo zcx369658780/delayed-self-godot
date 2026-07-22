@@ -1,6 +1,6 @@
 # Codex active task (CURRENT)
 
-- Status: `SCHEMA_V2_DYNAMIC_LIFECYCLE_VALIDATION_READY_FOR_CODEX`
+- Status: `BLOCKED_SCHEMA_V2_DYNAMIC_LIFECYCLE_VALIDATION`
 - Active task: `tasks/0024AH_dynamic_lifecycle_signature_registry_and_fresh_schema_v2_visual_validation.md`
 - Closed predecessors: all Tasks through `0024AG`; none may be resumed directly
 - Latest GPT adjudication: `TASK_0024AG_HONEST_LIFECYCLE_SIGNATURE_SAMPLING_BLOCKER_ACCEPTED_FRESH_VALIDATION_GATE_REQUIRED`

@@ -1,0 +1,8 @@
+[CmdletBinding()]param()
+Set-StrictMode -Version Latest; $ErrorActionPreference='Stop'
+. (Join-Path $PSScriptRoot 'task_0024ah_invoke_wrapper_case.ps1') -Library
+$valid='{"schema_version":2,"status":"PASS","underlying_status":"PASS","native_exit_code":0,"marker_pass":true,"stderr":[],"cleanup_invocation_count":1,"remaining_owned_pids":[],"remaining_unproven_pids":[],"stdout":["marker"]}'
+$cases=@(@{name='missing';v=@();e='EXPECTED_ONE_NONEMPTY_VALUE'},@{name='duplicate';v=@($valid,$valid);e='EXPECTED_ONE_NONEMPTY_VALUE'},@{name='non_json';v=@('x');e='RESULT_NOT_JSON_OBJECT'},@{name='truncated';v=@('{"schema_version":2');e='RESULT_NOT_JSON_OBJECT'},@{name='array';v=@('[]');e='RESULT_NOT_JSON_OBJECT'},@{name='null';v=@($valid.Replace('"native_exit_code":0','"native_exit_code":null'));e='MISSING_OR_NULL:native_exit_code'},@{name='wrong_schema';v=@($valid.Replace('"schema_version":2','"schema_version":1'));e='SCHEMA_VERSION_NOT_2'},@{name='wrong_type';v=@($valid.Replace('"marker_pass":true','"marker_pass":"true"'));e='WRONG_TYPE:marker_pass:boolean'})
+$results=foreach($case in $cases){try{[void](ConvertFrom-Task0024AHWrapperValues -Values @($case.v));throw "accepted:$($case.name)"}catch{if(-not $_.Exception.Message.Contains($case.e)){throw};[ordered]@{name=$case.name;rejected=$true;reason=$case.e}}}
+$accepted=ConvertFrom-Task0024AHWrapperValues -Values @($valid)
+[ordered]@{schema_version=1;status='PASS';contract_equivalent_to='task_0024ag_invoke_wrapper_case.ps1';differences=@('task identity','output paths','fail-closed capture');probes=@($results);raw_sha256=$accepted.raw_utf8_sha256;raw_bytes=$accepted.raw_utf8_byte_count}|ConvertTo-Json -Depth 20 -Compress

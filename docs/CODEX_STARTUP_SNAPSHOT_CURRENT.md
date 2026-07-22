@@ -3,7 +3,7 @@
 - Status: `CURRENT / TASK 0024AH DYNAMIC SCHEMA-V2 LIFECYCLE VALIDATION`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
 - Active task: `tasks/0024AH_dynamic_lifecycle_signature_registry_and_fresh_schema_v2_visual_validation.md`
-- Active status: `SCHEMA_V2_DYNAMIC_LIFECYCLE_VALIDATION_READY_FOR_CODEX`
+- Active status: `BLOCKED_SCHEMA_V2_DYNAMIC_LIFECYCLE_VALIDATION`
 - Closed predecessors: all Tasks through `0024AG`
 - Latest GPT adjudication: `TASK_0024AG_HONEST_LIFECYCLE_SIGNATURE_SAMPLING_BLOCKER_ACCEPTED_FRESH_VALIDATION_GATE_REQUIRED`
 - Required accepted checkpoint: `a7b404a63e7a546501be215aaf300cabfa74441c`
