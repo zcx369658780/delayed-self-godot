@@ -1,0 +1,37 @@
+{
+  "task": "0024AF_v2",
+  "invocation": "621b1e96-adeb-4a7d-8398-68fef9c2b0a4",
+  "cases": [
+    {
+      "name": "focused",
+      "script": "res://tests/presentation/task_0024af_schema_v2_minimum_visual_validation.gd",
+      "marker": "TASK_0024AF_SCHEMA_V2_MINIMUM_VISUAL_PASS",
+      "stderr": "ForbidNonempty"
+    },
+    {
+      "name": "route",
+      "script": "res://tests/playtest/task_0024ae_submission_core_owner_review_launcher.gd",
+      "marker": "TASK_0024AE_ISOLATED_STAGING_OWNER_ROUTE_PASS",
+      "stderr": "ForbidNonempty"
+    },
+    {
+      "name": "batch",
+      "script": "res://tests/curriculum/task_0024ad_submission_core_1_12_batch_validation.gd",
+      "marker": "TASK_0024AD_SUBMISSION_CORE_1_12_BATCH_PASS",
+      "stderr": "ForbidNonempty"
+    },
+    {
+      "name": "aggregate",
+      "script": "res://tests/run_all.gd",
+      "marker": "TASK_0003_TESTS_PASS assertions=621 vectors=9",
+      "stderr": "Allow"
+    },
+    {
+      "name": "complete_v2",
+      "script": "res://tests/simulation/task_0024v_v2_solver_replay_canonical_malformed.gd",
+      "marker": "TASK_0024V_V2_COMPLETE_PASS",
+      "stderr": "ForbidNonempty"
+    }
+  ],
+  "consumed": true
+}

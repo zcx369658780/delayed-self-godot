@@ -1,6 +1,6 @@
 # Codex active task (CURRENT)
 
-- Status: `SCHEMA_V2_MINIMUM_OWNER_REVIEW_PRESENTATION_READY_FOR_CODEX`
+- Status: `BLOCKED_SCHEMA_V2_MINIMUM_OWNER_REVIEW_PRESENTATION`
 - Active task: `tasks/0024AF_schema_v2_minimum_owner_review_visual_presentation_v2.md`
 - Superseded task: `tasks/0024AF_schema_v2_minimum_owner_review_visual_presentation.md`; do not execute it
 - Closed predecessors: all Tasks through `0024AE`; none may be resumed directly

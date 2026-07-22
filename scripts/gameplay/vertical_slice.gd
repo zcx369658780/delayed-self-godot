@@ -6,6 +6,7 @@ signal request_back
 const LevelLoader = preload("res://scripts/simulation/level_loader.gd")
 const Simulation = preload("res://scripts/simulation/simulation.gd")
 const TimelineModel = preload("res://scripts/gameplay/timeline_model.gd")
+const SchemaV2Presentation = preload("res://scripts/gameplay/schema_v2_presentation.gd")
 const LEVEL_PATH := "res://data/levels/vertical_slice_delay_3.json"
 const HUD_MODES := ["INTRO_MINIMAL", "GUIDED_ECHO", "STANDARD_COMPACT"]
 const CELL := 60.0
@@ -222,6 +223,12 @@ func get_presentation_snapshot() -> Dictionary:
 	}
 
 
+func get_schema_v2_presentation_snapshot() -> Array:
+	if level.is_empty() or state.is_empty():
+		return []
+	return SchemaV2Presentation.build(level, state, _board_rect(), CELL, Rect2(0, 0, 960, 540)).duplicate(true)
+
+
 func set_reduced_motion_for_test(enabled: bool) -> void:
 	reduced_motion = enabled
 	queue_redraw()
@@ -418,6 +425,7 @@ func _draw() -> void:
 		for x in level.terrain_rows[y].length():
 			var rectangle := Rect2(_board_origin() + Vector2(x, y) * CELL, Vector2(CELL - CELL_GAP, CELL - CELL_GAP))
 			draw_rect(rectangle, Color("263449") if level.terrain_rows[y][x] == "." else Color("0a0f1a"))
+	_draw_schema_v2_descriptors(false)
 	var pressed_plate_ids: Array = simulation.pressed_plate_ids(level, state)
 	for door in level.doors:
 		var dependency_ids: Array = door.all_plate_ids.duplicate()
@@ -478,9 +486,65 @@ func _draw() -> void:
 	draw_circle(_center(state.player_position), 15, Color("f8fafc"))
 	draw_circle(_center(state.player_position), 7, Color("22d3ee"))
 	_draw_actor_letter(_center(state.player_position), "Y", Color("082f49"))
+	_draw_schema_v2_descriptors(true)
 	_draw_exit_overlay(exit_position)
 	_draw_blocked_door_feedback()
 	_draw_teaching_badge()
+
+
+func _draw_schema_v2_descriptors(tokens_only: bool) -> void:
+	for descriptor in get_schema_v2_presentation_snapshot():
+		if (int(descriptor.layer) >= 5) != tokens_only:
+			continue
+		var bounds: Dictionary = descriptor.bounds
+		var rect := Rect2(float(bounds.x), float(bounds.y), float(bounds.width), float(bounds.height))
+		var center := rect.get_center()
+		match descriptor.family:
+			"crate":
+				draw_rect(rect, Color("9a6a38"))
+				draw_rect(rect, Color("fff1c2"), false, 2)
+				draw_line(rect.position + Vector2(4, 4), rect.end - Vector2(4, 4), Color("fff1c2"), 2)
+				draw_line(Vector2(rect.end.x - 4, rect.position.y + 4), Vector2(rect.position.x + 4, rect.end.y - 4), Color("fff1c2"), 2)
+			"floor_key":
+				draw_circle(center - Vector2(8, 0), 7, Color("fde68a"), false, 2)
+				draw_line(center - Vector2(1, 0), center + Vector2(13, 0), Color("fde68a"), 3)
+				draw_line(center + Vector2(8, 0), center + Vector2(8, 5), Color("fde68a"), 2)
+				draw_string(ThemeDB.fallback_font, rect.position + Vector2(2, 13), descriptor.type_group_token, HORIZONTAL_ALIGNMENT_LEFT, -1, 11, Color("fff7d6"))
+			"lock":
+				draw_rect(Rect2(center - Vector2(12, 4), Vector2(24, 17)), Color("7f1d1d"))
+				draw_arc(center - Vector2(0, 4), 9, PI, TAU, 16, Color("fecaca"), 2)
+				draw_line(center + Vector2(-9, 5), center + Vector2(9, 5), Color("fecaca"), 2)
+				draw_string(ThemeDB.fallback_font, rect.position + Vector2(2, 13), descriptor.type_group_token, HORIZONTAL_ALIGNMENT_LEFT, -1, 11, Color("fff1f2"))
+			"sensor":
+				var active: bool = String(descriptor.state_variant).ends_with("ACTIVE")
+				draw_arc(center, 19, 0, TAU, 24, Color("e0e7ff"), 3 if active else 1.5)
+				if active: draw_arc(center, 13, 0, TAU, 20, Color("c4b5fd"), 2)
+				draw_string(ThemeDB.fallback_font, center + Vector2(-6, 6), descriptor.glyph_token, HORIZONTAL_ALIGNMENT_CENTER, 12, 15, Color("ffffff"))
+			"barrier":
+				if descriptor.state_variant == "CLOSED":
+					draw_rect(rect, Color("7f1d1d", 0.92))
+					for offset in [-8.0, 0.0, 8.0]: draw_line(center + Vector2(offset, -16), center + Vector2(offset, 16), Color("fee2e2"), 2)
+				else:
+					draw_rect(rect, Color("a7f3d0", 0.14), false, 2)
+					draw_line(rect.position, rect.end, Color("a7f3d0"), 2 if descriptor.state_variant == "OPEN" else 4)
+					draw_line(Vector2(rect.end.x, rect.position.y), Vector2(rect.position.x, rect.end.y), Color("a7f3d0"), 2 if descriptor.state_variant == "OPEN" else 4)
+				draw_string(ThemeDB.fallback_font, center + Vector2(-9, 5), descriptor.type_group_token, HORIZONTAL_ALIGNMENT_CENTER, 18, 11, Color("ffffff"))
+			"latch":
+				var activated: bool = String(descriptor.state_variant) == "ACTIVATED"
+				var diamond := PackedVector2Array([center + Vector2(0, -15), center + Vector2(15, 0), center + Vector2(0, 15), center + Vector2(-15, 0)])
+				draw_colored_polygon(diamond, Color("86efac") if activated else Color("334155"))
+				for i in diamond.size(): draw_line(diamond[i], diamond[(i + 1) % diamond.size()], Color("ecfdf5"), 2)
+				draw_string(ThemeDB.fallback_font, center + Vector2(-6, 5), descriptor.glyph_token, HORIZONTAL_ALIGNMENT_CENTER, 12, 14, Color("052e16"))
+				_draw_schema_token(rect, descriptor.type_group_token)
+			"held_key":
+				draw_rect(rect, Color("172554", 0.96))
+				draw_rect(rect, Color("bfdbfe"), false, 1.5)
+				draw_string(ThemeDB.fallback_font, rect.position + Vector2(4, 16), "HELD " + descriptor.type_group_token, HORIZONTAL_ALIGNMENT_LEFT, -1, 12, Color("eff6ff"))
+
+
+func _draw_schema_token(rect: Rect2, token: String) -> void:
+	if token != "":
+		draw_string(ThemeDB.fallback_font, rect.position + Vector2(1, 13), token, HORIZONTAL_ALIGNMENT_LEFT, -1, 11, Color("ffffff"))
 
 
 func _draw_dependency_pips(door: Dictionary, door_center: Vector2, pressed: Array) -> void:

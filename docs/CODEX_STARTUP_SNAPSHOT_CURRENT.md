@@ -3,7 +3,7 @@
 - Status: `CURRENT / TASK 0024AF V2 MULTI-SUBAGENT SCHEMA-V2 VISUAL GATE`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
 - Active task: `tasks/0024AF_schema_v2_minimum_owner_review_visual_presentation_v2.md`
-- Active status: `SCHEMA_V2_MINIMUM_OWNER_REVIEW_PRESENTATION_READY_FOR_CODEX`
+- Active status: `BLOCKED_SCHEMA_V2_MINIMUM_OWNER_REVIEW_PRESENTATION`
 - Superseded task: `tasks/0024AF_schema_v2_minimum_owner_review_visual_presentation.md`; do not execute it
 - Closed predecessors: all Tasks through `0024AE`
 - Latest GPT adjudication: `TASK_0024AE_ISOLATED_STAGING_OWNER_REVIEW_ROUTE_ACCEPTED`
