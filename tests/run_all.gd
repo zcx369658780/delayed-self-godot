@@ -498,7 +498,7 @@ func _test_loader() -> void:
 	var value := base.duplicate(true)
 	value["surprise"] = true
 	_expect_code(loader.validate_dict(value), "SCHEMA_SHAPE_ERROR", "unknown top-level field")
-	value = base.duplicate(true); value.schema_version = 2
+	value = base.duplicate(true); value.schema_version = 3
 	_expect_code(loader.validate_dict(value), "UNSUPPORTED_SCHEMA_VERSION", "unsupported version")
 	value = base.duplicate(true); value.terrain_rows[1] = "#..#"
 	_expect_code(loader.validate_dict(value), "RAGGED_TERRAIN", "ragged terrain")

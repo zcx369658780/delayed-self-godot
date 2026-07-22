@@ -98,3 +98,9 @@ Future static validators for PowerShell harnesses must reject bare command invoc
 Task 0024U statically and behaviorally qualified the assigned-scalar doctrine before sealing: zero/one scalar behavior, historical rejection, corrected acceptance, four driver assignments/comparisons and zero wrapper/Godot launches all passed. The corrected driver then created its attempt record and executed four cases once each.
 
 Lifecycle behavior was correct even though the task verdict was blocked: cleanup invocation count was one for every case, no owned/unproven PID remained, every before/after count was zero, final Godot count was zero and no unrelated process was touched. The nonpass came from aggregate and complete-v2 test results, not process ownership or cleanup.
+
+## 10. Task 0024V repeatable test-correction qualification
+
+Task 0024V separates repeatable correction qualification from any later one-shot seal. Static validation launches no Godot/wrapper and must pass before each cycle. A qualification runner must checkpoint its invocation before launching a case and after static/case milestones; if it returns without retained evidence, the case execution is unproven and must not be reconstructed.
+
+Cycle 001 exposed that record-lifecycle defect and is retained as unproven. After adding immediate progress checkpoints, cycle 002 ran exactly Aggregate and the new complete-v2 script through the accepted wrapper. Both passed with native exit zero, exact marker/stderr policy, cleanup count one, no residual owned/unproven PID and zero final Godot. This evidence qualifies corrected tests only; it is not a seal, final driver or foundation acceptance.

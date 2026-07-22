@@ -2,6 +2,9 @@
 
 ## Start here
 
+0. [`Task 0024V`](../tasks/0024V_stale_schema_regression_and_complete_v2_test_correction_qualification.md) — qualified repeatable test-contract correction gate
+1. [`Task 0024V report`](reports/0024V_TEST_CORRECTION_QUALIFICATION_REPORT.md) — exact two-artifact correction, static equivalence, cycle history and passing two-case qualification
+
 0. [`Task 0024U`](../tasks/0024U_corrected_sealed_driver_and_complete_core_mechanics_validation_gate.md) — terminally closed corrected sealed validation
 1. [`Task 0024U report`](reports/0024U_CORRECTED_COMPLETE_CORE_MECHANICS_FINAL_VALIDATION_REPORT.md) — qualification/seal pass, complete four-case evidence and aggregate/complete-v2 blocker
 

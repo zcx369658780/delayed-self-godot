@@ -1,5 +1,11 @@
 # Project memory
 
+## Task 0024V test-contract correction qualification
+
+Task 0024V changed the aggregate unsupported-version probe from supported v2 to unsupported v3 and derived a new complete-v2 script from immutable 0024T with explicit typing at exactly 15 parse sites. Static equivalence proves no mechanics, fixture, solver-limit, malformed-case or canonical-state condition changed; the aggregate retains 253 expectation calls and 621 runtime assertions, and all 44 complete-v2 IDs occur once.
+
+Qualification cycle 001 retained no case/summary evidence and is classified unproven, not reconstructed as a result. The runner was repaired within its authorized path to checkpoint progress immediately. Cycle 002 then passed Aggregate and complete-v2 through the accepted wrapper; both exited natively at zero, obeyed exact stderr policy, cleaned exactly once and ended with no owned/unproven or final Godot process. Frozen and historical hashes remained exact. This qualifies tests only and creates no seal, final driver or foundation acceptance.
+
 ## Task 0024U corrected sealed final-validation blocker
 
 Task 0024U proved the assigned-scalar PowerShell correction through pure behavior and AST qualification, then sealed and ran one fresh four-case session. Task 0012 standalone and focused-v2 passed. Aggregate failed one unsupported-version assertion at 621 assertions, and the immutable complete-v2 script failed parsing on 15 type-inference sites. Every wrapper cleanup count was one; all case boundaries and final state had zero Godot; frozen and historical hashes stayed exact. The complete session cannot be rerun under 0024U and establishes no foundation acceptance.

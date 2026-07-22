@@ -1,5 +1,11 @@
 # Handoff master (CURRENT)
 
+## Task 0024V test correction qualified
+
+Task 0024V completed at `CORE_MECHANICS_TEST_CORRECTION_QUALIFIED_FOR_GPT_REVIEW`. Aggregate changed only its unsupported-version probe from 2 to 3 and still passes 621 assertions. The new complete-v2 test changes only 15 explicit declaration types plus Task 0024V markers and retains all 44 coverage IDs. Cycle 001 is recorded as an unproven harness-record failure; after adding immediate progress checkpoints, repeatable cycle 002 passed both wrapper cases with native exit 0, exact stderr policy, cleanup count one and zero residual/final Godot processes.
+
+No seal, final driver or foundation acceptance occurred. Do not resume 0024T/0024U, implement expansion, or design/run 0024W without new explicit authority. Read `docs/reports/0024V_TEST_CORRECTION_QUALIFICATION_REPORT.md` and await GPT review.
+
 ## Task 0024U complete final-session blocker
 
 Task 0024U corrected and qualified the PowerShell preconditions, wrote one fresh read-only seal and executed all four wrapper cases exactly once. Task 0012 standalone and focused-v2 passed. Aggregate exited 1 on one unsupported-version assertion failure out of 621; immutable complete-v2 exited 1 on 15 GDScript type-inference parse errors. Cleanup ran once per case, Godot ended at zero and all frozen/historical hashes stayed exact. Do not rerun or modify sealed artifacts. Continue only from a new task after reading `docs/reports/0024U_CORRECTED_COMPLETE_CORE_MECHANICS_FINAL_VALIDATION_REPORT.md`.

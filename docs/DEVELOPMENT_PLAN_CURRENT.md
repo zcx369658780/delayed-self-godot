@@ -1,5 +1,13 @@
 # Development plan (CURRENT)
 
+> 2026-07-22 — Task 0024V corrected the stale aggregate schema probe and the
+> 15 declaration-only complete-v2 parse sites. Static equivalence retained 621
+> aggregate assertions and all 44 coverage IDs. After one honestly recorded
+> harness-evidence lifecycle failure, repeatable cycle 002 passed Aggregate and
+> complete-v2 through the accepted wrapper with one cleanup each and zero final
+> Godot processes. This is test qualification only; a separate accepted 0024W
+> gate is required for any new seal/final validation or foundation conclusion.
+
 > 2026-07-22 — Task 0024U qualified corrected assigned-scalar driver
 > preconditions, sealed a fresh four-case package and consumed one complete
 > final session. Task 0012 and focused v2 passed; aggregate failed one of 621
