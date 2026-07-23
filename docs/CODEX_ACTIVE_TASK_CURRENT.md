@@ -1,24 +1,23 @@
 # Codex active task (CURRENT)
 
-- Status: `BLOCKED_SCHEMA_V2_RETAINED_DRIVER_SCOPE_ISOLATION`
-- Active task: none; Task `0024AK` is terminal pending GPT/owner adjudication
+- Status: `PROCESS_ISOLATED_WRITE_AHEAD_RETAINED_VALIDATION_READY_FOR_CODEX`
+- Active task: `tasks/0024AL_process_isolated_write_ahead_retained_cycle_and_schema_v2_visual_validation.md`
 - Closed predecessors: all Tasks through `0024AK`; none may be resumed directly
-- Latest GPT adjudication: `TASK_0024AJ_HONEST_LIBRARY_SCOPE_RETAINED_CYCLE_BLOCKER_ACCEPTED_FRESH_DRIVER_GATE_REQUIRED`
-- Required accepted checkpoint: `75b6cfa6f918c2d4ff52ebbe2c0ec014fec6f3c5`
-- Task publication commit: `1dde492df95a220899471515a85c874783d8a26b`
-- Historical blocked Task 0024AJ result: `d92e315e5667d38fec59b508dd6eb16d6c0ed816`
+- Latest GPT adjudication: `TASK_0024AK_HONEST_MODULE_SESSION_RELOAD_DURABILITY_BLOCKER_ACCEPTED_FRESH_PROCESS_ISOLATED_GATE_REQUIRED`
+- Required accepted checkpoint: `0388be4b7b97ff45d960eab32f3ab88879f78bdb`
+- Task publication commit: `39549559d08ac34f100e0d9bce3eee4b5b891310`
+- Historical blocked Task 0024AK result: `e6b57d4ed2f703287abab88809a551c5da50114d`
+- Historical consumed AK manifest: `2de60fc6-9065-4ecf-a5d9-a09b739f1461`
 - Historical consumed AJ manifest: `d481c57c-1999-42e8-b000-84068b1c103d`
-- Terminal Task 0024AK manifest: `2de60fc6-9065-4ecf-a5d9-a09b739f1461`
-- Terminal Task 0024AK invocation: `a3331dbe-26b5-4a56-ade6-25bfc0aefd9a`
-- Historical blocked Task 0024AI result: `2df29272b4c1696063aae00ed8e796e28f4f5929`
+- Frozen qualified focused validator: `tests/presentation/task_0024aj_sensor_contract_and_dynamic_signature_validation.gd`
 - Accepted Task 0024AE result: `678f59025ce5fc53a423e7d1aa73bf2a6c09dfd1`
 - Accepted wrapper implementation/blob: `7c0712d6a602dc23200ccb147d0096acc6333305` / `5f14eb0feff903b40311c1c7283b20e2eabbffc2`
 - Production baseline: exactly eight cataloged levels; sequence 8 remains the sole formal finale
 - Accepted uncatalogued candidates: `crate_shadow_timing`, `key_route_commitment`, `identity_shift_bridge`, `lasting_echo_latch`
 - Execution policy: multi-subagent required through local `.codex/config.toml`
 
-Task 0024AJ is accepted only as an honest consumed-cycle Library-scope blocker. Its four candidate preflights, stable sensor contract, swapped-identity control, exact thirteen-signature registry, repeatable qualifications 5/6 and PRE/POST audits passed. Manifest `d481c57c-1999-42e8-b000-84068b1c103d` was then consumed before the first case; dot-sourcing the AJ adapter in Library mode overwrote the driver's populated `GodotPath` with an empty value. Zero retained cases ran and Godot remained zero. All `task_0024aj_*` artifacts are immutable and must not be repaired or rerun.
+Task 0024AK is accepted only as an honest consumed-cycle module-session/durability blocker. Its process/scope/parser probes, two fresh frozen-AJ focused qualifications and audits passed. Manifest `2de60fc6-9065-4ecf-a5d9-a09b739f1461` was consumed; the first adapter/Godot case returned one parseable capture, but the adapter's `Import-Module -Force` reload invalidated the parent driver's parser command before durable case-file creation. Zero retained case records exist, later cases were not run and final Godot was zero. All `task_0024ak_*` artifacts are immutable.
 
-Task 0024AK completed its scope/parser/preflight gates, two independent frozen-AJ focused qualifications and PRE_FINAL audit. Manifest `2de60fc6-9065-4ecf-a5d9-a09b739f1461` was then atomically consumed. The first AJ adapter/Godot case returned one parseable capture, but final-driver raw-wrapper revalidation failed because `ConvertFrom-Task0024AKWrapperValues` was not resolvable in driver scope. The capture was not durably retained, zero driver case records exist, the remaining four cases were not run and final Godot was zero.
+Task 0024AL is the only active scope. It must use a Python parent orchestrator and one fresh `pwsh -NoProfile -NonInteractive -File` worker process per case. Each worker must atomically persist its complete case record before success; the parent must validate durable files independently and journal progress after every case. Two focused qualifications and one complete five-case non-retained rehearsal through the exact final architecture are mandatory before a retained manifest may be declared.
 
-Task 0024AK is terminal and must not be repaired or rerun. Read its report and wait for GPT/owner adjudication or a new explicit bounded task. The local untracked `.codex/config.toml` remains the sole cleanliness exception; keep it byte-identical and never stage or commit it. Owner subjective playthrough, product admission and release work remain unauthorized.
+Before retained declaration, repairable defects in new `task_0024al_*` tools are authoring failures and must be fixed, reviewed and requalified rather than treated as task termination. The local untracked `.codex/config.toml` is the sole cleanliness exception; keep it byte-identical and never stage or commit it. Owner subjective playthrough, product admission and release work remain unauthorized.
