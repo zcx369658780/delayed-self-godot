@@ -1,13 +1,14 @@
 # Codex startup snapshot (CURRENT)
 
-- Status: `CURRENT / TASK 0024AI CANDIDATE GAMEPLAY ROUTE AND DYNAMIC VISUAL VALIDATION`
+- Status: `CURRENT / TASK 0024AJ SENSOR CONTRACT AND DYNAMIC VISUAL VALIDATION`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Active task: `tasks/0024AI_candidate_gameplay_route_harness_correction_and_dynamic_schema_v2_visual_validation.md`
-- Active status: `BLOCKED_SCHEMA_V2_CANDIDATE_GAMEPLAY_ROUTE_VALIDATION`
-- Closed predecessors: all Tasks through `0024AH`
-- Latest GPT adjudication: `TASK_0024AH_HONEST_GAMEPLAY_ROUTE_PAYLOAD_ID_BLOCKER_ACCEPTED_FRESH_HARNESS_GATE_REQUIRED`
-- Required accepted checkpoint: `5b6b54b3d71b4f1117388e3b36f86c4c0b6a8609`
-- Task publication commit: `3ee22b83dad4db2b2300a4ac28ff4870af2469ca`
+- Active task: `tasks/0024AJ_sensor_descriptor_contract_and_wrong_actor_control_fresh_schema_v2_validation.md`
+- Active status: `SCHEMA_V2_SENSOR_CONTRACT_VALIDATION_READY_FOR_CODEX`
+- Closed predecessors: all Tasks through `0024AI`
+- Latest GPT adjudication: `TASK_0024AI_HONEST_SENSOR_SELECTOR_AND_WRONG_ACTOR_SAMPLING_BLOCKER_ACCEPTED_FRESH_SENSOR_GATE_REQUIRED`
+- Required accepted checkpoint: `934ebefd4747db351db11c7628130a2275fd3786`
+- Task publication commit: `0146fa4a7e4117e96a73d07fe72e421e5e42c7fd`
+- Historical blocked Task 0024AI result: `2df29272b4c1696063aae00ed8e796e28f4f5929`
 - Historical blocked Task 0024AH result: `1bef7ec79898179079265a132678753da9e1c8f7`
 - Historical blocked Task 0024AG result: `2813d08bf65eae2ae0c528a4825bfc133d5cdb43`
 - Historical Task 0024AF consumed invocation: `621b1e96-adeb-4a7d-8398-68fef9c2b0a4`
@@ -16,11 +17,11 @@
 - Production baseline: eight cataloged levels; sequence 8 remains the sole formal finale
 - Owner route: machine-qualified isolated staging route
 - Owner playthrough: `NOT_YET_REVIEWED`
-- Presentation: provisional implementation; candidate Gameplay route harness correction pending
+- Presentation: provisional implementation; exact sensor-contract validation pending
 - Execution policy: mandatory multi-subagent workflow through `.codex/config.toml`
 
-Before work, fetch and fast-forward to current `origin/main`. Require no tracked/staged changes and allow only unchanged untracked `.codex/config.toml`. Read it for role routing, record its hash without exposing contents, and never stage, modify or delete it.
+Before work, fetch and fast-forward to current `origin/main`. Require no tracked/staged changes and allow only unchanged untracked `.codex/config.toml`. Read it for role routing, record its hash without exposing contents, and never stage, modify, or delete it.
 
-Read `AGENTS.md`, this file, `docs/CODEX_ACTIVE_TASK_CURRENT.md`, the full Task 0024AI file, Task 0024AH report/GPT acceptance, Task 0024AG and 0024AF blocker reports/GPT acceptances, accepted sequence-9–12 reports, Task 0024AE acceptance/report, Task 0024AD matrix and the headless lifecycle policy. Use at least three distinct subagent roles; only the main agent may launch Godot, integrate final changes, execute the retained cycle, commit or push.
+Read `AGENTS.md`, this file, `docs/CODEX_ACTIVE_TASK_CURRENT.md`, the full Task 0024AJ file, Task 0024AI report/GPT acceptance, Tasks 0024AF–AH blocker reports/GPT acceptances, Task 0024AB sequence-11 corrected report/summary, accepted sequence-9–12 reports, Task 0024AE acceptance/report, Task 0024AD matrix, and the headless lifecycle policy. Use at least three distinct subagent roles; only the main agent may launch Godot, integrate final changes, execute the retained cycle, commit, or push.
 
-The four candidate Gameplay preflight must use the exact `level_id` returned by public LevelLoader and the exact matching path. Internal aliases must never be passed as route payload IDs. Do not edit or rerun historical Task 0024AF–AH artifacts, run owner subjective playthrough, inspect production Profile data, or modify production catalog/finale/Profile/localization/assets/audio/build/release/submission surfaces.
+The four candidate Gameplay preflights must use exact public-loader IDs and paths. Sensor descriptors must be selected by stable ID and exact public `YOU_ONLY/ECHO_ONLY` activator-derived variants. Wrong-actor evidence must use the accepted swapped-identity control rather than assuming all sensors are inactive at a fixed witness turn. Do not edit or rerun historical Task 0024AF–AI artifacts, run owner subjective playthrough, inspect production Profile data, or modify production catalog/finale/Profile/localization/assets/audio/build/release/submission surfaces.
