@@ -5,6 +5,7 @@
 - Closed predecessors: all Tasks through `0024AL`; none may be resumed directly
 - Latest GPT adjudication: `TASK_0024AL_PROCESS_ISOLATED_WRITE_AHEAD_SCHEMA_V2_MINIMUM_OWNER_REVIEW_PRESENTATION_ACCEPTED`
 - GPT acceptance report: `docs/reports/0024AL_GPT_PROCESS_ISOLATED_WRITE_AHEAD_SCHEMA_V2_PRESENTATION_ACCEPTANCE.md`
+- Session handoff: `docs/handoffs/DELAYED_SELF_SESSION_HANDOFF_AFTER_TASK_0024AL_ACCEPTANCE_2026_07_23.md`
 - Accepted Task 0024AL result commit: `0411b638a303ec427d1ca3bb65cbcf32876ffb78`
 - GPT acceptance commit: `f3535707e8f91e40b2b6c455c52b63ea0dd1255e`
 - Consumed AL manifest: `45a25cc1-1a44-43dd-9861-ce8a3596a066`
