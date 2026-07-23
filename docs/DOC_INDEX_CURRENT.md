@@ -2,6 +2,9 @@
 
 ## Start here
 
+0. [`Task 0024AJ`](../tasks/0024AJ_sensor_descriptor_contract_and_wrong_actor_control_fresh_schema_v2_validation.md) — terminal consumed-cycle sensor-contract validation blocker
+1. [`Task 0024AJ report`](reports/0024AJ_SENSOR_CONTRACT_AND_DYNAMIC_SCHEMA_V2_VISUAL_VALIDATION_REPORT.md) — passing repeatable evidence, consumed-before-first-case failure and no-rerun boundary
+
 0. [`Task 0024AE`](../tasks/0024AE_isolated_staging_catalog_and_owner_review_route_qualification.md) — completed isolated staging catalog and owner-route machine qualification
 1. [`Task 0024AE report`](reports/0024AE_SUBMISSION_CORE_OWNER_REVIEW_ROUTE_REPORT.md) — route architecture, boundary proof, repeatable qualification and retained four-case evidence
 2. [`Owner curriculum worksheet`](playtest/SUBMISSION_CORE_1_12_OWNER_CURRICULUM_REVIEW_CURRENT.md) — route-qualified but subjective fields remain `NOT_YET_REVIEWED`

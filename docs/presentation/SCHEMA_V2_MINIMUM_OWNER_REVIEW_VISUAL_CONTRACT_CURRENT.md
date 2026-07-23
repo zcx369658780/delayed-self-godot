@@ -1,5 +1,9 @@
 # Schema-v2 minimum owner-review visual contract
 
+> Task 0024AJ twice qualified this contract repeatably, but its retained cycle
+> was consumed before case 1 by a final-driver `GodotPath` scope defect. Machine
+> presentation readiness therefore remains blocked pending a new explicit gate.
+
 The presentation helper emits deterministic, deep-copied descriptors shared by Gameplay drawing and focused validation. Each descriptor has a family, stable ID, cell/position, layer, state variant, shape/glyph/type-or-group token, scalar bounds and monochrome signature.
 
 - Crates use box/cross structure.

@@ -1,5 +1,9 @@
 # Project memory
 
+## Task 0024AJ sensor-contract validation blocker
+
+Task 0024AJ twice qualified exact stable-ID/public-activator sensor descriptors, the accepted swapped-identity wrong-actor control, per-cell bridge lifecycle and 13 pairwise-distinct presentation signatures. Exact-13 parsing and PRE_FINAL preservation passed. Manifest `d481c57c-1999-42e8-b000-84068b1c103d` was then consumed before case 1. Library-mode dot-sourcing of the adapter overwrote the final driver's `GodotPath`, causing empty-argument binding failure. No retained case ran; final Godot was zero. Terminal status is `BLOCKED_SCHEMA_V2_SENSOR_CONTRACT_VALIDATION`; Task 0024AJ must not be repaired or rerun.
+
 ## Task 0024AE isolated staging owner-review route
 
 Task 0024AE created a test-owned 12-entry staging catalog and a pre-tree AppRoot launcher bound to the exact isolated Profile path. Production entries 1–7 remain semantically identical; sequence 8 differs only by staging `final_level=false`; accepted candidates 9–12 form the exact prerequisite chain and sequence 12 alone is staging-final. Production catalog, product route code, levels and accepted evidence remained unchanged.

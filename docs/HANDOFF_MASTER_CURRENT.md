@@ -1,5 +1,11 @@
 # Handoff master (CURRENT)
 
+## Task 0024AJ consumed-cycle blocker
+
+Task 0024AJ ended at `BLOCKED_SCHEMA_V2_SENSOR_CONTRACT_VALIDATION`. Two independent focused qualifications passed with exact stable-ID/public-activator sensor variants, the accepted swapped-identity control, action 10 open/unoccupied, actions 11/12 per-cell deferral, action 13 vacancy-close and 13 distinct signatures. PRE_FINAL passed with zero frozen mismatch.
+
+Manifest `d481c57c-1999-42e8-b000-84068b1c103d` was declared and atomically marked `CONSUMED_BEFORE_FIRST_CASE`. The final driver then passed an empty `GodotPath` to the first adapter because dot-sourcing the adapter library overwrote the same-named driver parameter. No retained case ran, no final result JSON exists and Godot ended at zero. Do not repair or rerun Task 0024AJ. Read the 0024AJ report and wait for GPT/owner adjudication or a new bounded task.
+
 ## Task 0024AE isolated staging owner-review route ready for GPT review
 
 Task 0024AE completed at `ISOLATED_STAGING_OWNER_REVIEW_ROUTE_READY_FOR_GPT_REVIEW`. A test-owned 12-entry catalog preserves production entries 1–7, changes only sequence 8 `final_level` to false, appends accepted candidates 9–12, and makes sequence 12 the sole staging-only finale. The launcher fixes that catalog and exact `user://delayed_self_test_profiles/task_0024ae_owner_curriculum/delayed_self_profile.json` configuration before AppRoot enters the tree, then uses normal selection/completion/profile routing.

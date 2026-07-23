@@ -1,0 +1,7 @@
+[CmdletBinding()]param()
+Set-StrictMode -Version Latest; $ErrorActionPreference='Stop'
+. (Join-Path $PSScriptRoot 'task_0024aj_evidence_capture_parser.ps1') -Library
+$base=@('multi_subagent_ledger','adapter_parser_qualification','static_preservation','candidate_route_preflight','sensor_public_contract_inventory','sensor_barrier_lifecycle','swapped_identity_wrong_actor_control','lifecycle_signature_registry','crate_lifecycle','key_lock_inventory_lifecycle','latch_lifecycle','fit_layering_v1_regression','summary'|ForEach-Object{"TASK_0024AJ_EVIDENCE {`"schema_version`":1,`"kind`":`"$_`"}"})
+$cases=@(@{name='missing';lines=$base[0..11];error='MISSING_KIND:summary'},@{name='duplicate';lines=@($base+$base[0]);error='DUPLICATE_KIND'},@{name='invalid';lines=@($base[0..11]+'TASK_0024AJ_EVIDENCE {') ;error='INVALID_JSON'},@{name='truncated';lines=@($base[0..11]+'TASK_0024AJ_EVIDENCE {"schema_version":1,"kind":"summary"');error='INVALID_JSON'},@{name='over_bound';lines=@($base[0..11]+('TASK_0024AJ_EVIDENCE {"schema_version":1,"kind":"summary","x":"'+('a'*1800)+'"}'));error='OVER_BOUND'})
+$results=foreach($case in $cases){try{[void](ConvertFrom-Task0024AJEvidenceLines -Lines $case.lines);throw "accepted:$($case.name)"}catch{if(-not $_.Exception.Message.Contains($case.error)){throw};[ordered]@{name=$case.name;rejected=$true;reason=$case.error}}}
+[ordered]@{schema_version=1;status='PASS';probes=@($results)}|ConvertTo-Json -Depth 20 -Compress

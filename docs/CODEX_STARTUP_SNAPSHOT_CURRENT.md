@@ -1,9 +1,9 @@
 # Codex startup snapshot (CURRENT)
 
-- Status: `CURRENT / TASK 0024AJ SENSOR CONTRACT AND DYNAMIC VISUAL VALIDATION`
+- Status: `CURRENT / TASK 0024AJ CONSUMED-CYCLE BLOCKER`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
 - Active task: `tasks/0024AJ_sensor_descriptor_contract_and_wrong_actor_control_fresh_schema_v2_validation.md`
-- Active status: `SCHEMA_V2_SENSOR_CONTRACT_VALIDATION_READY_FOR_CODEX`
+- Active status: `BLOCKED_SCHEMA_V2_SENSOR_CONTRACT_VALIDATION`
 - Closed predecessors: all Tasks through `0024AI`
 - Latest GPT adjudication: `TASK_0024AI_HONEST_SENSOR_SELECTOR_AND_WRONG_ACTOR_SAMPLING_BLOCKER_ACCEPTED_FRESH_SENSOR_GATE_REQUIRED`
 - Required accepted checkpoint: `934ebefd4747db351db11c7628130a2275fd3786`
@@ -24,4 +24,4 @@ Before work, fetch and fast-forward to current `origin/main`. Require no tracked
 
 Read `AGENTS.md`, this file, `docs/CODEX_ACTIVE_TASK_CURRENT.md`, the full Task 0024AJ file, Task 0024AI report/GPT acceptance, Tasks 0024AF–AH blocker reports/GPT acceptances, Task 0024AB sequence-11 corrected report/summary, accepted sequence-9–12 reports, Task 0024AE acceptance/report, Task 0024AD matrix, and the headless lifecycle policy. Use at least three distinct subagent roles; only the main agent may launch Godot, integrate final changes, execute the retained cycle, commit, or push.
 
-The four candidate Gameplay preflights must use exact public-loader IDs and paths. Sensor descriptors must be selected by stable ID and exact public `YOU_ONLY/ECHO_ONLY` activator-derived variants. Wrong-actor evidence must use the accepted swapped-identity control rather than assuming all sensors are inactive at a fixed witness turn. Do not edit or rerun historical Task 0024AF–AI artifacts, run owner subjective playthrough, inspect production Profile data, or modify production catalog/finale/Profile/localization/assets/audio/build/release/submission surfaces.
+Task 0024AJ repeatable qualifications 5 and 6 passed, as did the exact-13 evidence parser and PRE_FINAL audit. Retained manifest `d481c57c-1999-42e8-b000-84068b1c103d` is consumed at `CONSUMED_BEFORE_FIRST_CASE`; the final driver then failed because Library-mode dot-sourcing overwrote `GodotPath` before the first adapter call. No retained case ran and Godot ended at zero. Do not rerun or repair any `task_0024aj_*` retained artifact. Read the 0024AJ report and await a new explicit gate.

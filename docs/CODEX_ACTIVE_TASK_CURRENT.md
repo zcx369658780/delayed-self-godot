@@ -1,6 +1,6 @@
 # Codex active task (CURRENT)
 
-- Status: `SCHEMA_V2_SENSOR_CONTRACT_VALIDATION_READY_FOR_CODEX`
+- Status: `BLOCKED_SCHEMA_V2_SENSOR_CONTRACT_VALIDATION`
 - Active task: `tasks/0024AJ_sensor_descriptor_contract_and_wrong_actor_control_fresh_schema_v2_validation.md`
 - Closed predecessors: all Tasks through `0024AI`; none may be resumed directly
 - Latest GPT adjudication: `TASK_0024AI_HONEST_SENSOR_SELECTOR_AND_WRONG_ACTOR_SAMPLING_BLOCKER_ACCEPTED_FRESH_SENSOR_GATE_REQUIRED`
@@ -18,6 +18,6 @@
 
 Task 0024AI is accepted only as an honest sensor-selector and wrong-actor sampling blocker. Its four public-loader-to-Gameplay candidate preflights passed with exact IDs/paths and no `LEVEL_ID_MISMATCH`. The focused validator then selected invented shortened variants rather than the helper's public `YOU_ONLY/ECHO_ONLY` variants and incorrectly assumed every sensor was inactive at one fixed action. Task 0024AI did not declare or consume a retained cycle, and no provisional product implementation file changed.
 
-Task 0024AJ is the only active scope. It must preserve all Task 0024AF–AI artifacts, repeat the four-candidate preflight, select sensors by stable ID and public activator-derived variants, prove wrong-actor inertness through the accepted Task 0024AB swapped-identity control, complete the exact thirteen-entry dynamic registry, pass two repeatable qualifications, and then execute one fresh focused/route/batch/Aggregate/complete-v2 retained cycle.
+Task 0024AJ is terminal. Its two repeatable focused qualifications and PRE_FINAL audit passed, but retained manifest `d481c57c-1999-42e8-b000-84068b1c103d` was atomically consumed before the first case. Dot-sourcing the AJ adapter in Library mode clobbered the final driver's `GodotPath`, so the first adapter parameter binding failed with an empty value. No retained case ran and final Godot was zero. Do not repair or rerun Task 0024AJ; await GPT/owner adjudication or a new bounded task identity.
 
 The local untracked `.codex/config.toml` is the sole permitted cleanliness exception. Read it for routing, hash it without exposing contents, keep it byte-identical, and never stage or commit it. Do not edit historical Task 0024AF–AI artifacts, run owner subjective playthrough, modify production catalog/Profile/finale, access production user data, or begin final art/localization/assets/audio/build/release/submission work.

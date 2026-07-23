@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "task_identity": "0024AJ",
+  "manifest_id": "d481c57c-1999-42e8-b000-84068b1c103d",
+  "status": "DECLARED",
+  "cases": [
+    {
+      "name": "sensor_contract_dynamic_signature",
+      "script_path": "res://tests/presentation/task_0024aj_sensor_contract_and_dynamic_signature_validation.gd",
+      "marker": "TASK_0024AJ_SENSOR_CONTRACT_DYNAMIC_SIGNATURE_PASS"
+    },
+    {
+      "name": "isolated_staging_route",
+      "script_path": "res://tests/playtest/task_0024ae_submission_core_owner_review_launcher.gd",
+      "marker": "TASK_0024AE_ISOLATED_STAGING_OWNER_ROUTE_PASS"
+    },
+    {
+      "name": "batch_1_12",
+      "script_path": "res://tests/curriculum/task_0024ad_submission_core_1_12_batch_validation.gd",
+      "marker": "TASK_0024AD_SUBMISSION_CORE_1_12_BATCH_PASS"
+    },
+    {
+      "name": "aggregate",
+      "script_path": "res://tests/run_all.gd",
+      "marker": "TASK_0003_TESTS_PASS assertions=621 vectors=9"
+    },
+    {
+      "name": "complete_v2",
+      "script_path": "res://tests/simulation/task_0024v_v2_solver_replay_canonical_malformed.gd",
+      "marker": "TASK_0024V_V2_COMPLETE_PASS"
+    }
+  ]
+}

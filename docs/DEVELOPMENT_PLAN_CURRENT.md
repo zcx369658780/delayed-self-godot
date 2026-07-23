@@ -1,5 +1,13 @@
 # Development plan (CURRENT)
 
+> 2026-07-23 — Task 0024AJ corrected and twice qualified the stable-ID sensor
+> contract, accepted swapped-identity control, exact 13-entry registry and
+> lifecycle/layering evidence. PRE_FINAL passed. Its unique retained manifest
+> `d481c57c-1999-42e8-b000-84068b1c103d` was consumed before case 1; Library-mode
+> dot-sourcing clobbered `GodotPath`, so no retained case ran. Final Godot was
+> zero. Status is `BLOCKED_SCHEMA_V2_SENSOR_CONTRACT_VALIDATION`; no rerun is
+> authorized and a new GPT/owner gate is required.
+
 > 2026-07-23 — Task 0024AE implemented one test-owned 12-entry staging catalog
 > and one pre-tree AppRoot launcher bound to the exact isolated test Profile.
 > Normal catalog selection, ordered unlocks, completion persistence, reload and
