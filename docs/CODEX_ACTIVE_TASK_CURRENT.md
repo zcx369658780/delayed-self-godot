@@ -1,11 +1,12 @@
 # Codex active task (CURRENT)
 
-- Status: `BLOCKED_SCHEMA_V2_CANDIDATE_GAMEPLAY_ROUTE_VALIDATION`
-- Active task: `tasks/0024AI_candidate_gameplay_route_harness_correction_and_dynamic_schema_v2_visual_validation.md`
-- Closed predecessors: all Tasks through `0024AH`; none may be resumed directly
-- Latest GPT adjudication: `TASK_0024AH_HONEST_GAMEPLAY_ROUTE_PAYLOAD_ID_BLOCKER_ACCEPTED_FRESH_HARNESS_GATE_REQUIRED`
-- Required accepted checkpoint: `5b6b54b3d71b4f1117388e3b36f86c4c0b6a8609`
-- Task publication commit: `3ee22b83dad4db2b2300a4ac28ff4870af2469ca`
+- Status: `SCHEMA_V2_SENSOR_CONTRACT_VALIDATION_READY_FOR_CODEX`
+- Active task: `tasks/0024AJ_sensor_descriptor_contract_and_wrong_actor_control_fresh_schema_v2_validation.md`
+- Closed predecessors: all Tasks through `0024AI`; none may be resumed directly
+- Latest GPT adjudication: `TASK_0024AI_HONEST_SENSOR_SELECTOR_AND_WRONG_ACTOR_SAMPLING_BLOCKER_ACCEPTED_FRESH_SENSOR_GATE_REQUIRED`
+- Required accepted checkpoint: `934ebefd4747db351db11c7628130a2275fd3786`
+- Task publication commit: `0146fa4a7e4117e96a73d07fe72e421e5e42c7fd`
+- Historical blocked Task 0024AI result: `2df29272b4c1696063aae00ed8e796e28f4f5929`
 - Historical blocked Task 0024AH result: `1bef7ec79898179079265a132678753da9e1c8f7`
 - Historical blocked Task 0024AG result: `2813d08bf65eae2ae0c528a4825bfc133d5cdb43`
 - Historical blocked Task 0024AF result: `25d7fda3937fc269cdf730c14698e47bfb209c29`
@@ -15,8 +16,8 @@
 - Accepted uncatalogued candidates: `crate_shadow_timing`, `key_route_commitment`, `identity_shift_bridge`, `lasting_echo_latch`
 - Execution policy: multi-subagent required through local `.codex/config.toml`
 
-Task 0024AH is accepted only as an honest candidate-Gameplay harness blocker. Its validator passed the aliases `crate`, `key`, `sensor` and `latch` as route payload level IDs, while the loaded candidates declare the actual IDs `crate_shadow_timing`, `key_route_commitment`, `identity_shift_bridge` and `lasting_echo_latch`. Gameplay correctly emitted `LEVEL_ID_MISMATCH`. Task 0024AH did not declare or consume a fresh retained cycle, and no provisional product implementation file changed.
+Task 0024AI is accepted only as an honest sensor-selector and wrong-actor sampling blocker. Its four public-loader-to-Gameplay candidate preflights passed with exact IDs/paths and no `LEVEL_ID_MISMATCH`. The focused validator then selected invented shortened variants rather than the helper's public `YOU_ONLY/ECHO_ONLY` variants and incorrectly assumed every sensor was inactive at one fixed action. Task 0024AI did not declare or consume a retained cycle, and no provisional product implementation file changed.
 
-Task 0024AI is the only active scope. It must configure each real Gameplay instance with the exact level ID returned by public LevelLoader and the exact matching path, pass a dedicated four-candidate fail-closed route preflight, rebuild the thirteen-entry dynamic signature registry, complete two repeatable focused qualifications, and then execute one fresh focused/route/batch/Aggregate/complete-v2 retained cycle.
+Task 0024AJ is the only active scope. It must preserve all Task 0024AF–AI artifacts, repeat the four-candidate preflight, select sensors by stable ID and public activator-derived variants, prove wrong-actor inertness through the accepted Task 0024AB swapped-identity control, complete the exact thirteen-entry dynamic registry, pass two repeatable qualifications, and then execute one fresh focused/route/batch/Aggregate/complete-v2 retained cycle.
 
-The local untracked `.codex/config.toml` is the sole permitted cleanliness exception. Read it for routing, hash it without exposing contents, keep it byte-identical and never stage or commit it. Do not edit historical Task 0024AF–AH artifacts, run owner subjective playthrough, modify production catalog/Profile/finale, access production user data, or begin final art/localization/assets/audio/build/release/submission work.
+The local untracked `.codex/config.toml` is the sole permitted cleanliness exception. Read it for routing, hash it without exposing contents, keep it byte-identical, and never stage or commit it. Do not edit historical Task 0024AF–AI artifacts, run owner subjective playthrough, modify production catalog/Profile/finale, access production user data, or begin final art/localization/assets/audio/build/release/submission work.
