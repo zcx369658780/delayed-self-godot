@@ -2,6 +2,9 @@
 
 ## Start here
 
+0. [`Task 0024AK`](../tasks/0024AK_library_scope_isolated_retained_driver_and_fresh_schema_v2_visual_validation.md) — terminal consumed retained-driver scope blocker
+1. [`Task 0024AK report`](reports/0024AK_LIBRARY_SCOPE_ISOLATED_RETAINED_DRIVER_AND_SCHEMA_V2_VISUAL_VALIDATION_REPORT.md) — passing qualifications, first-case driver-scope failure and no-rerun boundary
+
 0. [`Task 0024AJ`](../tasks/0024AJ_sensor_descriptor_contract_and_wrong_actor_control_fresh_schema_v2_validation.md) — terminal consumed-cycle sensor-contract validation blocker
 1. [`Task 0024AJ report`](reports/0024AJ_SENSOR_CONTRACT_AND_DYNAMIC_SCHEMA_V2_VISUAL_VALIDATION_REPORT.md) — passing repeatable evidence, consumed-before-first-case failure and no-rerun boundary
 

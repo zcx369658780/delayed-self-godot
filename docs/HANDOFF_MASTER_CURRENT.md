@@ -1,5 +1,11 @@
 # Handoff master (CURRENT)
 
+## Task 0024AK consumed retained-cycle blocker
+
+Task 0024AK ended at `BLOCKED_SCHEMA_V2_RETAINED_DRIVER_SCOPE_ISOLATION`. Scope/parser/preflight probes, two independent frozen-AJ qualifications and PRE_FINAL all passed. The unique manifest `2de60fc6-9065-4ecf-a5d9-a09b739f1461` was atomically marked `CONSUMED_BEFORE_FIRST_CASE`.
+
+The first AJ adapter/Godot case returned one parseable capture, then final-driver raw-wrapper revalidation failed at line 247 because `ConvertFrom-Task0024AKWrapperValues` was not resolvable. The capture was not durably retained, zero driver case records/result JSON exist, cases 2–5 did not run and Godot ended at zero. Do not repair or rerun Task 0024AK. Read the 0024AK report and wait for GPT/owner adjudication or a new bounded task.
+
 ## Task 0024AJ consumed-cycle blocker
 
 Task 0024AJ ended at `BLOCKED_SCHEMA_V2_SENSOR_CONTRACT_VALIDATION`. Two independent focused qualifications passed with exact stable-ID/public-activator sensor variants, the accepted swapped-identity control, action 10 open/unoccupied, actions 11/12 per-cell deferral, action 13 vacancy-close and 13 distinct signatures. PRE_FINAL passed with zero frozen mismatch.

@@ -1,8 +1,10 @@
 # Schema-v2 minimum owner-review visual contract
 
-> Task 0024AJ twice qualified this contract repeatably, but its retained cycle
-> was consumed before case 1 by a final-driver `GodotPath` scope defect. Machine
-> presentation readiness therefore remains blocked pending a new explicit gate.
+> Task 0024AK twice qualified this contract repeatably through its standalone
+> adapter, but its unique retained cycle failed in final-driver raw-wrapper
+> revalidation after the first adapter/Godot case and before durable case
+> recording. Machine presentation readiness remains blocked pending a new
+> explicit GPT/owner gate; Task 0024AK may not be repaired or rerun.
 
 The presentation helper emits deterministic, deep-copied descriptors shared by Gameplay drawing and focused validation. Each descriptor has a family, stable ID, cell/position, layer, state variant, shape/glyph/type-or-group token, scalar bounds and monochrome signature.
 

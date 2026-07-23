@@ -1,5 +1,9 @@
 # Project memory
 
+## Task 0024AK retained-driver scope blocker
+
+Task 0024AK qualified a standalone adapter, parameter-free module, scope/parser/preflight gates and two complete frozen-AJ focused runs. PRE_FINAL passed. Manifest `2de60fc6-9065-4ecf-a5d9-a09b739f1461` was consumed; the first AJ adapter/Godot case returned a parseable capture, but driver raw-wrapper revalidation could not resolve `ConvertFrom-Task0024AKWrapperValues`. The capture was not durable, zero case records exist, cases 2–5 were not run and final Godot was zero. Terminal status is `BLOCKED_SCHEMA_V2_RETAINED_DRIVER_SCOPE_ISOLATION`; Task 0024AK must not be repaired or rerun.
+
 ## Task 0024AJ sensor-contract validation blocker
 
 Task 0024AJ twice qualified exact stable-ID/public-activator sensor descriptors, the accepted swapped-identity wrong-actor control, per-cell bridge lifecycle and 13 pairwise-distinct presentation signatures. Exact-13 parsing and PRE_FINAL preservation passed. Manifest `d481c57c-1999-42e8-b000-84068b1c103d` was then consumed before case 1. Library-mode dot-sourcing of the adapter overwrote the final driver's `GodotPath`, causing empty-argument binding failure. No retained case ran; final Godot was zero. Terminal status is `BLOCKED_SCHEMA_V2_SENSOR_CONTRACT_VALIDATION`; Task 0024AJ must not be repaired or rerun.

@@ -1,5 +1,15 @@
 # Development plan (CURRENT)
 
+> 2026-07-23 — Task 0024AK passed scope/parser/preflight probes, two fresh
+> focused AJ qualifications and PRE_FINAL preservation. Manifest
+> `2de60fc6-9065-4ecf-a5d9-a09b739f1461` was consumed; the first AJ
+> adapter/Godot case returned a parseable capture, then driver-scope raw-wrapper
+> revalidation failed because `ConvertFrom-Task0024AKWrapperValues` was not
+> resolvable. No case record/result was retained, cases 2–5 did not run and
+> final Godot was zero. Status is
+> `BLOCKED_SCHEMA_V2_RETAINED_DRIVER_SCOPE_ISOLATION`; no repair or rerun is
+> authorized.
+
 > 2026-07-23 — Task 0024AJ corrected and twice qualified the stable-ID sensor
 > contract, accepted swapped-identity control, exact 13-entry registry and
 > lifecycle/layering evidence. PRE_FINAL passed. Its unique retained manifest
