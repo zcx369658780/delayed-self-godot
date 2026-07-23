@@ -1,5 +1,16 @@
 # Development plan (CURRENT)
 
+> 2026-07-23 — Task 0024AL replaced shared PowerShell module lifetime with a
+> Python standard-library parent and a fresh `pwsh -File` worker per case.
+> Process/durability/parser probes, two frozen-AJ focused qualifications and
+> one complete five-case rehearsal passed. Manifest
+> `45a25cc1-1a44-43dd-9861-ce8a3596a066` was consumed once; all five durable
+> retained records and the progress journal passed, Aggregate stderr was
+> exactly `LEVEL_ID_MISMATCH`, all other stderr was empty and final Godot was
+> zero. Status is
+> `SCHEMA_V2_MINIMUM_OWNER_REVIEW_PRESENTATION_WRITE_AHEAD_READY_FOR_GPT_REVIEW`.
+> Owner playthrough, final art, catalog/Profile and release gates remain open.
+
 > 2026-07-23 — Task 0024AK passed scope/parser/preflight probes, two fresh
 > focused AJ qualifications and PRE_FINAL preservation. Manifest
 > `2de60fc6-9065-4ecf-a5d9-a09b739f1461` was consumed; the first AJ

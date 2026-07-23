@@ -5,7 +5,8 @@
 - Machine matrix: `docs/level_design/validation/submission_core_1_12_curriculum_matrix.json`
 - `owner_route_status = MACHINE_QUALIFIED_ISOLATED_STAGING_ROUTE`
 - `owner_playthrough_status = NOT_YET_REVIEWED`
-- `presentation_readiness = BLOCKED_SCHEMA_V2_RETAINED_DRIVER_SCOPE_ISOLATION`
+- `presentation_readiness = MACHINE_QUALIFIED_SCHEMA_V2_MINIMUM_OWNER_REVIEW_REQUIRED`
+- `visual_art_direction_status = NOT_FINAL`
 - `catalog_admission_status = NOT_AUTHORIZED`
 - Formal product baseline: sequences 1–8; sequence 8 is the sole formal finale
 - Uncatalogued accepted candidates: sequences 9–12

@@ -1,5 +1,13 @@
 # Handoff master (CURRENT)
 
+## Task 0024AL process-isolated retained validation ready for GPT review
+
+Task 0024AL completed at `SCHEMA_V2_MINIMUM_OWNER_REVIEW_PRESENTATION_WRITE_AHEAD_READY_FOR_GPT_REVIEW`. A Python standard-library parent launched one fresh `pwsh -NoProfile -NonInteractive -File` worker per case; every worker atomically published and reopened a complete durable case record before success, and the parent independently validated it and atomically journaled progress.
+
+All isolation/durability/parser probes, two frozen-AJ focused qualifications and the complete non-retained five-case rehearsal passed. Manifest `45a25cc1-1a44-43dd-9861-ce8a3596a066` was atomically consumed before case 1. Invocation `91787ae7-b1b0-4c6e-9301-ad2f312136ab` then passed frozen AJ focused, accepted 0024AE route, accepted 0024AD batch, Aggregate and corrected complete-v2 exactly once. Aggregate stderr was exactly `LEVEL_ID_MISMATCH`; all other stderr was empty. Cleanup was once per case, PID residue was empty and final Godot was zero. PRE_FINAL and POST_FINAL mismatches were zero.
+
+Owner route remains machine-qualified, but owner playthrough is `NOT_YET_REVIEWED`, final visual art is `NOT_FINAL` and catalog admission is `NOT_AUTHORIZED`. Read the 0024AL report and await GPT/owner review. Do not rerun the consumed manifest or infer product/catalog/Profile/release authorization.
+
 ## Task 0024AK consumed retained-cycle blocker
 
 Task 0024AK ended at `BLOCKED_SCHEMA_V2_RETAINED_DRIVER_SCOPE_ISOLATION`. Scope/parser/preflight probes, two independent frozen-AJ qualifications and PRE_FINAL all passed. The unique manifest `2de60fc6-9065-4ecf-a5d9-a09b739f1461` was atomically marked `CONSUMED_BEFORE_FIRST_CASE`.

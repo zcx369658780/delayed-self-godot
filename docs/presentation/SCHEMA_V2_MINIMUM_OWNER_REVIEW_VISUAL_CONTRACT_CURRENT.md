@@ -1,10 +1,11 @@
 # Schema-v2 minimum owner-review visual contract
 
-> Task 0024AK twice qualified this contract repeatably through its standalone
-> adapter, but its unique retained cycle failed in final-driver raw-wrapper
-> revalidation after the first adapter/Godot case and before durable case
-> recording. Machine presentation readiness remains blocked pending a new
-> explicit GPT/owner gate; Task 0024AK may not be repaired or rerun.
+> Task 0024AL qualified this contract twice, rehearsed the complete five-case
+> chain, then passed one process-isolated write-ahead retained cycle. Every
+> fresh worker durably published its case record before success and the Python
+> parent independently validated it and journaled progress. Machine readiness
+> is `MACHINE_QUALIFIED_SCHEMA_V2_MINIMUM_OWNER_REVIEW_REQUIRED`; owner
+> subjective review and final visual-art acceptance remain open.
 
 The presentation helper emits deterministic, deep-copied descriptors shared by Gameplay drawing and focused validation. Each descriptor has a family, stable ID, cell/position, layer, state variant, shape/glyph/type-or-group token, scalar bounds and monochrome signature.
 

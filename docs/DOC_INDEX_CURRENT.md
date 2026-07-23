@@ -2,6 +2,10 @@
 
 ## Start here
 
+0. [`Task 0024AL`](../tasks/0024AL_process_isolated_write_ahead_retained_cycle_and_schema_v2_visual_validation.md) — completed process-isolated write-ahead schema-v2 retained validation
+1. [`Task 0024AL report`](reports/0024AL_PROCESS_ISOLATED_WRITE_AHEAD_RETAINED_CYCLE_AND_SCHEMA_V2_VISUAL_VALIDATION_REPORT.md) — probes, focused qualifications, five-case rehearsal, retained evidence and review boundaries
+2. [`Owner curriculum worksheet`](playtest/SUBMISSION_CORE_1_12_OWNER_CURRICULUM_REVIEW_CURRENT.md) — machine-qualified presentation; subjective fields remain `NOT_YET_REVIEWED`
+
 0. [`Task 0024AK`](../tasks/0024AK_library_scope_isolated_retained_driver_and_fresh_schema_v2_visual_validation.md) — terminal consumed retained-driver scope blocker
 1. [`Task 0024AK report`](reports/0024AK_LIBRARY_SCOPE_ISOLATED_RETAINED_DRIVER_AND_SCHEMA_V2_VISUAL_VALIDATION_REPORT.md) — passing qualifications, first-case driver-scope failure and no-rerun boundary
 

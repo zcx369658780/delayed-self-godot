@@ -1,5 +1,11 @@
 # Project memory
 
+## Task 0024AL process-isolated write-ahead retained validation
+
+Task 0024AL replaced the Task 0024AK shared-module-session failure mode with a Python standard-library parent and a fresh PowerShell worker for each case. Workers atomically durably publish and revalidate canonical case files before success; the parent independently validates the files, journals every accepted case and never treats stdout as sole evidence. Isolation, durability, crash, sidecar, parser and AST probes passed, as did two frozen-AJ focused qualifications and one complete five-case rehearsal.
+
+Manifest `45a25cc1-1a44-43dd-9861-ce8a3596a066` was consumed exactly once. Invocation `91787ae7-b1b0-4c6e-9301-ad2f312136ab` completed all five retained cases with exact markers/stderr, cleanup once, empty PID residue and final Godot zero. PRE_FINAL/POST_FINAL mismatch counts were zero. Status is `SCHEMA_V2_MINIMUM_OWNER_REVIEW_PRESENTATION_WRITE_AHEAD_READY_FOR_GPT_REVIEW`; owner playthrough, final art, catalog/Profile and release acceptance remain separate gates.
+
 ## Task 0024AK retained-driver scope blocker
 
 Task 0024AK qualified a standalone adapter, parameter-free module, scope/parser/preflight gates and two complete frozen-AJ focused runs. PRE_FINAL passed. Manifest `2de60fc6-9065-4ecf-a5d9-a09b739f1461` was consumed; the first AJ adapter/Godot case returned a parseable capture, but driver raw-wrapper revalidation could not resolve `ConvertFrom-Task0024AKWrapperValues`. The capture was not durable, zero case records exist, cases 2–5 were not run and final Godot was zero. Terminal status is `BLOCKED_SCHEMA_V2_RETAINED_DRIVER_SCOPE_ISOLATION`; Task 0024AK must not be repaired or rerun.
