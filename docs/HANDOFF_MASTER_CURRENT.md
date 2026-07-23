@@ -350,6 +350,10 @@ Hard boundary: no sequence-9 revival, unbounded product repair, save/settings
 implementation, asset/audio acquisition, owner walkthrough, build/export, RC
 work, festival packaging, upload, release, or submission without a new bounded
 task.
+
+# Task 0024AO DeepSeek pilot
+
+Task 0024AO passed the isolated relative-path wrapper smoke and recommends `DEEPSEEK_PROJECT_PILOT_ENABLED` for GPT review. It does not grant automatic delegation, product changes, or owner acceptance; see `docs/handoffs/DELAYED_SELF_SESSION_HANDOFF_AFTER_TASK_0024AO_DEEPSEEK_PROJECT_PILOT_2026_07_23.md`.
 # Task 0023ZT controlled production read-only harness construction
 
 Task 0023ZT completed at

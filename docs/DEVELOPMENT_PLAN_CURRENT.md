@@ -351,6 +351,8 @@ remain separately gated.
 
 ## Milestone spine
 
+Task 0024AO is infrastructure-only `PASS_FOR_GPT_REVIEW`: it qualifies a wrapper-only, isolated external file-worker route, not gameplay or owner acceptance. The next gameplay gate remains the separately authorized owner 1–12 subjective playthrough.
+
 | Milestone | Dates | Outcome |
 |---|---|---|
 | M0 Rules and repository freeze | 2026-07-14–07-15 | Governance plus read-only environment inventory |

@@ -590,6 +590,10 @@ authorized.
 
 ## Pending decisions
 
+## Task 0024AO DeepSeek external file-worker pilot
+
+Task 0024AO established a wrapper-only, opt-in external file-worker route using an isolated absolute workspace and frozen-worker-relative allowed/context entries. It is `PASS_FOR_GPT_REVIEW`, not final acceptance; model/provider, shell filtering, gameplay and Profile boundaries remain unchanged.
+
 ## Task 0023ZD complete AppRoot Profile-session harness
 
 Task 0023ZD is implemented and awaiting GPT review. It adds exactly five

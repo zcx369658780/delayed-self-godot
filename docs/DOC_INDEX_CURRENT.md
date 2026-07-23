@@ -2,6 +2,10 @@
 
 ## Start here
 
+0. [`Task 0024AO`](../tasks/0024AO_deepseek_relative_path_contract_alignment_and_project_pilot_completion.md) — relative-path wrapper pilot completion
+1. [`Task 0024AO report`](reports/0024AO_DEEPSEEK_RELATIVE_PATH_CONTRACT_AND_PROJECT_PILOT_REPORT.md) — frozen worker contract and smoke evidence
+2. [`DeepSeek workflow`](workflows/DEEPSEEK_FILE_WORKER_CLI_PILOT_WORKFLOW.md) — wrapper-only future delegation contract
+
 0. [`Task 0024AL`](../tasks/0024AL_process_isolated_write_ahead_retained_cycle_and_schema_v2_visual_validation.md) — completed process-isolated write-ahead schema-v2 retained validation
 1. [`Task 0024AL report`](reports/0024AL_PROCESS_ISOLATED_WRITE_AHEAD_RETAINED_CYCLE_AND_SCHEMA_V2_VISUAL_VALIDATION_REPORT.md) — probes, focused qualifications, five-case rehearsal, retained evidence and review boundaries
 2. [`Owner curriculum worksheet`](playtest/SUBMISSION_CORE_1_12_OWNER_CURRICULUM_REVIEW_CURRENT.md) — machine-qualified presentation; subjective fields remain `NOT_YET_REVIEWED`
