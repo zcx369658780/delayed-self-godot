@@ -1,30 +1,28 @@
 # Codex startup snapshot (CURRENT)
 
-- Status: `CURRENT / TASK 0024AK TERMINAL RETAINED-CYCLE BLOCKER`
+- Status: `CURRENT / TASK 0024AL PROCESS-ISOLATED WRITE-AHEAD RETAINED VALIDATION`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Active task: none; wait for GPT/owner adjudication or a new bounded task
-- Active status: `BLOCKED_SCHEMA_V2_RETAINED_DRIVER_SCOPE_ISOLATION`
+- Active task: `tasks/0024AL_process_isolated_write_ahead_retained_cycle_and_schema_v2_visual_validation.md`
+- Active status: `PROCESS_ISOLATED_WRITE_AHEAD_RETAINED_VALIDATION_READY_FOR_CODEX`
 - Closed predecessors: all Tasks through `0024AK`
-- Latest GPT adjudication: `TASK_0024AJ_HONEST_LIBRARY_SCOPE_RETAINED_CYCLE_BLOCKER_ACCEPTED_FRESH_DRIVER_GATE_REQUIRED`
-- Required accepted checkpoint: `75b6cfa6f918c2d4ff52ebbe2c0ec014fec6f3c5`
-- Task publication commit: `1dde492df95a220899471515a85c874783d8a26b`
-- Historical blocked Task 0024AJ result: `d92e315e5667d38fec59b508dd6eb16d6c0ed816`
-- Historical consumed AJ manifest: `d481c57c-1999-42e8-b000-84068b1c103d`
-- Historical AJ consumption state: `CONSUMED_BEFORE_FIRST_CASE`
+- Latest GPT adjudication: `TASK_0024AK_HONEST_MODULE_SESSION_RELOAD_DURABILITY_BLOCKER_ACCEPTED_FRESH_PROCESS_ISOLATED_GATE_REQUIRED`
+- Required accepted checkpoint: `0388be4b7b97ff45d960eab32f3ab88879f78bdb`
+- Task publication commit: `39549559d08ac34f100e0d9bce3eee4b5b891310`
 - Terminal Task 0024AK manifest: `2de60fc6-9065-4ecf-a5d9-a09b739f1461`
-- Terminal Task 0024AK invocation: `a3331dbe-26b5-4a56-ade6-25bfc0aefd9a`
+- Terminal Task 0024AJ manifest: `d481c57c-1999-42e8-b000-84068b1c103d`
+- Frozen AJ validator: `tests/presentation/task_0024aj_sensor_contract_and_dynamic_signature_validation.gd`
 - Accepted Task 0024AE result: `678f59025ce5fc53a423e7d1aa73bf2a6c09dfd1`
 - Accepted wrapper blob: `5f14eb0feff903b40311c1c7283b20e2eabbffc2`
 - Production baseline: eight cataloged levels; sequence 8 remains the sole formal finale
-- Owner route: machine-qualified isolated staging route
+- Owner route: `MACHINE_QUALIFIED_ISOLATED_STAGING_ROUTE`
 - Owner playthrough: `NOT_YET_REVIEWED`
-- Presentation: AK repeatable machine qualification passed; unique retained cycle terminally failed
+- Presentation: repeatable sensor/lifecycle machine qualification passed; fresh retained durability pending
 - Execution policy: mandatory multi-subagent workflow through `.codex/config.toml`
 
-Before work, fetch and fast-forward to current `origin/main`. Require no tracked/staged changes and allow only unchanged untracked `.codex/config.toml`. Read it for role routing, record its hash without exposing contents, and never stage, modify or delete it. Require Godot zero.
+Before work, fetch and fast-forward to current `origin/main`. Require no tracked/staged changes, allow only unchanged untracked `.codex/config.toml`, record its hash without exposing contents and require Godot zero. Read `AGENTS.md`, this file, `docs/CODEX_ACTIVE_TASK_CURRENT.md`, the full Task 0024AL file, Task 0024AK report/GPT acceptance and the frozen AJ evidence before authoring.
 
-Read `AGENTS.md`, this file, `docs/CODEX_ACTIVE_TASK_CURRENT.md`, the full Task 0024AK file and its terminal report/blocker before any new work. Also preserve the 0024AJ report/GPT acceptance and all AF–AJ historical artifacts.
+All Task 0024AF–AK artifacts are immutable. Never repair or rerun AJ manifest `d481c57c-1999-42e8-b000-84068b1c103d` or AK manifest `2de60fc6-9065-4ecf-a5d9-a09b739f1461`. Do not modify the frozen AJ validator, presentation implementation, levels, catalog, Simulation, App/Profile or accepted wrapper.
 
-All Task 0024AF–AJ artifacts are frozen. Never repair or rerun AJ manifest `d481c57c-1999-42e8-b000-84068b1c103d`. Task 0024AK must use only new `task_0024ak_*` tools. The final driver may not dot-source any `.ps1`; import only the parameter-free `.psm1` evidence module and invoke the standalone adapter in child scope. Sentinel and AST probes must prove driver values remain unchanged.
+Task 0024AL must use a Python standard-library parent orchestrator that never imports a PowerShell module. Every case must run in a fresh `pwsh -NoProfile -NonInteractive -File` worker process. Each worker must atomically persist a canonical case record before success; the parent must validate that file independently and atomically journal progress. A synthetic crash-after-worker-success probe, two focused qualifications and one complete five-case non-retained rehearsal through the exact final architecture must pass before retained declaration.
 
-Task 0024AK manifest `2de60fc6-9065-4ecf-a5d9-a09b739f1461` is consumed. Its first adapter/Godot case returned a parseable capture but the driver failed before durable case recording; the remaining four cases did not run. Do not repair, rerun or reconstruct the cycle. Owner subjective review, product admission and release work remain closed.
+Use the task's explicit continuous-execution state machine. Before manifest declaration, new AL-only tool defects are repairable and require continued repair/review/requalification, not a terminal response. After manifest declaration, any retained failure is terminal and may not be repaired or rerun. Owner subjective review, product admission and release work remain closed.
