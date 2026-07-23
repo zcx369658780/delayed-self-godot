@@ -1,23 +1,22 @@
 # Codex active task (CURRENT)
 
-- Status: `BLOCKED_SCHEMA_V2_SENSOR_CONTRACT_VALIDATION`
-- Active task: `tasks/0024AJ_sensor_descriptor_contract_and_wrong_actor_control_fresh_schema_v2_validation.md`
-- Closed predecessors: all Tasks through `0024AI`; none may be resumed directly
-- Latest GPT adjudication: `TASK_0024AI_HONEST_SENSOR_SELECTOR_AND_WRONG_ACTOR_SAMPLING_BLOCKER_ACCEPTED_FRESH_SENSOR_GATE_REQUIRED`
-- Required accepted checkpoint: `934ebefd4747db351db11c7628130a2275fd3786`
-- Task publication commit: `0146fa4a7e4117e96a73d07fe72e421e5e42c7fd`
+- Status: `SCHEMA_V2_RETAINED_DRIVER_SCOPE_ISOLATION_READY_FOR_CODEX`
+- Active task: `tasks/0024AK_library_scope_isolated_retained_driver_and_fresh_schema_v2_visual_validation.md`
+- Closed predecessors: all Tasks through `0024AJ`; none may be resumed directly
+- Latest GPT adjudication: `TASK_0024AJ_HONEST_LIBRARY_SCOPE_RETAINED_CYCLE_BLOCKER_ACCEPTED_FRESH_DRIVER_GATE_REQUIRED`
+- Required accepted checkpoint: `75b6cfa6f918c2d4ff52ebbe2c0ec014fec6f3c5`
+- Task publication commit: `1dde492df95a220899471515a85c874783d8a26b`
+- Historical blocked Task 0024AJ result: `d92e315e5667d38fec59b508dd6eb16d6c0ed816`
+- Historical consumed AJ manifest: `d481c57c-1999-42e8-b000-84068b1c103d`
 - Historical blocked Task 0024AI result: `2df29272b4c1696063aae00ed8e796e28f4f5929`
-- Historical blocked Task 0024AH result: `1bef7ec79898179079265a132678753da9e1c8f7`
-- Historical blocked Task 0024AG result: `2813d08bf65eae2ae0c528a4825bfc133d5cdb43`
-- Historical blocked Task 0024AF result: `25d7fda3937fc269cdf730c14698e47bfb209c29`
 - Accepted Task 0024AE result: `678f59025ce5fc53a423e7d1aa73bf2a6c09dfd1`
 - Accepted wrapper implementation/blob: `7c0712d6a602dc23200ccb147d0096acc6333305` / `5f14eb0feff903b40311c1c7283b20e2eabbffc2`
 - Production baseline: exactly eight cataloged levels; sequence 8 remains the sole formal finale
 - Accepted uncatalogued candidates: `crate_shadow_timing`, `key_route_commitment`, `identity_shift_bridge`, `lasting_echo_latch`
 - Execution policy: multi-subagent required through local `.codex/config.toml`
 
-Task 0024AI is accepted only as an honest sensor-selector and wrong-actor sampling blocker. Its four public-loader-to-Gameplay candidate preflights passed with exact IDs/paths and no `LEVEL_ID_MISMATCH`. The focused validator then selected invented shortened variants rather than the helper's public `YOU_ONLY/ECHO_ONLY` variants and incorrectly assumed every sensor was inactive at one fixed action. Task 0024AI did not declare or consume a retained cycle, and no provisional product implementation file changed.
+Task 0024AJ is accepted only as an honest consumed-cycle Library-scope blocker. Its four candidate preflights, stable sensor contract, swapped-identity control, exact thirteen-signature registry, repeatable qualifications 5/6 and PRE/POST audits passed. Manifest `d481c57c-1999-42e8-b000-84068b1c103d` was then consumed before the first case; dot-sourcing the AJ adapter in Library mode overwrote the driver's populated `GodotPath` with an empty value. Zero retained cases ran and Godot remained zero. All `task_0024aj_*` artifacts are immutable and must not be repaired or rerun.
 
-Task 0024AJ is terminal. Its two repeatable focused qualifications and PRE_FINAL audit passed, but retained manifest `d481c57c-1999-42e8-b000-84068b1c103d` was atomically consumed before the first case. Dot-sourcing the AJ adapter in Library mode clobbered the final driver's `GodotPath`, so the first adapter parameter binding failed with an empty value. No retained case ran and final Godot was zero. Do not repair or rerun Task 0024AJ; await GPT/owner adjudication or a new bounded task identity.
+Task 0024AK is the only active scope. It must create a new standalone adapter, parameter-free evidence-parser module, sentinel/AST scope-isolation probes and a final driver that never dot-sources a `.ps1` script. It must execute the frozen AJ validator twice through the new adapter, pass PRE_FINAL audit, and only then declare one fresh AK five-case retained manifest.
 
-The local untracked `.codex/config.toml` is the sole permitted cleanliness exception. Read it for routing, hash it without exposing contents, keep it byte-identical, and never stage or commit it. Do not edit historical Task 0024AF–AI artifacts, run owner subjective playthrough, modify production catalog/Profile/finale, access production user data, or begin final art/localization/assets/audio/build/release/submission work.
+Before manifest declaration, defects limited to new `task_0024ak_*` artifacts are repairable authoring failures and must be corrected rather than treated as terminal. After declaration, any retained failure is terminal for AK. The local untracked `.codex/config.toml` remains the sole cleanliness exception; keep it byte-identical and never stage or commit it. Owner subjective playthrough, product admission and release work remain unauthorized.
