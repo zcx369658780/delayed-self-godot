@@ -1,16 +1,19 @@
 # Codex active task (CURRENT)
 
-- Status: `TASK_0024AO_DEEPSEEK_PROJECT_PILOT_ACCEPTED`
-- Active task: none; await explicit successor task
-- Completed task: `tasks/0024AO_deepseek_relative_path_contract_alignment_and_project_pilot_completion.md`
-- Accepted result commit: `3e8a05e9d75752a9fa7febad6e4cc3e307d1c701`
-- GPT acceptance report: `docs/reports/0024AO_GPT_DEEPSEEK_PROJECT_PILOT_ACCEPTANCE.md`
-- GPT acceptance commit: `d287f2451edd3670a5e5d11cf41d9272c48f4361`
-- Project gate: `DEEPSEEK_PROJECT_PILOT_ENABLED`
-- Transport: User-scope credential wrapper to frozen CLI worker only
-- Configuration: `PATH_B_DOCUMENTATION_ONLY_WRAPPER_ALIGNMENT`; project config unchanged
-- Project Sources: `READY_FOR_GPT_PROJECT_SOURCE_IMPORT`
+- Status: `TASK_0024AP_READY`
+- Active task: `tasks/0024AP_deepseek_mcp_bounded_gdscript_code_quality_pilot.md`
+- Task publication commit: `b06417cca24e879329d648ba1bb18449564553cb`
+- Required accepted checkpoint in ancestry: `a5a9e9ac0efe0b85458e0017e5ac5322a366371b`
+- Previous accepted gate: `TASK_0024AO_DEEPSEEK_PROJECT_PILOT_ACCEPTED`
+- Existing accepted route: User-scope wrapper to frozen CLI worker
+- Experimental route: configured DeepSeek MCP
+- Benchmark: isolated pure GDScript action-sequence codec; no production integration
+- Candidate transport verdict: `PASS_DIRECT_FILE_EDIT`, `PASS_PATCH_RETURN`, or `BLOCKED`
+- Candidate code-quality verdict: `ACCEPTABLE_FOR_BOUNDED_IMPLEMENTATION`, `CONDITIONAL_MECHANICAL_ONLY`, `NOT_ACCEPTABLE`, or `NOT_EVALUATED`
+- Recommended main model: `GPT-5.6 Sol`; constrained fallback: `GPT-5.6 Terra`
 
-Future DeepSeek delegation is opt-in per task. Use an isolated absolute workspace, workspace-relative allowed/context paths, wrapper-only invocation and GPT-5.6-owned review, tests, Git and verdict. DeepSeek remains forbidden from planning, core Simulation/solver and level-correctness decisions, secrets, Profile/player data, Shell/Git/build/release work and final acceptance.
+Task 0024AP must separate MCP transport from model code quality. GPT-5.6 freezes the contract, owns hidden tests, review, scoring, Git and verdict. DeepSeek may author only `tests/deepseek_quality/action_sequence_codec.gd` in an isolated worktree. It may not inspect hidden tests, run Shell/Git/Godot, access secrets/Profile data, or touch production code.
 
-Tasks 0024AM and 0024AN remain immutable historical preflight/schema attempts. No gameplay, Profile, catalog, owner-review or release surface changed. The next legitimate product gate is owner subjective playthrough of sequences 1–12 under a new task identity.
+If MCP is unavailable, record it as blocked; the accepted wrapper may be used only as an explicitly labeled model-quality control. No fallback may be represented as MCP success.
+
+Production catalog, sequence order, finale, Profile, owner worksheet, Simulation, solver, scenes, assets, audio, build/release/submission surfaces and all historical retained evidence remain protected. Owner subjective 1–12 playthrough remains pending and must not start under Task 0024AP.
