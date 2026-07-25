@@ -1,24 +1,25 @@
 # Codex startup snapshot (CURRENT)
 
-- Status: `CURRENT / TASK 0024AP READY / DEEPSEEK MCP CODE QUALITY PILOT`
+- Status: `CURRENT / TASK 0024AQ READY / WRAPPER DRIFT RECONCILIATION AND MCP QUALITY CONTINUATION`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Active task: `tasks/0024AP_deepseek_mcp_bounded_gdscript_code_quality_pilot.md`
-- Active status: `TASK_0024AP_READY`
-- Task publication commit: `b06417cca24e879329d648ba1bb18449564553cb`
-- Active-pointer commit: `0812712210b939abc234d4d501bdf205f15116ea`
-- Required accepted checkpoint in ancestry: `a5a9e9ac0efe0b85458e0017e5ac5322a366371b`
+- Active task: `tasks/0024AQ_deepseek_wrapper_drift_reconciliation_and_mcp_quality_continuation.md`
+- Active status: `TASK_0024AQ_READY`
+- Task publication commit: `4254f6cd6b062e06fe25368b2e6b6068645a0c41`
+- Active-pointer commit: `183aaafa9b3e3bda8ceb38b0f016bf0db4c174fa`
+- Required predecessor checkpoint in ancestry: `26354b4fdaa0ad8bd5ebba046b526a7aa2b1d0cb`
 - Previous GPT acceptance: `TASK_0024AO_DEEPSEEK_PROJECT_PILOT_ACCEPTED`
-- Accepted route: wrapper-only CLI file worker remains enabled
+- Task 0024AP status: stopped at startup on exact wrapper-hash drift; no code/worktree/tests/writes
+- Former accepted wrapper hash: `56289229ffa0e975f9f9751a5998c777e5827b5c2639f7f74ae6c7cbbb07c1d1`
+- Observed wrapper hash: `f604001d001cd206e742e5252a69995c29f96c983e6520ec6fd0374ae4908750`
+- Wrapper reconciliation choices: accept byte-only/equivalent/stricter drift, rebuild canonical, or block
 - Experimental route under test: configured DeepSeek MCP
 - Benchmark scope: isolated test-only GDScript action-sequence codec
-- GPT ownership: contract, hidden tests, review, scoring, validation, Git and acceptance
-- DeepSeek scope: one implementation file only
 - Production baseline: exactly eight cataloged levels; sequence 8 remains the sole formal finale
 - Owner playthrough: `NOT_YET_REVIEWED`
 - Catalog admission: `NOT_AUTHORIZED`
 
-Before Task 0024AP work, fetch and fast-forward to current `origin/main`. Require `HEAD == origin/main`, divergence `0/0`, no tracked/staged changes, only unchanged untracked `.codex/config.toml`, accepted wrapper and worker hashes, no stale benchmark worktree, and Godot count zero.
+Before Task 0024AQ work, fetch and fast-forward to current `origin/main`. Require `HEAD == origin/main`, divergence `0/0`, no tracked/staged changes, only unchanged untracked `.codex/config.toml`, project-config identity, no stale 0024AQ worktree and Godot count zero.
 
-Read Task 0024AP completely before writing. Test MCP registration read-only and do not repair or replace it. MCP transport and DeepSeek code quality must be adjudicated separately. If MCP blocks, an accepted-wrapper run may be used only as a clearly labeled model-quality control.
+Read Task 0024AQ completely. Back up the current wrapper before any modification. Compare it against the canonical Task 0024AN contract, independently review and fully requalify the accepted or rebuilt wrapper. Do not modify global config, agents, shell policy or the frozen worker core.
 
-No production code, Simulation, solver, level, catalog, Profile, owner worksheet, scene, asset, audio, localization, build, release or submission change is authorized. The owner subjective 1–12 playthrough remains a separate later product gate.
+After wrapper reconciliation, repeat MCP ping/tool discovery and continue the isolated benchmark. MCP transport and DeepSeek code quality remain separate verdicts. No production code, Simulation, solver, level, catalog, Profile, owner worksheet, scene, asset, audio, localization, build, release or submission change is authorized.
