@@ -1,6 +1,6 @@
 # Codex active task (CURRENT)
 
-- Status: `TASK_0024AQ_READY`
+- Status: `TASK_0024AQ_DEEPSEEK_MCP_QUALITY_BLOCKED`
 - Active task: `tasks/0024AQ_deepseek_wrapper_drift_reconciliation_and_mcp_quality_continuation.md`
 - Task publication commit: `4254f6cd6b062e06fe25368b2e6b6068645a0c41`
 - Required predecessor checkpoint in ancestry: `26354b4fdaa0ad8bd5ebba046b526a7aa2b1d0cb`
