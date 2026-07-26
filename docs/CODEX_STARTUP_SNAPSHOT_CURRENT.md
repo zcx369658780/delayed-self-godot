@@ -1,26 +1,25 @@
 # Codex startup snapshot (CURRENT)
 
-- Status: `CURRENT / TASK 0024AU GPT ACCEPTED / OWNER-REBASELINE SYNC COMPLETE`
+- Status: `CURRENT / TASK 0024AV READY / PHASE-1 SIX-BRIEF FREEZE`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Active task: none; await explicit successor task
-- Active status: `TASK_0024AU_OWNER_REBASELINE_DOCUMENTATION_COMPLETION_ACCEPTED`
-- Accepted result commit: `204c289398ee467ed2d4431603a5a2fad813dbef`
-- GPT acceptance report: `docs/reports/0024AU_GPT_OWNER_REBASELINE_DOCUMENTATION_COMPLETION_ACCEPTANCE.md`
-- GPT acceptance commit: `abd43887218d1f5dcfbaf772fef308cb6a7dcdbb`
-- Task 0024AT status: `BLOCKED_DOCUMENTATION_SYNC_AND_STRUCTURE_INCOMPLETE`
-- Accepted Task 0024AT input: faithful owner directional feedback
+- Active task: `tasks/0024AV_phase_1_six_candidate_brief_and_validation_plan.md`
+- Active status: `TASK_0024AV_READY`
+- Task publication commit: `8f4b3c206173cf677c1f55490cfe8809c5a9e707`
+- Active-pointer commit: `bb4f2ebea543bb4f52a36484c455f4a4babc1fec`
+- Required accepted checkpoint in ancestry: `402431849f4379fad279dff9f6c965c0fbe04db9`
+- Previous GPT acceptance: `TASK_0024AU_OWNER_REBASELINE_DOCUMENTATION_COMPLETION_ACCEPTED`
 - Owner playthrough: `COMPLETED_WITH_DIRECTIONAL_FEEDBACK`
-- Crate track: C01–C10; redesign beyond obstruction clearing
-- Body/shadow track: S01–S10; primary expansion track
-- Future final-challenge track: F01–F04 shadow trapping/alignment
-- Phase-1 recommendation: plan three crate plus three body/shadow uncatalogued proof candidates
-- Shipping count: `DEFERRED`
+- Default selected slots: C02, S01, C03, S03, C07, S04
+- Planned authoring order: interleaved crate/body-shadow
+- Task scope: read-only dependency audit and brief/validation planning
+- Level authoring and machine validation: `NOT_AUTHORIZED`
 - Production baseline: exactly eight cataloged levels; sequence 8 remains the sole formal finale
+- Shipping count: `DEFERRED`
 - Catalog admission: `NOT_AUTHORIZED`
 - DeepSeek project-code routing: `DISABLED`
 
-Before successor work, fetch and fast-forward only. Require `HEAD == origin/main`, divergence `0/0`, no tracked/staged changes, only the accepted untracked `.codex/config.toml`, and Godot count zero.
+Before Task 0024AV work, fetch and fast-forward only. Require `HEAD == origin/main`, divergence `0/0`, no tracked/staged changes, only the accepted untracked `.codex/config.toml`, and Godot count zero.
 
-Task 0024AU is GPT accepted as documentation/planning synchronization. No gameplay code, level data, catalog, Profile, scene, test, build, release, or submission surface changed.
+Read Task 0024AV completely. Code/schema/level/test inspection is read-only. Do not launch Godot, run solvers, create level files, reserve real manifests, or modify gameplay/schema/tests/catalog/Profile/finale.
 
-The next legitimate gate is planning-only: freeze six Phase-1 briefs and independent future validation identities before any level authoring or catalog migration.
+The task must freeze six not-authored briefs, support classifications, symbolic solution hypotheses, solver budgets, controls, presentation plans, future single-candidate task identities, and Phase-1 comparison gates. No candidate is admitted automatically.
