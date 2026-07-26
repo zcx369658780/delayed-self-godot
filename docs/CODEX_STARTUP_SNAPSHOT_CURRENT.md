@@ -1,21 +1,23 @@
 # Codex startup snapshot (CURRENT)
 
-- Status: `CURRENT / TASK 0024AV GPT ACCEPTED / PHASE-1 SIX BRIEFS FROZEN`
+- Status: `CURRENT / TASK 0024AW READY / C02 PRESSURE-IMPRINT MACHINE VALIDATION`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Active task: none; await explicit successor task
-- Active status: `TASK_0024AV_PHASE_1_SIX_CANDIDATE_BRIEF_AND_VALIDATION_PLAN_ACCEPTED`
-- Accepted result commit: `da5f4166681d45ad299da38ca31b72683b268ecb`
-- GPT acceptance report: `docs/reports/0024AV_GPT_PHASE_1_SIX_CANDIDATE_BRIEF_ACCEPTANCE.md`
-- GPT acceptance commit: `e9eb5b35a63dc2ee96ede9b5e1670de9c6487172`
-- Active-pointer acceptance commit: `535f29622350d733ff3e14b7505af76c12aa65c7`
-- Owner playthrough: `COMPLETED_WITH_DIRECTIONAL_FEEDBACK`
-- Frozen order: C02, S01, C03, S03, C07, S04
-- Six support classifications: `SUPPORTED_AS_IS` read-only findings
+- Active task: `tasks/0024AW_phase_1_c02_crate_pressure_imprint_authoring_and_machine_validation.md`
+- Active status: `TASK_0024AW_READY`
+- Task publication commit: `e5053db9f8a3afc889fc6c79da06681dd9f9ccfe`
+- Active-pointer commit: `658f97de420705413ead2622e30bce92e223206f`
+- Required accepted checkpoint in ancestry: `666d7921ef1865e603c916255fd337213accbcda`
+- Previous GPT acceptance: `TASK_0024AV_PHASE_1_SIX_CANDIDATE_BRIEF_AND_VALIDATION_PLAN_ACCEPTED`
+- Candidate: C02 / `phase_1_c02_crate_pressure_imprint`
+- Design chain: crate sensor → next-turn barrier → delayed ECHO → Plate/Door → YOU EXIT
 - Production baseline: exactly eight cataloged levels; sequence 8 remains the sole formal finale
+- Candidate admission: `NOT_AUTHORIZED`
+- Owner review: `NOT_REVIEWED`
 - Shipping count: `DEFERRED`
-- Catalog admission: `NOT_AUTHORIZED`
 - DeepSeek project-code routing: `DISABLED`
 
-Before successor work, fetch and fast-forward only. Require synchronized main, a clean tracked worktree, only the accepted untracked project config, and Godot count zero.
+Before work, fetch and fast-forward only. Require synchronized main, clean tracked/staged state, only the accepted untracked project config, accepted Godot/wrapper/foundation identities, no Task 0024AW artifacts, and Godot process count zero.
 
-Only a new explicit Task 0024AW may author and independently machine-validate one uncatalogued C02 candidate. No later candidate, catalog, Profile, finale, build, release or submission authority is implied.
+Read Task 0024AW completely. Only one uncatalogued C02 candidate, its dedicated validation/helpers, bounded evidence and current-document closeout are authorized. Existing levels, catalog, Profile, schema, Simulation, solver, Aggregate, scenes and all later Phase-1 candidates remain protected.
+
+After PRE_FINAL, consume one fresh Task 0024AW manifest and run the focused C02, current Aggregate and current complete-v2 cases exactly once under the accepted process-isolated write-ahead lifecycle. Any consumed-cycle failure closes the task without repair or rerun.
