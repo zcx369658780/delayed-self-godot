@@ -1,5 +1,9 @@
 # Handoff master (CURRENT)
 
+## Task 0024BA C07 machine validation
+
+Task 0024BA is `PASS_FOR_GPT_REVIEW`: C07 reached `L*=14`, exact `N*=1`, all-shortest `1/1`, omissions zero and strict crate→ECHO→YOU ordering. Manifest `43be397c-ca57-487b-938f-8a04f18effd7` is consumed and immutable; all three retained cases passed. C07 remains uncatalogued and owner-unreviewed. Do not open S04/0024BB before explicit GPT adjudication.
+
 ## Task 0024AZ S03 machine validation
 
 Task 0024AZ is `PASS_FOR_GPT_REVIEW`: S03 reached `L*=13`, exact `N*=11`, all-shortest `11/11` and omissions zero. The body commits before ECHO activates the only `ECHO_ONLY` sensor; YOU crosses the barrier on a later open-start transition and reaches EXIT. Manifest `e41c771e-0df0-4ac5-a7d6-545b2175cc3b` is consumed and immutable; focused S03, Aggregate and complete-v2 all passed. S03 remains unsequenced, uncatalogued and owner-unreviewed. Do not open C07/0024BA before explicit GPT adjudication.

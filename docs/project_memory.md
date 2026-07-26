@@ -1,5 +1,9 @@
 # Project memory
 
+## Task 0024BA C07 crate-to-ECHO handoff
+
+Task 0024BA authored fresh uncatalogued C07. Shared BFS is `SOLVED`, `L*=14`, exact `N*=1`; all-shortest is `1/1`, omissions zero, pushes `1–1`, with strict crate sensor → ECHO access → ECHO-only sensor → YOU barrier → EXIT ordering. Manifest `43be397c-ca57-487b-938f-8a04f18effd7` passed once and is permanently consumed. Status is `PASS_FOR_GPT_REVIEW`; S04/0024BB remains closed.
+
 ## Task 0024AZ S03 ECHO-only sensor machine validation
 
 Task 0024AZ authored fresh uncatalogued S03. Shared BFS is `SOLVED`, `L*=13`, exact `N*=11`; complete all-shortest enumeration is `11/11` full ordered event mask with zero omissions. No-ECHO, YOU_ONLY, body-route-removed and ECHO-route-removed controls completely exhaust unsolved; remaining controls prove substitution or material bypass. Manifest `e41c771e-0df0-4ac5-a7d6-545b2175cc3b` was consumed exactly once and all cases passed. Status is `PASS_FOR_GPT_REVIEW`; C07/0024BA remains closed.

@@ -1,9 +1,9 @@
 # Codex startup snapshot (CURRENT)
 
-- Status: `CURRENT / TASK 0024BA READY / C07 CRATE-ECHO HANDOFF VALIDATION`
+- Status: `CURRENT / TASK 0024BA COMPLETE / GPT REVIEW PENDING`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
 - Active task: `tasks/0024BA_phase_1_c07_crate_echo_handoff_authoring_and_machine_validation.md`
-- Active status: `TASK_0024BA_READY`
+- Active status: `TASK_0024BA_PASS_FOR_GPT_REVIEW`
 - Task publication commit: `8c2fa5fe1e7850a8efdb0bd0644923664c80d887`
 - Active-pointer commit: `78d86e572b2e3f1abd815c211e3c4733c02d8162`
 - Required accepted checkpoint in ancestry: `c14d445b98c06295c9af4a5054efb15318195af7`
@@ -14,9 +14,9 @@
 - Production baseline: exactly eight cataloged levels; sequence 8 remains the sole formal finale
 - Candidate admission: `NOT_AUTHORIZED`
 - Owner review: `NOT_REVIEWED`
+- Machine result: `SOLVED / L*=14 / exact N*=1 / all-shortest 1/1`
+- Retained manifest: `43be397c-ca57-487b-938f-8a04f18effd7 / PASS_CONSUMED_EXACTLY_ONCE / NO_RERUN`
 - Shipping count: `DEFERRED`
 - DeepSeek project-code routing: `DISABLED`
 
-Before work, fetch and fast-forward only. Require `HEAD == origin/main`, divergence `0/0`, clean tracked/staged state, only the accepted untracked `.codex/config.toml`, accepted Godot/wrapper/foundation identities and Godot process count zero.
-
-Read Task 0024BA completely. Only one uncatalogued C07 candidate, its dedicated validation/helpers, bounded evidence and current closeout are authorized. Never rerun consumed 0024AW/AX/AYR/AZ manifests. S04/0024BB remains closed pending explicit GPT adjudication of C07.
+Task 0024BA is complete at the machine-validation boundary. Read its report, validation and handoff. Never rerun consumed 0024AW/AX/AYR/AZ/BA manifests. S04/0024BB remains closed pending explicit GPT adjudication.

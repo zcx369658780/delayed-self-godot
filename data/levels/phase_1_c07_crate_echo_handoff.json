@@ -1,0 +1,43 @@
+{
+  "schema_version": 2,
+  "level_id": "phase_1_c07_crate_echo_handoff",
+  "title": "Hand Off",
+  "terrain_rows": [
+    "#########",
+    "#...#...#",
+    "#.###.###",
+    "#.#.....#",
+    "#...#.#.#",
+    "#..##.#.#",
+    "#.....#.#",
+    "#########"
+  ],
+  "player_spawn": [1, 5],
+  "echoes": [
+    {"id": "echo_handoff", "delay": 2, "spawn": [3, 3]}
+  ],
+  "plates": [],
+  "doors": [],
+  "exit": {"position": [7, 1]},
+  "metadata": {
+    "teaching_goal": "Push the crate onto its handoff sensor to open ECHO access, then let delayed ECHO activate its exclusive sensor so YOU can cross the second barrier to EXIT.",
+    "intended_mechanics": ["crate_to_echo_handoff", "crate_eligible_sensor", "two_stage_grouped_barriers", "echo_only_second_sensor", "ordered_role_necessity", "uncatalogued_phase_1_c07"],
+    "notes": "Uncatalogued Phase-1 C07 candidate. Production sequence unassigned; owner review not performed.",
+    "allow_zero_echo_tutorial": false
+  },
+  "validation": {"recommended_search_depth": 64},
+  "crates": [
+    {"id": "crate_handoff", "position": [2, 4]}
+  ],
+  "keys": [],
+  "locks": [],
+  "barrier_groups": [
+    {"id": "barrier_echo_access", "cells": [[5, 3], [5, 5]], "initial_open": false, "all_sensor_ids": ["sensor_crate_handoff"]},
+    {"id": "barrier_you_exit", "cells": [[5, 1]], "initial_open": false, "all_sensor_ids": ["sensor_echo_handoff"]}
+  ],
+  "sensors": [
+    {"id": "sensor_crate_handoff", "position": [3, 4], "activator": "YOU_ONLY", "include_crates": true},
+    {"id": "sensor_echo_handoff", "position": [7, 3], "activator": "ECHO_ONLY", "include_crates": false}
+  ],
+  "latches": []
+}

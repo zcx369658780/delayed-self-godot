@@ -1,7 +1,7 @@
 # Expanded content submission roadmap (CURRENT)
 
 - Status: `OWNER-REBASELINED PLANNING / IMPLEMENTATION SEPARATELY GATED`
-- Current synchronization: Task 0024AZ S03 machine validation, 2026-07-26
+- Current synchronization: Task 0024BA C07 machine validation, 2026-07-27
 - Owner input source: Task 0024AT core capture, accepted as input; 0024AT itself is `BLOCKED_DOCUMENTATION_SYNC_AND_STRUCTURE_INCOMPLETE`
 - Production catalog: exactly sequences 1–8
 - Formal finale: sequence 8 only

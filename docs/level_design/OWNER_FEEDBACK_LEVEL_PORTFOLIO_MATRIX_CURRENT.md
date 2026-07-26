@@ -20,7 +20,7 @@
 |C04|crate|new|—|block signal|crate blocker|pulse|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|distinct purpose|
 |C05|crate|new|—|anchor|crate bridge|grid|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 2|distinct purpose|
 |C06|crate|new|—|ordering|two crates|sequence|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 2|distinct purpose|
-|C07|crate|new|—|cooperation|crate|echo|BRIEF_FROZEN_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|0024BA; supported as is|
+|C07|crate|new|—|cooperation|crate|echo|MACHINE_VALIDATED_FOR_GPT_REVIEW|PASS_FOR_GPT_REVIEW|MACHINE_CONTRACT_READY_OWNER_REVIEW_PENDING|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|0024BA complete; L*=14; N*=1; GPT pending|
 |C08|crate|new|—|commitment|crate state|irreversible|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 3|distinct purpose|
 |C09|crate|new|—|phase|crate reset|deterministic|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 4|contract only|
 |C10|crate|new|—|synthesis|crate|mixed|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 4|distinct purpose|

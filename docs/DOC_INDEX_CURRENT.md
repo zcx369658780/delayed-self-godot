@@ -2,6 +2,11 @@
 
 ## Start here
 
+0. [`Task 0024BA`](../tasks/0024BA_phase_1_c07_crate_echo_handoff_authoring_and_machine_validation.md) — C07 machine validation complete, GPT review pending
+1. [`C07 validation`](level_design/validation/phase_1_c07_crate_echo_handoff_validation.json) — `L*=14`, exact `N*=1`, all-shortest `1/1`
+2. [`Task 0024BA report`](reports/0024BA_C07_CRATE_ECHO_HANDOFF_MACHINE_VALIDATION_REPORT.md) — ordered two-stage handoff and retained lifecycle
+3. [`Task 0024BA handoff`](handoffs/DELAYED_SELF_SESSION_HANDOFF_AFTER_TASK_0024BA_C07_MACHINE_VALIDATION_2026_07_27.md) — no-rerun boundary and next gate
+
 0. [`Task 0024AZ`](../tasks/0024AZ_phase_1_s03_echo_only_sensor_authoring_and_machine_validation.md) — S03 machine validation complete, GPT review pending
 1. [`S03 validation`](level_design/validation/phase_1_s03_echo_only_sensor_validation.json) — `L*=13`, exact `N*=11`, all-shortest `11/11`
 2. [`Task 0024AZ report`](reports/0024AZ_S03_ECHO_ONLY_SENSOR_MACHINE_VALIDATION_REPORT.md) — ECHO-only role proof, controls and consumed lifecycle

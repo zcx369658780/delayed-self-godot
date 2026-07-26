@@ -7,8 +7,8 @@
 | 1 | C02 | `GPT_ACCEPTED_MACHINE_VALIDATION` | Intro | 0024AW accepted |
 | 2 | S01 | `GPT_ACCEPTED_MACHINE_VALIDATION` | Intro | 0024AX accepted |
 | 3 | C03 | `GPT_ACCEPTED_MACHINE_VALIDATION` | Intermediate | 0024AYR accepted |
-| 4 | S03 | `MACHINE_VALIDATED_FOR_GPT_REVIEW` | Intermediate | 0024AZ complete; GPT pending |
-| 5 | C07 | `SUPPORTED_AS_IS` | Synthesis proof | 0024BA |
+| 4 | S03 | `GPT_ACCEPTED_MACHINE_VALIDATION` | Intermediate | 0024AZ accepted |
+| 5 | C07 | `MACHINE_VALIDATED_FOR_GPT_REVIEW` | Synthesis proof | 0024BA complete; GPT pending |
 | 6 | S04 | `SUPPORTED_AS_IS` | Intermediate | 0024BB |
 
 ## Read-only support audit
@@ -17,7 +17,7 @@
 |---|---|---|---|---|---|
 | C02 | v2 crates; sensor `include_crates`; barrier groups | `_transition_v2`, `pressed_sensor_ids`, BFS canonical crate state | none | authored level + candidate test only | `L*=14`, exact `N*=1`, all-shortest `1/1`; GPT accepted |
 | C03 | v2 crate, actor plate/door, delayed echo | v2 next-state door update; shared BFS/replay | none under reconciled temporal-separation contract | authored level + candidate test | 0024AYR `L*=14`, exact `N*=2`, revised all-shortest `2/2`; GPT accepted |
-| C07 | v2 crate push, ECHO, plate/door | v2 blocked crate/ECHO movement and shared BFS | none | authored level + candidate test only | `SUPPORTED_AS_IS`; author only under 0024BA |
+| C07 | v2 crate push, ECHO, typed sensors/barriers | v2 blocked crate/ECHO movement and shared BFS | none | authored level + candidate test only | `L*=14`, exact `N*=1`, all-shortest `1/1`; GPT pending |
 | S01 | typed sensors and grouped barriers | `_activator_pressed`, `pressed_sensor_ids`, canonical state | none | authored level + candidate test only | `L*=12`, exact `N*=8`, all-shortest `8/8`; GPT accepted |
 | S03 | `ECHO_ONLY` sensor, `include_crates=false`, barrier | same typed sensor/barrier paths | none | authored level + candidate test only | `L*=13`, exact `N*=11`, all-shortest `11/11`; GPT pending |
 | S04 | typed sensors, grouped barriers, delayed echoes | deterministic v2 transition and shared BFS | none | authored level + candidate test only | `SUPPORTED_AS_IS`; author only under 0024BB |
