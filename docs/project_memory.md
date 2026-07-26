@@ -1,5 +1,9 @@
 # Project memory
 
+## Task 0024AZ S03 ECHO-only sensor machine validation
+
+Task 0024AZ authored fresh uncatalogued S03. Shared BFS is `SOLVED`, `L*=13`, exact `N*=11`; complete all-shortest enumeration is `11/11` full ordered event mask with zero omissions. No-ECHO, YOU_ONLY, body-route-removed and ECHO-route-removed controls completely exhaust unsolved; remaining controls prove substitution or material bypass. Manifest `e41c771e-0df0-4ac5-a7d6-545b2175cc3b` was consumed exactly once and all cases passed. Status is `PASS_FOR_GPT_REVIEW`; C07/0024BA remains closed.
+
 ## Task 0024AYR C03 contract-reconciled retry
 
 Task 0024AYR used 3 topology families and 5 variants. Fresh C03 is `SOLVED`, `L*=14`, exact `N*=2`; revised all-shortest is `2/2`, omissions zero, with 2 pushes and 1 ECHO-crate block in every shortest solution. Strict Plate-entry-to-Door-cross separation and a separate reachable blocked-Door diagnostic pass. Manifest `a5850880-314a-49e7-a67c-860313c14158` was consumed exactly once and all cases passed. Status is `PASS_FOR_GPT_REVIEW`; C03 remains uncatalogued and owner-unreviewed.

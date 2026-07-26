@@ -16,7 +16,7 @@
 |SEQ12|separation seed|existing|12|latching|latch|barrier|seed|accepted history|existing|completed directional|not authorized|retain|S10|
 |C01|crate|existing|9|obstruction intro|crate push|echo|seed revise|accepted history|existing|completed directional|not authorized|high|only clearing exception|
 |C02|crate|new|—|plate|crate plate|door|MACHINE_VALIDATED_FOR_GPT_REVIEW|PASS_FOR_GPT_REVIEW|MACHINE_CONTRACT_READY_OWNER_REVIEW_PENDING|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|0024AW complete; L*=14; N*=1; GPT pending|
-|C03|crate|new|—|delayed hold|crate door|delay|BRIEF_FROZEN_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|0024AY; supported as is|
+|C03|crate|new|—|delayed hold|crate door|delay|GPT_ACCEPTED_MACHINE_VALIDATION|GPT_ACCEPTED_MACHINE_VALIDATION|MACHINE_CONTRACT_READY_OWNER_REVIEW_PENDING|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|0024AYR accepted; L*=14; N*=2|
 |C04|crate|new|—|block signal|crate blocker|pulse|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|distinct purpose|
 |C05|crate|new|—|anchor|crate bridge|grid|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 2|distinct purpose|
 |C06|crate|new|—|ordering|two crates|sequence|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 2|distinct purpose|
@@ -26,7 +26,7 @@
 |C10|crate|new|—|synthesis|crate|mixed|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 4|distinct purpose|
 |S01|separation|new|—|explicit roles|body shadow|identity|MACHINE_VALIDATED_FOR_GPT_REVIEW|PASS_FOR_GPT_REVIEW|MACHINE_CONTRACT_READY_OWNER_REVIEW_PENDING|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|0024AX complete; L*=12; N*=8; GPT pending|
 |S02|separation|existing|10|body route|body|key|seed|accepted history|existing|completed directional|not authorized|retain|seed|
-|S03|separation|new|—|echo sensor|echo|sensor|BRIEF_FROZEN_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|0024AZ; supported as is|
+|S03|separation|new|—|echo sensor|echo|sensor|MACHINE_VALIDATED_FOR_GPT_REVIEW|PASS_FOR_GPT_REVIEW|MACHINE_CONTRACT_READY_OWNER_REVIEW_PENDING|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|0024AZ complete; L*=13; N*=11; GPT pending|
 |S04|separation|new|—|parallel|body echo|paths|BRIEF_FROZEN_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|0024BB; supported as is|
 |S05|separation|new|—|reunion|timing|alignment|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 2|distinct roles|
 |S06|separation|new|—|body opens|body|echo route|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 2|distinct roles|

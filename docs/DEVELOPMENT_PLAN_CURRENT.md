@@ -1,5 +1,7 @@
 # Development plan (CURRENT)
 
+> 2026-07-26 — Task 0024AZ authored and machine-validated uncatalogued S03. Shared BFS found `L*=13`, exact `N*=11`; complete all-shortest proof is `11/11` with zero omissions and ordered body-commitment → ECHO-only activation → later open-start YOU crossing → EXIT evidence. Manifest `e41c771e-0df0-4ac5-a7d6-545b2175cc3b` was consumed exactly once and all three retained cases passed. Status is `PASS_FOR_GPT_REVIEW`; catalog/Profile/finale remain unchanged and C07/0024BA remains closed.
+
 > 2026-07-26 — Task 0024AYR reconciled the C03 contract and completed the only bounded retry within 3 families/5 variants. Fresh C03 is `L*=14`, exact `N*=2`, revised all-shortest `2/2`, strict separation `2/2`, and reachable blocked-Door diagnostic PASS. Manifest `a5850880-314a-49e7-a67c-860313c14158` was consumed exactly once; status is `PASS_FOR_GPT_REVIEW`. Catalog/Profile/finale remain unchanged and 0024AZ remains closed.
 
 > 2026-07-26 — Task 0024AY stopped `BLOCKED` before PRE_FINAL. The strongest C03 layout solved at `L*=15`, exact `N*=14`, but complete all-shortest proof was only `2/14` full mask with `12` mandatory same-turn Door-attempt omissions. No candidate/test or manifest was retained; Aggregate/complete-v2 were not run. S03/0024AZ remains closed.

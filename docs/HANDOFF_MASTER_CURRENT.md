@@ -1,5 +1,9 @@
 # Handoff master (CURRENT)
 
+## Task 0024AZ S03 machine validation
+
+Task 0024AZ is `PASS_FOR_GPT_REVIEW`: S03 reached `L*=13`, exact `N*=11`, all-shortest `11/11` and omissions zero. The body commits before ECHO activates the only `ECHO_ONLY` sensor; YOU crosses the barrier on a later open-start transition and reaches EXIT. Manifest `e41c771e-0df0-4ac5-a7d6-545b2175cc3b` is consumed and immutable; focused S03, Aggregate and complete-v2 all passed. S03 remains unsequenced, uncatalogued and owner-unreviewed. Do not open C07/0024BA before explicit GPT adjudication.
+
 ## Task 0024AYR C03 retry
 
 Task 0024AYR is `PASS_FOR_GPT_REVIEW`: fresh C03 reached `L*=14`, exact `N*=2`, revised all-shortest `2/2`, omissions zero and strict Plate-to-cross separation `2/2`. Reachable blocked-Door diagnostic passed. Manifest `a5850880-314a-49e7-a67c-860313c14158` is consumed and immutable; all three cases passed. Do not open 0024AZ before explicit GPT adjudication.

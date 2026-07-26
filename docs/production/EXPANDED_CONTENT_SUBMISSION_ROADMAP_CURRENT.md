@@ -1,7 +1,7 @@
 # Expanded content submission roadmap (CURRENT)
 
 - Status: `OWNER-REBASELINED PLANNING / IMPLEMENTATION SEPARATELY GATED`
-- Current synchronization: Task 0024AX S01 machine validation, 2026-07-26
+- Current synchronization: Task 0024AZ S03 machine validation, 2026-07-26
 - Owner input source: Task 0024AT core capture, accepted as input; 0024AT itself is `BLOCKED_DOCUMENTATION_SYNC_AND_STRUCTURE_INCOMPLETE`
 - Production catalog: exactly sequences 1–8
 - Formal finale: sequence 8 only
@@ -34,7 +34,7 @@ Sequence 9 is the obstruction-only crate seed; sequences 10–12 are body/shadow
 
 Cut candidates before weakening validation, presentation readability, stability, licensing, export, or any protected-data policy. No phase implies authorization for the next one.
 
-Task 0024AW machine evidence is GPT accepted; Task 0024AX machine-validated S01 (`L*=12`, exact `N*=8`) for GPT review. Both remain uncatalogued and unsequenced; C03/0024AY is closed until GPT accepts 0024AX. No shipping, catalog, Profile or finale decision follows.
+Tasks 0024AW C02, 0024AX S01 and 0024AYR C03 have GPT-accepted machine evidence. Task 0024AZ machine-validated S03 (`L*=13`, exact `N*=11`, all-shortest `11/11`) for GPT review. All remain uncatalogued and unsequenced; C07/0024BA remains closed until explicit GPT acceptance. No shipping, catalog, Profile or finale decision follows.
 
 ## Preserved deterministic design constraints
 

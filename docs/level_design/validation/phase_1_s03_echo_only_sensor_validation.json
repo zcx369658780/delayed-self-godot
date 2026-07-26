@@ -1,0 +1,91 @@
+{
+  "schema_version": 1,
+  "task_identity": "0024AZ",
+  "candidate_slot": "S03",
+  "level_id": "phase_1_s03_echo_only_sensor",
+  "candidate_status": "MACHINE_VALIDATED_FOR_GPT_REVIEW",
+  "production_sequence": "UNASSIGNED",
+  "catalog_status": "NOT_AUTHORIZED",
+  "owner_review_status": "NOT_REVIEWED",
+  "presentation_status": "MACHINE_CONTRACT_READY_OWNER_REVIEW_PENDING",
+  "solver": {
+    "status": "SOLVED",
+    "shortest_solution_length": 13,
+    "shortest_solution_count": 11,
+    "shortest_solution_count_status": "EXACT",
+    "visited_states": 1340,
+    "maximum_frontier": 193,
+    "elapsed_ms": 269,
+    "solution": ["UP","UP","UP","LEFT","UP","RIGHT","RIGHT","RIGHT","RIGHT","RIGHT","RIGHT","RIGHT","RIGHT"],
+    "limits": {"depth":56,"states":250000,"elapsed_ms":90000,"count_cap":128}
+  },
+  "all_shortest": {
+    "status": "COMPLETE",
+    "total": 11,
+    "full_event_mask": 11,
+    "omissions": 0,
+    "counts_by_mask": {"31":11},
+    "visited_composite_states": 4150
+  },
+  "ordered_first_events": [
+    {"turn":2,"events":["BODY_ROUTE_COMMITMENT"],"action":"UP"},
+    {"turn":6,"events":["ECHO_ON_ECHO_ONLY_SENSOR","BARRIER_OPEN_FROM_ECHO"],"action":"RIGHT"},
+    {"turn":7,"events":["YOU_LATER_CROSSES_BARRIER"],"action":"RIGHT"},
+    {"turn":13,"events":["YOU_REACHES_EXIT"],"action":"RIGHT"}
+  ],
+  "controls": {
+    "no_echo":{"status":"COMPLETE_UNSOLVED","visited_states":12},
+    "any_actor":{"status":"SOLVED","shortest_solution_length":13,"shortest_solution_count":11,"you_substitution_probe":true},
+    "you_only":{"status":"COMPLETE_UNSOLVED","visited_states":880},
+    "dependency_removed":{"status":"SOLVED","shortest_solution_length":12,"shortest_solution_count":2,"event_mask":25},
+    "initially_open":{"status":"SOLVED","shortest_solution_length":12,"shortest_solution_count":6,"event_mask":26},
+    "body_route_removed":{"status":"COMPLETE_UNSOLVED","visited_states":237},
+    "echo_route_removed":{"status":"COMPLETE_UNSOLVED","visited_states":178},
+    "direct_body_bypass":{"status":"SOLVED","shortest_solution_length":12,"shortest_solution_count":60,"event_mask":17},
+    "symmetric_path":{"status":"SOLVED","shortest_solution_length":12,"shortest_solution_count":60}
+  },
+  "probes": {
+    "you_cannot_activate_echo_only": true,
+    "echo_can_activate_echo_only": true,
+    "echo_cannot_complete_exit": true,
+    "barrier_cross_uses_open_start_snapshot": true,
+    "echo_sensor_turn": 6,
+    "you_cross_turn": 7,
+    "accepted_witness_waits": 0,
+    "accepted_witness_blocked_actions": 1,
+    "maximum_repeated_identical_blocked": 1,
+    "restart_zero_residue": true
+  },
+  "qualification": {
+    "focused_run_ids":["d68b0503-5694-427a-8df2-e0e819192b79","d88b5763-d41d-494d-9bf0-f35ee85ca0af"],
+    "matrix_run_id":"a3fc7213-f1d1-4749-92c2-cccbc8f7872e",
+    "aggregate_marker":"TASK_0003_TESTS_PASS assertions=621 vectors=9",
+    "aggregate_stderr":["LEVEL_ID_MISMATCH"],
+    "complete_v2_marker":"TASK_0024V_V2_COMPLETE_PASS"
+  },
+  "retained_cycle": {
+    "manifest_id":"e41c771e-0df0-4ac5-a7d6-545b2175cc3b",
+    "status":"PASS_CONSUMED_EXACTLY_ONCE",
+    "cases":[
+      {"name":"focused_s03","record_sha256":"EDEB685B3612491A69FDE454B49FC3A408F4BE454A880D1013ED9B926B0F03CD","raw_wrapper_sha256":"85359EB564A696997086BBAFBBE552BC3C502F88460F4CD17722158C9D4D74BC","stderr":[]},
+      {"name":"aggregate","record_sha256":"CF627DFFCCEB6B1FC68F990580B5C5DADD0EEC2280C3E3140CC1743850C43406","raw_wrapper_sha256":"CD1B8DEF999F3C9F453A8153E199CF6A9374D490BA13DE813E379728053D1F78","stderr":["LEVEL_ID_MISMATCH"]},
+      {"name":"complete_v2","record_sha256":"6C29E9F57F557425F395C0D2EDF9A2763A49BB2A40392442EBE2CD85186102DF","raw_wrapper_sha256":"951FD157A825ACEE91618C6CD7ACE46C5531CF225468A11063A3E723975AC4C3","stderr":[]}
+    ],
+    "cleanup_invocation_count_each": 1,
+    "remaining_owned_pids": [],
+    "remaining_unproven_pids": [],
+    "final_godot_count": 0,
+    "rerun_authorized": false
+  },
+  "replay_deterministic": true,
+  "restart_exact": true,
+  "protected_invariants": {
+    "production_catalog_modified": false,
+    "production_catalog_count": 8,
+    "formal_finale_sequence": 8,
+    "profile_accessed": false,
+    "deepseek_invoked": false
+  },
+  "next_task_authorized": false,
+  "final_task_verdict": "PASS_FOR_GPT_REVIEW"
+}

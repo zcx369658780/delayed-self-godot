@@ -2,6 +2,11 @@
 
 ## Start here
 
+0. [`Task 0024AZ`](../tasks/0024AZ_phase_1_s03_echo_only_sensor_authoring_and_machine_validation.md) — S03 machine validation complete, GPT review pending
+1. [`S03 validation`](level_design/validation/phase_1_s03_echo_only_sensor_validation.json) — `L*=13`, exact `N*=11`, all-shortest `11/11`
+2. [`Task 0024AZ report`](reports/0024AZ_S03_ECHO_ONLY_SENSOR_MACHINE_VALIDATION_REPORT.md) — ECHO-only role proof, controls and consumed lifecycle
+3. [`Task 0024AZ handoff`](handoffs/DELAYED_SELF_SESSION_HANDOFF_AFTER_TASK_0024AZ_S03_MACHINE_VALIDATION_2026_07_26.md) — no-rerun boundary and next gate
+
 0. [`Task 0024AYR`](../tasks/0024AYR_c03_next_turn_door_contract_reconciliation_and_retry.md) — contract-reconciled C03 retry complete, GPT review pending
 1. [`C03 retry validation`](level_design/validation/phase_1_c03_crate_delayed_door_retry_validation.json) — `L*=14`, exact `N*=2`, revised all-shortest `2/2`
 2. [`Task 0024AYR report`](reports/0024AYR_C03_NEXT_TURN_DOOR_RETRY_REPORT.md) — blocked-Door diagnostic, controls and consumed lifecycle
