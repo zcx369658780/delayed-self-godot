@@ -1,21 +1,19 @@
 # Codex active task (CURRENT)
 
-- Status: `TASK_0024AZ_PASS_FOR_GPT_REVIEW`
-- Active task: `tasks/0024AZ_phase_1_s03_echo_only_sensor_authoring_and_machine_validation.md`
-- Task publication commit: `f46060783ce7baf21cee69eb04c6e83bf53135fd`
-- Required accepted checkpoint in ancestry: `de9fe41c168ff8db0684456b84c746ed7880308e`
-- Previous accepted gate: `TASK_0024AYR_C03_NEXT_TURN_DOOR_RETRY_ACCEPTED`
+- Status: `TASK_0024AZ_GPT_ACCEPTED_CLOSED`
+- Completed task: `tasks/0024AZ_phase_1_s03_echo_only_sensor_authoring_and_machine_validation.md`
+- Result commit: `60ec25046dd9a4339d64eb114b57b5e39ce4fb35`
+- GPT acceptance: `TASK_0024AZ_S03_ECHO_ONLY_SENSOR_MACHINE_VALIDATION_ACCEPTED`
+- GPT acceptance report: `docs/reports/0024AZ_GPT_S03_ECHO_ONLY_SENSOR_ACCEPTANCE.md`
 - Candidate slot: `S03`
 - Candidate identity: `phase_1_s03_echo_only_sensor`
-- Design chain: ECHO_ONLY sensor → next-turn grouped barrier → later YOU crossing → YOU EXIT
+- Machine result: `SOLVED / L*=13 / exact N*=11 / all-shortest 11/11`
+- Retained manifest: `e41c771e-0df0-4ac5-a7d6-545b2175cc3b / PASS_CONSUMED_EXACTLY_ONCE / NO_RERUN`
 - Production catalog: exactly eight levels; sequence 8 remains the sole formal finale
 - Candidate admission: `NOT_AUTHORIZED`
 - Owner review: `NOT_REVIEWED`
-- Solver: `SOLVED / L*=13 / exact N*=11`
-- All-shortest: `11/11 / omissions=0`
-- Retained manifest: `e41c771e-0df0-4ac5-a7d6-545b2175cc3b / PASS_CONSUMED_EXACTLY_ONCE`
 - DeepSeek project-code routing: `DISABLED`
 
-Task 0024AZ authored and machine-validated one fresh uncatalogued S03 candidate. The focused test, Aggregate and complete-v2 passed the single retained lifecycle with exact stderr and cleanup policy.
+Task 0024AZ is closed at the GPT-accepted machine-validation boundary. Its consumed manifest and retained cases must never be rerun, repaired, replaced or reconstructed.
 
-C07/0024BA and every later candidate remain closed pending explicit GPT adjudication. The consumed manifest must never be rerun, repaired, replaced or reconstructed. No catalog, Profile, finale, presentation-code, build, release or submission change is authorized.
+The next allowed task is a separately published C07/0024BA single-candidate gate. No catalog, Profile, finale, owner-review, presentation-code, build, release or submission change is authorized by this closeout.
