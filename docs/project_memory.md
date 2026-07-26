@@ -1,5 +1,11 @@
 # Project memory
 
+## Task 0024AX S01 explicit-role-separation machine validation
+
+Task 0024AX authored uncatalogued S01 `phase_1_s01_explicit_role_separation`. Shared BFS retained `L*=12`, exact `N*=8`; complete all-shortest enumeration is `8/8` with zero omissions. No-ECHO, swapped eligibility and both route-removal controls completely exhaust unsolved; dependency removal, ANY_ACTOR, symmetric and initially-open controls prove role/route necessity. Replay and restart pass.
+
+Manifest `e01bba09-6304-4344-b16a-4bfb9d364655` was consumed exactly once. Focused, Aggregate and complete-v2 all passed; Aggregate stderr was exactly `LEVEL_ID_MISMATCH`, the others empty, cleanup once per case, no owned/unproven PID and final Godot zero. Status is `PASS_FOR_GPT_REVIEW`; owner review, catalog admission, Profile/finale and C03/0024AY remain closed.
+
 ## Task 0024AW C02 pressure-imprint machine validation
 
 Task 0024AW authored uncatalogued C02 `phase_1_c02_crate_pressure_imprint`. Shared BFS retained `L*=14`, exact `N*=1`; complete all-shortest enumeration is `1/1` with zero omissions and one push. No-push, excludes-crate, no-crate, displaced-crate and no-ECHO controls completely exhaust unsolved. Replay/restart/canonical and route/actor probes pass.

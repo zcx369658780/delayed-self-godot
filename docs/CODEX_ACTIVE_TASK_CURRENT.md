@@ -1,6 +1,6 @@
 # Codex active task (CURRENT)
 
-- Status: `TASK_0024AX_READY`
+- Status: `TASK_0024AX_PASS_FOR_GPT_REVIEW`
 - Active task: `tasks/0024AX_phase_1_s01_explicit_role_separation_authoring_and_machine_validation.md`
 - Task publication commit: `8397f6e9530146c98d9d56eef41afa2d3dd3f4a0`
 - Required accepted checkpoint in ancestry: `84ad24657f10a2a4d2290aaef0807fe24ebbdfbc`
@@ -13,6 +13,6 @@
 - Owner review: `NOT_REVIEWED`
 - DeepSeek project-code routing: `DISABLED`
 
-Task 0024AX must prove the full YOU_ONLY + ECHO_ONLY simultaneous typed-role chain, complete all-shortest necessity, role-dependency and eligibility controls, replay/restart, and one independent three-case retained lifecycle.
+Task 0024AX completed at `L*=12`, exact `N*=8`, all-shortest `8/8`, zero omissions and all required controls. Manifest `e01bba09-6304-4344-b16a-4bfb9d364655` was consumed exactly once; all three cases passed and the cycle is frozen.
 
 C03/0024AY and every later candidate remain closed. No catalog, Profile, finale, presentation-code, build, release or submission change is authorized.

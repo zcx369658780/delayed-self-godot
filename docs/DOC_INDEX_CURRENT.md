@@ -2,6 +2,11 @@
 
 ## Start here
 
+0. [`Task 0024AX`](../tasks/0024AX_phase_1_s01_explicit_role_separation_authoring_and_machine_validation.md) — S01 machine validation complete, GPT review pending
+1. [`S01 validation`](level_design/validation/phase_1_s01_explicit_role_separation_validation.json) — exact solver, role controls and consumed retained lifecycle
+2. [`Task 0024AX report`](reports/0024AX_S01_EXPLICIT_ROLE_SEPARATION_MACHINE_VALIDATION_REPORT.md) — evidence and protected boundaries
+3. [`Task 0024AX handoff`](handoffs/DELAYED_SELF_SESSION_HANDOFF_AFTER_TASK_0024AX_S01_MACHINE_VALIDATION_2026_07_26.md) — no-rerun boundary and next gate
+
 0. [`Task 0024AW`](../tasks/0024AW_phase_1_c02_crate_pressure_imprint_authoring_and_machine_validation.md) — C02 machine validation complete, GPT review pending
 1. [`C02 validation`](level_design/validation/phase_1_c02_crate_pressure_imprint_validation.json) — exact solver, controls and consumed retained lifecycle
 2. [`Task 0024AW report`](reports/0024AW_C02_CRATE_PRESSURE_IMPRINT_MACHINE_VALIDATION_REPORT.md) — evidence and protected boundaries

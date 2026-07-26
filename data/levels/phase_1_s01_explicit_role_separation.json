@@ -1,0 +1,39 @@
+{
+  "schema_version": 2,
+  "level_id": "phase_1_s01_explicit_role_separation",
+  "title": "Separate Roles",
+  "terrain_rows": [
+    "#########",
+    "#.......#",
+    "#...#...#",
+    "#.#.##..#",
+    "#...#####",
+    "#...#...#",
+    "#########"
+  ],
+  "player_spawn": [1, 5],
+  "echoes": [
+    {"id": "echo_roles", "delay": 2, "spawn": [7, 5]}
+  ],
+  "plates": [],
+  "doors": [],
+  "exit": {"position": [7, 1]},
+  "metadata": {
+    "teaching_goal": "Separate YOU and delayed ECHO into structurally different routes so each occupies its exact typed sensor before the next-turn exit barrier opens.",
+    "intended_mechanics": ["explicit_you_echo_roles", "typed_sensor_pair", "structurally_different_routes", "next_turn_grouped_barrier", "uncatalogued_phase_1_s01"],
+    "notes": "Uncatalogued Phase-1 S01 candidate. Production sequence unassigned.",
+    "allow_zero_echo_tutorial": false
+  },
+  "validation": {"recommended_search_depth": 48},
+  "crates": [],
+  "keys": [],
+  "locks": [],
+  "barrier_groups": [
+    {"id": "barrier_role_exit", "cells": [[3, 1], [3, 2]], "initial_open": false, "all_sensor_ids": ["sensor_you_role", "sensor_echo_role"]}
+  ],
+  "sensors": [
+    {"id": "sensor_you_role", "position": [3, 3], "activator": "YOU_ONLY", "include_crates": false},
+    {"id": "sensor_echo_role", "position": [6, 5], "activator": "ECHO_ONLY", "include_crates": false}
+  ],
+  "latches": []
+}

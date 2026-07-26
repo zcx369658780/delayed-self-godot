@@ -24,7 +24,7 @@
 |C08|crate|new|—|commitment|crate state|irreversible|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 3|distinct purpose|
 |C09|crate|new|—|phase|crate reset|deterministic|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 4|contract only|
 |C10|crate|new|—|synthesis|crate|mixed|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 4|distinct purpose|
-|S01|separation|new|—|explicit roles|body shadow|identity|BRIEF_FROZEN_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|0024AX; supported as is|
+|S01|separation|new|—|explicit roles|body shadow|identity|MACHINE_VALIDATED_FOR_GPT_REVIEW|PASS_FOR_GPT_REVIEW|MACHINE_CONTRACT_READY_OWNER_REVIEW_PENDING|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|0024AX complete; L*=12; N*=8; GPT pending|
 |S02|separation|existing|10|body route|body|key|seed|accepted history|existing|completed directional|not authorized|retain|seed|
 |S03|separation|new|—|echo sensor|echo|sensor|BRIEF_FROZEN_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|0024AZ; supported as is|
 |S04|separation|new|—|parallel|body echo|paths|BRIEF_FROZEN_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|0024BB; supported as is|
