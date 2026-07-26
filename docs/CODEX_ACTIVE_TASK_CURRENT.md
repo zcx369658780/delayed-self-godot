@@ -1,6 +1,6 @@
 # Codex active task (CURRENT)
 
-- Status: `TASK_0024AT_READY`
+- Status: `TASK_0024AT_OWNER_FEEDBACK_REBASELINE_PASS_FOR_GPT_REVIEW`
 - Active task: `tasks/0024AT_owner_playthrough_feedback_and_mechanic_expansion_rebaseline.md`
 - Task publication commit: `6ad8910ac0cc1010fa2c7eacd59056829f313999`
 - Required accepted checkpoint in ancestry: `ddf99678e7c444aa0e1ca05fd32d75d634d02bb4`
