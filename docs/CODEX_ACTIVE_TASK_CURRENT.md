@@ -1,17 +1,18 @@
 # Codex active task (CURRENT)
 
-- Status: `TASK_0024AR_DEEPSEEK_MCP_QUALITY_PASS_WITH_OBSERVATIONS_FOR_GPT_REVIEW`
-- Active task: `tasks/0024AR_deepseek_mcp_preexisting_target_code_quality_retry.md`
-- Task publication commit: `fc3d90d52facbd3b0946c5a0b5da8ee63993e96d`
-- Required predecessor checkpoint in ancestry: `8cd9b68775383dd09e7187c65b4c7b2fc5a4bdb6`
-- Previous overall task: Task 0024AQ ended `BLOCKED`
+- Status: `TASK_0024AR_MCP_TRANSPORT_ACCEPTED_DEEPSEEK_CODE_QUALITY_NOT_ACCEPTABLE`
+- Active task: none; await explicit successor task
+- Completed task: `tasks/0024AR_deepseek_mcp_preexisting_target_code_quality_retry.md`
+- Reviewed result commit: `251781cf4172b56ee84ddec0be905616e8cdd976`
+- GPT adjudication report: `docs/reports/0024AR_GPT_DEEPSEEK_MCP_CODE_QUALITY_ADJUDICATION.md`
+- MCP transport: `PASS_DIRECT_FILE_EDIT`
+- DeepSeek code quality: `23/100 / NOT_ACCEPTABLE`
+- Benchmark retained: `NO`
 - Accepted wrapper subgate: `TASK_0024AQ_WRAPPER_SAFE_STRICTER_ACCEPTED`
 - Authoritative wrapper SHA-256: `f604001d001cd206e742e5252a69995c29f96c983e6520ec6fd0374ae4908750`
-- MCP status from 0024AQ: ping/discovery available; authoring blocked before code creation because the target was not a pre-existing regular file
-- DeepSeek code quality: `NOT_EVALUATED`
-- Benchmark: isolated test-only GDScript action-sequence codec
-- Main model: GPT-5.6 Sol; fallback GPT-5.6 Terra
 
-Task 0024AR corrects only the benchmark target precondition. GPT must create and prove a pre-existing regular target file before MCP delegation. MCP transport and model code quality remain separate verdicts. If MCP still produces no auditable code, the accepted wrapper may be used once as a clearly labelled model-quality control.
+DeepSeek MCP and wrapper/CLI are not authorized for tracked project code implementation. No automatic routing is permitted. The wrapper and MCP registration remain unchanged and may be used only for disposable transport probes or a later separately authorized reevaluation after a material model/configuration change.
 
-No production code, Simulation, solver, level, catalog, Profile, owner worksheet, scene, asset, audio, localization, build, release or submission change is authorized. Owner subjective 1–12 playthrough remains pending.
+GPT-5.6 Sol/Terra retains planning, architecture, code implementation, review, tests, Git, and final acceptance. Production catalog, sequence order, finale, Profile, owner worksheet, Simulation, solver, scenes, assets, audio, build/release/submission surfaces and historical evidence remain protected.
+
+The next legitimate product gate is owner subjective playthrough of sequences 1–12 under a new explicit task identity.
