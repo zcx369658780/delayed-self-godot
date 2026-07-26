@@ -1,6 +1,6 @@
 # Codex active task (CURRENT)
 
-- Status: `TASK_0024AR_READY`
+- Status: `TASK_0024AR_DEEPSEEK_MCP_QUALITY_PASS_WITH_OBSERVATIONS_FOR_GPT_REVIEW`
 - Active task: `tasks/0024AR_deepseek_mcp_preexisting_target_code_quality_retry.md`
 - Task publication commit: `fc3d90d52facbd3b0946c5a0b5da8ee63993e96d`
 - Required predecessor checkpoint in ancestry: `8cd9b68775383dd09e7187c65b4c7b2fc5a4bdb6`
