@@ -1,25 +1,23 @@
 # Codex startup snapshot (CURRENT)
 
-- Status: `CURRENT / TASK 0024AW GPT ACCEPTED / C02 MACHINE VALIDATED`
+- Status: `CURRENT / TASK 0024AX READY / S01 ROLE-SEPARATION MACHINE VALIDATION`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Active task: none; await explicit successor task
-- Active status: `TASK_0024AW_C02_MACHINE_VALIDATION_GPT_ACCEPTED`
-- Accepted result commit: `860c3dc808f42b239c02748b211ee5fede80ceb7`
-- GPT acceptance report: `docs/reports/0024AW_GPT_C02_CRATE_PRESSURE_IMPRINT_ACCEPTANCE.md`
-- GPT acceptance commit: `4e5bbca3a3d2e8239d487ca06fb049d17b4c8451`
-- Active-task close commit: `bfea9bdfc7b58eb7eca6bb439952a613940c540e`
-- Previous accepted planning gate: `TASK_0024AV_PHASE_1_SIX_CANDIDATE_BRIEF_AND_VALIDATION_PLAN_ACCEPTED`
-- Candidate: C02 / `phase_1_c02_crate_pressure_imprint`
-- Machine facts: `L*=14`, exact `N*=1`, all-shortest `1/1`, omissions `0`, one consequential push
-- Presentation: `MACHINE_CONTRACT_READY_OWNER_REVIEW_PENDING`
+- Active task: `tasks/0024AX_phase_1_s01_explicit_role_separation_authoring_and_machine_validation.md`
+- Active status: `TASK_0024AX_READY`
+- Task publication commit: `8397f6e9530146c98d9d56eef41afa2d3dd3f4a0`
+- Active-pointer commit: `9f57fa94ea8089fc66a46e694bd38a84de740f99`
+- Required accepted checkpoint in ancestry: `84ad24657f10a2a4d2290aaef0807fe24ebbdfbc`
+- Previous GPT acceptance: `TASK_0024AW_C02_CRATE_PRESSURE_IMPRINT_MACHINE_VALIDATION_ACCEPTED`
+- Candidate: S01 / `phase_1_s01_explicit_role_separation`
+- Design chain: YOU_ONLY sensor + ECHO_ONLY sensor → simultaneous typed occupancy → next-turn barrier → YOU EXIT
 - Production baseline: exactly eight cataloged levels; sequence 8 remains the sole formal finale
 - Candidate admission: `NOT_AUTHORIZED`
 - Owner review: `NOT_REVIEWED`
 - Shipping count: `DEFERRED`
 - DeepSeek project-code routing: `DISABLED`
 
-Before successor work, fetch and fast-forward only. Require `HEAD == origin/main`, divergence `0/0`, no tracked/staged changes, only the accepted untracked `.codex/config.toml`, accepted Godot/wrapper/foundation identities and Godot count zero.
+Before work, fetch and fast-forward only. Require synchronized main, clean tracked/staged state, only the accepted untracked project config, accepted Godot/wrapper/foundation identities, no 0024AX artifacts and Godot process count zero.
 
-Manifest `92ba1407-b34c-4de8-aa81-c4da4978bdaa` is consumed and immutable. Never rerun or reconstruct its focused C02, Aggregate or complete-v2 cases.
+Read Task 0024AX completely. Only one uncatalogued S01 candidate, its dedicated validation/helpers, bounded evidence and current-document closeout are authorized. Existing levels—including accepted C02—catalog, Profile, schema, Simulation, solver, Aggregate, scenes and all later Phase-1 candidates remain protected.
 
-A successor may authorize S01 only under its own task, candidate files, controls, PRE_FINAL seal and independent retained lifecycle. No catalog/Profile/finale/owner/build/release/submission authority is implied.
+Task 0024AW manifest `92ba1407-b34c-4de8-aa81-c4da4978bdaa` is consumed and must never be rerun. Task 0024AX must create a new independent PRE_FINAL seal and retained manifest. C03/0024AY remains closed until GPT acceptance.
