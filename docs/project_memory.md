@@ -1,5 +1,9 @@
 # Project memory
 
+## Task 0024AYR C03 contract-reconciled retry
+
+Task 0024AYR used 3 topology families and 5 variants. Fresh C03 is `SOLVED`, `L*=14`, exact `N*=2`; revised all-shortest is `2/2`, omissions zero, with 2 pushes and 1 ECHO-crate block in every shortest solution. Strict Plate-entry-to-Door-cross separation and a separate reachable blocked-Door diagnostic pass. Manifest `a5850880-314a-49e7-a67c-860313c14158` was consumed exactly once and all cases passed. Status is `PASS_FOR_GPT_REVIEW`; C03 remains uncatalogued and owner-unreviewed.
+
 ## Task 0024AY C03 all-shortest blocker
 
 Task 0024AY stopped before PRE_FINAL. Best discarded layout: `SOLVED`, `L*=15`, exact `N*=14`; complete event mask only `2/14`, omissions `12`. No candidate/test retained, no manifest created, Aggregate/complete-v2 not run. S03/0024AZ remains closed.

@@ -1,9 +1,9 @@
 # Codex startup snapshot (CURRENT)
 
-- Status: `CURRENT / TASK 0024AYR READY / C03 CONTRACT-RECONCILED RETRY`
+- Status: `CURRENT / TASK 0024AYR PASS_FOR_GPT_REVIEW / C03 CONTRACT-RECONCILED`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
 - Active task: `tasks/0024AYR_c03_next_turn_door_contract_reconciliation_and_retry.md`
-- Active status: `TASK_0024AYR_READY`
+- Active status: `TASK_0024AYR_PASS_FOR_GPT_REVIEW`
 - Task publication commit: `0689685845c8fd9b3a35a408730832160f4c5d35`
 - Active-pointer commit: `a19d39b1f5eaea1390a332ccb9185f366127981b`
 - Required predecessor checkpoint in ancestry: `d8240a967dc46c5933b2159533629614d27cb766`
@@ -21,4 +21,4 @@
 
 Before work, fetch and fast-forward only. Require `HEAD == origin/main`, divergence `0/0`, clean tracked/staged state, only the accepted untracked `.codex/config.toml`, accepted Godot/wrapper/foundation identities and Godot process count zero.
 
-Read Task 0024AYR completely. Do not recover discarded 0024AY bytes or create a retroactive manifest. Consumed 0024AW/0024AX manifests remain immutable. S03/0024AZ remains closed pending GPT adjudication of this retry.
+Read Task 0024AYR completely. Do not recover discarded 0024AY bytes or create a retroactive manifest. Consumed 0024AW/0024AX manifests remain immutable. Task 0024AYR manifest `a5850880-314a-49e7-a67c-860313c14158` is also consumed and immutable; all three cases passed. S03/0024AZ remains closed pending GPT adjudication of this retry.

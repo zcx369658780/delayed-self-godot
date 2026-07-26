@@ -2,6 +2,11 @@
 
 ## Start here
 
+0. [`Task 0024AYR`](../tasks/0024AYR_c03_next_turn_door_contract_reconciliation_and_retry.md) — contract-reconciled C03 retry complete, GPT review pending
+1. [`C03 retry validation`](level_design/validation/phase_1_c03_crate_delayed_door_retry_validation.json) — `L*=14`, exact `N*=2`, revised all-shortest `2/2`
+2. [`Task 0024AYR report`](reports/0024AYR_C03_NEXT_TURN_DOOR_RETRY_REPORT.md) — blocked-Door diagnostic, controls and consumed lifecycle
+3. [`Task 0024AYR handoff`](handoffs/DELAYED_SELF_SESSION_HANDOFF_AFTER_TASK_0024AYR_C03_RETRY_2026_07_26.md) — no-rerun boundary and next gate
+
 0. [`Task 0024AY`](../tasks/0024AY_phase_1_c03_crate_delayed_door_authoring_and_machine_validation.md) — blocked before PRE_FINAL on all-shortest Door-attempt omissions
 1. [`C03 blocked validation`](level_design/validation/phase_1_c03_crate_delayed_door_validation.json) — best discarded `L*=15`, exact `N*=14`, full mask `2/14`
 2. [`Task 0024AY blocker report`](reports/0024AY_C03_CRATE_DELAYED_DOOR_MACHINE_VALIDATION_REPORT.md) — no manifest/retained cycle and protected boundaries

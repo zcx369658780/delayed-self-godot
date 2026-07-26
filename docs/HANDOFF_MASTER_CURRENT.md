@@ -1,5 +1,9 @@
 # Handoff master (CURRENT)
 
+## Task 0024AYR C03 retry
+
+Task 0024AYR is `PASS_FOR_GPT_REVIEW`: fresh C03 reached `L*=14`, exact `N*=2`, revised all-shortest `2/2`, omissions zero and strict Plate-to-cross separation `2/2`. Reachable blocked-Door diagnostic passed. Manifest `a5850880-314a-49e7-a67c-860313c14158` is consumed and immutable; all three cases passed. Do not open 0024AZ before explicit GPT adjudication.
+
 ## Task 0024AY C03 blocker
 
 Task 0024AY is `BLOCKED`: best discarded C03 was `L*=15`, exact `N*=14`, but all-shortest mandatory-event proof was `2/14` with `12` omissions. PRE_FINAL was not reached, no manifest exists, no retained cycle ran, and the unqualified candidate/test were removed. Do not reconstruct a manifest or open 0024AZ without explicit GPT adjudication.
