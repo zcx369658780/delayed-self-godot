@@ -1,5 +1,9 @@
 # Handoff master (CURRENT)
 
+## Task 0024AV six-brief freeze pending GPT review
+
+C02/S01/C03/S03/C07/S04 are frozen planning briefs, all `SUPPORTED_AS_IS` under current v2 contracts. They are not authored or machine validated. Next gate is 0024AW C02 only; production remains 1–8 with sequence 8 finale, admission `NOT_AUTHORIZED`, shipping `DEFERRED`, DeepSeek `DISABLED`.
+
 ## Task 0024AU owner-rebaseline synchronization complete pending GPT review
 
 Task 0024AU completed the documentation-only closeout of Task 0024AT. `task_0024at_status = BLOCKED_DOCUMENTATION_SYNC_AND_STRUCTURE_INCOMPLETE`; its core directional feedback capture is `ACCEPTED_AS_INPUT`. Owner playthrough is `COMPLETED_WITH_DIRECTIONAL_FEEDBACK`, not a numerical or per-room acceptance record.

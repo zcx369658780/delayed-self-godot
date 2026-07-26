@@ -34,6 +34,8 @@ Sequence 9 is the obstruction-only crate seed; sequences 10–12 are body/shadow
 
 Cut candidates before weakening validation, presentation readability, stability, licensing, export, or any protected-data policy. No phase implies authorization for the next one.
 
+Task 0024AV freezes C02/S01/C03/S03/C07/S04 briefs and independent future validation identities only. No level authoring, candidate shipping decision, catalog admission, Profile migration, or finale movement follows.
+
 ## Preserved deterministic design constraints
 
 Useful mechanics contracts from the former planning baseline remain informative only: deterministic turn resolution, explicit YOU/ECHO role distinction, visibly typed sensors, declared crate eligibility, bounded local latches, and restartable failure. Any future implementation still needs a separately accepted schema/solver/level-authoring task.

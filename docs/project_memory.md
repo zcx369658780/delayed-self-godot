@@ -1,5 +1,9 @@
 # Project memory
 
+## Task 0024AV Phase-1 six-brief freeze
+
+Six planning briefs C02/C03/C07/S01/S03/S04 are frozen in interleaved order. Read-only v2 audit found each `SUPPORTED_AS_IS`; no authoring, machine validation, shipping or catalog inference follows. Reserved task identities are 0024AW–0024BD; next after GPT acceptance is C02-only 0024AW.
+
 ## Task 0024AU owner-feedback rebaseline synchronization
 
 Task 0024AU completed the documentation/planning closeout for the immutable Task 0024AT commit `1a54df4999b149ad8bf137f980bcb1bcdd00e802`. `task_0024at_status = BLOCKED_DOCUMENTATION_SYNC_AND_STRUCTURE_INCOMPLETE`; nevertheless its core owner directional feedback is accepted as planning input. The owner completed the isolated staging playthrough on 2026-07-26 but supplied no numerical ratings, clarity/enjoyment scores, confusion report, or formal per-room dispositions.

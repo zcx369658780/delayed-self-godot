@@ -1,0 +1,25 @@
+# Phase 1 six-candidate briefs (CURRENT)
+
+`phase_1_status = SIX_BRIEFS_FROZEN_NOT_AUTHORED`. This planning batch is three crate slots (C02, C03, C07) and three body/shadow slots (S01, S03, S04). Production sequence is unassigned, catalog admission is `NOT_AUTHORIZED`, shipping count is `DEFERRED`, and no symbolic outline is machine verified.
+
+| Order | Slot | Support | Budget class | Future task |
+|---:|---|---|---|---|
+| 1 | C02 | `SUPPORTED_AS_IS` | Intro | 0024AW |
+| 2 | S01 | `SUPPORTED_AS_IS` | Intro | 0024AX |
+| 3 | C03 | `SUPPORTED_AS_IS` | Intermediate | 0024AY |
+| 4 | S03 | `SUPPORTED_AS_IS` | Intermediate | 0024AZ |
+| 5 | C07 | `SUPPORTED_AS_IS` | Synthesis proof | 0024BA |
+| 6 | S04 | `SUPPORTED_AS_IS` | Intermediate | 0024BB |
+
+## Read-only support audit
+
+| Slot | Current mechanics/schema | Simulation and solver paths | Missing contract | Bounded future change surface | Risk/action |
+|---|---|---|---|---|---|
+| C02 | v2 crates; sensor `include_crates`; barrier groups | `_transition_v2`, `pressed_sensor_ids`, BFS canonical crate state | none | authored level + candidate test only | `SUPPORTED_AS_IS`; author only under 0024AW |
+| C03 | v2 crate, actor plate/door, delayed echo | v2 next-state door update; shared BFS/replay | none | authored level + candidate test only | `SUPPORTED_AS_IS`; author only under 0024AY |
+| C07 | v2 crate push, ECHO, plate/door | v2 blocked crate/ECHO movement and shared BFS | none | authored level + candidate test only | `SUPPORTED_AS_IS`; author only under 0024BA |
+| S01 | typed sensors and grouped barriers | `_activator_pressed`, `pressed_sensor_ids`, canonical state | none | authored level + candidate test only | `SUPPORTED_AS_IS`; author only under 0024AX |
+| S03 | `ECHO_ONLY` sensor, `include_crates=false`, barrier | same typed sensor/barrier paths | none | authored level + candidate test only | `SUPPORTED_AS_IS`; author only under 0024AZ |
+| S04 | typed sensors, grouped barriers, delayed echoes | deterministic v2 transition and shared BFS | none | authored level + candidate test only | `SUPPORTED_AS_IS`; author only under 0024BB |
+
+All classifications are read-only contract findings. Freeform physics, ambiguous priority, nondeterminism, persistence, unbounded search, schema changes, and production surfaces remain blocked. Reserved comparison identities: `0024BC` integrated six-candidate machine/curriculum comparison; `0024BD` owner Phase-1 playthrough and portfolio checkpoint. No fallback is selected.

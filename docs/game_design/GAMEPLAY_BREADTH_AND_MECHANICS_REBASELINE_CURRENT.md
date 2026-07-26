@@ -16,6 +16,8 @@ The owner direction is: crates expand only after mechanic redesign beyond obstru
 
 The next recommended gate is planning-only: freeze six independently reviewable briefs, `3 crate + 3 body/shadow`, with teaching goals, schema dependencies, solver budgets, candidate solutions, shortcut controls, presentation cues, authoring order, separate validation identities, and cut conditions. It does not authorize level authoring, solver execution, catalog admission, or Profile/finale migration.
 
+Task 0024AV freezes the default six briefs C02, S01, C03, S03, C07 and S04 in that interleaved future-authoring order. All are read-only classified `SUPPORTED_AS_IS` against existing schema v2/Simulation/solver paths; this neither authorizes nor validates them.
+
 ## Deterministic mechanic doctrine retained for later gates
 
 - Every candidate must create a legible YOU/ECHO role distinction rather than generic Sokoban motion.

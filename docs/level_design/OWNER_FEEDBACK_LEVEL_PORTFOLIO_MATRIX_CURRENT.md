@@ -15,19 +15,19 @@
 |SEQ11|separation seed|existing|11|typed roles|sensors|barrier|seed|accepted history|existing|completed directional|not authorized|retain|S09|
 |SEQ12|separation seed|existing|12|latching|latch|barrier|seed|accepted history|existing|completed directional|not authorized|retain|S10|
 |C01|crate|existing|9|obstruction intro|crate push|echo|seed revise|accepted history|existing|completed directional|not authorized|high|only clearing exception|
-|C02|crate|new|—|plate|crate plate|door|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|distinct purpose|
-|C03|crate|new|—|delayed hold|crate door|delay|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|distinct purpose|
+|C02|crate|new|—|plate|crate plate|door|BRIEF_FROZEN_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|0024AW; supported as is|
+|C03|crate|new|—|delayed hold|crate door|delay|BRIEF_FROZEN_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|0024AY; supported as is|
 |C04|crate|new|—|block signal|crate blocker|pulse|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|distinct purpose|
 |C05|crate|new|—|anchor|crate bridge|grid|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 2|distinct purpose|
 |C06|crate|new|—|ordering|two crates|sequence|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 2|distinct purpose|
-|C07|crate|new|—|cooperation|crate|echo|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|distinct purpose|
+|C07|crate|new|—|cooperation|crate|echo|BRIEF_FROZEN_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|0024BA; supported as is|
 |C08|crate|new|—|commitment|crate state|irreversible|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 3|distinct purpose|
 |C09|crate|new|—|phase|crate reset|deterministic|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 4|contract only|
 |C10|crate|new|—|synthesis|crate|mixed|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 4|distinct purpose|
-|S01|separation|new|—|explicit roles|body shadow|identity|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|distinct roles|
+|S01|separation|new|—|explicit roles|body shadow|identity|BRIEF_FROZEN_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|0024AX; supported as is|
 |S02|separation|existing|10|body route|body|key|seed|accepted history|existing|completed directional|not authorized|retain|seed|
-|S03|separation|new|—|echo sensor|echo|sensor|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|distinct roles|
-|S04|separation|new|—|parallel|body echo|paths|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|distinct roles|
+|S03|separation|new|—|echo sensor|echo|sensor|BRIEF_FROZEN_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|0024AZ; supported as is|
+|S04|separation|new|—|parallel|body echo|paths|BRIEF_FROZEN_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|0024BB; supported as is|
 |S05|separation|new|—|reunion|timing|alignment|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 2|distinct roles|
 |S06|separation|new|—|body opens|body|echo route|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 2|distinct roles|
 |S07|separation|new|—|echo opens|echo|body route|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 2|distinct roles|

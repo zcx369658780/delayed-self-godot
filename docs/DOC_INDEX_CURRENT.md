@@ -2,6 +2,10 @@
 
 ## Start here
 
+0. [`Task 0024AV`](../tasks/0024AV_phase_1_six_candidate_brief_and_validation_plan.md) — Phase-1 six-brief planning freeze
+1. [`Six-candidate overview`](level_design/phase_1/PHASE_1_SIX_CANDIDATE_BRIEFS_CURRENT.md) — support audit and order
+2. [`Validation plan`](level_design/phase_1/PHASE_1_SIX_CANDIDATE_VALIDATION_PLAN_CURRENT.md) — independent future evidence lifecycles
+
 0. [`Task 0024AU`](../tasks/0024AU_owner_rebaseline_documentation_completion_and_sync.md) — owner-feedback rebaseline documentation synchronization
 1. [`Task 0024AT`](../tasks/0024AT_owner_playthrough_feedback_and_mechanic_expansion_rebaseline.md) — immutable predecessor; blocked on documentation completeness, feedback retained as input
 2. [`Owner curriculum worksheet`](playtest/SUBMISSION_CORE_1_12_OWNER_CURRICULUM_REVIEW_CURRENT.md) — directional owner feedback source and non-authorization boundary
