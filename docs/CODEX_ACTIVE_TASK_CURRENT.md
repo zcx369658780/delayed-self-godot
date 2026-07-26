@@ -1,19 +1,17 @@
 # Codex active task (CURRENT)
 
-- Status: `TASK_0024AV_COMPLETE_PENDING_GPT_REVIEW`
-- Active task: `tasks/0024AV_phase_1_six_candidate_brief_and_validation_plan.md`
-- Task publication commit: `8f4b3c206173cf677c1f55490cfe8809c5a9e707`
-- Required accepted checkpoint in ancestry: `402431849f4379fad279dff9f6c965c0fbe04db9`
-- Previous accepted gate: `TASK_0024AU_OWNER_REBASELINE_DOCUMENTATION_COMPLETION_ACCEPTED`
-- Default Phase-1 slots: `C02`, `S01`, `C03`, `S03`, `C07`, `S04`
-- Task type: planning/read-only dependency audit complete
-- Level authoring: `NOT_AUTHORIZED`
-- Solver execution: `NOT_AUTHORIZED`
+- Status: `TASK_0024AV_PHASE_1_SIX_CANDIDATE_BRIEF_AND_VALIDATION_PLAN_ACCEPTED`
+- Active task: none; await explicit successor task
+- Completed task: `tasks/0024AV_phase_1_six_candidate_brief_and_validation_plan.md`
+- Accepted result commit: `da5f4166681d45ad299da38ca31b72683b268ecb`
+- GPT acceptance report: `docs/reports/0024AV_GPT_PHASE_1_SIX_CANDIDATE_BRIEF_ACCEPTANCE.md`
+- GPT acceptance commit: `e9eb5b35a63dc2ee96ede9b5e1670de9c6487172`
+- Frozen slots/order: C02, S01, C03, S03, C07, S04
+- Support classification: six of six `SUPPORTED_AS_IS` as read-only findings
+- Level authoring/machine validation: not performed by 0024AV
 - Production catalog: exactly eight levels; sequence 8 remains the sole formal finale
 - Candidate admission: `NOT_AUTHORIZED`
 - Shipping count: `DEFERRED`
 - DeepSeek project-code routing: `DISABLED`
 
-Task 0024AV must freeze six complete candidate briefs, evidence-based support classifications, symbolic solution hypotheses, solver/validation budgets, controls, presentation requirements, an interleaved authoring order, and independent future task identities. It must not modify level data, gameplay code, schema, tests, catalog, Profile, finale, build, release, or submission surfaces.
-
-After GPT acceptance, only the first reserved single-candidate authoring task may begin. No batch authoring is implied.
+Only a new explicit Task 0024AW may author and machine-validate C02. S01/0024AX and every later candidate remain closed until independent predecessor acceptance.
