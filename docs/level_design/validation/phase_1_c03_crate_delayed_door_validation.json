@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "task_id": "0024AY",
+  "candidate_slot": "C03",
+  "level_id": "phase_1_c03_crate_delayed_door",
+  "candidate_status": "BLOCKED",
+  "machine_validation_status": "BLOCKED_PRE_FINAL_NOT_REACHED",
+  "solver_status": "SOLVED",
+  "best_discarded_layout": {
+    "shortest_solution_length": 15,
+    "shortest_solution_count": 14,
+    "shortest_solution_count_status": "EXACT",
+    "visited_states": 8070,
+    "maximum_frontier": 1230,
+    "solver_elapsed_ms": 1834,
+    "all_shortest_status": "COMPLETE",
+    "all_shortest_full_event_mask": "2/14",
+    "all_shortest_omissions": 12,
+    "all_shortest_counts_by_mask": {"15": 12, "255": 2},
+    "all_shortest_visited_composite_states": 106847,
+    "consequential_push_range_on_full_paths": "1-1",
+    "echo_crate_block_range_on_full_paths": "1-1",
+    "full_mask_sample": ["DOWN", "RIGHT", "DOWN", "DOWN", "DOWN", "DOWN", "RIGHT", "RIGHT", "UP", "RIGHT", "UP", "RIGHT", "RIGHT", "UP", "UP"],
+    "omission_sample": ["DOWN", "RIGHT", "DOWN", "RIGHT", "DOWN", "DOWN", "RIGHT", "RIGHT", "UP", "RIGHT", "UP", "RIGHT", "RIGHT", "UP", "UP"]
+  },
+  "blocker": {
+    "code": "ALL_SHORTEST_MANDATORY_DOOR_ATTEMPT_OMISSIONS",
+    "description": "Twelve exact shortest paths preserve the crate push, ECHO crate block, phase change and Plate entry but exchange move-to-door-adjacency and the intentional blocked Door attempt.",
+    "required_condition": "Every exact shortest path must have the complete eight-event mask.",
+    "observed_condition": "Only 2 of 14 exact shortest paths have the complete mask; omissions=12.",
+    "redesign_required": true
+  },
+  "qualification": {
+    "pre_final_reached": false,
+    "focused_twice": false,
+    "aggregate_run": false,
+    "complete_v2_run": false,
+    "manifest_created": false,
+    "manifest_consumed": false,
+    "retained_cycle_run": false
+  },
+  "boundaries": {
+    "candidate_file_retained": false,
+    "focused_test_retained": false,
+    "production_catalog_modified": false,
+    "formal_finale_modified": false,
+    "profile_accessed": false,
+    "deepseek_invoked": false,
+    "presentation_status": "NOT_REACHED_BLOCKED",
+    "owner_review_status": "NOT_REVIEWED",
+    "catalog_status": "NOT_AUTHORIZED",
+    "next_task_authorized": false
+  },
+  "final_task_verdict": "BLOCKED"
+}

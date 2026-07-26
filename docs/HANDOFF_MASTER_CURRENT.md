@@ -1,8 +1,12 @@
 # Handoff master (CURRENT)
 
+## Task 0024AY C03 blocker
+
+Task 0024AY is `BLOCKED`: best discarded C03 was `L*=15`, exact `N*=14`, but all-shortest mandatory-event proof was `2/14` with `12` omissions. PRE_FINAL was not reached, no manifest exists, no retained cycle ran, and the unqualified candidate/test were removed. Do not reconstruct a manifest or open 0024AZ without explicit GPT adjudication.
+
 ## Task 0024AV six-brief freeze pending GPT review
 
-C02 machine validation is GPT accepted. S01 is machine validated at `L*=12`, exact `N*=8`, all-shortest `8/8`; retained manifest `e01bba09-6304-4344-b16a-4bfb9d364655` passed and is consumed. S01 status is `PASS_FOR_GPT_REVIEW`, not acceptance. C03/0024AY remains closed until GPT accepts 0024AX. Production remains 1–8 with sequence 8 finale, admission `NOT_AUTHORIZED`, shipping `DEFERRED`, DeepSeek `DISABLED`.
+C02 and S01 machine validation are GPT accepted. S01 is `L*=12`, exact `N*=8`, all-shortest `8/8`; retained manifest `e01bba09-6304-4344-b16a-4bfb9d364655` passed and is consumed. GPT acceptance opened bounded C03/0024AY, which later stopped at the blocker recorded above. Production remains 1–8 with sequence 8 finale, admission `NOT_AUTHORIZED`, shipping `DEFERRED`, DeepSeek `DISABLED`.
 
 ## Task 0024AU owner-rebaseline synchronization complete pending GPT review
 

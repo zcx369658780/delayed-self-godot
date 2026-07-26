@@ -1,5 +1,9 @@
 # Project memory
 
+## Task 0024AY C03 all-shortest blocker
+
+Task 0024AY stopped before PRE_FINAL. Best discarded layout: `SOLVED`, `L*=15`, exact `N*=14`; complete event mask only `2/14`, omissions `12`. No candidate/test retained, no manifest created, Aggregate/complete-v2 not run. S03/0024AZ remains closed.
+
 ## Task 0024AX S01 explicit-role-separation machine validation
 
 Task 0024AX authored uncatalogued S01 `phase_1_s01_explicit_role_separation`. Shared BFS retained `L*=12`, exact `N*=8`; complete all-shortest enumeration is `8/8` with zero omissions. No-ECHO, swapped eligibility and both route-removal controls completely exhaust unsolved; dependency removal, ANY_ACTOR, symmetric and initially-open controls prove role/route necessity. Replay and restart pass.

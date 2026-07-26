@@ -2,6 +2,11 @@
 
 ## Start here
 
+0. [`Task 0024AY`](../tasks/0024AY_phase_1_c03_crate_delayed_door_authoring_and_machine_validation.md) — blocked before PRE_FINAL on all-shortest Door-attempt omissions
+1. [`C03 blocked validation`](level_design/validation/phase_1_c03_crate_delayed_door_validation.json) — best discarded `L*=15`, exact `N*=14`, full mask `2/14`
+2. [`Task 0024AY blocker report`](reports/0024AY_C03_CRATE_DELAYED_DOOR_MACHINE_VALIDATION_REPORT.md) — no manifest/retained cycle and protected boundaries
+3. [`Task 0024AY handoff`](handoffs/DELAYED_SELF_SESSION_HANDOFF_AFTER_TASK_0024AY_C03_MACHINE_VALIDATION_2026_07_26.md) — no-retroactive-manifest boundary and next gate
+
 0. [`Task 0024AX`](../tasks/0024AX_phase_1_s01_explicit_role_separation_authoring_and_machine_validation.md) — S01 machine validation complete, GPT review pending
 1. [`S01 validation`](level_design/validation/phase_1_s01_explicit_role_separation_validation.json) — exact solver, role controls and consumed retained lifecycle
 2. [`Task 0024AX report`](reports/0024AX_S01_EXPLICIT_ROLE_SEPARATION_MACHINE_VALIDATION_REPORT.md) — evidence and protected boundaries

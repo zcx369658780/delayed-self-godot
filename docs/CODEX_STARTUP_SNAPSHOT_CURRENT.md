@@ -1,9 +1,9 @@
 # Codex startup snapshot (CURRENT)
 
-- Status: `CURRENT / TASK 0024AY READY / C03 CRATE-DELAYED-DOOR MACHINE VALIDATION`
+- Status: `CURRENT / TASK 0024AY BLOCKED / ALL-SHORTEST DOOR-ATTEMPT OMISSIONS`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
 - Active task: `tasks/0024AY_phase_1_c03_crate_delayed_door_authoring_and_machine_validation.md`
-- Active status: `TASK_0024AY_READY`
+- Active status: `TASK_0024AY_BLOCKED_ALL_SHORTEST_DOOR_ATTEMPT_OMISSIONS`
 - Task publication commit: `9a32dd7b621979409044165fed002b535be06254`
 - Active-pointer commit: `1dfe3c3055858e545fc955c806bfebb8a23b84d9`
 - Required accepted checkpoint in ancestry: `d17dcb756b982808c119428ae02f1c42dd41f78a`
@@ -16,8 +16,8 @@
 - Shipping count: `DEFERRED`
 - DeepSeek project-code routing: `DISABLED`
 
-Before work, fetch and fast-forward only. Require synchronized main, clean tracked/staged state, only the accepted untracked project config, accepted Godot/wrapper/foundation identities, no 0024AY artifacts and Godot process count zero.
+Before work, fetch and fast-forward only. Require synchronized main, clean tracked/staged state, only the accepted untracked project config, accepted Godot/wrapper/foundation identities and Godot process count zero.
 
 Read Task 0024AY completely. Only one uncatalogued C03 candidate, its dedicated validation/helpers, bounded evidence and current-document closeout are authorized. Existing levels—including accepted C02 and S01—catalog, Profile, schema, Simulation, solver, Aggregate, scenes and all later Phase-1 candidates remain protected.
 
-Task 0024AW and 0024AX manifests are consumed and must never be rerun. Task 0024AY must create its own PRE_FINAL seal and fresh retained manifest. S03/0024AZ remains closed until explicit GPT acceptance.
+Task 0024AW and 0024AX manifests are consumed and must never be rerun. Task 0024AY stopped before PRE_FINAL at exact all-shortest `2/14`, omissions `12`; no 0024AY manifest exists and none may be reconstructed retroactively. S03/0024AZ remains closed pending explicit GPT adjudication.

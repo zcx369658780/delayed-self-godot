@@ -1,6 +1,8 @@
 # C03 — 迟门留印 / Held Window
 
-`candidate_slot = C03`; `family = crate`; `phase = PHASE_1_PROOF_BATCH`; `status = BRIEF_FROZEN_NOT_AUTHORED`; `production_sequence = UNASSIGNED`; `catalog_status = NOT_AUTHORIZED`; `owner_review_status = NOT_REVIEWED`; `machine_validation_status = NOT_RUN`.
+`candidate_slot = C03`; `family = crate`; `phase = PHASE_1_PROOF_BATCH`; `status = BLOCKED_REDESIGN_REQUIRED`; `production_sequence = UNASSIGNED`; `catalog_status = NOT_AUTHORIZED`; `owner_review_status = NOT_REVIEWED`; `machine_validation_status = BLOCKED_ALL_SHORTEST_DOOR_ATTEMPT_OMISSIONS`.
+
+Task 0024AY best discarded layout was `L*=15`, exact `N*=14`, but only `2/14` exact shortest paths contained the mandatory same-turn blocked Door attempt; omissions were `12`. PRE_FINAL was not reached and no candidate or manifest was retained.
 
 Teaching goal: a crate preserves a delayed door window distinct from C02’s sensor destination. Visible objective: set crate state, then align delayed ECHO arrival with next-turn door entry. Prerequisites C02, delayed-door reading; reasoning is commitment→ECHO timing→open-snapshot crossing; seed relationship is crate timing; anti-duplication is next-turn door semantics rather than persistent barrier. Non-goals: immediate updates or generic obstruction.
 

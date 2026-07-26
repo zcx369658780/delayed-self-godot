@@ -1,6 +1,8 @@
 # Development plan (CURRENT)
 
-> 2026-07-26 — Task 0024AX authored and machine-validated uncatalogued S01: `L*=12`, exact `N*=8`, all shortest `8/8`, retained three-case lifecycle PASS. Status is `PASS_FOR_GPT_REVIEW`; C03/0024AY remains closed until GPT acceptance. Catalog/Profile/finale remain unchanged.
+> 2026-07-26 — Task 0024AY stopped `BLOCKED` before PRE_FINAL. The strongest C03 layout solved at `L*=15`, exact `N*=14`, but complete all-shortest proof was only `2/14` full mask with `12` mandatory same-turn Door-attempt omissions. No candidate/test or manifest was retained; Aggregate/complete-v2 were not run. S03/0024AZ remains closed.
+
+> 2026-07-26 — Task 0024AX authored and machine-validated uncatalogued S01: `L*=12`, exact `N*=8`, all shortest `8/8`, retained three-case lifecycle PASS. GPT subsequently accepted the machine evidence and opened bounded C03/0024AY; catalog/Profile/finale remain unchanged.
 
 > 2026-07-26 — Task 0024AU completed the owner-feedback rebaseline documentation synchronization. Task 0024AT remains `BLOCKED_DOCUMENTATION_SYNC_AND_STRUCTURE_INCOMPLETE`, while its faithful directional feedback is accepted as input. Current planning is C01–C10 crate candidates (redesign beyond obstruction clearing), S01–S10 body/shadow candidates (primary expansion), and F01–F04 shadow-trapping final-chapter candidates. Phase 1 is planning six uncatalogued briefs, `3 crate + 3 body/shadow`; it is not authoring. Shipping count is `DEFERRED`; production stays eight cataloged sequences and sequence 8 is the sole formal finale. Candidate admission is `NOT_AUTHORIZED`, DeepSeek code routing is `DISABLED`, and catalog/Profile/finale migration is a separate Phase-5 gate. The dated 12-core plan below is historical/superseded for future expansion planning.
 
