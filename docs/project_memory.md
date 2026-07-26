@@ -1,5 +1,11 @@
 # Project memory
 
+## Task 0024AW C02 pressure-imprint machine validation
+
+Task 0024AW authored uncatalogued C02 `phase_1_c02_crate_pressure_imprint`. Shared BFS retained `L*=14`, exact `N*=1`; complete all-shortest enumeration is `1/1` with zero omissions and one push. No-push, excludes-crate, no-crate, displaced-crate and no-ECHO controls completely exhaust unsolved. Replay/restart/canonical and route/actor probes pass.
+
+Manifest `92ba1407-b34c-4de8-aa81-c4da4978bdaa` was consumed exactly once. Focused, Aggregate and complete-v2 all passed; Aggregate stderr was exactly `LEVEL_ID_MISMATCH`, the others empty, cleanup once per case, no owned/unproven PID and final Godot zero. Status is `PASS_FOR_GPT_REVIEW`; owner review, catalog admission, Profile/finale and S01/0024AX remain closed.
+
 ## Task 0024AV Phase-1 six-brief freeze
 
 Six planning briefs C02/C03/C07/S01/S03/S04 are frozen in interleaved order. Read-only v2 audit found each `SUPPORTED_AS_IS`; no authoring, machine validation, shipping or catalog inference follows. Reserved task identities are 0024AW–0024BD; next after GPT acceptance is C02-only 0024AW.

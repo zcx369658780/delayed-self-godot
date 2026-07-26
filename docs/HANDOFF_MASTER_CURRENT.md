@@ -2,7 +2,7 @@
 
 ## Task 0024AV six-brief freeze pending GPT review
 
-C02/S01/C03/S03/C07/S04 are frozen planning briefs, all `SUPPORTED_AS_IS` under current v2 contracts. They are not authored or machine validated. Next gate is 0024AW C02 only; production remains 1–8 with sequence 8 finale, admission `NOT_AUTHORIZED`, shipping `DEFERRED`, DeepSeek `DISABLED`.
+C02 is authored and machine validated at `L*=14`, exact `N*=1`, all-shortest `1/1`; retained manifest `92ba1407-b34c-4de8-aa81-c4da4978bdaa` passed and is consumed. Status is `PASS_FOR_GPT_REVIEW`, not acceptance. S01/C03/S03/C07/S04 remain frozen briefs; S01/0024AX is closed until GPT accepts 0024AW. Production remains 1–8 with sequence 8 finale, admission `NOT_AUTHORIZED`, shipping `DEFERRED`, DeepSeek `DISABLED`.
 
 ## Task 0024AU owner-rebaseline synchronization complete pending GPT review
 

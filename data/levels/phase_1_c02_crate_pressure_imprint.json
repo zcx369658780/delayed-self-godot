@@ -1,0 +1,45 @@
+{
+  "schema_version": 2,
+  "level_id": "phase_1_c02_crate_pressure_imprint",
+  "title": "Pressure Imprint",
+  "terrain_rows": [
+    "#########",
+    "#...#...#",
+    "#.###.###",
+    "#.#.....#",
+    "#...#.#.#",
+    "#..##.#.#",
+    "#.....#.#",
+    "#########"
+  ],
+  "player_spawn": [1, 5],
+  "echoes": [
+    {"id": "echo_imprint", "delay": 2, "spawn": [3, 3]}
+  ],
+  "plates": [
+    {"id": "plate_echo_exit", "position": [7, 3]}
+  ],
+  "doors": [
+    {"id": "door_you_exit", "position": [5, 1], "initial_open": false, "all_plate_ids": ["plate_echo_exit"]}
+  ],
+  "exit": {"position": [7, 1]},
+  "metadata": {
+    "teaching_goal": "Use crate-specific sensor occupancy to open a next-turn grouped ECHO route, then use the delayed ECHO-held Plate and Door to reach EXIT.",
+    "intended_mechanics": ["crate_specific_sensor_occupancy", "next_turn_grouped_barrier", "delayed_echo_route", "echo_held_plate_door", "uncatalogued_phase_1_c02"],
+    "notes": "Uncatalogued Phase-1 C02 candidate. Production sequence unassigned.",
+    "allow_zero_echo_tutorial": false
+  },
+  "validation": {"recommended_search_depth": 48},
+  "crates": [
+    {"id": "crate_imprint", "position": [2, 4]}
+  ],
+  "keys": [],
+  "locks": [],
+  "barrier_groups": [
+    {"id": "barrier_echo_lane", "cells": [[5, 3], [5, 5]], "initial_open": false, "all_sensor_ids": ["sensor_crate_imprint"]}
+  ],
+  "sensors": [
+    {"id": "sensor_crate_imprint", "position": [3, 4], "activator": "YOU_ONLY", "include_crates": true}
+  ],
+  "latches": []
+}

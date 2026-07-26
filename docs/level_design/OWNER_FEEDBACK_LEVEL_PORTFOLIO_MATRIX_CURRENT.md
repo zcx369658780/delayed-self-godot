@@ -15,7 +15,7 @@
 |SEQ11|separation seed|existing|11|typed roles|sensors|barrier|seed|accepted history|existing|completed directional|not authorized|retain|S09|
 |SEQ12|separation seed|existing|12|latching|latch|barrier|seed|accepted history|existing|completed directional|not authorized|retain|S10|
 |C01|crate|existing|9|obstruction intro|crate push|echo|seed revise|accepted history|existing|completed directional|not authorized|high|only clearing exception|
-|C02|crate|new|—|plate|crate plate|door|BRIEF_FROZEN_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|0024AW; supported as is|
+|C02|crate|new|—|plate|crate plate|door|MACHINE_VALIDATED_FOR_GPT_REVIEW|PASS_FOR_GPT_REVIEW|MACHINE_CONTRACT_READY_OWNER_REVIEW_PENDING|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|0024AW complete; L*=14; N*=1; GPT pending|
 |C03|crate|new|—|delayed hold|crate door|delay|BRIEF_FROZEN_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|0024AY; supported as is|
 |C04|crate|new|—|block signal|crate blocker|pulse|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 1|distinct purpose|
 |C05|crate|new|—|anchor|crate bridge|grid|PLANNED_NOT_AUTHORED|NOT_RUN|NOT_IMPLEMENTED|NOT_REVIEWED|NOT_AUTHORIZED|phase 2|distinct purpose|

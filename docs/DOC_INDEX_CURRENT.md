@@ -2,6 +2,11 @@
 
 ## Start here
 
+0. [`Task 0024AW`](../tasks/0024AW_phase_1_c02_crate_pressure_imprint_authoring_and_machine_validation.md) — C02 machine validation complete, GPT review pending
+1. [`C02 validation`](level_design/validation/phase_1_c02_crate_pressure_imprint_validation.json) — exact solver, controls and consumed retained lifecycle
+2. [`Task 0024AW report`](reports/0024AW_C02_CRATE_PRESSURE_IMPRINT_MACHINE_VALIDATION_REPORT.md) — evidence and protected boundaries
+3. [`Task 0024AW handoff`](handoffs/DELAYED_SELF_SESSION_HANDOFF_AFTER_TASK_0024AW_C02_MACHINE_VALIDATION_2026_07_26.md) — no-rerun boundary and next gate
+
 0. [`Task 0024AV`](../tasks/0024AV_phase_1_six_candidate_brief_and_validation_plan.md) — Phase-1 six-brief planning freeze
 1. [`Six-candidate overview`](level_design/phase_1/PHASE_1_SIX_CANDIDATE_BRIEFS_CURRENT.md) — support audit and order
 2. [`Validation plan`](level_design/phase_1/PHASE_1_SIX_CANDIDATE_VALIDATION_PLAN_CURRENT.md) — independent future evidence lifecycles

@@ -1,10 +1,10 @@
 # Phase 1 six-candidate briefs (CURRENT)
 
-`phase_1_status = SIX_BRIEFS_FROZEN_NOT_AUTHORED`. This planning batch is three crate slots (C02, C03, C07) and three body/shadow slots (S01, S03, S04). Production sequence is unassigned, catalog admission is `NOT_AUTHORIZED`, shipping count is `DEFERRED`, and no symbolic outline is machine verified.
+`phase_1_status = C02_MACHINE_VALIDATED_GPT_REVIEW_PENDING`. This batch is three crate slots (C02, C03, C07) and three body/shadow slots (S01, S03, S04). C02 alone is authored and machine validated; all production sequences remain unassigned, catalog admission is `NOT_AUTHORIZED`, shipping count is `DEFERRED`, and S01/0024AX remains closed until GPT accepts 0024AW.
 
 | Order | Slot | Support | Budget class | Future task |
 |---:|---|---|---|---|
-| 1 | C02 | `SUPPORTED_AS_IS` | Intro | 0024AW |
+| 1 | C02 | `MACHINE_VALIDATED_FOR_GPT_REVIEW` | Intro | 0024AW complete; GPT pending |
 | 2 | S01 | `SUPPORTED_AS_IS` | Intro | 0024AX |
 | 3 | C03 | `SUPPORTED_AS_IS` | Intermediate | 0024AY |
 | 4 | S03 | `SUPPORTED_AS_IS` | Intermediate | 0024AZ |
@@ -15,7 +15,7 @@
 
 | Slot | Current mechanics/schema | Simulation and solver paths | Missing contract | Bounded future change surface | Risk/action |
 |---|---|---|---|---|---|
-| C02 | v2 crates; sensor `include_crates`; barrier groups | `_transition_v2`, `pressed_sensor_ids`, BFS canonical crate state | none | authored level + candidate test only | `SUPPORTED_AS_IS`; author only under 0024AW |
+| C02 | v2 crates; sensor `include_crates`; barrier groups | `_transition_v2`, `pressed_sensor_ids`, BFS canonical crate state | none | authored level + candidate test only | `L*=14`, exact `N*=1`, all-shortest `1/1`; GPT review pending |
 | C03 | v2 crate, actor plate/door, delayed echo | v2 next-state door update; shared BFS/replay | none | authored level + candidate test only | `SUPPORTED_AS_IS`; author only under 0024AY |
 | C07 | v2 crate push, ECHO, plate/door | v2 blocked crate/ECHO movement and shared BFS | none | authored level + candidate test only | `SUPPORTED_AS_IS`; author only under 0024BA |
 | S01 | typed sensors and grouped barriers | `_activator_pressed`, `pressed_sensor_ids`, canonical state | none | authored level + candidate test only | `SUPPORTED_AS_IS`; author only under 0024AX |

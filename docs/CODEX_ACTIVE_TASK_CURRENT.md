@@ -1,6 +1,6 @@
 # Codex active task (CURRENT)
 
-- Status: `TASK_0024AW_READY`
+- Status: `TASK_0024AW_PASS_FOR_GPT_REVIEW`
 - Active task: `tasks/0024AW_phase_1_c02_crate_pressure_imprint_authoring_and_machine_validation.md`
 - Task publication commit: `e5053db9f8a3afc889fc6c79da06681dd9f9ccfe`
 - Required accepted checkpoint in ancestry: `666d7921ef1865e603c916255fd337213accbcda`
@@ -13,6 +13,6 @@
 - Owner review: `NOT_REVIEWED`
 - DeepSeek project-code routing: `DISABLED`
 
-Task 0024AW may iterate only the C02 candidate JSON, dedicated validation and task-owned helpers before PRE_FINAL. It must prove the full crate-sensor → barrier → delayed-ECHO → Plate/Door → YOU EXIT chain, all-shortest necessity, complete controls, replay/restart/canonical identity, and one independent three-case retained lifecycle.
+Task 0024AW completed with `L*=14`, exact `N*=1`, all-shortest `1/1`, zero omissions and all required controls. Manifest `92ba1407-b34c-4de8-aa81-c4da4978bdaa` was consumed exactly once; all three cases passed. The retained cycle is frozen and must not be rerun.
 
 S01/0024AX and every later candidate remain closed. No catalog, Profile, finale, presentation-code, build, release or submission change is authorized.

@@ -1,0 +1,87 @@
+{
+  "schema_version": 1,
+  "task_identity": "0024AW",
+  "candidate_slot": "C02",
+  "level_id": "phase_1_c02_crate_pressure_imprint",
+  "candidate_status": "MACHINE_VALIDATED_FOR_GPT_REVIEW",
+  "production_sequence": "UNASSIGNED",
+  "catalog_status": "NOT_AUTHORIZED",
+  "owner_review_status": "NOT_REVIEWED",
+  "presentation_status": "MACHINE_CONTRACT_READY_OWNER_REVIEW_PENDING",
+  "solver": {
+    "status": "SOLVED",
+    "shortest_turn_count": 14,
+    "shortest_solution_count": 1,
+    "shortest_solution_count_status": "EXACT",
+    "solution": ["UP", "RIGHT", "DOWN", "DOWN", "RIGHT", "RIGHT", "RIGHT", "UP", "UP", "UP", "UP", "UP", "RIGHT", "RIGHT"],
+    "limits": {"depth_limit": 48, "state_limit": 150000, "time_limit_ms": 60000, "solution_count_cap": 128}
+  },
+  "all_shortest": {
+    "status": "COMPLETE",
+    "total": 1,
+    "full_event_mask": 1,
+    "omissions": 0,
+    "minimum_pushes": 1,
+    "maximum_pushes": 1,
+    "visited_composite_states": 7257
+  },
+  "ordered_first_events": [
+    {"turn": 2, "events": ["LEGAL_CRATE_PUSH", "CRATE_ON_SENSOR", "BARRIER_OPEN_FROM_CRATE"], "action": "RIGHT"},
+    {"turn": 7, "events": ["ECHO_CROSSES_BARRIER"], "action": "RIGHT"},
+    {"turn": 9, "events": ["ECHO_ALONE_ON_PLATE", "DOOR_OPEN_FROM_ECHO"], "action": "UP"},
+    {"turn": 12, "events": ["YOU_CROSSES_DOOR"], "action": "UP"},
+    {"turn": 14, "events": ["YOU_REACHES_EXIT"], "action": "RIGHT"}
+  ],
+  "controls": {
+    "no_push": {"status": "COMPLETE_UNSOLVED", "visited_states": 736},
+    "sensor_excludes_crate": {"status": "COMPLETE_UNSOLVED", "visited_states": 1211},
+    "no_crate": {"status": "COMPLETE_UNSOLVED", "visited_states": 7780},
+    "displaced_crate": {"status": "COMPLETE_UNSOLVED", "visited_states": 5611},
+    "no_echo": {"status": "COMPLETE_UNSOLVED", "visited_states": 38},
+    "initially_open": {"status": "SOLVED_BYPASS", "shortest_turn_count": 19, "shortest_solution_count": 88, "count_status": "CAPPED", "visited_states": 9285, "full_crate_event_mask": false},
+    "any_actor": {"status": "SOLVED", "shortest_turn_count": 14, "shortest_solution_count": 1, "no_push_completion_exists": true, "no_push_visited_states": 3263}
+  },
+  "contract_probes": {
+    "replay_deterministic": true,
+    "restart_exact": true,
+    "canonical_crate_identity": "PASS",
+    "echo_cannot_activate_you_only_sensor": true,
+    "echo_cannot_enter_or_push_crate": true,
+    "echo_cannot_complete_exit": true,
+    "illegal_you_push_stable": true,
+    "barrier_cross_requires_open": true,
+    "door_cross_requires_open": true,
+    "crate_held_on_sensor_during_echo_crossing": true,
+    "terrain_bypass": false
+  },
+  "qualification": {
+    "focused_run_ids": ["1c501269-c58d-4eac-b525-b67045ceb56a", "2c24d494-a724-4c5c-8db2-04273fcdabde"],
+    "matrix_run_id": "49ae9bb0-fbcb-4dd6-8166-d02e9ce458ea",
+    "aggregate_marker": "TASK_0003_TESTS_PASS assertions=621 vectors=9",
+    "aggregate_stderr": ["LEVEL_ID_MISMATCH"],
+    "complete_v2_marker": "TASK_0024V_V2_COMPLETE_PASS"
+  },
+  "retained_cycle": {
+    "manifest_id": "92ba1407-b34c-4de8-aa81-c4da4978bdaa",
+    "status": "PASS_CONSUMED",
+    "cases": [
+      {"name": "focused_c02", "record_sha256": "3B1D828D57FF4BDEE2FF9EACF60EB4F3C7CCB9CBF06E598C21511185FA2D3199", "raw_wrapper_sha256": "B4ACE4CB7C000575FB832D4C9DBA6ED5347D268124B4F096B7C6D056D8232A5D", "stderr": []},
+      {"name": "aggregate", "record_sha256": "865706B2AA009048CF5E56B135740973422CDB0F1A7EA62D876B7B5B1FF50250", "raw_wrapper_sha256": "A50D145BB1E7CD0DFE0AD3714482A5273EF7ABE16373009E687313F8D9103AD6", "stderr": ["LEVEL_ID_MISMATCH"]},
+      {"name": "complete_v2", "record_sha256": "C64FD5F5583EB148A4EAF4EBC655C62086892467E7FC09F3FC2D0F598E5831CB", "raw_wrapper_sha256": "4293B33DA73BD966BA56CD351130FA062E9103F21EFED5AFE70D2A653A24C587", "stderr": []}
+    ],
+    "cleanup_invocation_count_each": 1,
+    "remaining_owned_pids": [],
+    "remaining_unproven_pids": [],
+    "final_godot_count": 0,
+    "rerun_authorized": false
+  },
+  "protected_invariants": {
+    "production_catalog_modified": false,
+    "production_catalog_count": 8,
+    "formal_finale_sequence": 8,
+    "profile_accessed": false,
+    "deepseek_invoked": false
+  },
+  "final_task_verdict": "PASS_FOR_GPT_REVIEW",
+  "next_task_authorized": false
+}

@@ -4,7 +4,7 @@ No manifest, execution, or evidence identity is created here. Each future task h
 
 | Future task | Slot | Expected authored paths | Summary/report | Qualification and final categories | Retained evidence / terminal verdicts |
 |---|---|---|---|---|---|
-| 0024AW | C02 | one task-owned uncatalogued level, focused test | task-owned validation JSON; report | parser/schema, solver/replay, crate destination, no/displaced crate, no echo, shortcut/restart | independent manifest; bounded records; `PASS_FOR_GPT_REVIEW` / `BLOCKED` / `UNVERIFIED`; no rerun after final consumption |
+| 0024AW | C02 | authored uncatalogued level, focused test | validation JSON and report complete | `L*=14`, exact `N*=1`; all shortest `1/1`; required controls PASS | retained manifest `92ba1407-b34c-4de8-aa81-c4da4978bdaa` consumed PASS; `PASS_FOR_GPT_REVIEW`; no rerun |
 | 0024AX | S01 | same bounded pattern | task-owned validation JSON; report | parser/schema, body-only, echo-only, swapped eligibility, symmetric path, restart | same independent policy and verdicts |
 | 0024AY | C03 | same bounded pattern | task-owned validation JSON; report | parser/schema, next-turn window, crate removed-before-echo, immediate-update, timing bypass, restart | same independent policy and verdicts |
 | 0024AZ | S03 | same bounded pattern | task-owned validation JSON; report | parser/schema, `ECHO_ONLY` witness, `ANY_ACTOR`, `YOU_ONLY`, no echo, body-route removed, restart | same independent policy and verdicts |
