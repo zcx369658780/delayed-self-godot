@@ -1,64 +1,47 @@
 # Expanded content submission roadmap (CURRENT)
 
-- Status: `GPT-ACCEPTED PRODUCT ROADMAP / IMPLEMENTATION REMAINS SEPARATELY GATED`
-- Accepted by: `TASK_0023ZW_GAMEPLAY_PRESENTATION_ROADMAP_REBASELINE_ACCEPTED_WITH_BINDING_SEQUENCE_POLICY`
-- Acceptance report: `docs/reports/0023ZW_GPT_GAMEPLAY_PRESENTATION_ROADMAP_REBASELINE_ACCEPTANCE.md`
-- Original planning date: 2026-07-21
-- Project-source synchronization date: 2026-07-22
+- Status: `OWNER-REBASELINED PLANNING / IMPLEMENTATION SEPARATELY GATED`
+- Current synchronization: Task 0024AU, 2026-07-26
+- Owner input source: Task 0024AT core capture, accepted as input; 0024AT itself is `BLOCKED_DOCUMENTATION_SYNC_AND_STRUCTURE_INCOMPLETE`
+- Production catalog: exactly sequences 1–8
+- Formal finale: sequence 8 only
+- Candidate-bank admission: `NOT_AUTHORIZED`
+- DeepSeek project-code routing: `DISABLED`
 
-Task 0024W is GPT accepted as the schema-v2/Simulation/solver foundation. Task 0024X froze the sequence 9–12 curriculum and compatibility contract. Tasks 0024Y, 0024Z, 0024AB and 0024AC are GPT accepted as uncatalogued sequence-9/10/11/12 candidates. Task 0024AD batch-validated the exact 1–12 direct-file curriculum and selected `ISOLATED_STAGING_CATALOG_REQUIRED`. Task 0024AE has now machine-qualified that test-owned route; owner review and formal integration remain separately gated.
+## Current roadmap
 
-## Product target
+The shipping count is `DEFERRED`. The candidate bank is a planning portfolio, not a shipping promise and not authority to author, catalog, migrate Profile data, or move the finale.
 
-Deliver a stable **12-level, zh-Hans-default, hand-drawn ink-notebook complete flow**. Levels 13–14, advanced mechanics, full English and audio breadth are stretch scope only.
-
-The implemented baseline remains exactly eight formal levels until later content/catalog gates pass. Existing IDs and sequences 1–8 are immutable. Future core rooms append as sequences 9–12. Existing sequence 8 `two_echo_convergence` remains the current sole formal finale and may become the chapter-2 capstone after expansion. A future sequence-12 room may become the sole formal finale only through a separate accepted catalog/Profile integration gate.
-
-| Gate and target date | Exit evidence | Hard cut if missed |
+| Portfolio | Current direction | Current authority |
 |---|---|---|
-| 2026-07-23 scope finalization | accepted count/finale, mechanic subset, Profile policy | retain eight-level baseline; no expansion implementation |
-| 2026-07-30 shared mechanics + one vertical slice each | contract/solver/tests for selected families | remove weakest selected family |
-| 2026-08-07 curriculum batch to 12 core | validated rooms, bounded difficulty, owner playthrough | freeze at stable count; no 13–14 |
-| 2026-08-12 stretch decision | all core flow/regressions stable and date margin | permanently defer 13–14 |
-| 2026-08-17 presentation + zh-Hans integration | readable board/UI/font and no language overwrite | use minimum surfaces; English deferred |
-| 2026-08-21 music audition/ledger/import | explicit license evidence and small package | ship silent/minimal existing-safe audio; no breadth |
-| 2026-08-25 Profile first-write/default/menu flow | separately authorized acceptance evidence | do not release or infer migration |
-| 2026-08-29 complete-flow machine acceptance | deterministic full-flow matrix | cut all optional polish |
-| 2026-09-01 owner walkthrough | owner evidence and resolved blockers | cut stretch/content before stability |
-| 2026-09-03 Windows package/video readiness | separately authorized build/package evidence | final scope freeze |
-| 2026-09-06 submission | owner-authorized submission | no implied upload authority |
-| 2026-09-10 video deadline | owner-authorized video submission | n/a |
+| Foundations 1–6 | unchanged foundation | production facts remain frozen |
+| C01–C10 crate bank | redesign first; use crate-specific interactions beyond clearing an obstruction | planned, uncatalogued, not authorized |
+| S01–S10 body/shadow bank | primary expansion track | planned, uncatalogued, not authorized |
+| F01–F04 shadow-trapping chapter | future final-challenge direction, informed by sequences 7–8 | planned, uncatalogued, not authorized |
 
-Dates are planning targets, not implied authority. If a gate slips, preserve stability and cut stretch scope rather than weakening validation or protected-data boundaries.
+Sequence 9 is the obstruction-only crate seed; sequences 10–12 are body/shadow seeds. Sequences 7–8 remain references for the hardest/final-challenge direction. None of those facts changes production: sequence 8 remains the sole formal finale.
 
-## Accepted core mechanic families
+## Phased decision path
 
-1. YOU-only push crates.
-2. YOU-only consumable keys and locks.
-3. Grouped multi-cell barriers / bridges.
-4. Typed occupancy sensors: `ANY_ACTOR`, `YOU_ONLY`, `ECHO_ONLY`, with explicit crate eligibility.
-5. One-shot room-local latches.
+| Phase | Authorized planning outcome | Gate before proceeding |
+|---|---|---|
+| 0 | complete owner-feedback documentation rebaseline | Task 0024AU closeout |
+| 1 | plan six uncatalogued proof briefs: 3 crate + 3 body/shadow | GPT acceptance of a planning-only successor |
+| 2 | machine and owner review of any separately authorized candidates; make cuts | evidence and owner review |
+| 3 | optional second batch only after acceptance | explicit acceptance |
+| 4 | candidate-bank completion only if schedule permits | explicit scope decision |
+| 5 | catalog/finale/Profile admission | separate protected-surface gate |
 
-Paired portals, one-way gates, fragile floors and conveyors remain conditional stretch candidates only.
+Cut candidates before weakening validation, presentation readability, stability, licensing, export, or any protected-data policy. No phase implies authorization for the next one.
 
-## Language and Profile policy
+## Preserved deterministic design constraints
 
-The submission target is Simplified Chinese. A future compatibility gate may set **new-profile default `zh-Hans`**. Existing Profile language must never be silently overwritten. Existing completed IDs, best-turn records, unlock progression and settings must remain preserved.
+Useful mechanics contracts from the former planning baseline remain informative only: deterministic turn resolution, explicit YOU/ECHO role distinction, visibly typed sensors, declared crate eligibility, bounded local latches, and restartable failure. Any future implementation still needs a separately accepted schema/solver/level-authoring task.
 
-Chinese inventory includes title/menu, tutorial/Help/Timeline, level names, errors, completion/finale, settings, credits and attribution. Font coverage, text-fit and fallback tests are release gates. Full English is post-submission scope unless it remains safe and bounded.
+## Historical/superseded planning baseline
 
-## Presentation and audio target
+The former `12 core + 2 stretch` submission plan is historical and superseded for future expansion planning by the C/S/F portfolio above. Its dates, numerical solution bands, assumed 12-level shipping target, and possible sequence-12 finale are not current commitments. Historical machine-validation records remain historical evidence only; they do not admit candidates or alter the eight-level production catalog.
 
-The accepted identity layer is a hand-drawn delayed-notebook / ink-ECHO presentation over deterministic grid geometry. Communication must use icon/shape/text redundancy and cannot depend on color alone.
+## Non-authorizations
 
-Music target: two restrained looping tracks plus an optional finale cue. Any Crow Producer material requires source identity, provenance, license-ledger evidence and the visible credit `音乐由[乌鸦Producer]提供` before import. No acquisition or import is implied by this roadmap.
-
-## Current execution position
-
-Tasks 0024W/X/Y/Z/AB/AC are GPT accepted at their stated foundation/scope/candidate boundaries. Task 0024AD passed all twelve direct-file rooms, and Task 0024AE machine-qualified a test-owned staging catalog plus exact isolated Profile route through normal AppRoot selection, completion, unlock, reload and staging-finale behavior. Task 0024AL then passed repeatable focused qualification, a complete five-case rehearsal and one process-isolated write-ahead retained cycle for the minimum schema-v2 presentation. The worksheet remains `NOT_YET_REVIEWED`; sequences 3 and 9–12 still require owner curriculum review, and final visual art remains `NOT_FINAL`. Production catalog expansion, finale movement, Profile migration/default activation, further presentation integration, localization, font/audio import, build/export, release and submission remain closed until their own later gates.
-
-## Implementation order
-
-Accepted mechanics foundation → accepted 9–12 scope → four separately gated room authoring/validation tasks → 1–12 batch regression and owner curriculum review → separate catalog/finale/Profile integration → conditional stretch decision → presentation → language/font → music ledger/import → complete-flow acceptance → owner walkthrough → build/package/video/submission.
-
-No stage authorizes the next protected surface by implication.
+No level files, gameplay or presentation code, production catalog, Profile data or migration, formal finale, localization, assets/audio, build/export, release, upload, or submission changes are authorized by this roadmap.

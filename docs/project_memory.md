@@ -1,5 +1,11 @@
 # Project memory
 
+## Task 0024AU owner-feedback rebaseline synchronization
+
+Task 0024AU completed the documentation/planning closeout for the immutable Task 0024AT commit `1a54df4999b149ad8bf137f980bcb1bcdd00e802`. `task_0024at_status = BLOCKED_DOCUMENTATION_SYNC_AND_STRUCTURE_INCOMPLETE`; nevertheless its core owner directional feedback is accepted as planning input. The owner completed the isolated staging playthrough on 2026-07-26 but supplied no numerical ratings, clarity/enjoyment scores, confusion report, or formal per-room dispositions.
+
+Current expansion planning uses a 36-row portfolio: C01–C10 crate candidates (redesign required beyond obstruction clearing), S01–S10 body/shadow-separation candidates (primary expansion), and F01–F04 shadow-trapping final-chapter candidates. Phase 1 is planning only for six briefs, `3 crate + 3 body/shadow`. Shipping count is `DEFERRED`; candidate-bank admission remains `NOT_AUTHORIZED`; production stays at sequences 1–8 and sequence 8 remains the formal finale. Catalog/Profile/finale migration is a separate Phase-5 gate; DeepSeek project-code routing is `DISABLED`. Earlier current-plan references to a 12-core/2-stretch shipping path are historical/superseded for future expansion planning.
+
 ## Task 0024AL process-isolated write-ahead retained validation
 
 Task 0024AL replaced the Task 0024AK shared-module-session failure mode with a Python standard-library parent and a fresh PowerShell worker for each case. Workers atomically durably publish and revalidate canonical case files before success; the parent independently validates the files, journals every accepted case and never treats stdout as sole evidence. Isolation, durability, crash, sidecar, parser and AST probes passed, as did two frozen-AJ focused qualifications and one complete five-case rehearsal.
@@ -16,11 +22,11 @@ Task 0024AJ twice qualified exact stable-ID/public-activator sensor descriptors,
 
 ## Task 0024AE isolated staging owner-review route
 
-Task 0024AE created a test-owned 12-entry staging catalog and a pre-tree AppRoot launcher bound to the exact isolated Profile path. Production entries 1–7 remain semantically identical; sequence 8 differs only by staging `final_level=false`; accepted candidates 9–12 form the exact prerequisite chain and sequence 12 alone is staging-final. Production catalog, product route code, levels and accepted evidence remained unchanged.
+Historical Task 0024AE created a test-owned 12-entry staging catalog and a pre-tree AppRoot launcher bound to the exact isolated Profile path. Production entries 1–7 remain semantically identical; sequence 8 differs only by staging `final_level=false`; accepted candidates 9–12 form the exact prerequisite chain and sequence 12 alone is staging-final. Production catalog, product route code, levels and accepted evidence remained unchanged.
 
 The launcher proved normal catalog-backed selection for sequences 1–12, exact payloads and accepted turn counts, AppRoot completion persistence, ordered unlocks, staging-finale acknowledgement and independent-session reload. Two repeatable qualifications passed with 18 records each, maximum 487 bytes. Missing, duplicate, truncated, non-JSON and over-bound probes were all rejected. Zero production-data probes and zero test-root enumerations occurred; exact owned fixture cleanup passed.
 
-Final invocation `6b20bea7-f3e0-4daf-8d05-090e6fea9cb5` ran four cases once. All passed; Aggregate stderr was exactly `LEVEL_ID_MISMATCH`, the other three were empty, cleanup was once per case, no owned/unproven PID remained and final Godot was zero. The final route capture SHA-256 is `2c546746be454411002cc4748ad2411869b5b01acd1797303a0dc19fec174470`. Owner playthrough remains `NOT_YET_REVIEWED`, presentation is `BLOCKED_SCHEMA_V2_VISUALS`, catalog admission is `NOT_AUTHORIZED`, and the cycle is consumed.
+Historical final invocation `6b20bea7-f3e0-4daf-8d05-090e6fea9cb5` ran four cases once. All passed; Aggregate stderr was exactly `LEVEL_ID_MISMATCH`, the other three were empty, cleanup was once per case, no owned/unproven PID remained and final Godot was zero. The final route capture SHA-256 is `2c546746be454411002cc4748ad2411869b5b01acd1797303a0dc19fec174470`. At that time owner playthrough was `NOT_YET_REVIEWED`; Task 0024AT later recorded directional feedback, while catalog admission remains `NOT_AUTHORIZED`, and the cycle is consumed.
 
 ## Task 0024AD submission-core batch and owner-route audit
 
@@ -100,7 +106,7 @@ The final focused suite passed 10 path cases and 8 lifecycle invocations. Cleanu
 
 ## Task 0023ZW gameplay/presentation roadmap rebaseline
 
-Task 0023ZW produced documentation only, pending GPT/owner review. It recommends testing C: 12 submission-core levels plus two stability/date-gated stretch rooms, preserving the eight implemented rooms and sequence-8 `two_echo_convergence` while planning. Core candidate contracts are YOU-only crates, YOU-only consumable keys/locks, multi-cell barriers/bridges, typed sensors and one-shot latches; portals, one-way gates, fragile floors and conveyors are stretch. The visual direction is hand-drawn delayed notebook/ink-ECHO, zh-Hans is a recommended new-profile default pending an explicit Profile compatibility decision, and Crow Producer terms are owner-supplied planning inputs rather than legal interpretation. No Profile/content, Godot run, downloads/imports or product files were accessed/changed.
+Historical/superseded Task 0023ZW produced documentation only, pending GPT/owner review. It recommended testing C: 12 submission-core levels plus two stability/date-gated stretch rooms, preserving the eight implemented rooms and sequence-8 `two_echo_convergence` while planning. Core candidate contracts are YOU-only crates, YOU-only consumable keys/locks, multi-cell barriers/bridges, typed sensors and one-shot latches; portals, one-way gates, fragile floors and conveyors are stretch. The visual direction is hand-drawn delayed notebook/ink-ECHO, zh-Hans is a recommended new-profile default pending an explicit Profile compatibility decision, and Crow Producer terms are owner-supplied planning inputs rather than legal interpretation. No Profile/content, Godot run, downloads/imports or product files were accessed/changed.
 
 ## Task 0023ZV process reconciliation and controlled read
 

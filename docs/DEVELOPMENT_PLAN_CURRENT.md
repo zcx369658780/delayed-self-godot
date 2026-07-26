@@ -1,5 +1,7 @@
 # Development plan (CURRENT)
 
+> 2026-07-26 — Task 0024AU completed the owner-feedback rebaseline documentation synchronization. Task 0024AT remains `BLOCKED_DOCUMENTATION_SYNC_AND_STRUCTURE_INCOMPLETE`, while its faithful directional feedback is accepted as input. Current planning is C01–C10 crate candidates (redesign beyond obstruction clearing), S01–S10 body/shadow candidates (primary expansion), and F01–F04 shadow-trapping final-chapter candidates. Phase 1 is planning six uncatalogued briefs, `3 crate + 3 body/shadow`; it is not authoring. Shipping count is `DEFERRED`; production stays eight cataloged sequences and sequence 8 is the sole formal finale. Candidate admission is `NOT_AUTHORIZED`, DeepSeek code routing is `DISABLED`, and catalog/Profile/finale migration is a separate Phase-5 gate. The dated 12-core plan below is historical/superseded for future expansion planning.
+
 > 2026-07-23 — Task 0024AL replaced shared PowerShell module lifetime with a
 > Python standard-library parent and a fresh `pwsh -File` worker per case.
 > Process/durability/parser probes, two frozen-AJ focused qualifications and
@@ -29,14 +31,14 @@
 > zero. Status is `BLOCKED_SCHEMA_V2_SENSOR_CONTRACT_VALIDATION`; no rerun is
 > authorized and a new GPT/owner gate is required.
 
-> 2026-07-23 — Task 0024AE implemented one test-owned 12-entry staging catalog
+> Historical 2026-07-23 — Task 0024AE implemented one test-owned 12-entry staging catalog
 > and one pre-tree AppRoot launcher bound to the exact isolated test Profile.
 > Normal catalog selection, ordered unlocks, completion persistence, reload and
 > staging-only sequence-12 acknowledgement passed twice before the retained
 > four-case cycle. Final invocation `6b20bea7-f3e0-4daf-8d05-090e6fea9cb5`
 > passed route, accepted 0024AD batch, Aggregate and corrected complete-v2 once
 > each with exact stderr/lifecycle policy and final Godot zero. Owner review is
-> still unperformed, catalog admission is unauthorized, and schema-v2 visuals
+> was then unperformed, catalog admission was unauthorized, and schema-v2 visuals
 > remain blocked. Status is ready for GPT review only.
 
 > 2026-07-22 — Task 0024AD completed the fresh submission-core 1–12 direct-file

@@ -1,12 +1,20 @@
 # Handoff master (CURRENT)
 
+## Task 0024AU owner-rebaseline synchronization complete pending GPT review
+
+Task 0024AU completed the documentation-only closeout of Task 0024AT. `task_0024at_status = BLOCKED_DOCUMENTATION_SYNC_AND_STRUCTURE_INCOMPLETE`; its core directional feedback capture is `ACCEPTED_AS_INPUT`. Owner playthrough is `COMPLETED_WITH_DIRECTIONAL_FEEDBACK`, not a numerical or per-room acceptance record.
+
+The current portfolio is C01–C10 crate candidates requiring redesign beyond obstruction clearing, S01–S10 body/shadow candidates as the primary expansion track, and F01–F04 shadow-trapping final-chapter candidates. Phase 1 next requires planning six briefs, `3 crate + 3 body/shadow`, before any authoring. Shipping count is `DEFERRED`. Production remains exactly sequences 1–8, sequence 8 remains the sole formal finale, candidate admission is `NOT_AUTHORIZED`, and DeepSeek project-code routing is `DISABLED`.
+
+Read the Task 0024AU report, 36-row portfolio matrix, mechanic rebaseline, roadmap and AU handoff before a successor. Do not alter code, levels, catalog, Profile, finale, presentation, localization, assets/audio, build, release, or submission. The historical entries below predate the owner review; where they say owner review was unperformed, they are superseded by this current entry.
+
 ## Task 0024AL process-isolated retained validation ready for GPT review
 
 Task 0024AL completed at `SCHEMA_V2_MINIMUM_OWNER_REVIEW_PRESENTATION_WRITE_AHEAD_READY_FOR_GPT_REVIEW`. A Python standard-library parent launched one fresh `pwsh -NoProfile -NonInteractive -File` worker per case; every worker atomically published and reopened a complete durable case record before success, and the parent independently validated it and atomically journaled progress.
 
 All isolation/durability/parser probes, two frozen-AJ focused qualifications and the complete non-retained five-case rehearsal passed. Manifest `45a25cc1-1a44-43dd-9861-ce8a3596a066` was atomically consumed before case 1. Invocation `91787ae7-b1b0-4c6e-9301-ad2f312136ab` then passed frozen AJ focused, accepted 0024AE route, accepted 0024AD batch, Aggregate and corrected complete-v2 exactly once. Aggregate stderr was exactly `LEVEL_ID_MISMATCH`; all other stderr was empty. Cleanup was once per case, PID residue was empty and final Godot was zero. PRE_FINAL and POST_FINAL mismatches were zero.
 
-Owner route remains machine-qualified, but owner playthrough is `NOT_YET_REVIEWED`, final visual art is `NOT_FINAL` and catalog admission is `NOT_AUTHORIZED`. Read the 0024AL report and await GPT/owner review. Do not rerun the consumed manifest or infer product/catalog/Profile/release authorization.
+Historical status at Task 0024AL: owner route was machine-qualified while owner playthrough was `NOT_YET_REVIEWED`. Task 0024AT later recorded directional feedback; Task 0024AU is the current synchronization. Final visual art remains `NOT_FINAL` and catalog admission is `NOT_AUTHORIZED`. Do not rerun the consumed manifest or infer product/catalog/Profile/release authorization.
 
 ## Task 0024AK consumed retained-cycle blocker
 
@@ -26,7 +34,7 @@ Task 0024AE completed at `ISOLATED_STAGING_OWNER_REVIEW_ROUTE_READY_FOR_GPT_REVI
 
 Two repeatable qualifications passed with 18 bounded records each (maximum 487 bytes), parser negative probes passed, and the final invocation `6b20bea7-f3e0-4daf-8d05-090e6fea9cb5` ran route, accepted 0024AD batch, Aggregate and corrected complete-v2 exactly once. All passed; Aggregate stderr was exactly `LEVEL_ID_MISMATCH`, all others were empty, cleanup count was one per case, no owned/unproven PID remained and final Godot was zero. PRE_FINAL/POST_FINAL mismatches were zero. The cycle is consumed.
 
-Owner playthrough is still `NOT_YET_REVIEWED`; presentation is `BLOCKED_SCHEMA_V2_VISUALS`; production catalog admission is `NOT_AUTHORIZED`. Read the 0024AE report and await GPT/owner adjudication. Do not run the interactive owner session, rerun the final cycle, inspect production Profile data, change production catalog/finale/Profile, or begin presentation/localization/assets/build/release/submission without a new task.
+Historical status at Task 0024AE: owner playthrough was `NOT_YET_REVIEWED`; presentation was `BLOCKED_SCHEMA_V2_VISUALS`; production catalog admission was `NOT_AUTHORIZED`. Task 0024AT later recorded directional feedback. Do not rerun the final cycle, inspect production Profile data, change production catalog/finale/Profile, or begin presentation/localization/assets/build/release/submission without a new task.
 
 ## Task 0024AD 1–12 batch and owner-route audit ready for GPT review
 
@@ -112,7 +120,7 @@ Await GPT review. A later task may authorize one fresh complete core-mechanics v
 
 # Task 0023ZW gameplay/presentation roadmap rebaseline
 
-Task 0023ZW is complete as a documentation-only recommendation and awaits GPT/owner review. Its target is a 12-level Chinese-default complete flow, hand-drawn delayed-notebook presentation and minimal credited Crow Producer music; levels 13–14 and advanced mechanics are stretch only. The implementation remains exactly eight levels with `two_echo_convergence` as sequence-8 finale. Do not implement, migrate/reset Profile, acquire/import assets/audio/fonts, build, upload or submit until a new accepted gate authorizes the specific surface. Read `docs/reports/0023ZW_GAMEPLAY_PRESENTATION_ROADMAP_REBASELINE_REPORT.md` and the four linked CURRENT planning documents first.
+Historical/superseded Task 0023ZW was a documentation-only recommendation for a 12-level Chinese-default complete flow, hand-drawn delayed-notebook presentation and minimal credited Crow Producer music; levels 13–14 and advanced mechanics were stretch only. The implementation remains exactly eight levels with `two_echo_convergence` as sequence-8 finale. Do not implement, migrate/reset Profile, acquire/import assets/audio/fonts, build, upload or submit until a new accepted gate authorizes the specific surface.
 
 Task 0023ZS completed at:
 
@@ -353,7 +361,7 @@ task.
 
 # Task 0024AO DeepSeek pilot
 
-Task 0024AO passed the isolated relative-path wrapper smoke and recommends `DEEPSEEK_PROJECT_PILOT_ENABLED` for GPT review. It does not grant automatic delegation, product changes, or owner acceptance; see `docs/handoffs/DELAYED_SELF_SESSION_HANDOFF_AFTER_TASK_0024AO_DEEPSEEK_PROJECT_PILOT_2026_07_23.md`.
+Historical Task 0024AO passed the isolated relative-path wrapper smoke and recommended `DEEPSEEK_PROJECT_PILOT_ENABLED` for GPT review. Current project-code routing is `DISABLED`; this historical result does not grant delegation, product changes, or owner acceptance.
 # Task 0023ZT controlled production read-only harness construction
 
 Task 0023ZT completed at

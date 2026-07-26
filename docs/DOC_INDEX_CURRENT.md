@@ -2,6 +2,18 @@
 
 ## Start here
 
+0. [`Task 0024AU`](../tasks/0024AU_owner_rebaseline_documentation_completion_and_sync.md) — owner-feedback rebaseline documentation synchronization
+1. [`Task 0024AT`](../tasks/0024AT_owner_playthrough_feedback_and_mechanic_expansion_rebaseline.md) — immutable predecessor; blocked on documentation completeness, feedback retained as input
+2. [`Owner curriculum worksheet`](playtest/SUBMISSION_CORE_1_12_OWNER_CURRICULUM_REVIEW_CURRENT.md) — directional owner feedback source and non-authorization boundary
+3. [`Task 0024AT decision report`](reports/0024AT_OWNER_PLAYTHROUGH_AND_MECHANIC_EXPANSION_DECISION_REPORT.md) — direct feedback, omissions, blocked adjudication and continuation
+4. [`Mechanic expansion rebaseline`](level_design/OWNER_FEEDBACK_MECHANIC_EXPANSION_REBASELINE_CURRENT.md) — complete C/S/F slot contracts
+5. [`Owner-feedback portfolio matrix`](level_design/OWNER_FEEDBACK_LEVEL_PORTFOLIO_MATRIX_CURRENT.md) — independent 36-row portfolio
+6. [`Current expanded-content roadmap`](production/EXPANDED_CONTENT_SUBMISSION_ROADMAP_CURRENT.md) — deferred shipping count and Phase-0–5 gates
+7. [`Task 0024AU report`](reports/0024AU_OWNER_REBASELINE_DOCUMENTATION_COMPLETION_AND_SYNC_REPORT.md) — synchronization audit and validation record
+8. [`Task 0024AU handoff`](handoffs/DELAYED_SELF_SESSION_HANDOFF_AFTER_TASK_0024AU_OWNER_REBASELINE_SYNC_2026_07_26.md) — next-gate and invariant handoff
+
+Current invariant: owner feedback is directional only; Phase 1 is planning `3 crate + 3 body/shadow`; production remains eight levels with sequence 8 as formal finale; candidate admission is `NOT_AUTHORIZED`; DeepSeek project-code routing is `DISABLED`. The next gate is six-brief planning, not authoring.
+
 0. [`Task 0024AO`](../tasks/0024AO_deepseek_relative_path_contract_alignment_and_project_pilot_completion.md) — relative-path wrapper pilot completion
 1. [`Task 0024AO report`](reports/0024AO_DEEPSEEK_RELATIVE_PATH_CONTRACT_AND_PROJECT_PILOT_REPORT.md) — frozen worker contract and smoke evidence
 2. [`DeepSeek workflow`](workflows/DEEPSEEK_FILE_WORKER_CLI_PILOT_WORKFLOW.md) — wrapper-only future delegation contract
