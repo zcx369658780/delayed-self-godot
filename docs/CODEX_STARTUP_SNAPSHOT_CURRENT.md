@@ -1,23 +1,24 @@
 # Codex startup snapshot (CURRENT)
 
-- Status: `CURRENT / TASK 0024AY BLOCKED / ALL-SHORTEST DOOR-ATTEMPT OMISSIONS`
+- Status: `CURRENT / TASK 0024AYR READY / C03 CONTRACT-RECONCILED RETRY`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Active task: `tasks/0024AY_phase_1_c03_crate_delayed_door_authoring_and_machine_validation.md`
-- Active status: `TASK_0024AY_BLOCKED_ALL_SHORTEST_DOOR_ATTEMPT_OMISSIONS`
-- Task publication commit: `9a32dd7b621979409044165fed002b535be06254`
-- Active-pointer commit: `1dfe3c3055858e545fc955c806bfebb8a23b84d9`
-- Required accepted checkpoint in ancestry: `d17dcb756b982808c119428ae02f1c42dd41f78a`
+- Active task: `tasks/0024AYR_c03_next_turn_door_contract_reconciliation_and_retry.md`
+- Active status: `TASK_0024AYR_READY`
+- Task publication commit: `0689685845c8fd9b3a35a408730832160f4c5d35`
+- Active-pointer commit: `a19d39b1f5eaea1390a332ccb9185f366127981b`
+- Required predecessor checkpoint in ancestry: `d8240a967dc46c5933b2159533629614d27cb766`
 - Previous GPT acceptance: `TASK_0024AX_S01_EXPLICIT_ROLE_SEPARATION_MACHINE_VALIDATION_ACCEPTED`
-- Candidate: C03 / `phase_1_c03_crate_delayed_door`
-- Design chain: crate push → ECHO blocked/phase shifted → ECHO Plate → same-turn YOU Door attempt blocked → next-turn Door crossing → YOU EXIT
+- Task 0024AY: honest `BLOCKED`; best discarded `L*=15`, exact `N*=14`, old mask `2/14`, omissions `12`
+- GPT blocker adjudication: concept remains viable; mandatory failed Door input was over-constrained
+- Revised C03 contract: crate push → ECHO block/phase shift → Plate → Door opens after transition → YOU crosses strictly later → YOU EXIT
+- Separate diagnostic: one reachable same-turn Door attempt must be blocked by the accepted start-snapshot rule
+- Retry budget: maximum 3 topology families and 6 variants
 - Production baseline: exactly eight cataloged levels; sequence 8 remains the sole formal finale
 - Candidate admission: `NOT_AUTHORIZED`
 - Owner review: `NOT_REVIEWED`
 - Shipping count: `DEFERRED`
 - DeepSeek project-code routing: `DISABLED`
 
-Before work, fetch and fast-forward only. Require synchronized main, clean tracked/staged state, only the accepted untracked project config, accepted Godot/wrapper/foundation identities and Godot process count zero.
+Before work, fetch and fast-forward only. Require `HEAD == origin/main`, divergence `0/0`, clean tracked/staged state, only the accepted untracked `.codex/config.toml`, accepted Godot/wrapper/foundation identities and Godot process count zero.
 
-Read Task 0024AY completely. Only one uncatalogued C03 candidate, its dedicated validation/helpers, bounded evidence and current-document closeout are authorized. Existing levels—including accepted C02 and S01—catalog, Profile, schema, Simulation, solver, Aggregate, scenes and all later Phase-1 candidates remain protected.
-
-Task 0024AW and 0024AX manifests are consumed and must never be rerun. Task 0024AY stopped before PRE_FINAL at exact all-shortest `2/14`, omissions `12`; no 0024AY manifest exists and none may be reconstructed retroactively. S03/0024AZ remains closed pending explicit GPT adjudication.
+Read Task 0024AYR completely. Do not recover discarded 0024AY bytes or create a retroactive manifest. Consumed 0024AW/0024AX manifests remain immutable. S03/0024AZ remains closed pending GPT adjudication of this retry.
