@@ -1,20 +1,18 @@
 # Codex active task (CURRENT)
 
-- Status: `TASK_0024AYR_ACCEPTED_CLOSED`
-- Completed task: `tasks/0024AYR_c03_next_turn_door_contract_reconciliation_and_retry.md`
-- Result commit: `414d4d890ba39f66e540688db2fa22576f20460a`
-- GPT acceptance report: `docs/reports/0024AYR_GPT_C03_NEXT_TURN_DOOR_RETRY_ACCEPTANCE.md`
-- GPT verdict: `TASK_0024AYR_C03_NEXT_TURN_DOOR_RETRY_ACCEPTED`
-- Candidate slot: `C03`
-- Candidate identity: `phase_1_c03_crate_delayed_door`
-- Machine facts: `L*=14`, exact `N*=2`, revised all-shortest `2/2`, omissions `0`
-- Separate reachable blocked-Door diagnostic: `PASS`
-- Retained manifest: `a5850880-314a-49e7-a67c-860313c14158` / consumed / no rerun
+- Status: `TASK_0024AZ_READY`
+- Active task: `tasks/0024AZ_phase_1_s03_echo_only_sensor_authoring_and_machine_validation.md`
+- Task publication commit: `f46060783ce7baf21cee69eb04c6e83bf53135fd`
+- Required accepted checkpoint in ancestry: `de9fe41c168ff8db0684456b84c746ed7880308e`
+- Previous accepted gate: `TASK_0024AYR_C03_NEXT_TURN_DOOR_RETRY_ACCEPTED`
+- Candidate slot: `S03`
+- Candidate identity: `phase_1_s03_echo_only_sensor`
+- Design chain: ECHO_ONLY sensor → next-turn grouped barrier → later YOU crossing → YOU EXIT
 - Production catalog: exactly eight levels; sequence 8 remains the sole formal finale
 - Candidate admission: `NOT_AUTHORIZED`
 - Owner review: `NOT_REVIEWED`
 - DeepSeek project-code routing: `DISABLED`
 
-Task 0024AYR is accepted at the machine-validation boundary only. C03 remains uncatalogued, unsequenced and owner-unreviewed. Never rerun or reconstruct the consumed manifest.
+Task 0024AZ may author only one fresh uncatalogued S03 candidate, its dedicated validation/helpers, bounded evidence and current closeout. It must prove ECHO-only activation, material YOU route responsibility, complete all-shortest necessity and one independent retained lifecycle.
 
-The next separately gated candidate is S03/0024AZ. No catalog, Profile, finale, presentation-code, build, release or submission change is authorized by this closeout.
+C07/0024BA and every later candidate remain closed. No catalog, Profile, finale, presentation-code, build, release or submission change is authorized.
