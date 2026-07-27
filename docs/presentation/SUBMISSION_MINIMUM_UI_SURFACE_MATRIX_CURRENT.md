@@ -16,3 +16,7 @@ Exactly 12 audited rows; all zh-Hans strings are planning targets, not implement
 | 10 | finale_ending | final acknowledgement | IMPLEMENTED_NOT_RELEASE_READY | finale ink/success | 信号迟到了。它被听见了。 | Enter/Space return, R replay | acknowledge | finale panel; optional cue | final copy? | one-shot return | music optional |
 | 11 | credits_licenses | app shell/credits plan | PLANNED_NOT_IMPLEMENTED | paper list/focus | 制作、字体、音乐、音效、许可 | scrolling/back | back | font/license records | credit order? | long text/links | never cut credits |
 | 12 | error_recovery | `safe_error.tscn`, app root | IMPLEMENTED_NOT_RELEASE_READY | error/focus/restart | 发生错误、重试、返回主菜单 | safe default | error/recovery | error icon; recovery SFX | technical detail level? | malformed catalog fixture | never cut recovery |
+
+## Task 0024BAD baseline
+
+`main_menu`, `level_select`, and production-eight gameplay now share the project-native paper/ink theme with keyboard-readable double focus, locked/available/completed marks, and explicit E2/E3/E4 badges. Status is `IMPLEMENTED_BASELINE_OWNER_REVIEW_PENDING`; other surfaces remain at their prior status.

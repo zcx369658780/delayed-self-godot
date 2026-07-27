@@ -27,3 +27,7 @@ The owner authorizes independent search for free graphic, sprite and animation a
 ## Gate result
 
 The decision hold is cleared. A bounded visual/UI and essential-SFX vertical-slice task may be published. Full UI rollout, font import, music import, external graphic import, build/export and public submission remain separately gated.
+
+## Task 0024BAD implementation disposition
+
+All 10 defaults remain accepted. The project-native visual/UI baseline and six deterministic project-created WAVs are `IMPLEMENTED_BASELINE_OWNER_REVIEW_PENDING`. This is machine evidence, not owner acceptance. Eight further SFX remain planned; music, fonts and third-party graphics remain unimported. Next gate: `OWNER_VISUAL_AUDIO_VERTICAL_SLICE_REVIEW`.

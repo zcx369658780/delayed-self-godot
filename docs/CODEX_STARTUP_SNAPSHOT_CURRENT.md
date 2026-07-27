@@ -1,9 +1,9 @@
 # Codex startup snapshot (CURRENT)
 
-- Status: `CURRENT / TASK 0024BAD READY / FIRST SUBMISSION VISUAL-AUDIO VERTICAL SLICE`
+- Status: `CURRENT / TASK 0024BAD PASS_FOR_GPT_REVIEW / OWNER REVIEW PENDING`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
 - Active task: `tasks/0024BAD_first_submission_visual_ui_and_sfx_vertical_slice.md`
-- Active status: `TASK_0024BAD_READY`
+- Active status: `TASK_0024BAD_PASS_FOR_GPT_REVIEW`
 - Task publication commit: `09f784fd7b17e83bba46ccca1036e38d5e143004`
 - Active-pointer commit: `c8dc2f12e237391d3cb378c2648d80cd2344dd1e`
 - Required checkpoint in ancestry: `d1738ea0f63e2aa625e6e78f3222dd474b234cc2`
@@ -37,3 +37,5 @@
 Before work, fetch and fast-forward only. Require `HEAD == origin/main`, divergence `0/0`, clean tracked/staged state, only the accepted untracked `.codex/config.toml`, unchanged config SHA, accepted Godot identity and Godot process count zero.
 
 Read Task 0024BAD completely. Resolve and freeze the exact existing main-menu and level-select script paths before writing. Do not import music, fonts or third-party graphics; do not modify catalog, levels, Simulation, solver, Profile, finale, build or submission surfaces.
+
+Task 0024BAD now has a machine-validated project-native visual/SFX baseline awaiting owner review: visual `97`, audio `112`, Aggregate `621/9`, complete-v2 pass, six deterministic WAVs, four buses, and two real `960x540` captures. Catalog remains 8, sequence 8 remains the sole finale, S04 remains deferred, and Profile was not accessed.

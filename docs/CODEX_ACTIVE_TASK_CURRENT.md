@@ -1,6 +1,6 @@
 # Codex active task (CURRENT)
 
-- Status: `TASK_0024BAD_READY`
+- Status: `TASK_0024BAD_PASS_FOR_GPT_REVIEW`
 - Active task: `tasks/0024BAD_first_submission_visual_ui_and_sfx_vertical_slice.md`
 - Task publication commit: `09f784fd7b17e83bba46ccca1036e38d5e143004`
 - Required checkpoint in ancestry: `d1738ea0f63e2aa625e6e78f3222dd474b234cc2`
@@ -25,3 +25,16 @@
 - DeepSeek identity policy: `IDENTITY_READY_FAIL_CLOSED_ON_MISMATCH`
 
 Success opens only `OWNER_VISUAL_AUDIO_VERTICAL_SLICE_REVIEW`. Full UI rollout, remaining SFX, font/zh-Hans, music audition/import, external graphic import, build/export and S04 remain closed.
+
+## Task 0024BAD result
+
+- Visual slice: `IMPLEMENTED_BASELINE_OWNER_REVIEW_PENDING`
+- Focused visual/audio: `PASS (97) / PASS (112)`
+- Production-eight Aggregate: `PASS assertions=621 vectors=9`; stderr exactly `LEVEL_ID_MISMATCH`
+- complete-v2: `PASS`; stderr empty
+- Captures: `2` real `960x540` PNGs
+- Generated SFX: `6`; remaining planned SFX: `8`
+- Music/font/third-party graphics imported: `NO / NO / NO`
+- Profile accessed: `NO`
+- DeepSeek optional delegation: `NOT_USED`
+- Next gate: `OWNER_VISUAL_AUDIO_VERTICAL_SLICE_REVIEW`

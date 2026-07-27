@@ -29,3 +29,5 @@ Workstreams: P product/content; V visual/UI; A audio/license; F flow/localizatio
 | buffer | 2026-09-04 | 2026-09-05 | all/owner | upload completed | correction-only reserve; final confirmation | no new scope, assets, platform, or first build | none |
 
 September 6 is confirmation/emergency correction only, never the first build or first upload. September 7–10 is reserved solely for an already-planned video requirement, not for changing the submitted game scope.
+
+Task 0024BAD establishes the first submission-facing project-native visual/UI and essential-SFX baseline. It does not alter dates or authorize music/font/external-graphic intake, build/export, release, upload, or public submission. The immediate next gate is owner review of the two captures and six-SFX slice.

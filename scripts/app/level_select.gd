@@ -4,6 +4,9 @@ extends Control
 signal level_selected(level_id: String)
 signal back_requested
 
+const SubmissionVisualTheme = preload("res://scripts/presentation/submission_visual_theme.gd")
+const SubmissionSfxRouter = preload("res://scripts/audio/submission_sfx_router.gd")
+
 var _entries: Array = []
 var _progress
 var _outer_panel: VBoxContainer
@@ -24,7 +27,7 @@ func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	var background := ColorRect.new()
 	background.name = "Background"
-	background.color = Color("101827")
+	background.color = SubmissionVisualTheme.color_for_token("paper_background")
 	background.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	add_child(background)
 	_outer_panel = VBoxContainer.new()
@@ -35,7 +38,7 @@ func _ready() -> void:
 	add_child(_outer_panel)
 	_title = Label.new()
 	_title.name = "Title"
-	_title.text = "LEVEL SELECT"
+	_title.text = "LEVEL SELECT / 选择迟到的时刻"
 	_title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	_title.custom_minimum_size = Vector2(0, 42)
 	_title.add_theme_font_size_override("font_size", 30)
@@ -56,20 +59,28 @@ func _ready() -> void:
 	_entry_list.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	_entry_list.add_theme_constant_override("separation", 10)
 	_entry_scroll.add_child(_entry_list)
+	var progress_snapshot: Dictionary = _progress.snapshot() if _progress != null and _progress.has_method("snapshot") else {}
+	var completed_level_ids: Array = progress_snapshot.get("completed_level_ids", progress_snapshot.get("runtime", {}).get("completed_level_ids", []))
 	_entries.sort_custom(func(a, b): return a.sequence < b.sequence)
 	for entry in _entries:
 		var unlocked: bool = _progress != null and _progress.is_unlocked(entry.level_id)
+		var completed: bool = completed_level_ids.has(entry.level_id)
 		var button := Button.new()
 		button.name = "Level_" + entry.level_id
-		button.text = "%02d  %s%s" % [entry.sequence, entry.formal_title, "" if unlocked else "  [LOCKED: %s]" % ", ".join(entry.unlock_prerequisites)]
+		var state_mark := "✓" if completed else ("◇" if unlocked else "▩")
+		button.text = "%s  %02d  %s%s" % [state_mark, entry.sequence, entry.formal_title, "" if unlocked else "  [LOCKED: %s]" % ", ".join(entry.unlock_prerequisites)]
 		button.disabled = not unlocked
 		button.custom_minimum_size = Vector2(0, 56)
 		button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		button.pressed.connect(func():
 			if not button.disabled:
+				SubmissionSfxRouter.ensure_router(get_tree()).play_event("ui_confirm")
 				level_selected.emit(entry.level_id)
 		)
-		button.focus_entered.connect(func(): _ensure_button_visible(button))
+		button.focus_entered.connect(func():
+			_ensure_button_visible(button)
+			SubmissionSfxRouter.ensure_router(get_tree()).play_event("ui_focus_or_move")
+		)
 		_entry_buttons[entry.level_id] = button
 		if unlocked:
 			_highest_unlocked_button = button
@@ -78,8 +89,13 @@ func _ready() -> void:
 	_back_button.name = "Back"
 	_back_button.text = "Back"
 	_back_button.custom_minimum_size = Vector2(0, 48)
-	_back_button.pressed.connect(func(): back_requested.emit())
+	_back_button.pressed.connect(func():
+		SubmissionSfxRouter.ensure_router(get_tree()).play_event("ui_confirm")
+		back_requested.emit()
+	)
+	_back_button.focus_entered.connect(func(): SubmissionSfxRouter.ensure_router(get_tree()).play_event("ui_focus_or_move"))
 	_outer_panel.add_child(_back_button)
+	SubmissionVisualTheme.apply_control_tree(self)
 	_configure_focus_navigation()
 	call_deferred("_reveal_highest_unlocked")
 

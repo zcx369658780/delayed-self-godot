@@ -703,3 +703,7 @@ Web, release, and submission remain separate gates.
 Headless tests run through `tests/tools/run_owned_godot_headless.ps1` with PowerShell 7. The wrapper records its direct PID and exact arguments, preserves native test result, and always cleans only its owned PID/verified descendants in `finally`; timeout cleanup is lifecycle management, not a retry. Tasks 0023ZX/ZY/ZZ remain historical blockers; Task 0024 closes the lifecycle contract without changing formal product data.
 
 Correction: Task 0024 did not validly close. Its unique final-matrix invocation was consumed before all wrapper qualifications were proven, while the committed wrapper and final runner omit required identity/classification and v2-matrix coverage. Do not reuse the earlier READY verdict; continuation requires a new explicit correction gate.
+
+## 2026-07-27 — Task 0024BAD submission visual/audio slice
+
+The first project-native paper/ink runtime slice covers production-eight gameplay, main menu and level select, with structural non-color distinctions and explicit E2/E3/E4 badges. Six standard-library-generated mono 16-bit 44.1 kHz WAVs are byte-deterministic and routed through Master/UI/Gameplay/Music (silent Music). Machine verdict is `PASS_FOR_GPT_REVIEW`; owner review remains pending. No music, fonts, third-party graphics, Profile, catalog/finale or submission surface was opened.

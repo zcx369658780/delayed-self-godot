@@ -364,3 +364,8 @@ Current invariant: owner feedback is directional only; Phase 1 is planning `3 cr
 - [`Task 0013B GPT final acceptance`](reports/0013B_GPT_FINAL_ACCEPTANCE.md)
 - [`Level 7 two-ECHO convergence plan`](level_design/LEVEL_7_TWO_ECHO_CONVERGENCE_PLAN_CURRENT.md)
 - [`Task 0014 Level 7 planning report`](reports/0014_LEVEL_7_TWO_ECHO_CONVERGENCE_PLANNING_REPORT.md)
+- [`Task 0024BAD visual/audio vertical-slice contract`](presentation/SUBMISSION_VISUAL_AUDIO_VERTICAL_SLICE_CONTRACT_CURRENT.md)
+- [`Task 0024BAD machine-validation report`](reports/0024BAD_FIRST_SUBMISSION_VISUAL_AUDIO_VERTICAL_SLICE_REPORT.md)
+- [`Crow Producer license evidence`](licenses/CROW_PRODUCER_MUSIC_LICENSE_EVIDENCE_CURRENT.md)
+- [`External CC0 source shortlist`](licenses/EXTERNAL_FREE_ASSET_SOURCE_SHORTLIST_CURRENT.md)
+- [`Task 0024BAD session handoff`](handoffs/DELAYED_SELF_SESSION_HANDOFF_AFTER_TASK_0024BAD_VISUAL_AUDIO_SLICE_2026_07_27.md)

@@ -9,3 +9,5 @@ Do not invent entries. Before any external asset is used for release, record its
 | Asset | Source/author | License evidence | Project use | Release status |
 |---|---|---|---|---|
 | _None_ | — | — | — | No asset accepted |
+
+Task 0024BAD audited a bounded CC0 source shortlist and Crow Producer terms, but imported no third-party asset. The six runtime WAVs are deterministically project-created; shortlist and music evidence are not ledger acceptance.

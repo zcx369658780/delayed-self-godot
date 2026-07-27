@@ -33,3 +33,7 @@
 | 24 | final package/upload authorization | BLOCKED | build/submission/release evidence absent; upload protected | dry run, final audit, explicit owner authorization | authorize upload | submission authorization |
 
 No percentage-complete claim is made. Missing directories are evidence of absent repository deliverables, not proof that off-repository work does or does not exist.
+
+## Task 0024BAD delta
+
+Visual/UI vertical slice and six essential project-created SFX are now `IMPLEMENTED_BASELINE_OWNER_REVIEW_PENDING`, backed by focused visual/audio tests, production-eight regression, and two real 960x540 captures. Music, fonts, external graphics, complete UI rollout, build, release and submission remain blocked or pending under their existing gates.

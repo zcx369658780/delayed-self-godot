@@ -7,6 +7,8 @@ const LevelLoader = preload("res://scripts/simulation/level_loader.gd")
 const Simulation = preload("res://scripts/simulation/simulation.gd")
 const TimelineModel = preload("res://scripts/gameplay/timeline_model.gd")
 const SchemaV2Presentation = preload("res://scripts/gameplay/schema_v2_presentation.gd")
+const SubmissionVisualTheme = preload("res://scripts/presentation/submission_visual_theme.gd")
+const SubmissionSfxRouter = preload("res://scripts/audio/submission_sfx_router.gd")
 const LEVEL_PATH := "res://data/levels/vertical_slice_delay_3.json"
 const HUD_MODES := ["INTRO_MINIMAL", "GUIDED_ECHO", "STANDARD_COMPACT"]
 const CELL := 60.0
@@ -72,6 +74,7 @@ var disclosure := {
 
 func _ready() -> void:
 	feedback_timer.timeout.connect(_on_feedback_timeout)
+	SubmissionSfxRouter.ensure_router(get_tree()).reset_router_state()
 	var loaded := LevelLoader.new().load_file(configured_level_path)
 	if not loaded.ok:
 		load_error = "INVALID_LEVEL: " + _codes(loaded.errors)
@@ -137,12 +140,15 @@ func _unhandled_input(event: InputEvent) -> void:
 		var result := simulation.transition(level, state, action)
 		if result.ok:
 			state = result.state
+			_play_transition_sfx(before, state, action, was_completed)
 			_update_visual_feedback(before, result, action)
 			_update_disclosure(before, result)
 			if not was_completed and state.completed and hosted_by_app:
 				help_expanded = false
 				gameplay_completed.emit(configured_level_id, state.turn_index - 1)
 		else:
+			if CARDINAL_ACTIONS.has(action):
+				SubmissionSfxRouter.ensure_router(get_tree()).play_event("blocked_or_invalid")
 			printerr(result.status)
 		_update_hud()
 		queue_redraw()
@@ -403,6 +409,7 @@ func toggle_help() -> void:
 
 func _restart_level() -> void:
 	state = simulation.construct_initial_state(level)
+	SubmissionSfxRouter.ensure_router(get_tree()).reset_router_state()
 	acknowledgement_return_requested = false
 	help_expanded = false
 	_reset_visual_feedback()
@@ -418,13 +425,13 @@ func _request_acknowledgement_return_once() -> void:
 
 
 func _draw() -> void:
-	draw_rect(Rect2(Vector2.ZERO, Vector2(960, 540)), Color("111827"))
+	draw_rect(Rect2(Vector2.ZERO, Vector2(960, 540)), SubmissionVisualTheme.color_for_token("paper_background"))
 	if load_error != "":
 		return
 	for y in level.terrain_rows.size():
 		for x in level.terrain_rows[y].length():
 			var rectangle := Rect2(_board_origin() + Vector2(x, y) * CELL, Vector2(CELL - CELL_GAP, CELL - CELL_GAP))
-			draw_rect(rectangle, Color("263449") if level.terrain_rows[y][x] == "." else Color("0a0f1a"))
+			_draw_paper_cell(rectangle, level.terrain_rows[y][x] == ".")
 	_draw_schema_v2_descriptors(false)
 	var pressed_plate_ids: Array = simulation.pressed_plate_ids(level, state)
 	for door in level.doors:
@@ -434,20 +441,20 @@ func _draw() -> void:
 			var plate := _plate_by_id(plate_id)
 			if not plate.is_empty():
 				var active: bool = pressed_plate_ids.has(plate_id)
-				draw_dashed_line(_center(plate.position), _center(door.position), Color("fbbf24", 0.78) if active else Color("64748b", 0.46), 3.0 if active else 1.5, 8.0)
+				draw_dashed_line(_center(plate.position), _center(door.position), SubmissionVisualTheme.color_for_token("success_mark") if active else SubmissionVisualTheme.color_for_token("secondary_ink"), 3.0 if active else 1.5, 8.0)
 	for plate in level.plates:
 		var active: bool = pressed_plate_ids.has(plate.id)
 		var plate_center := _center(plate.position)
 		if _uses_convergence_cues() and _dependency_identity(plate.id).shape == "TRIANGLE":
 			_draw_triangle_token(plate_center, active)
 		else:
-			draw_circle(plate_center, 18, Color("3f3215"))
+			draw_circle(plate_center, 18, SubmissionVisualTheme.color_for_token("secondary_ink"))
 			if active:
-				draw_circle(plate_center, 12, Color("fbbf24"))
-				draw_arc(plate_center, 22, 0, TAU, 32, Color("fde68a"), 3)
+				draw_circle(plate_center, 12, SubmissionVisualTheme.color_for_token("success_mark"))
+				draw_arc(plate_center, 22, 0, TAU, 32, SubmissionVisualTheme.color_for_token("primary_ink"), 3)
 			else:
-				draw_circle(plate_center, 11, Color("111827"))
-				draw_arc(plate_center, 15, 0, TAU, 32, Color("d6a928"), 3)
+				draw_circle(plate_center, 11, SubmissionVisualTheme.color_for_token("paper_background"))
+				draw_arc(plate_center, 15, 0, TAU, 32, SubmissionVisualTheme.color_for_token("primary_ink"), 3)
 		if _uses_convergence_cues():
 			draw_string(ThemeDB.fallback_font, plate_center + Vector2(-5, 5), _dependency_identity(plate.id).label, HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color("fff7d6"))
 	for door in level.doors:
@@ -455,41 +462,81 @@ func _draw() -> void:
 		var door_center := _center(door.position)
 		var rect := Rect2(door_center - Vector2(22, 25), Vector2(44, 50))
 		if open:
-			draw_line(rect.position, rect.position + Vector2(0, rect.size.y), Color("a7f3d0"), 4)
-			draw_line(rect.end - Vector2(0, rect.size.y), rect.end, Color("a7f3d0"), 4)
-			draw_line(rect.position, rect.position + Vector2(12, 0), Color("6ee7b7"), 3)
-			draw_line(rect.end - Vector2(12, 0), rect.end, Color("6ee7b7"), 3)
+			draw_line(rect.position, rect.position + Vector2(0, rect.size.y), SubmissionVisualTheme.color_for_token("success_mark"), 4)
+			draw_line(rect.end - Vector2(0, rect.size.y), rect.end, SubmissionVisualTheme.color_for_token("success_mark"), 4)
+			draw_line(rect.position, rect.position + Vector2(12, 0), SubmissionVisualTheme.color_for_token("primary_ink"), 3)
+			draw_line(rect.end - Vector2(12, 0), rect.end, SubmissionVisualTheme.color_for_token("primary_ink"), 3)
 		else:
-			draw_rect(rect, Color("7f1d1d", 0.92))
-			draw_rect(rect, Color("fecaca"), false, 3)
+			draw_rect(rect, SubmissionVisualTheme.color_for_token("warning_mark"))
+			draw_rect(rect, SubmissionVisualTheme.color_for_token("primary_ink"), false, 3)
 			for offset in [-12.0, 0.0, 12.0]:
-				draw_line(door_center + Vector2(offset, -21), door_center + Vector2(offset, 21), Color("fee2e2"), 4)
+				draw_line(door_center + Vector2(offset, -21), door_center + Vector2(offset, 21), SubmissionVisualTheme.color_for_token("paper_background"), 4)
 		_draw_dependency_pips(door, door_center, pressed_plate_ids)
 	_draw_echo_feedback()
 	var exit_position: Vector2 = _center(level.exit.position)
 	_draw_exit_base(exit_position)
 	for echo in state.echo_positions:
 		var echo_center := _center(echo.position)
-		draw_circle(echo_center, 16, Color("a78bfa", 0.72))
+		draw_circle(echo_center, 16, SubmissionVisualTheme.color_for_token("paper_background"))
 		var definition := _echo_definition_by_id(echo.id)
 		if _uses_convergence_cues() and int(definition.delay) == 4:
-			_draw_dashed_arc(echo_center, 20, Color("ddd6fe"), 2)
-			_draw_dashed_arc(echo_center, 24, Color("c4b5fd"), 2)
+			_draw_dashed_arc(echo_center, 20, SubmissionVisualTheme.color_for_token("echo_ink"), 2)
+			_draw_dashed_arc(echo_center, 24, SubmissionVisualTheme.color_for_token("primary_ink"), 2)
 		else:
-			draw_arc(echo_center, 20, 0, TAU, 24, Color("ddd6fe"), 2)
-		if _uses_convergence_cues():
-			var badge_offset := Vector2(5, -20) if int(definition.delay) == 4 else Vector2(-25, -20)
-			draw_string(ThemeDB.fallback_font, echo_center + badge_offset, "E%d" % int(definition.delay), HORIZONTAL_ALIGNMENT_LEFT, -1, 13, Color("f5f3ff"))
-		else:
-			var echo_letter_center := echo_center + Vector2(10, -8) if echo.position == state.player_position else echo_center
-			_draw_actor_letter(echo_letter_center, "E", Color("f5f3ff"))
-	draw_circle(_center(state.player_position), 15, Color("f8fafc"))
-	draw_circle(_center(state.player_position), 7, Color("22d3ee"))
-	_draw_actor_letter(_center(state.player_position), "Y", Color("082f49"))
+			_draw_dashed_arc(echo_center, 20, SubmissionVisualTheme.color_for_token("echo_ink"), 2)
+		var badge_offset := Vector2(5, -20) if int(definition.delay) == 4 else Vector2(-25, -20)
+		draw_string(ThemeDB.fallback_font, echo_center + badge_offset, "E%d" % int(definition.delay), HORIZONTAL_ALIGNMENT_LEFT, -1, 13, SubmissionVisualTheme.color_for_token("echo_ink"))
+	draw_circle(_center(state.player_position), 15, SubmissionVisualTheme.color_for_token("primary_ink"))
+	draw_circle(_center(state.player_position), 7, SubmissionVisualTheme.color_for_token("paper_background"))
+	_draw_actor_letter(_center(state.player_position), "Y", SubmissionVisualTheme.color_for_token("primary_ink"))
 	_draw_schema_v2_descriptors(true)
 	_draw_exit_overlay(exit_position)
 	_draw_blocked_door_feedback()
 	_draw_teaching_badge()
+
+
+func _draw_paper_cell(rectangle: Rect2, floor_cell: bool) -> void:
+	var paper: Color = SubmissionVisualTheme.color_for_token("paper_background")
+	var ink: Color = SubmissionVisualTheme.color_for_token("secondary_ink")
+	draw_rect(rectangle, paper if floor_cell else ink.lightened(0.72))
+	draw_rect(rectangle, ink, false, 1.0)
+	if floor_cell:
+		for corner in [Vector2(7, 7), Vector2(rectangle.size.x - 7, 7), Vector2(7, rectangle.size.y - 7), rectangle.size - Vector2(7, 7)]:
+			draw_line(rectangle.position + corner - Vector2(3, 0), rectangle.position + corner + Vector2(3, 0), ink, 1.0)
+	else:
+		for offset in range(-int(rectangle.size.y), int(rectangle.size.x), 8):
+			draw_line(rectangle.position + Vector2(maxi(offset, 0), maxi(-offset, 0)), rectangle.position + Vector2(mini(offset + int(rectangle.size.y), int(rectangle.size.x)), mini(int(rectangle.size.y), int(rectangle.size.y) + offset)), ink, 1.5)
+
+
+func _play_transition_sfx(before: Dictionary, after: Dictionary, action: String, was_completed: bool) -> void:
+	var router := SubmissionSfxRouter.ensure_router(get_tree())
+	if CARDINAL_ACTIONS.has(action):
+		if before.player_position != after.player_position:
+			router.play_event("YOU_move")
+		else:
+			router.play_event("blocked_or_invalid")
+		if _any_echo_moved(before.get("echo_positions", []), after.get("echo_positions", [])):
+			router.play_event("ECHO_move")
+	if not was_completed and bool(after.get("completed", false)):
+		router.play_event("level_complete")
+
+
+func _any_echo_moved(before_echoes: Array, after_echoes: Array) -> bool:
+	var before_by_id := {}
+	for echo in before_echoes:
+		before_by_id[echo.id] = echo.position
+	for echo in after_echoes:
+		if before_by_id.has(echo.id) and before_by_id[echo.id] != echo.position:
+			return true
+	return false
+
+
+func get_echo_delay_badges_snapshot() -> Array[String]:
+	var badges: Array[String] = []
+	for echo in state.get("echo_positions", []):
+		var definition := _echo_definition_by_id(echo.id)
+		badges.append("E%d" % int(definition.get("delay", 0)))
+	return badges
 
 
 func _draw_schema_v2_descriptors(tokens_only: bool) -> void:

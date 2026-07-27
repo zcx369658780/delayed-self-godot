@@ -3,6 +3,7 @@
   "submission_scope": "STABLE_EIGHT_LEVELS",
   "visual_strategy_recommendation": "RECOMMEND_VISUAL_V1",
   "mandatory_fallback": "V1_PROJECT_NATIVE_PROCEDURAL_VECTOR_ONLY",
+  "implementation_status": "IMPLEMENTED_BASELINE_OWNER_REVIEW_PENDING",
   "logical_cell_size_from_audit": 60,
   "target_resolution": {"native": "960x540", "review": "1920x1080"},
   "items": [
@@ -25,6 +26,6 @@
     {"asset_id":"vis_warning_success_disabled","category":"UI","surface_or_entity":"semantic_marks","production_required":"MUST_SHIP","cataloged_level_usage":[],"state_variants":["warning","success","disabled"],"source_strategy":"OWNER_CREATED_VECTOR","shipping_format":"SVG sprite sheet","target_future_path":"assets/visual/ui/semantic_marks.svg","logical_size":"24x24 each","scale_policy":"uniform","monochrome_signature":"triangle-X, check-diamond, strike-hatch","text_or_glyph":"optional label","animation_requirement":"NONE","license_class":"PROJECT_CREATED","license_status":"PROVENANCE_REQUIRED","attribution_required":false,"implementation_dependency":"UI theme task","owner_approval":"PENDING","cut_priority":"NEVER_CUT"},
     {"asset_id":"vis_decorative_corrections","category":"decoration","surface_or_entity":"paper_margins","production_required":"OPTIONAL","cataloged_level_usage":[],"state_variants":["scribble","correction","tape"],"source_strategy":"AI_ASSISTED_OWNER_FINALIZED","shipping_format":"SVG","target_future_path":"assets/visual/decor/notebook_corrections.svg","logical_size":"variable","scale_policy":"outside_grid_only","monochrome_signature":"non-semantic margin marks","text_or_glyph":"NONE","animation_requirement":"NONE","license_class":"AI_ASSISTED_PROVENANCE","license_status":"PROVENANCE_REQUIRED","attribution_required":false,"implementation_dependency":"optional polish gate","owner_approval":"PENDING","cut_priority":"CUT_FIRST"}
   ],
-  "summary": {"item_count":18,"must_ship":17,"optional":1,"should_ship":0,"candidate_only_items":0,"imported_items":0},
+  "summary": {"item_count":18,"must_ship":17,"optional":1,"should_ship":0,"candidate_only_items":0,"project_native_runtime_baseline_items":12,"imported_items":0,"third_party_graphics_imported":0,"font_imported":0,"owner_review_status":"PENDING"},
   "owner_decisions": ["visual_strategy_approval","paper_ink_direction_approval","YOU_ECHO_shape_approval","UI_density_approval","font_recommendation_approval"]
 }
