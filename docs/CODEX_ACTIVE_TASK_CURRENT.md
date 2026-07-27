@@ -1,29 +1,36 @@
 # Codex active task (CURRENT)
 
-- Status: `TASK_0024BAE_READY`
-- Active task: `tasks/0024BAE_owner_visual_entity_audio_feedback_and_music_trial_repair.md`
-- Task publication commit: `0e92ca5ea5f71bb633b9966ff7e1c2663dfb8eb4`
-- Required checkpoint in ancestry: `43082581e974332fb077550ce0a2aabdf78788b8`
-- Previous accepted task: `TASK_0024BAD_FIRST_SUBMISSION_VISUAL_AUDIO_VERTICAL_SLICE_ACCEPTED`
+- Status: `HOLD_FOR_OWNER_VISUAL_AUDIO_REPAIR_REVIEW`
+- Last accepted task: `TASK_0024BAE_OWNER_VISUAL_ENTITY_AUDIO_FEEDBACK_AND_MUSIC_TRIAL_REPAIR_ACCEPTED`
+- Accepted result commit: `0c760273efea5ea991cec125a8ab6b82a70efc02`
+- GPT acceptance commit: `1dd660ced3b68da5f465930b0ced72f55fe73888`
+- Last task file: `tasks/0024BAE_owner_visual_entity_audio_feedback_and_music_trial_repair.md`
 - Owner review: `OWNER_VISUAL_AUDIO_REPAIR_REVIEW = NOT_REVIEWED`
 
 - Submission scope: stable eight-level `RECOMMEND_OPTION_A`
 - Production catalog: exactly eight levels; sequence 8 remains the sole formal finale
 - S04 / Task 0024BB: `DEFER_S04_UNTIL_POST_SUBMISSION`
 
-- Visual repair: connected concrete walls; clear doorframe/leaf; concrete YOU; ghosted ECHO; floor pressure plate; destination doorway EXIT; reduced floor noise
-- Audio repair: replace completion cue; add wall bump, plate activation and door-open cues; preserve legal recorded wall-facing turns
-- Conditional music trial: exact original `优哉游哉(loop).wav`; no trim, normalize, transcode or remix; fail closed if source identity cannot be verified
-- Required attribution when imported: `音乐由[乌鸦Producer]提供`
+- Visual repair machine status: connected concrete wall, doorframe/leaf, concrete YOU, ghosted ECHO, pressure plate and doorway EXIT all `PASS`
+- Audio repair machine status: clear completion cadence, recorded-turn wall bump, plate activation and door-open cues all `PASS`
+- Music trial: original `优哉游哉(loop).wav`, 25,404,968 bytes, SHA-256 `E4552E433479AECD0790A901A84E9738448B7092BEE51109E0D748A8B9F3E850`, source bytes unchanged
+- Required attribution: `音乐由[乌鸦Producer]提供`
 
-- Multi-subagent mode: `MANDATORY`
-- Required GPT roles: `planner_high`, `docs_reader`, `code_mapper`, `impl_worker`, `code_reviewer`
-- Single-agent fallback: `NOT_AUTHORIZED_BY_DEFAULT`
-- DeepSeek: optional one-report-draft delegation only; does not count as a GPT role
-- DeepSeek route status: `IDENTITY_READY_FAIL_CLOSED_ON_MISMATCH`
+- Focused visual/audio: `PASS assertions=151 / PASS assertions=142`
+- Previous 0024BAD focused visual/audio: `PASS 97 / PASS 112`
+- Aggregate: `PASS assertions=621 vectors=9`; stderr exactly `LEVEL_ID_MISMATCH`
+- complete-v2: `PASS`; stderr empty
+- Production-eight regression: `PASS`
+- Runtime review captures: `3 x 960x540 PNG`
+- Profile accessed: `NO`
+- DeepSeek invoked: `NO`
 
-- Font/zh-Hans rollout: `NOT_AUTHORIZED`
-- Third-party graphics: `NOT_AUTHORIZED`
-- Profile/catalog/finale/levels/Simulation/solver/build/release/submission: `NOT_AUTHORIZED`
+Authoritative owner-review captures:
 
-Success opens only `OWNER_VISUAL_AUDIO_REPAIR_REVIEW`. No later task is authorized in this boundary. Full UI rollout, remaining SFX, font/zh-Hans, additional music, external graphics, build/export, additional levels and S04 remain closed.
+```text
+docs/reviews/evidence/0024BAE/01_closed_door_initial.png
+docs/reviews/evidence/0024BAE/02_plate_active_door_open.png
+docs/reviews/evidence/0024BAE/03_two_echo_finale.png
+```
+
+No implementation task is active. The owner must review the repaired runtime visuals, event-specific SFX and music fit before full UI rollout, remaining SFX, font/zh-Hans, more music, external graphics, build/export, additional levels or S04 may be authorized.
