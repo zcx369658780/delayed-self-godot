@@ -1,28 +1,29 @@
 # Codex active task (CURRENT)
 
-- Status: `HOLD_FOR_OWNER_VISUAL_AUDIO_VERTICAL_SLICE_REVIEW`
-- Last accepted task: `TASK_0024BAD_FIRST_SUBMISSION_VISUAL_AUDIO_VERTICAL_SLICE_ACCEPTED`
-- Accepted result commit: `d021301de287711a422ae71035352ae2de60f539`
-- GPT acceptance commit: `efcb6546fa360bfb91905066b5dcb7ae83f1c011`
-- Last task file: `tasks/0024BAD_first_submission_visual_ui_and_sfx_vertical_slice.md`
+- Status: `TASK_0024BAE_READY`
+- Active task: `tasks/0024BAE_owner_visual_entity_audio_feedback_and_music_trial_repair.md`
+- Task publication commit: `0e92ca5ea5f71bb633b9966ff7e1c2663dfb8eb4`
+- Required checkpoint in ancestry: `43082581e974332fb077550ce0a2aabdf78788b8`
+- Previous accepted task: `TASK_0024BAD_FIRST_SUBMISSION_VISUAL_AUDIO_VERTICAL_SLICE_ACCEPTED`
+- Owner review: `OWNER_VISUAL_AUDIO_VERTICAL_SLICE_REVIEW = CHANGES_REQUIRED`
 
 - Submission scope: stable eight-level `RECOMMEND_OPTION_A`
 - Production catalog: exactly eight levels; sequence 8 remains the sole formal finale
 - S04 / Task 0024BB: `DEFER_S04_UNTIL_POST_SUBMISSION`
-- Owner visual/audio defaults: `10_OF_10_ACCEPTED_RECOMMENDED_DEFAULTS`
 
-- Visual slice: `IMPLEMENTED_BASELINE_OWNER_REVIEW_PENDING`
-- Focused visual/audio: `PASS assertions=97 / PASS assertions=112`
-- Aggregate: `PASS assertions=621 vectors=9`; stderr exactly `LEVEL_ID_MISMATCH`
-- complete-v2: `PASS`; stderr empty
-- Real review captures: `2 x 960x540 PNG`
-- Generated project-created SFX: `6`
-- Remaining planned SFX: `8`
-- Music/font/third-party graphics imported: `NO / NO / NO`
-- Profile accessed: `NO`
-- DeepSeek invoked: `NO`
+- Visual repair: connected concrete walls; clear doorframe/leaf; concrete YOU; ghosted ECHO; floor pressure plate; destination doorway EXIT; reduced floor noise
+- Audio repair: replace completion cue; add wall bump, plate activation and door-open cues; preserve legal recorded wall-facing turns
+- Conditional music trial: exact original `优哉游哉(loop).wav`; no trim, normalize, transcode or remix; fail closed if source identity cannot be verified
+- Required attribution when imported: `音乐由[乌鸦Producer]提供`
 
-- DeepSeek formal route: `WRAPPER_BACKED_CLI_EXTERNAL_FILE_WORKER`
+- Multi-subagent mode: `MANDATORY`
+- Required GPT roles: `planner_high`, `docs_reader`, `code_mapper`, `impl_worker`, `code_reviewer`
+- Single-agent fallback: `NOT_AUTHORIZED_BY_DEFAULT`
+- DeepSeek: optional one-report-draft delegation only; does not count as a GPT role
 - DeepSeek route status: `IDENTITY_READY_FAIL_CLOSED_ON_MISMATCH`
 
-No implementation task is active. The owner must review the real runtime visual captures and six SFX before full UI rollout, remaining SFX, font/zh-Hans, music audition/import, external graphic import, build/export or submission work may be authorized. S04 remains deferred.
+- Font/zh-Hans rollout: `NOT_AUTHORIZED`
+- Third-party graphics: `NOT_AUTHORIZED`
+- Profile/catalog/finale/levels/Simulation/solver/build/release/submission: `NOT_AUTHORIZED`
+
+Success opens only `OWNER_VISUAL_AUDIO_REPAIR_REVIEW`. Full UI rollout, remaining SFX, font/zh-Hans, more music, external graphics, build/export, additional levels and S04 remain closed.
