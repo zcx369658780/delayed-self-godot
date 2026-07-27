@@ -1,28 +1,23 @@
 # Codex startup snapshot (CURRENT)
 
-- Status: `CURRENT / TASK 0024BAB V2 BLOCKED / WORKER IDENTITY NOT VERIFIED`
-- Planning result: 18 visual items, 14 SFX, 7 music candidates, 12 UI rows, 10 pending owner decisions; no implementation/import
-- Next recommendation: `HOLD_FOR_OWNER_VISUAL_AUDIO_DECISIONS`
+- Status: `CURRENT / TASK 0024BAB PLANNING ACCEPTED / DEEPSEEK WORKER BASELINE NEXT`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Last task: `tasks/0024BAB_v2_submission_minimum_visual_ui_audio_license_and_deepseek_wrapper_alignment.md`
-- Last status: `TASK_0024BAB_V2_BLOCKED_DEEPSEEK_WORKER_IDENTITY_NOT_VERIFIED`
-- Superseded task: `tasks/0024BAB_submission_minimum_visual_ui_audio_license_planning.md`
-- Task publication commit: `7fbab6a107a0ef446c8a9f35094be4dc457a0f59`
-- Active-pointer commit: `ac655d1fb2ebeb7167dda1868798b3a9be9dcf91`
-- Required accepted checkpoint in ancestry: `677a812d1ecf9c6b87309cab3591cdfc87c2860e`
-- Historical 0024BAB startup required in ancestry: `95f00cc91b2d93dcd16332f7991e7fddd696ef05`
-- Previous GPT acceptance: `TASK_0024BAA_PROJECT_RULE_MULTI_SUBAGENT_AND_SUBMISSION_REBASELINE_ACCEPTED`
+- Accepted result: `TASK_0024BAB_VISUAL_AUDIO_PLANNING_ACCEPTED_DEEPSEEK_ROUTE_REQUALIFICATION_REQUIRED`
+- Result commit: `563cbd94e72efcc7e50e8600dabe1bf4e2026363`
+- GPT adjudication commit: `4cf24997f5faca393a4b7a4568e2eaa1f8968235`
+- Active closeout commit: `a954a3f7f56d368f699631aad9ec73207e874239`
 
 - Submission scope: stable eight-level `RECOMMEND_OPTION_A`
 - Production baseline: exactly eight cataloged levels; sequence 8 remains the sole formal finale
 - S04 / 0024BB: deferred until after submission
-- Phase-1 candidates C02/S01/C03/S03/C07: GPT-accepted machine evidence only; not owner-reviewed or admitted
-- Submission-complete visual/UI/SFX/music/font package: incomplete
-- Submission deadline: `2026-09-06 23:59`
-- Final buffer: `2026-09-04` through `2026-09-05`
+- Visual strategy: `RECOMMEND_VISUAL_V1`
+- Font strategy: `RECOMMEND_DUAL_FONT_TEST_GATE`
+- Audio strategy: `RECOMMEND_AUDIO_A1`
+- Mandatory fallback: `ESSENTIAL_SFX_ONLY_NO_MUSIC`
+- Planning result: 18 visual items, 14 SFX, 7 music candidates, 12 UI rows and 10 pending owner decisions
+- No asset/audio/font implementation or import is authorized
 
 - Multi-subagent mode: `MANDATORY`
-- Required GPT roles: `planner_high`, `docs_reader`, `code_mapper`, `docs_writer`, `code_reviewer`
 - Single-agent fallback: `NOT_AUTHORIZED_BY_DEFAULT`
 - User-level DeepSeek gate: `DEEPSEEK_MCP_CONFIG_REMOVAL_ACCEPTED`
 - DeepSeek MCP: `REMOVED`
@@ -30,8 +25,10 @@
 - DeepSeek role: wrapper-backed CLI external file editing worker for GPT-frozen low-risk bounded work only
 - DeepSeek counts toward GPT role minimum: `NO`
 - Native provider / automatic DeepSeek sub-agent / MCP fallback: `FORBIDDEN`
-- User-level wrapper, worker, configuration and environment variables: protected and immutable
+- Accepted wrapper SHA-256: `f604001d001cd206e742e5252a69995c29f96c983e6520ec6fd0374ae4908750`
+- Accepted worker SHA-256: `NOT_YET_BASELINED`
+- DeepSeek route readiness: `FAIL_CLOSED_PENDING_WORKER_SHA_BASELINE`
 
-Before work, fetch and fast-forward only. Require `HEAD == origin/main`, divergence `0/0`, clean tracked/staged state, only the accepted untracked `.codex/config.toml`, unchanged configuration hash, accepted wrapper/worker identity evidence and Godot process count zero.
+Before work, fetch and fast-forward only. Require `HEAD == origin/main`, divergence `0/0`, clean tracked/staged state, only the accepted untracked `.codex/config.toml`, unchanged configuration hash and Godot process count zero.
 
-Task 0024BAB v2 completed documentation/read-only planning without invoking DeepSeek, restoring MCP, exposing keys, modifying user infrastructure, running Godot/solver, accessing Profile, importing assets/audio/fonts, or changing product/build/release/submission surfaces. The accepted worker identity is missing, so the route fails closed and the task is blocked.
+The next task may read only the minimum user-scope metadata needed to resolve the worker path and compute wrapper/worker SHA-256 identities. It must not invoke, modify, copy, replace or smoke-test either file; inspect any API-key value; restore MCP; use a native provider; or authorize tracked-code delegation. After GPT acceptance, return to owner visual/audio decisions.
