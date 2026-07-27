@@ -1,34 +1,32 @@
 # Codex startup snapshot (CURRENT)
 
-- Status: `CURRENT / TASK 0024BAD ACCEPTED / OWNER VISUAL-AUDIO REVIEW HOLD`
+- Status: `CURRENT / TASK 0024BAE READY / OWNER VISUAL-AUDIO REPAIR + MUSIC TRIAL`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Last task: `tasks/0024BAD_first_submission_visual_ui_and_sfx_vertical_slice.md`
-- Last accepted result: `TASK_0024BAD_FIRST_SUBMISSION_VISUAL_AUDIO_VERTICAL_SLICE_ACCEPTED`
-- Result commit: `d021301de287711a422ae71035352ae2de60f539`
-- GPT acceptance commit: `efcb6546fa360bfb91905066b5dcb7ae83f1c011`
-- Close-pointer commit: `875c3873fc6e4763f07ab79262dea63481964d91`
+- Active task: `tasks/0024BAE_owner_visual_entity_audio_feedback_and_music_trial_repair.md`
+- Active status: `TASK_0024BAE_READY`
+- Task publication commit: `0e92ca5ea5f71bb633b9966ff7e1c2663dfb8eb4`
+- Active-pointer commit: `11c6217382d22c86ab8873d428b80ba2d87ab5bb`
+- Required checkpoint in ancestry: `43082581e974332fb077550ce0a2aabdf78788b8`
+- Previous accepted task: `TASK_0024BAD_FIRST_SUBMISSION_VISUAL_AUDIO_VERTICAL_SLICE_ACCEPTED`
+- Owner review source: `docs/reports/0024BAD_OWNER_VISUAL_AUDIO_VERTICAL_SLICE_REVIEW_ADJUDICATION.md`
 
 - Submission scope: stable eight-level `RECOMMEND_OPTION_A`
 - Production baseline: exactly eight cataloged levels; sequence 8 remains the sole formal finale
 - S04 / 0024BB: deferred until after submission
-- Owner visual/audio defaults: `10_OF_10_ACCEPTED_RECOMMENDED_DEFAULTS`
 
-- Visual strategy: project-native procedural/vector paper-and-ink
-- Visual slice status: `IMPLEMENTED_BASELINE_OWNER_REVIEW_PENDING`
-- UI surfaces in slice: gameplay board, main menu and level select
-- Generated essential SFX: 6; remaining planned SFX: 8
-- Music bus: present and silent; music resources: 0
-- Music/font/third-party graphic import: `NO / NO / NO`
-- Focused visual/audio: `97 / 112`
-- Aggregate/complete-v2: `621/9 PASS / PASS`
-- Review evidence: `docs/reviews/evidence/0024BAD/main_menu.png` and `gameplay.png`
+- Required visual repair: concrete connected walls; doorframe/leaf; concrete YOU; ghosted ECHO; mechanical plate; doorway EXIT; reduced floor noise
+- Required audio repair: clear success cadence; wall bump for recorded blocked turns; plate activation; door opening
+- Music trial: one exact original Crow Producer WAV, `优哉游哉(loop).wav`, Drive ID `1_l8gcHescLwdhJ3X_8Xco48zYX96vRSO`, expected size `25,404,968` bytes
+- Music source policy: original bytes only; no trim/normalize/transcode/remix; attribution `音乐由[乌鸦Producer]提供`
+- Conditional music failure is non-blocking for the mandatory visual/audio repair when it fails closed and leaves no music file/controller
 
 - Multi-subagent mode: `MANDATORY`
+- Required GPT roles: `planner_high`, `docs_reader`, `code_mapper`, `impl_worker`, `code_reviewer`
 - Single-agent fallback: `NOT_AUTHORIZED_BY_DEFAULT`
-- DeepSeek route: wrapper-backed CLI external file worker
+- DeepSeek route: optional, wrapper-backed CLI, one report draft only
 - DeepSeek route status: `IDENTITY_READY_FAIL_CLOSED_ON_MISMATCH`
-- DeepSeek use in 0024BAD: `NOT_USED`
+- DeepSeek counts toward GPT role minimum: `NO`
 
-Before future work, fetch and fast-forward only. Require synchronized `main`, clean tracked/staged state, only the accepted untracked `.codex/config.toml`, unchanged configuration hash and Godot process count zero.
+Before work, fetch and fast-forward only. Require `HEAD == origin/main`, divergence `0/0`, clean tracked/staged state, only the accepted untracked `.codex/config.toml`, unchanged configuration hash, accepted Godot identity and Godot process count zero.
 
-No implementation task is active. The owner must review the real captures and runtime SFX and return a disposition before the next task is published. Profile, catalog, finale, music/font/third-party asset import, build/export, release/submission and S04 remain closed.
+Read Task 0024BAE completely. Do not modify levels, catalog, Simulation, solver, Profile, finale, project settings, fonts, third-party graphics, build/release/submission or S04. Success opens only owner re-review.
