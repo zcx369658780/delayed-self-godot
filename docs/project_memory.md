@@ -1,5 +1,9 @@
 # Project memory
 
+## Task 0024BAA governance/submission rebaseline
+
+Task 0024BAA used five distinct GPT roles and completed a documentation-only 24-domain submission audit. Durable default: `multi_subagent_mode = MANDATORY`, single-agent execution not authorized by default, DeepSeek tracked code disabled, and main-agent scope/Git/verdict authority exclusive. Submission recommendation is stable eight (`RECOMMEND_OPTION_A`); S04 is deferred post-submission. Production remains catalog 8 / finale sequence 8. C02/S01/C03/S03/C07 are GPT-accepted machine evidence only and remain owner `NOT_REVIEWED`, uncatalogued/unsequenced, admission `NOT_AUTHORIZED`. Final buffer is 2026-09-04 through 2026-09-05; next gate is `HOLD_FOR_OWNER_DECISION`.
+
 ## Task 0024BA C07 crate-to-ECHO handoff
 
 Task 0024BA authored fresh uncatalogued C07. Shared BFS is `SOLVED`, `L*=14`, exact `N*=1`; all-shortest is `1/1`, omissions zero, pushes `1–1`, with strict crate sensor → ECHO access → ECHO-only sensor → YOU barrier → EXIT ordering. Manifest `43be397c-ca57-487b-938f-8a04f18effd7` passed once and is permanently consumed. Status is `PASS_FOR_GPT_REVIEW`; S04/0024BB remains closed.

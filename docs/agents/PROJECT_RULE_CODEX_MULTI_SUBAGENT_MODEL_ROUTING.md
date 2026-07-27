@@ -1,13 +1,23 @@
 # Codex multi-subagent and model routing
 
+## Mandatory default after Task 0024BAA
+
+`multi_subagent_mode = MANDATORY`; `single_agent_execution = NOT_AUTHORIZED_BY_DEFAULT`; `DeepSeek_tracked_code = DISABLED`; `main_agent_final_scope_and_Git = EXCLUSIVE`.
+
+Documentation/planning requires `planner_high`, `docs_reader`, and `docs_writer_or_code_reviewer`. Code/level implementation requires `planner_high`, `code_mapper`, `impl_worker`, and independent `code_reviewer`. Validation/protected-boundary work requires at least four distinct planning, mapping, evidence, and independent-review roles plus the main agent. The main agent does not count as a subagent.
+
+Only a future GPT-published task containing `single_agent_exception = EXPLICITLY_AUTHORIZED` and a specific `exception_reason` may waive the default. Subagents never stage, commit, push, consume retained manifests, access Profile/player data/accounts/secrets, publish/upload, or make protected-surface decisions. Read-only disjoint work may be concurrent; writers are serialized by path ownership and only one process may launch Godot.
+
 The main thread owns scope interpretation, protected-surface decisions, final file review, explicit staging, commit, push, and task verdict.
 
-When a task explicitly permits and the work is bounded, configured GPT roles may be used:
+Configured GPT roles are mandatory for nontrivial work:
 
 - `docs_reader`: read-only source extraction;
 - `docs_writer`: Markdown drafting only;
 - `code_reviewer`: staged documentation/config contradiction and omission review;
 - `planner_high`: document/system decomposition only when genuinely needed.
+- `code_mapper`: read-only implementation and dependency mapping;
+- `impl_worker`: bounded implementation under exclusive path ownership.
 
 Subagents receive exact inputs, allowed paths, forbidden surfaces, output format, and stop conditions. They must not commit, push, alter repository settings, use accounts/secrets, publish, or expand gameplay scope. Their results are advisory and must be verified by the main thread. Unavailable roles are recorded honestly; never fabricate a review result.
 

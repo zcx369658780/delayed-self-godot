@@ -1,11 +1,10 @@
 # Project source index (CURRENT)
 
-- Project-source synchronization date: 2026-07-22
-- Current product-roadmap acceptance: `TASK_0023ZW_GAMEPLAY_PRESENTATION_ROADMAP_REBASELINE_ACCEPTED_WITH_BINDING_SEQUENCE_POLICY`
-- Current GPT Project Sources successor: `docs/project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_AFTER_0024T_BLOCKER_2026_07_22.md`
-- Current successor UTF-8 SHA-256: `345e756b82b3425459f2f967e04e43c5a42d04b139285fb3ff351bbec119026a`
-- Current active-task overlay: `docs/project_source/DELAYED_SELF_PROJECT_SOURCE_ACTIVE_TASK_OVERLAY_0024U_2026_07_22.md`
-- Active-task overlay UTF-8 SHA-256: `916bbf48342e5c5ac14a3d9b3aa5f93617f8c4855f9ad88d832894411b7013c2`
+- Project-source synchronization date: 2026-07-27
+- Current governance/submission rebaseline: `TASK_0024BAA_PASS_FOR_GPT_REVIEW`
+- Current GPT Project Sources successor: `docs/project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_AFTER_0024BA_2026_07_27.md`
+- Current successor UTF-8 SHA-256: `2862f460a855c6e6601c2bb4f6cfd3599b64ad638c60f522604be3bdb3685ff9`
+- Current active-task overlay: included in the current successor; no separate overlay
 - Roadmap synchronization baseline package: `docs/project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_2026_07_22.md`
 - Baseline package UTF-8 SHA-256: `f2bae76d576cb9b8ccca3189861a4b328d5e5925af4754de7986f646e8d7ad7b`
 
@@ -17,8 +16,8 @@
 | [`Canonical GDD seed`](game_design/DELAYED_SELF_GAME_DESIGN_DOCUMENT_CURRENT.md) | Original product/design baseline and retained core design history | Preserve; sections superseded by an accepted successor must not be treated as current |
 | [`Accepted design rebaseline`](game_design/DELAYED_SELF_GAME_DESIGN_REBASELINE_CURRENT.md) | Current authority for target level count, sequence policy, mechanic breadth, presentation, language, audio and post-2026-07-21 roadmap | Current design successor; outranks conflicting seed-GDD passages |
 | [`Expanded submission roadmap`](production/EXPANDED_CONTENT_SUBMISSION_ROADMAP_CURRENT.md) | Accepted dated gate sequence, scope cuts and current execution position | Current roadmap; implementation remains separately gated |
-| [`Current GPT Project Sources successor`](project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_AFTER_0024T_BLOCKER_2026_07_22.md) | Upload-ready current package including accepted roadmap and Task 0024T blocker state | Current source package; combine with the active-task overlay below |
-| [`Current active-task overlay`](project_source/DELAYED_SELF_PROJECT_SOURCE_ACTIVE_TASK_OVERLAY_0024U_2026_07_22.md) | Updates only the current active task after the post-0024T package was generated | Read after the current successor; latest task/status overlay |
+| [`Current GPT Project Sources successor`](project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_AFTER_0024BA_2026_07_27.md) | Upload-ready current package with Task 0024BAA governance and submission rebaseline | Sole current source package; no separate active overlay |
+| Historical Task 0024T/0024U packages | Preserve the July 22 blocker/overlay record | Historical/superseded; never use as a live task or shipping pointer |
 | [`Roadmap synchronization baseline package`](project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_2026_07_22.md) | Full accepted roadmap and source-authority consolidation before the Task 0024T blocker | Retain as historical synchronization baseline |
 | [`Rule source seed`](project_rules/PROJECT_RULE_SOURCE_SEED_CURRENT.md) | Auditable bootstrap source | Preserve as source history; do not treat as a live-progress pointer |
 | [`Split project rules`](project_rules/) | Operational detail organized by concern | Must not weaken the seed or `AGENTS.md` |
@@ -28,28 +27,26 @@
 
 ## Current accepted product direction
 
-- Implemented baseline: exactly eight formal levels.
-- Accepted submission target: 12 core levels, with levels 13–14 conditional on date and stability margin.
-- Existing IDs and sequences 1–8 remain stable.
-- Future core rooms append as sequences 9–12.
-- Existing sequence 8 remains the current sole final and may become the chapter-2 capstone only after later integration.
-- Sequence 12 may become the sole final only through a separate catalog/Profile/finale gate.
+- Implemented production baseline: exactly eight formal levels.
+- Recommended submission scope: stable eight (`RECOMMEND_OPTION_A`).
+- Existing IDs and sequences 1–8 remain stable; sequence 8 remains the sole finale.
+- C02/S01/C03/S03/C07 have accepted machine evidence only and remain owner-unreviewed, uncatalogued, unsequenced, and not authorized for admission.
+- S04 is frozen/not authored and deferred until post-submission.
+- The earlier 12-core/13–14 stretch plan is historical/superseded and is not guaranteed shipping scope.
 - Submission language target: Simplified Chinese; existing Profile language is never silently overwritten.
 - Presentation target: hand-drawn delayed-notebook / ink-ECHO.
 - Core mechanic families: YOU-only crates, YOU-only keys/locks, grouped barriers/bridges, typed sensors and one-shot latches.
-- Levels 13–14 and portals/one-way gates/fragile floors/conveyors remain stretch only.
 
 ## Current technical position
 
-- Task 0024S wrapper qualification is GPT accepted.
-- Task 0024T is closed after its exactly-once sealed driver failed before attempt creation and before any Godot case.
-- Static preparation passed for four ordered cases, 44 coverage IDs and 26 frozen hashes.
-- Zero of four validation cases ran; no foundation conclusion or product defect was established.
-- Task 0024U is now the only active task.
-- Task 0024U uses new artifact identities and a new seal, statically qualifies assigned-scalar PowerShell comparisons, then authorizes one fresh final driver exactly once.
+- Task 0024BA C07 machine validation is GPT accepted.
+- C02, S01, C03, S03 and C07 form the accepted machine-evidence candidate set; no owner or admission conclusion follows.
+- Task 0024BAA is the current completed planning/governance gate and is `PASS_FOR_GPT_REVIEW`.
+- The 24-domain audit shows release work remains open across final assets/audio/licenses/localization/flow/export/build/media/upload.
+- Next gate is `HOLD_FOR_OWNER_DECISION`; no implementation is automatically authorized.
 
 ## Resolution rules
 
-Repository facts and the live task outrank conversational memory. `AGENTS.md` freezes cross-task safety. The currently published task controls the present allowed surface. The accepted design rebaseline controls changed product-direction sections; the original GDD seed continues to govern retained sections not superseded. The expanded submission roadmap controls the dated execution spine. Read the current GPT Project Sources successor, then its active-task overlay. These packages summarize repository authority but do not outrank repository facts. When sources conflict materially, stop and request GPT Project Sources advisor resolution rather than silently choosing.
+Repository facts and the live task outrank conversational memory. `AGENTS.md` freezes cross-task safety. The currently published task controls the present allowed surface. The accepted design rebaseline controls changed product-direction sections; the original GDD seed continues to govern retained sections not superseded. The expanded submission roadmap controls the dated execution spine. Read the sole current GPT Project Sources successor. It summarizes repository authority but does not outrank repository facts. When sources conflict materially, stop and request GPT Project Sources advisor resolution rather than silently choosing.
 
-Task 0000 did not rewrite either seed. It materialized concise execution rules, current pointers, indexes, and compliance placeholders from them. The 2026-07-22 project-source synchronization adds accepted successors rather than rewriting historical seeds. The 2026-07-14 files and first consolidated package remain historical sources; current technical status is the post-0024T successor plus the Task 0024U overlay.
+Task 0000 did not rewrite either seed. It materialized concise execution rules, current pointers, indexes, and compliance placeholders from them. The 2026-07-14 and 2026-07-22 packages remain historical sources; the 2026-07-27 post-0024BA package is the sole current Project Source.

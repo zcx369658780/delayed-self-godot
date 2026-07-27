@@ -1,5 +1,6 @@
 # Expanded content submission roadmap (CURRENT)
 
+- Task 0024BAA successor (2026-07-27): `RECOMMEND_OPTION_A` stable-eight submission; S04 `DEFER_S04_UNTIL_POST_SUBMISSION`. Work now pivots to visual/audio/license/localization/flow/build/media/upload closure. C02/S01/C03/S03/C07 remain uncatalogued, unsequenced, owner `NOT_REVIEWED`, admission `NOT_AUTHORIZED`.
 - Status: `OWNER-REBASELINED PLANNING / IMPLEMENTATION SEPARATELY GATED`
 - Current synchronization: Task 0024BA C07 machine validation, 2026-07-27
 - Owner input source: Task 0024AT core capture, accepted as input; 0024AT itself is `BLOCKED_DOCUMENTATION_SYNC_AND_STRUCTURE_INCOMPLETE`

@@ -1,5 +1,6 @@
 # Phase 1 six-candidate validation plan (CURRENT)
 
+- 2026-07-27 status: GPT accepted machine evidence for C02/S01/C03/S03/C07. Their consumed manifests are immutable and must not be rerun or reconstructed. Owner review and admission remain open. S04 is frozen/not authored and deferred post-submission; 0024BC/0024BD planning is superseded by the submission critical path.
 No manifest, execution, or evidence identity is created here. Each future task has an independent qualification and retained-evidence lifecycle; no shared one-shot manifest. Timeout is `UNVERIFIED`, never a pass. A blocked candidate may be cut without automatically blocking the other family; 0024BC requires every candidate task to be independently adjudicated.
 
 | Future task | Slot | Expected authored paths | Summary/report | Qualification and final categories | Retained evidence / terminal verdicts |

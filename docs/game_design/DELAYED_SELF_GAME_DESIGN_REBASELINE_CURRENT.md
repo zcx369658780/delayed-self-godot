@@ -1,5 +1,6 @@
 # 《迟到的我 / Delayed Self》游戏设计重基线（CURRENT）
 
+- 2026-07-27 submission successor: stable-eight is the recommended submission scope. Production remains exactly eight cataloged levels and sequence 8 is the sole finale. C02/S01/C03/S03/C07 are GPT-accepted machine evidence only; all are uncatalogued, unsequenced, owner `NOT_REVIEWED`, admission `NOT_AUTHORIZED`. S04 is frozen/not authored and deferred until post-submission. The older 12-core target below is historical/superseded, not a shipping guarantee.
 - 文档状态：`CURRENT / GPT-ACCEPTED DESIGN SUCCESSOR`
 - 同步日期：2026-07-22
 - 接受裁决：`TASK_0023ZW_GAMEPLAY_PRESENTATION_ROADMAP_REBASELINE_ACCEPTED_WITH_BINDING_SEQUENCE_POLICY`
@@ -28,9 +29,9 @@
 - 现有 Profile 的 completed IDs、best turns、unlock progression 和 settings 不得被重新解释或静默覆盖。
 - 当前实现基线保持可运行，直到扩展内容通过后续独立门禁。
 
-## 3. 已接受的投稿目标
+## 3. 历史投稿目标（已由 2026-07-27 重基线取代）
 
-- **12 个核心正式房间**，作为投稿稳定目标。
+- **12 个核心正式房间**曾作为投稿稳定目标；该目标现为历史方案，不是当前承诺。
 - **第 13–14 关仅为条件扩展**，只有在核心流程、日期余量和稳定性均满足时才进入。
 - 新核心房间按 sequence 9–12 追加。
 - sequence 8 在扩展后可成为第二章收束关，但在 catalog/finale gate 接受前仍保持当前唯一终章身份。

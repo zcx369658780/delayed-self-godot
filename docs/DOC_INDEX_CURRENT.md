@@ -1,18 +1,29 @@
 # Documentation index (CURRENT)
 
+## Task 0024BAA current submission/governance sources
+
+1. [`Project Source after 0024BA`](project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_AFTER_0024BA_2026_07_27.md) — sole current upload-ready source
+2. [`Multi-subagent rule`](project_rules/PROJECT_RULE_MULTI_SUBAGENT_AND_SUBMISSION_EXECUTION_CURRENT.md) — mandatory default and main-agent exclusivity
+3. [`Readiness scorecard`](production/SUBMISSION_READINESS_SCORECARD_CURRENT.md) — exactly 24 domains
+4. [`Final scope matrix`](production/FINAL_SCOPE_DECISION_MATRIX_CURRENT.md) — `RECOMMEND_OPTION_A`; S04 deferred post-submission
+5. [`Submission critical path`](production/GODOTHUB_FESTIVAL_2026_SUBMISSION_CRITICAL_PATH_CURRENT.md) — deadline and September 4–5 buffer
+6. [`Task 0024BAA report`](reports/0024BAA_PROJECT_RULE_MULTI_SUBAGENT_AND_SUBMISSION_REBASELINE_REPORT.md) and [`handoff`](handoffs/DELAYED_SELF_SESSION_HANDOFF_AFTER_TASK_0024BAA_PLANNING_SYNC_2026_07_27.md)
+
+Older Task 0024T/0024U packages and guaranteed 12-core statements are historical/superseded. The current production catalog is eight and sequence 8 is the sole finale.
+
 ## Start here
 
-0. [`Task 0024BA`](../tasks/0024BA_phase_1_c07_crate_echo_handoff_authoring_and_machine_validation.md) — C07 machine validation complete, GPT review pending
+0. [`Task 0024BA`](../tasks/0024BA_phase_1_c07_crate_echo_handoff_authoring_and_machine_validation.md) — C07 machine evidence GPT accepted; owner/admission pending
 1. [`C07 validation`](level_design/validation/phase_1_c07_crate_echo_handoff_validation.json) — `L*=14`, exact `N*=1`, all-shortest `1/1`
 2. [`Task 0024BA report`](reports/0024BA_C07_CRATE_ECHO_HANDOFF_MACHINE_VALIDATION_REPORT.md) — ordered two-stage handoff and retained lifecycle
 3. [`Task 0024BA handoff`](handoffs/DELAYED_SELF_SESSION_HANDOFF_AFTER_TASK_0024BA_C07_MACHINE_VALIDATION_2026_07_27.md) — no-rerun boundary and next gate
 
-0. [`Task 0024AZ`](../tasks/0024AZ_phase_1_s03_echo_only_sensor_authoring_and_machine_validation.md) — S03 machine validation complete, GPT review pending
+0. [`Task 0024AZ`](../tasks/0024AZ_phase_1_s03_echo_only_sensor_authoring_and_machine_validation.md) — S03 machine evidence GPT accepted; owner/admission pending
 1. [`S03 validation`](level_design/validation/phase_1_s03_echo_only_sensor_validation.json) — `L*=13`, exact `N*=11`, all-shortest `11/11`
 2. [`Task 0024AZ report`](reports/0024AZ_S03_ECHO_ONLY_SENSOR_MACHINE_VALIDATION_REPORT.md) — ECHO-only role proof, controls and consumed lifecycle
 3. [`Task 0024AZ handoff`](handoffs/DELAYED_SELF_SESSION_HANDOFF_AFTER_TASK_0024AZ_S03_MACHINE_VALIDATION_2026_07_26.md) — no-rerun boundary and next gate
 
-0. [`Task 0024AYR`](../tasks/0024AYR_c03_next_turn_door_contract_reconciliation_and_retry.md) — contract-reconciled C03 retry complete, GPT review pending
+0. [`Task 0024AYR`](../tasks/0024AYR_c03_next_turn_door_contract_reconciliation_and_retry.md) — C03 machine evidence GPT accepted; owner/admission pending
 1. [`C03 retry validation`](level_design/validation/phase_1_c03_crate_delayed_door_retry_validation.json) — `L*=14`, exact `N*=2`, revised all-shortest `2/2`
 2. [`Task 0024AYR report`](reports/0024AYR_C03_NEXT_TURN_DOOR_RETRY_REPORT.md) — blocked-Door diagnostic, controls and consumed lifecycle
 3. [`Task 0024AYR handoff`](handoffs/DELAYED_SELF_SESSION_HANDOFF_AFTER_TASK_0024AYR_C03_RETRY_2026_07_26.md) — no-rerun boundary and next gate
@@ -22,12 +33,12 @@
 2. [`Task 0024AY blocker report`](reports/0024AY_C03_CRATE_DELAYED_DOOR_MACHINE_VALIDATION_REPORT.md) — no manifest/retained cycle and protected boundaries
 3. [`Task 0024AY handoff`](handoffs/DELAYED_SELF_SESSION_HANDOFF_AFTER_TASK_0024AY_C03_MACHINE_VALIDATION_2026_07_26.md) — no-retroactive-manifest boundary and next gate
 
-0. [`Task 0024AX`](../tasks/0024AX_phase_1_s01_explicit_role_separation_authoring_and_machine_validation.md) — S01 machine validation complete, GPT review pending
+0. [`Task 0024AX`](../tasks/0024AX_phase_1_s01_explicit_role_separation_authoring_and_machine_validation.md) — S01 machine evidence GPT accepted; owner/admission pending
 1. [`S01 validation`](level_design/validation/phase_1_s01_explicit_role_separation_validation.json) — exact solver, role controls and consumed retained lifecycle
 2. [`Task 0024AX report`](reports/0024AX_S01_EXPLICIT_ROLE_SEPARATION_MACHINE_VALIDATION_REPORT.md) — evidence and protected boundaries
 3. [`Task 0024AX handoff`](handoffs/DELAYED_SELF_SESSION_HANDOFF_AFTER_TASK_0024AX_S01_MACHINE_VALIDATION_2026_07_26.md) — no-rerun boundary and next gate
 
-0. [`Task 0024AW`](../tasks/0024AW_phase_1_c02_crate_pressure_imprint_authoring_and_machine_validation.md) — C02 machine validation complete, GPT review pending
+0. [`Task 0024AW`](../tasks/0024AW_phase_1_c02_crate_pressure_imprint_authoring_and_machine_validation.md) — C02 machine evidence GPT accepted; owner/admission pending
 1. [`C02 validation`](level_design/validation/phase_1_c02_crate_pressure_imprint_validation.json) — exact solver, controls and consumed retained lifecycle
 2. [`Task 0024AW report`](reports/0024AW_C02_CRATE_PRESSURE_IMPRINT_MACHINE_VALIDATION_REPORT.md) — evidence and protected boundaries
 3. [`Task 0024AW handoff`](handoffs/DELAYED_SELF_SESSION_HANDOFF_AFTER_TASK_0024AW_C02_MACHINE_VALIDATION_2026_07_26.md) — no-rerun boundary and next gate

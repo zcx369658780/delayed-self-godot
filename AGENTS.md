@@ -14,6 +14,8 @@ Before writing, confirm absolute root, branch, `HEAD`, remote, and `git status -
 
 ## Hard rules
 
+- For every nontrivial task, `multi_subagent_mode = MANDATORY` and `single_agent_execution = NOT_AUTHORIZED_BY_DEFAULT`. Only a future GPT-published task may authorize a bounded exception with an explicit reason. The main agent is the exclusive integrator and Git/verdict authority.
+- DeepSeek routing for tracked project code is disabled. Subagents may not commit/push, consume manifests, access Profile/player data or secrets, publish/upload, or launch Godot concurrently.
 - Never use `git add .`, `git add -A`, `git reset --hard`, repo-wide restore/checkout, rebase, amend, squash, force-push, or deletion of user work. Stage authorized paths explicitly; keep commits single-topic.
 - Never expose or commit secrets, credentials, private keys, account data, machine-local paths beyond approved project facts, caches, builds, or raw evidence.
 - Do not upgrade or install Godot, export templates, renderers, plugins, or dependencies without a separate task.
@@ -22,4 +24,4 @@ Before writing, confirm absolute root, branch, `HEAD`, remote, and `git status -
 - Every external asset requires the license ledger before release use. Unknown or unfulfilled licenses are forbidden.
 - Saves/player data, releases, uploads, public submission, repository settings/permissions, accounts, tags, builds, and final license decisions are protected surfaces requiring separate explicit authorization.
 
-Detailed rules: `docs/project_rules/`; agent routing: `docs/agents/PROJECT_RULE_CODEX_MULTI_SUBAGENT_MODEL_ROUTING.md`; workflow: `docs/workflows/PROJECT_BOOTSTRAP_AND_TASK_WORKFLOW.md`.
+Detailed rules: `docs/project_rules/PROJECT_RULE_MULTI_SUBAGENT_AND_SUBMISSION_EXECUTION_CURRENT.md`; agent routing: `docs/agents/PROJECT_RULE_CODEX_MULTI_SUBAGENT_MODEL_ROUTING.md`; workflow: `docs/workflows/PROJECT_BOOTSTRAP_AND_TASK_WORKFLOW.md`.

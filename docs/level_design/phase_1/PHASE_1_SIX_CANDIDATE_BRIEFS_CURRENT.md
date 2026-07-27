@@ -1,5 +1,6 @@
 # Phase 1 six-candidate briefs (CURRENT)
 
+- 2026-07-27: C02/S01/C03/S03/C07 are GPT-accepted machine evidence only. All remain uncatalogued, unsequenced, owner `NOT_REVIEWED`, admission `NOT_AUTHORIZED`. S04 remains frozen/not authored and is `DEFER_S04_UNTIL_POST_SUBMISSION`; reserved Task 0024BB is closed.
 `phase_1_status = C02_S01_C03_ACCEPTED_S03_MACHINE_VALIDATED_GPT_REVIEW_PENDING`. C02, S01 and C03 are GPT-accepted machine evidence. S03 Task 0024AZ is machine validated at `L*=13`, exact `N*=11`, all-shortest `11/11`; GPT review is pending. All candidates remain unsequenced and uncatalogued.
 
 | Order | Slot | Support | Budget class | Future task |

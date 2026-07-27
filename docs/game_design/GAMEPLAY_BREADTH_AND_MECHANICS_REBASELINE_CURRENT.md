@@ -1,5 +1,6 @@
 # Gameplay breadth and mechanics rebaseline (CURRENT)
 
+- Task 0024BAA submission decision (2026-07-27): `RECOMMEND_OPTION_A`; S04 `DEFER_S04_UNTIL_POST_SUBMISSION`. C02/S01/C03/S03/C07 have GPT-accepted machine evidence but remain uncatalogued, unsequenced, owner `NOT_REVIEWED`, and admission `NOT_AUTHORIZED`.
 - Status: `OWNER-REBASELINED PLANNING / AWAITS GPT ACCEPTANCE FOR A SUCCESSOR`
 - Current synchronization: Task 0024AU, 2026-07-26
 - Owner feedback: `COMPLETED_WITH_DIRECTIONAL_FEEDBACK`; no numerical ratings or formal per-room dispositions supplied

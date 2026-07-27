@@ -1,5 +1,7 @@
 # Owner-feedback level portfolio matrix
 
+- 2026-07-27 submission overlay: C02/S01/C03/S03/C07 = GPT-accepted machine evidence, but owner `NOT_REVIEWED`, uncatalogued, unsequenced, admission `NOT_AUTHORIZED`. S04 = frozen/not authored, `DEFER_S04_UNTIL_POST_SUBMISSION`. Stable-eight remains the recommended shipping scope.
+
 |slot|family|existing_or_new|source_sequence|teaching_purpose|primary_mechanic|secondary_mechanic|candidate_status|machine_validation_status|presentation_status|owner_review_status|catalog_status|cut_priority|notes|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 |SEQ01|foundation|existing|1|movement|YOU exit|restart|existing|accepted history|existing|completed directional|formal|retain|unchanged|

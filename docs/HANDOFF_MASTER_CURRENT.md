@@ -1,5 +1,9 @@
 # Handoff master (CURRENT)
 
+## Task 0024BAA governance and submission rebaseline
+
+Task 0024BAA is `PASS_FOR_GPT_REVIEW`. Mandatory multi-subagent execution is now the default; the main agent retains exclusive integration/Git/verdict authority and DeepSeek tracked-code routing remains disabled. The 24-domain audit supports `RECOMMEND_OPTION_A`; S04 is `DEFER_S04_UNTIL_POST_SUBMISSION`. Production remains eight cataloged levels with sequence 8 finale. Five candidates have GPT-accepted machine evidence but no owner review/admission. Deadline is 2026-09-06 23:59 with September 4–5 reserved as final buffer. Next gate: `HOLD_FOR_OWNER_DECISION`.
+
 ## Task 0024BA C07 machine validation
 
 Task 0024BA is `PASS_FOR_GPT_REVIEW`: C07 reached `L*=14`, exact `N*=1`, all-shortest `1/1`, omissions zero and strict crate→ECHO→YOU ordering. Manifest `43be397c-ca57-487b-938f-8a04f18effd7` is consumed and immutable; all three retained cases passed. C07 remains uncatalogued and owner-unreviewed. Do not open S04/0024BB before explicit GPT adjudication.
