@@ -12,6 +12,8 @@ Read `AGENTS.md`, startup snapshot, active-task pointer, full task file, documen
 
 For every nontrivial task, `multi_subagent_mode = MANDATORY`, `single_agent_execution = NOT_AUTHORIZED_BY_DEFAULT`, and `DeepSeek_tracked_code = DISABLED`. Apply the minimum role set in the current routing rule, record a routing ledger, parallelize only disjoint read-only work, serialize writers by path ownership, and keep review independent. Only the main agent may integrate, run Godot/solver or consume a manifest when explicitly authorized, stage, commit, push, and issue the verdict. A single-agent exception is valid only when the active GPT-published task explicitly authorizes it and states a bounded reason.
 
+DeepSeek MCP/native/automatic routing is forbidden. An active task may optionally authorize only the wrapper-backed external file worker for GPT-frozen low-risk work. The main agent authors a secret-free external task JSON, freezes allowed paths and verification, verifies accepted wrapper/worker identities, reviews the complete diff and retains all test/Git/verdict authority. Missing identity or route failure stops delegation without fallback.
+
 ## 4. Execute narrowly
 
 Change only authorized paths. Preserve user work and source documents. Keep dynamic status in current docs, durable decisions in project memory, detailed evidence in reports, and hard rules in `AGENTS.md` plus split rule documents.

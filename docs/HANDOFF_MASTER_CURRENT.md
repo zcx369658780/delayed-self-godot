@@ -1,5 +1,9 @@
 # Handoff master (CURRENT)
 
+## Task 0024BAB visual/audio planning
+
+Planning documents/manifests are complete for stable eight, with visual V1, dual-font qualification, audio A1 and essential-SFX-only/no-music fallback. All 10 owner decisions are pending and no files were imported. DeepSeek MCP is removed and native/automatic routes forbidden; wrapper was not used because repository evidence has no accepted worker SHA baseline. Result: `BLOCKED_DEEPSEEK_WORKER_IDENTITY_NOT_VERIFIED`; next recommendation `HOLD_FOR_OWNER_VISUAL_AUDIO_DECISIONS`.
+
 ## Task 0024BAA governance and submission rebaseline
 
 Task 0024BAA is `PASS_FOR_GPT_REVIEW`. Mandatory multi-subagent execution is now the default; the main agent retains exclusive integration/Git/verdict authority and DeepSeek tracked-code routing remains disabled. The 24-domain audit supports `RECOMMEND_OPTION_A`; S04 is `DEFER_S04_UNTIL_POST_SUBMISSION`. Production remains eight cataloged levels with sequence 8 finale. Five candidates have GPT-accepted machine evidence but no owner review/admission. Deadline is 2026-09-06 23:59 with September 4–5 reserved as final buffer. Next gate: `HOLD_FOR_OWNER_DECISION`.

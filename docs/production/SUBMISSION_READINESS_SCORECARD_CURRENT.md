@@ -1,5 +1,6 @@
 # Submission readiness scorecard (CURRENT)
 
+- Task 0024BAB v2 overlay: visual/UI/audio/font/license planning manifests are complete but remain `PLANNED_NOT_IMPLEMENTED`; 12 UI surfaces and 10 pending owner decisions are frozen. No item is imported or verified for import. DeepSeek wrapper/worker pair is `NOT_VERIFIED` because accepted worker identity evidence is absent.
 - Audit date: 2026-07-27
 - Method: read-only repository and accepted-document evidence; no Godot, solver, Profile, build, or upload
 - Rows: exactly 24

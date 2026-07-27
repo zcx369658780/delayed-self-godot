@@ -1,5 +1,6 @@
 # Crow Producer music source, license and audition plan (CURRENT)
 
+- Task 0024BAB v2 successor: `RECOMMEND_AUDIO_A1` with 14 project-created essential SFX planned independently and `ESSENTIAL_SFX_ONLY_NO_MUSIC` fallback. The bounded 2/3/2 shortlist has local presence `NO` and every candidate is `BLOCKED_LICENSE_EVIDENCE`; no remote access or import occurred.
 - 2026-07-27 submission state: planning exists, but no repository audio package or final music-license evidence exists; `audio/` is `NOT_PRESENT`. Stable-eight scope is recommended and unresolved music is cut rather than used without license proof. Task 0024BAA authorizes no audio import.
 - Status: `OWNER-AUDITION PLANNING ONLY / NO DOWNLOAD OR IMPORT`
 - Date: 2026-07-21; task: 0023ZW

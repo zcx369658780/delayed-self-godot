@@ -1,5 +1,15 @@
 # Documentation index (CURRENT)
 
+## Task 0024BAB visual/audio planning
+
+1. [`Visual/UI plan`](presentation/SUBMISSION_MINIMUM_VISUAL_UI_PRODUCTION_PLAN_CURRENT.md), [`style tokens`](presentation/SUBMISSION_VISUAL_STYLE_TOKEN_SPEC_CURRENT.md), [`visual manifest`](presentation/SUBMISSION_MINIMUM_VISUAL_ASSET_MANIFEST_CURRENT.json)
+2. [`UI matrix`](presentation/SUBMISSION_MINIMUM_UI_SURFACE_MATRIX_CURRENT.md) — exactly 12 rows
+3. [`Audio plan`](audio/SUBMISSION_MINIMUM_AUDIO_LICENSE_PRODUCTION_PLAN_CURRENT.md), [`audio manifest`](audio/SUBMISSION_MINIMUM_AUDIO_MANIFEST_CURRENT.json)
+4. [`License intake`](licenses/SUBMISSION_ASSET_AUDIO_LICENSE_INTAKE_CHECKLIST_CURRENT.md), [`owner decisions`](production/OWNER_VISUAL_AUDIO_DECISION_SHEET_CURRENT.md), [`parallel plan`](production/VISUAL_AUDIO_PARALLEL_EXECUTION_PLAN_CURRENT.md)
+5. [`Task report`](reports/0024BAB_SUBMISSION_MINIMUM_VISUAL_AUDIO_PLANNING_REPORT.md), [`handoff`](handoffs/DELAYED_SELF_SESSION_HANDOFF_AFTER_TASK_0024BAB_VISUAL_AUDIO_PLAN_2026_07_27.md), [`Project Source`](project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_AFTER_0024BAB_2026_07_27.md)
+
+Planning is complete but Task 0024BAB is blocked because accepted worker SHA evidence is absent; DeepSeek was not used. No asset/audio/font implementation is authorized.
+
 ## Task 0024BAA current submission/governance sources
 
 1. [`Project Source after 0024BA`](project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_AFTER_0024BA_2026_07_27.md) — sole current upload-ready source

@@ -1,5 +1,6 @@
 # Hand-drawn delayed notebook / ink-ECHO style (CURRENT)
 
+- Task 0024BAB v2 successor: `RECOMMEND_VISUAL_V1`, 18 planned stable-eight items, procedural/vector-only fallback, and `RECOMMEND_DUAL_FONT_TEST_GATE`. The previous temporal/neon V1 is historical research/contrast, not the live direction. No asset/font was generated or imported.
 - 2026-07-27 submission state: direction retained, but final visual identity/image/vector package remains `PLANNED_NOT_IMPLEMENTED`; `assets/` is `NOT_PRESENT`. Stable-eight submission scope is recommended. No asset or font import is authorized by Task 0024BAA.
 - Status: `PLANNING ONLY / NO ASSET OR FONT AUTHORITY`
 - Date: 2026-07-21; task: 0023ZW

@@ -23,11 +23,14 @@ Subagents receive exact inputs, allowed paths, forbidden surfaces, output format
 
 ## DeepSeek status after Task 0024AR
 
+- Task 0024BAB v2 current route: `DeepSeek_MCP = REMOVED`, native provider and automatic native subagent are `FORBIDDEN`, and the sole formal path is `WRAPPER_BACKED_CLI_EXTERNAL_FILE_WORKER` for GPT-frozen low-risk bounded/easy-to-verify file work.
+- GPT-5.6 Sol/Terra exclusively owns planning/architecture, task JSON and allowed paths, output/diff review, tests/build/regression, Git, release/submission and verdict/acceptance.
+- DeepSeek never counts as a mandatory GPT subagent. It was not used in 0024BAB. Accepted evidence lacks a worker SHA baseline, so the wrapper/worker pair is `NOT_VERIFIED`; fail closed with no MCP/native/smoke fallback.
 - The User-scope wrapper remains accepted at SHA-256 `f604001d001cd206e742e5252a69995c29f96c983e6520ec6fd0374ae4908750`.
-- The configured DeepSeek MCP route proved bounded direct editing of one pre-existing regular file.
+- Historical note: the former MCP route proved bounded direct editing before its removal.
 - Task 0024AR scored DeepSeek code quality `23/100 / NOT_ACCEPTABLE`: the first pass ignored the frozen public API and implemented an unrelated codec; the single repair turn produced no change.
-- DeepSeek MCP and wrapper/CLI are therefore **not authorized for tracked project code implementation**.
+- The wrapper/CLI is **not authorized for tracked project code implementation**.
 - Do not route GDScript, tests, production code, refactors, bug fixes, Simulation, solver, levels, Profile, build, release, or code review to DeepSeek.
 - No automatic DeepSeek routing is permitted.
-- DeepSeek may be used only for disposable transport probes or a later separately authorized reevaluation after a material model/configuration change.
+- The wrapper may be used only when a future task freezes the low-risk file contract and both accepted identities are verifiable.
 - GPT-5.6 Sol/Terra retains planning, code implementation, review, tests, Git, and final acceptance.

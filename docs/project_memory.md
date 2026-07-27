@@ -1,5 +1,9 @@
 # Project memory
 
+## Task 0024BAB visual/audio package and wrapper-only route
+
+Stable-eight submission planning now freezes 18 visual items, 12 UI surfaces, a dual-font evidence/fit gate, 14 essential SFX, seven bounded unlicensed/local-absent music candidates, and 10 pending owner decisions. Visual recommendation is V1; audio is A1 with `ESSENTIAL_SFX_ONLY_NO_MUSIC`. No generation/import occurred. DeepSeek MCP is removed; native/automatic routes are forbidden; the wrapper-only worker was not invoked. Accepted worker SHA evidence is absent, so the route pair is `NOT_VERIFIED` and Task 0024BAB closes blocked pending authoritative identity evidence/owner decisions.
+
 ## Task 0024BAA governance/submission rebaseline
 
 Task 0024BAA used five distinct GPT roles and completed a documentation-only 24-domain submission audit. Durable default: `multi_subagent_mode = MANDATORY`, single-agent execution not authorized by default, DeepSeek tracked code disabled, and main-agent scope/Git/verdict authority exclusive. Submission recommendation is stable eight (`RECOMMEND_OPTION_A`); S04 is deferred post-submission. Production remains catalog 8 / finale sequence 8. C02/S01/C03/S03/C07 are GPT-accepted machine evidence only and remain owner `NOT_REVIEWED`, uncatalogued/unsequenced, admission `NOT_AUTHORIZED`. Final buffer is 2026-09-04 through 2026-09-05; next gate is `HOLD_FOR_OWNER_DECISION`.

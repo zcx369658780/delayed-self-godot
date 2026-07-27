@@ -5,6 +5,10 @@
 - `multi_subagent_mode = MANDATORY`
 - `single_agent_execution = NOT_AUTHORIZED_BY_DEFAULT`
 - `DeepSeek_tracked_code = DISABLED`
+- `DeepSeek_MCP = REMOVED`
+- `DeepSeek_native_provider = FORBIDDEN`
+- `DeepSeek_automatic_native_subagent = FORBIDDEN`
+- `DeepSeek_formal_route = WRAPPER_BACKED_CLI_EXTERNAL_FILE_WORKER`
 - `main_agent_final_scope_and_Git = EXCLUSIVE`
 
 ## Required routing
@@ -24,7 +28,7 @@ Otherwise single-agent fallback is forbidden.
 
 Only the main agent may interpret final scope, authorize protected-surface access, integrate writer output, launch Godot or a solver, consume a retained manifest, stage, commit, push, or issue `PASS_FOR_GPT_REVIEW`. A task must still explicitly authorize each protected action.
 
-Subagents must not commit or push, consume manifests, alter repository settings, use accounts or secrets, access Profile/player data, publish/upload, or expand scope. DeepSeek is never a substitute for a GPT role and is disabled for tracked project code.
+Subagents must not commit or push, consume manifests, alter repository settings, use accounts or secrets, access Profile/player data, publish/upload, or expand scope. DeepSeek is never a substitute for a GPT role and is disabled for tracked project code. Its optional wrapper-only file-worker route requires GPT-frozen low-risk bounds, accepted wrapper/worker identities, secret-free external task JSON and full GPT-5.6 review; absence or drift fails closed without MCP/native fallback.
 
 ## Concurrency and evidence
 
