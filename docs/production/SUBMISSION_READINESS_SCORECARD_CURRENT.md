@@ -34,6 +34,10 @@
 
 No percentage-complete claim is made. Missing directories are evidence of absent repository deliverables, not proof that off-repository work does or does not exist.
 
+## Task 0024BAE delta
+
+Owner-requested wall, door, YOU/ECHO, Plate, EXIT and floor-noise repairs are machine validated across all eight production levels. Four deterministic gameplay SFX include the replaced completion cadence plus `wall_bump`, `plate_activate` and `door_open`. The exact original Crow Producer trial WAV is present with verified source identity and attribution. Status is `PASS_FOR_GPT_REVIEW`; owner review remains `NOT_REVIEWED`, so release/submission readiness is not accepted.
+
 ## Task 0024BAD delta
 
 Visual/UI vertical slice and six essential project-created SFX are now `IMPLEMENTED_BASELINE_OWNER_REVIEW_PENDING`, backed by focused visual/audio tests, production-eight regression, and two real 960x540 captures. Music, fonts, external graphics, complete UI rollout, build, release and submission remain blocked or pending under their existing gates.

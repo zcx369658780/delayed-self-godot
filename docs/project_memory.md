@@ -707,3 +707,6 @@ Correction: Task 0024 did not validly close. Its unique final-matrix invocation 
 ## 2026-07-27 — Task 0024BAD submission visual/audio slice
 
 The first project-native paper/ink runtime slice covers production-eight gameplay, main menu and level select, with structural non-color distinctions and explicit E2/E3/E4 badges. Six standard-library-generated mono 16-bit 44.1 kHz WAVs are byte-deterministic and routed through Master/UI/Gameplay/Music (silent Music). Machine verdict is `PASS_FOR_GPT_REVIEW`; owner review remains pending. No music, fonts, third-party graphics, Profile, catalog/finale or submission surface was opened.
+# 2026-07-27 Task 0024BAE
+
+Owner-requested visual entity and audio feedback repairs were implemented without changing Simulation, solver, levels, catalog, finale, Profile or `scripts/app/app_root.gd`. Focused and full regressions passed, three 960x540 captures were retained, and the exact original `优哉游哉(loop).wav` trial plus notice were identity-verified. Maximum status is `PASS_FOR_GPT_REVIEW`; the next gate is `OWNER_VISUAL_AUDIO_REPAIR_REVIEW`, not final acceptance.

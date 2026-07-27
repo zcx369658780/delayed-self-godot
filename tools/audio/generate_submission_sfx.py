@@ -60,11 +60,39 @@ SFX_EVENTS = [
     {
         "event_id": "level_complete",
         "path": "audio/sfx/gameplay/level_complete.wav",
-        "duration_ms": 360,
+        "duration_ms": 840,
         "segments": [
-            {"start_ms": 0, "duration_ms": 100, "start_hz": 440.0, "end_hz": 660.0, "gain": 0.44},
-            {"start_ms": 110, "duration_ms": 120, "start_hz": 523.25, "end_hz": 699.0, "gain": 0.44},
-            {"start_ms": 230, "duration_ms": 130, "start_hz": 659.25, "end_hz": 830.0, "gain": 0.40},
+            {"start_ms": 0, "duration_ms": 230, "start_hz": 392.0, "end_hz": 523.25, "gain": 0.42},
+            {"start_ms": 230, "duration_ms": 280, "start_hz": 523.25, "end_hz": 659.25, "gain": 0.40},
+            {"start_ms": 510, "duration_ms": 330, "start_hz": 659.25, "end_hz": 880.0, "gain": 0.36},
+        ],
+    },
+    {
+        "event_id": "wall_bump",
+        "path": "audio/sfx/gameplay/wall_bump.wav",
+        "duration_ms": 110,
+        "segments": [
+            {"start_ms": 0, "duration_ms": 110, "start_hz": 290.0, "end_hz": 195.0, "gain": 0.44},
+        ],
+    },
+    {
+        "event_id": "plate_activate",
+        "path": "audio/sfx/gameplay/plate_activate.wav",
+        "duration_ms": 180,
+        "segments": [
+            {"start_ms": 0, "duration_ms": 70, "start_hz": 332.0, "end_hz": 440.0, "gain": 0.46},
+            {"start_ms": 70, "duration_ms": 60, "start_hz": 392.0, "end_hz": 523.25, "gain": 0.44},
+            {"start_ms": 130, "duration_ms": 50, "start_hz": 523.25, "end_hz": 392.0, "gain": 0.38},
+        ],
+    },
+    {
+        "event_id": "door_open",
+        "path": "audio/sfx/gameplay/door_open.wav",
+        "duration_ms": 240,
+        "segments": [
+            {"start_ms": 0, "duration_ms": 90, "start_hz": 330.0, "end_hz": 440.0, "gain": 0.42},
+            {"start_ms": 90, "duration_ms": 100, "start_hz": 261.63, "end_hz": 392.0, "gain": 0.40},
+            {"start_ms": 190, "duration_ms": 50, "start_hz": 523.25, "end_hz": 523.25, "gain": 0.35},
         ],
     },
 ]

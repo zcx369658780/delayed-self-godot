@@ -5,9 +5,13 @@ const EVENT_UI_FOCUS_OR_MOVE := "ui_focus_or_move"
 const EVENT_UI_CONFIRM := "ui_confirm"
 const EVENT_YOU_MOVE := "YOU_move"
 const EVENT_ECHO_MOVE := "ECHO_move"
+const EVENT_WALL_BUMP := "wall_bump"
+const EVENT_PLATE_ACTIVATE := "plate_activate"
+const EVENT_DOOR_OPEN := "door_open"
 const EVENT_BLOCKED_OR_INVALID := "blocked_or_invalid"
 const EVENT_LEVEL_COMPLETE := "level_complete"
-const EVENT_ORDER := [EVENT_UI_FOCUS_OR_MOVE, EVENT_UI_CONFIRM, EVENT_YOU_MOVE, EVENT_ECHO_MOVE, EVENT_BLOCKED_OR_INVALID, EVENT_LEVEL_COMPLETE]
+const EVENT_ORDER_LEGACY := [EVENT_UI_FOCUS_OR_MOVE, EVENT_UI_CONFIRM, EVENT_YOU_MOVE, EVENT_ECHO_MOVE, EVENT_BLOCKED_OR_INVALID, EVENT_LEVEL_COMPLETE]
+const EVENT_ORDER := [EVENT_UI_FOCUS_OR_MOVE, EVENT_UI_CONFIRM, EVENT_YOU_MOVE, EVENT_ECHO_MOVE, EVENT_WALL_BUMP, EVENT_PLATE_ACTIVATE, EVENT_DOOR_OPEN, EVENT_BLOCKED_OR_INVALID, EVENT_LEVEL_COMPLETE]
 
 const FOCUS_DEBOUNCE_MSEC := 180
 
@@ -35,6 +39,24 @@ const EVENT_MAP := {
 		"path": "res://audio/sfx/gameplay/echo_move.wav",
 		"bus": "Gameplay",
 		"volume_db": -1.5,
+	},
+	EVENT_WALL_BUMP: {
+		"label": "WALL_BUMP",
+		"path": "res://audio/sfx/gameplay/wall_bump.wav",
+		"bus": "Gameplay",
+		"volume_db": -2.3,
+	},
+	EVENT_PLATE_ACTIVATE: {
+		"label": "PLATE_ACTIVATE",
+		"path": "res://audio/sfx/gameplay/plate_activate.wav",
+		"bus": "Gameplay",
+		"volume_db": -2.0,
+	},
+	EVENT_DOOR_OPEN: {
+		"label": "DOOR_OPEN",
+		"path": "res://audio/sfx/gameplay/door_open.wav",
+		"bus": "Gameplay",
+		"volume_db": -1.8,
 	},
 	EVENT_BLOCKED_OR_INVALID: {
 		"label": "BLOCKED_OR_INVALID",
@@ -108,9 +130,10 @@ func reset_router_state() -> void:
 	_accepted_event_history.clear()
 
 
-func get_event_map_snapshot() -> Dictionary:
+func get_event_map_snapshot(include_all_events: bool = false) -> Dictionary:
 	var snapshot: Dictionary = {}
-	for event_id in EVENT_ORDER:
+	var event_order: Array = EVENT_ORDER_LEGACY if not include_all_events else EVENT_ORDER
+	for event_id in event_order:
 		var record := (EVENT_MAP[event_id] as Dictionary).duplicate(true)
 		record["audio_stream_loaded"] = _streams.has(event_id)
 		record["ready"] = _bus_players.has(event_id)
@@ -130,8 +153,13 @@ func movement_event_for_outcome(actor: String, moved: bool, blocked: bool = fals
 	return ""
 
 
-func get_loaded_event_ids() -> Array:
-	return _bus_players.keys()
+func get_loaded_event_ids(include_all_events: bool = false) -> Array:
+	var event_order: Array = EVENT_ORDER_LEGACY if not include_all_events else EVENT_ORDER
+	var event_ids: Array = []
+	for event_id in event_order:
+		if _bus_players.has(event_id):
+			event_ids.append(event_id)
+	return event_ids
 
 
 func get_accepted_event_history() -> Array[String]:

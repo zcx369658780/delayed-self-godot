@@ -393,3 +393,6 @@ or audio breadth.
 ## Task 0024BAD submission-facing baseline
 
 The stable eight now has a machine-validated project-native paper/ink board, main-menu and level-select slice, plus six deterministic essential WAV cues and four runtime buses. The result is `PASS_FOR_GPT_REVIEW`, not final or owner acceptance. Eight additional SFX, complete UI rollout, fonts/zh-Hans, music audition/import, third-party graphics, build/export and submission remain future explicit gates; S04 remains deferred.
+# Task 0024BAE current overlay
+
+The first-submission vertical slice now includes the owner-requested entity readability and event-SFX repair, plus a verified original-byte Crow Producer music trial. Machine validation is complete; owner review remains the only open gate. Do not open later rollout, build, release, Profile, catalog or submission work from this result.

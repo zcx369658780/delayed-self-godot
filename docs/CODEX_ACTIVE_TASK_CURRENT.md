@@ -5,7 +5,7 @@
 - Task publication commit: `0e92ca5ea5f71bb633b9966ff7e1c2663dfb8eb4`
 - Required checkpoint in ancestry: `43082581e974332fb077550ce0a2aabdf78788b8`
 - Previous accepted task: `TASK_0024BAD_FIRST_SUBMISSION_VISUAL_AUDIO_VERTICAL_SLICE_ACCEPTED`
-- Owner review: `OWNER_VISUAL_AUDIO_VERTICAL_SLICE_REVIEW = CHANGES_REQUIRED`
+- Owner review: `OWNER_VISUAL_AUDIO_REPAIR_REVIEW = NOT_REVIEWED`
 
 - Submission scope: stable eight-level `RECOMMEND_OPTION_A`
 - Production catalog: exactly eight levels; sequence 8 remains the sole formal finale
@@ -26,4 +26,4 @@
 - Third-party graphics: `NOT_AUTHORIZED`
 - Profile/catalog/finale/levels/Simulation/solver/build/release/submission: `NOT_AUTHORIZED`
 
-Success opens only `OWNER_VISUAL_AUDIO_REPAIR_REVIEW`. Full UI rollout, remaining SFX, font/zh-Hans, more music, external graphics, build/export, additional levels and S04 remain closed.
+Success opens only `OWNER_VISUAL_AUDIO_REPAIR_REVIEW`. No later task is authorized in this boundary. Full UI rollout, remaining SFX, font/zh-Hans, additional music, external graphics, build/export, additional levels and S04 remain closed.

@@ -1,6 +1,6 @@
 # GodotHub Festival 2026 submission critical path (CURRENT)
 
-- Task 0024BAB v2 overlay: owner defaults Aug 3, token/essential-SFX target Aug 7, and stable-eight visual/UI/zh-Hans first pass Aug 12. These planning milestones do not authorize implementation. Current next gate is `HOLD_FOR_OWNER_VISUAL_AUDIO_DECISIONS`.
+- Task 0024BAB v2 overlay: owner defaults Aug 3, token/essential-SFX target Aug 7, and stable-eight visual/UI/zh-Hans first pass Aug 12. These planning milestones do not authorize implementation. Current next gate is `OWNER_VISUAL_AUDIO_REPAIR_REVIEW`.
 - Frozen: 2026-07-27 by Task 0024BAA
 - Recommended scope: `RECOMMEND_OPTION_A`
 - S04: `DEFER_S04_UNTIL_POST_SUBMISSION`
@@ -30,4 +30,4 @@ Workstreams: P product/content; V visual/UI; A audio/license; F flow/localizatio
 
 September 6 is confirmation/emergency correction only, never the first build or first upload. September 7–10 is reserved solely for an already-planned video requirement, not for changing the submitted game scope.
 
-Task 0024BAD establishes the first submission-facing project-native visual/UI and essential-SFX baseline. It does not alter dates or authorize music/font/external-graphic intake, build/export, release, upload, or public submission. The immediate next gate is owner review of the two captures and six-SFX slice.
+Task 0024BAE refreshes visual/audio repair evidence and verifies the conditional music trial import from exact original `优哉游哉(loop).wav`; it does not alter dates or authorize music/font/external-graphic intake, build/export, release, upload, or public submission. The immediate next gate is `OWNER_VISUAL_AUDIO_REPAIR_REVIEW`.

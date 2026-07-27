@@ -218,10 +218,16 @@ func get_presentation_snapshot() -> Dictionary:
 		"timeline_visible": timeline_visible_for(level, _hud_mode(), state.get("completed", false)) if not level.is_empty() else false,
 		"help_open": help_expanded,
 		"reduced_motion": reduced_motion,
+		"you": _you_snapshot(),
 		"surfaces": _surface_snapshots(),
+		"terrain": {
+			"wall_adjacency": _wall_adjacency_snapshot(),
+			"floor_mark_count": _floor_mark_count(),
+		},
 		"plates": _plate_snapshots(),
 		"doors": _door_snapshots(),
 		"echoes": _echo_snapshots(),
+		"exit": _exit_snapshot(),
 		"echo_trails": visual_feedback.echo_trails.duplicate(true),
 		"blocked_door": visual_feedback.blocked_door.duplicate(true),
 		"teaching_badge": visual_feedback.teaching_badge.duplicate(true),
@@ -269,10 +275,17 @@ func _plate_snapshots() -> Array:
 	var pressed: Array = simulation.pressed_plate_ids(level, state)
 	var snapshots: Array = []
 	for plate in level.get("plates", []):
+		var plate_bounds := _cell_bounds(int(plate.position[0]), int(plate.position[1]))
 		var snapshot := {
 			"id": plate.id,
 			"position": plate.position.duplicate(),
 			"center": _center(plate.position),
+			"bounds": {
+				"x": plate_bounds.position.x,
+				"y": plate_bounds.position.y,
+				"width": plate_bounds.size.x,
+				"height": plate_bounds.size.y,
+			},
 			"pressed": pressed.has(plate.id),
 			"visual_state": "FILLED_PRESSED" if pressed.has(plate.id) else "HOLLOW_UNPRESSED",
 		}
@@ -431,7 +444,7 @@ func _draw() -> void:
 	for y in level.terrain_rows.size():
 		for x in level.terrain_rows[y].length():
 			var rectangle := Rect2(_board_origin() + Vector2(x, y) * CELL, Vector2(CELL - CELL_GAP, CELL - CELL_GAP))
-			_draw_paper_cell(rectangle, level.terrain_rows[y][x] == ".")
+			_draw_paper_cell(rectangle, level.terrain_rows[y][x] == ".", x, y)
 	_draw_schema_v2_descriptors(false)
 	var pressed_plate_ids: Array = simulation.pressed_plate_ids(level, state)
 	for door in level.doors:
@@ -445,80 +458,322 @@ func _draw() -> void:
 	for plate in level.plates:
 		var active: bool = pressed_plate_ids.has(plate.id)
 		var plate_center := _center(plate.position)
-		if _uses_convergence_cues() and _dependency_identity(plate.id).shape == "TRIANGLE":
-			_draw_triangle_token(plate_center, active)
-		else:
-			draw_circle(plate_center, 18, SubmissionVisualTheme.color_for_token("secondary_ink"))
-			if active:
-				draw_circle(plate_center, 12, SubmissionVisualTheme.color_for_token("success_mark"))
-				draw_arc(plate_center, 22, 0, TAU, 32, SubmissionVisualTheme.color_for_token("primary_ink"), 3)
-			else:
-				draw_circle(plate_center, 11, SubmissionVisualTheme.color_for_token("paper_background"))
-				draw_arc(plate_center, 15, 0, TAU, 32, SubmissionVisualTheme.color_for_token("primary_ink"), 3)
+		_draw_plate_token(plate_center, plate, active)
 		if _uses_convergence_cues():
 			draw_string(ThemeDB.fallback_font, plate_center + Vector2(-5, 5), _dependency_identity(plate.id).label, HORIZONTAL_ALIGNMENT_LEFT, -1, 14, Color("fff7d6"))
 	for door in level.doors:
 		var open: bool = _door_open(door.id)
 		var door_center := _center(door.position)
-		var rect := Rect2(door_center - Vector2(22, 25), Vector2(44, 50))
-		if open:
-			draw_line(rect.position, rect.position + Vector2(0, rect.size.y), SubmissionVisualTheme.color_for_token("success_mark"), 4)
-			draw_line(rect.end - Vector2(0, rect.size.y), rect.end, SubmissionVisualTheme.color_for_token("success_mark"), 4)
-			draw_line(rect.position, rect.position + Vector2(12, 0), SubmissionVisualTheme.color_for_token("primary_ink"), 3)
-			draw_line(rect.end - Vector2(12, 0), rect.end, SubmissionVisualTheme.color_for_token("primary_ink"), 3)
-		else:
-			draw_rect(rect, SubmissionVisualTheme.color_for_token("warning_mark"))
-			draw_rect(rect, SubmissionVisualTheme.color_for_token("primary_ink"), false, 3)
-			for offset in [-12.0, 0.0, 12.0]:
-				draw_line(door_center + Vector2(offset, -21), door_center + Vector2(offset, 21), SubmissionVisualTheme.color_for_token("paper_background"), 4)
+		_draw_door_token(door_center, open)
 		_draw_dependency_pips(door, door_center, pressed_plate_ids)
 	_draw_echo_feedback()
 	var exit_position: Vector2 = _center(level.exit.position)
 	_draw_exit_base(exit_position)
 	for echo in state.echo_positions:
 		var echo_center := _center(echo.position)
-		draw_circle(echo_center, 16, SubmissionVisualTheme.color_for_token("paper_background"))
 		var definition := _echo_definition_by_id(echo.id)
-		if _uses_convergence_cues() and int(definition.delay) == 4:
-			_draw_dashed_arc(echo_center, 20, SubmissionVisualTheme.color_for_token("echo_ink"), 2)
-			_draw_dashed_arc(echo_center, 24, SubmissionVisualTheme.color_for_token("primary_ink"), 2)
-		else:
-			_draw_dashed_arc(echo_center, 20, SubmissionVisualTheme.color_for_token("echo_ink"), 2)
-		var badge_offset := Vector2(5, -20) if int(definition.delay) == 4 else Vector2(-25, -20)
-		draw_string(ThemeDB.fallback_font, echo_center + badge_offset, "E%d" % int(definition.delay), HORIZONTAL_ALIGNMENT_LEFT, -1, 13, SubmissionVisualTheme.color_for_token("echo_ink"))
-	draw_circle(_center(state.player_position), 15, SubmissionVisualTheme.color_for_token("primary_ink"))
-	draw_circle(_center(state.player_position), 7, SubmissionVisualTheme.color_for_token("paper_background"))
-	_draw_actor_letter(_center(state.player_position), "Y", SubmissionVisualTheme.color_for_token("primary_ink"))
+		_draw_echo_token(echo_center, definition)
+	var you_center := _center(state.player_position)
+	_draw_you_token(you_center)
 	_draw_schema_v2_descriptors(true)
 	_draw_exit_overlay(exit_position)
 	_draw_blocked_door_feedback()
 	_draw_teaching_badge()
 
 
-func _draw_paper_cell(rectangle: Rect2, floor_cell: bool) -> void:
+func _draw_paper_cell(rectangle: Rect2, floor_cell: bool, x: int = -1, y: int = -1) -> void:
 	var paper: Color = SubmissionVisualTheme.color_for_token("paper_background")
 	var ink: Color = SubmissionVisualTheme.color_for_token("secondary_ink")
-	draw_rect(rectangle, paper if floor_cell else ink.lightened(0.72))
-	draw_rect(rectangle, ink, false, 1.0)
 	if floor_cell:
-		for corner in [Vector2(7, 7), Vector2(rectangle.size.x - 7, 7), Vector2(7, rectangle.size.y - 7), rectangle.size - Vector2(7, 7)]:
-			draw_line(rectangle.position + corner - Vector2(3, 0), rectangle.position + corner + Vector2(3, 0), ink, 1.0)
+		_draw_floor_cell(rectangle, ink)
+		if x >= 0 and y >= 0 and _draw_floor_mark_cell(x, y, rectangle):
+			var mark_offset: Vector2 = Vector2(19, 19)
+			draw_line(rectangle.position + mark_offset, rectangle.position + mark_offset + Vector2(8, 0), ink, 1.5)
 	else:
-		for offset in range(-int(rectangle.size.y), int(rectangle.size.x), 8):
-			draw_line(rectangle.position + Vector2(maxi(offset, 0), maxi(-offset, 0)), rectangle.position + Vector2(mini(offset + int(rectangle.size.y), int(rectangle.size.x)), mini(int(rectangle.size.y), int(rectangle.size.y) + offset)), ink, 1.5)
+		var mask: int = _wall_adjacency_mask(x, y)
+		draw_rect(rectangle, ink.lightened(0.62), false, 1.2)
+		draw_rect(rectangle, ink.darkened(0.35))
+		_draw_wall_contour(rectangle, mask, ink)
+		draw_wall_interior_detail(rectangle, x, y)
+
+
+func _draw_floor_cell(rectangle: Rect2, ink: Color) -> void:
+	var paper: Color = SubmissionVisualTheme.color_for_token("paper_background")
+	draw_rect(rectangle, paper)
+	draw_rect(rectangle, ink, false, 1.0)
+
+
+func _draw_floor_mark_cell(x: int, y: int, rectangle: Rect2) -> bool:
+	return (x + y) % 5 == 0
+
+
+func _wall_adjacency_mask(x: int, y: int) -> int:
+	if x < 0 or y < 0:
+		return 0
+	var mask: int = 0
+	if not _is_wall_cell(Vector2i(x, y - 1)):
+		mask |= 1
+	if not _is_wall_cell(Vector2i(x + 1, y)):
+		mask |= 2
+	if not _is_wall_cell(Vector2i(x, y + 1)):
+		mask |= 4
+	if not _is_wall_cell(Vector2i(x - 1, y)):
+		mask |= 8
+	return mask
+
+
+func _is_wall_cell(position: Vector2i) -> bool:
+	if position.x < 0 or position.y < 0:
+		return false
+	if position.y >= level.terrain_rows.size():
+		return false
+	var row: String = level.terrain_rows[position.y]
+	if position.x >= row.length():
+		return false
+	return row[position.x] != "."
+
+
+func _draw_wall_contour(rectangle: Rect2, mask: int, ink: Color) -> void:
+	var top: Vector2 = rectangle.position
+	var bottom: Vector2 = rectangle.position + Vector2(rectangle.size.x, 0)
+	var left: Vector2 = rectangle.position + Vector2(0, rectangle.size.y)
+	var right: Vector2 = rectangle.position
+	var outline: float = 2.2
+	if mask & 1:
+		draw_line(top, top + Vector2(rectangle.size.x, 0), ink, outline)
+	if mask & 4:
+		draw_line(Vector2(left.x, left.y), Vector2(left.x + rectangle.size.x, left.y), ink, outline)
+	if mask & 8:
+		draw_line(right, right + Vector2(0, rectangle.size.y), ink, outline)
+	if mask & 2:
+		var right_top := rectangle.position + Vector2(rectangle.size.x, 0)
+		draw_line(right_top, right_top + Vector2(0, rectangle.size.y), ink, outline)
+
+
+func draw_wall_interior_detail(rectangle: Rect2, x: int, y: int) -> void:
+	var muted: Color = Color("0f172a", 0.48)
+	var center: Vector2 = rectangle.position + rectangle.size * 0.5
+	var size_a: float = 14.0
+	var size_b: float = 10.0
+	for index in 2:
+		var start := center - Vector2(size_a - float(index * 4), 0)
+		var end := center + Vector2(size_a - float(index * 4), 0)
+		draw_line(start, end, muted, 1.0 if index == 0 else 0.9)
+	if (x + y) % 3 == 1:
+		draw_line(rectangle.position + Vector2(rectangle.size.x - 12, 10), rectangle.position + Vector2(rectangle.size.x - 6, rectangle.size.y - 10), muted, 1.1)
+		draw_line(rectangle.position + Vector2(12, 10), rectangle.position + Vector2(6, rectangle.size.y - 10), muted, 1.1)
+
+
+func classify_transition_events(before: Dictionary, after: Dictionary, action: String, was_completed: bool) -> Array[String]:
+	return _classify_transition_events(before, after, action, was_completed)
 
 
 func _play_transition_sfx(before: Dictionary, after: Dictionary, action: String, was_completed: bool) -> void:
 	var router := SubmissionSfxRouter.ensure_router(get_tree())
-	if CARDINAL_ACTIONS.has(action):
-		if before.player_position != after.player_position:
-			router.play_event("YOU_move")
+	var events: Array = _classify_transition_events(before, after, action, was_completed)
+	for event_id in events:
+		router.play_event(event_id)
+
+
+func _classify_transition_events(before: Dictionary, after: Dictionary, action: String, was_completed: bool) -> Array[String]:
+	var events: Array[String] = []
+	if was_completed:
+		return events
+	var completed: bool = bool(after.get("completed", false)) and not bool(was_completed)
+	if completed:
+		return [SubmissionSfxRouter.EVENT_LEVEL_COMPLETE]
+	if not CARDINAL_ACTIONS.has(action) and action != "WAIT":
+		return events
+	var before_player: Variant = before.get("player_position", [])
+	var after_player: Variant = after.get("player_position", [])
+	var moved: bool = _positions_equal(before_player, after_player) == false
+	var wall_facing: bool = _is_wall_facing_recorded_turn(before_player, after_player, action, before)
+	if moved:
+		events.append(SubmissionSfxRouter.EVENT_YOU_MOVE)
+	elif CARDINAL_ACTIONS.has(action):
+		if wall_facing:
+			events.append(SubmissionSfxRouter.EVENT_WALL_BUMP)
 		else:
-			router.play_event("blocked_or_invalid")
-		if _any_echo_moved(before.get("echo_positions", []), after.get("echo_positions", [])):
-			router.play_event("ECHO_move")
-	if not was_completed and bool(after.get("completed", false)):
-		router.play_event("level_complete")
+			events.append(SubmissionSfxRouter.EVENT_BLOCKED_OR_INVALID)
+	if _any_echo_moved(before.get("echo_positions", []), after.get("echo_positions", [])):
+		events.append(SubmissionSfxRouter.EVENT_ECHO_MOVE)
+	if _plate_ids_added(before, after):
+		events.append(SubmissionSfxRouter.EVENT_PLATE_ACTIVATE)
+	if _door_open_count(before, after) > 0:
+		events.append(SubmissionSfxRouter.EVENT_DOOR_OPEN)
+	return _dedupe_preserve_order(events)
+
+
+func _is_wall_facing_recorded_turn(before_player: Variant, after_player: Variant, action: String, before_state: Dictionary) -> bool:
+	var before_position: Vector2i = _position_to_vector(before_player)
+	var after_position: Vector2i = _position_to_vector(after_player)
+	if not CARDINAL_ACTIONS.has(action) or before_position == Vector2i(-2147483648, -2147483648) or after_position == Vector2i(-2147483648, -2147483648):
+		return false
+	var delta: Vector2i = _action_delta(action)
+	var target: Vector2i = before_position + delta
+	if not _is_outside_terrain(target) and not _is_wall_cell(target):
+		return false
+	if _is_closed_door_position(target, before_state):
+		return false
+	return before_position == after_position
+
+
+func _is_outside_terrain(position: Vector2i) -> bool:
+	if position.x < 0 or position.y < 0 or position.y >= level.terrain_rows.size():
+		return true
+	return position.x >= String(level.terrain_rows[position.y]).length()
+
+
+func _is_closed_door_position(position: Vector2i, state_candidate: Dictionary) -> bool:
+	for door in level.get("doors", []):
+		var candidate_pos: Array = door.get("position", [])
+		if candidate_pos.size() == 2 and int(candidate_pos[0]) == position.x and int(candidate_pos[1]) == position.y:
+			var door_id := String(door.get("id", ""))
+			var open: bool = false
+			for door_state in state_candidate.get("door_states", []):
+				if String(door_state.get("id", "")) == door_id:
+					open = bool(door_state.get("open", false))
+			return not open
+	return false
+
+
+func _door_state_by_id(door_id: String) -> bool:
+	for door in state.door_states:
+		if door.id == door_id:
+			return door.open
+	return false
+
+
+func _plate_ids_added(before_state: Dictionary, after_state: Dictionary) -> bool:
+	if not before_state.get("player_position", []) is Array or not after_state.get("player_position", []) is Array:
+		return false
+	var before_pressed: Array = simulation.pressed_plate_ids(level, before_state)
+	var after_pressed: Array = simulation.pressed_plate_ids(level, after_state)
+	for plate_id in after_pressed:
+		if not before_pressed.has(plate_id):
+			return true
+	return false
+
+
+func _door_open_count(before_state: Dictionary, after_state: Dictionary) -> int:
+	var before_by_id: Dictionary = {}
+	var after_by_id: Dictionary = {}
+	for door in before_state.get("door_states", []):
+		before_by_id[String(door.get("id", ""))] = bool(door.get("open", false))
+	for door in after_state.get("door_states", []):
+		after_by_id[String(door.get("id", ""))] = bool(door.get("open", false))
+	var count: int = 0
+	for door_id in after_by_id.keys():
+		var after_open: bool = after_by_id[door_id]
+		var before_open: bool = bool(before_by_id.get(door_id, false))
+		if after_open and not before_open:
+			count += 1
+	return count
+
+
+func _dedupe_preserve_order(events: Array[String]) -> Array[String]:
+	var seen: Dictionary = {}
+	var ordered: Array[String] = []
+	for event_id in events:
+		if seen.has(event_id):
+			continue
+		seen[event_id] = true
+		ordered.append(event_id)
+	return ordered
+
+
+func _positions_equal(a: Variant, b: Variant) -> bool:
+	var a_position: Vector2i = _position_to_vector(a)
+	var b_position: Vector2i = _position_to_vector(b)
+	return a_position != Vector2i(-2147483648, -2147483648) and a_position == b_position
+
+
+func _position_to_vector(value: Variant) -> Vector2i:
+	if value is Vector2i:
+		return value
+	if value is Vector2:
+		return Vector2i(value)
+	if value is Array and value.size() == 2:
+		return Vector2i(int(value[0]), int(value[1]))
+	return Vector2i(-2147483648, -2147483648)
+
+
+func _you_snapshot() -> Dictionary:
+	var position: Array = state.get("player_position", [])
+	return {
+		"position": position.duplicate() if position is Array else [],
+		"visual_family": "concrete_person",
+		"bounds": {
+			"x": _center(position).x - 16.0,
+			"y": _center(position).y - 16.0,
+			"width": 32.0,
+			"height": 32.0,
+		},
+	}
+
+
+func _wall_adjacency_snapshot() -> Array:
+	if level.is_empty():
+		return []
+	var rows: Array = level.get("terrain_rows", [])
+	var descriptors: Array = []
+	for y in rows.size():
+		var row := String(rows[y])
+		for x in row.length():
+			if row[x] == ".":
+				continue
+			var bounds := _cell_bounds(x, y)
+			var descriptor := {
+				"cell": [x, y],
+				"adjacency_mask": _wall_adjacency_mask(x, y),
+				"signature": "wall_%d_%d_%d" % [x, y, _wall_adjacency_mask(x, y)],
+				"bounds": {
+					"x": bounds.position.x,
+					"y": bounds.position.y,
+					"width": bounds.size.x,
+					"height": bounds.size.y,
+				},
+			}
+			descriptors.append(descriptor)
+	descriptors.sort_custom(func(a: Dictionary, b: Dictionary): return a.get("cell", [0, 0])[0] < b.get("cell", [0, 0])[0] if a.get("cell", [0, 0])[1] == b.get("cell", [0, 0])[1] else a.get("cell", [0, 0])[1] < b.get("cell", [0, 0])[1])
+	return descriptors
+
+
+func _cell_bounds(x: int, y: int) -> Rect2:
+	var origin := _board_origin() + Vector2(x, y) * CELL
+	return Rect2(origin, Vector2(CELL - CELL_GAP, CELL - CELL_GAP))
+
+
+func _floor_mark_count() -> int:
+	if level.is_empty():
+		return 0
+	var rows: Array = level.get("terrain_rows", [])
+	var count: int = 0
+	for y in rows.size():
+		var row := String(rows[y])
+		for x in row.length():
+			if row[x] != ".":
+				continue
+			if (x + y) % 5 == 0:
+				count += 1
+	return count
+
+
+func _exit_snapshot() -> Dictionary:
+	if level.is_empty() or not level.has("exit"):
+		return {"position": [], "bounds": {"x": 0, "y": 0, "width": 0, "height": 0}, "visual_state": "missing"}
+	var position: Array = level.exit.position
+	var bounds := _cell_bounds(int(position[0]), int(position[1]))
+	return {
+		"position": position.duplicate(),
+		"visual_state": "destination_doorway",
+		"bounds": {
+			"x": bounds.position.x,
+			"y": bounds.position.y,
+			"width": bounds.size.x,
+			"height": bounds.size.y,
+		},
+	}
 
 
 func _any_echo_moved(before_echoes: Array, after_echoes: Array) -> bool:
@@ -698,21 +953,118 @@ func _draw_teaching_badge() -> void:
 
 
 func _draw_exit_base(center: Vector2) -> void:
-	var diamond := PackedVector2Array([center + Vector2(0, -22), center + Vector2(22, 0), center + Vector2(0, 22), center + Vector2(-22, 0)])
-	draw_colored_polygon(diamond, Color("2563eb", 0.22))
-	for index in diamond.size():
-		draw_line(diamond[index], diamond[(index + 1) % diamond.size()], Color("60a5fa"), 3)
+	var background := Color("2563eb", 0.22)
+	var frame := Color("60a5fa")
+	var bounds := Rect2(center - Vector2(22, 22), Vector2(44, 44))
+	draw_rect(Rect2(bounds.position + Vector2(5, 0), Vector2(34, 44)), Color("dbeafe", 0.15))
+	draw_rect(bounds, background)
+	draw_rect(bounds, frame, false, 3)
+	draw_line(Vector2(bounds.position.x + 5, bounds.position.y + 16), Vector2(bounds.end.x - 5, bounds.position.y + 16), frame, 3)
+	draw_line(Vector2(bounds.position.x + 5, bounds.position.y + 28), Vector2(bounds.end.x - 5, bounds.position.y + 28), frame, 3)
+	var threshold := PackedVector2Array([Vector2(bounds.position.x + 6, bounds.position.y + 34), Vector2(bounds.end.x - 6, bounds.position.y + 34), Vector2(bounds.end.x - 17, bounds.end.y - 2), Vector2(bounds.position.x + 17, bounds.end.y - 2)])
+	draw_colored_polygon(threshold, frame)
+	var threshold_outline := PackedVector2Array([threshold[0], threshold[1], threshold[2], threshold[3], threshold[0]])
+	draw_polyline(threshold_outline, frame, 2)
 
 
 func _draw_exit_overlay(center: Vector2) -> void:
-	var outer := PackedVector2Array([center + Vector2(0, -27), center + Vector2(27, 0), center + Vector2(0, 27), center + Vector2(-27, 0)])
-	for index in outer.size():
-		draw_line(outer[index], outer[(index + 1) % outer.size()], Color("bfdbfe"), 3)
-	draw_string(ThemeDB.fallback_font, center + Vector2(-23, -31), "EXIT", HORIZONTAL_ALIGNMENT_CENTER, 46, 14, Color("dbeafe"))
+	var arrow := PackedVector2Array([center + Vector2(-8, 9), center + Vector2(0, 0), center + Vector2(8, 9)])
+	draw_polyline(PackedVector2Array([arrow[0], arrow[1], arrow[2]]), Color("ecfeff"), 2)
+	draw_line(arrow[1], arrow[1] + Vector2(0, 12), Color("ecfeff"), 2)
+	draw_string(ThemeDB.fallback_font, center + Vector2(-14, -30), "EXIT", HORIZONTAL_ALIGNMENT_CENTER, 46, 14, Color("dbeafe"))
 
 
-func _draw_actor_letter(center: Vector2, letter: String, color: Color) -> void:
-	draw_string(ThemeDB.fallback_font, center + Vector2(-10, 6), letter, HORIZONTAL_ALIGNMENT_CENTER, 20, 15, color)
+func _draw_plate_token(plate_center: Vector2, plate: Dictionary, active: bool) -> void:
+	var base := Rect2(plate_center - Vector2(16, 10), Vector2(32, 20))
+	var paper: Color = SubmissionVisualTheme.color_for_token("paper_background")
+	var warn: Color = SubmissionVisualTheme.color_for_token("secondary_ink")
+	draw_rect(base, warn.darkened(0.28))
+	draw_rect(Rect2(base.position + Vector2(2, 4), Vector2(28, 12)), paper)
+	draw_rect(Rect2(base.position + Vector2(4, 6), Vector2(24, 8)), warn, false, 1.2)
+	if active:
+		draw_rect(Rect2(base.position + Vector2(8, 8), Vector2(16, 4)), SubmissionVisualTheme.color_for_token("success_mark"))
+		draw_line(plate_center + Vector2(-7, 0), plate_center + Vector2(7, 0), SubmissionVisualTheme.color_for_token("success_mark"), 2.2)
+		draw_circle(plate_center + Vector2(0, 1), 5, Color("ecfccb", 0.96))
+	else:
+		draw_line(plate_center + Vector2(-8, 0), plate_center + Vector2(8, 0), warn, 1.8)
+		draw_circle(plate_center + Vector2(0, 1), 4, Color("fef3c7", 0.95))
+		draw_string(ThemeDB.fallback_font, plate_center + Vector2(-3, 5), "P", HORIZONTAL_ALIGNMENT_CENTER, -1, 10, Color("ffffff"))
+	draw_rect(base, warn, false, 2)
+	if _uses_convergence_cues():
+		var identity := _dependency_identity(plate.id)
+		draw_string(ThemeDB.fallback_font, base.position + Vector2(2, -3), identity.label, HORIZONTAL_ALIGNMENT_LEFT, -1, 10, warn)
+
+
+func _draw_door_token(door_center: Vector2, open: bool) -> void:
+	var frame: Rect2 = Rect2(door_center - Vector2(21, 20), Vector2(42, 40))
+	var panel: Rect2 = Rect2(door_center - Vector2(14, 14), Vector2(28, 28))
+	if open:
+		draw_rect(frame, Color("111827"), false, 4)
+		draw_line(frame.position, frame.position + Vector2(0, frame.size.y), Color("6ee7b7"), 3)
+		draw_line(frame.position + Vector2(frame.size.x, 0), frame.end, Color("6ee7b7"), 3)
+		draw_line(frame.position, frame.position + Vector2(frame.size.x, 0), Color("6ee7b7"), 3)
+		draw_line(frame.position + Vector2(5, frame.size.y - 3), frame.end - Vector2(5, 3), Color("6ee7b7"), 2)
+		draw_polyline(PackedVector2Array([
+			frame.position + Vector2(8, 8),
+			frame.position + Vector2(8, frame.size.y - 8),
+			frame.position + Vector2(14, frame.size.y - 12),
+		]), Color("34d399", 0.7), 2)
+	else:
+		draw_rect(frame, Color("111827"), false, 4)
+		draw_rect(panel, Color("7f1d1d", 0.88))
+		draw_rect(panel, Color("fecaca"), false, 2)
+		draw_line(panel.position + Vector2(0, 9), panel.position + Vector2(panel.size.x, 9), Color("fecaca"), 1.5)
+		draw_line(panel.position + Vector2(0, 19), panel.position + Vector2(panel.size.x, 19), Color("fecaca"), 1.5)
+		draw_line(panel.position + Vector2(-3, panel.size.y * 0.5), panel.position + Vector2(panel.size.x + 3, panel.size.y * 0.5), Color("fca5a5"), 3)
+		draw_circle(panel.position + Vector2(panel.size.x - 5, panel.size.y * 0.5 - 4), 2.5, Color("fef3c7"))
+		for hinge_y in [6.0, 22.0]:
+			draw_rect(Rect2(panel.position + Vector2(1, hinge_y), Vector2(3, 5)), Color("d1d5db"))
+
+
+func _draw_echo_token(center: Vector2, definition: Dictionary) -> void:
+	var delay: int = int(definition.get("delay", 0))
+	var echo_ink := SubmissionVisualTheme.color_for_token("echo_ink")
+	var ghost_fill := Color(echo_ink, 0.24)
+	draw_circle(center, 16, SubmissionVisualTheme.color_for_token("paper_background"))
+	draw_circle(center + Vector2(0, -6), 5, ghost_fill)
+	draw_arc(center + Vector2(0, -6), 5, 0, TAU, 20, echo_ink, 2)
+	draw_rect(Rect2(center + Vector2(-6, -1), Vector2(12, 11)), ghost_fill)
+	draw_line(center + Vector2(-6, 1), center + Vector2(-11, 7), echo_ink, 2)
+	draw_line(center + Vector2(6, 1), center + Vector2(11, 7), echo_ink, 2)
+	draw_line(center + Vector2(-3, 10), center + Vector2(-7, 15), echo_ink, 2)
+	draw_line(center + Vector2(3, 10), center + Vector2(7, 15), echo_ink, 2)
+	draw_line(center + Vector2(-5, 3), center + Vector2(5, 3), Color(echo_ink, 0.7), 1.5)
+	if delay >= 4:
+		draw_arc(center, 20, 0, TAU, 40, Color("c4b5fd"), 2.6)
+		_draw_dashed_arc(center, 14, SubmissionVisualTheme.color_for_token("primary_ink"), 2)
+	else:
+		_draw_dashed_arc(center, 17, echo_ink, 2)
+	if _uses_convergence_cues() and delay >= 3:
+		_draw_dashed_arc(center, 21, Color("a5b4fc"), 2)
+	var badge_offset := Vector2(10, -22) if delay == 4 else Vector2(-26, -22)
+	draw_string(ThemeDB.fallback_font, center + badge_offset, "E%d" % delay, HORIZONTAL_ALIGNMENT_LEFT, -1, 13, SubmissionVisualTheme.color_for_token("echo_ink"))
+	if delay > 1:
+		draw_polyline(PackedVector2Array([center + Vector2(-16, -16), center + Vector2(-22, -22), center + Vector2(-18, -10)]), Color("dbeafe", 0.6), 1.5)
+		draw_polyline(PackedVector2Array([center + Vector2(16, -16), center + Vector2(22, -22), center + Vector2(18, -10)]), Color("dbeafe", 0.35), 1.0)
+
+
+func _draw_you_token(center: Vector2) -> void:
+	var outline := Color("94a3b8")
+	var core := SubmissionVisualTheme.color_for_token("primary_ink")
+	var paper: Color = SubmissionVisualTheme.color_for_token("paper_background")
+	draw_circle(center, 14, paper)
+	draw_circle(center, 10, core)
+	draw_circle(center + Vector2(0, -2), 4, Color("111827", 0.95))
+	draw_rect(Rect2(center.x - 5, center.y + 2, 10, 9), core.lightened(0.12))
+	draw_rect(Rect2(center.x - 5, center.y - 2, 10, 4), core.lightened(0.2))
+	draw_line(center + Vector2(0, 4), center + Vector2(0, 12), outline, 2.5)
+	draw_line(center + Vector2(0, 6), center + Vector2(4, 11), outline, 2)
+	draw_line(center + Vector2(0, 6), center + Vector2(-4, 11), outline, 2)
+	draw_circle(center + Vector2(7, 2), 3, Color("dbeafe", 0.55))
+	draw_circle(center + Vector2(-7, 2), 3, Color("dbeafe", 0.55))
+	draw_rect(Rect2(center + Vector2(-6, -16), Vector2(12, 7)), Color("cbd5e1", 0.2), false, 1.5)
+	draw_line(center + Vector2(-1, -14), center + Vector2(2, -22), outline, 2.3)
+	draw_circle(center + Vector2(0, -18), 3, Color("f8fafc"))
 
 
 func _update_hud() -> void:

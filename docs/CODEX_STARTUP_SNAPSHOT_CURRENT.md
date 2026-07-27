@@ -18,7 +18,7 @@
 - Required audio repair: clear success cadence; wall bump for recorded blocked turns; plate activation; door opening
 - Music trial: one exact original Crow Producer WAV, `优哉游哉(loop).wav`, Drive ID `1_l8gcHescLwdhJ3X_8Xco48zYX96vRSO`, expected size `25,404,968` bytes
 - Music source policy: original bytes only; no trim/normalize/transcode/remix; attribution `音乐由[乌鸦Producer]提供`
-- Conditional music failure is non-blocking for the mandatory visual/audio repair when it fails closed and leaves no music file/controller
+- Music trial result: exact original `优哉游哉(loop).wav` is imported without byte mutation (`music_source_bytes_modified = NO`); conditional music-failure fallback is not the active gate for this boundary
 
 - Multi-subagent mode: `MANDATORY`
 - Required GPT roles: `planner_high`, `docs_reader`, `code_mapper`, `impl_worker`, `code_reviewer`

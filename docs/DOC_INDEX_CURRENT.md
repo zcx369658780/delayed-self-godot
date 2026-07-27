@@ -1,5 +1,14 @@
 # Documentation index (CURRENT)
 
+## Task 0024BAE owner visual/audio repair
+
+1. [`Visual entity repair contract`](presentation/OWNER_VISUAL_ENTITY_REPAIR_CONTRACT_CURRENT.md)
+2. [`Audio feedback repair contract`](audio/OWNER_AUDIO_FEEDBACK_REPAIR_CONTRACT_CURRENT.md)
+3. [`Machine-validation and music-trial report`](reports/0024BAE_OWNER_VISUAL_ENTITY_AUDIO_FEEDBACK_AND_MUSIC_TRIAL_REPORT.md)
+4. [`Session handoff`](handoffs/DELAYED_SELF_SESSION_HANDOFF_AFTER_TASK_0024BAE_OWNER_REPAIR_2026_07_27.md)
+
+Status: `PASS_FOR_GPT_REVIEW`; next gate is `OWNER_VISUAL_AUDIO_REPAIR_REVIEW`. This is not `FINAL_ACCEPTED`.
+
 ## Task 0024BAC DeepSeek identity candidate
 
 1. [`Candidate identity baseline`](agents/DEEPSEEK_WRAPPER_WORKER_IDENTITY_BASELINE_CURRENT.json) — wrapper plus deterministic worker-tree aggregate; no per-file hashes
