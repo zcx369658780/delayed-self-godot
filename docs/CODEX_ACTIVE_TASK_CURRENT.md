@@ -1,40 +1,28 @@
 # Codex active task (CURRENT)
 
-- Status: `TASK_0024BAD_PASS_FOR_GPT_REVIEW`
-- Active task: `tasks/0024BAD_first_submission_visual_ui_and_sfx_vertical_slice.md`
-- Task publication commit: `09f784fd7b17e83bba46ccca1036e38d5e143004`
-- Required checkpoint in ancestry: `d1738ea0f63e2aa625e6e78f3222dd474b234cc2`
-- Previous accepted gate: `TASK_0024BAC_DEEPSEEK_WRAPPER_WORKER_IDENTITY_BASELINE_ACCEPTED`
-- Owner decision gate: `OWNER_VISUAL_AUDIO_DECISIONS_10_OF_10_ACCEPTED`
+- Status: `HOLD_FOR_OWNER_VISUAL_AUDIO_VERTICAL_SLICE_REVIEW`
+- Last accepted task: `TASK_0024BAD_FIRST_SUBMISSION_VISUAL_AUDIO_VERTICAL_SLICE_ACCEPTED`
+- Accepted result commit: `d021301de287711a422ae71035352ae2de60f539`
+- GPT acceptance commit: `efcb6546fa360bfb91905066b5dcb7ae83f1c011`
+- Last task file: `tasks/0024BAD_first_submission_visual_ui_and_sfx_vertical_slice.md`
 
 - Submission scope: stable eight-level `RECOMMEND_OPTION_A`
 - Production catalog: exactly eight levels; sequence 8 remains the sole formal finale
 - S04 / Task 0024BB: `DEFER_S04_UNTIL_POST_SUBMISSION`
-- Visual strategy: `RECOMMEND_VISUAL_V1`
-- Font strategy: `RECOMMEND_DUAL_FONT_TEST_GATE`
-- Audio strategy: `RECOMMEND_AUDIO_A1`
-- Mandatory fallback: `ESSENTIAL_SFX_ONLY_NO_MUSIC`
-
-- Task scope: first project-native paper/ink gameplay/UI slice, exactly six project-created SFX, runtime captures, production-eight regression and external-source/license audit
-- Music/font/third-party graphic runtime import: `NOT_AUTHORIZED`
-- Profile/catalog/finale/build/release/submission: `NOT_AUTHORIZED`
-
-- Multi-subagent mode: `MANDATORY`
-- Required GPT roles: `planner_high`, `docs_reader`, `code_mapper`, `impl_worker`, `code_reviewer`
-- DeepSeek route: optional one-file low-risk documentation delegation only; does not count as a GPT role
-- DeepSeek identity policy: `IDENTITY_READY_FAIL_CLOSED_ON_MISMATCH`
-
-Success opens only `OWNER_VISUAL_AUDIO_VERTICAL_SLICE_REVIEW`. Full UI rollout, remaining SFX, font/zh-Hans, music audition/import, external graphic import, build/export and S04 remain closed.
-
-## Task 0024BAD result
+- Owner visual/audio defaults: `10_OF_10_ACCEPTED_RECOMMENDED_DEFAULTS`
 
 - Visual slice: `IMPLEMENTED_BASELINE_OWNER_REVIEW_PENDING`
-- Focused visual/audio: `PASS (97) / PASS (112)`
-- Production-eight Aggregate: `PASS assertions=621 vectors=9`; stderr exactly `LEVEL_ID_MISMATCH`
+- Focused visual/audio: `PASS assertions=97 / PASS assertions=112`
+- Aggregate: `PASS assertions=621 vectors=9`; stderr exactly `LEVEL_ID_MISMATCH`
 - complete-v2: `PASS`; stderr empty
-- Captures: `2` real `960x540` PNGs
-- Generated SFX: `6`; remaining planned SFX: `8`
+- Real review captures: `2 x 960x540 PNG`
+- Generated project-created SFX: `6`
+- Remaining planned SFX: `8`
 - Music/font/third-party graphics imported: `NO / NO / NO`
 - Profile accessed: `NO`
-- DeepSeek optional delegation: `NOT_USED`
-- Next gate: `OWNER_VISUAL_AUDIO_VERTICAL_SLICE_REVIEW`
+- DeepSeek invoked: `NO`
+
+- DeepSeek formal route: `WRAPPER_BACKED_CLI_EXTERNAL_FILE_WORKER`
+- DeepSeek route status: `IDENTITY_READY_FAIL_CLOSED_ON_MISMATCH`
+
+No implementation task is active. The owner must review the real runtime visual captures and six SFX before full UI rollout, remaining SFX, font/zh-Hans, music audition/import, external graphic import, build/export or submission work may be authorized. S04 remains deferred.
