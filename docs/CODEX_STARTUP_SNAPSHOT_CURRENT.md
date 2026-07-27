@@ -24,7 +24,7 @@
 - Single-agent fallback: `NOT_AUTHORIZED_BY_DEFAULT`
 - User-level DeepSeek gate: `DEEPSEEK_MCP_CONFIG_REMOVAL_ACCEPTED`
 - DeepSeek MCP: `REMOVED`
-- Sole formal DeepSeek path: `C:\Users\zcve\.codex\helpers\Invoke-DeepSeekFileTask.ps1 -TaskFile <absolute task JSON>`
+- Sole formal DeepSeek path: `C:\Users\zcxve\.codex\helpers\Invoke-DeepSeekFileTask.ps1 -TaskFile <absolute task JSON>`
 - DeepSeek role: wrapper-backed CLI external file editing worker for GPT-frozen low-risk bounded work only
 - DeepSeek counts toward GPT role minimum: `NO`
 - Native provider / automatic DeepSeek sub-agent / MCP fallback: `FORBIDDEN`
