@@ -1,27 +1,25 @@
 # Codex startup snapshot (CURRENT)
 
-- Status: `CURRENT / TASK 0024BAA PASS_FOR_GPT_REVIEW / HOLD_FOR_OWNER_DECISION`
+- Status: `CURRENT / TASK 0024BAA GPT ACCEPTED / OWNER CONTINUATION CONFIRMED`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
-- Last task: `tasks/0024BAA_project_rule_multi_subagent_and_submission_rebaseline.md`
-- Last status: `TASK_0024BAA_PASS_FOR_GPT_REVIEW`
-- Task publication commit: `e69ee82a0557d08a4c8889463728dd0f08e0ec1f`
-- Active-pointer commit: `424a8449d3d4e7fda29fc5ab1bfb9b2c7656bcbc`
-- Required accepted checkpoint in ancestry: `88f7f3963c366495aec8e5099fcfccb12afb445f`
-- Previous GPT acceptance: `TASK_0024BA_C07_CRATE_ECHO_HANDOFF_MACHINE_VALIDATION_ACCEPTED`
-- Phase-1 GPT-accepted machine evidence: C02, S01, C03, S03 and C07
-- S04 / 0024BB: frozen brief, reserved identity, not authorized
+- Last accepted task: `tasks/0024BAA_project_rule_multi_subagent_and_submission_rebaseline.md`
+- Accepted result commit: `9c6ad63fd2e0a0434b45c12a7bb81259e4541e77`
+- Acceptance report commit: `b7cf422a350a41b5a12c38b7a0529a7921a0bcb3`
+- Active-close commit: `482570f562b94178b3d613753b67d9d10ff33006`
+- GPT acceptance: `TASK_0024BAA_PROJECT_RULE_MULTI_SUBAGENT_AND_SUBMISSION_REBASELINE_ACCEPTED`
+
+- Recommended submission scope: stable eight-level `RECOMMEND_OPTION_A`
 - Production baseline: exactly eight cataloged levels; sequence 8 remains the sole formal finale
-- Candidate admission: `NOT_AUTHORIZED`
-- Phase-1 owner review: `NOT_REVIEWED`
-- Shipping count: `DEFERRED`
-- Submission deadline: `2026-09-06 23:59`
-- Video deadline: `2026-09-10`
+- S04 / 0024BB: deferred until after submission
+- Phase-1 candidates C02/S01/C03/S03/C07: GPT-accepted machine evidence only; not owner-reviewed or admitted
 - Final submission-complete image/SFX/music package: incomplete
-- Multi-subagent mode for Task 0024BAA: `MANDATORY`
-- Required distinct role assignments: at least five
-- Single-agent fallback: `NOT_AUTHORIZED`
+- Submission deadline: `2026-09-06 23:59`
+- Final buffer: `2026-09-04` through `2026-09-05`
+
+- Multi-subagent mode: `MANDATORY`
+- Single-agent fallback: `NOT_AUTHORIZED_BY_DEFAULT`
 - DeepSeek tracked-project routing: `DISABLED`
 
 Before future work, fetch and fast-forward only. Require `HEAD == origin/main`, divergence `0/0`, clean tracked/staged state, only the accepted untracked `.codex/config.toml`, unchanged configuration hash and Godot process count zero.
 
-Task 0024BAA was documentation/governance/planning only. It used five configured GPT roles and changed no code, level, catalog, Profile, asset, audio, build, release or submission surface. Recommendation is `RECOMMEND_OPTION_A`; S04 is `DEFER_S04_UNTIL_POST_SUBMISSION`; next gate is `HOLD_FOR_OWNER_DECISION`.
+The next task will plan the submission-minimum visual/UI asset inventory and audio/music/license package. It will be documentation/read-only only. No product implementation, asset/audio import, S04, catalog, Profile, build, release or submission work is authorized before publication of that task.
