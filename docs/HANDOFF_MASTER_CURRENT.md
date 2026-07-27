@@ -1,5 +1,9 @@
 # Handoff master (CURRENT)
 
+## Task 0024BAC DeepSeek identity candidate
+
+Task 0024BAC produced a read-only candidate wrapper/worker identity baseline for GPT review. Wrapper SHA remains `f604001d001cd206e742e5252a69995c29f96c983e6520ec6fd0374ae4908750`; two fresh captures matched exactly at 31 files / 73,202 bytes, worker aggregate `7949540c811e530ea777d655b5c1882b71b45ab31640702eae8f2180d335cbe8`, and CLI-entry SHA `d0596c70dd102b98a3ed77a02c99195ccff23f6d126fb400ff3c47c25a232a36`. No wrapper/worker/DeepSeek invocation, smoke, secret-value exposure or user-scope modification occurred. The baseline is pending GPT acceptance; stable eight, sequence 8 finale, deferred S04 and 10 pending owner visual/audio decisions remain unchanged. Next product gate after acceptance is `HOLD_FOR_OWNER_VISUAL_AUDIO_DECISIONS`.
+
 ## Task 0024BAB visual/audio planning
 
 Planning documents/manifests are complete for stable eight, with visual V1, dual-font qualification, audio A1 and essential-SFX-only/no-music fallback. All 10 owner decisions are pending and no files were imported. DeepSeek MCP is removed and native/automatic routes forbidden; wrapper was not used because repository evidence has no accepted worker SHA baseline. Result: `BLOCKED_DEEPSEEK_WORKER_IDENTITY_NOT_VERIFIED`; next recommendation `HOLD_FOR_OWNER_VISUAL_AUDIO_DECISIONS`.

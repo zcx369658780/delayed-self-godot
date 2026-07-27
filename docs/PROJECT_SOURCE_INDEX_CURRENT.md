@@ -1,9 +1,9 @@
 # Project source index (CURRENT)
 
 - Project-source synchronization date: 2026-07-27
-- Current visual/audio planning gate: `TASK_0024BAB_V2_BLOCKED_DEEPSEEK_WORKER_IDENTITY_NOT_VERIFIED`
-- Current GPT Project Sources successor: `docs/project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_AFTER_0024BAB_2026_07_27.md`
-- Current successor UTF-8 SHA-256: `b176a4c0f4dc92038e871371f8da701a73e2e20b83056d24468ca5e5a8eaedc6`
+- Current identity gate: `TASK_0024BAC_IDENTITY_BASELINE_READY_FOR_GPT_REVIEW`
+- Current GPT Project Sources successor: `docs/project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_AFTER_0024BAC_2026_07_27.md`
+- Current successor UTF-8 SHA-256: `ff35dfe2e2973458f88b4349a27a9436f6d338d4f053c22cd8327bae2406a06a`
 - Current active-task overlay: included in the current successor; no separate overlay
 - Roadmap synchronization baseline package: `docs/project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_2026_07_22.md`
 - Baseline package UTF-8 SHA-256: `f2bae76d576cb9b8ccca3189861a4b328d5e5925af4754de7986f646e8d7ad7b`
@@ -16,7 +16,7 @@
 | [`Canonical GDD seed`](game_design/DELAYED_SELF_GAME_DESIGN_DOCUMENT_CURRENT.md) | Original product/design baseline and retained core design history | Preserve; sections superseded by an accepted successor must not be treated as current |
 | [`Accepted design rebaseline`](game_design/DELAYED_SELF_GAME_DESIGN_REBASELINE_CURRENT.md) | Current authority for target level count, sequence policy, mechanic breadth, presentation, language, audio and post-2026-07-21 roadmap | Current design successor; outranks conflicting seed-GDD passages |
 | [`Expanded submission roadmap`](production/EXPANDED_CONTENT_SUBMISSION_ROADMAP_CURRENT.md) | Accepted dated gate sequence, scope cuts and current execution position | Current roadmap; implementation remains separately gated |
-| [`Current GPT Project Sources successor`](project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_AFTER_0024BAB_2026_07_27.md) | Current stable-eight visual/UI/audio/font/license package and wrapper-only route blocker | Sole current source package; no separate active overlay |
+| [`Current GPT Project Sources successor`](project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_AFTER_0024BAC_2026_07_27.md) | Current stable-eight visual/UI/audio/font/license package and candidate wrapper/worker identity | Sole current source package; no separate active overlay |
 | Historical Task 0024T/0024U packages | Preserve the July 22 blocker/overlay record | Historical/superseded; never use as a live task or shipping pointer |
 | [`Roadmap synchronization baseline package`](project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_2026_07_22.md) | Full accepted roadmap and source-authority consolidation before the Task 0024T blocker | Retain as historical synchronization baseline |
 | [`Rule source seed`](project_rules/PROJECT_RULE_SOURCE_SEED_CURRENT.md) | Auditable bootstrap source | Preserve as source history; do not treat as a live-progress pointer |
@@ -43,11 +43,11 @@
 - C02, S01, C03, S03 and C07 form the accepted machine-evidence candidate set; no owner or admission conclusion follows.
 - Task 0024BAA is the current completed planning/governance gate and is `PASS_FOR_GPT_REVIEW`.
 - The 24-domain audit shows release work remains open across final assets/audio/licenses/localization/flow/export/build/media/upload.
-- Next gate is `HOLD_FOR_OWNER_DECISION`; no implementation is automatically authorized.
-- Task 0024BAB v2 completed the visual/audio planning package but is blocked because accepted worker SHA evidence is absent. DeepSeek was not invoked; next recommendation is `HOLD_FOR_OWNER_VISUAL_AUDIO_DECISIONS`.
+- Task 0024BAC established `IDENTITY_BASELINE_READY_FOR_GPT_REVIEW` with an exact read-only double capture. It did not invoke DeepSeek or smoke-test and does not itself accept the route.
+- After GPT accepts the candidate identity, the next product gate is `HOLD_FOR_OWNER_VISUAL_AUDIO_DECISIONS`; no implementation is automatically authorized.
 
 ## Resolution rules
 
 Repository facts and the live task outrank conversational memory. `AGENTS.md` freezes cross-task safety. The currently published task controls the present allowed surface. The accepted design rebaseline controls changed product-direction sections; the original GDD seed continues to govern retained sections not superseded. The expanded submission roadmap controls the dated execution spine. Read the sole current GPT Project Sources successor. It summarizes repository authority but does not outrank repository facts. When sources conflict materially, stop and request GPT Project Sources advisor resolution rather than silently choosing.
 
-Task 0000 did not rewrite either seed. It materialized concise execution rules, current pointers, indexes, and compliance placeholders from them. Earlier packages remain historical sources; the 2026-07-27 post-0024BAB package is the sole current Project Source.
+Task 0000 did not rewrite either seed. It materialized concise execution rules, current pointers, indexes, and compliance placeholders from them. Earlier packages remain historical sources; the 2026-07-27 post-0024BAC package is the sole current Project Source.

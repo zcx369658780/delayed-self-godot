@@ -1,9 +1,9 @@
 # Codex startup snapshot (CURRENT)
 
-- Status: `CURRENT / TASK 0024BAC READY / DEEPSEEK WRAPPER-WORKER IDENTITY BASELINE`
+- Status: `CURRENT / TASK 0024BAC IDENTITY BASELINE READY FOR GPT REVIEW`
 - Repository/root/branch: `zcx369658780/delayed-self-godot` / `D:\Delayed_Self` / `main`
 - Active task: `tasks/0024BAC_deepseek_wrapper_worker_identity_baseline_and_route_requalification.md`
-- Active status: `TASK_0024BAC_READY`
+- Active status: `TASK_0024BAC_IDENTITY_BASELINE_READY_FOR_GPT_REVIEW`
 - Task publication commit: `8e6705051b98e7474ed9900db924df433252ccef`
 - Active-pointer commit: `6800869d0f69057d55cc30df5852db39f7ee5455`
 - Required checkpoint in ancestry: `b648317f8b65e074dca8607cd0f2f7ba60140179`
@@ -28,9 +28,10 @@
 - DeepSeek counts toward GPT role minimum: `NO`
 - Native provider / automatic DeepSeek sub-agent / MCP fallback: `FORBIDDEN`
 - Accepted wrapper SHA-256: `f604001d001cd206e742e5252a69995c29f96c983e6520ec6fd0374ae4908750`
-- Accepted worker aggregate SHA-256: `NOT_YET_BASELINED`
-- Current route status: `FAIL_CLOSED_PENDING_WORKER_SHA_BASELINE`
+- Candidate worker aggregate SHA-256: `7949540c811e530ea777d655b5c1882b71b45ab31640702eae8f2180d335cbe8`
+- Candidate CLI-entry SHA-256: `d0596c70dd102b98a3ed77a02c99195ccff23f6d126fb400ff3c47c25a232a36`
+- Current route status: `IDENTITY_BASELINE_READY_FOR_GPT_REVIEW`
 
 Before work, fetch and fast-forward only. Require `HEAD == origin/main`, divergence `0/0`, clean tracked/staged state, only the accepted untracked `.codex/config.toml`, unchanged config SHA and Godot process count zero.
 
-Read Task 0024BAC completely. It authorizes only bounded user-scope existence/type/hash checks, two fresh deterministic worker-tree captures, boolean route checks and repository evidence synchronization. It forbids wrapper/worker/DeepSeek invocation, smoke testing, source-content capture, secret-value inspection, user-scope modification, Godot/solver/build/Profile access, visual/audio implementation, catalog/finale changes and S04.
+Task 0024BAC captured the wrapper and worker twice with exact equality and removed all temporary per-file evidence. It did not invoke or modify wrapper/worker/DeepSeek, smoke-test, expose a secret value, run Godot/solver/build, access Profile, implement visual/audio work, modify catalog/finale or reopen S04. Only GPT acceptance may promote the candidate identity; afterward the product gate remains `HOLD_FOR_OWNER_VISUAL_AUDIO_DECISIONS`.

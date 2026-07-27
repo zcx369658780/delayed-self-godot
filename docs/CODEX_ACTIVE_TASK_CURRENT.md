@@ -1,6 +1,6 @@
 # Codex active task (CURRENT)
 
-- Status: `TASK_0024BAC_READY`
+- Status: `TASK_0024BAC_IDENTITY_BASELINE_READY_FOR_GPT_REVIEW`
 - Active task: `tasks/0024BAC_deepseek_wrapper_worker_identity_baseline_and_route_requalification.md`
 - Task publication commit: `8e6705051b98e7474ed9900db924df433252ccef`
 - Required checkpoint in ancestry: `b648317f8b65e074dca8607cd0f2f7ba60140179`
@@ -17,7 +17,7 @@
 - User-level DeepSeek gate: `DEEPSEEK_MCP_CONFIG_REMOVAL_ACCEPTED`
 - DeepSeek MCP / native provider / automatic native sub-agent / MCP fallback: `REMOVED / FORBIDDEN / FORBIDDEN / FORBIDDEN`
 - Sole intended route: `WRAPPER_BACKED_CLI_EXTERNAL_FILE_WORKER`
-- Current route status: `FAIL_CLOSED_PENDING_WORKER_SHA_BASELINE`
+- Current route status: `IDENTITY_BASELINE_READY_FOR_GPT_REVIEW`
 - DeepSeek invocation or smoke in this task: `NOT_AUTHORIZED`
 
-Task 0024BAC may perform read-only existence/type/hash checks on the exact accepted wrapper and historical worker-root paths, run two deterministic worker aggregate captures, verify route-state booleans without revealing values, and synchronize repository evidence. It may not invoke, modify, copy, replace or smoke-test wrapper/worker; inspect secret values; modify user scope; run Godot/solver/build; access Profile; implement visual/audio work; modify catalog/finale; or reopen S04.
+Task 0024BAC completed two exact deterministic captures without invoking or modifying wrapper/worker/DeepSeek. Candidate worker aggregate is `7949540c811e530ea777d655b5c1882b71b45ab31640702eae8f2180d335cbe8`; candidate CLI-entry SHA-256 is `d0596c70dd102b98a3ed77a02c99195ccff23f6d126fb400ff3c47c25a232a36`. GPT acceptance is still required. Next product gate after acceptance remains `HOLD_FOR_OWNER_VISUAL_AUDIO_DECISIONS`; no visual/audio implementation, catalog/finale change or S04 reopening is authorized.

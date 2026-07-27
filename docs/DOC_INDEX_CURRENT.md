@@ -1,5 +1,14 @@
 # Documentation index (CURRENT)
 
+## Task 0024BAC DeepSeek identity candidate
+
+1. [`Candidate identity baseline`](agents/DEEPSEEK_WRAPPER_WORKER_IDENTITY_BASELINE_CURRENT.json) — wrapper plus deterministic worker-tree aggregate; no per-file hashes
+2. [`Task report`](reports/0024BAC_DEEPSEEK_WRAPPER_WORKER_IDENTITY_BASELINE_REPORT.md) — two exact captures, route booleans and five-role ledger
+3. [`Handoff`](handoffs/DELAYED_SELF_SESSION_HANDOFF_AFTER_TASK_0024BAC_DEEPSEEK_IDENTITY_2026_07_27.md)
+4. [`Current Project Source`](project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_AFTER_0024BAC_2026_07_27.md)
+
+Status is `IDENTITY_BASELINE_READY_FOR_GPT_REVIEW`, not accepted route identity. No wrapper/worker/DeepSeek invocation or smoke occurred. After GPT acceptance, the next product gate remains `HOLD_FOR_OWNER_VISUAL_AUDIO_DECISIONS`.
+
 ## Task 0024BAB visual/audio planning
 
 1. [`Visual/UI plan`](presentation/SUBMISSION_MINIMUM_VISUAL_UI_PRODUCTION_PLAN_CURRENT.md), [`style tokens`](presentation/SUBMISSION_VISUAL_STYLE_TOKEN_SPEC_CURRENT.md), [`visual manifest`](presentation/SUBMISSION_MINIMUM_VISUAL_ASSET_MANIFEST_CURRENT.json)
@@ -8,7 +17,7 @@
 4. [`License intake`](licenses/SUBMISSION_ASSET_AUDIO_LICENSE_INTAKE_CHECKLIST_CURRENT.md), [`owner decisions`](production/OWNER_VISUAL_AUDIO_DECISION_SHEET_CURRENT.md), [`parallel plan`](production/VISUAL_AUDIO_PARALLEL_EXECUTION_PLAN_CURRENT.md)
 5. [`Task report`](reports/0024BAB_SUBMISSION_MINIMUM_VISUAL_AUDIO_PLANNING_REPORT.md), [`handoff`](handoffs/DELAYED_SELF_SESSION_HANDOFF_AFTER_TASK_0024BAB_VISUAL_AUDIO_PLAN_2026_07_27.md), [`Project Source`](project_source/DELAYED_SELF_PROJECT_SOURCE_SYNC_CURRENT_AFTER_0024BAB_2026_07_27.md)
 
-Planning is complete but Task 0024BAB is blocked because accepted worker SHA evidence is absent; DeepSeek was not used. No asset/audio/font implementation is authorized.
+Planning is GPT accepted. Task 0024BAC now supplies a candidate worker identity baseline pending GPT review; DeepSeek was not used. No asset/audio/font implementation is authorized.
 
 ## Task 0024BAA current submission/governance sources
 

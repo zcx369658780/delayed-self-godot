@@ -1,5 +1,7 @@
 # Development plan (CURRENT)
 
+> 2026-07-27 — Task 0024BAC captured a read-only candidate DeepSeek wrapper/worker identity baseline twice with exact equality: 31 included files, 73,202 bytes, `DS_WORKER_TREE_SHA256_V1` aggregate `7949540c811e530ea777d655b5c1882b71b45ab31640702eae8f2180d335cbe8`, CLI SHA-256 `d0596c70dd102b98a3ed77a02c99195ccff23f6d126fb400ff3c47c25a232a36`. No invocation, smoke or user-scope modification occurred. Status is `IDENTITY_BASELINE_READY_FOR_GPT_REVIEW`; after GPT acceptance, remain at `HOLD_FOR_OWNER_VISUAL_AUDIO_DECISIONS`.
+
 > 2026-07-27 — Task 0024BAB v2 froze the stable-eight visual/UI/audio/font/license package: V1 procedural/vector, dual-font evidence gate, A1 essential-SFX plus removable music, 18 visual items, 14 SFX, 7 bounded music candidates, 12 UI rows and 10 pending owner decisions. No import occurred. Wrapper-only DeepSeek was not used; accepted worker SHA evidence is absent, so the task closes `BLOCKED` and recommends `HOLD_FOR_OWNER_VISUAL_AUDIO_DECISIONS`.
 
 > 2026-07-27 — Task 0024BAA used five distinct GPT subagent roles and synchronized mandatory routing, a 24-domain readiness audit, scope matrix and absolute-date submission path. Recommendation is stable eight (`RECOMMEND_OPTION_A`); S04 is deferred until post-submission. C02/S01/C03/S03/C07 remain GPT-accepted machine evidence only, owner `NOT_REVIEWED`, uncatalogued/unsequenced and admission `NOT_AUTHORIZED`. Next gate is `HOLD_FOR_OWNER_DECISION`; no product work is authorized.

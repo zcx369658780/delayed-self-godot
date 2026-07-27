@@ -1,5 +1,9 @@
 # Project memory
 
+## Task 0024BAC wrapper/worker identity candidate
+
+Read-only double capture established a candidate DeepSeek wrapper/worker identity for GPT review: wrapper SHA-256 `f604001d001cd206e742e5252a69995c29f96c983e6520ec6fd0374ae4908750`; `DS_WORKER_TREE_SHA256_V1`, 31 included files, 73,202 bytes, worker aggregate `7949540c811e530ea777d655b5c1882b71b45ab31640702eae8f2180d335cbe8`; CLI SHA-256 `d0596c70dd102b98a3ed77a02c99195ccff23f6d126fb400ff3c47c25a232a36`. Captures were exact and temporary per-file evidence was removed. DeepSeek/wrapper/worker were not invoked, no smoke ran, no user-scope byte or environment value was modified or exposed. Route status is only `IDENTITY_BASELINE_READY_FOR_GPT_REVIEW`; GPT must accept it before any future authorized wrapper use. Stable eight, sequence 8 finale, deferred S04 and owner visual/audio decision hold remain unchanged.
+
 ## Task 0024BAB visual/audio package and wrapper-only route
 
 Stable-eight submission planning now freezes 18 visual items, 12 UI surfaces, a dual-font evidence/fit gate, 14 essential SFX, seven bounded unlicensed/local-absent music candidates, and 10 pending owner decisions. Visual recommendation is V1; audio is A1 with `ESSENTIAL_SFX_ONLY_NO_MUSIC`. No generation/import occurred. DeepSeek MCP is removed; native/automatic routes are forbidden; the wrapper-only worker was not invoked. Accepted worker SHA evidence is absent, so the route pair is `NOT_VERIFIED` and Task 0024BAB closes blocked pending authoritative identity evidence/owner decisions.

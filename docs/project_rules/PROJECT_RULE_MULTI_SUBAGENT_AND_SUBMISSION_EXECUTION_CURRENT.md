@@ -9,6 +9,11 @@
 - `DeepSeek_native_provider = FORBIDDEN`
 - `DeepSeek_automatic_native_subagent = FORBIDDEN`
 - `DeepSeek_formal_route = WRAPPER_BACKED_CLI_EXTERNAL_FILE_WORKER`
+- `DeepSeek_route_status = IDENTITY_BASELINE_READY_FOR_GPT_REVIEW`
+- `DeepSeek_scope = GPT_FROZEN_LOW_RISK_BOUNDED_EASY_TO_VERIFY`
+- `DeepSeek_counts_as_GPT_subagent = NO`
+- `MCP_fallback = FORBIDDEN`
+- `GPT_5_6_authority = PLANNING_ALLOWED_PATHS_REVIEW_TEST_GIT_RELEASE_ACCEPTANCE`
 - `main_agent_final_scope_and_Git = EXCLUSIVE`
 
 ## Required routing
@@ -28,7 +33,7 @@ Otherwise single-agent fallback is forbidden.
 
 Only the main agent may interpret final scope, authorize protected-surface access, integrate writer output, launch Godot or a solver, consume a retained manifest, stage, commit, push, or issue `PASS_FOR_GPT_REVIEW`. A task must still explicitly authorize each protected action.
 
-Subagents must not commit or push, consume manifests, alter repository settings, use accounts or secrets, access Profile/player data, publish/upload, or expand scope. DeepSeek is never a substitute for a GPT role and is disabled for tracked project code. Its optional wrapper-only file-worker route requires GPT-frozen low-risk bounds, accepted wrapper/worker identities, secret-free external task JSON and full GPT-5.6 review; absence or drift fails closed without MCP/native fallback.
+Subagents must not commit or push, consume manifests, alter repository settings, use accounts or secrets, access Profile/player data, publish/upload, or expand scope. DeepSeek is never a substitute for a GPT role and is disabled for tracked project code. Task 0024BAC supplies only a candidate wrapper/worker identity baseline pending GPT review. Its optional wrapper-only file-worker route requires GPT-frozen low-risk bounds, GPT-accepted and freshly matching wrapper/worker identities, secret-free external task JSON and full GPT-5.6 review; absence or drift fails closed without MCP/native fallback.
 
 ## Concurrency and evidence
 

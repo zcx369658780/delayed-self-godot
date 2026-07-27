@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "status": "CANDIDATE_BASELINE_FOR_GPT_REVIEW",
+  "user_level_gate": "DEEPSEEK_MCP_CONFIG_REMOVAL_ACCEPTED",
+  "formal_route": "WRAPPER_BACKED_CLI_EXTERNAL_FILE_WORKER",
+  "wrapper": {
+    "path": "C:\\Users\\zcxve\\.codex\\helpers\\Invoke-DeepSeekFileTask.ps1",
+    "size_bytes": 1966,
+    "sha256": "f604001d001cd206e742e5252a69995c29f96c983e6520ec6fd0374ae4908750",
+    "regular_file": true,
+    "reparse_point": false
+  },
+  "worker": {
+    "root": "C:\\Users\\zcxve\\.codex\\external-agents\\deepseek-file-worker-stdlib",
+    "algorithm_id": "DS_WORKER_TREE_SHA256_V1",
+    "included_file_count": 31,
+    "total_included_bytes": 73202,
+    "cli_entry_relative_path": "deepseek_file_task_cli.py",
+    "cli_entry_sha256": "d0596c70dd102b98a3ed77a02c99195ccff23f6d126fb400ff3c47c25a232a36",
+    "package_aggregate_sha256": "7949540c811e530ea777d655b5c1882b71b45ab31640702eae8f2180d335cbe8",
+    "double_capture_equal": true,
+    "excluded_count_by_class": {
+      "directory_files": 5,
+      "directory_entries": 2,
+      "suffix": 0,
+      "filename": 0
+    }
+  },
+  "route_checks": {
+    "deepseek_mcp_present": false,
+    "deepseek_native_provider_active": false,
+    "deepseek_automatic_native_subagent_active": false,
+    "mcp_fallback_authorized": false,
+    "deepseek_api_key_user_scope_configured": true,
+    "anthropic_api_key_user_scope_configured": false,
+    "anthropic_auth_token_user_scope_configured": false
+  },
+  "claims": {
+    "historical_smoke_proves_current_bytes": false,
+    "current_worker_defect_found": false,
+    "worker_invoked": false,
+    "wrapper_invoked": false,
+    "smoke_run": false,
+    "user_scope_modified": false,
+    "secret_value_accessed": false
+  },
+  "baseline_source": [
+    "OWNER_CONFIRMED_CURRENT_INFRASTRUCTURE",
+    "READ_ONLY_DOUBLE_CAPTURE",
+    "HISTORICAL_PILOT_CONTRACT_CONTINUITY"
+  ],
+  "verdict_fields": {
+    "task_0024bab_status": "TASK_0024BAB_VISUAL_AUDIO_PLANNING_ACCEPTED_DEEPSEEK_ROUTE_REQUALIFICATION_REQUIRED",
+    "distinct_GPT_roles_used": 5,
+    "wrapper_SHA256": "f604001d001cd206e742e5252a69995c29f96c983e6520ec6fd0374ae4908750",
+    "worker_algorithm": "DS_WORKER_TREE_SHA256_V1",
+    "worker_included_file_count": 31,
+    "worker_package_aggregate_SHA256": "7949540c811e530ea777d655b5c1882b71b45ab31640702eae8f2180d335cbe8",
+    "CLI_entry_SHA256": "d0596c70dd102b98a3ed77a02c99195ccff23f6d126fb400ff3c47c25a232a36",
+    "worker_double_capture_equal": "YES",
+    "DeepSeek_MCP_present": "NO",
+    "DeepSeek_native_provider_active": "NO",
+    "DeepSeek_automatic_native_subagent_active": "NO",
+    "DEEPSEEK_API_KEY_user_scope_configured": "YES",
+    "ANTHROPIC_API_KEY_user_scope_configured": "NO",
+    "ANTHROPIC_AUTH_TOKEN_user_scope_configured": "NO",
+    "DeepSeek_invoked": "NO",
+    "smoke_run": "NO",
+    "user_scope_modified": "NO",
+    "production_catalog_modified": "NO",
+    "formal_finale_modified": "NO",
+    "next_gate": "HOLD_FOR_OWNER_VISUAL_AUDIO_DECISIONS",
+    "final_task_verdict": "PASS_FOR_GPT_REVIEW"
+  }
+}
